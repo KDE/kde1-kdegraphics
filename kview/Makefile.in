@@ -24,7 +24,7 @@ distclean:     clean
 	$(MAKE) -C pics distclean
 	-rm -f Makefile
 
-LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif @LIBJPEG@ @LIBSOCKET@ 
+LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif @LIBJPEG@ @LIBSOCKET@ $(KDE_RPATH)
 CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
