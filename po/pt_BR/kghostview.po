@@ -1,9 +1,13 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
-"PO-Revision-Date: 1998-03-23 00:00+0100\n"
-"Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
+msgstr "Project-Id-Version: kghostview\n"
+       "POT-Creation-Date: 1998-03-21 18:32+0300\n"
+       "PO-Revision-Date: 1998-06-23 09:00-0300\n"
+       "Last-Translator: Elvis Pfützenreuter <epx@netville.com.br>\n"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -25,21 +29,20 @@ msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
-msgstr ""
-"\n"
-"Este programa é um software livre; podendo ser redistribuido e/ou "
-"modificado\n"
-"sob os termos da Licença Geral Publica GNU como é publicada pela\n"
-"Free Software Foundation; quer seja a versão 2 da Licença, ou\n"
-"(por sua opção) uma versão mais recente.\n"
-"Este programa é distribuído na expectativa que seja útil,\n"
-"mas SEM NENHUMA GARANTIA; sem sequer a garantia implícita de\n"
-"MERCANTIBILIDADE ou APTIDÃO PARA UM FIM EM PARTICULAR.  Veja a\n"
-"Licença Geral Pública GNU para maiores detalhes.\n"
-"\n"
-"Deve haver uma cópia da Licença Geral Pública GNU\n"
-"com este programa; se não, escreva para a Free Software\n"
-"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr "\n"
+       "Este programa é um software livre; podendo ser redistribuido e/ou "
+       "modificado\n"
+       "sob os termos da Licença Geral Publica GNU como é publicada pela\n"
+       "Free Software Foundation; quer seja a versão 2 da Licença, ou\n"
+       "(por sua opção) uma versão mais recente.\n"
+       "Este programa é distribuído na expectativa que seja útil,\n"
+       "mas SEM NENHUMA GARANTIA; sem sequer a garantia implícita de\n"
+       "MERCANTIBILIDADE ou APTIDÃO PARA UM FIM EM PARTICULAR.  Veja a\n"
+       "Licença Geral Pública GNU para maiores detalhes.\n"
+       "\n"
+       "Deve haver uma cópia da Licença Geral Pública GNU\n"
+       "com este programa; se não, escreva para a Free Software\n"
+       "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:54
 msgid "&Section"
@@ -208,9 +211,8 @@ msgid "Document information"
 msgstr "Informações do documento"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Configuração da impressora"
+msgstr "Configurar Página"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -273,9 +275,8 @@ msgid "Open &recent"
 msgstr "Abrir &recente"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Configurar..."
+msgstr "Config&urar Página ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -290,9 +291,8 @@ msgid "Zoom &out"
 msgstr "&Diminuir"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Zoom ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -461,11 +461,10 @@ msgid ""
 "for an internet job to finish.\n"
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
-msgstr ""
-"Já à espera\n"
-"que um processo internet termine.\n"
-"Por favor espere que acabe.\n"
-"Opcionalmente pare o programa em execução."
+msgstr "Já à espera\n"
+       "que um processo internet termine.\n"
+       "Por favor espere que acabe.\n"
+       "Opcionalmente pare o programa em execução."
 
 #: kghostview.cpp:777
 msgid "Could not start or find KFM."
@@ -492,9 +491,8 @@ msgid "Go to ..."
 msgstr "Ir para ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Aumentar"
+msgstr "Zoom"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -513,10 +511,9 @@ msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
-msgstr ""
-"Versão :\t0.6 alpha\n"
-"Autor : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
+msgstr "Versão :\t0.6 alpha\n"
+       "Autor : Mark Donohoe\n"
+       "Mail : donohoe@kde.org"
 
 #: kghostview.cpp:1584 kghostview.cpp:1700
 msgid "Error printing"
@@ -529,18 +526,18 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
-"Escolheu imprimir todas as páginas para um arquivo.\n"
-"Isto iria produzir um documento idêntico ao\n"
-"que está carregado atualmente no visualizador.\n"
-"Não há necessidade de imprimir todas as páginas para um novo arquivo."
+       "Escolheu imprimir todas as páginas para um arquivo.\n"
+       "Isto iria produzir um documento idêntico ao\n"
+       "que está carregado atualmente no visualizador.\n"
+       "Não há necessidade de imprimir todas as páginas para um novo arquivo."
 
 #: kghostview.cpp:1607
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
-"Nenhum nome foi dado portanto\n"
-"não foi possível imprimir para o arquivo.\n"
+       "Nenhum nome foi dado portanto\n"
+       "não foi possível imprimir para o arquivo.\n"
 
 #: kghostview.cpp:1665
 #, c-format
@@ -552,8 +549,8 @@ msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
-"Impressão falhou porque a lista de\n"
-"páginas a imprimir estava vazia.\n"
+       "Impressão falhou porque a lista de\n"
+       "páginas a imprimir estava vazia.\n"
 
 #: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
 #: kghostview.cpp:2534
@@ -618,16 +615,16 @@ msgid ""
 " [filename] [siwtches]\n"
 "\n"
 msgstr ""
-" [nome do arquivo] [parâmetros]\n"
-"\n"
+       " [nome do arquivo] [parâmetros]\n"
+       "\n"
 
 #: main.cpp:28
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
-"Veja a documentação do KDE e do QT para\n"
-"opções da linha de comando\n"
+       "Veja a documentação do KDE e do QT para\n"
+       "opções da linha de comando\n"
 
 #: main.cpp:30
 msgid "Error on command line"
@@ -734,66 +731,29 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
-"O intervalo de página inserido não\n"
-"foi entendido.\n"
-"\n"
-"O intervalo especificado tem de estar dentro\n"
-"do intervalo de páginas desta parte do documento\n"
-"Esta informação está disponível na barra de status.\n"
+       "O intervalo de página inserido não\n"
+       "foi entendido.\n"
+       "\n"
+       "O intervalo especificado tem de estar dentro\n"
+       "do intervalo de páginas desta parte do documento\n"
+       "Esta informação está disponível na barra de status.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "a&mpliação"
+msgstr "ampliação"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "míd&ia"
+msgstr "&Mídia"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "&orientação"
+msgstr "&Orientação"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Aplicar"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "a&mpliação"
-
-#~ msgid "Print"
-#~ msgstr "Imprimir"
-
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Ver controle ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Largura da página"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Atualizar"
-
-#~ msgid "Change view ..."
-#~ msgstr "Mudar visão ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Ligar antialiasing"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Desligar antialiasing"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Mostrar mensagens do Ghostscript"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Esconder mensagens do Ghostscript"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Forçar mudanças a ..."
+msgstr "&Ampliação"
