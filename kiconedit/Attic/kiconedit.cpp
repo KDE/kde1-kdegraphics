@@ -516,14 +516,15 @@ bool KIconEdit::setupMenuBar()
 
   menubar->insertSeparator();
 
-  QString str = "KDE Icon Editor\n\n";
-  str += "A graphics drawing program for creating\n";
-  str += "icons using the KDE icon palette\n\n";
-  str += "Copyright 1998 by Thomas Tanghus\n";
-  str += "tanghus@kde.org\n";
-  str += "http://w1.1358.telia.com/~u135800018";
+  QString about;
+  about.sprintf(i18n("KDE Icon Editor\n\n"
+                     "A graphics drawing program for creating\n"
+                     "icons using the KDE icon palette\n\n"
+                     "Copyright 1998 by Thomas Tanghus\n"
+                     "tanghus@kde.org\n"
+                     "http://w1.1358.telia.com/~u135800018"));
 
-  help = kapp->getHelpMenu(true,str.data());
+  help = kapp->getHelpMenu(true,about.data());
   menubar->insertItem(i18n("&Help"), help);
 
   menubar->setMenuBarPos(pprops->menubarpos);

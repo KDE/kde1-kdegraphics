@@ -63,12 +63,12 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
   _corner->setFrameStyle(QFrame::WinPanel | QFrame::Raised);
 
   _hruler = new KRuler(KRuler::horizontal, this);
-  _hruler->setEndLabel("width");
+  _hruler->setEndLabel(i18n("width"));
   _hruler->setOffset( 0 );
   _hruler->setRange(0, 1000);
 
   _vruler = new KRuler(KRuler::vertical, this);
-  _vruler->setEndLabel("height");
+  _vruler->setEndLabel(i18n("height"));
   _vruler->setOffset( 0 );
   _vruler->setRange(0, 1000);
 
