@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-01-28 14:59+0100\n"
-"PO-Revision-Date: 1998-01-22 08:58 MET\n"
+"PO-Revision-Date: 1998-01-29 17:44 MET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -274,7 +274,7 @@ msgstr "Oznaèit &liché strany"
 
 #: kghostview.cpp:544
 msgid "&Toggle page marks"
-msgstr "Prohoïit &znaèky"
+msgstr "Prohodit &znaèky"
 
 #: kghostview.cpp:547
 msgid "&Remove page marks"
@@ -543,34 +543,28 @@ msgid "Didn't recognise file\n"
 msgstr "Není mo¾né rozpoznat datový formát\n"
 
 #: marklist.cpp:36
-#, fuzzy
 msgid "Mark current page"
-msgstr "Oznaèit &tuto stranu"
+msgstr "Oznaèit tuto stranu"
 
 #: marklist.cpp:37
-#, fuzzy
 msgid "Mark all pages"
-msgstr "Oznaèit &v¹echny strany"
+msgstr "Oznaèit v¹echny strany"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark even pages"
-msgstr "Oznaèit &sudé strany"
+msgstr "Oznaèit sudé strany"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark odd pages"
-msgstr "Oznaèit &liché strany"
+msgstr "Oznaèit liché strany"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Toggle page marks"
-msgstr "Prohoïit &znaèky"
+msgstr "Prohodit znaèky"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Remove page marks"
-msgstr "&Odstranit znaèky"
+msgstr "Odstranit znaèky"
 
 #: messages.cpp:27
 msgid "Ghostscript messages"
