@@ -1623,11 +1623,15 @@ QString KGhostview::printToPrinter( QString printerName, QString spoolerCommand,
 	// For SYSV, SVR4, USG printer variable="LPDEST", print command=lp
 	// Other systems printer variable="PRINTER", print command=lpr
 	
-	printerVariable.append("\"");
-	printerVariable.prepend("\"");
+        // Why add double quotes ? It breaks setenv... David Faure.
+	// printerVariable.append("\"");
+	// printerVariable.prepend("\"");
 
-    if ( printerName.data() != '\0') {
-		setenv( printerVariable.data(), printerName.data(), True );
+    if ( !printerName.isEmpty() ) {
+        if ( !printerVariable.isEmpty() ) {
+                setenv( printerVariable.data(), printerName.data(), True );
+        } else return( QString( i18n( "Set Environment variable (to PRINTER or LPDEST for instance)"
+                                      "for Printer name to be taken into account." ) ) );
     }
     oldsig = signal( SIGPIPE, SIG_IGN );
     printer = popen( spoolerCommand.data(), "w" );

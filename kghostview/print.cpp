@@ -34,7 +34,7 @@ PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
 	setFocusPolicy(QWidget::StrongFocus);
 	setCaption( i18n( "Printer setup" ) );
 	
-	printerName = name;
+	printerName = pname;
 	spoolerCommand = spooler;
 	printerVariable = variable;
 	
@@ -135,7 +135,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 	setFocusPolicy(QWidget::StrongFocus);
 	
 	pgMode = All;
-	printerName.sprintf( "lp0" );
+	printerName.sprintf( "" ); // default printer will be chosen.
 	spoolerCommand.sprintf( "lpr" );
 	printerVariable.sprintf( "PRINTER" );
 	pgMax = maxPages;
@@ -275,6 +275,7 @@ void PrintDialog::setup()
 		 spoolerCommand, printerVariable );
 	
 	if( ps->exec() ) {}
+        delete ps;
 }
 
 void PrintDialog::checkRange()
