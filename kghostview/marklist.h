@@ -44,7 +44,8 @@ public:
 	void	clear();
 	int	rowHeight();
 	const char *text( int index );
-	
+	const unsigned int count (void) { return items.count(); }
+
 	QColor selectColor;
 	QColor selectTextColor;
 
@@ -92,7 +93,8 @@ public:
 	void	clear();
 	void 	setSelectColors( QColor bg, QColor fg );
 	const char *text( int index );
-	
+	const unsigned int count(void) { return listTable->count(); }
+
 	QColor selectColor;
 	QColor selectTextColor;
 

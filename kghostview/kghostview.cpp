@@ -1552,58 +1552,68 @@ void KGhostview::dummy()
 
 
 void KGhostview::printStart( int mode, bool reverseOrder, 
-					bool toFile,
-					QString printerName, QString spoolerCommand,
-					QString printerVariable,
-					int pgStart, int pgEnd )
+			     bool toFile,
+			     QString printerName, QString spoolerCommand,
+			     QString printerVariable,
+			     int pgStart, int pgEnd )
 {
-	QStrList *ml = new QStrList;
+  unsigned int i;
+
+  // Little memory leak here (fix in 2.0)
+  QStrList *ml = new QStrList;
+  
+  switch( mode )
+    {
+    case PrintDialog::All:
+      for (i=0;i<marklist->count();i++)
+	ml->append (marklist->text (i));
+      break;
+      
+    case PrintDialog::Current:
+      ml->append( marklist->text( current_page ) );
+      break;
+      
+    case PrintDialog::Marked:
+      ml = marklist->markList();
+      break;
+      
+    case PrintDialog::Range:
+      if ( pgStart <= pgEnd )
+	for( int j = pgStart-1; j< pgEnd; j++ )
+	  ml->append( marklist->text( j ) );
+      else 
+	for( int j = pgEnd-1; j< pgStart; j++ )
+	  ml->append( marklist->text( j ) );
+      break;
+    }
+  
+  if ( reverseOrder )
+    {
+      QStrList *sl = new QStrList;
+      for( ml->last(); ml->current(); ml->prev() )
+	sl->append( ml->current() );
+      *ml = *sl;
+      delete sl;
+    }
 	
-	switch( mode ) {
-		case PrintDialog::All:
-			break;
-				
-		case PrintDialog::Current:
-			ml->append( marklist->text( current_page ) );
-			break;
-				
-		case PrintDialog::Marked:
-			ml = marklist->markList();
-			break;
-				
-		case PrintDialog::Range:
-			if ( pgStart <= pgEnd )
-				for( int j = pgStart-1; j< pgEnd; j++ )
-					ml->append( marklist->text( j ) );
-			else 
-				for( int j = pgEnd-1; j< pgStart; j++ )
-					ml->append( marklist->text( j ) );
-			break;
-	}
-	
-	if ( reverseOrder ) {
-		QStrList *sl = new QStrList;
-		for( ml->last(); ml->current(); ml->prev() )
-			sl->append( ml->current() );
-		*ml = *sl;
-		delete sl;
-	}
-	
-	QString error;
-	
-	if ( toFile ) {
-		error = printToFile( ( mode == PrintDialog::All ), ml );
-	} else { 
-		error = printToPrinter( printerName, spoolerCommand, printerVariable,
-						( mode == PrintDialog::All ), ml );
-	}
-	
-	if ( error )
-	  KMsgBox::message (0, i18n( "Error printing" ),
-			    error, KMsgBox::STOP | KMsgBox::DB_FIRST);
-	  //	  QMessDB_FageBox::warning( 0, i18n( "Error printing" ), error );
-	
-	delete ml;
+  QString error;
+  
+  if ( toFile )
+    {
+      error = printToFile( ( mode == PrintDialog::All ), ml );
+    }
+  else 
+    { 
+      error = printToPrinter( printerName, spoolerCommand, printerVariable,
+			      ( mode == PrintDialog::All ), ml );
+    }
+  
+  if ( error )
+    KMsgBox::message (0, i18n( "Error printing" ),
+		      error, KMsgBox::STOP | KMsgBox::DB_FIRST);
+  //	  QMessDB_FageBox::warning( 0, i18n( "Error printing" ), error );
+  
+  delete ml;
 }
 
 QString
