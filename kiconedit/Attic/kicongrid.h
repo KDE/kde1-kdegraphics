@@ -53,11 +53,41 @@
 #include "kresize.h"
 #include "properties.h"
 
+class KRuler;
+class KIconEditGrid;
+
 enum Direction { In = 0, Out = 1, Up = In, Down = Out, Left, Right };
 
+class KGridView : public QFrame
+{
+    Q_OBJECT
+public:
+  KGridView( QWidget * parent = 0, const char *name = 0);
+
+  KRuler *hruler() { return _hruler;}
+  KRuler *vruler() { return _vruler;}
+  QFrame *corner() { return _corner;}
+  KIconEditGrid *grid() { return _grid; }
+  void setShowRulers(bool mode);
+  bool rulers() { return pprops->showrulers; }
+
+public slots:
+  void sizeChange(int, int);
+  void scalingChange(int, bool);
+  void posChange(int, int);
+
+protected:
+  void resizeEvent(QResizeEvent*);
+  void setSizes();
+
+  QFrame *_corner;
+  KIconEditGrid *_grid;
+  KRuler *_hruler, *_vruler;
+  Properties *pprops;
+};
 
 /**
-* KIconEditGridGrid
+* KIconEditGrid
 * @short KIconEditGrid
 * @author Thomas Tanghus <tanghus@earthling.net>
 * @version 0.3
@@ -103,6 +133,7 @@ public slots:
   void mapToKDEPalette();
   void setTool(DrawTool tool);
   bool zoom(Direction direct);
+  bool zoomTo(int);
 
 signals:
   void scalingchanged(int, bool);

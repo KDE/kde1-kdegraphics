@@ -1,6 +1,6 @@
 /*
-    KDE Draw - a small graphics drawing program for the KDE.
-    Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
+    KDE Icon Editor - a small graphics drawing program for the KDE.
+    Copyright (C) 1998  Thomas Tanghus (tanghus@adr.dk)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -19,9 +19,131 @@
 */  
 
 #include <kpixmap.h>
+#include <kruler.h>
 #include "debug.h"
 #include "kicongrid.h"
 #include "main.h"
+
+KGridView::KGridView(QWidget *parent, const char *name) : QFrame(parent, name)
+{
+  pprops = 0L;
+  _corner = 0L;
+  _hruler = _vruler = 0L;
+  _grid = 0L;
+  
+  pprops = props(this);
+
+  _corner = new QFrame(this);
+  _corner->setFrameStyle(QFrame::WinPanel | QFrame::Raised);
+
+  _grid = new KIconEditGrid(this);
+  CHECK_PTR(_grid);
+  connect(_grid, SIGNAL(scalingchanged(int, bool)), SLOT(scalingChange(int, bool)));
+  connect(_grid, SIGNAL(sizechanged(int, int)), SLOT(sizeChange(int, int)));
+  connect(_grid, SIGNAL(poschanged(int, int)), SLOT(posChange(int, int)));
+
+  _hruler = new KRuler(KRuler::horizontal, this);
+  _hruler->setEndLabel("Width");
+  _hruler->setOffset( 0 );
+  _hruler->setRange(0, _grid->width());
+
+  _vruler = new KRuler(KRuler::vertical, this);
+  _vruler->setEndLabel("Height");
+  _vruler->setOffset( 0 );
+  _vruler->setRange(0, _grid->height());
+
+  setSizes();
+  adjustSize();
+}
+
+void KGridView::setSizes()
+{
+  if(pprops->showrulers)
+  {
+    _hruler->setLittleMarkDistance(_grid->scaling());
+    _vruler->setLittleMarkDistance(_grid->scaling());
+    _hruler->setMediumMarkDistance(5);
+    _vruler->setMediumMarkDistance(5);
+    _hruler->setBigMarkDistance(10);
+    _vruler->setBigMarkDistance(10);
+
+    _hruler->showTinyMarks(false);
+    _hruler->showLittleMarks(false);
+    _hruler->showMediumMarks(true);
+    _hruler->showBigMarks(true);
+    _hruler->showEndMarks(true);
+
+    _vruler->showTinyMarks(false);
+    _vruler->showLittleMarks(false);
+    _vruler->showMediumMarks(true);
+    _vruler->showBigMarks(true);
+    _vruler->showEndMarks(true);
+
+    _hruler->setValuePerLittleMark(_grid->scaling());
+    _vruler->setValuePerLittleMark(_grid->scaling());
+    _hruler->setValuePerMediumMark(_grid->scaling()*5);
+    _vruler->setValuePerMediumMark(_grid->scaling()*5);
+
+    _hruler->setPixelPerMark(_grid->scaling());
+    _vruler->setPixelPerMark(_grid->scaling());
+
+    _hruler->setMaxValue(_grid->width());
+    _vruler->setMaxValue(_grid->height());
+
+    _hruler->show();
+    _vruler->show();
+
+    _corner->show();
+    resize(_grid->width()+_vruler->width(), _grid->height()+_hruler->height());
+  }
+  else
+  {
+    _hruler->hide();
+    _vruler->hide();
+    _corner->hide();
+    resize(_grid->size());
+  }
+}
+
+void KGridView::posChange(int x, int y)
+{
+  _hruler->setValue(x * _grid->scaling());
+  _vruler->setValue(y * _grid->scaling());
+}
+
+void KGridView::sizeChange(int, int)
+{
+  setSizes();
+}
+
+void KGridView::scalingChange(int, bool)
+{
+  setSizes();
+}
+
+void KGridView::setShowRulers(bool mode)
+{
+  pprops->showrulers = mode;
+  setSizes();
+  QResizeEvent e(size(), size());
+  resizeEvent(&e);
+}
+
+
+void KGridView::resizeEvent(QResizeEvent*)
+{
+  debug("KGridView::resizeEvent");
+  if(pprops->showrulers)
+  {
+    _hruler->setGeometry(_vruler->width(), 0, _grid->width(), _hruler->height());
+    _vruler->setGeometry(0, _hruler->height(), _vruler->width(), _grid->height());
+
+    _corner->setGeometry(0, 0, _vruler->width(), _hruler->height());
+    _grid->move(_corner->width(), _corner->height());
+  }
+  else
+    _grid->move(0, 0);
+}
 
 const QImage *fixTransparence(QImage *image)
 {
@@ -497,6 +619,18 @@ const QPixmap &KIconEditGrid::pixmap()
   return(p);
 }
 
+bool KIconEditGrid::zoomTo(int scale)
+{
+  QApplication::setOverrideCursor(waitCursor);
+  emit scalingchanged(cellSize(), false);
+  setCellSize( scale );
+  QApplication::restoreOverrideCursor();
+  emit scalingchanged(cellSize(), true);
+  if(scale == 1)
+    return false;
+  return true;
+}
+
 bool KIconEditGrid::zoom(Direction d)
 {
   int f = (d == In) ? (cellSize()+1) : (cellSize()-1);
@@ -570,14 +704,37 @@ void KIconEditGrid::editClear()
 }
 
 // the returned image *must* be deleted by the caller.
+
 QImage *KIconEditGrid::getSelection(bool cut)
 {
   const QRect rect = pntarray.boundingRect();
+  int nx = 0, ny = 0, nw = 0, nh = 0;
+  rect.rect(&nx, &ny, &nw, &nh);
+  debug("KIconEditGrid: Selection Rect: %d %d %d %d", nx, ny, nw, nh);
 
+  QImage *tmp = new QImage(nw, nh, 32);
+  tmp->fill(TRANSPARENT);
+
+  int s = pntarray.size(); //((rect.size().width()) * (rect.size().height()));
+  for(int i = 0; i < s; i++)
+  {
+    int x = pntarray[i].x();
+    int y = pntarray[i].y();
+    if(img->valid(x, y) && rect.contains(QPoint(x, y)))
+    {
+      *((uint*)tmp->scanLine(y-ny) + (x-nx)) = *((uint*)img->scanLine(y) + x);
+      //int cell = y * numCols() + x;
+    }
+  }
+
+  return tmp;
+}
+
+// the returned image *must* be deleted by the caller.
 /*
-  if( QT_VERSION >= 140 && !cut)
-    return new QImage(img->copy((QRect&)rect));
-*/
+QImage *KIconEditGrid::getSelection(bool cut)
+{
+  const QRect rect = pntarray.boundingRect();
 
   int nx = 0, ny = 0, nw = 0, nh = 0;
   rect.rect(&nx, &ny, &nw, &nh);
@@ -622,6 +779,7 @@ QImage *KIconEditGrid::getSelection(bool cut)
     emit newmessage(i18n("Selected area copied"));
   return tmp;
 }
+*/
 
 void KIconEditGrid::editCopy(bool cut)
 {
@@ -980,7 +1138,7 @@ void KIconEditGrid::drawEllipse(bool drawit)
   else if(tool == Ellipse || tool == FilledEllipse)
     pntarray.makeEllipse(x, y, cx, cy);
 
-  if((tool == FilledEllipse) || (tool == FilledCircle))
+  if((tool == FilledEllipse) || (tool == FilledCircle) || (tool == SelectCircle))
   {
     int s = pntarray.size();
     int points = s;
@@ -1040,7 +1198,7 @@ void KIconEditGrid::drawRect(bool drawit)
 
   int points = 0;
 
-  if(tool == FilledRect)
+  if(tool == FilledRect || (tool == SelectRect))
   {
     for(int i = x; i < x+cx; i++)
     {

@@ -400,15 +400,24 @@ KMiscConfig::KMiscConfig(QWidget *parent) : QWidget(parent)
   rbp->setFixedSize(rbp->sizeHint());
   connect(rbp, SIGNAL(toggled(bool)), SLOT(pasteMode(bool)));
 
+  QRadioButton *rbr = new QRadioButton(i18n("Show rulers"), grp1);
+  rbr->setFixedSize(rbr->sizeHint());
+  connect(rbr, SIGNAL(toggled(bool)), SLOT(showRulers(bool)));
+
   QBoxLayout *ml = new QVBoxLayout(this);
 
   QBoxLayout *l1 = new  QVBoxLayout(grp1, 20);
 
   l1->addWidget(rbp, 0, AlignLeft);
+  l1->addWidget(rbr, 0, AlignLeft);
 
   pastemode = pprops->pastetransparent;
   if(pastemode)
     rbp->setChecked(true);
+
+  showrulers = pprops->showrulers;
+  if(showrulers)
+    rbr->setChecked(true);
 
   ml->addWidget(grp1);
   ml->addStretch(1);
@@ -427,12 +436,18 @@ void KMiscConfig::saveSettings()
 {
   debug("KMiscConfig::saveSettings");
   pprops->pastetransparent = pastemode;
+  pprops->showrulers = showrulers;
   debug("KMiscConfig::saveSettings - done");
 }
 
 void KMiscConfig::pasteMode(bool mode)
 {
   pastemode = mode;
+}
+
+void KMiscConfig::showRulers(bool mode)
+{
+  showrulers = mode;
 }
 
 KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
@@ -508,7 +523,7 @@ KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
   addTab( tab );
   p = new KWizardPage;
   p->w = misc;
-  p->title = i18n("Paste mode");
+  p->title = i18n("Icon grid");
   p->enabled = true;
   addPage( p );
 

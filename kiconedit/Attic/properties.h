@@ -49,6 +49,7 @@ struct Properties
   bool statusbarstat;
   bool showgrid;
   bool pastetransparent;
+  bool showrulers;
   KToolBar::BarPosition maintoolbarpos;
   KToolBar::BarPosition drawtoolbarpos;
   KMenuBar::menuPosition menubarpos;

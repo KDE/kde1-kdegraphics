@@ -75,6 +75,7 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   pprops->pastetransparent = config->readBoolEntry( "PasteTransparent", false );
   pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
   pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
+  pprops->showrulers = config->readBoolEntry( "ShowRulers", true );
 }
 
 KIconEditProperties::~KIconEditProperties()
@@ -131,4 +132,5 @@ void KIconEditProperties::saveProperties(QWidget *parent)
   config->writeEntry("PasteTransparent", pprops->pastetransparent);
   config->writeEntry("ShowGrid", pprops->showgrid);
   config->writeEntry("GridScaling", pprops->gridscaling);
+  config->writeEntry("ShowRulers", pprops->showrulers);
 }

@@ -2,6 +2,16 @@ KDE Icon Editor
 _______________
 
 ------------------------------------------------------------------------------
+   News and fixes in version 0.4.0:
+------------------------------------------------------------------------------
+ - Circular selection.
+ - Configuration dialog:
+   - Shortcut keys.
+   - Appearance.
+   - Templates.
+   - Miscellaneous.
+
+------------------------------------------------------------------------------
    News and fixes in version 0.3.2:
 ------------------------------------------------------------------------------
  - German translations. (thanks to Gregor Zumstein <zumste98@cui.unige.ch>)

@@ -62,7 +62,6 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   toolsw = new KIconToolsView(mainview);
   CHECK_PTR(toolsw);
   debug("Toolsview created");
-  //QWidget *gridview = new QWidget(mainview);
 
   //viewport = new QwViewport(mainview);
   viewport = new QScrollView(mainview);
@@ -83,9 +82,14 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
     viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
   }
   //viewport->setMouseTracking(true);
-  grid = new KIconEditGrid(viewport->viewport()); //viewport->viewport(), 0);
-  CHECK_PTR(grid);
-  viewport->addChild(grid);
+
+  gridview = new KGridView(viewport->viewport()); //KIconEditView(this);
+  CHECK_PTR(gridview);
+  gridview->setShowRulers(pprops->showrulers);
+
+  grid = gridview->grid();
+
+  viewport->addChild(gridview);
   debug("Grid created");
   grid->setGrid(pprops->showgrid);
   debug("Grid->setGrid done");

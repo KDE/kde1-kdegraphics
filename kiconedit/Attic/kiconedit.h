@@ -33,6 +33,7 @@
 #include <kwm.h>
 #include <kaccel.h>
 #include <kkeydialog.h>
+#include <kruler.h>
 #include <qwidget.h>
 #include <qpixmap.h>
 #include <qfileinf.h> 
@@ -178,6 +179,7 @@ private:
   KStatusBar *statusbar;
   QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent, *select;
   KIconEditGrid *grid;
+  KGridView *gridview;
   KIconToolsView *toolsw;
   QWidget *mainview;
   QBoxLayout *l;

@@ -168,21 +168,21 @@ void KIconEdit::slotView( int id )
   switch(id)
   {
     case ID_VIEW_ZOOM_1TO1:
-      slotUpdateStatusScaling(1, false);
-      grid->setCellSize(1);
-      slotUpdateStatusScaling(1, true);
+      //slotUpdateStatusScaling(1, false);
+      grid->zoomTo(1);
+      //slotUpdateStatusScaling(1, true);
       toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
       view->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
       break;
     case ID_VIEW_ZOOM_1TO5:
-      slotUpdateStatusScaling(5, false);
-      grid->setCellSize(5);
-      slotUpdateStatusScaling(5, true);
+      //slotUpdateStatusScaling(5, false);
+      grid->zoomTo(5);
+      //slotUpdateStatusScaling(5, true);
       break;
     case ID_VIEW_ZOOM_1TO10:
-      slotUpdateStatusScaling(10, false);
-      grid->setCellSize(10);
-      slotUpdateStatusScaling(10, true);
+      //slotUpdateStatusScaling(10, false);
+      grid->zoomTo(10);
+      //slotUpdateStatusScaling(10, true);
       break;
     case ID_VIEW_ZOOM_OUT:
       if(!grid->zoom(Out))
@@ -273,6 +273,7 @@ void KIconEdit::slotConfigure(int id)
       {
         Properties *pprops = props(this);
         updateMenuAccel();
+        gridview->setShowRulers(pprops->showrulers);
         if(pprops->backgroundmode == QWidget::FixedPixmap)
         {
           QPixmap pix(pprops->backgroundpixmap.data());

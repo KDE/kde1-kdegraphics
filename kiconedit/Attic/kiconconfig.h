@@ -126,13 +126,14 @@ public:
 public slots:
   void saveSettings();
   void pasteMode(bool);
+  void showRulers(bool);
 
 protected slots:
 
 signals:
 
 protected:
-  bool pastemode;
+  bool pastemode, showrulers;
   Properties *pprops;
   QButtonGroup *btngrp;
   QRadioButton *rbp;
