@@ -1,8 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -218,9 +213,8 @@ msgid "Document information"
 msgstr "Informazioni Documento"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Impostazioni Stampante"
+msgstr "Impostazioni Pagina"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -283,9 +277,8 @@ msgid "Open &recent"
 msgstr "Apri &recenti"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Imposta ..."
+msgstr "&Imposta Pagina..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -300,9 +293,8 @@ msgid "Zoom &out"
 msgstr "Zoom &-"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Zoom ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -502,9 +494,8 @@ msgid "Go to ..."
 msgstr "Vai a ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Zoom +"
+msgstr "Zoom "
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -752,58 +743,21 @@ msgstr ""
 "Controlla la Barra di Stato per questa informazione.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "&ingrandimento"
+msgstr "ingrandimento"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "&media"
+msgstr "&Media"
 
-#: viewcontrol.cpp:93
-#, fuzzy
+#: viewcontrol.cpp:9
 msgid "&Orientation"
-msgstr "&orientamento"
+msgstr "&Orientazione"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Applica"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "&ingrandimento"
-
-#~ msgid "Print"
-#~ msgstr "Stampa"
-
-#~ msgid "Home"
-#~ msgstr "Inizio linea"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Controllo visualizzazione ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Riempi la pagina"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Mostra nuovamente"
-
-#~ msgid "Change view ..."
-#~ msgstr "Cambia visualizzazione ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Attiva antialiasing"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Disattiva antialiasing"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Mostra i messaggi Ghostscript"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Nascondi i messaggi Ghostscript"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Forza i cambiamenti in ..."
+msgstr "&Ingrandimento"
