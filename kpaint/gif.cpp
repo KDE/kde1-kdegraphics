@@ -47,7 +47,7 @@ void read_gif_file(QImageIO * imageio)
   QImage image;
   ColorMapObject *Colourmap;
   int trans= -1; // Index of the transparant colour, -1 if no transparent colour
-  unsigned int *ui_row;
+/*  unsigned int *ui_row; */
   unsigned char *uc_row;
   int InterlacedOffset[] =
   {0, 4, 2, 1},		/* The way Interlaced image should. */
@@ -225,7 +225,7 @@ void read_gif_file(QImageIO * imageio)
 
 void write_gif_file(QImageIO *imageio)
 {
-  int i, j, status;
+  int i, /*j,*/ status;
   GifFileType *GifFile;
   ColorMapObject *screenColourmap;
   ColorMapObject *imageColourmap;

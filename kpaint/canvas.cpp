@@ -13,7 +13,7 @@
 
 Canvas::Canvas(int width, int height,
 	       QWidget *parent= 0, const char *name=0)
-  : QWidget(parent)
+  : QWidget(parent, name)
 {
   currentTool= 0;
   s= INACTIVE;
@@ -94,7 +94,7 @@ void Canvas::setZoom(int z)
 void Canvas::updateZoomed(void)
 {
   QPainter p;
-  int w, h;
+/*  int w, h; */
 
   zoomed->fill(QColor("white"));
 
@@ -161,7 +161,7 @@ void Canvas::setPixmap(QPixmap *px)
   repaint(0);
 }
 
-void Canvas::paintEvent(QPaintEvent *e)
+void Canvas::paintEvent(QPaintEvent * /*e*/ )
 {
   bitBlt(this, 0, 0, zoomed);
 }
