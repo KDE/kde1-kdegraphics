@@ -835,12 +835,4 @@ msgstr "Nr. %d"
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
-
-# kghostview.cpp:360 kghostview.cpp:449
-#~ msgid "View Control"
-#~ msgstr "Sýn"
-
-# zoom.cpp:46
-#~ msgid "&Magnification"
-#~ msgstr "&Stækkun"
+msgstr "&Stækkunarstuðull"
