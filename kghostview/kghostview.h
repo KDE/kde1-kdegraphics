@@ -69,7 +69,7 @@ public:
     
 	KAccel *keys;
 	
-	KGlobalAccel *ga;
+	//KGlobalAccel *ga;
 	
 	enum action { GET, PUT };
 	void openNetFile( const char *_url );

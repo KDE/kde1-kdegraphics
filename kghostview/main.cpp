@@ -58,8 +58,8 @@ bool MyApp::x11EventFilter( XEvent *ev ) {
 		kg=KGhostview::windowList.next() )
 	{
 	
-	if ( ev->type == KeyPress && kg->ga->x11EventFilter( ev ) ) 
-		return true;
+	//if ( ev->type == KeyPress && kg->ga->x11EventFilter( ev ) ) 
+	//	return true;
 	
 	if(ev->xany.type == ClientMessage) {
 		kg->page->mwin = ev->xclient.data.l[0];
