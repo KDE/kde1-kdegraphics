@@ -24,20 +24,20 @@ msgstr "Pronto"
 
 #: viewer.cpp:186
 msgid "Net saving not yet implemented"
-msgstr ""
+msgstr "Salvamento incremental ainda não implementado"
 
 #: viewer.cpp:194
 #, c-format
 msgid "%s: written"
-msgstr ""
+msgstr "%s: gravado"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Entre fator de ampliação (100 = 1x):"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Fator de ampliação ilegal"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -80,9 +80,8 @@ msgid "&Full Screen"
 msgstr "Te&la Cheia"
 
 #: viewer.cpp:343
-#, fuzzy
 msgid "&Zoom..."
-msgstr "&Aproximar"
+msgstr "&Ampliação..."
 
 #: viewer.cpp:344
 #, c-format
@@ -96,11 +95,11 @@ msgstr "Redu&zir 10%"
 
 #: viewer.cpp:346
 msgid "&Double size"
-msgstr ""
+msgstr "&Duplicar tamanho"
 
 #: viewer.cpp:347
 msgid "&Half size"
-msgstr ""
+msgstr "Diminuir à &Metade"
 
 #: viewer.cpp:349
 msgid "&Reset"
@@ -139,14 +138,12 @@ msgid "&List.."
 msgstr "&Lista..."
 
 #: viewer.cpp:371
-#, fuzzy
 msgid "&Previous"
-msgstr "Anterior"
+msgstr "&Anterior"
 
 #: viewer.cpp:372
-#, fuzzy
 msgid "&Next"
-msgstr "Próxima"
+msgstr "&Próxima"
 
 #: viewer.cpp:374
 msgid "&Slideshow On/Off"
@@ -165,16 +162,14 @@ msgid "Couldn't get temporary transfer name."
 msgstr "Impossível obter nome temporário para transferência"
 
 #: viewer.cpp:486
-#, fuzzy
 msgid "Transfer error: "
-msgstr "&Transformar"
+msgstr "Erro de transferência: "
 
 #: viewer.cpp:558
 msgid "Loading.."
 msgstr "Carregando..."
 
 #: colour.cpp:29
-#, fuzzy
 msgid "Brightening..."
 msgstr "Clareando..."
 
@@ -183,7 +178,6 @@ msgid "Intensity:Brighten"
 msgstr "Intensidade:Clarear"
 
 #: colour.cpp:63
-#, fuzzy
 msgid "Darkening..."
 msgstr "Escurecendo..."
 
@@ -192,7 +186,6 @@ msgid "Intensity:Darken"
 msgstr "Intensidade:Escurecer"
 
 #: colour.cpp:114
-#, fuzzy
 msgid "Converting to Greyscale..."
 msgstr "Convertendo para Escala de Cinzas..."
 
@@ -201,7 +194,6 @@ msgid "Greyscale"
 msgstr "Escala de cinzas"
 
 #: colour.cpp:161
-#, fuzzy
 msgid "Smoothing..."
 msgstr "Suavizando..."
 
@@ -211,15 +203,15 @@ msgstr "Suavizar"
 
 #: colour.cpp:248
 msgid "Enter gamma value (0...1):"
-msgstr ""
+msgstr "Entre valor de gama (0..1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Corrigindo gama..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
-msgstr ""
+msgstr "Correção de Gama..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -239,7 +231,7 @@ msgstr "Iniciar slide"
 
 #: ilistdlg.cpp:75
 msgid "Interval.."
-msgstr ""
+msgstr "Intervalo..."
 
 #: ilistdlg.cpp:80
 msgid "Loop"
@@ -259,7 +251,7 @@ msgstr "Iniciar &slide"
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
-msgstr ""
+msgstr "Tempo entre slides (seg):"
 
 #~ msgid "&Zoom in 50%"
 #~ msgstr "A&mpliar 50%"

@@ -79,9 +79,8 @@ msgid "Preferences ..."
 msgstr "Preferências ..."
 
 #: kdvi.cpp:175
-#, fuzzy
 msgid "&New"
-msgstr "&Seguinte"
+msgstr "&Novo"
 
 #: kdvi.cpp:176
 msgid "&Open ..."

@@ -352,9 +352,8 @@ msgid "New"
 msgstr "Novo"
 
 #: kghostview.cpp:498
-#, fuzzy
 msgid "&New"
-msgstr "Novo"
+msgstr "&Novo"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -640,6 +639,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+   "Configure a variável de ambiente PRINTER ou LPDEST para que o nome da "
+   "impressora seja levado em conta."
 
 #: kghostview.cpp:1654
 #, c-format
