@@ -1,0 +1,675 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 1.0\n"
+"POT-Creation-Date: 1998-02-25 18:08+0100\n"
+"PO-Revision-Date: 1998-06-29 11:00+0200\n"
+"Last-Translator: Cemal Koplay <bbm849@hun.edu.tr>\n"
+"Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ISO 8859-9\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:514
+msgid "Notice"
+msgstr "Duyuru"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Yazý tipi yaratýmý konusundaki deðiþiklik kdvi\n"
+"yazýlýmýný yeniden baþlattýðýnýzda iþler olacak!"
+
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Yazý tipi yolundaki deðiþiklikler kdvi'ý yeniden\n"
+"baþlattýðýnýzda geçerli olacak!"
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Metafont kipindeki deðiþiklikler kdvi'ý yeniden\n"
+"baþlattýðýnýzda geçerli olacak!"
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Çözünürlük deðiþikliði kdvi'ý yeniden\n"
+"baþlattýðýnýzda geçerli olacak!"
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Gamma deðerindeki deðiþiklik kdvi'ý yeniden\n"
+"baþlattýðýnýzda geçerli olacak!"
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "Hayda"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "Bu nedir? DVI problemi!\n"
+
+#: kdvi.cpp:92
+msgid "No document"
+msgstr "Belge yok"
+
+#: kdvi.cpp:108
+msgid "Toggle Menubar"
+msgstr "Geçiþ Menü Çubuðu"
+
+#: kdvi.cpp:110
+msgid "Mark page"
+msgstr "Sayfa iþaretle"
+
+#: kdvi.cpp:112
+msgid "Redraw"
+msgstr "Yeniden Çiz"
+
+#: kdvi.cpp:114
+msgid "Preferences ..."
+msgstr "Seçenekler..."
+
+#: kdvi.cpp:173
+msgid "&Open ..."
+msgstr "&Aç..."
+
+#: kdvi.cpp:180
+msgid "Open &recent"
+msgstr "Ö&ncekilerden Aç"
+
+#: kdvi.cpp:182
+msgid "&Print ..."
+msgstr "&Yazdýr..."
+
+#: kdvi.cpp:190
+msgid "Zoom &in"
+msgstr "&Büyült"
+
+#: kdvi.cpp:191
+msgid "Zoom &out"
+msgstr "&Küçült"
+
+#: kdvi.cpp:192
+msgid "&Fit to page"
+msgstr "Sayfaya &Oturt"
+
+#: kdvi.cpp:193
+msgid "Fit to page &width"
+msgstr "&Geniþlik olarak oturt"
+
+#: kdvi.cpp:195
+msgid "&Redraw page"
+msgstr "Sayfayý &yeniden Çiz"
+
+#: kdvi.cpp:204
+msgid "&First"
+msgstr "&Ýlk"
+
+#: kdvi.cpp:205
+msgid "&Last"
+msgstr "&Son"
+
+#: kdvi.cpp:206
+msgid "&Go to ..."
+msgstr "&Git ..."
+
+#: kdvi.cpp:209
+msgid "&Page"
+msgstr "&Sayfa"
+
+#: kdvi.cpp:214
+msgid "&Preferences ..."
+msgstr "&Seçenekler..."
+
+#: kdvi.cpp:215
+msgid "&Keys ..."
+msgstr "&Tuþlar..."
+
+#: kdvi.cpp:217
+msgid "Make PK-&fonts"
+msgstr "PK-&Yazýyüzleri Yap"
+
+#: kdvi.cpp:219
+msgid "Show PS"
+msgstr "PS Göster"
+
+#: kdvi.cpp:221
+msgid "Show &Menubar"
+msgstr "&Menü Çubuðu Göster"
+
+#: kdvi.cpp:223
+msgid "Show &Buttons"
+msgstr "&Düðmeleri Göster"
+
+#: kdvi.cpp:225
+msgid "Show Page Lis&t"
+msgstr "Sayfa &Dökümünü Göster"
+
+#: kdvi.cpp:227
+msgid "Show &Statusbar"
+msgstr "&Durum Çubuðunu Göster"
+
+#: kdvi.cpp:229
+msgid "Show Scro&llbars"
+msgstr "&Kaydýrma Çubuklarýný Göster"
+
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr "DVI Gösterici"
+
+#: kdvi.cpp:240
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala"
+
+
+#: kdvi.cpp:260
+msgid "Open document ..."
+msgstr "Belge Aç..."
+
+#: kdvi.cpp:261
+msgid "Reload document"
+msgstr "Geri Yükle"
+
+#: kdvi.cpp:262
+msgid "Print ..."
+msgstr "Yazdýr..."
+
+#: kdvi.cpp:264
+msgid "Go to first page"
+msgstr "Ýlk sayfaya git"
+
+#: kdvi.cpp:265
+msgid "Go to previous page"
+msgstr "Bir öncekine git"
+
+#: kdvi.cpp:266
+msgid "Go down then top of next page"
+msgstr "Sonraki sayfanýn baþýna git"
+
+#: kdvi.cpp:267
+msgid "Go to next page"
+msgstr "Sonraki sayfaya git"
+
+#: kdvi.cpp:268
+msgid "Go to last page"
+msgstr "Son sayfaya git"
+
+#: kdvi.cpp:270
+msgid "Decrease magnification"
+msgstr "Uzaklaþtýr"
+
+#: kdvi.cpp:271
+msgid "Small text"
+msgstr "Küçük Metin"
+
+#: kdvi.cpp:272
+msgid "Large text"
+msgstr "Büyük Metin"
+
+#: kdvi.cpp:273
+msgid "Increase magnification"
+msgstr "Yaklaþtýr"
+
+#: kdvi.cpp:298
+msgid "Scroll window and switch the page"
+msgstr "Pencereyi kaydýr"
+
+#: kdvi.cpp:307
+msgid "Select page and mark pages for printing"
+msgstr "Yazdýrýlacak sayfalarý seçiniz"
+
+#: kdvi.cpp:322
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:324
+msgid "Shrink: xx"
+msgstr "Küçült: xx"
+
+#: kdvi.cpp:326
+msgid "Page: xxxx / xxxx"
+msgstr "Sayfa: xxxx / xxxx"
+
+#: kdvi.cpp:343 kdvi.cpp:395
+msgid "New window"
+msgstr "Yeni Pencere"
+
+#: kdvi.cpp:344 kdvi.cpp:396
+msgid "Open file"
+msgstr "Dosya Aç"
+
+#: kdvi.cpp:345 kdvi.cpp:397
+msgid "Print dialog"
+msgstr "Yazdýrma penceresi"
+
+#: kdvi.cpp:347 kdvi.cpp:399
+msgid "Zoom in"
+msgstr "Büyült"
+
+#: kdvi.cpp:348 kdvi.cpp:400
+msgid "Zoom out"
+msgstr "Küçült"
+
+#: kdvi.cpp:349 kdvi.cpp:401
+msgid "Fit window"
+msgstr "Pencereye oturt"
+
+#: kdvi.cpp:350 kdvi.cpp:402
+msgid "Fit width"
+msgstr "Geniþlik olarak oturt"
+
+#: kdvi.cpp:351 kdvi.cpp:403
+msgid "Redraw page"
+msgstr "Yeniden çiz"
+
+#: kdvi.cpp:352 kdvi.cpp:405
+msgid "Next page"
+msgstr "Sonraki sayfa"
+
+#: kdvi.cpp:353 kdvi.cpp:404
+msgid "Previous page"
+msgstr "Önceki sayfa"
+
+#: kdvi.cpp:354 kdvi.cpp:407
+msgid "Last page"
+msgstr "Son sayfa"
+
+#: kdvi.cpp:355 kdvi.cpp:406
+msgid "First page"
+msgstr "Ýlk sayfa"
+
+#: kdvi.cpp:356 kdvi.cpp:408
+msgid "Goto page"
+msgstr "Sayfaya git"
+
+#: kdvi.cpp:357
+msgid "Configure keys"
+msgstr "Tuþlarý ayarla"
+
+#: kdvi.cpp:358 kdvi.cpp:409
+msgid "Toggle show PS"
+msgstr "PS göster"
+
+#: kdvi.cpp:359 kdvi.cpp:410
+msgid "Toggle menu bar"
+msgstr "Menü çubuðu"
+
+#: kdvi.cpp:360 kdvi.cpp:411
+msgid "Toggle button bar"
+msgstr "Tuþ çubuðu"
+
+#: kdvi.cpp:361 kdvi.cpp:412
+msgid "Toggle page list"
+msgstr "Sayfa listesi"
+
+#: kdvi.cpp:362 kdvi.cpp:413
+msgid "Toggle status bar"
+msgstr "Durum çubuðu"
+
+#: kdvi.cpp:363 kdvi.cpp:414
+msgid "Toggle scroll bars"
+msgstr "Kaydýrma çubuðu"
+
+#: kdvi.cpp:466
+msgid "File open dialog is open"
+msgstr "Sayfa aç penceresi açýk"
+
+#: kdvi.cpp:515
+msgid "Can't read file:\n"
+msgstr "Dosya okunamýyor:\n"
+
+#: kdvi.cpp:521
+msgid "Opening "
+msgstr "Açýlýyor "
+
+#: kdvi.cpp:546
+msgid "Opened "
+msgstr "Açýldý"
+
+#: kdvi.cpp:556
+msgid "Print dialog is open"
+msgstr "Yazdýrma penceresi açýk"
+
+#: kdvi.cpp:571
+msgid "View size fits page"
+msgstr "Sayfaya oturan boyutlarla gör"
+
+#: kdvi.cpp:580
+msgid "View width fits page"
+msgstr "Sayfaya oturan geniþlikle gör"
+
+#: kdvi.cpp:672
+msgid "Preferences applied"
+msgstr "Seçenekler uygulandý"
+
+#: kdvi.cpp:676
+msgid " Page "
+msgstr " Sayfa "
+
+#: kdvi.cpp:678
+msgid "Go to page"
+msgstr "Sayfaya git"
+
+#: kdvi.cpp:692
+msgid "Go to"
+msgstr "Git"
+
+#: kdvi.cpp:713
+msgid "Missing PK-fonts will be generated"
+msgstr "PK-Yazýyüzleri kayýp, yaratýlacak"
+
+#: kdvi.cpp:714
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "Kayýp PK-Yazýyüzleri 'missfont.log' dosyasýna yazýlacak"
+
+#: kdvi.cpp:730
+msgid "Postcsript specials are rendered"
+msgstr "Postscript özelleri hesaplanýyor"
+
+#: kdvi.cpp:731
+msgid "Postscript specials are not rendered"
+msgstr "Postscript özelleri hesaplanamadý"
+
+#: kdvi.cpp:747
+msgid "No menu bar"
+msgstr "Menü cubuðu yok"
+
+#: kdvi.cpp:747
+msgid "Menu bar is shown"
+msgstr "Menü çubuðu gösteriliyor"
+
+#: kdvi.cpp:765
+msgid "No button bar"
+msgstr "Tuþ çubuðu yok"
+
+#: kdvi.cpp:765
+msgid "Button bar is shown"
+msgstr "Tuþ çubuðu gösteriliyor"
+
+#: kdvi.cpp:779
+msgid "Tool bar is shown"
+msgstr "Araç çubuðu gösteriliyor"
+
+#: kdvi.cpp:779
+msgid "No tool bar"
+msgstr "Araç çubuðu yok"
+
+#: kdvi.cpp:803
+msgid "No status bar"
+msgstr "Durum çubuðu yok"
+
+#: kdvi.cpp:803
+msgid "Status bar is shown"
+msgstr "Durum çubuðu gösteriliyor"
+
+#: kdvi.cpp:817
+msgid "Scroll bars are shown"
+msgstr "Kaydýrma gubuklarý Gösteriliyor"
+
+#: kdvi.cpp:817
+msgid "No scroll bars"
+msgstr "Kaydýrma çubuklarý yok"
+
+#: kdvi.cpp:874
+msgid "Page: "
+msgstr "Sayfa: "
+
+#: kdvi.cpp:874
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:905
+msgid "Large text button set to shrink factor "
+msgstr "Büyük metin tuþu"
+
+#: kdvi.cpp:913
+msgid "Small text button set to shrink factor "
+msgstr "Küçük metin tuþu"
+
+#: kdvi.cpp:937
+msgid "File reloaded"
+msgstr "Dosya geri yüklendi"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Þu ankini iþaretle"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Þu ankini seçme"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Hepsini seç"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Çiftleri Seç"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Tekleri Seç"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Ýþaretleri deðiþtir"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Ýþaretleri kaldýr"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "Seçenekler"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Menü Çubuðu"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Tuþ Çubuðu"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Durum Çubuðu"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Sayfa Listesi"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Kaydýrma Çubuklarý"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Önceki dosyalarýn sayýsý"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Kayýp yazý tiplerini yarat"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Çözünürlük"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Metafont kipi"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "PK yazýyüzü yolu"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Küçük metin için çarpan"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Büyük metin için çarpan"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Postscript özellerini göster"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Antialiased postcript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Hesaplama"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Sayfa"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Yazdýr"
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "dvi dosyasý açýlamýyor!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Çýktý dvi dosyasý açýlamýyor!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "bu dvi sürümü desteklenmiyor!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Geçersiz sayfa aralýðý!"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Öntanýmlý Yazýcý"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "&Dosya adý:"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&Hepsi"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "Þ&uanki"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Seçili"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "&Aralýk"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "&Ters çevir"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 sayfa"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 sayfa birarada"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 sayfa birarada"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Satýrlarý doldur"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Sütunlarý doldur"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "&Ayarla"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Sayfa sýrasý"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Yazdýr"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Yazýcý Ayarlarý"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Yazýcýlar"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "&Dahili"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "ps&nup Kullan"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "&mpage kullan"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "&Ekle"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "S&pooler komutu:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n-up"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Yazdýrma türü"

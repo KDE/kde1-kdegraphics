@@ -1,0 +1,771 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 1.0\n"
+"POT-Creation-Date: 1998-02-25 18:08+0100\n"
+"PO-Revision-Date: 1998-06-29 11:00+0200\n"
+"Last-Translator: Yaþar PALA <bbm787@hun.edu.tr>\n"
+"Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ISO 8859-9\n"
+
+#: copyright.cpp:27
+msgid "Copyright"
+msgstr "Telif Hakký"
+
+#: copyright.cpp:41
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+
+
+#: goto.cpp:54
+msgid "&Section"
+msgstr "B&ölüm"
+
+#: goto.cpp:70
+msgid "&Page"
+msgstr "&Sayfa"
+
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
+#: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
+#, c-format
+msgid "of %d"
+msgstr "%d'nin"
+
+#: info.cpp:45
+msgid "File name :"
+msgstr "Dosya Adý:"
+
+#: info.cpp:53
+msgid "Document title :"
+msgstr "Belge baþlýðý"
+
+#: info.cpp:61
+msgid "Publication date :"
+msgstr "Basýlma tarihi: "
+
+#: interpreter.cpp:42
+msgid "General"
+msgstr "Genel"
+
+#: interpreter.cpp:79
+msgid "&Interpreter name"
+msgstr "&Yorumlayýcý adý"
+
+#: interpreter.cpp:87
+msgid "&Antialiasing"
+msgstr "&Antialiasing"
+
+#: interpreter.cpp:97
+msgid "Platform &fonts"
+msgstr "Platform &yazý tipleri"
+
+#: interpreter.cpp:107
+msgid "&Messages"
+msgstr "&Mesajlar"
+
+#: interpreter.cpp:130
+msgid "Palette"
+msgstr "Palet"
+
+#: interpreter.cpp:152
+msgid "Colo&r"
+msgstr "&Renk"
+
+#: interpreter.cpp:161
+msgid "&Grayscale"
+msgstr "&Gri"
+
+#: interpreter.cpp:169
+msgid "Monochrom&e"
+msgstr "&Tek renk"
+
+#: interpreter.cpp:192
+msgid "Backing"
+msgstr "Geri alýnýyor"
+
+#: interpreter.cpp:214
+msgid "&Pixmap"
+msgstr "&Pixmap"
+
+#: interpreter.cpp:224
+msgid "&Backing store"
+msgstr "&Geri alma korumasý"
+
+#: interpreter.cpp:244 kkeydialog.cpp:233
+msgid "&Defaults"
+msgstr "Ö&ntanýmlýlar"
+
+#: interpreter.cpp:314
+msgid "gs"
+msgstr "gs"
+
+#: kaccel.cpp:169
+msgid "CTRL+O"
+msgstr "CTRL+O"
+
+#: kaccel.cpp:173
+msgid "CTRL+N"
+msgstr "CTRL+N"
+
+#: kaccel.cpp:177
+msgid "CTRL+W"
+msgstr "CTRL+W"
+
+#: kaccel.cpp:181
+msgid "CTRL+S"
+msgstr "CTRL+S"
+
+#: kaccel.cpp:185
+msgid "CTRL+P"
+msgstr "CTRL+P"
+
+#: kaccel.cpp:189
+msgid "CTRL+Q"
+msgstr "CTRL+Q"
+
+#: kaccel.cpp:193
+msgid "CTRL+X"
+msgstr "CTRL+X"
+
+#: kaccel.cpp:197
+msgid "CTRL+C"
+msgstr "CTRL+C"
+
+#: kaccel.cpp:201
+msgid "CTRL+V"
+msgstr "CTRL+V"
+
+#: kaccel.cpp:205
+msgid "CTRL+Z"
+msgstr "CTRL+Z"
+
+#: kaccel.cpp:209
+msgid "CTRL+F"
+msgstr "CTRL+F"
+
+#: kaccel.cpp:213
+msgid "CTRL+R"
+msgstr "CTRL+R"
+
+#: kaccel.cpp:216 kaccel.cpp:443
+msgid "Insert"
+msgstr "Araya Ekle"
+
+#: kaccel.cpp:217
+msgid "CTRL+Insert"
+msgstr "CTRL+Ins"
+
+#: kaccel.cpp:221
+msgid "CTRL+Home"
+msgstr "CTRL+Home"
+
+#: kaccel.cpp:224 kaccel.cpp:449
+msgid "End"
+msgstr "Son"
+
+#: kaccel.cpp:225
+msgid "CTRL+End"
+msgstr "CTRL+End"
+
+#: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
+msgid "Prior"
+msgstr "Önceki"
+
+#: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
+msgid "Next"
+msgstr "Sonraki"
+
+#: kaccel.cpp:237
+msgid "F1"
+msgstr "F1"
+
+#: kghostview.cpp:199
+msgid "Document information"
+msgstr "Belge Bilgisi"
+
+#: kghostview.cpp:213
+msgid "Page Setup"
+msgstr "Sayfa Düzeni"
+
+#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
+msgid "View Control"
+msgstr "Görüþ Kontrolü"
+
+#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
+msgid "Go To Page"
+msgstr "Sayfaya Git"
+
+#: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
+msgid "Zoom In"
+msgstr "Büyült"
+
+#: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
+msgid "Zoom Out"
+msgstr "Küçült"
+
+#: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
+msgid "Next Page"
+msgstr "Sonraki sayfa"
+
+#: kghostview.cpp:358 kghostview.cpp:379 kghostview.cpp:447
+msgid "Prev Page"
+msgstr "Önceki Sayfa"
+
+#: kghostview.cpp:359 kghostview.cpp:380
+msgid "Scroll Up"
+msgstr "Yukarý Kay"
+
+#: kghostview.cpp:360 kghostview.cpp:381
+msgid "Scroll Down"
+msgstr "Aþaðý Kay"
+
+#: kghostview.cpp:361 kghostview.cpp:382
+msgid "Scroll Left"
+msgstr "Sola Kay"
+
+#: kghostview.cpp:362 kghostview.cpp:383
+msgid "Scroll Right"
+msgstr "Saða Kay"
+
+#: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
+msgid "Redisplay"
+msgstr "Tekrar göster"
+
+#: kghostview.cpp:406 kghostview.cpp:408
+msgid "Not known"
+msgstr "Bilinmiyor"
+
+#: kghostview.cpp:419
+msgid "Configure interpreter"
+msgstr "Yorumlayýcý Ayarla"
+
+#: kghostview.cpp:494
+msgid "&Open ..."
+msgstr "&Aç..."
+
+#: kghostview.cpp:495
+msgid "Open &recent"
+msgstr "&Öncekileri Aç"
+
+#: kghostview.cpp:503
+msgid "Page Set&up ..."
+msgstr "Sayfa Düzeni"
+
+#: kghostview.cpp:505
+msgid "&Print ..."
+msgstr "&Yazdýr"
+
+#: kghostview.cpp:513
+msgid "Zoom &in"
+msgstr "&Büyült"
+
+#: kghostview.cpp:515
+msgid "Zoom &out"
+msgstr "&Küçült"
+
+#: kghostview.cpp:517
+msgid "&Zoom ..."
+msgstr "Büyütme.."
+
+#: kghostview.cpp:522
+msgid "&Info ..."
+msgstr "&Bilgi ..."
+
+#: kghostview.cpp:527
+msgid "&Previous Page"
+msgstr "Ö&nceki sayfa"
+
+#: kghostview.cpp:529
+msgid "&Next page"
+msgstr "&Sonraki sayfa"
+
+#: kghostview.cpp:531
+msgid "&Go to page ..."
+msgstr "Sayfaya &Git..."
+
+#: kghostview.cpp:534
+msgid "Go to &start"
+msgstr "&Baþlangýca git"
+
+#: kghostview.cpp:536
+msgid "Go to &end"
+msgstr "So&na git"
+
+#: kghostview.cpp:538
+msgid "&Read down"
+msgstr "Aþaðýya &Oku"
+
+#: kghostview.cpp:543
+msgid "Mark &current page"
+msgstr "Bulunulan sayfayý iþ&aretle"
+
+#: kghostview.cpp:546
+msgid "Mark &all pages"
+msgstr "Tüm sayfalarý s&eç"
+
+#: kghostview.cpp:548
+msgid "Mark &even pages"
+msgstr "Ç&ift sayfalarý seç"
+
+#: kghostview.cpp:550
+msgid "Mark &odd pages"
+msgstr "Te&k sayfalarý seç"
+
+#: kghostview.cpp:553
+msgid "&Toggle page marks"
+msgstr "Sayfa iþaretle&ri"
+
+#: kghostview.cpp:556
+msgid "&Remove page marks"
+msgstr "Sayfa iþaretlerini Si&l"
+
+#: kghostview.cpp:567
+msgid "Show &tool bar"
+msgstr "Ara&ç Çubuðu Göster"
+
+#: kghostview.cpp:568
+msgid "Show st&atus bar"
+msgstr "Dur&um çubuðunu göster"
+
+#: kghostview.cpp:569
+msgid "Show &page list"
+msgstr "Say&fa dökümünü göster"
+
+#: kghostview.cpp:571
+msgid "Configure &interpreter ..."
+msgstr "&Yorumlayýcýyý ayarla..."
+
+#: kghostview.cpp:572
+msgid "Configure &key bindings ..."
+msgstr "K&ýsayol tuþlarýný tanýmla ..."
+
+#: kghostview.cpp:574
+msgid "&Save options"
+msgstr "Seçenekleri &kaydet"
+
+#: kghostview.cpp:581
+msgid "&About this application"
+msgstr "&Bu uygulama hakkýnda"
+
+#: kghostview.cpp:583
+msgid "&Help for this application"
+msgstr "&Yardým"
+
+#: kghostview.cpp:585
+msgid "&Copyright"
+msgstr "&Telif Hakký"
+
+#: kghostview.cpp:592
+msgid "&Go"
+msgstr "&Git"
+
+#: kghostview.cpp:593
+msgid "&Pagemarks"
+msgstr "Say&fa Ýþaretleri"
+
+#: kghostview.cpp:661
+msgid "New window ..."
+msgstr "Yeni pencere ..."
+
+#: kghostview.cpp:664
+msgid "Open file ..."
+msgstr "Dosyayý aç ..."
+
+#: kghostview.cpp:672
+msgid "Print document ..."
+msgstr "Belgeyi yazdýr ..."
+
+#: kghostview.cpp:677
+msgid "Zoom in"
+msgstr "Büyült"
+
+#: kghostview.cpp:680
+msgid "Zoom out"
+msgstr "Küçült"
+
+#: kghostview.cpp:685
+msgid "Go back"
+msgstr "Geri git"
+
+#: kghostview.cpp:688
+msgid "Go forward"
+msgstr "Ýleri git"
+
+#: kghostview.cpp:691
+msgid "Go to page ..."
+msgstr "Sayfaya git ..."
+
+#: kghostview.cpp:696
+msgid "Go to start"
+msgstr "Baþlangýca git"
+
+#: kghostview.cpp:699
+msgid "Go to end"
+msgstr "Sona git"
+
+#: kghostview.cpp:702
+msgid "Read down the page"
+msgstr "Sayfayý oku"
+
+#: kghostview.cpp:707
+msgid "Toggle this page mark"
+msgstr "Bu sayfa iþaretini deðiþtir"
+
+#: kghostview.cpp:729
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "Sc.100'ün 100'ü  P.100'ün 100'ü"
+
+#: kghostview.cpp:730
+#, c-format
+msgid "100 %"
+msgstr "100 %"
+
+#: kghostview.cpp:731
+msgid "Upside Down"
+msgstr "Baþ Aþaðý"
+
+#: kghostview.cpp:756
+msgid "Malformed URL."
+msgstr "Yetersiz URL"
+
+#: kghostview.cpp:768
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+"Halen bir internet\n"
+"iþleminin bitmesini bekliyorum.\n"
+"Lütfen bitene kadar bekleyin.\n"
+"Ya da sözkonusu iþlemi sonlandýrýn."
+
+
+#: kghostview.cpp:777
+msgid "Could not start or find KFM."
+msgstr "KFM bulunamýyor yada baþlatýlamýyor"
+
+#: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
+msgid "Portrait"
+msgstr "Portre"
+
+#: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
+msgid "Landscape"
+msgstr "Yatay"
+
+#: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
+msgid "Seascape"
+msgstr "Seascape"
+
+#: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
+msgid "Upside down"
+msgstr "Baþ aþþaðý"
+
+#: kghostview.cpp:1262
+msgid "Go to ..."
+msgstr "Git ..."
+
+#: kghostview.cpp:1337
+msgid "Zoom"
+msgstr "Büyütme"
+
+#: kghostview.cpp:1523
+msgid "Version 0.6"
+msgstr "Sürüm 0.6"
+
+#: kghostview.cpp:1524
+msgid "Sorry, not ready yet"
+msgstr "Üzgünüm henüz deðil"
+
+#: kghostview.cpp:1531
+msgid "About kghostview"
+msgstr "kghosview hakkýnda"
+
+#: kghostview.cpp:1532
+msgid ""
+"Version :\t0.6 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+"Sürüm :\t0.6 alpha\n"
+"Yazar : Mark Donohoe\n"
+"E-mail : donohoe@kde.org"
+
+#: kghostview.cpp:1584 kghostview.cpp:1700
+msgid "Error printing"
+msgstr "Yazdýrma hatasý"
+
+#: kghostview.cpp:1594
+msgid ""
+"You chose to print all pages to a file.\n"
+"This would produce a document identical to\n"
+"that currently loaded into the viewer.\n"
+"There is no need to print all pages into a new file."
+msgstr ""
+"Tüm sayfalarý bir dosyaya yazdýrmayý seçtiniz.\n"
+"Bu iþlem þu anda yüklenen dosyanýn aynýsýný\n"
+"yaratacaktýr. Tüm sayfalarý yeni bir dosyaya\n"
+"yazdýrmaya gerçekten gerek yok."
+
+
+#: kghostview.cpp:1607
+msgid ""
+"No file name was given so\n"
+"nothing could be printed to a file.\n"
+msgstr ""
+"Dosya adý verilmediðinden\n"
+"dosyaya yazdýrýlamýyor.\n"
+
+#: kghostview.cpp:1665
+#, c-format
+msgid "Print failure : %s"
+msgstr "Yazdýrma hatasý: %s "
+
+#: kghostview.cpp:1701
+msgid ""
+"Printing failed because the list of\n"
+"pages to be printed was empty.\n"
+msgstr ""
+"Yazdýrýlacak sayfa listesi boþ\n"
+"olduðundan, yazdýrma iþlemi baþarýsýz.\n"
+
+
+#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
+#: kghostview.cpp:2534
+msgid "of 1    "
+msgstr "1'in     "
+
+#: kghostview.cpp:2236 kghostview.cpp:2248 kghostview.cpp:2536
+#, c-format
+msgid "of %d    "
+msgstr "%d'nin    "
+
+#: kghostview.cpp:2238 kghostview.cpp:2250 kghostview.cpp:2538
+#: kghostview.cpp:2545
+#, c-format
+msgid "of %d  "
+msgstr "%d'nin   "
+
+#: kghostview.cpp:2510
+msgid "Sc.1 "
+msgstr "Sc.1 "
+
+#: kghostview.cpp:2513
+msgid "P.1 "
+msgstr "P.1 "
+
+#: kghostview.cpp:2515 kghostview.cpp:2528
+#, c-format
+msgid "P.%d "
+msgstr "P.%d"
+
+#: kghostview.cpp:2530
+#, c-format
+msgid "Sc.%d "
+msgstr "Sc.%d "
+
+#: kkeydialog.cpp:312
+msgid "Current key"
+msgstr "Þu anki tuþ"
+
+#: kkeydialog.cpp:323
+msgid "&Action"
+msgstr "&Haraket"
+
+#: kkeydialog.cpp:382
+msgid "&No key"
+msgstr "&Tuþ Yok"
+
+#: kkeydialog.cpp:390
+msgid "&Default key"
+msgstr "Ö&ntanýmlý Tuþ"
+
+#: kkeydialog.cpp:398
+msgid "&Custom key"
+msgstr "Ö&zel Tuþ"
+
+#: main.cpp:25
+msgid "Usage: "
+msgstr "Kullaným: "
+
+#: main.cpp:27
+msgid ""
+" [filename] [siwtches]\n"
+"\n"
+msgstr ""
+" [dosyaismi] [seçenekler]\n"
+"\n"
+
+#: main.cpp:28
+msgid ""
+"See KDE and Qt documentation for\n"
+"command line options.\n"
+msgstr ""
+"komut satýrý seçenekleri için\n"
+"KDE ve Qt belgelerini görünüz\n"
+
+#: main.cpp:30
+msgid "Error on command line"
+msgstr "Komut satýrýnda hata"
+
+#: marklist.cpp:38
+msgid "Mark current page"
+msgstr "Þu anki sayfayý iþaretle"
+
+#: marklist.cpp:39
+msgid "Mark all pages"
+msgstr "Bütün sayfalarý iþaretle"
+
+#: marklist.cpp:40
+msgid "Mark even pages"
+msgstr "Çift sayfalarý iþaretle"
+
+#: marklist.cpp:41
+msgid "Mark odd pages"
+msgstr "Tek sayfalarý iþaretle"
+
+#: marklist.cpp:42
+msgid "Toggle page marks"
+msgstr "Sayfa iþaretlerini deðiþtir"
+
+#: marklist.cpp:43
+msgid "Remove page marks"
+msgstr "Sayfa iþaretlerini kaldýr"
+
+#: messages.cpp:29
+msgid "Ghostscript messages"
+msgstr "Ghostscript mesajlarý"
+
+#: messages.cpp:56
+msgid "&Clear"
+msgstr "&Temizle"
+
+#: messages.cpp:59
+msgid "&Dismiss"
+msgstr "&Unut"
+
+#: print.cpp:35
+msgid "Printer setup"
+msgstr "Yazýcý Ayarlarý"
+
+#: print.cpp:65
+msgid "&Printer name"
+msgstr "&Yazýcý adý"
+
+#: print.cpp:77
+msgid "&Spooler command"
+msgstr "&Spooler komutu"
+
+#: print.cpp:89
+msgid "&Environment variable"
+msgstr "Ç&evre deðiþkeni"
+
+#: print.cpp:148
+msgid "Print to file"
+msgstr "Dosyaya yazdýr"
+
+#: print.cpp:153
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: print.cpp:179
+msgid "&All"
+msgstr "&Hepsi"
+
+#: print.cpp:188
+msgid "&Current"
+msgstr "Þ&u anki"
+
+#: print.cpp:196
+msgid "&Marked"
+msgstr "Ýþ&aretli"
+
+#: print.cpp:205
+msgid "&Range"
+msgstr "&Aralýk"
+
+#: print.cpp:219
+msgid "to"
+msgstr "içine"
+
+#: print.cpp:232
+msgid "Print document in re&verse order"
+msgstr "Belgeyi ters sýrada yazdýr"
+
+#: print.cpp:249
+msgid "&Setup ..."
+msgstr "&Ayarlar ..."
+
+#: print.cpp:289
+msgid "Range error"
+msgstr "Aralýk hatasý"
+
+#: print.cpp:290
+msgid ""
+"The range of pages entered for printing\n"
+"can't be understood.\n"
+"\n"
+"The range specified must lie within the page\n"
+"range for this part of the document.\n"
+"Check the status bar for this information.\n"
+msgstr ""
+"Yazdýrma için seçilen sayfa aralýðý\n"
+"anlaþýlamadý.\n"
+"\n"
+"Belirttiðiniz sayfa aralýðýnýn, belgenin\n"
+"bu bölümü sýnýrlarý içinde olmasý gerekli.\n"
+"Durum satýrýndaki bilgiyi kontrol edin.\n"
+
+
+#: viewcontrol.cpp:75
+msgid "magnification"
+msgstr "büyütme"
+
+#: viewcontrol.cpp:85
+msgid "&Media"
+msgstr "Ortam"
+
+#: viewcontrol.cpp:93
+msgid "&Orientation"
+msgstr "Yönelim"
+
+#: viewcontrol.cpp:117
+msgid "&Apply"
+msgstr "&Uygula"
+
+#: zoom.cpp:46
+msgid "&Magnification"
+msgstr "Büyütme"
