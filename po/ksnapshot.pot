@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1998-11-04 15:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr ""
+
+#: ksnapshot.cpp:93
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+
+#: ksnapshot.cpp:127
+msgid "Filename:"
+msgstr ""
+
+#: ksnapshot.cpp:159
+msgid "Delay:"
+msgstr ""
+
+#: ksnapshot.cpp:168
+msgid "seconds."
+msgstr ""
+
+#: ksnapshot.cpp:188
+msgid "Auto raise"
+msgstr ""
+
+#: ksnapshot.cpp:189
+msgid "Hide KSnapshot window"
+msgstr ""
+
+#: ksnapshot.cpp:191
+msgid "Only grab the window containing the cursor"
+msgstr ""
+
+#: ksnapshot.cpp:222
+msgid "Grab"
+msgstr ""
+
+#: ksnapshot.cpp:452
+msgid "Error: Unable to save image"
+msgstr ""
+
+#: ksnapshot.cpp:453
+msgid "Dismiss"
+msgstr ""
+
+#: ksnapshot.cpp:457
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+
+#: ksnapshot.cpp:467
+msgid "KSnapshot preview"
+msgstr ""
