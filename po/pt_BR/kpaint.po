@@ -261,7 +261,7 @@ msgstr "Altura da Imagem:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Ok"
 
 #: palette.cpp:100
 msgid "Edit Colour"
