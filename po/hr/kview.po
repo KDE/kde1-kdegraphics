@@ -1,0 +1,234 @@
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Vladimir Vuksan <vuksan@veus.hr>, 1998.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: graphics\n"
+"POT-Creation-Date: 1998-09-14 22:23+0200\n"
+"PO-Revision-Date: 1998-09-17 13:38+MST\n"
+"Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wview.cpp:81
+msgid "&Image"
+msgstr "&Slika"
+
+#: wview.cpp:87
+msgid "&Open File.."
+msgstr "&Otvori datoteku..."
+
+#: wview.cpp:88
+msgid "Open &URL.."
+msgstr "Otvori &URL..."
+
+#: wview.cpp:95
+msgid "&Zoom"
+msgstr "Uveæaj/Umanji"
+
+#: wview.cpp:96
+msgid "&Rotate"
+msgstr "Rotiraj"
+
+#: wview.cpp:97
+msgid "To &Desktop"
+msgstr "Na &radnu povr¹inu"
+
+#: wview.cpp:99
+msgid "&Toggle Menu"
+msgstr "&Uklj./isklj. izbornik"
+
+#: wview.cpp:100
+msgid "&Size Window"
+msgstr "&Velièina prozora"
+
+#: wview.cpp:102
+msgid "I&mage Info"
+msgstr "Info o s&lici"
+
+#: wview.cpp:106
+msgid "&in"
+msgstr "&unutra"
+
+#: wview.cpp:107
+msgid "&out"
+msgstr "&van"
+
+#: wview.cpp:111
+msgid "&Clockwise"
+msgstr "&U smjeru kazaljke na satu"
+
+#: wview.cpp:113
+msgid "&Anti-clock"
+msgstr "&Protivno smjeru kazaljke na satu"
+
+#: viewport.cpp:51 wview.cpp:118
+msgid "Ti&le"
+msgstr "Pop&loèaj"
+
+#: wview.cpp:119
+msgid "&Max Size"
+msgstr "&Max velièina"
+
+#: wview.cpp:120
+msgid "M&axpect"
+msgstr ""
+
+#: viewport.cpp:41
+msgid "Clockwise"
+msgstr "U smjeru kazaljke na satu"
+
+#: viewport.cpp:43
+msgid "Anti-clock"
+msgstr "Protivno smjeru kazaljke na satu"
+
+#: viewport.cpp:45
+msgid "Mirror X"
+msgstr "Zrcali X"
+
+#: viewport.cpp:47
+msgid "Mirror Y"
+msgstr "Zrcali Y"
+
+#: viewport.cpp:52
+msgid "Max Size"
+msgstr "Max velièina"
+
+#: viewport.cpp:53
+msgid "Maxpect"
+msgstr ""
+
+#: viewport.cpp:56
+msgid "Zoom"
+msgstr "Uveæaj/Umanji"
+
+#: viewport.cpp:57
+msgid "Rotate"
+msgstr "Rotiraj"
+
+#: viewport.cpp:58
+msgid "To Desktop"
+msgstr "Na radnu povr¹inu"
+
+#: viewport.cpp:59
+msgid "Fit window size to pixmap size"
+msgstr "Podesi velièinu prozora prema velièini pixmape"
+
+#: viewport.cpp:61
+msgid "Fit pixmap size to window size"
+msgstr "Podesi velièinu pixmape prema velièini prozora"
+
+#: fileman.cpp:53
+msgid "KView Display Manager"
+msgstr "Upravitelj KView preglednika"
+
+#: fileman.cpp:101
+msgid "Open &URL..."
+msgstr "Otvori &URL..."
+
+#: fileman.cpp:124
+msgid "Image Caching"
+msgstr "Spremi slike u predmemoriju (cache)"
+
+#: fileman.cpp:132
+msgid "Cache Size"
+msgstr "Velièina predmemorije (cache)"
+
+#: fileman.cpp:134
+msgid "Save Options"
+msgstr "Spremi opcije"
+
+#: fileman.cpp:139
+msgid "&About KView"
+msgstr "&O KView"
+
+#: fileman.cpp:162
+msgid "New Window"
+msgstr "Novi prozor"
+
+#: fileman.cpp:168
+msgid "open new file"
+msgstr "otvori novu datoteku"
+
+#: fileman.cpp:183
+#, c-format
+msgid "shrink -50%"
+msgstr "umanji -50%"
+
+#: fileman.cpp:189
+#, c-format
+msgid "magnify +50%"
+msgstr "uveæaj +50%"
+
+#: fileman.cpp:195
+msgid "size Window"
+msgstr "velièina prozora"
+
+#: fileman.cpp:202
+msgid "launch help"
+msgstr "tra¾i pomoæ"
+
+#: fileman.cpp:209
+msgid "first pic"
+msgstr "prva slika"
+
+#: fileman.cpp:215
+msgid "last pic"
+msgstr "zadnja slika"
+
+#: fileman.cpp:222
+msgid "prev pic"
+msgstr "prethodna slika"
+
+#: fileman.cpp:228
+msgid "next pic"
+msgstr "slijedeæa slika"
+
+#: fileman.cpp:235
+msgid "start picture show"
+msgstr "pokreni show sa slikama"
+
+#: fileman.cpp:241
+msgid "random picture show"
+msgstr "nasumièni show sa slikama"
+
+#: fileman.cpp:247
+msgid "stop picture show"
+msgstr "zaustavi show sa slikama"
+
+#: fileman.cpp:280
+msgid "slow"
+msgstr "sporo"
+
+#: fileman.cpp:285
+msgid "fast"
+msgstr "brzo"
+
+#: fileman.cpp:299
+msgid "Output Device"
+msgstr ""
+
+#: fileman.cpp:378
+#, c-format
+msgid " Files: %d"
+msgstr " Datoteke: %d"
+
+#: fileman.cpp:388
+#, c-format
+msgid " Format: %s Size: %dx%d"
+msgstr " Format: %s Velièina %dx%d"
+
+#: fileman.cpp:531
+#, c-format
+msgid "Window %d"
+msgstr "Prozor %d"
+
+#: fileman.cpp:655
+msgid "(c) 1996 - 1998 by \n"
+msgstr "(c) 1996 - 1998 \n"
+
+#: fileman.cpp:658
+msgid "About KView"
+msgstr "O KView"
