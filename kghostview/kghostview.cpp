@@ -20,6 +20,7 @@
 #define ID_CONFIGURE 4
 #define ID_GHOSTSCRIPT 5
 #define ID_SAVE 6
+#define ID_PAGELIST 7
 
 #define ID_NEW_WINDOW 0
 #define ID_CLOSE_WINDOW 1
@@ -31,11 +32,14 @@
 #define ID_FILE_D 8
 #define ID_FILE_QUIT 9
 
+#define PAGELIST_WIDTH 75
+
 #include <kmisc.h>
 #include "kghostview.h"
 
 #include <kkeyconf.h>
 #include <kapp.h>
+#include <kiconloader.h>
 
 #include <kmsgbox.h>
 
@@ -47,6 +51,7 @@ extern "C" {
 }
 
 #include "kghostview.moc"
+#include "marklist.moc"
 
 int toolbar1;
 
@@ -66,9 +71,9 @@ KGhostview::KGhostview( QWidget *, char *name )
     
     oldfilename.sprintf("");
 	filename.sprintf("");
-	psfile=NULL;
-	doc=NULL;
-	olddoc=NULL;
+	psfile=0;
+	doc=0;
+	olddoc=0;
     
     for(int file_count=0;file_count<4;file_count++) {
     	lastOpened[file_count].sprintf("");
@@ -96,6 +101,33 @@ KGhostview::KGhostview( QWidget *, char *name )
 	current_ury = 0;
 	hide_toolbar = FALSE;
 	hide_statusbar = FALSE;
+	
+	//
+    // MAIN WINDOW
+    //
+    
+	mainFrame = new QFrame( this );
+	CHECK_PTR( mainFrame );
+	
+	mainFrame->setFrameStyle( QFrame::NoFrame );
+	
+	marklist = new MarkList( mainFrame );
+	CHECK_PTR( marklist );
+	
+	marklist->selectColor = kapp->selectColor;
+	marklist->selectTextColor = kapp->selectTextColor;
+	
+	connect( marklist, SIGNAL(selected(const char *)),
+		SLOT(pageActivated(const char *)) );
+	
+	//QToolTip::add( marklist, "Select page and mark pages for printing" );
+	
+    //printf("Done toolbar - Create KPSWidget\n");
+    
+    page = new KPSWidget( mainFrame );
+    CHECK_PTR( page );
+    
+    //printf("Done pswidget - Create statusbar\n");
     
     //
     // MENUBAR
@@ -109,26 +141,22 @@ KGhostview::KGhostview( QWidget *, char *name )
 	
 	createToolbar();
 	
-	//
-    // MAIN WINDOW
-    //
-    
-    //printf("Done toolbar - Create KPSWidget\n");
-    
-    page = new KPSWidget( this );
-    CHECK_PTR( page );
-    
-    // Register page widget with KTopLevelWidget
-    
-    setView( page, FALSE );
-    
-    //printf("Done pswidget - Create statusbar\n");
-    
     //
     // STATUSBAR
     //
     
     createStatusbar();
+	
+	// Register with KTopLevelWidget geometry manager
+    
+	setMenu( menubar );
+	toolbar1 = addToolBar( toolbar );
+	//printf("Registered with ktopwidget\n");
+	//toolbar->setBarPos( KToolBar::Top );
+	//toolbar->show();
+    setStatusBar( statusbar );
+	statusbar->show();
+	setView( mainFrame, FALSE );
     
     //
   	//	INFO DIALOG
@@ -185,6 +213,11 @@ KGhostview::KGhostview( QWidget *, char *name )
     	m_options->setItemChecked(  ID_STATUSBAR, FALSE );
     else
     	m_options->setItemChecked( ID_STATUSBAR, TRUE );
+		
+	if ( hide_pagelist )
+    	m_options->setItemChecked(  ID_PAGELIST, FALSE );
+    else
+    	m_options->setItemChecked( ID_PAGELIST, TRUE );
     	
     changeFileRecord();
 	
@@ -205,9 +238,43 @@ KGhostview::KGhostview( QWidget *, char *name )
 	show();
 }
 
+void KGhostview::pageActivated( const char * text)
+{
+	int pg = QString( text ).toInt();
+	show_page(pg-1);
+}
+
+void KGhostview::updateRects()
+{	
+	//printf("KTopLevelWidget::updateRects()\n");
+	
+	KTopLevelWidget::updateRects();
+	
+	//printf("KTopLevelWidget::updateRects() returned\n");
+
+	marklist->setGeometry( 0, 0,
+		PAGELIST_WIDTH,
+		mainFrame->height());
+
+	if( marklist->isVisible() ) {
+		page->setGeometry( PAGELIST_WIDTH+3, 0,
+			mainFrame->width()-PAGELIST_WIDTH-3,
+			mainFrame->height() );
+	} else {
+		page->setGeometry( 0, 0,
+			mainFrame->width(),
+			mainFrame->height() );
+	}
+}
+
 KGhostview::~KGhostview()
 {
+	//printf("KGhostview::~KGhostview()\n");
+	
 	windowList.removeRef(this);
+	
+	delete menubar;
+	delete toolbar;
 }
 
 void KGhostview::bindKeys()
@@ -245,7 +312,7 @@ void KGhostview::bindKeys()
 	
 	int window_count=0;
 	QString widgetName;
-	for ( KGhostview *kg_temp = KGhostview::windowList.first(); kg_temp!=NULL;
+	for ( KGhostview *kg_temp = KGhostview::windowList.first(); kg_temp!=0;
 		kg_temp=KGhostview::windowList.next() )
 	{
 	
@@ -460,9 +527,10 @@ void KGhostview::createMenubar()
 	m_options->insertSeparator();
     m_options->insertItem(i18n("Show &tool bar"), ID_TOOLBAR);
     m_options->insertItem(i18n("Show &status bar"), ID_STATUSBAR);
+	m_options->insertItem(i18n("Show &page list"), ID_PAGELIST);
     m_options->insertItem(i18n("Configure &key bindings ..."), ID_CONFIGURE);
     m_options->insertSeparator();
-    m_options->insertItem(i18n("&Save Options"), ID_SAVE);
+    m_options->insertItem(i18n("&Save options"), ID_SAVE);
     
     connect( m_options, SIGNAL( activated(int) ),
     			SLOT( optionsMenuActivated(int) ) );
@@ -497,11 +565,7 @@ void KGhostview::createMenubar()
 	m_view->setItemEnabled(zoomOutID, FALSE);
 	m_view->setItemEnabled(shrinkWrapID, FALSE);
 	m_view->setItemEnabled(redisplayID, FALSE);
-	m_view->setItemEnabled(infoID, FALSE);
-	
-	// Register menubar with KTopLevelWidget layout manager
-	
-	setMenu( menubar );
+	m_view->setItemEnabled(infoID, FALSE);	
 }
 
 void KGhostview::fileMenuActivated( int item )
@@ -548,66 +612,49 @@ void KGhostview::createToolbar()
 {
 	//printf("KGhostview::createToolbar\n");
 
-	// Read environment for location of KDE and set pixmap directory
-
-	QString PIXDIR = "";
-	char *kdedir = getenv("KDEDIR");
-	if(kdedir)
-		PIXDIR.append(kdedir);
-	else
-		PIXDIR.append("/usr/local/kde");
-	PIXDIR.append("/lib/pics/toolbar/");
-
-	//printf("Read environemnt\n");
-
 	// Create the toolbar
 
 	QPixmap pixmap;
 	toolbar = new KToolBar( this );
 
-	pixmap.load(PIXDIR + "back.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "back.xpm" );
 	toolbar->insertButton(pixmap, ID_PREV, FALSE, i18n("Go back"));
 
-	pixmap.load(PIXDIR + "forward.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "forward.xpm" );
 	toolbar->insertButton(pixmap, ID_NEXT, FALSE, i18n("Go forward"));
 
-	pixmap.load(PIXDIR + "page.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "page.xpm" );
 	toolbar->insertButton(pixmap, ID_PAGE, FALSE, i18n("Go to page ..."));
 
 	toolbar->insertSeparator();
 
-	pixmap.load(PIXDIR + "viewzoom.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "viewzoom.xpm" );
 	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
 
 	toolbar->insertSeparator();
 
-	pixmap.load(PIXDIR + "fileprint.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "fileprint.xpm" );
 	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document"));
 
-	pixmap.load(PIXDIR + "flag.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "flag.xpm" );
 	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Mark this page"));
 
 	toolbar->insertSeparator();
 
-	pixmap.load(PIXDIR + "start.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "start.xpm" );
 	toolbar->insertButton(pixmap, ID_START, FALSE, i18n("Go to start"));
 
-	pixmap.load(PIXDIR + "finish.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "finish.xpm" );
 	toolbar->insertButton(pixmap, ID_END, FALSE, i18n("Go to end"));
 
-	pixmap.load(PIXDIR + "next.xpm");
+	pixmap = kapp->getIconLoader()->loadIcon( "next.xpm" );
 	toolbar->insertButton(pixmap, ID_READ, FALSE, i18n("Read down the page"));
 
 	// Register toolbar with KTopLevelWidget layout manager
 	
 	//printf("Inserted all buttons\n");
 
-	toolbar1 = addToolBar( toolbar );
-	
-	//printf("Registered with ktopwidget\n");
-	
-	toolbar->setBarPos( KToolBar::Top );
-	toolbar->show();
+
 	
 	//printf("Connect toolbar\n");
 	
@@ -631,12 +678,6 @@ void KGhostview::createStatusbar()
     statusbar->changeItem("", ID_LOCATION);
     statusbar->changeItem("", ID_MAGSTEP);
     statusbar->changeItem("", ID_ORIENTATION);
-    
-    statusbar->show();
-    
-    // Register status bar with KTopLevelWidget layout manager
-    
-    setStatusBar( statusbar );
     
     //printf("done\n");
 }
@@ -765,16 +806,29 @@ void KGhostview::readSettings()
 	str = config->readEntry( "Statusbar" );
 	if ( !str.isNull() && str.find( "off" ) == 0 ) {
 		hide_statusbar = TRUE;
-		enableStatusBar( KStatusBar::Toggle );
-	} else
+		enableStatusBar( KStatusBar::Hide );
+	} else {
 		hide_statusbar = FALSE;
+		enableStatusBar( KStatusBar::Show );
+	}
 	
 	str = config->readEntry( "Toolbar" );
 	if ( !str.isNull() && str.find( "off" ) == 0 ) {
 		hide_toolbar = TRUE;
-		enableToolBar( KToolBar::Toggle, toolbar1 );
-	} else
+		enableToolBar( KToolBar::Hide, toolbar1 );
+	} else {
 		hide_toolbar = FALSE;
+		enableToolBar( KToolBar::Show, toolbar1 );
+	}
+		
+	str = config->readEntry( "Page list" );
+	if ( !str.isNull() && str.find( "off" ) == 0 ) {
+		hide_pagelist = TRUE;
+		marklist->hide();
+	} else {
+		hide_pagelist = FALSE;
+		marklist->show();
+	}
 	
 	str = config->readEntry( "Width" );
 	if ( !str.isNull() )
@@ -851,8 +905,12 @@ void KGhostview::shrinkWrap()
 	if ( !psfile ) return;
 	
 	new_width=page->fullView->width()+(x()+width()-view_right)+(view_left-x())+2;
+	
 	if( page->vertScrollBar->isVisible() )
 		new_width+=page->vertScrollBar->width();
+		
+	if( marklist->isVisible() )
+		new_width+=PAGELIST_WIDTH+3;
 		
 	QWidget *d = QApplication::desktop();
     int w=d->width()-10; 	
@@ -864,8 +922,24 @@ void KGhostview::shrinkWrap()
 
 void KGhostview::paletteChange( const QPalette & )
 {
+	marklist->selectColor = kapp->selectColor;
+	marklist->selectTextColor = kapp->selectTextColor;
+	
 	if( psfile )
 		redisplay();
+}
+
+void KGhostview::setName()
+{
+	QString s( kapp->getCaption() );
+	
+	if( psfile ) {	
+		s += " - ";
+		s += QFileInfo( filename ).fileName();
+	} else {
+		s += " - Version 0.6";
+	}
+	QWidget::setCaption(s);
 }
 
 void KGhostview::newWindow()
@@ -876,7 +950,7 @@ void KGhostview::newWindow()
 	windowList.append( kg );
 
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( i18n("KGhostview: Version 0.5") );
+	//kg->setName();
 	kg->bindKeys();
 	kg->updateMenuAccel();
 }
@@ -887,8 +961,11 @@ void KGhostview::closeEvent( QCloseEvent * )
 	
 	if ( windowList.count() > 1 ) {
 		windowList.remove( this );
+		page->disableInterpreter();
+		delete toolbar;
+		delete menubar;
     	delete this;
-		for ( KGhostview *kg = windowList.first(); kg!=NULL;
+		for ( KGhostview *kg = windowList.first(); kg!=0;
 				kg = windowList.next() )
 			kg->page->disableInterpreter();
 	} else
@@ -941,6 +1018,7 @@ void KGhostview::writeSettings()
 	config->writeEntry( "Platform fonts", page->intConfig->platform_fonts ? "on" : "off" );
 	config->writeEntry( "Statusbar", hide_statusbar ? "off" : "on" );
 	config->writeEntry( "Toolbar", hide_toolbar ? "off" : "on" );
+	config->writeEntry( "Page list", hide_pagelist ? "off" : "on" );
 	config->writeEntry( "Messages", page->intConfig->show_messages ? "on" : "off" );
 	
 	if( page->intConfig->paletteOpt == COLOR_PALETTE )
@@ -1002,6 +1080,7 @@ void KGhostview::toolbarClicked( int item )
   			print();
   			break;
   		case ID_MARK:
+			markPage();
   			break;
   		case ID_START:
   			goToStart();
@@ -1013,6 +1092,11 @@ void KGhostview::toolbarClicked( int item )
   			readDown();
   			break;
   	}
+}
+
+void KGhostview::markPage()
+{
+	marklist->markSelected();
 }
 
 void KGhostview::readDown()
@@ -1125,6 +1209,8 @@ void KGhostview::goToPage()
 	gt.init();
 	if( gt.exec() ) {
 		current_page=gt.current_page;
+		
+		marklist->select(current_page);
 		show_page(current_page);
 	}
 }
@@ -1185,6 +1271,7 @@ void KGhostview::nextPage()
 		if ((unsigned int) new_page >= doc->numpages)
 			return;
     }
+	marklist->select(new_page);
     show_page(new_page);
     page->scrollTop();
 }
@@ -1195,6 +1282,7 @@ void KGhostview::goToStart()
 
     int new_page = 0;
     
+	marklist->select(new_page);
     show_page(new_page);
     page->scrollTop();
 }
@@ -1206,9 +1294,10 @@ void KGhostview::goToEnd()
     int new_page = 0;
 
     if (toc_text) {
-	    new_page = doc->numpages;
+	    new_page = doc->numpages-1;
     }
     
+	marklist->select(new_page);
     show_page(new_page);
     page->scrollTop();
 }
@@ -1225,6 +1314,8 @@ void KGhostview::prevPage()
 		if (new_page < 0)
 			return;
     }
+	
+	marklist->select(new_page);
     show_page(new_page);
     page->scrollTop();
 }
@@ -1288,6 +1379,20 @@ void KGhostview::optionsMenuActivated( int item )
 			}
 			break;
 			
+		case ID_PAGELIST:
+			if(hide_pagelist) {
+				hide_pagelist=False;
+				marklist->show();
+				resize( width(), height() );
+				m_options->setItemChecked( item, TRUE );
+			} else {
+				hide_pagelist=True;
+				marklist->hide();
+				resize( width(), height() );
+				m_options->setItemChecked( item, FALSE );
+			}
+			break;
+			
 		case ID_STATUSBAR:
 			if(hide_statusbar) {
 				hide_statusbar=False;
@@ -1318,7 +1423,7 @@ void KGhostview::optionsMenuActivated( int item )
 
 void KGhostview::dummy()
 {
-	 KMsgBox::message(0, i18n("Version 0.5"), 
+	 KMsgBox::message(0, i18n("Version 0.6"), 
                              i18n("Sorry, not ready yet") );
 
 
@@ -1327,7 +1432,7 @@ void KGhostview::dummy()
 void KGhostview::about()
 {
 	 KMsgBox::message(0, i18n("About kghostview"), 
-                             i18n("Version :	0.5 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org") );
+                             i18n("Version :	0.6 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org") );
 
 
 }
@@ -1337,28 +1442,29 @@ void KGhostview::printStart()
     //printf("KGhostview::printStart\n");
 
 	QString name, error;
-	int selection, i;
-	int copy_marked_list[1000];
+	int selection;
+	//int  i;
+	//int copy_marked_list[1000];
 	int mode=PRINT_WHOLE;
 	
 	selection = pd->modeComboBox->currentItem()+1;
 	
-	for(i=0;i<1000;i++) {
-		copy_marked_list[i]=mark_page_list[i];
-		mark_page_list[i]=0;
-	}
+	//for(i=0;i<1000;i++) {
+	//	copy_marked_list[i]=mark_page_list[i];
+	//	mark_page_list[i]=0;
+	//}
 	
 	switch(selection) {
 		case 1:	mode=PRINT_WHOLE;
 				break;
 				
 		case 2:	mode=PRINT_MARKED;
-				for(i=1;i<1000;i+=2) {
-					mark_page_list[i]=1;
-				}
+				//for(i=1;i<1000;i+=2) {
+				//	mark_page_list[i]=1;
+				//}
 				break;
 				
-		case 3:	mode=PRINT_MARKED;
+		/*case 3:	mode=PRINT_MARKED;
 				for(i=0;i<1000;i+=2)
 					mark_page_list[i]=1;
 				break;
@@ -1366,7 +1472,7 @@ void KGhostview::printStart()
 		case 4:	mode=PRINT_MARKED;
 				for(i=0;i<1000;i++)
 					mark_page_list[i]=copy_marked_list[i];
-				break;
+				break;*/
 	}
 	
 	name = pd->nameLineEdit->text();
@@ -1380,9 +1486,9 @@ void KGhostview::printStart()
 	    free(buf);
 	}
 	
-	for(i=0;i<1000;i++) {
-		mark_page_list[i]=copy_marked_list[i];
-	}
+	//for(i=0;i<1000;i++) {
+	//	mark_page_list[i]=copy_marked_list[i];
+	//}
 }
 
 //*********************************************************************************
@@ -1442,7 +1548,7 @@ QString KGhostview::print_file(QString name, Bool whole_mode)
 		sprintf(buf, i18n("Print failure : lpr")); // print error, command
 		ret_val = QString(buf);
     } else {
-		ret_val = NULL;
+		ret_val = 0;
     }
 	
 	signal(SIGPIPE, oldsig);
@@ -1465,24 +1571,21 @@ void KGhostview::pscopydoc(FILE *fp)
     char *comment;
     Bool pages_written = False;
     Bool pages_atend = False;
-    Bool marked_pages = False;
+   // Bool marked_pages = False;
     int pages = 0;
     int page = 1;
     unsigned int i, j;
     long here;
 
+	QStrList *ml = new QStrList;
+	ml = marklist->markList();
+
     psfile = fopen(filename, "r");
 
-    for (i = 0; i < doc->numpages; i++) {
-	if (mark_page_list[i]==1) pages++;
-    }
-
+	pages = ml->count();
     if (pages == 0) {	/* User forgot to mark the pages */
-	/* mark_page(form, NULL, NULL);
-	marked_pages = True;
-	for (i = 0; i < doc->numpages; i++) {
-	    if (toc_text[toc_entry_length * i] == '*') pages++;
-	} */
+		KMsgBox::message (0, i18n("Print"),
+			i18n("No pages have been marked for printing."));
     }
 
     here = doc->beginheader;
@@ -1514,13 +1617,16 @@ void KGhostview::pscopydoc(FILE *fp)
     pscopy(psfile, fp, doc->begindefaults, doc->enddefaults);
     pscopy(psfile, fp, doc->beginprolog, doc->endprolog);
     pscopy(psfile, fp, doc->beginsetup, doc->endsetup);
-
-    for (i = 0; i < doc->numpages; i++) {
-	if (doc->pageorder == DESCEND) 
-	    j = (doc->numpages - 1) - i;
-	else
-	    j = i;
-	if (mark_page_list[j]==1) {
+		
+	// Marklist changes	
+	// You have a list of paghes iterate through that list
+	//
+	
+	for(ml->first(); ml->current(); ml->next() ) {
+		
+		// Need for both i and j comes from legacy code
+		i = j = QString( ml->current() ).toInt()-1;
+	
 	    comment = pscopyuntil(psfile, fp, doc->pages[i].begin,
 				  doc->pages[i].end, "%%Page:");
 	    fprintf(fp, "%%%%Page: %s %d\n",
@@ -1528,7 +1634,6 @@ void KGhostview::pscopydoc(FILE *fp)
 	    free(comment);
 	    pscopy(psfile, fp, -1, doc->pages[i].end);
 	}
-    }
 
     here = doc->begintrailer;
     while ( (comment = pscopyuntil(psfile, fp, here,
@@ -1551,7 +1656,9 @@ void KGhostview::pscopydoc(FILE *fp)
     }
     fclose(psfile);
 
-    if (marked_pages) fprintf(stderr, "Should unmark?\n");
+	delete ml;
+
+    //if (marked_pages) fprintf(stderr, "Should unmark?\n");
 }
 #undef length
 
@@ -1563,11 +1670,11 @@ Bool KGhostview::same_document_media()
 
     unsigned int i;
 
-    if (olddoc == NULL && doc == NULL) {
-    	//printf("	Null olddoc and doc\n");
+    if (olddoc == 0 && doc == 0) {
+    	//printf("	0 olddoc and doc\n");
     	return True;
     }
-    if (olddoc == NULL || doc == NULL) return False;
+    if (olddoc == 0 || doc == 0) return False;
     if (olddoc->nummedia != doc->nummedia) return False;
     /* Exclusive OR old document was EPS and new document is EPS */
     if ((olddoc->epsf || doc->epsf) && !(olddoc->epsf && doc->epsf)) {
@@ -1588,11 +1695,11 @@ QString KGhostview::open_file( QString name )
     struct stat sbuf;
 
 	if ( name.data() == '\0' )	
-		return( NULL );
+		return( 0 );
 	
     if (strcmp(name, "-")) {
     
-		if ((fp = fopen(name, "r")) == NULL) {
+		if ((fp = fopen(name, "r")) == 0) {
 		
 	    	/*
 	    	
@@ -1611,7 +1718,7 @@ QString KGhostview::open_file( QString name )
 			s.sprintf( "The file\n\"%s\"\ncould not be found.", name.data());
  			KMsgBox::message(0, "Error", s, 2 );
 	    	
-	    	return( NULL );
+	    	return( 0 );
 	    	
 		} else {
 
@@ -1629,12 +1736,14 @@ QString KGhostview::open_file( QString name )
 	    	
 	    	new_file(0);
 	    	
-	    	QString s( "KGhostview : " );
-	    	s += QFileInfo( filename ).fileName();
-	    	setCaption( s );
-      		
+	    	//QString s( "KGhostview : " );
+	    	//s += QFileInfo( filename ).fileName();
+	    	//setCaption( s );
+      		setName();
+			
+			marklist->select(0);
 	    	show_page(0);
-	    	return( NULL );
+	    	return( 0 );
 		}
 		
     } else {
@@ -1642,15 +1751,18 @@ QString KGhostview::open_file( QString name )
 		oldfilename.sprintf( filename.data() );
 		filename.sprintf( name.data() );
 		if ( psfile ) fclose( psfile );
-		psfile = NULL;
+		psfile = 0;
 		
 		new_file(0);
 		
-		QString s( "KGhostview : " );
-	    s += QFileInfo( filename ).fileName();
-	    setCaption( s );
+		//QString s( "KGhostview : " );
+	    //s += QFileInfo( filename ).fileName();
+	    //setCaption( s );
+		setName();
+		
+		marklist->select(0);
       	
-		return(NULL);
+		return(0);
     }
 }
 
@@ -1733,10 +1845,10 @@ Bool KGhostview::set_new_pagemedia( int number )
 		new_pagemedia = default_pagemedia;
     } else {
 		if (doc) {
-	    	if (toc_text && doc->pages[number].media != NULL) {
+	    	if (toc_text && doc->pages[number].media != 0) {
 				new_pagemedia = doc->pages[number].media - doc->media;
 				from_doc = True;
-	    	} else if (doc->default_page_media != NULL) {
+	    	} else if (doc->default_page_media != 0) {
 				new_pagemedia = doc->default_page_media - doc->media;
 				from_doc = True;
 	    	} else {
@@ -1892,20 +2004,25 @@ Bool	KGhostview::setup()
     psfree( olddoc );
     //printf("Freed olddoc\n");
     olddoc = doc;
-    doc = NULL;
+    doc = 0;
     current_page = -1;
     toc_text = 0;
     oldtoc_entry_length = toc_entry_length;
     //printf("Next - pages in part\n");
     for(k=0;k<10;k++) pages_in_part[k]=0;
     num_parts=0;
+	
+	marklist->setAutoUpdate( FALSE );
+	//marklist->select(0);
+	marklist->clear();
+	
 	//printf("Reset state\n");
 	
     // Scan document and start setting things up
     if (psfile) {
     	//printf ("Scan file -");
     	doc = psscan(psfile);
-    	//if (doc == NULL) //printf(" NULL FILE - ");
+    	//if (doc == 0) //printf(" 0 FILE - ");
     	//printf ("scanned\n");
     }
     
@@ -1949,19 +2066,38 @@ Bool	KGhostview::setup()
 					num_parts++;
 				}
 				if (num_parts<10) pages_in_part[num_parts]++;
+			
 				last_page=this_page;
 			} else {
 			}
 		}
-		page->filename = NULL;
-		//printf("Set null filename for gs -- use pipe\n");
+		page->filename = 0;
+		//printf("Set 0 filename for gs -- use pipe\n");
+		
+		QString s;
+		// finally set maked list
+		for ( i = 1; i <= doc->numpages;
+			 i++) {
+			 j = doc->numpages-i;
+			 s.sprintf( "%s", doc->pages[j].label );
+			marklist->insertItem( s, 0 );
+		}
+		
     } else {
 		toc_length = 0;
 		toc_entry_length = 3;
 		page->filename.sprintf( filename );
 		//printf("Set filename -- gs will open this file\n");
+		QString s;
+		s.sprintf( "1" );
+		marklist->insertItem( s, 0 );
     }
 	//printf("Parsed document structure\n");
+	
+	marklist->setAutoUpdate( TRUE );
+	//marklist->select(0);
+	marklist->update();
+
 	
 	//printf("number of parts %d\n", num_parts);
 	if (doc) {
@@ -2018,7 +2154,7 @@ Bool	KGhostview::setup()
 		
 			/**************************************************************
 			 *	XtUnmanageChild(infopopup);
-			 *	XmTextReplace(infotext, 0, output_position, null_string);
+			 *	XmTextReplace(infotext, 0, output_position, 0_string);
 			 *	info_up = False;
 			 *	XtSetArg(args[0], XmNcursorPosition, 0);
 			 *	XtSetValues(infotext, args, ONE);
@@ -2070,6 +2206,10 @@ Bool	KGhostview::setup()
 	}
 	sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
 	statusbar->changeItem( temp_text, ID_MAGSTEP );
+
+	marklist->setAutoUpdate( TRUE );
+	marklist->update();
+	marklist->select(0);
 
     //printf("Setup finished\n");
     return oldtoc_entry_length != toc_entry_length;

@@ -10,9 +10,9 @@
 
 <!-- Title information -->
 
-<title>The KGhostview Handbook
+<title>The PostScript Viewer Handbook
 <author>Mark Donohoe, <tt/donohoe@kde.org/
-<date>v1.1, 9 June 1997
+<date>v1.2, 26 September 1997
 
 <!-- Table of contents -->
 <toc>
@@ -27,24 +27,27 @@
 
 <p>
 
-KGhostview is a port of Tim Theisen's Ghostview program for the K Desktop
-Environment. It is used to view documents that have been prepared in
-<bf/Adobe's/ PostScript page description language.  Documents are rendered
-by  <bf/Alladin's/ Ghostcript package and KGhostview simply displays the
-results of this rendering, allowing you to control the way the driver works.
+KGhostview is the PostScript viewer for the K Desktop Environment. It is a
+port of Tim Theisen's Ghostview program which is used to view documents
+prepared in <bf/Adobe/'s PostScript page description language. PostScript is
+the major page description language for printing on UNIX systems and this
+application is used to preview material intended for printing or for reading
+documents online.
 
 <p>
 
-PostScript is <bf/the/ page description language for printing on UNIX systems.
-KGhostview can be used to preview material intended for printing or for
-reading documents online.
+KGhostview is just a front end to <bf/Alladin/'s Ghostcript package which
+renders the documents. You can use the viewer with all recent versions of
+Ghostscript. Newer versions offer much improved performance which you can
+take advantage of with KGhostview. It future, it will be possible to view
+Portable Document Format files.
 
 <p>
 
-If a document does not begin with the characters &dquot! &num PS-Adobe-&dquot, it does not claim conformance to the Adobe document structuring
-convention. In this case the functionality of KGhostview is limited - because
-there is no table of contents, skipping around the document and marking pages
-is not possible.
+
+If a document does not conform to the <bf/Adobe/ document structuring convention
+the functionality of the PostScript viewer is limited. If there is no table of
+contents, skipping around the document and marking pages is not possible.
 
 
 <!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
@@ -56,29 +59,28 @@ is not possible.
 <!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
 
 
-<sect>Onscreen Fundamentals
+<sect>Fundamentals
 
-<sect1>The KGhostview window
+
 
 <p>
 
-In this section is desribed what you see in the main KGhostview window.
-The next section describes a window's graphical elements. The subsequent section
-goes into more detail on button actions.
+This section desribes what you see in the main PostScript viewer window, the
+actions of the toolbar buttons and how to use the page list.
 
-You can open multiple KGhostview windows to view multiple documents. The
-window titlebar shows you the name of the document in that window.  The
+You can open multiple PostScript viewer windows to view multiple documents. The
+window title bar shows you the name of the document in that window.  The
 tools and text fields that help you to navigate a document may be hidden in
 order to give more space on the screen to the content area. 
 
-<sect1>Window Summary
+<sect1>Window summary
 
 <p>
 <descrip>
 
 	<tag/Window title bar/
 
-	The name of a docuement is displayed in the window title bar.
+	The name of a document is displayed in the window title bar.
 
 	<tag/Page display/
 
@@ -86,9 +88,9 @@ order to give more space on the screen to the content area.
 	too large to fit inside the window, scroll bars are automatically added to
 	the sides of the display.
 
-	<tag/Toolbar buttons/
+	<tag/Tool bar/
 
-	Toolbar buttons activate the KGhostview features you'll most commonly
+	Tool bar buttons activate the PostScript viewer features you'll most commonly
 	use. Click on the buttons to move through the document, to change the
 	view and to mark and print pages. You can choose to have the toolbar on
 	any side of the contents area. Click with the right mouse button on the
@@ -100,9 +102,17 @@ order to give more space on the screen to the content area.
 	The status bar has four fields showing the current page, magnification
 	factor, orientation and file name of the document. You can choose to hide the
 	status bar from the options menu.
+	
+	<tag/Page list /
+	
+	A page list can be shown down the left side of the page display. This list
+	has three columns: the first may contain a flag indicating that the page
+	has been marked; the second shows the page shape; and the third contains
+	the page number. You may use this page list to navigate the document or to
+	select pages for printing.
 </descrip>
 
-<sect1>Toolbar
+<sect1>Tool bar
 <p>
 <descrip>
 	<tag/Back/
@@ -124,7 +134,7 @@ order to give more space on the screen to the content area.
 	
 	<tag/Print/
 	
-	Lets you print the document previewed in this KGhostview window.
+	Lets you print the document previewed in this PostScript viewer window.
 	
 	<tag/Mark/
 	
@@ -143,8 +153,29 @@ order to give more space on the screen to the content area.
 	
 	Scrolls up the current page for convenient reading
 	of the document in chunks.
-	
 </descrip>
+
+<sect1>Page list
+<p>
+	
+	The page list is useful for navigating the document and selecting pages
+	for printing. To view a page simply click on the page number in the list
+	with the left mouse button.
+	
+	If you want to mark a page, click on it with the middle mouse button.
+	A flag will be displayed in the first column of the page list to show
+	that the page has been marked. You can clear or change your page
+	marks using the menu of choices that is activated
+	with the right mouse button. The choices available are
+
+	<itemize>
+	<item>Mark current
+	<item>Mark all
+	<item>Mark even
+	<item>Mark odd
+	<item>Toggle marks
+	<item>Remove marks
+	</itemize>
 
 
 <!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
@@ -158,7 +189,7 @@ order to give more space on the screen to the content area.
 	
 	<tag/New/
 	
-	Creates a new KGhostview window.
+	Creates a new PostScript viewer window.
 	
 	<tag/Open .../
 	
@@ -166,11 +197,11 @@ order to give more space on the screen to the content area.
 	
 	<tag/Close/
 	
-	Closes the current KGhostview window.
+	Closes the current PostScript viewer window.
 	
 	<tag/Print .../
 	
-	Lets you print the document previewed in this KGhostview window.
+	Lets you print the document previewed in this PostScript viewer window.
 
 	<tag/Entries 1. - 4./
 	
@@ -179,7 +210,7 @@ order to give more space on the screen to the content area.
 
 	<tag/Quit/
 	
-	Exits KGhostview, closing all the windows.
+	Exits PostScript viewer, closing all the windows.
 </descrip>
 
 <sect1>View
@@ -200,8 +231,8 @@ order to give more space on the screen to the content area.
 
 	<tag/Shrink wrap/
 	
-	Resizes the KGhostview window to neatly fit the width of the document. If
-	the document is too wide to fit on the screen then the KGhostview window
+	Resizes the PostScript viewer window to neatly fit the width of the document. If
+	the document is too wide to fit on the screen then the PostScript viewer window
 	is stretched to the maximum possible width.
 
 	<tag/Redisplay/
@@ -260,14 +291,18 @@ order to give more space on the screen to the content area.
 	
 	Toggle the statusbar on and off.
 	
+	<tag/Show page list/
+	
+	Toggle the page list on and off.
+	
 	<tag/Configure key bindings ... /
 	
-	Lets you choose your own key bindings for the actions that KGhostview can
+	Lets you choose your own key bindings for the actions that PostScript viewer can
 	perform.
 
 	<tag/Save Options/
 	
-	Writes your set of preferences including the size of the KGhostview
+	Writes your set of preferences including the size of the PostScript viewer
 	window and the location of the toolbar to a configuration file. 
 
 </descrip>
@@ -275,18 +310,18 @@ order to give more space on the screen to the content area.
 <sect1>Help
 <p>
 <descrip>
-	<tag/About kghostview/
+	<tag/About PostScript viewer/
 	
 	Simply tells you the program name, version number and address of the
 	author
 
-	<tag/Help for kghostview/
+	<tag/Help for PostScript viewer/
 	
 	Starts the KDE online help and loads in this handbook.
 	
 	<tag/Copyright/
 	
-	Displays copyright information for KGhostview.
+	Displays copyright information for PostScript viewer.
 
 </descrip>
 
@@ -294,7 +329,7 @@ order to give more space on the screen to the content area.
 <!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
 
 
-<sect>Dialog Boxes
+<sect>Dialog boxes
 <p>
 <sect1>Print
 
@@ -306,8 +341,6 @@ selected from the combo box. The options are
 
 <itemize>
 	<item>All
-	<item>Even
-	<item>Odd
 	<item>Marked
 </itemize>
 
@@ -355,7 +388,7 @@ display.
 <sect1>Configure key bindings
 <p>
 
-Allows you to change the keys that are bound to KGhostview actions.
+Allows you to change the keys that are bound to PostScript viewer actions.
 
 <sect1>Configure interpreter
 <p>
@@ -429,5 +462,8 @@ Displays error or general output messages from Ghostscript.
 
 
 <sect>Questions and answers
+
+<sect1>How do I get the best quality rendering ?
 <p>
+Hmm, Later.
 </article>

@@ -28,6 +28,7 @@ public:
 
   	MyApp( int &argc, char **argv, const QString &rAppName );
  	virtual bool x11EventFilter( XEvent * );
+	~MyApp();
 };
 
 
@@ -38,10 +39,15 @@ MyApp::MyApp( int &argc, char **argv, const QString &rAppName )
 {
 }
 
+MyApp::~MyApp()
+{
+	printf("MyApp::~MyApp()\n");
+}
+
 
 bool MyApp::x11EventFilter( XEvent *ev ) {
 	
-	for ( KGhostview *kg = KGhostview::windowList.first(); kg!=NULL;
+	for ( KGhostview *kg = KGhostview::windowList.first(); kg!=0;
 		kg=KGhostview::windowList.next() )
 	{ 
 	
@@ -84,7 +90,7 @@ int main( int argc, char **argv )
 	
 		kg->filename = argv[1];
 		if (strcmp(kg->filename, "-")) {
-			if ((kg->psfile = fopen(argv[1], "r")) == NULL) {
+			if ((kg->psfile = fopen(argv[1], "r")) == 0) {
 				QString s;
 				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."), argv[1]);
  				KMsgBox::message(0, i18n("Error"), 
@@ -98,7 +104,7 @@ int main( int argc, char **argv )
 	}
 	
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( i18n("KGhostview: Version 0.5") );
+	kg->setName();
 	kg->bindKeys();
 	kg->updateMenuAccel();
 	kg->show();	
@@ -106,6 +112,7 @@ int main( int argc, char **argv )
 	if (kg->psfile) {
 		kg->setup();
 		kg->show_page(0);
+		kg->marklist->select(0);
 	}
 	
 	

@@ -16,7 +16,7 @@ class  InterpreterDialog : public QDialog {
     Q_OBJECT
     
 public:
-    InterpreterDialog ( QWidget* parent = NULL, const char* name = NULL );
+    InterpreterDialog ( QWidget* parent = 0, const char* name = 0 );
     ~InterpreterDialog();
     
 	void init();

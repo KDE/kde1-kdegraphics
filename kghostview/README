@@ -1,9 +1,9 @@
 
-22/4/97
+28/9/97
 Mark Donohoe
 Please direct any bug reports to me (donohoe@kde.org).
 
-KGHOSTVIEW 0.5 - Alpha release
+KGHOSTVIEW 0.6 - Alpha release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -15,7 +15,6 @@ REQUIREMENTS
 
 1. Alladin ghostscript
 2. Qt 1.2+
-3. kdelibs-0.8+
 
 INSTALL
 
@@ -30,9 +29,14 @@ is missing from this release.
 
 TODO
 
-- Page list
 - PDF support
 - Standardise kdvi and kghostview
+
+CHANGES V0.6
+
+- Page list; page marking and marked page printing
+- Bug fixes
+- Updates for better KDE compliance
 
 CHANGES V0.5
 

@@ -84,11 +84,11 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	ydpi=75.0;
 	disable_start = False;
 	interpreter_pid = -1;
-	input_buffer = NULL;
+	input_buffer = 0;
 	bytes_left = 0;
-	input_buffer_ptr = NULL;
+	input_buffer_ptr = 0;
 	buffer_bytes_left = 0;
-	ps_input = NULL;
+	ps_input = 0;
 	interpreter_input = -1;
 	interpreter_output = -1;
 	interpreter_error = -1;
@@ -142,7 +142,7 @@ Bool KPSWidget::isInterpreterReady()
 {
 	//printf("KPSWidget::isInterpreterReady\n");
 
-	return interpreter_pid != -1 && !busy && ps_input == NULL;
+	return interpreter_pid != -1 && !busy && ps_input == 0;
 }
 
 
@@ -201,13 +201,13 @@ Bool KPSWidget::sendPS( FILE *fp, long begin, unsigned int len, Bool close )
     ps_new->len = len;
     ps_new->seek_needed = True;
     ps_new->close = close;
-    ps_new->next = NULL;
+    ps_new->next = 0;
 
-    if (input_buffer == NULL) {
+    if (input_buffer == 0) {
 		input_buffer = (char *) malloc(BUFSIZ);
     }
 
-    if (ps_input == NULL) {
+    if (ps_input == 0) {
 		input_buffer_ptr = input_buffer;
 		bytes_left = len;
 		buffer_bytes_left = 0;
@@ -219,7 +219,7 @@ Bool KPSWidget::sendPS( FILE *fp, long begin, unsigned int len, Bool close )
 
     } else {
 		struct record_list *p = ps_input;
-		while (p->next != NULL) {
+		while (p->next != 0) {
 			p = p->next;
 		}
 		p->next = ps_new;
@@ -651,9 +651,9 @@ void KPSWidget::startInterpreter()
 	gs_call[gs_arg++] = "-dQUIET";
 	gs_call[gs_arg++] = "-dSAFER";
 	gs_call[gs_arg++] = "-";
-	gs_call[gs_arg++] = NULL;
+	gs_call[gs_arg++] = 0;
 	
-	if (filename == NULL) {
+	if (filename == 0) {
 		ret = pipe(std_in);
 		if (ret == -1) {
 	    	perror("Could not create pipe");
@@ -694,7 +694,7 @@ void KPSWidget::startInterpreter()
 		sprintf(buf, "%d", (int) gs_window);
 		setenv("GHOSTVIEW", buf, True);
 		setenv("DISPLAY", XDisplayString(gs_display), True);
-		if (filename == NULL) {
+		if (filename == 0) {
 			::close(std_in[1]);
 			::dup2(std_in[0], 0);
 			::close(std_in[0]);
@@ -709,7 +709,7 @@ void KPSWidget::startInterpreter()
 		_exit(1); 
 		
     } else {
-    	if (filename == NULL) {
+    	if (filename == 0) {
   			int result;
 			::close(std_in[0]);
 
@@ -759,7 +759,7 @@ void KPSWidget::stopInterpreter()
 	if (interpreter_pid >= 0) {
 		::kill(interpreter_pid, SIGTERM);
 		//printf("Wait for kill\n");
-		//::wait(0);
+		::wait(0);
 		interpreter_pid = -1;
 		//printf("Killing gs process\n");
 	}
@@ -926,7 +926,7 @@ void KPSWidget::gs_input()
 
 	signal(SIGPIPE, oldsig);
 	
-	if (ps_input == NULL && buffer_bytes_left == 0) {
+	if (ps_input == 0 && buffer_bytes_left == 0) {
 		if (interpreter_input_id != None) {
 			 sn_input->setEnabled(False);
 			 fullView->setCursor( arrowCursor );

@@ -41,8 +41,8 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	modeComboBox = new QComboBox( this );
 	modeComboBox->setGeometry( 115, 60, 100, 25 );
 	modeComboBox->insertItem( i18n("All") );
-	modeComboBox->insertItem( i18n("Even") );
-	modeComboBox->insertItem( i18n("Odd") );
+	//modeComboBox->insertItem( i18n("Even") );
+	//modeComboBox->insertItem( i18n("Odd") );
 	modeComboBox->insertItem( i18n("Marked") );
 
 	QPushButton* ok;

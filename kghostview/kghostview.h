@@ -7,6 +7,7 @@
 #include "goto.h"
 #include "print.h"
 #include "copyright.h"
+#include "marklist.h"
 #include <ktopwidget.h>
 
 #include <stdlib.h>
@@ -62,9 +63,10 @@ public:
 	KGhostview( QWidget *parent=0, char *name=0 );
 	~KGhostview();
 
-	/// Tells us what kind of job kedit is waiting for.
-    enum action { GET, PUT };
-     void openNetFile( const char *_url );
+	// Tells us what kind of job kghostview is waiting for.
+    
+	enum action { GET, PUT };
+	void openNetFile( const char *_url );
 
 	static QList <KGhostview> windowList;
 
@@ -88,6 +90,11 @@ public:
 	void createMenubar();
 	void createStatusbar();
 	
+	void setName();
+	
+	
+	QFrame *mainFrame;
+	MarkList *marklist;
 	KPSWidget *page;
 	
 	ViewControl *vc;
@@ -121,7 +128,7 @@ public:
 	QString lastOpened[4];
 	
 public slots:
-
+	void pageActivated( const char * text);
 	void applyViewChanges();
 	void scrollDown();
 	void scrollUp();
@@ -144,6 +151,7 @@ public slots:
 	void optionsMenuActivated( int item );
 	void fileMenuActivated( int item );
 	void toolbarClicked( int item );
+	void markPage();
 	void configureKeybindings();
 	void shrinkWrap();
 	void redisplay();
@@ -159,6 +167,9 @@ public slots:
 protected:
 	void paletteChange( const QPalette & );
 	void closeEvent( QCloseEvent * );
+	
+protected slots:
+	void updateRects();
    
 	
 private:
@@ -201,6 +212,7 @@ private:
 
 	Bool hide_toolbar;
 	Bool hide_statusbar;
+	Bool hide_pagelist;
 	Bool fitWindow;
 	int options_width;
 	int options_height;
