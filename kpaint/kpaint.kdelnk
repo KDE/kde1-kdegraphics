@@ -10,6 +10,7 @@ Comment[hu]=Egy egyszerû rajzprogram
 Comment[pt]=Um Programa Simples de Pintura
 Comment[sk]=Jednoduchý kresliaci program
 Comment[cs]=Jednoduchý kreslící program
+Comment[hr]=Jednostavni program za crtanje
 Terminal=0
 Type=Application
 Name=Paint
@@ -19,4 +20,4 @@ Name[hu]=Rajzoló
 Name[pt]=Pintor
 Name[sk]=Maµovanie
 Name[cs]=Kreslení
-
+Name[hr]=Crtanje

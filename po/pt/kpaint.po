@@ -39,21 +39,20 @@ msgid "Circle"
 msgstr "Circulo"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Largura da Imagem:"
+msgstr "Cor da Imagem:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Bitmap)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 Colour)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (True Colour)"
 
 #: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
@@ -208,14 +207,12 @@ msgid "Area Select"
 msgstr "Seleccionar Área"
 
 #: kpaint.cpp:361
-#, fuzzy
 msgid "Show Tools Toolbar"
 msgstr "Mostrar Barra de Ferramentas"
 
 #: kpaint.cpp:362
-#, fuzzy
 msgid "Show Commands Toolbar"
-msgstr "Mostrar Barra de Ferramentas"
+msgstr "Mostrar Barra de Comandos"
 
 #: kpaint.cpp:363
 msgid "Show Status Bar"
@@ -255,15 +252,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Formato Desconhecido"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Erro: Formato Desconhecido\n"
-"KPaint não reconhece o formato do ficheiro especificado ou o ficheiro está "
-"corrompido."
+"KPaint não reconhece o formato do ficheiro especificado\n"
+"ou o ficheiro está corrompido."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -425,9 +421,3 @@ msgstr "Estilo de junção:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Cor da Linha..."
-
-#~ msgid "Release Notes"
-#~ msgstr "Notas de Lançamento"
-
-#~ msgid "About..."
-#~ msgstr "Acerca..."

@@ -41,14 +41,12 @@ msgstr ""
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:54
-#, fuzzy
 msgid "&Section"
-msgstr "Secção"
+msgstr "&Secção"
 
 #: goto.cpp:70
-#, fuzzy
 msgid "&Page"
-msgstr "Página"
+msgstr "&Página"
 
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2215
 #: kghostview.cpp:2227 kghostview.cpp:2232 kghostview.cpp:2515
@@ -57,79 +55,68 @@ msgid "of %d"
 msgstr "de %d"
 
 #: info.cpp:45
-#, fuzzy
 msgid "File name :"
-msgstr "Ficheiro :"
+msgstr "Nome do ficheiro :"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr ""
+msgstr "Título do documento :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr ""
+msgstr "Date de publicação :"
 
 #: interpreter.cpp:42
 msgid "General"
 msgstr "Geral"
 
 #: interpreter.cpp:79
-#, fuzzy
 msgid "&Interpreter name"
-msgstr "Nome do Interpretador"
+msgstr "Nome do &Interpretador"
 
 #: interpreter.cpp:87
-#, fuzzy
 msgid "&Antialiasing"
-msgstr "Antialiasing"
+msgstr "&Antialiasing"
 
 #: interpreter.cpp:97
-#, fuzzy
 msgid "Platform &fonts"
-msgstr "Letras da plataforma"
+msgstr "Letras da plata&forma"
 
 #: interpreter.cpp:107
-#, fuzzy
 msgid "&Messages"
-msgstr "Mensagens"
+msgstr "&Mensagens"
 
 #: interpreter.cpp:130
 msgid "Palette"
 msgstr "Paleta"
 
 #: interpreter.cpp:152
-#, fuzzy
 msgid "Colo&r"
-msgstr "Cor"
+msgstr "Co&r"
 
 #: interpreter.cpp:161
-#, fuzzy
 msgid "&Grayscale"
-msgstr "Tons de Cinzento"
+msgstr "Tons de &Cinzento"
 
 #: interpreter.cpp:169
-#, fuzzy
 msgid "Monochrom&e"
-msgstr "Monocromático"
+msgstr "&Monocromático"
 
 #: interpreter.cpp:192
 msgid "Backing"
 msgstr "Fundo"
 
 #: interpreter.cpp:214
-#, fuzzy
 msgid "&Pixmap"
-msgstr "Imagem"
+msgstr "&Imagem"
 
 #: interpreter.cpp:224
-#, fuzzy
 msgid "&Backing store"
-msgstr "Armazenar Fundo"
+msgstr "&Armazenar fundo"
 
 #: interpreter.cpp:244 kkeydialog.cpp:230
-#, fuzzy
 msgid "&Defaults"
-msgstr "Valores por defeito"
+msgstr "Valores por &omissão"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -137,19 +124,19 @@ msgstr "gs"
 
 #: kaccel.cpp:166
 msgid "CTRL+O"
-msgstr ""
+msgstr "CTRL+O"
 
 #: kaccel.cpp:170
 msgid "CTRL+N"
-msgstr ""
+msgstr "CTRL+N"
 
 #: kaccel.cpp:174
 msgid "CTRL+W"
-msgstr ""
+msgstr "CTRL+W"
 
 #: kaccel.cpp:178
 msgid "CTRL+S"
-msgstr ""
+msgstr "CTRL+S"
 
 #: kaccel.cpp:181 kaccel.cpp:401 kghostview.cpp:347 kghostview.cpp:368
 #: kghostview.cpp:432 kghostview.cpp:1286
@@ -158,80 +145,79 @@ msgstr "Imprimir"
 
 #: kaccel.cpp:182
 msgid "CTRL+P"
-msgstr ""
+msgstr "CTRL+P"
 
 #: kaccel.cpp:186
 msgid "CTRL+Q"
-msgstr ""
+msgstr "CTRL+Q"
 
 #: kaccel.cpp:190
 msgid "CTRL+X"
-msgstr ""
+msgstr "CTRL+X"
 
 #: kaccel.cpp:194
 msgid "CTRL+C"
-msgstr ""
+msgstr "CTRL+C"
 
 #: kaccel.cpp:198
 msgid "CTRL+V"
-msgstr ""
+msgstr "CTRL+V"
 
 #: kaccel.cpp:202
 msgid "CTRL+Z"
-msgstr ""
+msgstr "CTRL+Z"
 
 #: kaccel.cpp:206
 msgid "CTRL+F"
-msgstr ""
+msgstr "CTRL+F"
 
 #: kaccel.cpp:210
 msgid "CTRL+R"
-msgstr ""
+msgstr "CTRL+R"
 
 #: kaccel.cpp:213 kaccel.cpp:425
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: kaccel.cpp:214
 msgid "CTRL+Insert"
-msgstr ""
+msgstr "CTRL+Insert"
 
 #: kaccel.cpp:217 kaccel.cpp:428
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: kaccel.cpp:218
 msgid "CTRL+Home"
-msgstr ""
+msgstr "CTRL+Home"
 
 #: kaccel.cpp:221 kaccel.cpp:431
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: kaccel.cpp:222
 msgid "CTRL+End"
-msgstr ""
+msgstr "CTRL+End"
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
 msgid "Prior"
-msgstr ""
+msgstr "Anterior"
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
-msgstr "Próxima Página"
+msgstr "Próxima"
 
 #: kaccel.cpp:234
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: kghostview.cpp:202
 msgid "Document information"
-msgstr ""
+msgstr "Informações do documento"
 
 #: kghostview.cpp:216 kghostview.cpp:349 kghostview.cpp:370 kghostview.cpp:439
 msgid "View Control"
-msgstr "Ver Controle"
+msgstr "Comando de Visualização"
 
 #: kghostview.cpp:350 kghostview.cpp:371 kghostview.cpp:444
 msgid "Go To Page"
@@ -275,7 +261,7 @@ msgstr "Remostrar"
 
 #: kghostview.cpp:402 kghostview.cpp:404
 msgid "Not known"
-msgstr ""
+msgstr "Desconhecido"
 
 #: kghostview.cpp:415
 msgid "Configure interpreter"
@@ -287,7 +273,7 @@ msgstr "&Abrir..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "Abrir &recente"
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -306,9 +292,8 @@ msgid "&View control ..."
 msgstr "&Ver controle ..."
 
 #: kghostview.cpp:511
-#, fuzzy
 msgid "&Fit to page width"
-msgstr "&Ir para página ..."
+msgstr "&Largura da página"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -412,27 +397,23 @@ msgstr "Marcas de &Página"
 
 #: kghostview.cpp:654
 msgid "New window ..."
-msgstr ""
+msgstr "Nova janela ..."
 
 #: kghostview.cpp:657
-#, fuzzy
 msgid "Open file ..."
-msgstr "&Abrir..."
+msgstr "Abrir ficheiro ..."
 
 #: kghostview.cpp:662
-#, fuzzy
 msgid "Print document ..."
-msgstr "Imprimir documento"
+msgstr "Imprimir documento ..."
 
 #: kghostview.cpp:667
-#, fuzzy
 msgid "Zoom in"
-msgstr "&Aumentar"
+msgstr "Aumentar"
 
 #: kghostview.cpp:670
-#, fuzzy
 msgid "Zoom out"
-msgstr "&Diminuir"
+msgstr "Diminuir"
 
 #: kghostview.cpp:673
 msgid "Change view ..."
@@ -463,9 +444,8 @@ msgid "Read down the page"
 msgstr "Ler para baixo a página"
 
 #: kghostview.cpp:705
-#, fuzzy
 msgid "Toggle this page mark"
-msgstr "&Mudar marcações de página"
+msgstr "Mudar esta marcação de página"
 
 #: kghostview.cpp:727
 msgid "Sc.100 of 100  P.100 of 100"
@@ -560,7 +540,7 @@ msgstr ""
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "Erro ao imprimir"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -569,23 +549,31 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
+"Escolheu imprimir todas as páginas para um ficheiro.\n"
+"Isto iria produzir um documento identico ao\n"
+"que está carregado actualmente no visualizador.\n"
+"Não há necessidade de imprimir todas as páginas para um novo ficheiro."
 
 #: kghostview.cpp:1582
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
+"Nenhum nome foi dado logo\n"
+"não foi possível imprimir para o ficheiro.\n"
 
 #: kghostview.cpp:1640
-#, fuzzy, c-format
+#, c-format
 msgid "Print failure : %s"
-msgstr "Falha na impressão : lpr"
+msgstr "Falha na impressão : %s"
 
 #: kghostview.cpp:1676
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
+"Impressão falhou porque a lista de\n"
+"páginas a imprimir estava vazia.\n"
 
 #: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
 #: kghostview.cpp:2509
@@ -623,78 +611,71 @@ msgstr "Sc.%d "
 
 #: kkeydialog.cpp:308
 msgid "Current key"
-msgstr ""
+msgstr "Tecla actual"
 
 #: kkeydialog.cpp:319
-#, fuzzy
 msgid "&Action"
-msgstr "Secção"
+msgstr "&Acção"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "&Nenhuma tecla"
 
 #: kkeydialog.cpp:386
-#, fuzzy
 msgid "&Default key"
-msgstr "Valores por defeito"
+msgstr "Tecla por &omissão"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "&Tecla definida"
 
 #: main.cpp:25
-#, fuzzy
 msgid "Usage: "
-msgstr "Utilização: %s\n"
+msgstr "Utilização: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr "[nome do ficheiro]\n"
+msgstr ""
+" [nome do ficheiro] [parâmetros]\n"
+"\n"
 
 #: main.cpp:28
-#, fuzzy
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr "Veja a documentação do QT para opções de linha de comando\n"
+msgstr 
+"Veja a documentação do KDE e do QT para\n"
+"opções da linha de comando\n"
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Erro na linha de comando"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark current page"
-msgstr "Marcar página a&ctual"
+msgstr "Marcar página actual"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark all pages"
-msgstr "Marcar tod&as as páginas"
+msgstr "Marcar todas as páginas"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Mark even pages"
-msgstr "Marcar páginas par&es"
+msgstr "Marcar páginas pares"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Mark odd pages"
-msgstr "Marcar páginas &impares"
+msgstr "Marcar páginas impares"
 
 #: marklist.cpp:42
-#, fuzzy
 msgid "Toggle page marks"
-msgstr "&Mudar marcações de página"
+msgstr "Mudar marcações de página"
 
 #: marklist.cpp:43
-#, fuzzy
 msgid "Remove page marks"
-msgstr "&Remove marcações de página"
+msgstr "Remover marcações de página"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
@@ -702,74 +683,67 @@ msgstr "Mensagens do Ghostscript"
 
 #: messages.cpp:56
 msgid "&Clear"
-msgstr ""
+msgstr "&Limpar"
 
 #: messages.cpp:59 viewcontrol.cpp:114
 msgid "&Dismiss"
-msgstr ""
+msgstr "&Fechar"
 
 #: print.cpp:35
-#, fuzzy
 msgid "Printer setup"
-msgstr "Nome da impressora"
+msgstr "Configuraçao da impressora"
 
 #: print.cpp:65
-#, fuzzy
 msgid "&Printer name"
-msgstr "Nome da impressora"
+msgstr "&Nome da impressora"
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr ""
+msgstr "&Comando de impressão"
 
 #: print.cpp:89
 msgid "&Environment variable"
-msgstr ""
+msgstr "&Variavel de ambiente"
 
 #: print.cpp:148
-#, fuzzy
 msgid "Print to file"
-msgstr "Falha na impressão : lpr"
+msgstr "Imprimir para ficheiro"
 
 #: print.cpp:153
 msgid "Pages"
 msgstr "Páginas"
 
 #: print.cpp:179
-#, fuzzy
 msgid "&All"
-msgstr "Todas"
+msgstr "Tod&as"
 
 #: print.cpp:188
 msgid "&Current"
-msgstr ""
+msgstr "A&ctual"
 
 #: print.cpp:196
-#, fuzzy
 msgid "&Marked"
-msgstr "Marcadas"
+msgstr "&Marcadas"
 
 #: print.cpp:205
 msgid "&Range"
-msgstr ""
+msgstr "&Intervalo"
 
 #: print.cpp:219
 msgid "to"
-msgstr ""
+msgstr "até"
 
 #: print.cpp:232
-#, fuzzy
 msgid "Print document in re&verse order"
-msgstr "Imprimir documento"
+msgstr "Imprimir documento em ordem in&versa"
 
 #: print.cpp:249
-#, fuzzy
 msgid "&Setup ..."
-msgstr "&Abrir..."
+msgstr "&Configuração ..."
 
 #: print.cpp:289
 msgid "Range error"
-msgstr ""
+msgstr "Erro no intervalo"
 
 #: print.cpp:290
 msgid ""
@@ -780,81 +754,29 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
+"O intervalo de página inserido não\n"
+"foi entendido.\n"
+"\n"
+"O intervalo especificado tem de estar dentro\n"
+"do intervalo de páginas desta parte do documento\n"
+"Esta informação está disponível na barra de status.\n"
 
 #: viewcontrol.cpp:36
-#, fuzzy
 msgid "Force changes to ..."
-msgstr "Forçar mudanças a "
+msgstr "Forçar mudanças a ..."
 
 #: viewcontrol.cpp:78
-#, fuzzy
 msgid "&magnification"
-msgstr "Ampliação"
+msgstr "a&mpliação"
 
 #: viewcontrol.cpp:86
-#, fuzzy
 msgid "m&edia"
-msgstr "Media"
+msgstr "m&edia"
 
 #: viewcontrol.cpp:94
-#, fuzzy
 msgid "&orientation"
-msgstr "Orientação"
+msgstr "&orientação"
 
 #: viewcontrol.cpp:111
 msgid "&Apply"
-msgstr ""
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr "Aju&star janela"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid "Title :"
-#~ msgstr "Título :"
-
-#~ msgid "Date :"
-#~ msgstr "Data :"
-
-#~ msgid "Mark this page"
-#~ msgstr "Marcar esta página"
-
-#~ msgid "Printer Name : "
-#~ msgstr "Nome da Impressora : "
-
-#~ msgid "No pages have been marked for printing."
-#~ msgstr "Nenhuma página foi marcadas para impressão."
-
-#~ msgid ""
-#~ "The file\n"
-#~ "\"%s\"\n"
-#~ "could not be found."
-#~ msgstr ""
-#~ "O ficheiro\n"
-#~ "\"%s\"\n"
-#~ "não foi encontrado."
-
-#~ msgid "Didn't recognise file\n"
-#~ msgstr "Não reconheci o ficheiro\n"
+msgstr "&Aplicar"

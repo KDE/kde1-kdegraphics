@@ -687,19 +687,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impressão"
-
-#~ msgid "&Contents"
-#~ msgstr "&Contéudo"
-
-#~ msgid "About &Qt"
-#~ msgstr "Acerca do &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Acerca do Kdvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - Visualizador de TeX DVI\n"
-#~ "Versão "
