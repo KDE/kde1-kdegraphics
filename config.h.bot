@@ -12,3 +12,8 @@ const bool true = 1;
 #define true (bool)1;
 #endif
 #endif
+#ifndef HAVE_FUNC_SETENV
+#define HAVE_FUNC_SETENV
+int setenv(const char *name, const char *value, int overwrite);
+int unsetenv(const char *name);
+#endif
