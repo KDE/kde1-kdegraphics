@@ -5,18 +5,23 @@
 #ifndef SSK_KVIEW_H
 #define SSK_KVIEW_H
 
+#include<qlist.h>
+#include<qptrdict.h>
 #include<kapp.h>
 
 class KFilterList;
 class KFiltMenuFactory;
+class KHelpIndex;
+class KImageViewer;
 
 /**
-* @short KView application object
+* KView application object.
 * @author Sirtaj Singh Kang (taj@kde.org)
 * @version $Id$
 */
-class KView
+class KView : public QObject
 {
+	Q_OBJECT
 public:
 	/**
 	* KView Constructor
@@ -32,13 +37,38 @@ public:
 	* Execute the application.
 	*/
 	virtual int exec();
+
+	const QImage *currentSelection() const;
+
+private slots:
+
+	void help( const char *tag );
+
+	void newViewer();
+	void closeViewer( KImageViewer * );
+
+	void setCutBuffer( QPixmap * );
+
+protected:
+	/**
+	* Create and initialize a new viewer widget and
+	* return it.
+	*/
+	KImageViewer *makeViewer();
+
 private:
 	KApplication _app;
 
 	void registerBuiltinFilters();
 
 	KFilterList *_filters;
-	KFiltMenuFactory *_menuFact;
+
+	KHelpIndex  *_helper;
+
+	QList<KImageViewer> *_viewers;
+	QPtrDict<KFiltMenuFactory> *_filtMenus;
+
+	QPixmap *_cutBuffer;
 };
 
 #endif // SSK_KVIEW_H

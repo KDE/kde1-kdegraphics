@@ -45,7 +45,7 @@ public:
 	/**
 	*
 	*/
-	int load( const char *file, const char *URL=0 );
+	int load( const char *file, const char *URL=0, bool max = false );
 	/**
 	*
 	*/
@@ -82,8 +82,6 @@ public:
 	*/
 	void maxpectToDesktop() const;
 
-
-
 	/**
 	* Get the current image.
 	*/
@@ -107,6 +105,21 @@ public slots:
 
 	void maxToWin();
 	void maxpectToWin();
+
+	// image scrolling
+
+	void pageDown() { verticalScrollBar()->addPage(); }
+	void pageUp() { verticalScrollBar()->subtractPage(); }
+
+	void lineDown() { verticalScrollBar()->addLine(); }
+	void lineUp() { verticalScrollBar()->subtractLine(); }
+
+	void pageRight() { horizontalScrollBar()->addPage(); }
+	void pageLeft() { horizontalScrollBar()->subtractPage(); }
+
+	void lineRight() { horizontalScrollBar()->addLine(); }
+	void lineLeft() { horizontalScrollBar()->subtractLine(); }
+
 protected:
 	/**
 	*
@@ -172,6 +185,7 @@ public:
 	* the returned rectangle will be null.
 	*/
 	QRect selected() const;
+	QPixmap selection();
 
 	void clearSelection() { _selected = false; }
 

@@ -41,7 +41,7 @@ void BriteFilter::invoke( QImage before )
 	_pct = pct;
 	pct /= 100;
 
-	emit status( i18n( "Brightening..." ) );
+	emit status( i18n( "Changing brightness..." ) );
 
 	QApplication::setOverrideCursor( waitCursor );    
 	QImage newimage = before;
@@ -55,45 +55,12 @@ void BriteFilter::invoke( QImage before )
 
 const char *BriteFilter::name() const
 {
-	return i18n( "Intensity:Brighten" );
+	return i18n( "Intensity:Brightness" );
 }
 
 KImageFilter *BriteFilter::clone() const
 {
 	return new BriteFilter;
-}
-
-//
-// Darken filter
-//
-
-void DarkFilter::invoke( QImage before )
-{
-	if ( before.depth() < 32 ) {
-		warning( "cannot use rgb for image of depth %d", 
-			before.depth() );
-		return;
-	}
-
-	emit status( i18n( "Darkening..." ) );
-	QApplication::setOverrideCursor( waitCursor );    
-	QImage newimage = before;
-
-	modifyIntensity( newimage, 0.8 );
-	QApplication::restoreOverrideCursor();
-
-	emit changed( newimage );
-	emit status( 0 );
-}
-
-const char *DarkFilter::name() const
-{
-	return i18n( "Intensity:Darken" );
-}
-
-KImageFilter *DarkFilter::clone() const
-{
-	return new DarkFilter;
 }
 
 static void modifyIntensity( QImage& image, double delta )
@@ -106,7 +73,8 @@ static void modifyIntensity( QImage& image, double delta )
 			double green = qGreen(*clr);
 			double blue = qBlue(*clr);
 
-			KColourProc::toHSV( red, green, blue );
+			if( !KColourProc::toHSV( red, green, blue ) )
+				continue;
 
 			// blue is intensity, so modify
 			blue *= delta;

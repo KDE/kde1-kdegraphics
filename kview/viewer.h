@@ -49,6 +49,11 @@ public:
 	*/
 	void setFilterMenu( KFiltMenuFactory *filters );
 
+	/**
+	* Release the current cut buffer, if any.
+	*/
+	void freeCutBuffer();
+
 public slots:
 	// File operations
 	/** */
@@ -56,8 +61,6 @@ public slots:
 	/** */
 	void saveAs();
 
-	/** */
-	void closeWindow();
 	/** */
 	void quitApp();
 
@@ -116,15 +119,20 @@ public slots:
 	*/
 	void printImage();
 
+	void cut();
+	void copy();
+	void paste();
+
 protected:
 
 	virtual void mousePressEvent( QMouseEvent * );
+	virtual void closeEvent( QCloseEvent * );
 
 	virtual void saveProperties( KConfig * ) const;
 	virtual void restoreProperties( KConfig * );
 
 	virtual void saveOptions( KConfig * ) const;
-	virtual void restoreOptions( const KConfig * );
+	virtual void restoreOptions( KConfig * );
 
 private:
 	enum TransferDir {
@@ -139,7 +147,15 @@ private:
 	int		_barFilterID;
 	int		_popFilterID;
 	
+	/**
+	* Active when menubar hidden
+	*/
 	QAccel		*_accel;
+
+	/**
+	* Always active
+	*/
+	QAccel		*_paccel;
 
 	KMenuBar	*_menubar;
 	KStatusBar	*_statusbar;
@@ -177,7 +193,13 @@ private:
 
 	int		_zoomFactor;
 
+	bool		_autoMaxpect;
+
 	void loadFile( const char *file, const char *url = 0 );
+
+protected slots:
+	void newViewer();
+	void closeViewer();
 
 private slots:
 
@@ -193,6 +215,14 @@ private slots:
 	void toggleImageList();
 
 	void setSize();
+
+signals:
+	void wantHelp( const char *tag );
+
+	void wantNewViewer();
+	void wantToDie( KImageViewer * );
+
+	void newCutBuffer( QPixmap *buffer );
 };
 
 #endif // SSK_VIEWER_H

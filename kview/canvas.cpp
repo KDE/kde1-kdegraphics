@@ -22,6 +22,7 @@
 
 
 static QString loadStdin();
+static maxpect( QWidget *dest, QPixmap *image );
 
 KImageCanvas::KImageCanvas( QWidget *parent )
 	: QScrollView( parent ),
@@ -47,7 +48,8 @@ KImageCanvas::Error KImageCanvas::status() const
 	return _status;
 }
 
-int KImageCanvas::load( const char *file, const char *URL )
+int KImageCanvas::load( const char *file, const char *URL,
+	bool max )
 {
 	if( file == 0 ) {
 		setStatus( BadPath );
@@ -80,6 +82,10 @@ int KImageCanvas::load( const char *file, const char *URL )
 	QPixmap newImage;
 	bool loadOK = newImage.load( realfile );
 
+	if( !loadOK && realfile.contains( ".tga", false ) ) {
+		loadOK = newImage.load( realfile, "TGA" );
+	}
+
 	QColor::leaveAllocContext();
 
 	if( std ) {
@@ -91,8 +97,11 @@ int KImageCanvas::load( const char *file, const char *URL )
 		_orig = 0;
 
 		_client->move( 0, 0 );
-		_client->setImagePix( newImage );
 		_originalSize = size();
+		if ( max ) {
+			maxpect( this, &newImage );
+		}
+		_client->setImagePix( newImage );
 
 		updateScrollBars();
 
@@ -204,6 +213,17 @@ void KImageCanvas::maxpectToDesktop() const
 	mat.scale( d, d );
 
 	qApp->desktop()->setBackgroundPixmap( image->xForm(mat) );
+}
+
+static maxpect( QWidget *dest, QPixmap *image )
+{
+	double dh = (double)dest->height()/(double)image->height();
+	double dw = (double)dest->width()/(double)image->width();
+	QWMatrix mat;
+	double d = ( dh < dw ? dh : dw );
+	
+	mat.scale( d, d );
+	*image = image->xForm( mat );
 }
 
 void KImageCanvas::resizeEvent( QResizeEvent *ev )

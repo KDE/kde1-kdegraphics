@@ -22,13 +22,21 @@
 #include"filtlist.h"
 #include"filtmenu.h"
 #include"colour.h"
+#include"khelpidx.h"
 
 KView::KView(int argc, char **argv)
-	: _app( argc, argv, "kview" ),
+	: QObject( 0 ),
+	_app( argc, argv, "kview" ),
 	_filters( new KFilterList ),
-	_menuFact( new KFiltMenuFactory( _filters ) )
+	_helper( new KHelpIndex( "kview/kview.idx" ) ),
+	_viewers( new QList<KImageViewer> ),
+	_filtMenus( new QPtrDict<KFiltMenuFactory> ),
+	_cutBuffer( 0 )
 {
 	assert( _filters );
+
+	_viewers->setAutoDelete( true );
+	_filtMenus->setAutoDelete( true );
 
 	kimgioRegister();
 
@@ -37,23 +45,22 @@ KView::KView(int argc, char **argv)
 
 KView::~KView()
 {
-	delete _menuFact;
-	delete _filters;
+	delete _viewers; _viewers = 0;
+	delete _helper; _helper = 0;
+	delete _filters; _filters = 0;
+	delete _filtMenus; _filtMenus = 0;
 }
 
 int KView::exec()
 {
-	KImageViewer *viewer = new KImageViewer;
-
-	_app.setMainWidget( viewer );
-
-	viewer->setFilterMenu( _menuFact );
-
 	if( _app.isRestored() ) {
-		debug( "Restoring kview %d", 1 );
-		viewer->restore( 1 );
+		// restore saved viewers
+		for ( int i = 1; KTopLevelWidget::canBeRestored( i ); i++ ) {
+			makeViewer()->restore( i );
+		}
 	}
 	else {
+		KImageViewer *viewer = makeViewer();
 		viewer->show();
 
 		// process arguments only if not restored
@@ -63,20 +70,12 @@ int KView::exec()
 		}
 	}
 
-
-
-	int ret = _app.exec();
-
-	delete viewer;
-
-	return ret;
+	return _app.exec();
 }
 
 void KView::registerBuiltinFilters()
 {
 	_filters->registerFilter( new BriteFilter, 
-		KFilterList::AutoDelete );
-	_filters->registerFilter( new DarkFilter, 
 		KFilterList::AutoDelete );
 	_filters->registerFilter( new GreyFilter, 
 		KFilterList::AutoDelete );
@@ -86,3 +85,59 @@ void KView::registerBuiltinFilters()
 		KFilterList::AutoDelete );
 }
 
+
+void KView::help( const char *tag )
+{
+	assert( _helper );
+	_helper->invoke( tag );
+}
+
+void KView::newViewer()
+{
+	KImageViewer *viewer = makeViewer();
+	
+	viewer->show();
+}
+
+KImageViewer *KView::makeViewer()
+{
+	KImageViewer *viewer = new KImageViewer;
+
+	if( viewer == 0 )
+		return 0;
+
+	KFiltMenuFactory *menu = new KFiltMenuFactory( _filters );
+	viewer->setFilterMenu( menu );
+
+	_viewers->append( viewer );
+	_filtMenus->insert( viewer, menu );
+
+	connect( viewer, SIGNAL(wantHelp( const char *)),
+		this, SLOT(help(const char *)) );
+	connect( viewer, SIGNAL(wantNewViewer()),
+		this, SLOT(newViewer()) );
+	connect( viewer, SIGNAL(wantToDie(KImageViewer *)),
+		this, SLOT(closeViewer(KImageViewer *)) );
+
+	return viewer;
+}
+
+void KView::closeViewer( KImageViewer *viewer )
+{
+	assert( viewer != 0 );
+
+	_filtMenus->remove( viewer );
+	_viewers->remove( viewer );
+
+	if( _viewers->count() == 0 ) {
+		kapp->quit();
+	}
+}
+
+void KView::setCutBuffer( QPixmap *image )
+{
+	if( _cutBuffer ) {
+		delete _cutBuffer; _cutBuffer = 0;
+	}
+	
+}

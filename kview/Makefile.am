@@ -4,22 +4,20 @@ bin_PROGRAMS= kview
 #CORBA_SRC = kmicoapp.h kmicoapp.cpp
 CORBA_SRC=
 
-BUILT_SOURCES = moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_viewer.cpp moc_ilistdlg.cpp
+BUILT_SOURCES =  moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_ilistdlg.cpp moc_kview.cpp moc_viewer.cpp
 
 INCLUDES = $(all_includes) -I/usr/local/mico/include -Ilayout
 kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	viewer.cpp canvas.h kview.h \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
 	colour.h colour.cpp filtmenu.h filtmenu.cpp ilistdlg.h ilistdlg.cpp \
-	numdlg.h numdlg.cpp kcproc.h kcproc.cpp \
+	numdlg.h numdlg.cpp kcproc.h kcproc.cpp khelpidx.h khelpidx.cpp \
 	$(CORBA_SRC) $(BUILT_SOURCES)
 
 lnkdir = $(kde_appsdir)/Graphics
 lnk_DATA = kview.kdelnk
 
 EXTRA_DIST = $(lnk_DATA)
-
-#kview_LDADD = -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = layout/liblayout.a \
@@ -41,14 +39,13 @@ moc_filter.cpp: filter.h
 moc_filtmenu.cpp: filtmenu.h
 	$(MOC) filtmenu.h -o moc_filtmenu.cpp
 
-moc_kmicoapp.cpp: kmicoapp.h
-	$(MOC) kmicoapp.h -o moc_kmicoapp.cpp
+moc_ilistdlg.cpp: ilistdlg.h
+	$(MOC) ilistdlg.h -o moc_ilistdlg.cpp
+
+moc_kview.cpp: kview.h
+	$(MOC) kview.h -o moc_kview.cpp
 
 moc_viewer.cpp: viewer.h
 	$(MOC) viewer.h -o moc_viewer.cpp
-
-
-moc_ilistdlg.cpp: ilistdlg.h
-	$(MOC) ilistdlg.h -o moc_ilistdlg.cpp
 
 ###KMAKE-end

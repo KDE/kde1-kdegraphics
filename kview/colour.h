@@ -31,30 +31,6 @@ public:
 
 };
 
-
-
-class DarkFilter : public KImageFilter
-{
-
-public:
-	/**
-	* DarkFilter Constructor
-	*/
-	DarkFilter() : KImageFilter() {}
-
-	/**
-	* DarkFilter Destructor
-	*/
-	virtual ~DarkFilter() {}
-
-	virtual void invoke( QImage before );
-        virtual const char *name() const;
-
-	virtual KImageFilter *clone() const;
-	
-};
-
-
 class GreyFilter : public KImageFilter
 {
 

@@ -65,7 +65,9 @@ KImageViewer::KImageViewer()
 	_lastPct( - 1 ),
 	_msgTimer( 0 ),
 	_imageList( new ImgListDlg ),
-	_zoomFactor( 100 )
+	_zoomFactor( 100 ),
+
+	_autoMaxpect( false )
 {
 
 	_canvas = new KImageCanvas( this );
@@ -95,10 +97,8 @@ KImageViewer::KImageViewer()
 	// turned off.
 	_accel = new QAccel( this ); 
 	_accel->setEnabled( false );
-	
 
-	_accel->connectItem( _accel->insertItem( Key_Q ),	// quit
-		this, SLOT(quitApp()) );
+
 	_accel->connectItem( _accel->insertItem( Key_F ), // full screen
 		this, SLOT(fullScreen()) );
 	_accel->connectItem( _accel->insertItem( Key_Escape ),
@@ -136,6 +136,35 @@ KImageViewer::KImageViewer()
 	_accel->connectItem( _accel->insertItem( CTRL + Key_R ),
 			this, SLOT(reset()) );
 
+	//
+	// perennially active accelerators
+	//
+	
+	// keyboard scrolling
+	_paccel = new QAccel( this );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Down ),
+			_canvas, SLOT(lineDown()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Up ),
+			_canvas, SLOT(lineUp()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_PageDown ),
+			_canvas, SLOT(pageDown()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_PageUp ),
+			_canvas, SLOT(pageUp()) );
+
+
+	_paccel->connectItem( _paccel->insertItem( Key_Right ),
+			_canvas, SLOT(lineRight()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Left ),
+			_canvas, SLOT(lineLeft()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Q ),	// quit
+			this, SLOT(quitApp()) );
+
 	// Drop events forwarded to image list object
 
 	KDNDDropZone *dropObserver = new KDNDDropZone( this, DndURL );
@@ -143,11 +172,12 @@ KImageViewer::KImageViewer()
 	QObject::connect( dropObserver, SIGNAL(dropAction(KDNDDropZone *)),
 			_imageList, SLOT(dropEvent(KDNDDropZone *)) );
 
+	restoreOptions( kapp->getConfig() );
 }
 
 KImageViewer::~KImageViewer()
 {
-	delete _canvas;
+	delete _canvas; _canvas = 0;
 
 	delete _file;
 	delete _edit;
@@ -303,11 +333,9 @@ void KImageViewer::help()
 
 void KImageViewer::about()
 {
-	QString str;
-	str.sprintf(i18n("KView -- Graphics viewer %s\n"
-		         "\nSirtaj S. Kang (taj@kde.org)\n"),
-			 KVIEW_VERSION );
-	QMessageBox::about( this, i18n("About KView"), str);
+	QMessageBox::about( this, i18n("About KView"),
+		"KView -- Graphics viewer. " KVIEW_VERSION "\n"
+		"\nSirtaj S. Kang (taj@kde.org)\n" );
 }
 
 void KImageViewer::makeRootMenu(QMenuData *menu)
@@ -363,8 +391,12 @@ void KImageViewer::makePopupMenus()
 	_file->insertSeparator();
 	_file->insertItem( i18n( "&Print..." ), this, SLOT(printImage()) );
 	_file->insertSeparator();
-	_file->insertItem( i18n( "&Close" ), this, SLOT(closeWindow()) );
-	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()) );
+	_file->insertItem( i18n( "&New Window" ), this, SLOT(newViewer()),
+		CTRL + Key_N );
+	_file->insertItem( i18n( "&Close Window" ), this, SLOT(closeViewer()));
+	_file->insertSeparator();
+	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()),
+		CTRL + Key_Q );
 
 	// edit pulldown
 	_edit->insertItem( i18n( "&Full Screen" ), this, SLOT(fullScreen()),
@@ -426,11 +458,6 @@ void KImageViewer::makePopupMenus()
 	_help->insertItem( i18n( "&Contents" ), this, SLOT(help()) );
 	_help->insertSeparator();
 	_help->insertItem( i18n( "&About KView..." ), this, SLOT(about()) );
-}
-
-void KImageViewer::closeWindow()
-{
-	close(TRUE);
 }
 
 void KImageViewer::quitApp()
@@ -547,6 +574,11 @@ void KImageViewer::invokeFilter( KImageFilter *f )
 {
 	assert( f != 0 );
 
+	QObject::disconnect( f, SIGNAL(changed(const QImage&)), 0, 0 );
+
+	connect( f, SIGNAL(changed(const QImage&)),
+			_canvas, SLOT(setImage(const QImage&)) );
+
 	f->invoke( _canvas->getImage() );
 }
 
@@ -562,7 +594,7 @@ void KImageViewer::setFilterMenu( KFiltMenuFactory *filtmenu )
 		KImageFilter *filter = filters->filter( i );
 
 		connect( filter, SIGNAL(changed(const QImage&)),
-			_canvas, SLOT(setImage(const QImage&)) );
+				_canvas, SLOT(setImage(const QImage&)) );
 		connect( filter, SIGNAL(progress(int)),
 			this, SLOT(setProgress(int)) );
 		connect( filter, SIGNAL(status(const char *)),
@@ -607,12 +639,15 @@ void KImageViewer::loadFile( const char *file, const char *url )
 	}
 
 	setStatus( i18n( "Loading..." ) );
-	_canvas->load( file );
+	_canvas->load( file, 0, _autoMaxpect );
+
+
 	setStatus( 0 );
 
 	if( _canvas->status() != KImageCanvas::OK ) {
-		QString msg;
-		msg.sprintf(i18n("Couldn't load %s"), url);
+
+		QString msg = "Couldn't load ";
+		msg += url;
 		message( msg );
 	}
 	else {
@@ -753,7 +788,6 @@ void KImageViewer::reset()
 
 void KImageViewer::saveProperties( KConfig *cfg ) const
 {
-	debug( "kview: saving properties\n" );
 	if( _statusbar->isVisible() ) {
 		cfg->writeEntry( "ViewerFullScreen", false );
 		cfg->writeEntry( "ViewerPos", _posSave );
@@ -771,7 +805,6 @@ void KImageViewer::saveProperties( KConfig *cfg ) const
 
 void KImageViewer::restoreProperties( KConfig *cfg )
 {
-	debug( "kview: restoring properties" );
 
 	bool full = cfg->readBoolEntry( "ViewerFullScreen" );
 	
@@ -788,14 +821,16 @@ void KImageViewer::restoreProperties( KConfig *cfg )
 	_imageList->restoreProperties( cfg );
 }
 
-void KImageViewer::saveOptions( KConfig * ) const
+void KImageViewer::saveOptions( KConfig *cfg ) const
 {
-	// TODO: stub
+	KConfigGroupSaver save( cfg, "kview" );
+	cfg->writeEntry( "AutoMaxpect", _autoMaxpect );
 }
 
-void KImageViewer::restoreOptions( const KConfig * group )
+void KImageViewer::restoreOptions( KConfig *cfg )
 {
-	// TODO: stub
+	KConfigGroupSaver save( cfg, "kview" );
+	_autoMaxpect = cfg->readBoolEntry( "AutoMaxpect", false );
 }
 
 void KImageViewer::printImage()
@@ -814,4 +849,34 @@ void KImageViewer::printImage()
 	printer.newPage();
 	QApplication::restoreOverrideCursor();
 	setStatus( 0 );
+}
+
+void KImageViewer::newViewer()
+{
+	emit wantNewViewer();
+}
+
+void KImageViewer::closeViewer()
+{
+	emit wantToDie( this );
+}
+
+void KImageViewer::closeEvent( QCloseEvent * )
+{
+	closeViewer();
+}
+
+void KImageViewer::cut()
+{
+	// TODO: stub
+}
+
+void KImageViewer::copy()
+{
+	// TODO: stub
+}
+
+void KImageViewer::paste()
+{
+	// TODO: stub
 }
