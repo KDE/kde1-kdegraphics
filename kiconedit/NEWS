@@ -4,6 +4,9 @@ _______________
 ------------------------------------------------------------------------------
    News and fixes in version 0.4.0:
 ------------------------------------------------------------------------------
+ - Added QWhatsThis help (this is great!).
+ - Started playing with XDND. The toolbar now has a drag source and the grid
+   supports both XDND and KNDN.
  - Added rulers (can be toggled from the configuration dialog).
  - Circular selection.
  - Configuration dialog:

@@ -533,12 +533,21 @@ void KIconEdit::slotQDropEvent( QDropEvent *e )
     debug("Image decoded");
     if(!image.isNull())
     {
-      debug("Image is valid");
-      QPixmap p;
-      p = image;
-      QWidget *w = new QWidget;
-      w->setBackgroundPixmap(p);
-      w->show();
+      image = image.convertDepth(32);
+      //image.setAlphaBuffer(true);
+      for(int y = 0; y < image.height(); y++)
+      {
+        uint *l = (uint*)image.scanLine(y);
+        for(int x = 0; x < image.width(); x++, l++)
+        {
+          if(*l < OPAQUE_MASK) // the dnd encoding stuff turns off the opaque bits
+          {
+            *l = *l | OPAQUE_MASK;
+          }
+        }
+      }
+
+
       grid->load(&image);
     }
     else

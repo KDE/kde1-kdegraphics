@@ -28,6 +28,7 @@ protected:
   QString type;
   QString text;
   bool ok;
+  QObject *provider;
 };
 
 #endif
