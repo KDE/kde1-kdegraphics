@@ -1,4 +1,4 @@
 Makefile.in
 Makefile
-moc_baglayout.cpp
-moc_typolayout.cpp 
+typolayout.moc.cpp
+baglayout.moc.cpp 
