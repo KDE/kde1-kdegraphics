@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-08-23 00:07+SET\n"
+"PO-Revision-Date: 1998-11-21 00:07+SET\n"
 "Last-Translator: Christer Gustavsson <f93-cgn@sm.luth.se>\n"
 "Language-Team: SWEDISH <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Inställningar ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Ny"
 
 # kdvi.cpp:173
 #: kdvi.cpp:176
@@ -144,11 +144,11 @@ msgstr "U&ppdatera sida"
 #: kdvi.cpp:205
 #, fuzzy
 msgid "&Previous"
-msgstr "Föregående sida"
+msgstr "Föregående"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Nästa"
 
 # kdvi.cpp:204
 #: kdvi.cpp:207
@@ -329,7 +329,7 @@ msgstr "Öppna fil"
 # kdvi.cpp:345 kdvi.cpp:397
 #: kdvi.cpp:346 kdvi.cpp:399
 msgid "Print dialog"
-msgstr "Utskrifts dialog"
+msgstr "Utskriftsdialog"
 
 # kdvi.cpp:347 kdvi.cpp:399
 #: kdvi.cpp:348 kdvi.cpp:401
@@ -444,12 +444,12 @@ msgstr "Dialogrutan för utskrift är öppen"
 # kdvi.cpp:571
 #: kdvi.cpp:573
 msgid "View size fits page"
-msgstr "Visa storlek tillpassar sidan"
+msgstr "Visa sidan för storlekstillpassning"
 
 # kdvi.cpp:580
 #: kdvi.cpp:582
 msgid "View width fits page"
-msgstr "Visa bredd tillpassar sidan"
+msgstr "Visa sidan för breddtillpassning"
 
 # kdvi.cpp:672
 #: kdvi.cpp:674
@@ -704,7 +704,7 @@ msgstr "Kan inte öppna dvi fil!"
 # print.cpp:126
 #: print.cpp:126
 msgid "Cannot open output dvi file!"
-msgstr "Kan inte öppna output-dvi fil!"
+msgstr "Kan inte öppna dvi fil!"
 
 # print.cpp:138
 #: print.cpp:138
@@ -724,7 +724,7 @@ msgstr "Standardskrivare"
 # printData.cpp:32
 #: printData.cpp:32
 msgid "&File Name:"
-msgstr "&Fil namn:"
+msgstr "&Filnamn:"
 
 # printData.cpp:59
 #: printData.cpp:59
@@ -834,7 +834,7 @@ msgstr "&Spooler-kommando:"
 # printSetupData.cpp:128
 #: printSetupData.cpp:128
 msgid "n-up"
-msgstr "n-upp"
+msgstr "n-up"
 
 # printSetupData.cpp:137
 #: printSetupData.cpp:137
