@@ -1,12 +1,33 @@
+# KDE Config File
 [KDE Desktop Entry]
 Type=Application
-Exec=kview %f
+Exec=kview %u
 Icon=image.xpm
 TerminalOptions=
 Path=
 Terminal=0
 BinaryPattern=kview;
+DocPath=kview/kview.html
 Comment=KDE Image Viewer
-[Binding]
-Protocols=file;http;ftp;
-Extensions=Images;
+Comment[fr]=Visualiseur d'images de KDE
+Comment[de]=KDE Bilderbetrachter
+Comment[no]=KDE-billedfremviser
+Comment[pl]=Przegl±darka plików graficznych
+Comment[fi]=KDE Kuvanäyttäjä
+Comment[sk]=Prehliadaè obrázkovıch súborov
+Comment[pt]=Visualizador de Imagens
+Comment[pt_BR]=Visualizador de Imagens
+Comment[ro]=Program de vizualizat imagini în diverse formate
+Comment[ru]=ğÒÏÓÍÏÔÒİÉË ÉÚÏÂÒÁÖÅÎÉÊ
+MimeType=image/gif;image/x-xpm;image/x-xbm;image/jpeg;
+Name=Image Viewer
+Name[fr]=Visualiseur d'images
+Name[de]=Image Viewer
+Name[no]=Billedfremviser
+Name[pl]=Image Viewer
+Name[fi]=Kuvannäyttäjä
+Name[sk]=Prehliadaè obrázkov
+Name[pt]=Visualizador de Imagens
+Name[pt_BR]=Visualizador de Imagens
+Name[ro]=Vizualizor de imagini
+Name[ru]=ğÒÏÓÍÏÔÒİÉË ÉÚÏÂÒÁÖÅÎÉÊ

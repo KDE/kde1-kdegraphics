@@ -1,0 +1,21 @@
+
+KDE Image I/O library.
+
+This library allows applications that use the Qt library to read and
+write images in extra formats. Current formats include:
+
+JPEG	<read>
+XV	<read> <write>
+EPS	<read>
+NETPBM	<incomplete>
+
+To use these formats, you must 
+
+1. link the application with the libkimgio library
+2. Include the <kimgio.h> header
+3. call kimgioRegister() once, somewhere in your code
+   before you load an image.
+
+Sirtaj Singh Kang <taj@kde.org>, 23 September 1998.
+
+$Id$

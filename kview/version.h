@@ -1,3 +1,4 @@
-#define VERSIONNR 0
-#define SUBVERSIONNR 11
-#define PATCHLEVEL 0
+#ifndef KVIEW_VERSION
+#define KVIEW_VERSION "$Revision$"
+
+#endif

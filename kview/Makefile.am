@@ -1,47 +1,53 @@
+SUBDIRS = kimgio layout doc
+bin_PROGRAMS= kview
 
-##
-## Makefile for the KView image viewer 
-##
-## $Id$
+#CORBA_SRC = kmicoapp.h kmicoapp.cpp
+CORBA_SRC=
 
-INCLUDES = $(all_includes)
+BUILT_SOURCES = moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_viewer.cpp moc_ilistdlg.cpp
 
-SUBDIRS = doc pics
-
-LDFLAGS= $(all_libraries) $(KDE_RPATH)
-
-LDADD = -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext $(LIBJPEG) $(LIBSOCKET) $(LIBPNG)
-
-# uncomment this if you like to use the unsecure filename changer
-#LINEEDIT =-DLINEEDIT 
-
-###### No need to edit below this line #############
-
-FORMATSRC= jpeg.cpp kpng.cpp eps.cpp netpbm.cpp
-
-######
-
-kview_SOURCES = main.cpp wview.cpp viewport.cpp formats.cpp \
-	QwViewport.cpp kerror.cpp fileman.cpp confighandler.cpp \
-	$(FORMATSRC)
-
-bin_PROGRAMS = kview
+INCLUDES = $(all_includes) -I/usr/local/mico/include -I kimgio -Ilayout
+kview_SOURCES = canvas.cpp kview.cpp main.cpp \
+	viewer.cpp canvas.h kview.h \
+	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
+	colour.h colour.cpp filtmenu.h filtmenu.cpp ilistdlg.h ilistdlg.cpp \
+	$(CORBA_SRC) $(BUILT_SOURCES)
 
 lnkdir = $(kde_appsdir)/Graphics
 lnk_DATA = kview.kdelnk
 
-icondir = $(kde_icondir)
-icon_DATA = kview.xpm
+EXTRA_DIST = $(lnk_DATA)
 
-install-local-data:
-	$(mkinstalldirs) $(kde_minidir)
-	$(INSTALL_DATA) ./mini-kview.xpm $(kde_minidir)/kview.xpm
+#kview_LDADD = $(all_libraries) -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
 
-uninstall-local:
-	rm -f $(kde_minidir)/kview.xpm
+kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+kview_LDADD = kimgio/libkimgio.a layout/liblayout.a \
+	-lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 -ljpeg -lm
 
-backup:
-	(cd .. ; tar zcvf kview-project.tgz kview)
-	mv ../kview-project.tgz /mount/lan/PROJBAK 
+messages:
+	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
+
+srcdoc:
+	kdoc -H -d $(HOME)/web/src/kview *.h -lqt -lkdecore -lkdeui -lkfile 
+
+###KMAKE-start (don't edit or delete this block)
+moc_canvas.cpp: canvas.h
+	$(MOC) canvas.h -o moc_canvas.cpp
+
+moc_filter.cpp: filter.h
+	$(MOC) filter.h -o moc_filter.cpp
+
+moc_filtmenu.cpp: filtmenu.h
+	$(MOC) filtmenu.h -o moc_filtmenu.cpp
+
+moc_kmicoapp.cpp: kmicoapp.h
+	$(MOC) kmicoapp.h -o moc_kmicoapp.cpp
+
+moc_viewer.cpp: viewer.h
+	$(MOC) viewer.h -o moc_viewer.cpp
 
 
+moc_ilistdlg.cpp: ilistdlg.h
+	$(MOC) ilistdlg.h -o moc_ilistdlg.cpp
+
+###KMAKE-end

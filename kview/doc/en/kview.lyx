@@ -1,0 +1,56 @@
+#This file was created by <ssk> Thu Sep 24 16:20:12 1998
+#LyX 0.12 (C) 1995-1998 Matthias Ettrich and the LyX Team
+\lyxformat 2.15
+\textclass linuxdoc
+\language default
+\inputencoding default
+\fontscheme default
+\graphics default
+\paperfontsize 10
+\spacing single 
+\papersize Default
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+\added_space_top vfill \added_space_bottom vfill 
+KView - A KDE Image Viewer
+\layout Author
+
+Sirtaj Singh Kang <taj@kde.org>
+\layout Date
+
+23 September 1998
+\layout Abstract
+
+KView lets you view graphics in many formats.
+ It also facilitates simple image processing and format conversion operations.
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents
+
+\end_inset 
+
+
+\layout Section
+
+What is KView?
+\layout Standard
+
+KView is a simple image viewer/converter application.
+ For time T = C + D, where C = time spent coding and D = time spent writing
+ documentation and T is ever-diminishing, you will note that D is small
+ since at this stage, increasing C is more fun.
+\the_end

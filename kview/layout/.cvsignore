@@ -1,0 +1,4 @@
+Makefile.in
+Makefile
+moc_baglayout.cpp
+moc_typolayout.cpp 
