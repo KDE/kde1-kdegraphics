@@ -593,12 +593,11 @@ void KGhostview::createMenubar()
 	
 	menubar->insertSeparator();
 	
-	menubar->insertItem( i18n("&Help"), 
-		kapp->getHelpMenu( FALSE,
-		"\n"\
+	QString abstr;
+	abstr=	"\n"\
 		"KGhostview "\
- 	         KGHOSTVIEW_VERSION\
-	         " - the PostScript document viewer for\n"\
+ 	         KGHOSTVIEW_VERSION;
+	abstr+=	i18n(" - the PostScript document viewer for\n"\
 		"the K Desktop Environment.\n"\
 		"\n"\
 		"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"\
@@ -607,8 +606,8 @@ void KGhostview::createMenubar()
 		"Incorporates code from Johanes Plass' gv. This adds compressed and\n"\
 		"PDF file support.\n"\
 		"\n"\
-		"See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"\
-		"\n"\
+		"See http://wwwthep.physik.uni-mainz.de/~plass/gv/n");
+	abstr+=	i18n("\n"\
 		"This program is free software; you can redistribute it and/or modify\n"\
 		"it under the terms of the GNU General Public License as published by\n"\
 		"the Free Software Foundation; either version 2 of the License, or\n"\
@@ -621,9 +620,8 @@ void KGhostview::createMenubar()
 		"\n"\
 		"You should have received a copy of the GNU General Public License\n"\
 		"along with this program; if not, write to the Free Software\n"\
-		"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
-		)
-	);
+		"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.");
+	menubar->insertItem( i18n("&Help"), kapp->getHelpMenu( FALSE, abstr));
 	
 	m_file->setItemEnabled(printID, FALSE);
 	m_go->setItemEnabled(nextID, FALSE);

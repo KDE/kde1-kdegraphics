@@ -364,7 +364,7 @@ MarkList::MarkList( QWidget * parent = 0, const char * name = 0 )
 	pageLabel->setFrameStyle( QFrame::Panel | QFrame::Raised );
 	pageLabel->setLineWidth( 1 );
 	pageLabel->setMargin( 1 ); 
-	pageLabel->setText( "Page" );
+	pageLabel->setText( i18n("Page") );
 	
 	selectColor = QColor( black );
 	selectTextColor = QColor( white );
