@@ -295,7 +295,7 @@ msgstr "Opaène"
 
 #: options.cpp:102
 msgid "Raw Fax Data are:"
-msgstr "Formát raw dát:"
+msgstr "Formát RAW FAX dát:"
 
 #: options.cpp:106
 msgid "LS-Bit first"
@@ -303,11 +303,11 @@ msgstr "LS-Bit prvý"
 
 #: options.cpp:114
 msgid "Raw Facsimili are:"
-msgstr "Raw faxy sú:"
+msgstr "RAW faxy sú:"
 
 #: options.cpp:135
 msgid "Raw Fax width:"
-msgstr "©írka Raw faxu:"
+msgstr "©írka RAW faxu:"
 
 #: options.cpp:142
 msgid "height:"

@@ -362,7 +362,7 @@ msgstr "©írka pohµadu je prispôsobená stránke"
 
 #: kdvi.cpp:672
 msgid "Preferences applied"
-msgstr "Preference aplikované"
+msgstr "Preferencie aplikované"
 
 #: kdvi.cpp:676
 msgid " Page "
@@ -386,11 +386,11 @@ msgstr "Chýbajúce PK fonty budú zaznamenané do 'missfont.log'"
 
 #: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
-msgstr "Postscript specials sú zobrazené"
+msgstr "Postskript. zvlá¹tnosti sú vykreslené"
 
 #: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
-msgstr "Postcript specials nie sú zobrazené"
+msgstr "Postskript. zvlá¹tnosti nie sú vykreslené"
 
 #: kdvi.cpp:747
 msgid "No menu bar"
@@ -526,15 +526,15 @@ msgstr "Cesta PK fontu"
 
 #: prefs.cpp:301
 msgid "Shrink factor for small text"
-msgstr "Zmen¹ovací faktor pre malý text"
+msgstr "Stupeò zmen¹enia pre malý text"
 
 #: prefs.cpp:306
 msgid "Shrink factor for large text"
-msgstr "Zmen¹ovací faktor pre veµký text"
+msgstr "Stupeò zmen¹enia pre veµký text"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"
-msgstr "Zobrazova» postscript specials"
+msgstr "Zobrazova» postskript. zvlá¹tnosti"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
@@ -546,7 +546,7 @@ msgstr "Gamma"
 
 #: prefs.cpp:358
 msgid "Rendering"
-msgstr "Zobrazenie"
+msgstr "Vykresµovanie"
 
 #: prefs.cpp:388
 msgid "Paper"
@@ -672,20 +672,3 @@ msgstr "n-up"
 msgid "Printing method"
 msgstr "Spôsob tlaèe"
 
-#~ msgid "&Previous"
-#~ msgstr "&Predchádzajúca"
-
-#~ msgid "&Next"
-#~ msgstr "&Nasledujúca"
-
-#~ msgid "Appearance"
-#~ msgstr "Vzhµad"
-
-#~ msgid "Fonts"
-#~ msgstr "Fonty"
-
-#~ msgid "Print"
-#~ msgstr "Tlaèi»"
-
-#~ msgid "&Remove"
-#~ msgstr "Odst&ráni»"

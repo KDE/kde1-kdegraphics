@@ -221,7 +221,7 @@ msgstr "Nastavenie stránky"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
-msgstr "Nastavenie zobrazení"
+msgstr "Nastavenie zobrazenia"
 
 #: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
 msgid "Go To Page"
@@ -269,7 +269,7 @@ msgstr "Neznáme"
 
 #: kghostview.cpp:419
 msgid "Configure interpreter"
-msgstr "Nastav interpreter"
+msgstr "Nastav interpretér"
 
 #: kghostview.cpp:494
 msgid "&Open ..."
@@ -357,7 +357,7 @@ msgstr "Zobrazova» nás&trojovú li¹tu"
 
 #: kghostview.cpp:568
 msgid "Show st&atus bar"
-msgstr "Zobrazova» &statusbar"
+msgstr "Zobrazova» &stav. li¹tu"
 
 # ???
 #: kghostview.cpp:569
@@ -537,7 +537,7 @@ msgstr ""
 "Zvolili ste tlaè v¹etkých strán do súboru.\n"
 "Toto vyprodukuje dokument identický s\n"
 "tým, ktorý je teraz natiahnutý do prehliadaèa.\n"
-"Je hlúpos» tlaèi» v¹etky strany do nového súboru."
+"Je zbytoèné tlaèi» v¹etky strany do nového súboru."
 
 #: kghostview.cpp:1607
 msgid ""
@@ -558,7 +558,7 @@ msgid ""
 "pages to be printed was empty.\n"
 msgstr ""
 "Tlaè zlyhala, preto¾e zoznam\n"
-"súborov na tlaè bol prázdny.\n"
+"strán na tlaè bol prázdny.\n"
 
 #: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
 #: kghostview.cpp:2534
@@ -636,7 +636,7 @@ msgstr ""
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr "Chyba na príkazovej riadke"
+msgstr "Chyba na príkazovom riadku"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -668,7 +668,7 @@ msgstr "Hlásenie Ghostscriptu"
 
 #: messages.cpp:56
 msgid "&Clear"
-msgstr "Zma¾"
+msgstr "Zmaza»"
 
 #: messages.cpp:59
 msgid "&Dismiss"
@@ -720,7 +720,7 @@ msgstr "do"
 
 #: print.cpp:232
 msgid "Print document in re&verse order"
-msgstr "Tlaèi» dokument"
+msgstr "Tlaèi» dokument odzadu"
 
 #: print.cpp:249
 msgid "&Setup ..."
@@ -763,8 +763,3 @@ msgstr "&Aplikova»"
 msgid "&Magnification"
 msgstr "&Zväè¹enie"
 
-#~ msgid "Print"
-#~ msgstr "Tlaèi»"
-
-#~ msgid "&Reload"
-#~ msgstr "&Znovu naèíta»"

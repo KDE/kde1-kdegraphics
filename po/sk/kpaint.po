@@ -64,7 +64,7 @@ msgstr "8 (256 Farieb)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr "24 (Skutoèná)"
+msgstr "24 (Verná farba)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -92,7 +92,7 @@ msgstr "Vý¹ka obrázku:"
 
 #: kpaint.cpp:52 kpaint.cpp:603
 msgid "untitled.gif"
-msgstr "bezmena.gif"
+msgstr "bez_mena.gif"
 
 #: kpaint.cpp:124
 msgid "Unsaved Changes"
@@ -341,7 +341,7 @@ msgstr "Diagonálne èiary //"
 
 #: properties.cpp:82 properties.cpp:136
 msgid "Diagonal Lines \\"
-msgstr "Diagonálna èiara \\"
+msgstr "Diagonálne èiary \\"
 
 #: properties.cpp:83 properties.cpp:137
 msgid "Diagonal Grid"
@@ -403,8 +403,3 @@ msgstr "Farba èiary"
 msgid "Roundangle"
 msgstr "Zaoblený obdå¾nik"
 
-#~ msgid "Continue"
-#~ msgstr "Pokraèova»"
-
-#~ msgid "None"
-#~ msgstr "Niè"
