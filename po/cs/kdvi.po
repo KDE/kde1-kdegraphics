@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
+"PO-Revision-Date: 1998-10-24 22:11 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -88,7 +88,7 @@ msgstr "Preference ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Nový"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -123,13 +123,12 @@ msgid "&Redraw page"
 msgstr "Pøek&reslit stránku"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Pøedcházející strana"
+msgstr "&Pøedcházející"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Následující"
 
 #: kdvi.cpp:207
 msgid "&First"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
+"PO-Revision-Date: 1998-10-24 22:07 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,8 @@ msgid "Remove page marks"
 msgstr "Odstranit znaèky"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "&Strana"
+msgstr "Strana"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -358,11 +357,11 @@ msgstr "Nastav interpretr"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Nový"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Nový"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -501,6 +500,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+"- prohlí¾eè  PostScriptových documentù\n"
+"pro K Desktop Environment.\n"
+"\n"
+"Napsáno Markem Donohoem <donohoe@kde.org>, zalo¾eno na pùvodní\n"
+"práíci Tima Theisena.\n"
+"\n"
+"Obsahuje kód z programu gv Johanese Plasse. Tento pøidává podporu\n"
+"comprimovaných a PDF souborù.\n"
+"\n"
+"Náhlédni na http://wwwthep.physik.uni-mainz.de/~plass/gv/n\""
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -638,6 +647,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Nastavte promìnnou prostøedí (napø. na  PRINTER nebo LPDEST), aby\n"
+"bylo zohlednìno jméno tiskárny."
 
 #: kghostview.cpp:1654
 #, c-format

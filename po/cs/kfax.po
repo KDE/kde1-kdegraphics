@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-06-20 19:27 CEST\n"
+"PO-Revision-Date: 1998-10-24 22:10 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -213,7 +213,7 @@ msgstr "Nahrávání '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Hotovo"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -318,7 +318,7 @@ msgstr "Jemné"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normální"
 
 #: options.cpp:81
 msgid "Display Options:"
@@ -355,21 +355,3 @@ msgstr "©íøka faxu:"
 #: options.cpp:142
 msgid "height:"
 msgstr "vý¹ka:"
-
-#~ msgid "About KFax"
-#~ msgstr "Informace o KFaxu"
-
-#~ msgid "Version "
-#~ msgstr "Verze "
-
-#~ msgid "&About..."
-#~ msgstr "&Informace ..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "&Nápovìda KFaxu"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Vyber fax k otevøení"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Vyber fax k pøidání"
