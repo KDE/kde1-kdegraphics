@@ -189,7 +189,7 @@ bool WViewPort::load(const char *filename)
 void WViewPort::mousePressEvent(QMouseEvent *e)
 {
   static QPoint tmp_point;
-  if(e->button() == LeftButton) 
+  if(e->button() == RightButton) 
     {
       tmp_point = QCursor::pos();
       if(lb_popup)

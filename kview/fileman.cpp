@@ -14,6 +14,7 @@
 #include <qfiledlg.h>
 
 #include <kurl.h>
+#include <kiconloader.h>
 
 #include "fileman.h"
 #include "fileman.moc"
@@ -107,23 +108,22 @@ void Fileman::initToolBar()
   ktoolbar1 = new KToolBar( this );
   ktoolbar2 = new KToolBar( this );
   
-  QString pixdir = KApplication::kdedir() + QString("/lib/pics/toolbar/");
   QPixmap pixmap;
 
   //------------- initialize the first toolbar
-  pixmap.load(pixdir+"filenew.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("filenew.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_NEWWINDOW,
 			SIGNAL(clicked()), this,
 			SLOT(slotNew()), TRUE,
 			"New Window");
 
-  pixmap.load(pixdir+"fileopen.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("fileopen.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_OPENFILE,
 			SIGNAL(clicked()), this,
 			SLOT(slotOpen()), TRUE,
 			"open new file");
   /*
-  pixmap.load(pixdir+"reload.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("reload.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_RELOAD,
 			SIGNAL(clicked()), this,
 			SLOT(slotReload()), TRUE,
@@ -132,13 +132,13 @@ void Fileman::initToolBar()
   
   ktoolbar1->insertSeparator();
   
-  pixmap.load(pixdir+"viewmag-.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("viewmag-.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_MINIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMin()), TRUE,
 			"shrink -50%");
 
-  pixmap.load(pixdir+"viewmag+.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("viewmag+.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_MAGNIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMax()), TRUE,
@@ -151,33 +151,33 @@ void Fileman::initToolBar()
 			"size Window");
   ktoolbar1->insertSeparator();
 
-  pixmap.load(pixdir+"help.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("help.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_HELP,
 			SIGNAL(clicked()), this,
 			SLOT(invokeHelp()), TRUE,
 			"launch help");
 
   //--------------- initialize the second toolbar
-  pixmap.load(pixdir+"start.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("start.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_FIRSTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(firstClicked()), TRUE,
 			"first pic");
 
-  pixmap.load(pixdir+"finish.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("finish.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_LASTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(lastClicked()), TRUE,
 			"last pic");
   ktoolbar2->insertSeparator();
 
-  pixmap.load(pixdir+"back.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("back.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_PREVPIC,
 			SIGNAL(clicked()), this,
 			SLOT(prevClicked()), TRUE,
 			"prev pic");
 
-  pixmap.load(pixdir+"forward.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("forward.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_NEXTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(nextClicked()), TRUE,
@@ -196,7 +196,7 @@ void Fileman::initToolBar()
 			SLOT(randomShow()), TRUE,
 			"stop picture show");
   
-  pixmap.load(pixdir+"stop.xpm");
+  pixmap = theApp->getIconLoader()->loadIcon("stop.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_STOPSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(stopShow()), TRUE,
