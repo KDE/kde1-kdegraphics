@@ -547,7 +547,7 @@ void KGhostview::createToolbar()
 
 	// Create the toolbar
 
-	KPixmap pixmap;
+	QPixmap pixmap;
 	toolbar = new KToolBar( this );
 
 	pixmap.load(PIXDIR + "back.xpm");

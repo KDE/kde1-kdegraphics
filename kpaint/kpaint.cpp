@@ -40,7 +40,7 @@ KPaint::KPaint(char *name= 0) :
 void KPaint::initToolbar(void)
 {
   QString pixdir("/usr/local/kde/lib/pics/toolbar/");
-  KPixmap pixmap;
+  QPixmap pixmap;
 
   toolbar= new KToolBar(this);
  

@@ -9,7 +9,6 @@
 #define _SSK_WVIEWPORT_H
 
 #include<qlabel.h>
-#include<kpixmap.h>
 #include<qwmatrix.h>
 
 /// 

@@ -13,6 +13,7 @@
 #include<qapp.h>
 #include<qmsgbox.h>
 #include<qcolor.h>
+#include <qpixmap.h>
 
 #include"viewport.moc"
 

@@ -49,6 +49,9 @@ TARGET = kghostview
 
 all: $(TARGET)
 
+Makefile: Makefile.in
+	cd .. && CONFIG_FILES=kghostview/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
 $(TARGET): $(SRCMETA) $(OBJS)
 	$(CXX) -o $(TARGET) $(OBJS) $(LDFLAGS)
 

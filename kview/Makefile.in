@@ -64,6 +64,9 @@ jpeg.o: jpeg.cpp
 gif.o: gif.cpp
 kpng.o: kpng.cpp
 
+Makefile: Makefile.in
+	cd .. && CONFIG_FILES=kview/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
 clean::
 	-rm -f kview $(OBJS) *.moc
 
