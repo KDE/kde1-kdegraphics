@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-06-16 14:19+0200\n"
+"POT-Creation-Date: 1998-05-30 17:41+0200\n"
 "PO-Revision-Date: 1998-01-28 23:52 CET\n"
 "Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"
@@ -83,20 +83,20 @@ msgid "Redraw"
 msgstr "Redessiner"
 
 #: kdvi.cpp:114
-msgid "Preferences ..."
-msgstr "&Préférences ..."
+msgid "Preferences..."
+msgstr "&Préférences..."
 
 #: kdvi.cpp:173
-msgid "&Open ..."
-msgstr "&Ouvrir ..."
+msgid "&Open..."
+msgstr "&Ouvrir..."
 
 #: kdvi.cpp:180
 msgid "Open &recent"
 msgstr "Ouvrir &récent"
 
 #: kdvi.cpp:182
-msgid "&Print ..."
-msgstr "Im&primer ..."
+msgid "&Print..."
+msgstr "Im&primer..."
 
 #: kdvi.cpp:190
 msgid "Zoom &in"
@@ -118,6 +118,14 @@ msgstr "Ajuster à la &largeur de la page"
 msgid "&Redraw page"
 msgstr "&Redessiner la page"
 
+#: kdvi.cpp:202
+msgid "&Previous"
+msgstr "&Précédente"
+
+#: kdvi.cpp:203
+msgid "&Next"
+msgstr "&Suivante"
+
 #: kdvi.cpp:204
 msgid "&First"
 msgstr "&Première"
@@ -127,19 +135,19 @@ msgid "&Last"
 msgstr "&Dernière"
 
 #: kdvi.cpp:206
-msgid "&Go to ..."
-msgstr "&Aller à ..."
+msgid "&Go to..."
+msgstr "&Aller à..."
 
 #: kdvi.cpp:209
 msgid "&Page"
 msgstr "&Page"
 
 #: kdvi.cpp:214
-msgid "&Preferences ..."
-msgstr "&Préférences ..."
+msgid "&Preferences..."
+msgstr "&Préférences..."
 
 #: kdvi.cpp:215
-msgid "&Keys ..."
+msgid "&Keys..."
 msgstr "Configurer le &clavier"
 
 #: kdvi.cpp:217
@@ -185,16 +193,16 @@ msgstr ""
 "par Markku Hihnala"
 
 #: kdvi.cpp:260
-msgid "Open document ..."
-msgstr "Ouvrir un document ..."
+msgid "Open document..."
+msgstr "Ouvrir un document..."
 
 #: kdvi.cpp:261
 msgid "Reload document"
 msgstr "Recharger le document"
 
 #: kdvi.cpp:262
-msgid "Print ..."
-msgstr "Imprimer ..."
+msgid "Print..."
+msgstr "Imprimer..."
 
 #: kdvi.cpp:264
 msgid "Go to first page"
@@ -509,6 +517,10 @@ msgstr "Barres de défilement"
 msgid "Number of recent files"
 msgstr "Nombre de fichiers récents"
 
+#: prefs.cpp:252
+msgid "Appearance"
+msgstr "Apparence"
+
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Générer les polices manquantes"
@@ -533,6 +545,10 @@ msgstr "Facteur de réduction pour le bouton \"petit texte\""
 msgid "Shrink factor for large text"
 msgstr "Facteur de réduction pour le bouton \"grand texte\""
 
+#: prefs.cpp:319
+msgid "Fonts"
+msgstr "Polices"
+
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Afficher le postscript"
@@ -552,6 +568,10 @@ msgstr "Rendu"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papier"
+
+#: print.cpp:44
+msgid "Print"
+msgstr "Imprimer"
 
 #: print.cpp:63
 msgid "Print "
@@ -661,6 +681,10 @@ msgstr "Utiliser &mpage"
 msgid "&Add"
 msgstr "&Ajouter"
 
+#: printSetupData.cpp:99
+msgid "&Remove"
+msgstr "Enleve&r"
+
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Commande d'&impression :"
@@ -672,24 +696,6 @@ msgstr "Multipage"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Méthode d'impression"
-
-#~ msgid "&Previous"
-#~ msgstr "&Précédente"
-
-#~ msgid "&Next"
-#~ msgstr "&Suivante"
-
-#~ msgid "Appearance"
-#~ msgstr "Apparence"
-
-#~ msgid "Fonts"
-#~ msgstr "Polices"
-
-#~ msgid "Print"
-#~ msgstr "Imprimer"
-
-#~ msgid "&Remove"
-#~ msgstr "Enleve&r"
 
 #~ msgid "&Contents"
 #~ msgstr "&Contenu"
