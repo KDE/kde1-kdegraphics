@@ -96,7 +96,7 @@ void KIcon::open(const QImage *image, const char *xpm)
     {
       QString msg = i18n("The URL:\n");
       msg += _turl.url();
-      msg += "\nseems to be malformed.\n";
+      msg += i18n("\nseems to be malformed.\n");
       KMsgBox::message((QWidget*)parent(), i18n("ERROR"), msg, KMsgBox::EXCLAMATION);
       return;
     }
@@ -142,7 +142,7 @@ void KIcon::open(const QImage *image, const char *xpm)
       {
         QString msg = i18n("The file:\n");
         msg += _turl.path();
-        msg += "\ndoesn't exist or isn't readable.\n";
+        msg += i18n("\ndoesn't exist or isn't readable.\n");
         KMsgBox::message((QWidget*)parent(), i18n("ERROR"), msg, KMsgBox::EXCLAMATION);
         return;
       }
@@ -220,6 +220,22 @@ void KIcon::open(const QImage *image, const char *xpm)
     return;
   }
 
+  // hack to make pixels opaque
+  QString format = QImage::imageFormat(tmp.data());
+  if(format == "JFIF")
+  {
+    *img = img->convertDepth(32);
+    for(int y = 0; y < img->height(); y++)
+    {
+      uint *l = (uint*)img->scanLine(y);
+      for(int x = 0; x < img->width(); x++, l++)
+      {
+        if(*l < 0xff000000) // the dnd encoding stuff turns off the opaque bits
+          *l = *l | 0xff000000;
+      }
+    }
+  }
+
   debug("KIcon::open - Image loaded");
   unlock(f);
   f = fs;
@@ -242,7 +258,11 @@ void KIcon::promptForFile(const QImage *img)
       i18n("We've got a KFM job running.\nPlease wait."), KMsgBox::STOP);
     return;    
   }
-  QString tmpname = KFilePreviewDialog::getOpenFileURL(_lastdir.data(), "*.xpm");
+  QString filter = i18n("*|All files (*)\n"
+                        "*.xpm|XPM (*.xpm)\n"
+                        "*.gif|GIF files (*.gif)\n"
+                        "*jpg|JPEG files (*.jpg)\n");
+  QString tmpname = KFilePreviewDialog::getOpenFileURL(_lastdir.data(), filter.data());
   if(tmpname.length() == 0)
     return;
   open(img, tmpname.data());

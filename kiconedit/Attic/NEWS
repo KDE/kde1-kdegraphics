@@ -4,6 +4,8 @@ _______________
 ------------------------------------------------------------------------------
    News and fixes in version 0.4.0:
 ------------------------------------------------------------------------------
+ - Enabled loading other image types than XPM.
+ - Repainting large pictures is very much faster now.
  - Added drop site indication when using XDND.
  - Added QWhatsThis help (this is great!).
  - Started playing with XDND. The toolbar now has a drag source and the grid

@@ -246,6 +246,7 @@ const QImage *fixTransparence(QImage *image)
       {
         *l = TRANSPARENT;
       }
+      //else debug("Opaque!");
     }
   }
   return image;
@@ -659,7 +660,7 @@ void KIconEditGrid::load( QImage *image)
   if(image != 0L)
   {
     *img = *fixTransparence(image);
-    *img = image->convertDepth(32);
+    //*img = image->convertDepth(32);
     //img->setAlphaBuffer(true);
   }
   else

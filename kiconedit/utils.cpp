@@ -21,6 +21,7 @@
 
 #include "debug.h"
 #include "utils.h"
+#include "../config.h"
 
 imageFormats *formats = 0L;
 
@@ -49,6 +50,9 @@ bool copyFile(const QString &src, const QString &dest)
 {
   QFile f_src(src.data());  
   QFile f_dest(dest.data());  
+  QFileInfo fi(f_src);
+  uint src_size = fi.size();
+  debug("Size: %u", src_size);
 
   if ( f_src.open(IO_ReadOnly) )
   {    // file opened successfully      
@@ -58,14 +62,27 @@ bool copyFile(const QString &src, const QString &dest)
       f_src.close();
       return false;
     }
-    QTextStream t_src( &f_src );
-    QTextStream t_dest( &f_dest );
-    while ( !t_src.eof() )
+    char *data = new char[src_size];
+    if(f_src.readBlock(data, src_size) == -1)
     {
-      t_dest << t_src.readLine() << "\n";
-    }      
+      debug(i18n("copyFile - There was an error reading source file: %s"), src.data());
+      f_src.close();
+      f_dest.close();
+      delete [] data;
+      return false;
+    }
+    if(f_dest.writeBlock(data, src_size) == -1)
+    {
+      debug(i18n("copyFile - There was an error writing to destination file: %s"), dest.data());
+      f_src.close();
+      f_dest.close();
+      delete [] data;
+      return false;
+    }
+
     f_src.close();
     f_dest.close();
+    delete [] data;
     refreshDirectory(dest);
     return true;
   }
