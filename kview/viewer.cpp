@@ -305,7 +305,8 @@ void KImageViewer::about()
 {
 	QString str;
 	str.sprintf(i18n("KView -- Graphics viewer %s\n"
-		         "\nSirtaj S. Kang (taj@kde.org)\n"));
+		         "\nSirtaj S. Kang (taj@kde.org)\n"),
+			 KVIEW_VERSION );
 	QMessageBox::about( this, i18n("About KView"), str);
 }
 
