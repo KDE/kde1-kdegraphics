@@ -1,0 +1,431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1997 Free Software Foundation, Inc.
+# Balazs Nagy <julian7@kva.hu>, 1997.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: kdehelp 0.5.2\n"
+"POT-Creation-Date: 1997-08-21 23:23-0500\n"
+"PO-Revision-Date: 1997-09-21 19:39+MET\n"
+"Last-Translator: Nagy Balazs <julian7@kva.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=Latin2\n"
+"Content-Transfer-Encoding: iso-8859-2\n"
+  
+#: app.cpp:27 app.cpp:44 kpaint.cpp:204
+msgid "Close Window"
+msgstr "Ablak bezárása"
+
+#: app.cpp:28 app.cpp:43 kpaint.cpp:203
+msgid "New Window"
+msgstr "Új ablak"
+
+#: app.cpp:29 app.cpp:45 kpaint.cpp:156
+msgid "Open File"
+msgstr "Megnyitás"
+
+#: app.cpp:30 app.cpp:46 kpaint.cpp:158
+msgid "Save File"
+msgstr "Mentés"
+
+#: app.cpp:31 app.cpp:47
+msgid "Save File As"
+msgstr "Mentés másként"
+
+#: app.cpp:33 kpaint.cpp:227
+msgid "Pen"
+msgstr "Ecset"
+
+#: app.cpp:34 kpaint.cpp:228
+msgid "Line"
+msgstr "Vonal"
+
+#: app.cpp:35 kpaint.cpp:229
+msgid "Rectangle"
+msgstr "Téglalap"
+
+#: app.cpp:36 kpaint.cpp:230
+msgid "Ellipse"
+msgstr "Ellipszis"
+
+#: app.cpp:37 kpaint.cpp:231
+msgid "Circle"
+msgstr "Kör"
+
+#: app.cpp:38 kpaint.cpp:232
+msgid "Spray Can"
+msgstr "Festékszóró"
+
+#: app.cpp:59
+msgid "This was a QString"
+msgstr "Ez egy QString volt"
+
+#: app.cpp:68
+msgid ""
+"\n"
+"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+msgstr ""
+"\n(C) Richard J. Moore 1997, kiadva a GPL védelme alatt.\n"
+"Lásd a LICENSE file-t a részletekért\n"
+
+#: app.cpp:69
+msgid "Usage: "
+msgstr "Használat: "
+
+#: app.cpp:71
+msgid " [url | filename]\n"
+msgstr " [url | filenév]\n"
+
+#: canvassize.cpp:11
+msgid "Width"
+msgstr "Szélesség"
+
+#: canvassize.cpp:12
+msgid "Height"
+msgstr "Magasság"
+
+#: formatdialog.cpp:20
+msgid "File Format:"
+msgstr "File formátum:"
+
+#: infodialog.cpp:23
+msgid "Colour Depth:"
+msgstr "Színmélység:"
+
+#: infodialog.cpp:38
+msgid "Colours Used:"
+msgstr "Felhasznált színek:"
+
+#: infodialog.cpp:65
+msgid "Image Width:"
+msgstr "Kép szélesség:"
+
+#: infodialog.cpp:81
+msgid "Image Height:"
+msgstr "Kép magasság:"
+
+#: infodialog.cpp:93 palettedialog.cpp:13
+msgid "Dismiss"
+msgstr "Mégsem"
+
+#: kpaint.cpp:50 kpaint.cpp:520
+msgid "untitled.gif"
+msgstr "nevtelen.gif"
+
+#: kpaint.cpp:154
+msgid "New Canvas"
+msgstr "Új keret"
+
+#: kpaint.cpp:161
+msgid "Cut"
+msgstr "Kivág"
+
+#: kpaint.cpp:163
+msgid "Copy"
+msgstr "Másol"
+
+#: kpaint.cpp:165
+msgid "Paste"
+msgstr "Beilleszt"
+
+#: kpaint.cpp:168 kpaint.cpp:214
+msgid "Zoom In"
+msgstr "Nagyít"
+
+#: kpaint.cpp:170 kpaint.cpp:215
+msgid "Zoom Out"
+msgstr "Kicsinyít"
+
+#: kpaint.cpp:194
+msgid "New Image..."
+msgstr "Új kép..."
+
+#: kpaint.cpp:195
+msgid "Open Image..."
+msgstr "Kép megnyitása..."
+
+#: kpaint.cpp:196
+msgid "Save Image..."
+msgstr "Kép mentése..."
+
+#: kpaint.cpp:197
+msgid "Save Image As..."
+msgstr "Kép mentése másként..."
+
+#: kpaint.cpp:198
+msgid "Image Format..."
+msgstr "Képformátum..."
+
+#: kpaint.cpp:200
+msgid "Open from URL..."
+msgstr "Megnyitás URL-rõl..."
+
+#: kpaint.cpp:201
+msgid "Save to URL..."
+msgstr "Mentés URL-re..."
+
+#: kpaint.cpp:209
+msgid "Copy Region"
+msgstr "Részlet másolása"
+
+#: kpaint.cpp:210
+msgid "Cut Region"
+msgstr "Részlet kivágása"
+
+#: kpaint.cpp:211
+msgid "Paste Region"
+msgstr "Részlet beillesztése"
+
+#: kpaint.cpp:212
+msgid "Paste As Image"
+msgstr "Beillesztés képként"
+
+#: kpaint.cpp:216
+msgid "Mask..."
+msgstr "Maszk..."
+
+#: kpaint.cpp:217
+msgid "Options..."
+msgstr "Beállítások..."
+
+#: kpaint.cpp:220
+msgid "Information..."
+msgstr "Információ..."
+
+#: kpaint.cpp:221
+msgid "Edit Palette..."
+msgstr "Paletta javítása..."
+
+#: kpaint.cpp:222
+msgid "Change Colour Depth..."
+msgstr "Színmélység változtatása..."
+
+#: kpaint.cpp:225
+msgid "Tool Properties..."
+msgstr "Eszközök tulajdonságai..."
+
+#: kpaint.cpp:237
+msgid "Index"
+msgstr ""
+
+#: kpaint.cpp:238
+msgid "About KPaint"
+msgstr "A KPaint névjegye"
+
+#: kpaint.cpp:241
+msgid "&File"
+msgstr ""
+
+#: kpaint.cpp:242
+msgid "&Edit"
+msgstr "&Szerkesztés"
+
+#: kpaint.cpp:243
+msgid "&Image"
+msgstr "&Kép"
+
+#: kpaint.cpp:244
+msgid "&Tool"
+msgstr "&Eszközök"
+
+#: kpaint.cpp:246
+msgid "&Help"
+msgstr "&Súgó"
+
+#: kpaint.cpp:281
+msgid "KPaint: Could not open file"
+msgstr "KPaint: nem lehet megnyitni a file-t"
+
+#: kpaint.cpp:282
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr "Hiba: nem lehet megnyitni a file-t\n"
+"A KPaint nem tudja megnyitni a kiválasztott file-t."
+
+#: kpaint.cpp:285 kpaint.cpp:295 kpaint.cpp:320 kpaint.cpp:337 kpaint.cpp:348
+#: kpaint.cpp:406 kpaint.cpp:437 kpaint.cpp:454 kpaint.cpp:465
+msgid "Continue"
+msgstr "Tovább"
+
+#: kpaint.cpp:290
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: ismeretlen formátum"
+
+#: kpaint.cpp:291
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified fileor the file is "
+"corrupt."
+msgstr "Hiba: ismeretlen formátum\n"
+"A KPaint nem ismerte fel a kiválasztott file formátumát, vagy a file "
+"megsérült."
+
+#: kpaint.cpp:316 kpaint.cpp:433
+msgid "KPaint: Malformed URL"
+msgstr "KPaint: Hibás URL"
+
+#: kpaint.cpp:317 kpaint.cpp:434
+msgid ""
+"Error: Malformed URL\n"
+"KPaint does not understand the specifed URL, check it's correct."
+msgstr "Hiba: Hibás URL\n"
+"A KPaint nem ismeri fel a kiválasztott URL-t."
+
+#: kpaint.cpp:334 kpaint.cpp:451
+msgid "Sorry"
+msgstr "Elnézést"
+
+#: kpaint.cpp:335 kpaint.cpp:452
+msgid ""
+"KPaint is already accessing a remote file, you must\n"
+"cancel the current remote job or wait for it to complete."
+msgstr "A KPaint már egy távoli file-t használ.  Szakítsa meg a másik\n"
+"feldolgozást, vagy várjon, amíg az befejezõdik."
+
+#: kpaint.cpp:346
+msgid "KPaint: Could not find KFM"
+msgstr "KPaint:  Nincs meg a KFM"
+
+#: kpaint.cpp:347 kpaint.cpp:464
+msgid "Error: KPaint could not find a running KFM or start one itself."
+msgstr "Hiba: A KPaint nem talált futó KFM-et, és el se tudta indítani azt."
+
+#: kpaint.cpp:402
+msgid "KPaint: Network Load Failed"
+msgstr "KPaint: Nem sikerült a hálózati betöltés"
+
+#: kpaint.cpp:403
+msgid ""
+"Error: Netword Load Failed\n"
+"Something went wrong :-("
+msgstr ""
+"Hiba: Nem sikerült a hálózati betöltés\n"
+"Valami nem sikerült :-("
+
+#: kpaint.cpp:463
+msgid "KPaint: Could not start KFM"
+msgstr "KPaint:  Nem lehet KFM-et indítani"
+
+#: kpaint.cpp:492
+msgid "Canvas Size"
+msgstr "Keret méret"
+
+#: kpaint.cpp:680
+msgid "Open Location:"
+msgstr "Hely megnyitása:"
+
+#: kpaint.cpp:716
+msgid "Save to Location:"
+msgstr "Mentés helyszínre:"
+
+#: manager.cpp:60
+msgid "Tool Properties"
+msgstr "Eszközök tulajdonságai"
+
+#: palette.cpp:101
+msgid "Edit Colour"
+msgstr "Színek beállítása"
+
+#: properties.cpp:19
+msgid "Line Properties"
+msgstr "Vonaltulajdonságok"
+
+#: properties.cpp:21
+msgid "Fill Properties"
+msgstr "Kitöltési tulajdonságok"
+
+#: properties.cpp:67
+msgid "Fill Pattern:"
+msgstr "Kitöltési minta:"
+
+#: properties.cpp:73 properties.cpp:239
+msgid "None"
+msgstr "Nincs"
+
+#: properties.cpp:74 properties.cpp:234
+msgid "Solid"
+msgstr "Egyszínû"
+
+#: properties.cpp:75
+msgid "Vertical Lines"
+msgstr "Függõleges vonalak"
+
+#: properties.cpp:76
+msgid "Horizontal Lines"
+msgstr "Vízszintes vonalak"
+
+#: properties.cpp:77
+msgid "Grid"
+msgstr "Háló"
+
+#: properties.cpp:78
+msgid "Diagonal Lines //"
+msgstr "Ferde vonalak //"
+
+#: properties.cpp:79
+msgid "Diagonal Lines \\"
+msgstr "Ferde vonalak \\"
+
+#: properties.cpp:80
+msgid "Diagonal Grid"
+msgstr "Ferde háló"
+
+#: properties.cpp:90
+msgid "Custom"
+msgstr "Egyéni"
+
+#: properties.cpp:93
+msgid "Pattern Filename:"
+msgstr "Minta filenév:"
+
+#: properties.cpp:100
+msgid "Browse..."
+msgstr "Tallóz..."
+
+#: properties.cpp:103
+msgid "Set Fill Colour..."
+msgstr "Kitöltõszín beállítása..."
+
+#: properties.cpp:229
+msgid "Line Style:"
+msgstr "Vonalstílus:"
+
+#: properties.cpp:235
+msgid "Dashed"
+msgstr "Szaggatott"
+
+#: properties.cpp:236
+msgid "Dotted"
+msgstr "Pontozott"
+
+#: properties.cpp:237
+msgid "Dash Dot"
+msgstr "Pontvonal"
+
+#: properties.cpp:238
+msgid "Dash Dot Dot"
+msgstr "Pontpontvonal"
+
+#: properties.cpp:243
+msgid "Line Width:"
+msgstr "Vonalszélesség:"
+
+#: properties.cpp:253
+msgid "End style:"
+msgstr "Vonalvég stílus:"
+
+#: properties.cpp:258 properties.cpp:271
+msgid "Not Yet"
+msgstr "Még nincs"
+
+#: properties.cpp:265
+msgid "Join style:"
+msgstr "Csatlakozási stílus"
+
+#: properties.cpp:277
+msgid "Set Line Colour..."
+msgstr "Vonalszín beállítása..."
+
