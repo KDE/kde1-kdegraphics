@@ -308,6 +308,7 @@ void KIconEdit::readProperties(KConfig *config)
 // this is for normal exits or request from "Options->Save options".
 void KIconEdit::writeConfig()
 {
+/*
   Properties *pprops = props(this);
   
   pprops->maintoolbarstat = toolbar->isVisible();
@@ -320,7 +321,7 @@ void KIconEdit::writeConfig()
 
   //pprops->showgrid = grid->hasGrid();
   //pprops->gridscaling = grid->cellSize();
-
+*/
   KIconEditProperties::saveProperties(this);
 
 }
@@ -336,14 +337,16 @@ QSize KIconEdit::sizeHint()
 bool KIconEdit::setupMenuBar()
 {
   debug("setupMenuBar");
+
+  Properties *pprops = props(this);
+
   if(!menubar)
   {
     menubar = new KMenuBar(this);
     CHECK_PTR(menubar);
     setMenu(menubar);
+    pprops->menubar = menubar;
   }
-
-  Properties *pprops = props(this);
 
   KAccel *keys = pprops->keys; // = new KAccel( this ); 
   CHECK_PTR(keys);
@@ -549,6 +552,7 @@ bool KIconEdit::setupToolBar()
   toolbar = new KToolBar(this);
   CHECK_PTR(toolbar);
   addToolBar(toolbar);
+  pprops->maintoolbar = toolbar;
 
   what = new QWhatsThis;
   QWidget *btwhat = (QWidget*)what->whatsThisButton(toolbar);
@@ -625,6 +629,7 @@ bool KIconEdit::setupToolBar()
                           i18n("New Window"));
   toolbar->alignItemRight( ID_FILE_NEWWIN, true);
     
+  toolbar->setIconText(pprops->maintoolbartext);
   toolbar->setBarPos(pprops->maintoolbarpos);
   if(pprops->maintoolbarstat)
     toolbar->enable(KToolBar::Show);
@@ -646,6 +651,7 @@ bool KIconEdit::setupDrawToolBar()
   drawtoolbar = new KToolBar(this);
   CHECK_PTR(drawtoolbar);
   addToolBar(drawtoolbar);
+  pprops->drawtoolbar = drawtoolbar;
   drawtoolbar->setFullWidth();
 
   drawtoolbar->insertButton(Icon("pointer.xpm"), ID_DRAW_FIND, TRUE, i18n("Find pixel"));
@@ -675,6 +681,7 @@ bool KIconEdit::setupDrawToolBar()
   drawtoolbar->insertButton(Icon("eraser.xpm"),ID_DRAW_ERASE, TRUE, i18n("Erase"));
   drawtoolbar->setToggle(ID_DRAW_ERASE, true);
     
+  drawtoolbar->setIconText(pprops->drawtoolbartext);
   drawtoolbar->setBarPos(pprops->drawtoolbarpos);
   if(pprops->drawtoolbarstat)
     drawtoolbar->enable(KToolBar::Show);
@@ -690,7 +697,7 @@ bool KIconEdit::setupDrawToolBar()
 bool KIconEdit::setupPaletteToolBar()
 {
   debug("setupPaletteToolBar");
-  Properties *pprops = props(this);
+  //Properties *pprops = props(this);
 
   QWidget *w = new QWidget(this);
   QBoxLayout *ml = new QVBoxLayout(w);
@@ -743,6 +750,8 @@ bool KIconEdit::setupStatusBar()
   statusbar = new KStatusBar(this);
   CHECK_PTR(statusbar);
   setStatusBar(statusbar);
+  pprops->statusbar = statusbar;
+
   statusbar->insertItem("    -1, -1    ", 0);
   statusbar->insertItem("   32 x 32   ", 1);
   statusbar->insertItem(" 1:1000 ", 2);

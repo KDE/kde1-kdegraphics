@@ -116,6 +116,29 @@ protected:
   QWidget::BackgroundMode bgmode;
 };
 
+class KToolBarConfig : public QWidget
+{
+  Q_OBJECT
+public:
+  KToolBarConfig(QWidget *parent);
+  ~KToolBarConfig();
+
+public slots:
+  void drawToolBar(int);
+  void mainToolBar(int);
+  void saveSettings();
+
+signals:
+
+protected slots:
+
+protected:
+  Properties *pprops;
+  QButtonGroup *btngrptool, *btngrpdraw;
+  QRadioButton *rb;
+  int dstat, mstat;
+};
+
 class KMiscConfig : public QWidget
 {
   Q_OBJECT
@@ -159,6 +182,7 @@ protected:
   KKeyChooser *keychooser;
   KTemplateConfig *temps;
   KBackgroundConfig *backs;
+  KToolBarConfig *toolbars;
   KMiscConfig *misc;
 };
 

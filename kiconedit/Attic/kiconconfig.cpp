@@ -119,9 +119,10 @@ KTemplateConfig::KTemplateConfig(QWidget *parent) : QWidget(parent)
   grp = new QGroupBox(i18n("Templates:"), this);
   templates = new KIconListBox(grp);
   connect( templates, SIGNAL(highlighted(int)), SLOT(checkSelection(int)));
+
   ml = new QVBoxLayout(this);
   ml->addWidget(grp);
-  l = new  QVBoxLayout(grp, 15, AlignLeft);
+  l = new  QVBoxLayout(grp, 15);
   l->addWidget(templates);
 
   tlist = KIconTemplateContainer::getTemplates();
@@ -387,6 +388,104 @@ void KBackgroundConfig::selectPixmap()
   }
 }
 
+KToolBarConfig::KToolBarConfig(QWidget *parent) : QWidget(parent)
+{
+  debug("KToolBarConfig - constructor");
+  initMetaObject();
+
+  pprops = props(parent);
+
+  btngrptool = new QButtonGroup(i18n("Main Toolbar"), this);
+  btngrptool->setExclusive(true);
+
+  btngrpdraw = new QButtonGroup(i18n("Drawing tools"), this);
+  btngrpdraw->setExclusive(true);
+
+  QBoxLayout *ml = new  QVBoxLayout(this, 10);
+  QBoxLayout *lh = new QHBoxLayout();
+
+  ml->addLayout(lh);
+
+  QBoxLayout *l1 = new  QVBoxLayout(btngrptool, 10);
+  QBoxLayout *l2 = new  QVBoxLayout(btngrpdraw, 10);
+
+  lh->addWidget(btngrptool);
+  lh->addWidget(btngrpdraw);
+
+  l1->addSpacing(btngrptool->fontMetrics().height());
+  l2->addSpacing(btngrptool->fontMetrics().height());
+
+  rb = new QRadioButton(i18n("Show Icon"), btngrptool);
+  rb->setFixedSize(rb->sizeHint());
+  l1->addWidget(rb, 0, AlignLeft);
+  //connect(rbp, SIGNAL(toggled(bool)), SLOT(pasteMode(bool)));
+
+  rb = new QRadioButton(i18n("Show Icon and Text"), btngrptool);
+  rb->setFixedSize(rb->sizeHint());
+  l1->addWidget(rb, 0, AlignLeft);
+
+  rb = new QRadioButton(i18n("Show Text"), btngrptool);
+  rb->setFixedSize(rb->sizeHint());
+  l1->addWidget(rb, 0, AlignLeft);
+
+  rb = new QRadioButton(i18n("Show Icon"), btngrpdraw);
+  rb->setFixedSize(rb->sizeHint());
+  l2->addWidget(rb, 0, AlignLeft);
+  //connect(rbp, SIGNAL(toggled(bool)), SLOT(pasteMode(bool)));
+
+  rb = new QRadioButton(i18n("Show Icon and Text"), btngrpdraw);
+  rb->setFixedSize(rb->sizeHint());
+  l2->addWidget(rb, 0, AlignLeft);
+
+  rb = new QRadioButton(i18n("Show Text"), btngrpdraw);
+  rb->setFixedSize(rb->sizeHint());
+  l2->addWidget(rb, 0, AlignLeft);
+
+  ml->addStretch(1);
+
+  l1->activate();
+
+  l2->activate();
+
+  ml->activate();
+
+  btngrptool->setButton(pprops->maintoolbartext);
+  btngrpdraw->setButton(pprops->drawtoolbartext);
+
+  connect(btngrptool, SIGNAL(clicked(int)), SLOT(mainToolBar(int)));
+  connect(btngrpdraw, SIGNAL(clicked(int)), SLOT(drawToolBar(int)));
+
+  debug("KToolBarConfig - constructor done");
+}
+
+KToolBarConfig::~KToolBarConfig()
+{
+
+}
+
+void KToolBarConfig::saveSettings()
+{
+  debug("KToolBarConfig::saveSettings");
+
+  pprops->maintoolbartext = mstat;
+  pprops->drawtoolbartext = dstat;
+
+  pprops->maintoolbar->setIconText(mstat);
+  pprops->drawtoolbar->setIconText(dstat);
+
+  debug("KToolBarConfig::saveSettings - done");
+}
+
+void KToolBarConfig::drawToolBar(int i)
+{
+  dstat = i;
+}
+
+void KToolBarConfig::mainToolBar(int i)
+{
+  mstat = i;
+}
+
 KMiscConfig::KMiscConfig(QWidget *parent) : QWidget(parent)
 {
   debug("KMiscConfig - constructor");
@@ -515,6 +614,14 @@ KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
   p->enabled = true;
   addPage( p );
 
+  toolbars = new KToolBarConfig(this);
+
+  p = new KWizardPage;
+  p->w = toolbars;
+  p->title = i18n("Toolbars");
+  p->enabled = true;
+  addPage( p );
+
   misc = new KMiscConfig(this);
 
   tab = new QTab;            // create a QTab to hold the tab data
@@ -546,6 +653,7 @@ void KIconConfig::saveSettings()
   temps->saveSettings();
   backs->saveSettings();
   misc->saveSettings();
+  toolbars->saveSettings();
   debug("KIconEditConfig::saveSettings - done");
   accept();
 }

@@ -55,6 +55,9 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   if ( !geom.isEmpty() )
     sscanf( geom, "%dx%d", &pprops->winwidth, &pprops->winheight );
 
+  pprops->maintoolbartext = config->readNumEntry( "MainToolBarText", 0 );
+  pprops->drawtoolbartext = config->readNumEntry( "DrawToolBarText", 0 );
+
   pprops->maintoolbarstat = config->readBoolEntry( "ShowMainToolBar", true );
   pprops->drawtoolbarstat = config->readBoolEntry( "ShowDrawToolBar", true );
   pprops->statusbarstat = config->readBoolEntry( "ShowStatusBar", true );
@@ -120,13 +123,16 @@ void KIconEditProperties::saveProperties(QWidget *parent)
   config->writeEntry("BackgroundColor", pprops->backgroundcolor);
   config->writeEntry("BackgroundPixmap", pprops->backgroundpixmap);
 
-  config->writeEntry("ShowMainToolBar", pprops->maintoolbarstat);
-  config->writeEntry("ShowDrawToolBar", pprops->drawtoolbarstat);
-  config->writeEntry("ShowStatusBar", pprops->statusbarstat);
+  config->writeEntry("ShowMainToolBar", pprops->maintoolbar->isVisible());
+  config->writeEntry("ShowDrawToolBar", pprops->drawtoolbar->isVisible());
+  config->writeEntry("ShowStatusBar", pprops->statusbar->isVisible());
 
-  config->writeEntry("MainToolBarPos", (int)pprops->maintoolbarpos);
-  config->writeEntry("DrawToolBarPos", (int)pprops->drawtoolbarpos);
-  config->writeEntry("MenuBarPos", (int)pprops->menubarpos);
+  config->writeEntry("MainToolBarText", pprops->maintoolbartext);
+  config->writeEntry("DrawToolBarText", pprops->drawtoolbartext);
+
+  config->writeEntry("MainToolBarPos", (int)pprops->maintoolbar->barPos());
+  config->writeEntry("DrawToolBarPos", (int)pprops->drawtoolbar->barPos());
+  config->writeEntry("MenuBarPos", (int)pprops->menubar->menuBarPos());
 
   config->setGroup( "Grid" );
   config->writeEntry("PasteTransparent", pprops->pastetransparent);

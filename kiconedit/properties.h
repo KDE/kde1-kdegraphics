@@ -28,6 +28,7 @@
 #include <kaccel.h>
 #include <ktoolbar.h>
 #include <kmenubar.h>
+#include <kstatusbar.h>
 #include "knew.h"
 
 class KIconEditProperties;
@@ -44,15 +45,26 @@ struct Properties
   QString backgroundpixmap;
   QColor backgroundcolor;
   QWidget::BackgroundMode backgroundmode;
-  bool maintoolbarstat;
-  bool drawtoolbarstat;
-  bool statusbarstat;
   bool showgrid;
   bool pastetransparent;
   bool showrulers;
+
+  // initial settings from config
   KToolBar::BarPosition maintoolbarpos;
   KToolBar::BarPosition drawtoolbarpos;
   KMenuBar::menuPosition menubarpos;
+  int maintoolbartext;
+  int drawtoolbartext;
+  int maintoolbarstat;
+  int drawtoolbarstat;
+  int statusbarstat;
+
+  // save pointers for easy access
+  KToolBar *maintoolbar;
+  KToolBar *drawtoolbar;
+  KMenuBar *menubar;
+  KStatusBar *statusbar;
+
   int winwidth;
   int winheight;
   int gridscaling;
