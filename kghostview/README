@@ -1,9 +1,9 @@
 
-18/11/97
+21/11/97
 Mark Donohoe
 Please direct any bug reports to me (donohoe@kde.org).
 
-KGHOSTVIEW 0.6.1 - Alpha release
+KGHOSTVIEW 0.6.2 - Alpha release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -31,7 +31,13 @@ TODO
 
 - PDF support
 - Standardise kdvi and kghostview
-- Clean fix for the XError (Bad window parameter) bug.
+- Clean fix for the XError (Bad window parameter) bug
+- Generally clean code
+
+CHANGES V0.6.2
+
+- Style book compliant dialogs - auto-geometry management
+- Few bug fixes
 
 CHANGES V0.6.1
 

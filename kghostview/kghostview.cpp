@@ -177,11 +177,11 @@ KGhostview::KGhostview( QWidget *, char *name )
   	infoDialog->setCaption(i18n("Information"));
   	
   	//
-  	//	PRINTING DIALOG
+  	//	PRINTING DEFAULTS
   	//
   
-	pd = new PrintDialog( 0, "print dialog" );
-	pd->setCaption(i18n("Print"));
+	printSelection = 1;
+	printerName = "lp0";
 	
 	//
 	//	VIEWCONTROL DIALOG
@@ -404,17 +404,21 @@ void KGhostview::copyright()
 void KGhostview::info()
 {
 	infoDialog->fileLabel->setText(filename);
+	infoDialog->fileLabel->setMinimumSize( infoDialog->fileLabel->sizeHint() );
 	if( doc ) {
 		infoDialog->titleLabel->setText(doc->title);
+		infoDialog->titleLabel->setMinimumSize( infoDialog->titleLabel->sizeHint() );
 		infoDialog->dateLabel->setText(doc->date);
+		infoDialog->dateLabel->setMinimumSize( infoDialog->dateLabel->sizeHint() );
 	} else {
 		infoDialog->titleLabel->setText("");
+		infoDialog->titleLabel->setMinimumSize( infoDialog->titleLabel->sizeHint() );
 		infoDialog->dateLabel->setText("");
+		infoDialog->dateLabel->setMinimumSize( infoDialog->dateLabel->sizeHint() );
 	}
 		
 	if( !infoDialog->isVisible() ) {
 		infoDialog->show();
-		infoDialog->ok->setFocus();
 	}
 }
 
@@ -522,7 +526,7 @@ void KGhostview::createMenubar()
     goToEndID =
     m_go->insertItem( i18n("Go to &end"), this, SLOT( goToEnd() ) );
     readDownID =
-    m_go->insertItem( i18n("&Read down"), this, SLOT( dummy() ) );
+    m_go->insertItem( i18n("&Read down"), this, SLOT( readDown() ) );
 	
 	m_pagemarks = new QPopupMenu;
     CHECK_PTR( m_pagemarks );
@@ -1019,22 +1023,22 @@ void KGhostview::newWindow()
 
 void KGhostview::closeEvent( QCloseEvent * )
 {
-	printf("%d windows\n", windowList.count());
+	//printf("%d windows\n", windowList.count());
 	
 	if ( windowList.count() > 1 ) {
 		windowList.remove( this );
 		page->disableInterpreter();
-		debug("Disable interpreter");
+		//debug("Disable interpreter");
 		delete toolbar;
-		debug("Delete toolbar");
+		//debug("Delete toolbar");
 		delete menubar;
-		debug("Delete menubar");
+		//debug("Delete menubar");
     	delete this;
-		debug("Delete this");
+		//debug("Delete this");
 		for ( KGhostview *kg = windowList.first(); kg!=0;
 				kg = windowList.next() )
 			kg->page->disableInterpreter();
-		debug("Disable interpreter");
+		//debug("Disable interpreter");
 	} else
 		qApp->quit();
 }
@@ -1268,8 +1272,8 @@ void KGhostview::goToPage()
 {
     //printf("KGhostview::goToPage\n");
 
-	GoTo gt(0, "Go to");
-	gt.setCaption(i18n("Go to"));
+	GoTo gt(this, "Go to");
+	gt.setCaption(i18n("Go to ..."));
 	gt.current_page=current_page;
 	gt.num_parts=num_parts;
 	for( int i=0;i<10;i++) {
@@ -1288,10 +1292,13 @@ void KGhostview::goToPage()
 void KGhostview::print()
 {
     //printf("KGhostview::print\n");
-
+	
+	pd = new PrintDialog( this, "print dialog" );
 	pd->setCaption(i18n("Print"));
 	
 	if( pd->exec() ) {
+		printSelection = pd->modeComboBox->currentItem()+1;
+		printerName = pd->nameLineEdit->text();
 		printStart();
 	}
 }
@@ -1306,7 +1313,7 @@ void KGhostview::viewControl()
 	
 	if( !vc->isVisible() ) {
 		vc->show();
-		vc->orientComboBox->setFocus();
+		//vc->orientComboBox->setFocus();
 	}
 }
 
@@ -1511,20 +1518,17 @@ void KGhostview::printStart()
 {
     //printf("KGhostview::printStart\n");
 
-	QString name, error;
-	int selection;
+	QString error;
 	//int  i;
 	//int copy_marked_list[1000];
 	int mode=PRINT_WHOLE;
-	
-	selection = pd->modeComboBox->currentItem()+1;
 	
 	//for(i=0;i<1000;i++) {
 	//	copy_marked_list[i]=mark_page_list[i];
 	//	mark_page_list[i]=0;
 	//}
 	
-	switch(selection) {
+	switch( printSelection ) {
 		case 1:	mode=PRINT_WHOLE;
 				break;
 				
@@ -1544,10 +1548,8 @@ void KGhostview::printStart()
 					mark_page_list[i]=copy_marked_list[i];
 				break;*/
 	}
-	
-	name = pd->nameLineEdit->text();
 
-	if (error = print_file(name, (mode == PRINT_WHOLE))) {
+	if (error = print_file( printerName, (mode == PRINT_WHOLE))) {
 	    char *buf = (char *)malloc(strlen(error) +
 				 strlen(i18n("Printer Name : ")) + 2);
 	    sprintf(buf, "%s\n%s", error.data(), i18n("Printer Name : "));
@@ -2251,6 +2253,7 @@ Bool	KGhostview::setup()
 		m_go->setItemEnabled(goToPageID, TRUE);
 		m_go->setItemEnabled(goToStartID, TRUE);
 		m_go->setItemEnabled(goToEndID, TRUE);
+		m_go->setItemEnabled(readDownID, TRUE);
 		toolbar->setItemEnabled(ID_PAGE, TRUE);
 		toolbar->setItemEnabled(ID_START, TRUE);
 		toolbar->setItemEnabled(ID_END, TRUE);

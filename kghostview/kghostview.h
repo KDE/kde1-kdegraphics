@@ -217,6 +217,8 @@ private:
 	int toggleMarksID;
 	int removeMarksID;
 
+	QString printerName;
+	int printSelection;
 	Bool hide_toolbar;
 	Bool hide_statusbar;
 	Bool hide_pagelist;
