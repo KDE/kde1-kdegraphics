@@ -1,0 +1,4 @@
+1998-11-08  Alex Zepeda  <alex@zippy.dyn.ml.org>
+
+	* Makefile.cvs (all): Use the kde-common version of automoc.
+
