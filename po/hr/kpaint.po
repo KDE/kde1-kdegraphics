@@ -37,36 +37,30 @@ msgid "Image Depth:"
 msgstr "Dubina slike:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 Boja)"
+msgstr "1 (2 Boje)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 Boja)"
+msgstr "4 (16 Boja)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 Boja)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 Boja)"
+msgstr "15 (32k Boja)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 Boja)"
+msgstr "16 (64k Boja)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (Istinska Boja)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
 msgstr "24 (Istinska Boja)"
 
@@ -293,7 +287,7 @@ msgstr "Sprej"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -406,38 +400,3 @@ msgstr "Postavi boju crte..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Zaobljeni èetverokut"
-
-#~ msgid "KPaint"
-#~ msgstr "KPaint"
-
-#, fuzzy
-#~ msgid "(c) "
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "(c) "
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Izdano pod GPL, pogledajte LICENSE za detalje\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Uporaba:"
-
-#~ msgid " [url | filename]\n"
-#~ msgstr " [url | ime_datoteke ]\n"
-
-#~ msgid "Exit"
-#~ msgstr "Izlaz"
-
-#~ msgid "Open Location:"
-#~ msgstr "Otvori lokaciju:"
-
-#~ msgid "Save to Location:"
-#~ msgstr "Spremi na lokaciju:"
-
-#~ msgid "1 (Bitmap)"
-#~ msgstr "1 (Bitmapa)"
