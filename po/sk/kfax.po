@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax 1.0\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-05-01 13:00+0001\n"
 "Last-Translator: Juraj Bednar <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -86,7 +86,8 @@ msgid "Zoom &out"
 msgstr "Z&men¹i»"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Nastavi» Fax"
 
 #: kfax.cpp:435
@@ -240,6 +241,13 @@ msgstr ""
 "Súbor s takýmto názvom u¾ existuje\n"
 "Chcete ho prepísa»?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

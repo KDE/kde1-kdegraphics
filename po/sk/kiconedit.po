@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-09-26 15:30+0001\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -19,10 +19,12 @@ msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Nastala chyba pri otváraní cieµového súboru: %s"
 
 #: utils.cpp:72
+#, c-format
 msgid "copyFile - There was an error reading source file: %s"
 msgstr "copyFile - Nastala chyba pri èítaní zdrojového súboru: %s"
 
 #: utils.cpp:80
+#, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
 msgstr "copyFile - Nastala chyba pri zapisovaní cieµového súboru: %s"
 
@@ -868,7 +870,6 @@ msgstr ""
 "*.xpm|XPM (*.xpm)\n"
 "*.gif|GIF súbory (*.gif)\n"
 "*jpg|JPEG súbory (*.jpg)\n"
-
 
 #: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"

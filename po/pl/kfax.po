@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-06-24 00:22+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -84,7 +84,8 @@ msgid "Zoom &out"
 msgstr "Po&mniejsz"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "Opcje &faxu"
 
 #: kfax.cpp:435
@@ -237,6 +238,13 @@ msgid ""
 msgstr ""
 "Plik o podanej nazwie ju¿ istnieje\n"
 "Czy chcesz go nadpisaæ?\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

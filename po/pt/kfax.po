@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-05-06 12:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 
@@ -82,7 +82,8 @@ msgid "Zoom &out"
 msgstr "&Diminuir"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "Opções do &Fax"
 
 #: kfax.cpp:435
@@ -235,6 +236,13 @@ msgid ""
 msgstr ""
 "Um ficheiro com este nome já existe\n"
 "Quer escreve por cima dele?\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

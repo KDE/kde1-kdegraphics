@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"

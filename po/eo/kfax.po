@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax 1.0\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -91,7 +91,8 @@ msgid "Zoom &out"
 msgstr "&Malgrandigu"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Faksopcioj"
 
 #: kfax.cpp:435
@@ -245,6 +246,13 @@ msgstr ""
 "Dosiero kun tiu nomo jam ekzistas\n"
 "Æu vi volas anstataýigi øin?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

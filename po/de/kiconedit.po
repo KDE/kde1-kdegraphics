@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-07-29 23:00+MET\n"
 "Last-Translator: Gregor Zumstein <zumstein@ssd.ethz.ch>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"

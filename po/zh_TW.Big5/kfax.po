@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-06-30 16:30+0000\n"
 "Last-Translator: Yu-Ting Kuo <beta2000@yahoo.com>\n"
 "Language-Team: BIG-5 Chinese <LL@li.org>\n"
@@ -111,7 +111,8 @@ msgstr "拉遠[O]"
 
 # kfax.cpp:412
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "傳真選項[&F]"
 
 # kfax.cpp:414
@@ -295,6 +296,13 @@ msgstr ""
 "這個檔名已經存在\n"
 "您想要覆蓋\它嗎?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 # print.cpp:51
 #: print.cpp:51

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-10-17 20:00+0100\n"
 "Last-Translator: Neno Kolonic <kolonic@yahoo.com>\n"
 "Language-Team: MacedonianMIME-Version: 1.0\n"
@@ -108,7 +108,8 @@ msgstr "&Smali"
 
 # kfax.cpp:433
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Moznosti za faxot"
 
 # kfax.cpp:435
@@ -292,6 +293,13 @@ msgid ""
 msgstr ""
 "dokument so ova ime vekje postoidali sakate da memorirate preku nego?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 # print.cpp:51
 #: print.cpp:51

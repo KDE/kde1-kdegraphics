@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KFax1.0\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: 1998-08-07 CET:GMT+1\n"
 "Last-Translator: Roel Vester <Roel.Vester@siemens.nl>\n"
 "Language-Team: Nederlands <LL@li.org>\n"
@@ -91,7 +91,8 @@ msgid "Zoom &out"
 msgstr "Ver&kleinen"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Fax opties"
 
 #: kfax.cpp:435
@@ -245,6 +246,13 @@ msgstr ""
 "Een bestand met deze naam bestaat al\n"
 "Wilt u het overschrijven ?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgid "Zoom &out"
 msgstr ""
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+msgid "&Fax Options..."
 msgstr ""
 
 #: kfax.cpp:435
@@ -234,6 +234,13 @@ msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
 "\n"
+msgstr ""
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
 msgstr ""
 
 #: print.cpp:51

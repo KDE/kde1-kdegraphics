@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-30 12:34+0100\n"
+"POT-Creation-Date: 1998-11-03 09:55+0100\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-03-08 16:14:13-0500\n"
 "From: Bernd Johannes Wuebben,201 Lincoln Hall,,256-1036, "
@@ -86,7 +86,8 @@ msgid "Zoom &out"
 msgstr "Pi&enennä"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Faksin asetukset"
 
 #: kfax.cpp:435
@@ -239,6 +240,13 @@ msgstr ""
 "Samalla nimellä on jo tiedosto olemassa\n"
 "Haluatko korvata sen tällä tiedostolla?\n"
 "\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
