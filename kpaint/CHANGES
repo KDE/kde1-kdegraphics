@@ -1,3 +1,10 @@
+0.4.3	Use KFileDialog (control with the USE_KFILEDLG define)
+	Removed excess voids
+	Converted class comments to kdoc format and generated classdocs
+	Use new RESTORE macro and menu/tool/status bar factories
+	Changed 'Save Image...' to 'Save Image' (it doesn't have dialog)
+	Added myapp macro (like kapp)
+
 0.4.2   [Robert Williams]  Renamed Paint.kdelnk to kpaint.kdelnk
         [Robert Williams]  Added -caption "%c" to kpaint.kdelnk
         [Robert Williams]  I put APPVERSTR as the first #define

@@ -20,7 +20,8 @@ int main( int argc, char **argv )
   formatMngr= new FormatManager();
   kpaintApp= new MyApp ( argc, argv, APPNAME);
 
-  QObject::connect(kpaintApp, SIGNAL(lastWindowClosed()), kpaintApp, SLOT(quit()));
+  QObject::connect(kpaintApp, SIGNAL(lastWindowClosed()),
+		   kpaintApp, SLOT(quit()));
 
   return kpaintApp->exec();
 }

@@ -15,34 +15,41 @@
 #include "ellipse.h"
 #include "circle.h"
 #include "rectangle.h"
+#include "roundangle.h"
 #include "spraycan.h"
 #include "areaselect.h"
 
-Manager::Manager(Canvas *c, QWidget *top) : QObject()
+Manager::Manager(Canvas *c) : QObject()
 {
   assert(c != 0);
-  assert(top != 0);
   assert(!(c->isActive()));
 
-KDEBUG(KDEBUG_INFO, 3000, "Manager:: Constructing...\n");
+  KDEBUG(KDEBUG_INFO, 3000, "Manager:: Constructing...\n");
 
   canvas= c;
-  toplevel= top;
   createTools();
-  initToolbar();
   currentTool= 0;
-  p= new QPen(blue);
-  b= new QBrush(NoBrush);
   list.first()->activate(c);
-  list.first()->setPen(p);
-  list.first()->setBrush(b);
+
+  lmbCol= red;
+  rmbCol= green;
+
+  // Initialise the pens and brushes
+  p.setColor(lmbCol);
+  b.setColor(lmbCol);
+  list.first()->setLeftPen(p);
+  list.first()->setLeftBrush(b);
+  p.setColor(rmbCol);
+  b.setColor(rmbCol);
+  list.first()->setRightPen(p);
+  list.first()->setRightBrush(b);
+
   c->activate(list.first());
+  connect(this, SIGNAL(modified()), c, SLOT(markModified()));
 }
 
 Manager::~Manager()
 {
-  delete b;
-  delete p;
 }
 
 void Manager::createTools()
@@ -56,26 +63,51 @@ void Manager::createTools()
   list.append(new Line);
   list.append(new SprayCan);
   list.append(new AreaSelect);
+  list.append(new Roundangle);
 
   // Create the properties dialog
-  props= new propertiesDialog(1, 0, klocale->translate("Tool Properties"));
+  props= new propertiesDialog(1, 0, i18n("Tool Properties"));
   connect(props, SIGNAL(applyButtonPressed()),
 	  this, SLOT(updateProperties()) );
 }
 
 void Manager::updateProperties()
 {
-  QPen *tp;
-  QBrush *tb;
-  tp= p; tb= b;
   p= props->getPen();
-  assert(p);
   b= props->getBrush();
-  assert(b);
-  list.at(currentTool)->setPen(p);
-  list.at(currentTool)->setBrush(b);
-  delete tp;
-  delete tb;
+
+  p.setColor(lmbCol);
+  b.setColor(lmbCol);
+  list.at(currentTool)->setLeftPen(p);
+  list.at(currentTool)->setLeftBrush(b);
+  p.setColor(rmbCol);
+  b.setColor(rmbCol);
+  list.at(currentTool)->setRightPen(p);
+  list.at(currentTool)->setRightBrush(b);
+}
+
+void Manager::setLMBcolour(const QColor &c)
+{
+warning("setLMBcolour\n");
+  lmbCol= c;
+  updateProperties();
+}
+
+void Manager::setRMBcolour(const QColor &c)
+{
+warning("setRMBcolour\n");
+  rmbCol= c;
+  updateProperties();
+}
+
+const QColor &Manager::lmbColour()
+{
+  return lmbCol;
+}
+
+const QColor &Manager::rmbColour()
+{
+  return rmbCol;
 }
 
 int Manager::getCurrentTool()
@@ -85,15 +117,23 @@ int Manager::getCurrentTool()
 
 void Manager::setCurrentTool(int tool)
 {
-KDEBUG1(KDEBUG_INFO, 3000, "got setCurrentTool %d\n", tool);
+  KDEBUG1(KDEBUG_INFO, 3000, "got setCurrentTool %d\n", tool);
 
   if (currentTool != tool) {
     canvas->deactivate();
     list.at(currentTool)->deactivate();
     currentTool= tool;
     list.at(tool)->activate(canvas);
-    list.at(tool)->setPen(p);
-    list.at(tool)->setBrush(b);
+
+    p.setColor(lmbCol);
+    b.setColor(lmbCol);
+    list.at(tool)->setLeftPen(p);
+    list.at(tool)->setLeftBrush(b);
+    p.setColor(rmbCol);
+    b.setColor(rmbCol);
+    list.at(tool)->setRightPen(p);
+    list.at(tool)->setRightBrush(b);
+
     canvas->activate(list.at(tool));
     props->setPages(list.at(tool)->getPages());
     props->repaint(0);
@@ -107,15 +147,8 @@ void Manager::showPropertiesDialog()
   props->show();
 }
 
-KToolBar *Manager::toolbar()
+void Manager::populateToolbar(KToolBar *t)
 {
-  return mytoolbar;
-}
-
-
-void Manager::initToolbar()
-{
-  mytoolbar= new KToolBar(toplevel);
   Tool *tool;
   QPixmap *pix;
   int i;
@@ -123,11 +156,10 @@ void Manager::initToolbar()
   for (i= 0, tool= list.first(); tool != 0; i++, tool= list.next()) {
     tip= tool->tip();
     pix= tool->pixmap();
-KDEBUG2(KDEBUG_INFO, 3000, "Adding Pix: %p  // %s\n", pix, tip);
-KDEBUG2(KDEBUG_INFO, 3000, "Pix Size: %d, %d", pix->width(), pix->height());
-    mytoolbar->insertButton(*pix, i, TRUE, tip, i);
+    t->insertButton(*pix, i, TRUE, tip, i);
+    connect(tool, SIGNAL(modified()), this, SIGNAL(modified()));
   }
-  connect(mytoolbar, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));
+  connect(t, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));
 }
 
 #include "manager.moc"

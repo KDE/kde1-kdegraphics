@@ -20,7 +20,7 @@ paletteDialog::paletteDialog(QPixmap *p, QWidget *parent, const char *name)
   connect( pal, SIGNAL(colourSelected(int)), pal, SLOT(editColour(int)) );
 }
 
-QPixmap *paletteDialog::pixmap(void)
+QPixmap *paletteDialog::pixmap()
 {
   return pal->pixmap();
 }

@@ -54,7 +54,7 @@ KDEBUG(KDEBUG_INFO, 3000, "paletteWidget: Invalid pixmap depth\n");
   setNumCols(16);
 }
 
-QPixmap *paletteWidget::pixmap(void)
+QPixmap *paletteWidget::pixmap()
 {
   if (!image)
     return NULL;

@@ -25,6 +25,7 @@ public:
 
   QPixmap *pixmap();
   void setPixmap(QPixmap *);
+  void setDepth(int);
 
   const QRect &selection();
   void setSelection(const QRect&);
@@ -35,11 +36,14 @@ public:
   void setZoom(int);
   int zoom();
   void updateZoomed();
+  void resizeImage(int, int);
 
   bool load(const char *filename= 0, const char *format= 0);
   bool save(const char *filename= 0, const char *format= 0);
 
   bool isActive();
+  bool isModified();
+  void clearModified();
 
   // This controls which tool the events go to (if any)
   void activate(Tool *tool);
@@ -55,8 +59,13 @@ public:
   void keyPressEvent(QKeyEvent *e);
   void keyReleaseEvent(QKeyEvent *e);
 
+public slots:
+  void markModified();
+
 signals:
   void sizeChanged();
+  void pixmapChanged(QPixmap *);
+  void modified();
 
 protected:
   enum state {
@@ -66,10 +75,26 @@ protected:
 
   QWMatrix *matrix;
   Tool *currentTool;
-  QPixmap *zoomed; // Zoomed copy
-  QPixmap *pix; // Master copy
-  int zoomFactor; // % of original size
-  bool modified; // Has the pixmap been modified?
+
+  /**
+   * Zoomed copy
+   */
+  QPixmap *zoomed;
+
+  /**
+   * Master copy
+   */
+  QPixmap *pix;
+
+  /**
+   * % of original size
+   */
+  int zoomFactor;
+
+  /**
+   * Has the pixmap been modified?
+   */
+  bool modified_;
   state s;
   QRect selection_;
   bool haveSelection_;

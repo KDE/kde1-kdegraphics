@@ -6,6 +6,8 @@
 #include <assert.h>
 #include <strings.h>
 #include <qpainter.h>
+#include <qimage.h>
+#include <qwmatrix.h>
 #include <klocale.h>
 #include <kapp.h>
 #include <math.h>
@@ -24,7 +26,7 @@ Canvas::Canvas(int width, int height,
   // Create pixmap
   pix= new QPixmap(width, height);
   if (!pix) {
-KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
+    KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
 
@@ -48,7 +50,7 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
   // Create pixmap
   pix= new QPixmap(filename);
   if (!pix) {
-KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
+    KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
 
@@ -60,6 +62,25 @@ KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
 
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
+}
+
+bool Canvas::isModified()
+{
+  return modified_;
+}
+
+void Canvas::clearModified()
+{
+  modified_= false;
+}
+
+void Canvas::markModified()
+{
+  if (!modified_) {
+    modified_= true;
+    KDEBUG(KDEBUG_INFO, 3000, "Canvas: emitting modified()\n");
+  }
+  emit modified();
 }
 
 void Canvas::setSelection(const QRect &rect)
@@ -176,6 +197,7 @@ void Canvas::setPixmap(QPixmap *px)
   int w, h;
 
   *pix= *px;
+  emit pixmapChanged(pix);
 
   delete zoomed;
 
@@ -196,7 +218,46 @@ void Canvas::setPixmap(QPixmap *px)
   repaint(0);
 }
 
-void Canvas::paintEvent(QPaintEvent * /*e*/ )
+void Canvas::setDepth(int d)
+{
+  QImage i;
+  QPixmap *px;
+
+  assert((d == 1) || (d == 8) || (d == 32));
+
+  if (d != pix->depth()) {
+    i= pix->convertToImage();
+    i.convertDepth(d);
+    px= new QPixmap(pix->width(), pix->height(), d);
+    *px= i;
+    setPixmap(px);
+    emit pixmapChanged(px);
+    delete px;
+  }
+}
+
+void Canvas::resizeImage(int w, int h)
+{
+  QWMatrix matrix;
+  QPainter p;
+
+  if ((w != pix->width()) || (h != pix->height())) {
+    QPixmap *newpix= new QPixmap(w, h);
+    matrix.scale((float) w/pix->width(), (float) h/pix->height());
+    p.begin(newpix);
+    p.setWorldMatrix(matrix);
+    p.drawPixmap(0,0,*pix);
+    p.end();
+
+    delete pix;
+    pix= newpix;
+    setZoom(zoom());
+    emit pixmapChanged(pix);
+  }
+  repaint(0);
+}
+
+void Canvas::paintEvent(QPaintEvent *)
 {
   bitBlt(this, 0, 0, zoomed);
 }
@@ -245,6 +306,7 @@ bool Canvas::load(const char *filename, const char *format)
     q.fill(QColor("white"));
     bitBlt(&q, 0, 0, &p);
     setPixmap(&q);
+    emit pixmapChanged(pix);
   }
 
   repaint(0);

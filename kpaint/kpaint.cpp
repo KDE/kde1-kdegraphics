@@ -1,11 +1,19 @@
 // $Id$
 
+#define USE_KFILEDLG
 
 #include <kdebug.h>
 #include <string.h>
 #include <qwidget.h>
+
+#ifdef USE_KFILEDLG
+#include <kfiledialog.h>
+#else
 #include <qfiledlg.h>
+#endif
+
 #include <qmsgbox.h>
+#include <qlayout.h>
 #include "QwViewport.h"
 #include <kkeyconf.h>
 #include <ktopwidget.h>
@@ -27,35 +35,47 @@
 #include "depthdialog.h"
 #include "formatdialog.h"
 #include "formats.h"
+#include "view.h"
+#include "sidebar.h"
 
 #include <unistd.h>
 #include <time.h>
 
-
-extern MyApp *kpaintApp;
 extern FormatManager *formatMngr;
 extern int openwins;
 
-KPaint::KPaint(const char *url_) : KTopLevelWidget()
+KPaint::KPaint(const char *url) : KTopLevelWidget()
 {
   int w, h; 
 
   modified= false;
-  filename= klocale->translate("untitled.gif");
+  filename= i18n("untitled.gif");
   format= "GIF";
-  kfm= 0;
 
   w= 300;
   h= 200;
 
-  v= new QwViewport(this);
+  View *view= new View(this, "view container");
+  v= new QwViewport(view);
   c= new Canvas(w, h, v->portHole());
 
   v->resize(c->size());
-  setView(v);
 
+  setView(view);
+
+  man= new Manager(c);
   connect(c, SIGNAL(sizeChanged()), v, SLOT(resizeScrollBars()));
-  man= new Manager(c, this);
+  connect(c, SIGNAL(modified()), this, SLOT(updateCommands()));
+  SideBar *side= new SideBar(c, view, "sidebar");
+  connect(c, SIGNAL(modified()), side, SLOT(pixmapChanged()));
+
+  view->c= v;
+  view->s= side;
+
+  connect(side, SIGNAL(lmbColourChanged(const QColor &)),
+	  man, SLOT(setLMBcolour(const QColor &)));
+  connect(side, SIGNAL(rmbColourChanged(const QColor &)),
+	  man, SLOT(setRMBcolour(const QColor &)));
 
   zoom= 100;
   openwins++;
@@ -66,22 +86,8 @@ KPaint::KPaint(const char *url_) : KTopLevelWidget()
 
   readOptions();
 
-  // Was a URL specified?
-  if (url_ != 0) {
-    QString u(url_);
-
-    // Is there a ':'?
-    int colon= u.find(':');
-
-    if (colon != -1) {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint:: initialising from URL %s\n", url_);
-      loadRemote(url_);
-    }
-    else {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint:: initialising from file %s\n", url_);
-      loadLocal(url_);
-    }
-  }
+  if (url != 0)
+    loadRemote(url);
 
   if (c->pixmap()->depth() > 8) {
     allowEditPalette= false;
@@ -100,6 +106,7 @@ KPaint::~KPaint()
 
 void KPaint::setPixmap(QPixmap *p)
 {
+  // TODO: Fix setPixmap()
   format= "GIF";
   filename= "Untitled.gif";
   modified= false;
@@ -111,13 +118,14 @@ int KPaint::exit()
 {
   int die= 0;
 
-  if (!modified)
+  if (!(c->isModified()))
     die= 1;
   else
-    if (QMessageBox::warning(this, klocale->translate("Unsaved Changes"),
-			      "You have unsaved changes, you will loose them "
-			      "if you exit now.",
-			      "Exit", "Cancel",
+    if (QMessageBox::warning(this, i18n("Unsaved Changes"),
+			     i18n("You have unsaved changes, you "
+				  "will loose them if you close "
+				  "this window now."),
+			      i18n("Close"), i18n("Cancel"),
 			      0, 1, 1))
       die= 0;
     else
@@ -131,26 +139,13 @@ void KPaint::closeEvent(QCloseEvent *e)
   QString proto;
 
   // Catch if modified
-  if (exit())
+  if (exit()) {
     e->accept();
-
-  openwins--;
-
-  if (!url.isEmpty()) {
-    KURL u(url);
-
-    if (!u.isMalformed()) {
-      proto= u.protocol();
-
-      if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp \'%s\'\n", filename.data());
-	unlink(filename);
-      }
-    }
+    openwins--;
   }
 
   if (openwins == 0)
-    kpaintApp->exit(0);
+    myapp->exit(0);
 }
 
 void KPaint::initToolbars()
@@ -159,40 +154,52 @@ void KPaint::initToolbars()
 
   // Create command toolbar
   commandsToolbar= new KToolBar(this);
+  //  commandsToolbar= toolBar(ID_COMMANDSTOOLBAR);
 
-  pixmap= kapp->getIconLoader()->loadIcon( "filenew.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_NEW, TRUE, klocale->translate("New Canvas"));
+  pixmap= Icon( "filenew.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_NEW, true, i18n("New Canvas"));
 
-  pixmap= kapp->getIconLoader()->loadIcon( "fileopen.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_OPEN, TRUE, klocale->translate("Open File"));
+  pixmap= Icon( "fileopen.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_OPEN, true, i18n("Open File"));
 
-  pixmap= kapp->getIconLoader()->loadIcon( "filefloppy.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_SAVE, TRUE, klocale->translate("Save File"));
+  pixmap= Icon( "filefloppy.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_SAVE, true, i18n("Save File"));
   commandsToolbar->insertSeparator();
 
-  pixmap= kapp->getIconLoader()->loadIcon( "editcopy.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_COPY, FALSE, klocale->translate("Copy"));
+  pixmap= Icon( "editcopy.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_COPY, false, i18n("Copy"));
 
-  pixmap= kapp->getIconLoader()->loadIcon( "editcut.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_CUT, FALSE, klocale->translate("Cut"));
+  pixmap= Icon( "editcut.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_CUT, false, i18n("Cut"));
 
-  pixmap= kapp->getIconLoader()->loadIcon( "editpaste.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_PASTE, FALSE, klocale->translate("Paste"));
+  pixmap= Icon( "editpaste.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_PASTE, false, i18n("Paste"));
   commandsToolbar->insertSeparator();
 
-  pixmap= kapp->getIconLoader()->loadIcon( "viewmag+.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_ZOOMIN, TRUE, klocale->translate("Zoom In"));
+  pixmap= Icon( "viewmag+.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_ZOOMIN, true, i18n("Zoom In"));
 
-  pixmap= kapp->getIconLoader()->loadIcon( "viewmag-.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_ZOOMOUT, TRUE, klocale->translate("Zoom Out"));
+  pixmap= Icon( "viewmag-.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_ZOOMOUT, true, i18n("Zoom Out"));
 
   commandsToolbar->show();
-  addToolBar(commandsToolbar);
+  addToolBar(commandsToolbar, ID_COMMANDSTOOLBAR);
+  commandsToolbar->setFullWidth(false);
+
+  connect (commandsToolbar, SIGNAL (clicked (int)),
+	   SLOT (handleCommand (int)));
 
   // Tools toolbar
-  toolsToolbar= man->toolbar();
+  //  toolsToolbar= man->toolbar();
+  //  toolsToolbar= toolBar(ID_TOOLSTOOLBAR);
+  toolsToolbar= new KToolBar(this);
+  man->populateToolbar(toolsToolbar);
   toolsToolbar->show();
-  addToolBar(toolsToolbar);
+  addToolBar(toolsToolbar, ID_TOOLSTOOLBAR);
+  toolsToolbar->setFullWidth(false);
+
+  connect (toolsToolbar, SIGNAL (clicked (int)),
+	   SLOT (handleCommand (int)));
 }
 
 void KPaint::updateCommands()
@@ -201,6 +208,15 @@ void KPaint::updateCommands()
     menu->setItemEnabled(ID_PALETTE, true);
   else
     menu->setItemEnabled(ID_PALETTE, false);
+
+  if (c->isModified()) {
+    menu->setItemEnabled(ID_SAVE, true);
+  }
+  else {
+    menu->setItemEnabled(ID_SAVE, false);
+  }
+
+  menu->setItemEnabled(ID_MASK, false);
 }
 
 void KPaint::readOptions()
@@ -208,22 +224,11 @@ void KPaint::readOptions()
   KConfig *config = KApplication::getKApplication()->getConfig();
   
   config->setGroup( "Appearance" );
-  
+
   // Read the entries
-  if (config->readNumEntry("ShowToolsToolBar", 1))
-    showToolsToolBar= true;
-  else
-    showToolsToolBar= false;
-
-  if (config->readNumEntry("ShowCommandsToolBar", 1))
-    showCommandsToolBar= true;
-  else
-    showCommandsToolBar= false;
-
-  if (config->readNumEntry("ShowStatusBar", 1))
-    showStatusBar= true;
-  else
-    showStatusBar= false;
+  showToolsToolBar= config->readBoolEntry("ShowToolsToolBar", true);
+  showCommandsToolBar= config->readBoolEntry("ShowCommandsToolBar", true);
+  showStatusBar= config->readBoolEntry("ShowStatusBar", true);
 
   updateControls();
 }
@@ -233,23 +238,11 @@ void KPaint::writeOptions()
   KConfig *config = KApplication::getKApplication()->getConfig();
 
   config->setGroup( "Appearance" );
-  
+
   // Write the entries
-  if (showToolsToolBar)
-    config->writeEntry("ShowToolsToolBar", 1);
-  else
-    config->writeEntry("ShowToolsToolBar", 0);
-
-  if (showCommandsToolBar)
-    config->writeEntry("ShowCommandsToolBar", 1);
-  else
-    config->writeEntry("ShowCommandsToolBar", 0);
-
-  if (showStatusBar)
-    config->writeEntry("ShowStatusBar", 1);
-  else
-    config->writeEntry("ShowStatusBar", 0);
-
+  config->writeEntry("ShowToolsToolBar", showToolsToolBar);
+  config->writeEntry("ShowCommandsToolBar", showCommandsToolBar);
+  config->writeEntry("ShowStatusBar", showStatusBar);
   config->sync();
 }
 
@@ -294,7 +287,9 @@ void KPaint::canvasSizeChanged()
 void KPaint::initStatus()
 {
   QString size;
+
   statusbar= new KStatusBar(this);
+  setStatusBar(statusbar);
 
   size.sprintf("%d x %d", c->width(), c->height());
   statusbar->insertItem(size, ID_FILESIZE);
@@ -306,7 +301,6 @@ void KPaint::initStatus()
     statusbar->insertItem(url, ID_FILENAME);
 
   statusbar->show();
-  setStatusBar(statusbar);
 }
 
 void KPaint::initMenus()
@@ -315,90 +309,93 @@ void KPaint::initMenus()
   
   file = new QPopupMenu;
 
-  file->insertItem(klocale->translate("Open Image..."), ID_OPEN);
-  file->insertItem(klocale->translate("New Image..."), ID_NEW);
-  file->insertItem(klocale->translate("Save Image..."), ID_SAVE);
-  file->insertItem(klocale->translate("Save Image As..."), ID_SAVEAS);
-  file->insertItem(klocale->translate("Image Format..."), ID_FORMAT);
+  file->insertItem(i18n("Open Image..."), ID_OPEN);
+  file->insertItem(i18n("New Image..."), ID_NEW);
+  file->insertItem(i18n("Save Image"), ID_SAVE);
+  file->insertItem(i18n("Save Image As..."), ID_SAVEAS);
+  file->insertItem(i18n("Image Format..."), ID_FORMAT);
   file->insertSeparator();
-  file->insertItem(klocale->translate("Open from URL..."), ID_OPENURL);
-  file->insertItem(klocale->translate("Save to URL..."), ID_SAVEURL);
+  file->insertItem(i18n("Open from URL..."), ID_OPENURL);
+  file->insertItem(i18n("Save to URL..."), ID_SAVEURL);
   file->insertSeparator();
-  file->insertItem(klocale->translate("New Window"), ID_NEWWINDOW);
-  file->insertItem(klocale->translate("Close Window"), ID_CLOSEWINDOW);
+  file->insertItem(i18n("New Window"), ID_NEWWINDOW);
+  file->insertItem(i18n("Close Window"), ID_CLOSEWINDOW);
   file->insertSeparator();
-  file->insertItem(klocale->translate("Exit"), ID_EXIT);
+  file->insertItem(i18n("Exit"), ID_EXIT);
 
   QPopupMenu *edit= new QPopupMenu;
-  edit->insertItem(klocale->translate("Copy Region"), ID_COPY);
-  edit->insertItem(klocale->translate("Cut Region"), ID_CUT);
-  edit->insertItem(klocale->translate("Paste Region"), ID_PASTE);
-  edit->insertItem(klocale->translate("Paste As Image"), ID_PASTEIMAGE);
+  edit->insertItem(i18n("Copy Region"), ID_COPY);
+  edit->insertItem(i18n("Cut Region"), ID_CUT);
+  edit->insertItem(i18n("Paste Region"), ID_PASTE);
+  edit->insertItem(i18n("Paste As Image"), ID_PASTEIMAGE);
   edit->insertSeparator();
-  edit->insertItem(klocale->translate("Zoom In"), ID_ZOOMIN);
-  edit->insertItem(klocale->translate("Zoom Out"), ID_ZOOMOUT);
-  edit->insertItem(klocale->translate("Mask..."), ID_MASK);
+  edit->insertItem(i18n("Zoom In"), ID_ZOOMIN);
+  edit->insertItem(i18n("Zoom Out"), ID_ZOOMOUT);
+  edit->insertItem(i18n("Mask..."), ID_MASK);
 
   QPopupMenu *image= new QPopupMenu;
-  image->insertItem(klocale->translate("Information..."), ID_INFO);
-  image->insertItem(klocale->translate("Edit Palette..."), ID_PALETTE);
-  image->insertItem(klocale->translate("Change Colour Depth..."), ID_DEPTH);
+  image->insertItem(i18n("Information..."), ID_INFO);
+  image->insertItem(i18n("Resize..."), ID_RESIZEIMAGE);
+  image->insertItem(i18n("Edit Palette..."), ID_PALETTE);
+  image->insertItem(i18n("Change Colour Depth..."), ID_DEPTH);
 
   QPopupMenu *tool= new QPopupMenu;
-  tool->insertItem( klocale->translate("Tool Properties..."), -1);
+  tool->insertItem( i18n("Tool Properties..."), -1);
   tool->insertSeparator();
-  tool->insertItem( klocale->translate("Pen"), 2);
-  tool->insertItem( klocale->translate("Line"), 4);
-  tool->insertItem( klocale->translate("Rectangle"), 3);
-  tool->insertItem( klocale->translate("Ellipse"), 0 );
-  tool->insertItem( klocale->translate("Circle"), 1 );
-  tool->insertItem( klocale->translate("Spray Can"), 5);
-  tool->insertItem( klocale->translate("Area Select"), 6);
+  tool->insertItem( i18n("Pen"), 2);
+  tool->insertItem( i18n("Line"), 4);
+  tool->insertItem( i18n("Rectangle"), 3);
+  tool->insertItem( i18n("Ellipse"), 0 );
+  tool->insertItem( i18n("Circle"), 1 );
+  tool->insertItem( i18n("Spray Can"), 5);
+  tool->insertItem( i18n("Area Select"), 6);
+  tool->insertItem( i18n("Round Angle"), 7);
   connect(tool, SIGNAL(activated(int)), SLOT(setTool(int)));
 
   QPopupMenu *options = new QPopupMenu;
   options->setCheckable(true);
-  options->insertItem( klocale->translate("Show Tools Toolbar"), ID_SHOWTOOLSTOOLBAR);
-  options->insertItem( klocale->translate("Show Commands Toolbar"), ID_SHOWCOMMANDSTOOLBAR);
-  options->insertItem( klocale->translate("Show Status Bar"), ID_SHOWSTATUSBAR);
-  options->insertItem( klocale->translate("Save Options"), ID_SAVEOPTIONS);
+  options->insertItem( i18n("Show Tools Toolbar"), ID_SHOWTOOLSTOOLBAR);
+  options->insertItem( i18n("Show Commands Toolbar"), ID_SHOWCOMMANDSTOOLBAR);
+  options->insertItem( i18n("Show Status Bar"), ID_SHOWSTATUSBAR);
+  options->insertItem( i18n("Save Options"), ID_SAVEOPTIONS);
 
 /*
   QPopupMenu *help = new QPopupMenu;
-  help->insertItem( klocale->translate("Contents"), ID_HELPCONTENTS);
-  help->insertItem( klocale->translate("Release Notes"), ID_RELEASENOTES);
-  help->insertItem( klocale->translate("About..."), ID_ABOUT);
+  help->insertItem( i18n("Contents"), ID_HELPCONTENTS);
+  help->insertItem( i18n("Release Notes"), ID_RELEASENOTES);
+  help->insertItem( i18n("About..."), ID_ABOUT);
 */
-  QPopupMenu *help = kapp->getHelpMenu(true, QString(i18n("Paint"))
+  QPopupMenu *help = kapp->getHelpMenu(false, QString("        ")
+				       + i18n("KPaint") +
                                          + " " + APPVERSTR
-                                         + i18n("\n\nby ") + APPAUTHOR 
+                                         + i18n("\n\n(c) ") + APPAUTHOR 
                                          + "(" 
                                          + APPAUTHOREMAIL 
-                                         + ")" );  
+                                         + ")\n\n" + APPLICENSE );  
 
   menu = new KMenuBar( this );
-  menu->insertItem( klocale->translate("&File"), file );
-  menu->insertItem( klocale->translate("&Edit"), edit );
-  menu->insertItem( klocale->translate("&Image"), image );
-  menu->insertItem( klocale->translate("&Tool"), tool );
-  menu->insertItem( klocale->translate("&Options"), options );
+
+  menu->insertItem( i18n("&File"), file );
+  menu->insertItem( i18n("&Edit"), edit );
+  menu->insertItem( i18n("&Image"), image );
+  menu->insertItem( i18n("&Tool"), tool );
+  menu->insertItem( i18n("&Options"), options );
   menu->insertSeparator();
-  menu->insertItem( klocale->translate("&Help"), help );
+  menu->insertItem( i18n("&Help"), help );
+  setMenu(menu);
+  menu->show();
 
   connect (file, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (edit, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (image, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (options, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (help, SIGNAL (activated (int)), SLOT (handleCommand (int)));
-
-  menu->show();
-  setMenu(menu);
 }
 
 void KPaint::handleCommand(int command)
 {
-
   switch (command) {
+    // File
   case ID_NEW:
     fileNew();
     break;
@@ -430,7 +427,7 @@ void KPaint::handleCommand(int command)
     fileExit();
     break;
     
-  // Edit
+    // Edit
   case ID_COPY:
     editCopy();
     break;
@@ -443,6 +440,7 @@ void KPaint::handleCommand(int command)
   case ID_PASTEIMAGE:
     editPasteImage();
     break;
+    // Image
   case ID_ZOOMIN:
     editZoomIn();
     break;
@@ -459,6 +457,9 @@ void KPaint::handleCommand(int command)
   // Image
   case ID_INFO:
     imageInfo();
+    break;
+  case ID_RESIZEIMAGE:
+    imageResize();
     break;
   case ID_PALETTE:
     imageEditPalette();
@@ -508,8 +509,7 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
   const char *fmt;
   bool result;
 
-  // Check the file exists
-
+  // Check the file exists and is in a known format
   fmt= QPixmap::imageFormat(filename_);
 
   if (fmt != 0) {
@@ -530,21 +530,21 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
       canvasSizeChanged();
     }
     else {
-      KMsgBox::message(0, klocale->translate("KPaint: Could not open file"),
-		       klocale->translate("Error: Could not open file\n"
+      KMsgBox::message(0, i18n("KPaint: Could not open file"),
+		       i18n("Error: Could not open file\n"
 		       "KPaint could not open the specified file."),
 		       KMsgBox::EXCLAMATION,
-		       klocale->translate("Continue"));
+		       i18n("Continue"));
       result= false;
     }
   }
   else {
-    KMsgBox::message(0, klocale->translate("KPaint: Unknown Format"),
-		     klocale->translate("Error: Unknown Format\n"
+    KMsgBox::message(0, i18n("KPaint: Unknown Format"),
+		     i18n("Error: Unknown Format\n"
 		     "KPaint does not understand the format of the "
 		     "specified file\nor the file is corrupt."),
 		     KMsgBox::EXCLAMATION,
-		     klocale->translate("Continue"));
+		     i18n("Continue"));
     result= false;
   }
 
@@ -554,110 +554,19 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
 // Initiates fetch of remote file
 bool KPaint::loadRemote(const char *url_)
 {
-  KURL u(url_);
+  QString filename;
+  QString url;
+  bool result;
 
-KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: %s\n", url_);
-KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: KURL=\"%s\"\n", (const char *) u.url());
-KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: protocol=\"%s\"\n", u.protocol());
-KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: host=\"%s\"\n", u.host());
-KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: path=\"%s\"\n", u.path());
+  url= url_;
+  result= KFM::download(url, filename);
 
-  if (u.isMalformed()) {
-    KMsgBox::message(0, klocale->translate("KPaint: Malformed URL"),
-		     klocale->translate("Error: Malformed URL\n"
-		     "KPaint does not understand the specifed URL, check it\'s correct."),
-		     KMsgBox::EXCLAMATION,
-		     klocale->translate("Continue"));
-    return false;
+  if (result) {
+    loadLocal(filename, url);
+    KFM::removeTempFile(filename);
   }
 
-  // Is it a local file?
-  if (strcmp(u.protocol(), "file") == 0) {
-KDEBUG1(KDEBUG_INFO, 3000, "Local file:%s\n",u.path());
-
-    return loadLocal(u.path());
-  }
-
-  if (kfm != 0) {
-    QMessageBox::message (klocale->translate("Sorry"), 
-			  klocale->translate("KPaint is already accessing a remote file, you must\n"
-			  "cancel the current remote job or wait for it to complete."),
-			  klocale->translate("Continue"));
-    return false;
-  }
-
-  // Create a connection to kfm
-  kfm = new KFM;
-
-  // Check connection was made
-  if ( !kfm->isOK() ) {
-    QMessageBox::message (klocale->translate("KPaint: Could not find KFM"),
-			  klocale->translate("Error: KPaint could not find a running KFM or start one itself."),
-			  klocale->translate("Continue"));
-    delete kfm;
-    kfm = 0;
-    return false;
-  }
-  
-  // Make up a name for the temporary file 
-  filename.sprintf("/tmp/kpaint%i", time( 0L ));
-
-  tempURL.sprintf("file:%s", (const char *) filename);
-  url=  url_;
-
-  // Call kfm finished when the job is complete
-  connect( kfm, SIGNAL( finished() ), this, SLOT(KFMfinished()) );
-  
-  // Ask kfm to copy the remote file to the temp file
-  kfmOp= KfmGet;
-  kfm->copy(url, tempURL);
-
-  return true;
-}
-
-
-
-void KPaint::KFMfinished()
-{
-  assert(kfm != 0);
-
-  if (kfmOp == KfmPut)
-    KFMputFinished();
-  else if (kfmOp == KfmGet)
-    KFMgetFinished();
-}
-
-void KPaint::KFMgetFinished()
-{
-  assert(kfm != 0);
-  const char *filename_;
-  const char *url_;
-
-  // Free the file manager
-  delete kfm;
-  kfm= 0;
-
-KDEBUG2(KDEBUG_INFO, 3000, "Fetch completed, loading %s as %s...\n", (const char *) filename, (const char *) url);
-
-  filename_= filename;
-  url_= url;
-
-  // Now load the image locally
-  if (!loadLocal(filename_, url_)) {
-    KMsgBox::message(0, klocale->translate("KPaint: Network Load Failed"),
-		     klocale->translate("Error: Netword Load Failed\n"
-		     "Something went wrong :-("),
-		     KMsgBox::EXCLAMATION,
-		     klocale->translate("Continue"));
-  }
-}
-
-void KPaint::KFMputFinished()
-{
-  assert(kfm != 0);
-
-  delete kfm;
-  kfm= 0;
+  return result;
 }
 
 bool KPaint::saveLocal(const char *filename_, const char *url_)
@@ -671,59 +580,8 @@ bool KPaint::saveLocal(const char *filename_, const char *url_)
 // Save As Network file
 bool KPaint::saveRemote(const char *url_)
 {
-  KURL u(url_);
-  QString newFilename;
-
-  if (u.isMalformed()) {
-    KMsgBox::message(0, klocale->translate("KPaint: Malformed URL"),
-		     klocale->translate("Error: Malformed URL\n"
-		     "KPaint does not understand the specifed URL, check it\'s correct."),
-		     KMsgBox::EXCLAMATION,
-		     klocale->translate("Continue"));
-    return false;
-  }
-
-  // Is it a local file?
-  if (strcmp(u.protocol(), "file") == 0) {
-KDEBUG1(KDEBUG_INFO, 3000, "Save file:%s\n", u.path());
-
-    return saveLocal(u.path(), url_);
-  }
-
-  if (kfm != 0) {
-    QMessageBox::message (klocale->translate("Sorry"), 
-			  klocale->translate("KPaint is already accessing a remote file, you must\n"
-			  "cancel the current remote job or wait for it to complete."),
-			  klocale->translate("Continue"));
-    return false;
-  }
-
-  // Create a connection to kfm
-  kfm = new KFM;
-
-  // Check connection was made
-  if ( !kfm->isOK() ) {
-    QMessageBox::message (klocale->translate("KPaint: Could not start KFM"),
-			  klocale->translate("Error: KPaint could not find a running KFM or start one itself."),
-			  klocale->translate("Continue"));
-    delete kfm;
-    kfm = 0;
-    return false;
-  }
-  
-  // Save to a local file here so we don't overwrite the original
-  newFilename.sprintf("/tmp/kpaint%i", time( 0L ));
-  saveLocal(newFilename, url_);
-
-  // Call kfm finished when the job is complete
-  connect( kfm, SIGNAL( finished() ), this, SLOT(KFMfinished()) );
-  
-  // Ask kfm to copy the remote file to the temp file
-  tempURL.sprintf("file:%s", (const char *) newFilename);
-  kfmOp= KfmPut;
-  kfm->copy(tempURL, url);
-
-  return true;
+  // Temporarily removed waiting for kfmlib changes
+  return false;
 }
 
 void KPaint::fileNew()
@@ -731,31 +589,18 @@ void KPaint::fileNew()
   int w, h;
   QPixmap p;
   QString proto;
-  canvasSizeDialog sz(0, klocale->translate("Canvas Size"));
+  canvasSizeDialog sz(0, "canvassizedlg");
 
-KDEBUG(KDEBUG_INFO, 3000, "File New\n");
+  KDEBUG(KDEBUG_INFO, 3000, "File New\n");
 
   if (sz.exec()) {
-    if (!url.isEmpty()) {
-      KURL u(url);
-
-      if (!u.isMalformed()) {
-	proto= u.protocol();
-
-	if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-	  unlink(filename);
-	}
-      }
-    }
-
     w= sz.getWidth();
     h= sz.getHeight();
     p.resize(w, h);
     p.fill(QColor("white"));
     c->setPixmap(&p);
     man->setCurrentTool(0);
-    filename= klocale->translate("untitled.gif");
+    filename= i18n("untitled.gif");
     url= "";
     format= "GIF";
 
@@ -772,12 +617,17 @@ void KPaint::fileOpen()
 {
   QString name;
 
-KDEBUG(KDEBUG_INFO, 3000, "fileOpen()\n");
-    //    name=QFileDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
-    name=QFileDialog::getOpenFileName(0, "*", this);
-    if (!name.isNull()) {
-      loadLocal(name);
-    }
+  KDEBUG(KDEBUG_INFO, 3000, "fileOpen()\n");
+
+#ifdef USE_KFILEDLG
+  name=KFileDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
+  //  name=KFilePreviewDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
+#else
+  name=QFileDialog::getOpenFileName(0, "*", this);
+#endif
+  if (!name.isNull()) {
+    loadRemote(name);
+  }
 }
 
 void KPaint::fileSave()
@@ -798,16 +648,17 @@ void KPaint::fileSaveAs()
   QString newfilename;
   QString proto;
 
-KDEBUG(KDEBUG_INFO, 3000, "fileSaveAsCommand");
+  KDEBUG(KDEBUG_INFO, 3000, "fileSaveAsCommand");
 
-  // get the glob for the current format
-  //  newfilename= QFileDialog::getSaveFileName(0,
-  //					    formatMngr->glob(format),
-  //					    this);
+#ifdef USE_KFILEDLG
+  newfilename= KFileDialog::getSaveFileURL(0,
+					   formatMngr->glob(format),
+					   this);
+#else
   newfilename= QFileDialog::getSaveFileName(0,
-  					    "*",
+  					    formatMngr->glob(format),
   					    this);
-
+#endif
   if (!newfilename.isNull()) {
     KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());  
     if (!url.isEmpty()) {
@@ -858,20 +709,7 @@ void KPaint::fileExit()
 KDEBUG(KDEBUG_INFO, 3000, "fileExit()\n");
 
   if (exit()) {
-    // Delete any temp files from the image
-    if (!url.isEmpty()) {
-      KURL u(url);
-      
-      if (!u.isMalformed()) {
-	proto= u.protocol();
-	
-	if (proto != "file") {
-	  KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-	  unlink(filename);
-	}
-      }
-    }
-    kpaintApp->exit(0);
+    myapp->exit(0);
   }
 }
 
@@ -886,8 +724,8 @@ KDEBUG(KDEBUG_INFO, 3000, "newWindow()\n");
 
 void KPaint::closeWindow()
 {
-KDEBUG(KDEBUG_INFO, 3000, "closeWindow()\n");
-
+  KDEBUG(KDEBUG_INFO, 3000, "closeWindow()\n");
+  if (exit())
     close();
 }
 
@@ -895,28 +733,20 @@ void KPaint::fileOpenURL()
 {
   QString proto;
 
-KDEBUG(KDEBUG_INFO, 3000, "fileOpenURL()\n");
+  KDEBUG(KDEBUG_INFO, 3000, "fileOpenURL()\n");
 
+#ifdef USE_KFILEDLG
+  QString n= KFileDialog::getOpenFileURL(0,
+					 formatMngr->allImagesGlob(),
+					 this);
+  if (!n.isNull()) {
+#else
   // Get the URL to open
-  DlgLocation l( klocale->translate("Open Location:"), url, this );
+  DlgLocation l( i18n("Open Location:"), url, this );
 
   if ( l.exec() ) {
     QString n = l.getText();
-
-    // Delete any temp files from the previous image
-    if (!url.isEmpty()) {
-      KURL u(url);
-
-      if (!u.isMalformed()) {
-	proto= u.protocol();
-
-	if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-	  unlink(filename);
-	}
-      }
-    }
-
+#endif
     // If the request was sent ok
     if (loadRemote(n)) {
       // Lock this window
@@ -929,11 +759,18 @@ void KPaint::fileSaveAsURL()
 {
 KDEBUG1(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s\n", (const char *) url);
 
+#ifdef USE_KFILEDLG
+  QString n= KFileDialog::getSaveFileURL(0,
+					 formatMngr->glob(format),
+					 this);
+  if (!n.isNull()) {
+#else
   // Get the URL to save to
-  DlgLocation l( klocale->translate("Save to Location:"), url, this );
+  DlgLocation l( i18n("Save to Location:"), url, this );
 
   if ( l.exec() ) {
     QString n = l.getText();
+#endif
 
     saveRemote(n);
   }
@@ -943,13 +780,13 @@ KDEBUG1(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s\n", (const char *) url);
 void KPaint::editCopy()
 {
   KDEBUG(KDEBUG_INFO, 3000, "editCopy()\n");
-  kpaintApp->clipboard_= c->selectionData();
+  myapp->clipboard_= c->selectionData();
 }
 
 void KPaint::editCut()
 {
   KDEBUG(KDEBUG_INFO, 3000, "editCut()\n");
-  kpaintApp->clipboard_= c->selectionData();
+  myapp->clipboard_= c->selectionData();
 }
 
 void KPaint::editPaste()
@@ -963,8 +800,8 @@ void KPaint::editPasteImage()
   KPaint *kp;
   QPixmap *p;
 
-  if ((kpaintApp->clipboard_) != 0) {
-    p= new QPixmap(*(kpaintApp->clipboard_));
+  if ((myapp->clipboard_) != 0) {
+    p= new QPixmap(*(myapp->clipboard_));
     CHECK_PTR(p);
     kp= new KPaint();
     kp->setPixmap(p);
@@ -1043,6 +880,18 @@ KDEBUG(KDEBUG_INFO, 3000, "imageInfo()\n");
   info.exec();
 }
 
+void KPaint::imageResize()
+{
+  KDEBUG(KDEBUG_INFO, 3000, "imageResize()\n");
+  canvasSizeDialog sz(this);
+  if (sz.exec()) {
+    int w= sz.getWidth();
+    int h= sz.getHeight();
+    c->resizeImage(w, h);
+    canvasSizeChanged();
+  }
+}
+
 void KPaint::imageEditPalette()
 {
 KDEBUG(KDEBUG_INFO, 3000, "imageEditPalette()\n");
@@ -1059,7 +908,27 @@ void KPaint::imageChangeDepth()
   depthDialog d(c);
   KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
   if (d.exec()) {
-fprintf(stderr, "TODO: finish KPaint::imageChangeDepth()");
+    switch (d.depthBox->currentItem()) {
+    case 0:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 1\n");
+      c->setDepth(1);
+      allowEditPalette= false;
+      break;
+    case 1:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 8\n");
+      c->setDepth(8);
+      allowEditPalette= true;
+      break;
+    case 2:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 32\n");
+      c->setDepth(32);
+      allowEditPalette= false;
+      break;
+    default:
+      break;
+    }
+    // This is broken
+    //    updateCommands();
   }
 }
 
@@ -1084,10 +953,10 @@ KDEBUG(KDEBUG_INFO, 3000, "toolProperties()\n");
 void KPaint::helpAbout()
 {
 KDEBUG(KDEBUG_INFO, 3000, "helpAbout()\n");
-  QString aMessageHeader( klocale->translate( "About" ) );
+  QString aMessageHeader( i18n( "About" ) );
   aMessageHeader + APPNAME;
 
-  QMessageBox::about( NULL, kapp->getCaption(), "KPaint" ); 
+  QMessageBox::about( 0, kapp->getCaption(), "KPaint" ); 
 
 //  QMessageBox::message(aMessageHeader,
 //		       APPVERSTR "\n" APPAUTHOR "\n" APPAUTHOREMAIL);
@@ -1099,7 +968,7 @@ void KPaint::helpContents()
    QString filename(APPNAME "/" APPNAME ".html" );
    QString topic;
 KDEBUG(KDEBUG_INFO, 3000, "helpContents()\n");
-   kpaintApp->invokeHTMLHelp(filename, topic);
+   myapp->invokeHTMLHelp(filename, topic);
 }
 
 void KPaint::helpIndex()
@@ -1108,7 +977,7 @@ void KPaint::helpIndex()
    QString topic;
 KDEBUG(KDEBUG_INFO, 3000, "helpIndex()\n");
 
-   kpaintApp->invokeHTMLHelp(filename, topic);
+   myapp->invokeHTMLHelp(filename, topic);
 }
 */
 

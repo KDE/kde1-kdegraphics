@@ -16,7 +16,7 @@ class fillPropertiesWidget : public QWidget
 
 public:
   fillPropertiesWidget(QWidget *parent);
-  QBrush *getBrush(void);
+  QBrush &getBrush();
 
 public slots:
     void setFillColour();
@@ -29,6 +29,7 @@ private:
   QPushButton *setFillColourButton;
   QColor fillColour;
   QPixmap *pattern;
+  QBrush b;
 };
 
 
@@ -37,7 +38,7 @@ class linePropertiesWidget : public QWidget
   Q_OBJECT
 public:
   linePropertiesWidget(QWidget *parent);
-  QPen *getPen(void);
+  QPen &getPen();
 public slots:
     void setLineColour();
 private:
@@ -50,7 +51,8 @@ private:
   QComboBox *joinStyleBox;
   QLabel *joinStyleLabel;
   QPushButton *setLineColourButton;
-   QColor lineColour;
+  QColor lineColour;
+  QPen p;
 };
 
 class propertiesDialog  : public QTabDialog
@@ -59,8 +61,8 @@ class propertiesDialog  : public QTabDialog
 public:
   propertiesDialog(int pages, QWidget *parent= 0, const char *name= 0);
 
-  QBrush *getBrush(void);
-  QPen *getPen(void);
+  QBrush &getBrush();
+  QPen &getPen();
   void setPages(int);
 
 private:

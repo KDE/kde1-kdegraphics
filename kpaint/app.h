@@ -7,18 +7,19 @@
 #include <qstring.h>
 #include <qpixmap.h>
 #include <kfm.h>
-#include "kpaint.h"
 
 class MyApp : public KApplication {
   Q_OBJECT
 
 public:
-   MyApp( int &argc, char **argv, const QString );
+  MyApp( int &argc, char **argv, const QString );
   static void usage();
-  //   KPaint *kp;
-   KFM *kfm;
+
+  KFM *kfm;
   QPixmap *clipboard_;
 };
+
+#define myapp ((MyApp *) MyApp::getKApplication())
 
 #endif // APP_H
 

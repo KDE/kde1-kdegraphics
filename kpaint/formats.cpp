@@ -62,7 +62,7 @@ static FormatRecord formatlist[]= {
   },
   {
     "PNM",
-    0,
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
     "*.pbm *.pgm *.ppm",
     "ppm",
     0, 0
@@ -94,7 +94,7 @@ void FormatManager::init(FormatRecord formatlist[])
    };
    
    // Register them with Qt
-   for (rec= list.first(); rec != NULL; rec= list.next()) {
+   for (rec= list.first(); rec != 0; rec= list.next()) {
      if ( (rec->flags & FormatRecord::InternalFormat) == 0L)
        QImageIO::defineIOHandler(rec->formatName, rec->magic,
 				 0, 
@@ -102,12 +102,12 @@ void FormatManager::init(FormatRecord formatlist[])
    }
 }
 	  
-QStrList *FormatManager::formats(void)
+QStrList *FormatManager::formats()
 {
   return &names;
 }
 
-const char *FormatManager::allImagesGlob(void)
+const char *FormatManager::allImagesGlob()
 {
   return globAll;
 }
@@ -126,12 +126,12 @@ const char *FormatManager::glob(const char *format)
       done= TRUE;
     else 
       rec= list.next();
-  } while (!done && (rec != NULL));
+  } while (!done && (rec != 0));
 
   if (done)
     return rec->glob;
   else
-    return NULL;
+    return 0;
 }
 
 const char *FormatManager::suffix(const char *format)
@@ -148,11 +148,11 @@ const char *FormatManager::suffix(const char *format)
       done= TRUE;
     else 
       rec= list.next();
-  } while (!done && (rec != NULL));
+  } while (!done && (rec != 0));
 
   if (done)
     return rec->suffix;
   else
-    return NULL;
+    return 0;
 }
 

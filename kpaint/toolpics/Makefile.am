@@ -1,10 +1,12 @@
 
 toolbar_DATA =	circle.xpm \
+	areaselect.xpm \
 	line.xpm \
 	pen.xpm \
 	spraycan.xpm \
 	ellipse.xpm \
 	rectangle.xpm \
+	roundangle.xpm \
 	editpaste.xpm \
 	filenew.xpm \
 	editcopy.xpm \

@@ -16,7 +16,8 @@
 #include <qpixmap.h>
 #include "canvas.h"
 
-/** @short Tool - Abstract base class
+/**
+ * @short Tool - Abstract base class
  * Tool is the parent of all kpaint tools, it provides virtual methods
  * for all of the events that are passed to the current tool by the
  * canvas. The default implementation of all of these methods is to
@@ -34,21 +35,39 @@ class Tool : public QObject
 {
   Q_OBJECT
 public:
-  // Page flags
-  enum {HasLineProperties = 1, HasFillProperties = 2, HasCustomProperties = 4};
+  /**
+   * Page flags
+   */
+  enum {
+    HasLineProperties = 1,
+    HasFillProperties = 2,
+    HasCustomProperties = 4
+  };
 
-  Tool(void);
-  void activate(Canvas *c); // Make the tool active for canvas c
-  void deactivate(void); // Make the tool inactive
-  bool isActive(void);
-  void setPen(QPen *p);
-  void setBrush(QBrush *b);
-  const char *tip(void) { return tooltip; };
-  virtual QPixmap *pixmap(void);
+  Tool();
 
-  // Used by the properties dialog
-  int getPages(void);
-  QWidget *getCustomPage(QWidget *) { return NULL; };
+  /**
+   * Make the tool active for canvas c
+   */
+  void activate(Canvas *c);
+
+  /**
+   * Make the tool inactive
+   */
+  void deactivate();
+  bool isActive();
+  void setLeftPen(QPen &p);
+  void setLeftBrush(QBrush &b);
+  void setRightPen(QPen &p);
+  void setRightBrush(QBrush &b);
+  const char *tip() { return tooltip; };
+  virtual QPixmap *pixmap();
+
+  /**
+   * Used by the properties dialog
+   */
+  int getPages();
+  QWidget *getCustomPage(QWidget *) { return 0; };
 
   // Event handlers (handle events on canvas)
   virtual void mousePressEvent(QMouseEvent *) {} ;
@@ -60,18 +79,40 @@ public:
   virtual void enterEvent(QEvent *) {};
   virtual void leaveEvent(QEvent *) {};
 
+signals:
+  void modified();
+
 private:
   bool active;
 
 protected:
   QPixmap *pix;
   const char *tooltip;
-  Canvas *canvas; // Current canvas if active
-  virtual void activating(void) {}; // Called by activate()
-  virtual void deactivating(void) {}; // Called by deactivate()
-  QPen *pen;
-  QBrush *brush;
-  unsigned int props; // Which pages are supported
+
+  /**
+   * Current canvas if active
+   */
+  Canvas *canvas;
+
+  /**
+   * Called by activate()
+   */
+  virtual void activating() {};
+
+  /**
+   * Called by deactivate()
+   */
+  virtual void deactivating() {};
+
+  QPen leftpen;
+  QBrush leftbrush;
+  QPen rightpen;
+  QBrush rightbrush;
+
+  /**
+   * Which pages are supported
+   */
+  unsigned int props;
 };
 
 #endif // TOOL_H

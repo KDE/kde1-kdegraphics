@@ -10,9 +10,6 @@
 #include "areaselect.h"
 #include "app.h"
 
-
-extern MyApp *kpaintApp;
-
 AreaSelect::AreaSelect() : Tool()
 {
   drawing= FALSE;
@@ -107,7 +104,7 @@ KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::mouseReleaseEvent() handler called\n");
 
     m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
     paint.begin(canvas->pixmap());
-    paint.setPen(*pen);
+    //    paint.setPen(pen);
     paint.setWorldMatrix(m);
     paint.setRasterOp(CopyROP);
     canvas->setSelection(QRect(startx, starty, x-startx, y-starty));
@@ -125,7 +122,7 @@ QPixmap *AreaSelect::pixmap()
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kde_datadir().copy();
+  pixdir= myapp->kde_datadir().copy();
   pixdir.append("/kpaint/toolbar/");
   pixdir.append("areaselect.xpm");
   return new QPixmap(pixdir);

@@ -14,10 +14,15 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
   clipboard_= 0;
 
   if (isRestored()) {
+#if 0
     for (int i= 1; KTopLevelWidget::canBeRestored(i); i++) {
       kp= new KPaint();
       kp->restore(i);
     }
+#else
+    // Use new RESTORE macro
+    RESTORE(KPaint);
+#endif
   }
   else {
     if (argc == 2) {

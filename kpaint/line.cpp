@@ -13,17 +13,14 @@
 #include "line.h"
 #include "app.h"
 
-extern MyApp *kpaintApp;
-
-
 Line::Line() : Tool()
 {
   drawing= FALSE;
-  tooltip= klocale->translate("Line");
+  tooltip= i18n("Line");
   props= Tool::HasLineProperties;
 }
 
-void Line::activating(void)
+void Line::activating()
 {
 KDEBUG(KDEBUG_INFO, 3000, "Line::activating() hook called\n");
 
@@ -37,25 +34,30 @@ void Line::mousePressEvent(QMouseEvent *e)
 
 KDEBUG(KDEBUG_INFO, 3000, "RubberLine::mousePressEvent() handler called\n");
   
-  if (isActive() && (e->button() == LeftButton)) {
+  if (isActive()) {
     if (drawing) {
-      KDEBUG(KDEBUG_INFO, 3000, "Line: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "Line: Warning button press received while drawing\n");
     }
     else {
       startx= (e->pos()).x();
       starty= (e->pos()).y();
+      activeButton= e->button();
       lastx= startx;
       lasty= starty;
       drawing= TRUE;
     }
   }
+
+#if 0
+  // This code used to allow multi segment lines (badly)
+  // It is being replaced by a seperate polyline tool.
   else if (isActive() && (e->button() == RightButton) && drawing) {
     x= (e->pos()).x();
     y= (e->pos()).y();
 
     // Erase old line
     paint.begin(canvas->zoomedPixmap());
-    paint.setPen(*pen);
+    paint.setPen(leftpen);
     paint.setRasterOp(XorROP);
     paint.drawLine(startx, starty, lastx, lasty);
     paint.setRasterOp(CopyROP);
@@ -70,11 +72,11 @@ KDEBUG(KDEBUG_INFO, 3000, "RubberLine::mousePressEvent() handler called\n");
   }
 
   canvas->repaint(0);
+#endif
   
   if (!isActive()) {
 KDEBUG(KDEBUG_WARN, 3000, "Line: Warning event received when inactive (ignoring)\n");
   }
-  
 }
 
 void Line::mouseMoveEvent(QMouseEvent *e)
@@ -89,7 +91,12 @@ void Line::mouseMoveEvent(QMouseEvent *e)
     if ((lastx != x) || (lasty != y)) {
       if (drawing) {
 	paint.begin(canvas->zoomedPixmap());
-	paint.setPen(*pen);
+
+	if (activeButton == LeftButton)
+	  paint.setPen(leftpen);
+	else
+	  paint.setPen(rightpen);
+
 	paint.setRasterOp(XorROP);
 
 	// Draw new line
@@ -118,13 +125,17 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
 
 KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
 
-  if (isActive() && drawing && (e->button() == LeftButton)) {
+  if (isActive() && drawing && (e->button() == activeButton)) {
+    emit modified();
     x= (e->pos()).x();
     y= (e->pos()).y();
 
     // Erase old line
     paint.begin(canvas->zoomedPixmap());
-    paint.setPen(*pen);
+    if (activeButton == LeftButton)
+      paint.setPen(leftpen);
+    else
+      paint.setPen(rightpen);
     paint.setRasterOp(XorROP);
     paint.drawLine(startx, starty, lastx, lasty);
 
@@ -132,7 +143,10 @@ KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
 
     m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
     paint.begin(canvas->pixmap());
-    paint.setPen(*pen);
+    if (activeButton == LeftButton)
+      paint.setPen(leftpen);
+    else
+      paint.setPen(rightpen);
     paint.setWorldMatrix(m);
 
     paint.setRasterOp(CopyROP);
@@ -148,12 +162,14 @@ KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
-QPixmap *Line::pixmap(void)
+QPixmap *Line::pixmap()
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kde_datadir().copy();
+  pixdir= myapp->kde_datadir().copy();
   pixdir.append("/kpaint/toolbar/");
   pixdir.append("line.xpm");
   return new QPixmap(pixdir);
 }
+
+#include "line.moc"

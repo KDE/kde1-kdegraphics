@@ -11,27 +11,24 @@
 #include "spraycan.h"
 #include "app.h"
 
-extern MyApp *kpaintApp;
-
-
 SprayCan::SprayCan() : Tool()
 {
   drawing= FALSE;
   brushsize= 10;
   density= 100;
-  tooltip= klocale->translate("Spray Can");
+  tooltip= i18n("Spray Can");
   props= Tool::HasLineProperties | Tool::HasCustomProperties;
 
   timer= new QTimer(this);
   connect(timer, SIGNAL(timeout()), this, SLOT(drawDot()) );
 }
 
-SprayCan::~SprayCan(void)
+SprayCan::~SprayCan()
 {
   delete timer;
 }
 
-void SprayCan::activating(void)
+void SprayCan::activating()
 {
 KDEBUG1(KDEBUG_INFO, 3000, "SprayCan::activating() hook called canvas=%p\n", canvas);
   drawing= FALSE;
@@ -51,12 +48,13 @@ void SprayCan::mousePressEvent(QMouseEvent *e)
 {
 KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mousePressEvent() handler called\n");
   
-  if (isActive() && (e->button() == LeftButton)) {
+  if (isActive()) {
     if (drawing) {
       KDEBUG(KDEBUG_INFO, 3000, "SprayCan: Warning Left Button press received when pressed\n");
     }
     x= (e->pos()).x();
     y= (e->pos()).y();
+    activeButton= e->button();
 
     // Start the timer (multishot)
     timer->start(50, FALSE);
@@ -70,7 +68,7 @@ void SprayCan::mouseReleaseEvent(QMouseEvent *e)
 {
 KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mouseReleaseEvent() handler called\n");
   
-  if (isActive() && (e->button() == LeftButton)) {
+  if (isActive() && (e->button() == activeButton)) {
     if (drawing) {
       // Stop the timer
       timer->stop();
@@ -80,7 +78,7 @@ KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mouseReleaseEvent() handler called\n");
   }
 }
 
-void SprayCan::drawDot(void)
+void SprayCan::drawDot()
 {
   int dx,dy;
   int i;
@@ -88,13 +86,23 @@ void SprayCan::drawDot(void)
   QPainter painter2;
   QWMatrix m;
 
+  emit modified();
   m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
   painter1.begin(canvas->pixmap());
-  painter1.setPen(*pen);
+
+  if (activeButton == LeftButton)
+    painter1.setPen(leftpen);
+  else
+    painter1.setPen(rightpen);
+
   painter1.setWorldMatrix(m);
 
   painter2.begin(canvas->zoomedPixmap());
-  painter2.setPen(*pen);
+
+  if (activeButton == LeftButton)
+    painter2.setPen(leftpen);
+  else
+    painter2.setPen(rightpen);
 
   painter1.drawPoint(x, y);
   painter2.drawPoint(x, y);
@@ -114,7 +122,7 @@ QPixmap *SprayCan::pixmap()
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kde_datadir().copy();
+  pixdir= myapp->kde_datadir().copy();
   pixdir.append("/kpaint/toolbar/");
 
   pixdir.append("spraycan.xpm");

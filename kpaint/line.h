@@ -11,17 +11,21 @@
 
 class Line : public Tool
 {
+  Q_OBJECT
 public:
-  Line(void);
+  Line();
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);
-  void activating(void);
-  QPixmap *pixmap(void);
+  void activating();
+  QPixmap *pixmap();
+signals:
+  void modified();
 private:
   int startx, starty;
   int lastx, lasty;
   bool drawing;
+  int activeButton;
 };
 
 #endif // LINE_H

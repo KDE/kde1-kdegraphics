@@ -7,31 +7,49 @@
 #include <qlist.h>
 #include <qstrlist.h>
 
-// This file defines the format records for the supported file formats
-// and the manager to install them
-
+/**
+ * This file defines the format records for the supported file formats
+ * and the manager to install them
+ */
 class FormatRecord {
 public:
-  // Constants for flags
+  /**
+   * Constants for flags
+   */
   enum {InternalFormat = 1, ReadFormat = 2, WriteFormat = 4};
   
   const char *formatName;
-  unsigned int flags; // Internal? / Read? / Write?
-  char *magic; // NULL for formats kpaint should not register
+  /**
+   * Internal? / Read? / Write?
+   */
+  unsigned int flags;
+  /**
+   * 0 for formats kpaint should not register
+   */ 
+  char *magic;
   char *glob;
-  char *suffix; // Default suffix for this type
-  image_io_handler read_format; // NULL for internal formats
-  image_io_handler write_format; // NULL for internal formats
+  /**
+   * Default suffix for this type
+   */
+  char *suffix;
+  /**
+   * 0 for internal formats
+   */
+  image_io_handler read_format;
+  /**
+   * 0 for internal formats
+   */
+  image_io_handler write_format;
 
 };
 
 class FormatManager {
  public:
-   FormatManager(void);
+   FormatManager();
    virtual ~FormatManager();
    
-   const char *allImagesGlob(void);
-   QStrList *formats(void);
+   const char *allImagesGlob();
+   QStrList *formats();
    const char *glob(const char *format);
    const char *suffix(const char *format);
    // const char *description(const char *format);

@@ -12,7 +12,7 @@ class paletteDialog : public QDialog
 
 public:
   paletteDialog(QPixmap *, QWidget *parent= 0, const char *name= 0);
-  QPixmap *pixmap(void);
+  QPixmap *pixmap();
 private:
   paletteWidget *pal;
 };

@@ -12,8 +12,8 @@ class canvasSizeDialog : public QDialog
 {
 public:
   canvasSizeDialog(QWidget *parent=0, const char *name= 0);
-  int getWidth(void);
-  int getHeight(void);
+  int getWidth();
+  int getHeight();
 private:
   QLabel *widthLabel;
   QLabel *heightLabel;

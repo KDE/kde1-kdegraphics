@@ -39,7 +39,7 @@ class paletteWidget : public QTableView
    void paintCell(QPainter *p, int row, int col);
 
    void setPixmap(QPixmap *);
-   QPixmap *pixmap(void);
+   QPixmap *pixmap();
    QImage *img;
    void mousePressEvent(QMouseEvent *e);
 
