@@ -102,7 +102,7 @@ public:
 	
 	
 	Bool sendPS(FILE *fp, long begin,unsigned int len,Bool close);
-	void layout();
+	void KPSLayout( Bool force = False );
 	void disableInterpreter();
 	void enableInterpreter();
 	Bool isInterpreterReady();

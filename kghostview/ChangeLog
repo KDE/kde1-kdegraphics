@@ -1,3 +1,12 @@
+  * [Duncan Haldane] <duncan@kde.org>  Fixed bug #712; 
+	changed KPSWidget::layout() to KSPWidget::KPSLayout( Bool force )
+	to allow forcing an image update by calling KPSLayout( True )
+	for changes like Landscape<-> Seascape orientation which do not 
+	change the image size. The name layout() is changed to KPSLayout() 
+	to avoid confusion with QT's layout() function.  May 23, 1999.  
+	Fix essentially follows suggestion by submitter of Bug report:
+        Sven Fischer <herpes@kawo2.rwth.aachen.de>
+
 Version 0.7:
   * [Mark Donohoe] Patch from Jake Hamy <jehamby@lightside.com> which
                      incorporates code from Johanes Plass' GV. This adds

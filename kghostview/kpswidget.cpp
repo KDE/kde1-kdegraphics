@@ -126,7 +126,7 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 
 	// Compute fullView widget size
 
-	layout();
+	KPSLayout( False );
 }
 
 KPSWidget::~KPSWidget()
@@ -363,12 +363,12 @@ void KPSWidget::resizeEvent(QResizeEvent *)
 	movePage(); 
 }
 
-void KPSWidget::layout()
+void KPSWidget::KPSLayout( Bool force )
 {
-	//printf("KPSWidget::layout\n");
+	//printf("KPSWidget::KPSLayout\n");
 
     Bool different_size = computeSize();
-    if (different_size) {
+    if (different_size || force ) {
     	
     	//printf("Changed  layout %d, %d\n", fullWidth, fullHeight);
     	
