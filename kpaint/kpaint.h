@@ -20,6 +20,7 @@ class KPaint : public KTopLevelWidget
 
 public:
   KPaint(const char *url_= NULL);
+  ~KPaint();
 
   // File
   void fileNew();
