@@ -15,5 +15,5 @@ install:
 
 uninstall:
 	for i in $(FILES); do \
-	 rm -f $(FILES)/$$i ; \
+	 rm -f $(DOCDIR)/$$i ; \
 	done
