@@ -1,3 +1,9 @@
+1998-11-13  Alex Zepeda  <garbanzo@hooked.net>
+
+	* configure.in.1: Remove comment about this being Alpha (quality)
+	software, and update version number (now it's at 1.1pre).  Also, now
+	it uses the kde-common copy of the autoconf stuff.
+
 1998-11-08  Alex Zepeda  <alex@zippy.dyn.ml.org>
 
 	* Makefile.cvs (all): Use the kde-common version of automoc.
