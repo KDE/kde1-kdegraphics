@@ -1,18 +1,18 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Перевод kpaint.
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Denis Pershin <dyp@inetlab.com>, 1998.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-06-18 22:44+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1998-08-19 01:14+0600\n"
+"Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: app.cpp:45
 msgid ""
@@ -32,42 +32,39 @@ msgstr " [url | filename]\n"
 
 #: areaselect.cpp:17
 msgid "Area Selection"
-msgstr ""
+msgstr "Выделение области"
 
 #: canvassize.cpp:16
 msgid "Canvas Size"
 msgstr "Размер картины"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Ширина"
+msgstr "Ширина:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Высота"
+msgstr "Высота:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
 msgstr "Окружность"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Ширина изображения"
+msgstr "Глубина изображения:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Битовая карта)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 цветов)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (Полноцвет)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -99,12 +96,14 @@ msgstr "untitled.gif"
 
 #: kpaint.cpp:124
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Незаписанные изменения"
 
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"У вас есть не записанные изменения. Вы их потеряете, если сейчас закроете "
+"окно."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -135,9 +134,8 @@ msgid "New Image..."
 msgstr "Новое изображение..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Сохранить изображение..."
+msgstr "Сохранить изображение"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
@@ -164,9 +162,8 @@ msgid "Close Window"
 msgstr "Закрыть окно"
 
 #: kpaint.cpp:324
-#, fuzzy
 msgid "Exit"
-msgstr "Редактировать"
+msgstr "Выйти"
 
 #: kpaint.cpp:327
 msgid "Copy Region"
@@ -194,7 +191,7 @@ msgstr "Информация..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Изменить размер..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -226,33 +223,31 @@ msgstr "Пульверизатор"
 
 #: kpaint.cpp:351
 msgid "Area Select"
-msgstr ""
+msgstr "Выделение области"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Закругленный угол"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
-msgstr ""
+msgstr "Показать инструменты"
 
 #: kpaint.cpp:358
 msgid "Show Commands Toolbar"
-msgstr ""
+msgstr "Показать инструменты комманд"
 
 #: kpaint.cpp:359
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Показать Строку Состояния"
 
 #: kpaint.cpp:360
-#, fuzzy
 msgid "Save Options"
-msgstr "Опции..."
+msgstr "Записать Опции..."
 
 #: kpaint.cpp:369
-#, fuzzy
 msgid "KPaint"
-msgstr "О KPaint"
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -286,14 +281,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Неизвестный формат"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Ошибка: Неизвестный формат\n"
-"KPaint не может распознать формат указанного файла, или файл поврежден."
+"KPaint не может распознать формат указанного файла,\n"
+"или файл поврежден."
 
 #: kpaint.cpp:745
 msgid "Open Location:"
@@ -404,81 +399,5 @@ msgid "Set Line Colour..."
 msgstr "Установить цвет линии..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
 msgstr "Прямоугольник"
-
-#~ msgid "Continue"
-#~ msgstr "Продолжить"
-
-#~ msgid "None"
-#~ msgstr "Нет"
-
-#~ msgid "Dismiss"
-#~ msgstr "Убрать"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Неверный URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Ошибка: Неверный URL\n"
-#~ "KPaint не может распознать данный URL, проверьте его корректность."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint уже пытается получить доступ к удаленному файлу, вы должны\n"
-#~ "либо отменить текущее действие, либо ждать пока оно закончится."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Не могу найти KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Ошибка: KPaint не может найти KFM, или запустить новый."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Удаленная загрузка не удалась"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Ошибка: Удаленная загрузка не удалась\n"
-#~ "Что-то не так :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: не могу запустить KFM"
-
-#~ msgid "Save File As"
-#~ msgstr "Сохранить файл как"
-
-#~ msgid "This was a QString"
-#~ msgstr "Это была QString"
-
-#~ msgid "Cut"
-#~ msgstr "Вырезать"
-
-#~ msgid "Copy"
-#~ msgstr "Копировать"
-
-#~ msgid "Paste"
-#~ msgstr "Вставить"
-
-#~ msgid "Index"
-#~ msgstr "Индекс"
-
-#~ msgid "&File"
-#~ msgstr "Файл"
-
-#~ msgid "&Help"
-#~ msgstr "Помощь"
-
-#~ msgid "Sorry"
-#~ msgstr "Извините"
-
-#~ msgid "Browse..."
-#~ msgstr "Просмотр..."
