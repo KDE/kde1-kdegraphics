@@ -51,7 +51,7 @@ msgstr "KFax &Hjelp"
 
 #: kfax.cpp:384
 msgid "&Open Fax..."
-msgstr "&Åpne faks..."
+msgstr "Å&pne faks..."
 
 #: kfax.cpp:385
 msgid "&Add Fax..."

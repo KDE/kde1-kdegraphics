@@ -87,7 +87,7 @@ msgstr "&Preferanser ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
-msgstr "&Åpne ..."
+msgstr "Å&pne ..."
 
 #: kdvi.cpp:180
 msgid "Open &recent"

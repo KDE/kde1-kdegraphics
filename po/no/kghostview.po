@@ -274,7 +274,7 @@ msgstr "Konfigurer oversetter"
 
 #: kghostview.cpp:494
 msgid "&Open ..."
-msgstr "&Åpne ..."
+msgstr "Å&pne ..."
 
 #: kghostview.cpp:495
 msgid "Open &recent"
@@ -402,7 +402,7 @@ msgstr "Nytt vindu ..."
 
 #: kghostview.cpp:664
 msgid "Open file ..."
-msgstr "&Åpne fil..."
+msgstr "Åpne &fil..."
 
 #: kghostview.cpp:672
 msgid "Print document ..."
@@ -724,7 +724,7 @@ msgstr "Skriv ut dokument"
 
 #: print.cpp:249
 msgid "&Setup ..."
-msgstr "&Åpne ..."
+msgstr "Opp&sett ..."
 
 #: print.cpp:289
 msgid "Range error"
