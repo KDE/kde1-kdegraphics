@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-02-16 13:30+0200\n"
+"PO-Revision-Date: 1999-04-21 14:30+0100\n"
 "Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
 "First-Translator: Alonso Lara <jlaram@nexo.es>\n"
 
@@ -378,9 +378,8 @@ msgstr "Mantener Tamaño"
 
 # prefdlg.cpp:69
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "Activar/Desactivar Secuencias"
+msgstr "Secuencia"
 
 # prefdlg.cpp:72
 #: prefdlg.cpp:72

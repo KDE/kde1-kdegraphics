@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-03-05 12:00+0100\n"
+"PO-Revision-Date: 1999-04-21 14:50+0100\n"
 "Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
 "Language-Team: Spanish <kde-es@kyb.ml.org>\n"
 
@@ -532,7 +532,6 @@ msgstr ""
 
 # kiconedit.cpp:837
 #: kiconedit.cpp:837
-#, fuzzy
 msgid ""
 "Paste\n"
 "\n"
@@ -1198,7 +1197,7 @@ msgstr "&Pixmap..."
 # kiconconfig.cpp:287
 #: kiconconfig.cpp:287
 msgid "&Built-in"
-msgstr ""
+msgstr "&Interno"
 
 # kiconconfig.cpp:291
 #: kiconconfig.cpp:291

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics \n"
 "POT-Creation-Date: 1998-11-16 01:58+0100\n"
-"PO-Revision-Date: 1999-03-08 +0200\n"
+"PO-Revision-Date: 1999-04-21 14:50+0100\n"
 "Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
 
 # kfract.C:73
@@ -129,7 +129,7 @@ msgstr "1000 - 100000"
 # kfractdlgs.C:144
 #: kfractdlgs.C:144
 msgid "Bailout"
-msgstr ""
+msgstr "Limite"
 
 # kfractdlgs.C:161
 #: kfractdlgs.C:161
