@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-11-05 01:46+0100\n"
-"PO-Revision-Date: 1998-11-03 14:53+01:00\n"
+"PO-Revision-Date: 1998-11-05 07:54+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -144,15 +144,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr "verze"
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c)"
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -218,7 +214,7 @@ msgstr "Sprej"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -403,17 +399,3 @@ msgstr "32 (Pravé barvy)"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Oblé rohy"
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Uvolnìno podle GPL. Pro detaily nahlédnìte do "
-#~ "souboru LICENSE.\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Pou¾ití:"
-
-#~ msgid " [url | filename]\n"
-#~ msgstr " [url | filename]\n"
