@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 #include <kapp.h>
-#include <Kconfig.h>
+#include <kconfig.h>
 #include <qstring.h>
 
 #include "confighandler.h"
