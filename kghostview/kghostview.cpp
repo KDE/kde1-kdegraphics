@@ -762,7 +762,7 @@ void KGhostview::openNetFile( const char *_url )
 	}
 
 	// Just a usual file ?
-	if ( strcmp( u.protocol(), "file" ) == 0 ) {
+	if ( strcmp( u.protocol(), "file" ) == 0 && !u.hasSubProtocol() ) {
 		open_file( u.path() );
 		return;
 	}

@@ -14,6 +14,7 @@
 #include <kmsgbox.h>
 #include <klocale.h>
 #include <kapp.h>
+#include <kurl.h>
 
 #include "kghostview.h"
 
@@ -98,14 +99,22 @@ int main( int argc, char **argv )
 	
 		kg->filename = argv[1];
 		if (strcmp(kg->filename, "-")) {
-			if ((kg->psfile = fopen(argv[1], "r")) == 0) {
+		        KURL u( kg->filename );
+			if ( strcmp( u.protocol(), "file" ) != 0 || u.hasSubProtocol() )
+			{
+			    kg->openNetFile( kg->filename );
+			}
+			else
+			{
+			    if ((kg->psfile = fopen(argv[1], "r")) == 0) {
 				QString s;
 				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."),
-							argv[1] );
+					   argv[1] );
  				KMsgBox::message(0, i18n("Error"), s, 2 );
+			    }
+			    stat(kg->filename, &sbuf);
+			    kg->mtime = sbuf.st_mtime;
 			}
-			stat(kg->filename, &sbuf);
-			kg->mtime = sbuf.st_mtime;
 		} else {
 			printf( i18n("Didn't recognise file\n") );
 		}
