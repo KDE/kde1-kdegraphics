@@ -29,11 +29,13 @@ KDEBUG(KDEBUG_INFO, 3000, "Line::activating() hook called\n");
 
 void Line::mousePressEvent(QMouseEvent *e)
 {
-  int x,y;
+#if 0
+  int x, y;
+#endif
   QPainter paint;
 
-KDEBUG(KDEBUG_INFO, 3000, "RubberLine::mousePressEvent() handler called\n");
-  
+  KDEBUG(KDEBUG_INFO, 3000, "RubberLine::mousePressEvent() handler called\n");
+
   if (isActive()) {
     if (drawing) {
       KDEBUG(KDEBUG_INFO, 3000, "Line: Warning button press received while drawing\n");
