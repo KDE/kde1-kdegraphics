@@ -11,12 +11,12 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Disponibilizado atraves da GPL. Veja o ficheiro "
-"LICENSE para detalhes\n"
+"(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
+"Veja o ficheiro LICENSE para detalhes\n"
 
 #: app.cpp:41
 msgid "Usage: "
-msgstr "Utilização"
+msgstr "Utilização: "
 
 #: app.cpp:43
 msgid " [url | filename]\n"
@@ -196,7 +196,7 @@ msgstr "Mostrar Barra de Ferramentas"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
-msgstr "Mostras Barra de Status"
+msgstr "Mostrar Barra de Status"
 
 #: kpaint.cpp:253
 msgid "Save Options"
@@ -220,14 +220,14 @@ msgstr "&Ferramenta"
 
 #: kpaint.cpp:407
 msgid "KPaint: Could not open file"
-msgstr "KPaint: Não foi possivel abrir o ficheiro"
+msgstr "KPaint: Não foi possível abrir o ficheiro"
 
 #: kpaint.cpp:408
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
 msgstr ""
-"Erro: Não foi possivel abrir o ficheiro\n"
+"Erro: Não foi possível abrir o ficheiro\n"
 "KPaint não conseguir abrir o ficheiro especificado."
 
 #: kpaint.cpp:411 kpaint.cpp:421 kpaint.cpp:444 kpaint.cpp:459 kpaint.cpp:470
@@ -247,7 +247,7 @@ msgid ""
 msgstr ""
 "Erro: Formato Desconhecido\n"
 "KPaint não reconhece o formato do ficheiro especificado ou o ficheiro "
-"estácorrompido."
+"está corrompido."
 
 #: kpaint.cpp:440 kpaint.cpp:552
 msgid "KPaint: Malformed URL"
@@ -259,7 +259,7 @@ msgid ""
 "KPaint does not understand the specifed URL, check it's correct."
 msgstr ""
 "Erro: URL Inválido\n"
-"KPaint não compreende o URL especificao, verifique se está correcto."
+"KPaint não compreende o URL especificado, verifique se está correcto."
 
 #: kpaint.cpp:457 kpaint.cpp:569
 msgid ""
@@ -396,7 +396,7 @@ msgstr "Espessura de Linha:"
 
 #: properties.cpp:254
 msgid "End style:"
-msgstr "Estilo de Fim:"
+msgstr "Estilo de fim:"
 
 #: properties.cpp:259 properties.cpp:272
 msgid "Not Yet"
@@ -404,7 +404,7 @@ msgstr "Ainda Não"
 
 #: properties.cpp:266
 msgid "Join style:"
-msgstr "Estilo de Junção:"
+msgstr "Estilo de junção:"
 
 #: properties.cpp:278
 msgid "Set Line Colour..."

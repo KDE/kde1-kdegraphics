@@ -23,9 +23,9 @@ msgid ""
 "The change in font path will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"A alteração no path das fontes só se dará\n"
+"A alteração na localização das fontes só se dará\n"
 "quando você iniciar o kdvi outra vez!"
-	
+
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
@@ -128,7 +128,7 @@ msgstr "&Teclas ..."
 
 #: kdvi.cpp:216
 msgid "Make PK-&fonts"
-msgstr "Fazer PK-&fonts"
+msgstr "Fazer &fontes PK"
 
 #: kdvi.cpp:218
 msgid "Show PS"
@@ -136,7 +136,7 @@ msgstr "Mostrar PS"
 
 #: kdvi.cpp:220
 msgid "Show &Menubar"
-msgstr "Mostrar barra de &Ménu"
+msgstr "Mostrar barra de &Menu"
 
 #: kdvi.cpp:222
 msgid "Show &Buttons"
@@ -212,11 +212,11 @@ msgstr "Aumentar ampliação"
 
 #: kdvi.cpp:299
 msgid "Scroll window and switch the page"
-msgstr "**** janela e mudar a página"
+msgstr "Descer janela e mudar a página"
 
 #: kdvi.cpp:308
 msgid "Select page and mark pages for printing"
-msgstr "Selecione página e marque página para imprimir"
+msgstr "Seleccione página e marque página para imprimir"
 
 #: kdvi.cpp:323
 msgid "X:0000, Y:0000 "
@@ -288,7 +288,7 @@ msgstr "Configurar teclas"
 
 #: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle show PS"
-msgstr "Mudar mostra PS"
+msgstr "Mostrar/esconder PS"
 
 #: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle menu bar"
@@ -332,7 +332,7 @@ msgstr "O diálogo de impressão está aberto"
 
 #: kdvi.cpp:572
 msgid "View size fits page"
-msgstr "Tamanho de visualizaçao enche página"
+msgstr "Tamanho de visualização enche página"
 
 #: kdvi.cpp:581
 msgid "View width fits page"
@@ -356,11 +356,11 @@ msgstr "Ir para"
 
 #: kdvi.cpp:714
 msgid "Missing PK-fonts will be generated"
-msgstr "Fontes-PK em falta serão geradas"
+msgstr "Fontes PK em falta serão geradas"
 
 #: kdvi.cpp:715
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
-msgstr "Registo de fontes-PK em falta será escrito em 'missfont.log'"
+msgstr "Registo de fontes PK em falta será escrito em 'missfont.log'"
 
 #: kdvi.cpp:731
 msgid "Postcsript specials are rendered"
@@ -368,15 +368,15 @@ msgstr "Especiais de Postscript são mostradas"
 
 #: kdvi.cpp:732
 msgid "Postscript specials are not rendered"
-msgstr "Especias de Postscript não são mostradas"
+msgstr "Especiais de Postscript não são mostradas"
 
 #: kdvi.cpp:748
 msgid "No menu bar"
-msgstr "Sem barra de menú"
+msgstr "Sem barra de menu"
 
 #: kdvi.cpp:748
 msgid "Menu bar is shown"
-msgstr "Com barra de menú"
+msgstr "Com barra de menu"
 
 #: kdvi.cpp:766
 msgid "No button bar"
@@ -526,7 +526,7 @@ msgstr "Modo metafont"
 
 #: prefs.cpp:292
 msgid "PK Font Path"
-msgstr "Localizaçao das Fontes-PK"
+msgstr "Localização das Fontes PK"
 
 #: prefs.cpp:301
 msgid "Shrink factor for small text"
@@ -542,7 +542,7 @@ msgstr "Fontes"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"
-msgstr "Mostrar especias do postscript"
+msgstr "Mostrar especiais do postscript"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
