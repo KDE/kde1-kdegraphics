@@ -45,7 +45,7 @@ MarkList::MarkList( QWidget * parent , const char * name )
 	
 }
 
-void	MarkList::insertItem ( const char *text, int index=-1)
+void	MarkList::insertItem ( const char *text, int index)
 {
 	MarkListItem *mli = new MarkListItem( text );
 	items.insert( index, mli );

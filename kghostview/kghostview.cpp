@@ -319,9 +319,10 @@ void KGhostview::bindKeys()
 
 	// Register the main widget
 	
+	KGhostview *kg_temp = NULL;
 	int window_count=0;
 	QString widgetName;
-	for ( KGhostview *kg_temp = KGhostview::windowList.first(); kg_temp!=0;
+	for (kg_temp = KGhostview::windowList.first(); kg_temp!=0;
 		kg_temp=KGhostview::windowList.next() )
 	{
 	
@@ -335,7 +336,7 @@ void KGhostview::bindKeys()
 	
 	kKeys->registerWidget(widgetName.data(), this);
 
-	KGhostview *kg_temp = this;
+	kg_temp = this;
 	
 	// define the connection for the main widget
 	
@@ -1554,7 +1555,6 @@ void KGhostview::printStart()
 				 strlen(i18n("Printer Name : ")) + 2);
 	    sprintf(buf, "%s\n%s", error.data(), i18n("Printer Name : "));
 	    fprintf(stderr, "%s\n%s\n", error.data(), i18n("Printer Name : ")); //prompt
-	    free(error);
 	    free(buf);
 	}
 	

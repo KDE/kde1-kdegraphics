@@ -212,8 +212,6 @@ psscan(file)
     char *cp;
     struct documentmedia *dmp;
     
-    //printf("PS::psscan\n");
-
     rewind(file);
     if (readline(line, sizeof line, file, &position, &line_len) == NULL) {
 	fprintf(stderr, "Warning: empty file.\n");
@@ -1017,8 +1015,6 @@ psfree(doc)
     struct document *doc;
 {
     int i;
-
-	//printf("PS::psfree\n");
 
     if (doc) {
     printf("This document exists\n");
