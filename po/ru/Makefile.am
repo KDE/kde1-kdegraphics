@@ -5,10 +5,8 @@ POFILES = $(GMFILES:.gmo=.po)
 
 LANG = ru
 
-localedir = $(prefix)/share/locale
+localedir = $(kde_locale)
 
-GMSGFMT = @GMSGFMT@
-MSGFMT = @MSGFMT@
 DISTFILES = Makefile.am Makefile.in $(POFILES) $(GMOFILES)
 
 all: all-@USE_NLS@
