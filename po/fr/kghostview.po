@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-07 02:04+0100\n"
+"POT-Creation-Date: 1998-11-08 02:03+0100\n"
 "PO-Revision-Date: 1998-01-28 23:33 CET\n"
 "Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"

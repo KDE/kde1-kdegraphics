@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils\n"
-"POT-Creation-Date: 1998-11-07 02:04+0100\n"
+"POT-Creation-Date: 1998-11-08 02:03+0100\n"
 "PO-Revision-Date: 1998-10-17 20:00+0100\n"
 "Last-Translator: Neno Kolonic <kolonic@yahoo.com>\n"
 "Language-Team: MacedonianMIME-Version: 1.0\n"

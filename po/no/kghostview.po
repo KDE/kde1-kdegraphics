@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kghostview\n"
-"POT-Creation-Date: 1998-11-07 02:04+0100\n"
+"POT-Creation-Date: 1998-11-08 02:03+0100\n"
 "PO-Revision-Date: 1998-03-31 22:12+0100\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
