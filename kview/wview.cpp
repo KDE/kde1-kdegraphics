@@ -77,53 +77,53 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 
 	// Main Menu
 
-	Menu->insertItem("&File", File);
-	Menu->insertItem("&Image", Image);
+	Menu->insertItem(i18n("&File"), File);
+	Menu->insertItem(i18n("&Image"), Image);
 	Menu->insertSeparator();
-	Menu->insertItem("&Help", Help);
+	Menu->insertItem(i18n("&Help"), Help);
 
 	// File Menu
 
-	File->insertItem("&Open File..", this, SLOT(loadImage()), CTRL+Key_O);
-	File->insertItem("Open &URL..", this, SLOT(loadURL()), CTRL+Key_U);
+	File->insertItem(i18n("&Open File.."), this, SLOT(loadImage()), CTRL+Key_O);
+	File->insertItem(i18n("Open &URL.."), this, SLOT(loadURL()), CTRL+Key_U);
 	File->insertSeparator();
 	File->insertSeparator();
-	File->insertItem("&Close",this, SLOT(closeWindow()),CTRL+Key_C);
-	File->insertItem("E&xit", qApp, SLOT(quit()), ALT + Key_Q );
+	File->insertItem(i18n("&Close"),this, SLOT(closeWindow()),CTRL+Key_C);
+	File->insertItem(i18n("E&xit"), qApp, SLOT(quit()), ALT + Key_Q );
 
 	// Image Menu
-	Image->insertItem("&Zoom", ImageZoom);
-	Image->insertItem("&Rotate", ImageRotate);
-	Image->insertItem("To &Desktop", ImageRoot);
+	Image->insertItem(i18n("&Zoom"), ImageZoom);
+	Image->insertItem(i18n("&Rotate"), ImageRotate);
+	Image->insertItem(i18n("To &Desktop"), ImageRoot);
 	Image->insertSeparator();
-	Image->insertItem("&Toggle Menu",this,SLOT(toggleMenu()));
-	Image->insertItem("&Size Window", this, SLOT(sizeWindow()));
+	Image->insertItem(i18n("&Toggle Menu"),this,SLOT(toggleMenu()));
+	Image->insertItem(i18n("&Size Window"), this, SLOT(sizeWindow()));
 	Image->insertSeparator();
-	Image->insertItem("I&mage Info", this, SLOT(imageInfo()));
+	Image->insertItem(i18n("I&mage Info"), this, SLOT(imageInfo()));
 
 	// Image/Zoom
 
-	ImageZoom->insertItem("&in", this, SLOT(zoomIn()), Key_Plus);
-	ImageZoom->insertItem("&out", this, SLOT(zoomOut()), Key_Minus);
+	ImageZoom->insertItem(i18n("&in"), this, SLOT(zoomIn()), Key_Plus);
+	ImageZoom->insertItem(i18n("&out"), this, SLOT(zoomOut()), Key_Minus);
 
 	// Image/Rotate
 
-	ImageRotate->insertItem("&Clockwise",this,SLOT(rotateClockwise()),
+	ImageRotate->insertItem(i18n("&Clockwise"),this,SLOT(rotateClockwise()),
 		Key_Greater);
-	ImageRotate->insertItem("&Anti-clock", this, 
+	ImageRotate->insertItem(i18n("&Anti-clock"), this, 
 		SLOT(rotateAntiClockwise()), Key_Less);
 
 	// Image/Root
 
-	ImageRoot->insertItem("Ti&le", this, SLOT(tileToDesktop()));
-	ImageRoot->insertItem("&Max Size", this, SLOT(maxToDesktop()));
-	ImageRoot->insertItem("M&axpect", this, SLOT(maxpectToDesktop()));
+	ImageRoot->insertItem(i18n("Ti&le"), this, SLOT(tileToDesktop()));
+	ImageRoot->insertItem(i18n("&Max Size"), this, SLOT(maxToDesktop()));
+	ImageRoot->insertItem(i18n("M&axpect"), this, SLOT(maxpectToDesktop()));
 
 
 
 	// Help Menu
 
-	id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
+	id= Help->insertItem(i18n("&Contents"), this, SLOT(launchHelp()));
 
 
 	// Toggle menu if Image is clicked.

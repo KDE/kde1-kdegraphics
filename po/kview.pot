@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1998-08-09 13:31+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: wview.cpp:81
+msgid "&Image"
+msgstr ""
+
+#: wview.cpp:87
+msgid "&Open File.."
+msgstr ""
+
+#: wview.cpp:88
+msgid "Open &URL.."
+msgstr ""
+
+#: wview.cpp:95
+msgid "&Zoom"
+msgstr ""
+
+#: wview.cpp:96
+msgid "&Rotate"
+msgstr ""
+
+#: wview.cpp:97
+msgid "To &Desktop"
+msgstr ""
+
+#: wview.cpp:99
+msgid "&Toggle Menu"
+msgstr ""
+
+#: wview.cpp:100
+msgid "&Size Window"
+msgstr ""
+
+#: wview.cpp:102
+msgid "I&mage Info"
+msgstr ""
+
+#: wview.cpp:106
+msgid "&in"
+msgstr ""
+
+#: wview.cpp:107
+msgid "&out"
+msgstr ""
+
+#: wview.cpp:111
+msgid "&Clockwise"
+msgstr ""
+
+#: wview.cpp:113
+msgid "&Anti-clock"
+msgstr ""
+
+#: wview.cpp:118
+msgid "Ti&le"
+msgstr ""
+
+#: wview.cpp:119
+msgid "&Max Size"
+msgstr ""
+
+#: wview.cpp:120
+msgid "M&axpect"
+msgstr ""

@@ -140,10 +140,10 @@ void Fileman::initMenuBar()
 
   
   menubar = new KMenuBar(this,"menubar");
-  menubar->insertItem("File", file);
-  menubar->insertItem("Options", options);
-  //menubar->insertItem("Cache", cacheSize);
-  menubar->insertItem("Help", help);
+  menubar->insertItem(i18n("File"), file);
+  menubar->insertItem(i18n("Options"), options);
+  //menubar->insertItem(i18n("Cache"), cacheSize);
+  menubar->insertItem(i18n("Help"), help);
   setMenu(menubar);
 }
 
