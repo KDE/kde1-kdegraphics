@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1999-03-24 10:55+0100\n"
+"PO-Revision-Date: 1999-04-23 10:00+0100\n"
 "Last-Translator:Matthias Kiefer <matthias.kiefer@gmx.de>\n"
 "Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -97,7 +97,7 @@ msgstr "Ö&ffnen..."
 
 #: kdvi.cpp:181
 msgid "Open &recent"
-msgstr "&Zuletzt benutzte"
+msgstr "&Zuletzt geöffnete"
 
 #: kdvi.cpp:183
 msgid "&Print ..."
@@ -181,7 +181,7 @@ msgstr "Status&leiste anzeigen"
 
 #: kdvi.cpp:230
 msgid "Show Scro&llbars"
-msgstr "S&croll-Leisten anzeigen"
+msgstr "S&crolleisten anzeigen"
 
 #: kdvi.cpp:239
 msgid "DVI Viewer"
@@ -343,7 +343,7 @@ msgstr "Statusleiste an/aus"
 
 #: kdvi.cpp:362 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Scroll-Leisten an/aus"
+msgstr "Scrolleisten an/aus"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
@@ -439,11 +439,11 @@ msgstr "Statusleiste an"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Scroll-Leisten an"
+msgstr "Scrolleisten an"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
-msgstr "Scroll-Leisten aus"
+msgstr "Scrolleisten aus"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -516,7 +516,7 @@ msgstr "Seitenliste"
 
 #: prefs.cpp:217
 msgid "Scroll Bars"
-msgstr "Scroll-Leisten"
+msgstr "Scrolleisten"
 
 #: prefs.cpp:239
 msgid "Number of recent files"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
 "POT-Creation-Date: 1999-04-23 02:23+0200\n"
-"PO-Revision-Date: 1998-03-27 16:23 +0100\n"
+"PO-Revision-Date: 1998-04-23 09:40 +0100\n"
 "Last-Translator: Matthias Kiefer <matthias.kiefer@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -358,7 +358,7 @@ msgstr "&Neu"
 
 #: kghostview.cpp:511
 msgid "&Open ..."
-msgstr "Ö&ffnen ..."
+msgstr "Ö&ffnen..."
 
 #: kghostview.cpp:512
 msgid "Open &recent"
@@ -382,11 +382,11 @@ msgstr "Ver&kleinern"
 
 #: kghostview.cpp:534
 msgid "&Zoom ..."
-msgstr "&Zoom ..."
+msgstr "&Vergrößerung..."
 
 #: kghostview.cpp:539
 msgid "&Info ..."
-msgstr "&Info ..."
+msgstr "&Info..."
 
 #: kghostview.cpp:544
 msgid "&Previous Page"
@@ -398,7 +398,7 @@ msgstr "&Nächste Seite"
 
 #: kghostview.cpp:548
 msgid "&Go to page ..."
-msgstr "&Gehe zu Seite"
+msgstr "&Gehe zu Seite..."
 
 #: kghostview.cpp:551
 msgid "Go to &start"
@@ -450,11 +450,11 @@ msgstr "Seiten&liste anzeigen"
 
 #: kghostview.cpp:588
 msgid "Configure &interpreter ..."
-msgstr "&Interpreter konfigurieren ..."
+msgstr "&Interpreter konfigurieren..."
 
 #: kghostview.cpp:589
 msgid "Configure &key bindings ..."
-msgstr "&Tastenbelegung ..."
+msgstr "&Tastenbelegung..."
 
 #: kghostview.cpp:591
 msgid "&Save options"
@@ -462,11 +462,11 @@ msgstr "&Einstellungen sichern"
 
 #: kghostview.cpp:598
 msgid "&About this application"
-msgstr "Ü&ber kghostview ..."
+msgstr "Ü&ber kghostview..."
 
 #: kghostview.cpp:600
 msgid "&Help for this application"
-msgstr "&Bedienungsanleitung ..."
+msgstr "&Bedienungsanleitung..."
 
 #: kghostview.cpp:602
 msgid "&Copyright"
@@ -510,7 +510,7 @@ msgstr "Neues Fenster..."
 
 #: kghostview.cpp:679
 msgid "Open file ..."
-msgstr "Datei Öffnen ..."
+msgstr "Datei Öffnen..."
 
 #: kghostview.cpp:687
 msgid "Print document ..."
@@ -534,7 +534,7 @@ msgstr "Vorwärts"
 
 #: kghostview.cpp:706
 msgid "Go to page ..."
-msgstr "Gehe zu Seite ..."
+msgstr "Gehe zu Seite..."
 
 #: kghostview.cpp:711
 msgid "Go to start"
@@ -587,7 +587,7 @@ msgstr "Kann KFM nicht finden oder starten."
 
 #: kghostview.cpp:1318
 msgid "Go to ..."
-msgstr "Zu Seite ..."
+msgstr "Zu Seite..."
 
 #: kghostview.cpp:1577
 msgid "Version 0.6"
@@ -609,7 +609,7 @@ msgid ""
 msgstr ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
+"Email : donohoe@kde.org"
 
 #: kghostview.cpp:1638 kghostview.cpp:1758
 msgid "Error printing"
@@ -692,7 +692,7 @@ msgstr "Sk.%d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
+msgstr "&Vergrößerungsfaktor"
 
 #~ msgid "View Control"
 #~ msgstr "Anzeigekontrolle"
