@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1998-10-24 22:11 CEST\n"
+"PO-Revision-Date: 1998-12-30 19:38 CET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -68,10 +68,9 @@ msgstr "Co to je? Problém DVI!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Stav souboru se zmìnil."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
 msgstr "Soubor znovu naèten"
 
@@ -470,9 +469,9 @@ msgid "Small text button set to shrink factor "
 msgstr "Zmen¹ovací faktor pro malý text je nastaven na "
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Zmen¹ení: xx"
+msgstr "Zmen¹ení: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"
