@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Date: 1998-03-08 16:14:13-0500\n"
+"From: Bernd Johannes Wuebben,201 Lincoln Hall,,256-1036, <root@petit.cornell.edu>\n"
+"Content-Type: text/plain; charset=\n"
+"Xgettext-Options: -C -ki18n -x../../kdelibs/po/kde.pot\n"
+"Files: about.cpp faxexpand.cpp faxinit.cpp faxinput.cpp g3hack.cpp kfax.cpp options.cpp print.cpp viewfax.cpp\n"
+
+#: about.cpp:39
+msgid "About KFax"
+msgstr "Tietoja KFax:ta"
+
+#: about.cpp:58
+msgid "Version "
+msgstr "Versio "
+
+#: kfax.cpp:222 kfax.cpp:820
+msgid "Show &Tool Bar"
+msgstr "Näytä &painikepalkki"
+
+#: kfax.cpp:224 kfax.cpp:813
+msgid "Hide &Tool Bar"
+msgstr "&Piilota painikepalkki"
+
+#: kfax.cpp:227 kfax.cpp:793
+msgid "Show &Status Bar"
+msgstr "Näytä &tilarivi"
+
+#: kfax.cpp:229 kfax.cpp:786
+msgid "Hide &Status Bar"
+msgstr "P&iilota tilarivi"
+
+#: kfax.cpp:380
+msgid "&About..."
+msgstr "&Tietoja..."
+
+#: kfax.cpp:381
+msgid "Help page"
+msgstr "Ohje"
+
+#: kfax.cpp:382
+msgid "KFax &Help "
+msgstr "KFax &Ohje"
+
+#: kfax.cpp:384
+msgid "&Open Fax..."
+msgstr "&Avaa Faksi..."
+
+#: kfax.cpp:385
+msgid "&Add Fax..."
+msgstr "&Lisää Faksi"
+
+#: kfax.cpp:388
+msgid "Open &URL..."
+msgstr "Avaa &URL..."
+
+#: kfax.cpp:389
+msgid "Save to U&RL..."
+msgstr "&Tallenna URL..."
+
+#: kfax.cpp:390
+msgid "&Close Fax"
+msgstr "&Sulje faksi"
+
+#: kfax.cpp:397
+msgid "&Next Page"
+msgstr "&Seuraava sivu"
+
+#: kfax.cpp:398
+msgid "&Prev Page"
+msgstr "&Edellinen sivu"
+
+#: kfax.cpp:399
+msgid "&First Page"
+msgstr "E&nsimmäinen sivu"
+
+#: kfax.cpp:400
+msgid "&Last Page"
+msgstr "&Viimeinen sivu"
+
+#: kfax.cpp:402
+msgid "&Rotate Page"
+msgstr "&Pyöritä sivua"
+
+#: kfax.cpp:403
+msgid "&Mirror Page"
+msgstr "Pei&laa sivu"
+
+#: kfax.cpp:404
+msgid "&Flip Page"
+msgstr "&Käännä sivu"
+
+#: kfax.cpp:406
+msgid "Zoom &in"
+msgstr "&Suurenna"
+
+#: kfax.cpp:407
+msgid "Zoom &out"
+msgstr "Pi&enennä"
+
+#: kfax.cpp:412
+msgid "&Fax Options"
+msgstr "&Faksin asetukset"
+
+#: kfax.cpp:414
+msgid "&Tool Bar"
+msgstr "&Painikepalkki"
+
+#: kfax.cpp:415
+msgid "&Status Bar"
+msgstr "&Tilarivi"
+
+#: kfax.cpp:442
+msgid "Go back"
+msgstr "Taakse"
+
+#: kfax.cpp:445
+msgid "Go forward"
+msgstr "Eteen"
+
+#: kfax.cpp:450
+msgid "Go to start"
+msgstr "Alkuun"
+
+#: kfax.cpp:453
+msgid "Go to end"
+msgstr "Loppuun"
+
+#: kfax.cpp:459
+msgid "Zoom in"
+msgstr "Suurenna"
+
+#: kfax.cpp:462
+msgid "Zoom out"
+msgstr "Pienennä"
+
+#: kfax.cpp:467
+msgid "Print document"
+msgstr "Tulosta"
+
+#: kfax.cpp:476
+msgid "Go to page ..."
+msgstr "Siirry sivulle ..."
+
+#: kfax.cpp:562
+msgid "Open Location:"
+msgstr "Avaa kohde:"
+
+#: kfax.cpp:578
+msgid "You need to open a Fax first"
+msgstr "Sinun on avattava faksi ensin"
+
+#: kfax.cpp:584
+msgid "Save to Location:"
+msgstr "Tallenna kohteeseen:"
+
+#: kfax.cpp:625
+msgid "Select Facsimile to Open"
+msgstr "Valitse avattava faksi"
+
+#: kfax.cpp:662
+msgid "Select Facsimile to Add"
+msgstr "Valitse liitettävä faksi"
+
+#: kfax.cpp:804
+msgid "Not yet implemented"
+msgstr "Ei vielä toteutettu"
+
+#: kfax.cpp:854
+msgid "     There is no document active      "
+msgstr "   Dokumenttia ei ole aktiivisena    "
+
+#: kfax.cpp:988
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Virheellinen sivun koko:\n"
+"Leveys %.2f Korkeus %.2f\n"
+
+#: kfax.cpp:1004
+msgid "Can't print to \"%s\"\n"
+msgstr "En saanut tulostettua \"%s\"\n"
+
+#: kfax.cpp:1015
+msgid "Couldn't create %s\n"
+msgstr "En saanut luotua %s\n"
+
+#: kfax.cpp:1085
+msgid "Saving ..."
+msgstr "Tallennan ..."
+
+#: kfax.cpp:1092
+msgid "Loading ..."
+msgstr "Lataan ..."
+
+#: kfax.cpp:1119 kfax.cpp:1155
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"Virhe 'copy file() toiminnossa'\n"
+"En voinut tallentaa tiedostoa!"
+
+#: kfax.cpp:1125
+msgid "Saved"
+msgstr "Tallennettu"
+
+#: kfax.cpp:1132 kfax.cpp:1194
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax odottaa Internet työn\n"
+"valmistumista. Odota hetki.\n"
+
+#: kfax.cpp:1143 kfax.cpp:1207
+msgid "Could not communicate with KFM"
+msgstr "En saanut kommunikoitua KFM:n kanssa"
+
+#: kfax.cpp:1184
+msgid "Loading '%s'"
+msgstr "Lataan '%s'"
+
+#: kfax.cpp:1201
+msgid "Calling KFM"
+msgstr "Kutsun KFM"
+
+#: kfax.cpp:1214
+msgid "Starting Job"
+msgstr "Aloitan työn"
+
+#: kfax.cpp:1217
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: kfax.cpp:1219
+msgid "Waiting..."
+msgstr "Odotan..."
+
+#: kfax.cpp:2070
+msgid "You need to open a fax page first."
+msgstr "Sinun tulee avata faksisivu ensin."
+
+#: kfax.cpp:2740
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Samalla nimellä on jo tiedosto olemassa\n"
+"Haluatko korvata sen tällä tiedostolla?\n"
+"\n"
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "KFax Asetusdialogi"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Raakafaksin tarkkuus:"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Automaattinen"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Tarkka"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Näytön asetukset:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Vaakasuntainen"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Ylösalaisin"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Käänteinen"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Raakafaksidata on:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "LS-bitit ensin"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Raakafaksit ovat:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "Raakafaksin leveys:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "korkeus:"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "KFax tulostusdialogi"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Tulosta postscriptinä tulostimelle"
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Tulostuskomento:"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Tulosta postscriptinä tiedostoon:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Selaa"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Sivun koko:"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Skaalaa faksi sivukokoon"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Lisää tulostimen mariginaalit (cm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Vaakasuuntainen:"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Pystysuuntainen:"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Valitse tiedostonimi"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "Sinun on annettava tiedostonimi jos haluat tulostaa tiedostoon."
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"Sinun on annettava tulostuskomento kuten \"lpr\"\n"
+" jos haluat tulostaa tulostimelle."
