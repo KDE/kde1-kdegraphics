@@ -1,13 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-02-06 23:03+0100\n"
-"Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
-"Language-Team: Spanish <kde-es@kyb.uni-stuttgart.de>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"PO-Revision-Date: 1999-02-16 13:30+0200\n"
+"Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
+"First-Translator: Alonso Lara <jlaram@nexo.es>\n"
 
 #: viewer.cpp:95
 msgid "no image loaded"
@@ -111,7 +107,7 @@ msgstr "&Preferencias..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
-msgstr "&Zoom..."
+msgstr "A&cercamiento..."
 
 #: viewer.cpp:376
 #, c-format
@@ -157,23 +153,25 @@ msgstr "Invertir &horizontal"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr "Escritorio &Tile"
+msgstr "Al Escritorio &Mosaico"
 
 #: viewer.cpp:405
+#, 
 msgid "Desktop &Max"
-msgstr "Escritorio &Max"
+msgstr "Al Escritorio &Centrado"
 
 #: viewer.cpp:407
+#, 
 msgid "Desktop Max&pect"
-msgstr "Escritorio Max&pect"
+msgstr "Al escritorio Max&pect"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr "&Como hago..."
+msgstr "¿&Cómo puedo ...?"
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr "&Qué es un..."
+msgstr "¿&Qué es un...?"
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -286,7 +284,7 @@ msgstr "Iniciar &secuencia"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr "Preferencias de kView"
+msgstr "KView Preferencias"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
@@ -294,23 +292,25 @@ msgstr "&Aplicar"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr "En Carga"
+msgstr "Cargando"
 
 #: prefdlg.cpp:58
+#, 
 msgid "Resize Window"
-msgstr "Cambiar Tamaño de Ventana"
+msgstr "Cambiar Tamaño Ventana"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr "Cambiar Tamaño de Imagen"
+msgstr "Cambiar Tamaño Imagen"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr "No Cambiar Tamaño"
+msgstr "Mantener Tamaño"
 
 #: prefdlg.cpp:69
+#, fuzzy
 msgid "Slideshow"
-msgstr "Secuencia"
+msgstr "Activar/Desactivar Secuencias"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -318,8 +318,32 @@ msgstr "Bucle"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr "Intervalo en Secuencia (seg)"
+msgstr "Intervalo de secuencias (seg)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr "&Teclas"
+msgstr "&Keys"
+
+#~ msgid "&Tile"
+#~ msgstr "E&mbaldosar"
+
+#~ msgid "&Max"
+#~ msgstr "&Max"
+
+#~ msgid "Interval.."
+#~ msgstr "Intervalo.."
+
+#~ msgid "Time between slides (sec):"
+#~ msgstr "Tiempo entre secuencias (seg):"
+
+#~ msgid "Fi&lter"
+#~ msgstr "Fi&ltro"
+
+#~ msgid "&Open.."
+#~ msgstr "&Abrir.."
+
+#~ msgid "Darkening..."
+#~ msgstr "Oscureciendo..."
+
+#~ msgid "Intensity:Darken"
+#~ msgstr "Intensidad:Oscuridad"

@@ -2,19 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-02-06 23:51+0100\n"
-"Last-Translator: alonso Lara <jlaram@nexo.es>\n"
-"Language-Team: Spanish <kde-es@kyb.uni-stuttgart.de>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"PO-Revision-Date: 1999-02-20 20:10+0200\n"
+"Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
+"Language-Team: Spanish <kde-es@kyb.ml.org>\n"
 
 #: ksnapshot.cpp:40
 msgid "snapshot"
 msgstr "instantanea"
 
 #: ksnapshot.cpp:94
-#, c-format
+#,  c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -24,13 +21,13 @@ msgid ""
 "\n"
 "Version: %s"
 msgstr ""
-"Presione el botón `Grabar', entonces pulse\n"
+"Presione el botón `Grabar', después pulse\n"
 "sobre una ventana para grabarla.\n"
 "\n"
 "KSnapshot es copyright de Richard Moore (rich@kde.org)\n"
 "y está publicado bajo la LGPL\n"
 "\n"
-"Versión: %s"
+"Versión: "
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
