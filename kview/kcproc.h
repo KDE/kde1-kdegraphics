@@ -43,15 +43,17 @@ public:
 	* Convert the RGB values (in range 0-255) to 
 	* HSV values (range 0-1). The values are stored 
 	* back in the RGB references passed as arguments.
+	* @return false if conversion failed.
 	*/
-	static void toHSV( double& r, double& g, double& b );
+	static bool toHSV( double& r, double& g, double& b );
 
 	/**
 	* Convert the HSV values (in range 0-1) to 
 	* RGB values (range 0-255). The values are stored 
 	* back in the HSV references passed as arguments.
+	* @return always true
 	*/
-	static void toRGB( double& h, double& s, double& v );
+	static bool toRGB( double& h, double& s, double& v );
 
 	/**
 	* Intialize gamma tables to the provided gamma value.

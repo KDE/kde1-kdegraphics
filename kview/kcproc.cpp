@@ -45,21 +45,25 @@ KColourProc::~KColourProc()
 // From Harrington 2nd Ed Chap 10
 //
 
-void KColourProc::toHSV( double& r, double& g, double &b )
+bool KColourProc::toHSV( double& r, double& g, double &b )
 {
+	double v = max( r, g, b );
+	double x = min( r, g, b );
+
+	if( v == x ) {
+		return false;
+	}
+
 	r /= 255; 
 	g /= 255;
 	b /= 255;
 
-	double v = max( r, g, b );
-	double x = min( r, g, b );
+	v = max( r, g, b );
+	x = min( r, g, b );
+
 	double vmx = ( v - x );
 	double s = vmx / v;
 	
-	if( v == x ) {
-		return;
-	}
-
 	double r1 = ( v - r ) / vmx;
 	double b1 = ( v - b ) / vmx;
 	double g1 = ( v - g ) / vmx;
@@ -87,12 +91,13 @@ void KColourProc::toHSV( double& r, double& g, double &b )
 	g = s;
 	b = v;
 	
+	return true;
 }
 
 //
 // From Harrington 2nd Ed Chap 10
 //
-void KColourProc::toRGB( double& h, double& s, double &v )
+bool KColourProc::toRGB( double& h, double& s, double &v )
 {
 	// convert from degrees to hexagon section
 	double h1 = h / 60.0;
@@ -114,6 +119,8 @@ void KColourProc::toRGB( double& h, double& s, double &v )
 	v = a[ i ] * 255.0;
 	i += ( i > 4 ) ? -4 : + 2;
 	s = a[ i ] * 255.0;
+
+	return true;
 }
 
 
@@ -140,7 +147,8 @@ void KColourProc::gammaCorrect( int& r, int& g, int& b ) const
 	double dg = (double)g;
 	double db = (double)b;
 
-	toHSV( dr, dg, db );
+	if( toHSV( dr, dg, db ) == false ) 
+		return;
 	db = _gammat [ (int) (db * MAX_GAMMA) ];
 	toRGB( dr, dg, db );
 
