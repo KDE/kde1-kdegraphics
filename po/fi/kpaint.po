@@ -220,9 +220,8 @@ msgid "Show Tools Toolbar"
 msgstr "Näytä työkalupalkki"
 
 #: kpaint.cpp:362
-#, fuzzy
 msgid "Show Commands Toolbar"
-msgstr "Näytä työkalupalkki"
+msgstr "Näytä komentojen työkalupalkki"
 
 #: kpaint.cpp:363
 msgid "Show Status Bar"
