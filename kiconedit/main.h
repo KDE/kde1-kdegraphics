@@ -22,6 +22,7 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
+#include <kapp.h>
 #include <qlist.h>
 #include <qwidget.h>
 #include <qimage.h>
@@ -32,6 +33,24 @@
 /** Global list of top level windows. */
 typedef QList<QWidget> WindowList;
 extern WindowList* windowList;
+
+class KSWApplication : public KApplication
+{
+  Q_OBJECT
+public:
+  KSWApplication ( int& argc, char** argv, const QString& rAppName );
+
+  virtual bool     x11EventFilter( XEvent * );
+
+signals:
+  void ksw_save();
+  void ksw_exit();
+
+protected:
+  Atom _ksw_save;
+  Atom _ksw_exit;
+};
+
 
 #endif //__MAIN_H__
 

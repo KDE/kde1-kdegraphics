@@ -36,6 +36,32 @@ static void signalHandler(int sigId);
 static void cleanup(void);
 static void setSignalHandler(void (*handler)(int));
 
+KSWApplication::KSWApplication ( int& argc, char** argv, const QString& rAppName )  
+  : KApplication ( argc, argv, rAppName )  
+{
+  _ksw_save = XInternAtom(qt_xdisplay(),"KSW_SAVE",False);
+  _ksw_exit = XInternAtom(qt_xdisplay(),"KSW_EXIT",False);
+}
+
+bool KSWApplication :: x11EventFilter( XEvent *ev)
+{
+  XClientMessageEvent* e = &ev->xclient;
+
+  if (e->message_type == _ksw_save)
+  {
+    debug("Got KSW_SAVE");
+    emit ksw_save();
+    return true;
+  }
+  else if (e->message_type == _ksw_exit)
+  {
+    debug("Got KSW_EXIT");
+    emit ksw_exit();
+    return true;
+  }
+
+  return false;
+}
 
 bool getCommandLine(QStrList *list, int argc, char **argv)
 {
@@ -100,7 +126,7 @@ static void cleanup(void)
 int main(int argc, char **argv)
 {
   qInstallMsgHandler( myMessageOutput );
-  KApplication a(argc, argv, "kiconedit");
+  KSWApplication a(argc, argv, "kiconedit");
   KIconEdit *ki = 0L;
 
   setSignalHandler(signalHandler);
@@ -108,15 +134,6 @@ int main(int argc, char **argv)
   if (a.isRestored())
   {
     RESTORE(KIconEdit);
-/*
-    int n = 1;
-    while (KTopLevelWidget::canBeRestored(n))
-    {
-      ki = new KIconEdit;
-      CHECK_PTR(ki);
-      ki->restore(n++);
-    }
-*/
   }
   else
   {

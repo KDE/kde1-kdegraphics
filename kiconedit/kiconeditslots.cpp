@@ -400,7 +400,7 @@ void KIconEdit::slotImage( int id )
 {
   switch(id)
   {
-#if QT_VERSION <= 140
+#if QT_VERSION >= 140
     case ID_IMAGE_RESIZE:
       grid->editResize();
       break;

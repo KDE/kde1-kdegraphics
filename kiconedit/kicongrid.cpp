@@ -734,8 +734,8 @@ void KIconEditGrid::editSelectAll()
 {
   start.setX(0);
   start.setY(0);
-  end.setX(numCols()-1);
-  end.setY(numRows()-1);
+  end.setX(numCols());
+  end.setY(numRows());
   isselecting = true;
   drawRect(false);
   emit newmessage(i18n("All selected"));
