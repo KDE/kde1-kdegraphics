@@ -207,12 +207,6 @@ private:
 	KStatusBar	*_statusbar;
 	QPopupMenu	*_contextMenu;
 
-	/**
-	* temporary menu for conn() calls. Set it with
-	* setCMenu.
-	*/
-	QPopupMenu	*_cmenu;
-
 	QPopupMenu	*_file;
 	QPopupMenu	*_edit;
 	QPopupMenu	*_zoom;
@@ -260,9 +254,23 @@ private:
 	void makeRootMenu(KMenuBar * );
 	void makePopupMenus();
 
-	void setCMenu( QPopupMenu *menu );
+	/**
+	* Do-it-all function that operates on _kaccel and the current
+	* menu set in the _watcher:
+	*
+	* 1. Inserts an item into the menu with desc "text", which calls
+	* receiver/method.
+	*
+	* 2. Inserts accel "action" with desc "text" into _kaccel.
+	* 
+	* 3. Connects the keybinding, if any, to the menu item and the action.
+	*/
 	int conn( const char *text, const char *action,
 			QObject *receiver, const char *method, uint key = 0 );
+
+	/**
+	* Same as above, but for standard accels.
+	*/
 	int conn( const char *text, KAccel::StdAccel,
 			QObject *receiver, const char *method );
 

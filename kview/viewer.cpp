@@ -56,7 +56,6 @@ KImageViewer::KImageViewer()
 	_paccel( new QAccel( this ) ),
 	_watcher( new KAccelMenuWatch( _kaccel, this ) ),
 
-	_cmenu( 0 ),
 	_file( 0 ),
 	_edit( 0 ),
 	_zoom( 0 ),
@@ -305,7 +304,7 @@ void KImageViewer::makeRootMenu(QPopupMenu *menu)
 	 */	
 
 
-	setCMenu( menu );
+	_watcher->setMenu( menu );
 	conn( i18n("&List..."), "ImageList", this, SLOT(toggleImageList()) );
 	menu->insertSeparator();
 	conn( i18n("&Previous"), "Prev", _imageList, SLOT(prev()),
@@ -346,7 +345,7 @@ void KImageViewer::makePopupMenus()
 
 	// file pulldown
 
-	setCMenu( _file );
+	_watcher->setMenu( _file );
 	conn( i18n( "&Open..." ), KAccel::Open, this, SLOT(load()) );
 	conn( i18n( "&Save As..." ), KAccel::Save, this, SLOT(saveAs()) );
 	conn( i18n( "&Print..." ), KAccel::Print, this, SLOT(printImage()));
@@ -357,7 +356,7 @@ void KImageViewer::makePopupMenus()
 	conn( i18n( "E&xit" ), KAccel::Quit, this, SLOT(quitApp()) );
 
 	// edit pulldown
-	setCMenu( _edit );
+	_watcher->setMenu( _edit );
 	conn( i18n( "&Full Screen" ), "FullScreen", this, SLOT(fullScreen()),
 			Key_F );
 	_edit->insertSeparator();
@@ -370,7 +369,7 @@ void KImageViewer::makePopupMenus()
 
 	// zoom pulldown
 
-	setCMenu( _zoom );
+	_watcher->setMenu( _zoom );
 	conn( i18n( "&Zoom..." ), "Zoom", this, SLOT(zoomCustom()), Key_Z );
 	conn( i18n( "Zoom &in 10%" ), "ZoomIn10", this, SLOT(zoomIn10()),
 			Key_Period );
@@ -387,7 +386,7 @@ void KImageViewer::makePopupMenus()
 
 	// transform pulldown
 
-	setCMenu( _transform );
+	_watcher->setMenu( _transform );
 	conn( i18n( "Rotate &clockwise" ), "RotateC", this, 
 			SLOT(rotateClock()), Key_Semicolon );
 	conn( i18n( "Rotate &anti-clockwise" ), "RotateAC", this, 
@@ -399,12 +398,12 @@ void KImageViewer::makePopupMenus()
 
 	// desktop pulldown
 
-	setCMenu( _desktop );
+	_watcher->setMenu( _desktop );
 	conn( i18n( "&Tile" ), "Tile", this, SLOT(tile()) );
 	conn( i18n( "&Max" ),  "Max", this, SLOT(max())   );
 	conn( i18n("Max&pect"), "Maxpect", this, SLOT(maxpect()) );
 
-	setCMenu( _aggreg );
+	_watcher->setMenu( _aggreg );
 
 	int id = conn( i18n("&List..."), "ImageList", this, 
 			SLOT(toggleImageList()), Key_I );
@@ -418,7 +417,7 @@ void KImageViewer::makePopupMenus()
 	_aggreg->insertItem( i18n("&Slideshow On/Off"), "Slideshow", 
 		_imageList, SLOT(toggleSlideShow()), Key_S );
 
-	setCMenu( _help );
+	_watcher->setMenu( _help );
 	conn( i18n( "&Contents" ), KAccel::Help, this, SLOT(help()));
 	conn( i18n( "&How do I..." ), "HelpHow", this, SLOT(helpHow()));
 	conn( i18n( "&What is a..." ), "HelpWhat", this, SLOT(helpWhat()));
@@ -956,14 +955,13 @@ void KImageViewer::updateAccel()
 int KImageViewer::conn( const char *text, const char *action,
 	QObject *receiver, const char *method, uint key )
 {
-	assert( _cmenu != 0 );
+	QPopupMenu *menu = _watcher->currentMenu();
+	assert( menu );
 
-	int id = 0;
-	
 	_kaccel->insertItem( text, action, key );
 	_kaccel->connectItem( action, receiver, method );
 
-	id = _cmenu->insertItem( text, receiver, method );
+	int id = menu->insertItem( text, receiver, method );
 	_watcher->connectAccel( id, action );
 
 	return id;
@@ -972,22 +970,14 @@ int KImageViewer::conn( const char *text, const char *action,
 int KImageViewer::conn( const char *text, KAccel::StdAccel action,
 	QObject *receiver, const char *method )
 {
-	assert( _cmenu != 0 );
+	QPopupMenu *menu = _watcher->currentMenu();
+	assert( menu );
 
 	_kaccel->insertStdItem( action, text );
 	_kaccel->connectItem( action, receiver, method );
-	int id = _cmenu->insertItem( text, receiver, method );
+	int id = menu->insertItem( text, receiver, method );
 
 	_watcher->connectAccel( id, action );
 
 	return id;
 }
-
-void KImageViewer::setCMenu( QPopupMenu *menu )
-{
-	assert( menu && _watcher );
-
-	_watcher->setMenu( menu );
-	_cmenu = menu;
-}
-
