@@ -13,7 +13,7 @@ MAINTAINER=	garbanzo@hooked.net
 BUILD_DEPENDS=	moc:${PORTSDIR}/x11/qt \
 		autoconf:${PORTSDIR}/devel/autoconf \
 		automake:${PORTSDIR}/devel/automake
-INSTALL_ROOT?=	${.CURDIR}/${PKGNAME}
+INSTALL_ROOT=	${.CURDIR}/${PKGNAME}
 LIB_DEPENDS=	qt\\.1\\.3[0-9]:${PORTSDIR}/x11/qt133 \
 		gif\\.[23]\\.:${PORTSDIR}/graphics/giflib \
 		jpeg\\.9\\.:${PORTSDIR}/graphics/jpeg \
