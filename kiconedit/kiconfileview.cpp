@@ -45,8 +45,8 @@ bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
    QString path = filepath;
    int index = path.find( i->fileName() );
    path.insert(index,".xvpics/");
-   QFile f(path.data());
-   QFileInfo fi(f);
+
+   QFileInfo fi(path.data());
 
    QDir d(fi.dirPath());
 
@@ -60,13 +60,22 @@ bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
      }
    }
 
-   if(!f.exists())
+   if(!fi.exists())
+   {
      write_xv_file(path.data(), *pixmap);
 
-   if(f.exists())
+     // Cannot use QPixmap::save as it complaines about file allready open :-(
+     //if(!pixmap->save(path.data(), "XV"))
+       //debug("Error saving XV thumbnail %s", path.data());
+   }
+
+   if(fi.exists())
    {
      if( !pixmap->load( path.data(), "XV" ))
+     {
+       debug("Error loading XV thumbnail %s", path.data());
        return false;
+     }
    }
    else
    {
@@ -114,8 +123,9 @@ KIconFileView::KIconFileView(bool s, QDir::SortSpec sorting,
     : QTableView(parent, name), KFileInfoContents(s,sorting)
 {
   //debug("KIconFileView - constructor");
+/*
   QImageIO::defineIOHandler( "XV", "^P7 332", 0, read_xv_file, 0L );
-
+*/
   if(!pix_folder) 
     pix_folder = new QPixmap(KApplication::kde_icondir() + "/folder.xpm"); 
   if(!pix_lfolder) 

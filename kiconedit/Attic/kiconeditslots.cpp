@@ -175,8 +175,8 @@ void KIconEdit::slotPrint()
     int margin = 10, yPos = 0;
     printer->setCreator("KDE Icon Editor");
     QPainter p;
-    QFontMetrics fm = p.fontMetrics();
     p.begin( printer );
+    QFontMetrics fm = p.fontMetrics();
     QPaintDeviceMetrics metrics( printer ); // need width/height
 
     p.drawText( margin, margin + yPos, metrics.width(), fm.lineSpacing(),

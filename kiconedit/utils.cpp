@@ -1,5 +1,5 @@
 /*  
-    kdraw - a small graphics drawing program for the KDE
+    KDE Icon Editor - a small graphics drawing program for the KDE
 
     Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
 
@@ -19,6 +19,7 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include <kimgio.h>
 #include "debug.h"
 #include "utils.h"
 #include "../config.h"
@@ -30,6 +31,8 @@ void setupImageHandlers()
   if(formats != 0L)
     return;
 
+  kimgioRegister();
+
   debug("Initializing formats");
   formats = new imageFormats;
   CHECK_PTR(formats);
@@ -39,10 +42,11 @@ void setupImageHandlers()
   formats->append(new imageFormat("JFIF", "JPEG", "jpg"));
 #endif
   formats->append(new imageFormat("XPM", "XPM",  "xpm"));
-
+/*
 #ifdef HAVE_LIBJPEG
   QImageIO::defineIOHandler("JFIF","^\377\330\377\340", 0, read_jpeg_jfif, NULL);
 #endif
+*/
 }
 
 // Simple copy operation on local files (isn't there something like this in the libs?)

@@ -45,8 +45,6 @@ KIconDetailList::KIconDetailList(bool s, QDir::SortSpec sorting,
 				 QWidget *parent, const char *name)
     : QListView(parent, name), KFileInfoContents(s,sorting)
 {
-  QImageIO::defineIOHandler( "XV", "^P7 332", 0, read_xv_file, 0L );
-
   pixwidth = 0;
 
   if(!pix_folder) 
@@ -265,6 +263,8 @@ bool KIconDetailList::insertItem(const KFileInfo *i, int index)
     QString path;
     if(type == "file")
     {
+      item->setPixmap(0, *file_pixmap);
+/*
       path = i->absURL();
       path += i->fileName();
       QPixmap pix;
@@ -272,22 +272,22 @@ bool KIconDetailList::insertItem(const KFileInfo *i, int index)
         item->setPixmap(0, pix);
       else
         item->setPixmap(0, *pix_file);
+*/
     }
     else if(type == "folder")
     {
-        item->setPixmap(0, *pix_folder);
+        item->setPixmap(0, *folder_pixmap);
+        //item->setPixmap(0, *pix_folder);
     }
     else if(type == "l_folder")
     {
-        item->setPixmap(0, *pix_lfolder);
-    }
-    else if(type == "file")
-    {
-        item->setPixmap(0, *pix_file);
+        item->setPixmap(0, *locked_folder);
+        //item->setPixmap(0, *pix_lfolder);
     }
     else if(type == "l_file")
     {
-        item->setPixmap(0, *pix_lfile);
+        item->setPixmap(0, *locked_file);
+        //item->setPixmap(0, *pix_lfile);
     }
 
     if(pixwidth < item->pixmap(0)->width())

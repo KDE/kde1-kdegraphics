@@ -299,6 +299,7 @@ KIconEditGrid::~KIconEditGrid()
 
 void KIconEditGrid::paintEvent(QPaintEvent *e)
 {
+//debug("KIconGrid::paintEvent");
   KColorGrid::paintEvent(e);
 
   if(hasGrid())
@@ -321,6 +322,7 @@ void KIconEditGrid::paintEvent(QPaintEvent *e)
 
     p.end();
   }
+//debug("KIconGrid::paintEvent - done");
 }
 
 void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
@@ -754,7 +756,7 @@ bool KIconEditGrid::zoom(Direction d)
   setUpdatesEnabled(false);
   setCellSize( f );
   setUpdatesEnabled(true);
-  emit needPainting();
+  //emit needPainting();
   QApplication::restoreOverrideCursor();
 
   emit scalingchanged(cellSize(), true);
