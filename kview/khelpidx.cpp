@@ -110,6 +110,8 @@ bool KHelpIndex::readIndex( const char *path )
 		_index->insert( buffer, 
 			new QString( buffer + pos + len ) );
 	}
+
+	return true;
 }
 
 bool KHelpIndex::invoke( const char *tag )
