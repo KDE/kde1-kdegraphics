@@ -3,6 +3,7 @@
 
 #include <qdialog.h>
 #include <qcombo.h>
+#include <qpushbt.h>
 
 
 enum VCOrientation {VCPortrait=0, VCLandscape=1, VCUpsideDown=2, VCSeascape=3};
@@ -17,13 +18,14 @@ public:
   QComboBox* mediaComboBox;
   QComboBox* magComboBox;
   QComboBox* orientComboBox;
+  QPushButton *applyButton;
 
   void updateMedia (int media);
   void updateOrientation (int orientation);
 
 public slots:
   void slotApplyClicked();
-  
+  void disableApply (int); 
 signals:
   void applyChanges();
 };

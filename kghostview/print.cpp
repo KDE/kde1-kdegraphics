@@ -168,40 +168,48 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 		
 	pgGroup = new QButtonGroup( group );
 	pgGroup->hide();
-    pgGroup->setExclusive( true );
+	pgGroup->setExclusive( true );
 	connect( pgGroup, SIGNAL( clicked( int ) ), SLOT( slotPageMode( int ) ) );
 	
 	int widest = 0;
-
-    QRadioButton *rb = new QRadioButton( i18n("&All"), group );
+	
+	QRadioButton *arb = new QRadioButton( i18n("&All"), group );
+	arb->setFixedHeight( arb->sizeHint().height()+6 );
+	arb->setChecked( true );
+	pgGroup->insert( arb, All );
+	
+	grid->addWidget( arb, 1, 1 );
+	
+	if ( arb->sizeHint().width() > widest )
+	  widest = arb->sizeHint().width();
+	
+	QRadioButton *rb = new QRadioButton( i18n("&Current"), group );
 	rb->setFixedHeight( rb->sizeHint().height()+6 );
-	rb->setChecked( true );
-    pgGroup->insert( rb, All );
-	
-	grid->addWidget( rb, 1, 1 );
-	
-	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
-	
-	rb = new QRadioButton( i18n("&Current"), group );
-	rb->setFixedHeight( rb->sizeHint().height()+6 );
-    pgGroup->insert( rb, Current );
+	pgGroup->insert( rb, Current );
 	
 	grid->addWidget( rb, 1, 2 );
-
+	
 	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
-		
+	
 	rb = new QRadioButton( i18n("&Marked"), group );
 	rb->setFixedHeight( rb->sizeHint().height()+6 );
-	if ( !marked ) rb->setEnabled( false );
-    pgGroup->insert( rb, Marked );
+	if ( !marked )
+	  rb->setEnabled( false );
+	else
+	  {
+	    arb->setChecked ( false );
+	    rb->setChecked ( true );
+	  }
+
+	pgGroup->insert( rb, Marked );
 	
 	grid->addWidget( rb, 3, 1 );
-
+	
 	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
 	
 	rb = new QRadioButton( i18n("&Range"), group );
 	rb->setFixedHeight( rb->sizeHint().height()+6 );
-    pgGroup->insert( rb, Range );
+	pgGroup->insert( rb, Range );
 	
 	grid->addWidget( rb, 3, 2 );
 	
@@ -216,7 +224,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 	lTo->setText( i18n("to") );
 	lTo->setAlignment( AlignCenter );
 	lTo->setMinimumSize( lTo->sizeHint() );
-
+	
 	grid->addWidget( lTo, 3, 4 );
 	
 	leEnd = new QLineEdit( group );
@@ -260,8 +268,11 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 	
 	topLayout->activate();
 	
-	slotPageMode( All );
-	
+	if ( marked )
+	  slotPageMode( Marked );
+	else
+	  slotPageMode( All );
+
 	resize( 250, 0 );
 	
 }
@@ -294,46 +305,46 @@ void PrintDialog::setup()
 
 void PrintDialog::checkRange()
 {
-	if ( pgMode == Range ) {
+  if ( pgMode == Range ) {
 	
-		if ( QString( leStart->text() ).toInt() < 1 
-				|| QString( leStart->text() ).toInt() > pgMax
-				|| QString( leEnd->text() ).toInt() < 1 
-				|| QString( leEnd->text() ).toInt() > pgMax ) {
-
-			QMessageBox::critical( 0, i18n( "Range error" ),
-				i18n(	"The range of pages entered for printing\n"\
-						"can't be understood.\n\n"\
-						"The range specified must lie within the page\n"\
-						"range for this part of the document.\n"\
-						"Check the status bar for this information.\n" ) );
-			return;
-		}
-	}
-	
-	accept();		
+    if ( QString( leStart->text() ).toInt() < 1 
+	 || QString( leStart->text() ).toInt() > pgMax
+	 || QString( leEnd->text() ).toInt() < 1 
+	 || QString( leEnd->text() ).toInt() > pgMax ) {
+      
+      QMessageBox::critical( 0, i18n( "Range error" ),
+			     i18n(	"The range of pages entered for printing\n"\
+					"can't be understood.\n\n"\
+					"The range specified must lie within the page\n"\
+					"range for this part of the document.\n"\
+					"Check the status bar for this information.\n" ) );
+      return;
+    }
+  }
+  
+  accept();		
 }
 
 void PrintDialog::slotPageMode( int m )
 {
-	pgMode = m;
-
-	switch ( pgMode ) {
-
-	case Range:
-	    
-	   	leStart->setEnabled( true );
-	    leEnd->setEnabled( true );
-		lTo->setEnabled( true );
-	    break;
-	
-	default:
-	    
-	    leStart->setEnabled( false );
-	    leEnd->setEnabled( false );
-		lTo->setEnabled( false );
-	    break;
-	}
+  pgMode = m;
+  
+  switch ( pgMode ) {
+    
+  case Range:
+    
+    leStart->setEnabled( true );
+    leEnd->setEnabled( true );
+    lTo->setEnabled( true );
+    break;
+    
+  default:
+    
+    leStart->setEnabled( false );
+    leEnd->setEnabled( false );
+    lTo->setEnabled( false );
+    break;
+  }
 }
 
 
