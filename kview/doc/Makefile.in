@@ -21,4 +21,5 @@ uninstall:
 	done
 
 distclean:
-       rm -f Makefile
+	rm -f Makefile
+
