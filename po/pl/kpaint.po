@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
 "POT-Creation-Date: 1999-01-11 01:50+0100\n"
-"PO-Revision-Date: 1999-01-03 12:26+0200\n"
+"PO-Revision-Date: 1999-01-19 17:26+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -18,12 +18,10 @@ msgid "Canvas Size"
 msgstr "Rozmiar obrazu"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
 msgstr "Szeroko¶æ:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
 msgstr "Wysoko¶æ:"
 
@@ -32,43 +30,36 @@ msgid "Circle"
 msgstr "Okr±g"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "G³êboko¶æ obrazu:"
+msgstr "Bitów na piksel:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 kolorów)"
+msgstr "1 (2 kolory)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 kolorów)"
+msgstr "4 (16 kolorów)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 kolorów)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 kolorów)"
+msgstr "15 (32k kolorów)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 kolorów)"
+msgstr "16 (64k kolorów)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (True Colour)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (True Colour)"
+msgstr "32 (True Colour)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -141,9 +132,8 @@ msgid "New Image..."
 msgstr "&Nowy..."
 
 #: kpaint.cpp:432
-#, fuzzy
 msgid "Save Image"
-msgstr "&Zachowaj"
+msgstr "Zachowaj obraz"
 
 #: kpaint.cpp:433
 msgid "Save Image As..."
@@ -210,12 +200,10 @@ msgid "Tool Properties..."
 msgstr "W³a¶ciwo¶ci narzêdzi..."
 
 #: kpaint.cpp:482
-#, fuzzy
 msgid "Show Tools Toolbar"
 msgstr "Poka¿ pasek zadañ"
 
 #: kpaint.cpp:483
-#, fuzzy
 msgid "Show Commands Toolbar"
 msgstr "Poka¿ pasek zadañ"
 
@@ -239,6 +227,15 @@ msgid ""
 "see the online documentation\n"
 "for details."
 msgstr ""
+"KPaint wersja %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint jest udostêpniany\n"
+"na licencji GPL,\n"
+"zobacz do towarzysz±cej\n"
+"dokumentacji po szczegó³y.\n"
+"T³umaczenie: Jacek Stolarczyk<jacek@mer.chemia.polsl.gliwice.pl>"
 
 #: kpaint.cpp:508
 msgid "&Image"
@@ -265,14 +262,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Nieznany format"
 
 #: kpaint.cpp:694
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "B³±d: Nieznany format\n"
-"KPaint nie rozpozna³ formatu lub plik jest uszkodzony."
+"KPaint nie rozpozna³ formatu podanego pliku\n"
+"lub jest on uszkodzony."
 
 #: line.cpp:19 manager.cpp:71
 msgid "Line"
@@ -407,9 +404,8 @@ msgid "Set Line Colour..."
 msgstr "Kolor &linii..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Prostok±t"
+msgstr "Zaokr±glony prostok±t"
 
 #~ msgid "KPaint"
 #~ msgstr "KPaint"
@@ -417,7 +413,6 @@ msgstr "Prostok±t"
 #~ msgid " version "
 #~ msgstr " wersja "
 
-#, fuzzy
 #~ msgid "(c) "
 #~ msgstr "(c) "
 

@@ -67,7 +67,6 @@ msgid "File status changed."
 msgstr "Zmieni³ siê stan pliku"
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
 msgstr "Plik prze³adowany"
 
@@ -76,29 +75,24 @@ msgid "No document"
 msgstr "Brak dokumentu"
 
 #: kdvi.cpp:109
-#, fuzzy
 msgid "Toggle Menubar"
 msgstr "Prze³±cz pasek menu"
 
 #: kdvi.cpp:111
-#, fuzzy
 msgid "Mark page"
 msgstr "Zaznacz stronê"
 
 #: kdvi.cpp:113
-#, fuzzy
 msgid "Redraw"
 msgstr "Przerysuj stronê"
 
 #: kdvi.cpp:115
-#, fuzzy
 msgid "Preferences ..."
 msgstr "W³a¶ciwo¶ci..."
 
 #: kdvi.cpp:173
-#, fuzzy
 msgid "&New"
-msgstr "&Nastêpna"
+msgstr "&Nowy"
 
 #: kdvi.cpp:174
 msgid "&Open ..."
@@ -197,7 +191,6 @@ msgid "DVI Viewer"
 msgstr "Przegl±darka DVI"
 
 #: kdvi.cpp:241
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -584,7 +577,7 @@ msgstr "Drukuj "
 
 #: print.cpp:120
 msgid "Cannot open dvi file!"
-msgstr "Nie mo¿na otworzyæ dvi pliku!"
+msgstr "Nie mo¿na otworzyæ pliku dvi!"
 
 #: print.cpp:124
 msgid "Cannot open output dvi file!"

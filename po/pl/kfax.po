@@ -84,9 +84,8 @@ msgid "Zoom &out"
 msgstr "Po&mniejsz"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "Opcje &faksu"
+msgstr "Opcje &faksu..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -245,6 +244,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Nie mogê otworzyæ:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit \n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-01-03 12:32+0100\n"
+"PO-Revision-Date: 1999-01-19 17:22+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -196,6 +196,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"Edytor Ikon KDE\n"
+"\n"
+"Program do tworzenia i rysowania\n"
+"ikon u¿ywaj±cych palety ikon KDE\n"
+"\n"
+"Copyright 1998 by Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -565,7 +573,6 @@ msgstr ""
 "Skoro to czytasz to ju¿ pewnie wiesz ;-)"
 
 #: kiconedit.cpp:872
-#, fuzzy
 msgid ""
 "Drag source\n"
 "\n"
@@ -578,7 +585,7 @@ msgstr ""
 "Przeci±gnij ¼ród³o\n"
 "\n"
 "Z tego przycisku mo¿na przeci±gn±æ bie¿±c± ikonê na inne okno, które jest w "
-"stanie go przechwyciæ lub na inne okno Edytora Ikon.\n"
+"stanie go przechwyciæ np. na inne okno Edytora Ikon.\n"
 "\n"
 "(Uwaga: ¬ród³o przeci±gniêcia u¿ywa protoko³u QT XDND, który nie jest "
 "jeszcze standardem w KDE)"
@@ -711,11 +718,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "szeroko¶æ"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "wysoko¶æ"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"

@@ -10,39 +10,32 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark current page"
 msgstr "Zaznacz bie¿±c± stronê"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark all pages"
 msgstr "Zaznacz wszystkie strony"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Mark even pages"
 msgstr "Zaznacz parzyste strony"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Mark odd pages"
 msgstr "Zaznacz nieparzyste strony"
 
 #: marklist.cpp:42
-#, fuzzy
 msgid "Toggle page marks"
 msgstr "Zamieñ zaznaczenie stron"
 
 #: marklist.cpp:43
-#, fuzzy
 msgid "Remove page marks"
 msgstr "Usuñ zaznaczenie stron"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "S&trona"
+msgstr "Strona"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -85,22 +78,18 @@ msgid "General"
 msgstr "Ogólne"
 
 #: interpreter.cpp:79
-#, fuzzy
 msgid "&Interpreter name"
-msgstr "Nazwa interpretera"
+msgstr "Nazwa &interpretera"
 
 #: interpreter.cpp:87
-#, fuzzy
 msgid "&Antialiasing"
 msgstr "&Antyaliasing"
 
 #: interpreter.cpp:97
-#, fuzzy
 msgid "Platform &fonts"
 msgstr "&Czcionki platformy"
 
 #: interpreter.cpp:107
-#, fuzzy
 msgid "&Messages"
 msgstr "Ko&munikaty"
 
@@ -109,17 +98,14 @@ msgid "Palette"
 msgstr "Paleta"
 
 #: interpreter.cpp:152
-#, fuzzy
 msgid "Colo&r"
 msgstr "Kolo&r"
 
 #: interpreter.cpp:161
-#, fuzzy
 msgid "&Grayscale"
 msgstr "&Poziomy szaro¶ci"
 
 #: interpreter.cpp:169
-#, fuzzy
 msgid "Monochrom&e"
 msgstr "Czarno-&bia³y"
 
@@ -128,12 +114,10 @@ msgid "Backing"
 msgstr "Przechowanie zawarto¶ci wy¶wietlonej strony"
 
 #: interpreter.cpp:214
-#, fuzzy
 msgid "&Pixmap"
 msgstr "Jako bitma&pa"
 
 #: interpreter.cpp:224
-#, fuzzy
 msgid "&Backing store"
 msgstr "Wykorzystuj±c \"backing &store\" X serwera"
 
@@ -154,7 +138,6 @@ msgid "&Dismiss"
 msgstr "&Zwolnij"
 
 #: info.cpp:45
-#, fuzzy
 msgid "File name :"
 msgstr "Plik :"
 
@@ -167,12 +150,10 @@ msgid "Publication date :"
 msgstr "Data publikacji :"
 
 #: print.cpp:35
-#, fuzzy
 msgid "Printer setup"
 msgstr "Ustawienia drukarki"
 
 #: print.cpp:65
-#, fuzzy
 msgid "&Printer name"
 msgstr "&Nazwa drukarki"
 
@@ -185,7 +166,6 @@ msgid "&Environment variable"
 msgstr "&Zmienna ¶rodowiskowa"
 
 #: print.cpp:160
-#, fuzzy
 msgid "Print to file"
 msgstr "Drukuj do pliku"
 
@@ -194,7 +174,6 @@ msgid "Pages"
 msgstr "Strony"
 
 #: print.cpp:191
-#, fuzzy
 msgid "&All"
 msgstr "&Wszystkie"
 
@@ -203,7 +182,6 @@ msgid "&Current"
 msgstr "&Bie¿±ca"
 
 #: print.cpp:208
-#, fuzzy
 msgid "&Marked"
 msgstr "&Zaznaczone"
 
@@ -216,12 +194,10 @@ msgid "to"
 msgstr "do"
 
 #: print.cpp:244
-#, fuzzy
 msgid "Print document in re&verse order"
 msgstr "Drukuj dokument w o&dwrotnej kolejno¶ci"
 
 #: print.cpp:261
-#, fuzzy
 msgid "&Setup ..."
 msgstr "&Ustawienia..."
 
@@ -246,12 +222,10 @@ msgstr ""
 "W linii statusowej znajdziesz wiêcej informacji.\n"
 
 #: goto.cpp:54
-#, fuzzy
 msgid "&Section"
 msgstr "&Sekcja"
 
 #: goto.cpp:70
-#, fuzzy
 msgid "&Page"
 msgstr "S&trona"
 
@@ -278,17 +252,14 @@ msgid "Upside down"
 msgstr "Do góry nogami"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
 msgstr "Powiêkszenie"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
 msgstr "&Media"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
 msgstr "&Orientacja"
 
@@ -297,25 +268,24 @@ msgid "&Apply"
 msgstr "Z&astosuj"
 
 #: main.cpp:25
-#, fuzzy
 msgid "Usage: "
 msgstr "U¿ycie:"
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr "[nazwa_pliku][prze³±czniki]\n"
+msgstr ""
+"[nazwa_pliku][prze³±czniki]\n"
+"\n"
 
 #: main.cpp:28
-#, fuzzy
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
 "Zagl±dnij do dokumentacji KDE i Qt\n"
-"po opis opcji linii poleceñ"
+"po opis opcji linii poleceñ.\n"
 
 #: main.cpp:30
 msgid "Error on command line"
@@ -326,7 +296,6 @@ msgid "Document information"
 msgstr "Informacja o dokumencie"
 
 #: kghostview.cpp:220
-#, fuzzy
 msgid "Page Setup"
 msgstr "Ustawienia strony"
 
@@ -399,7 +368,6 @@ msgid "Open &recent"
 msgstr "Otwórz poprz&edni"
 
 #: kghostview.cpp:509
-#, fuzzy
 msgid "Page Set&up ..."
 msgstr "&Ustawienia strony..."
 
@@ -416,7 +384,6 @@ msgid "Zoom &out"
 msgstr "Po&mniejsz"
 
 #: kghostview.cpp:523
-#, fuzzy
 msgid "&Zoom ..."
 msgstr "&Powiekszenie..."
 
@@ -545,24 +512,20 @@ msgid "New window ..."
 msgstr "Nowe okno ..."
 
 #: kghostview.cpp:668
-#, fuzzy
 msgid "Open file ..."
-msgstr "&Otwórz..."
+msgstr "Otwórz..."
 
 #: kghostview.cpp:676
-#, fuzzy
 msgid "Print document ..."
 msgstr "Drukuj dokument ..."
 
 #: kghostview.cpp:681
-#, fuzzy
 msgid "Zoom in"
-msgstr "Po&wiêksz"
+msgstr "Powiêksz"
 
 #: kghostview.cpp:684
-#, fuzzy
 msgid "Zoom out"
-msgstr "Po&mniejsz"
+msgstr "Pomniejsz"
 
 #: kghostview.cpp:689
 msgid "Go back"
@@ -589,9 +552,8 @@ msgid "Read down the page"
 msgstr "Przesuñ w dó³"
 
 #: kghostview.cpp:711
-#, fuzzy
 msgid "Toggle this page mark"
-msgstr "Za&mieñ zaznaczenie strony"
+msgstr "Zamieñ zaznaczenie strony"
 
 #: kghostview.cpp:733
 msgid "Sc.100 of 100  P.100 of 100"
@@ -685,7 +647,7 @@ msgstr ""
 "drukarki, aby mo¿na j± tak¿e by³o uwzglêdniæ."
 
 #: kghostview.cpp:1661
-#, fuzzy, c-format
+#, c-format
 msgid "Print failure : %s"
 msgstr "B³±d drukowania : %s"
 
@@ -732,11 +694,9 @@ msgid "Sc.%d "
 msgstr "Sc.%d "
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
 msgstr "&Powiêkszenie"
 
-#, fuzzy
 #~ msgid "&Defaults"
 #~ msgstr "&Domy¶lne"
 
@@ -794,30 +754,26 @@ msgstr "&Powiêkszenie"
 #~ msgid "Prior"
 #~ msgstr "Poprzednia strona"
 
-#, fuzzy
 #~ msgid "Next"
 #~ msgstr "Nastêpna strona"
 
 #~ msgid "F1"
 #~ msgstr "F1"
 
-#, fuzzy
 #~ msgid "Zoom"
 #~ msgstr "Powiêksz"
 
 #~ msgid "Current key"
 #~ msgstr "Bie¿±cy klawisz"
 
-#, fuzzy
 #~ msgid "&Action"
 #~ msgstr "&Akcja"
 
 #~ msgid "&No key"
 #~ msgstr "&Brak klawisza"
 
-#, fuzzy
 #~ msgid "&Default key"
-#~ msgstr "&Domy¶lne"
+#~ msgstr "&Domy¶lny klawisz"
 
 #~ msgid "&Custom key"
 #~ msgstr "W³asny skrót"
@@ -828,9 +784,8 @@ msgstr "&Powiêkszenie"
 #~ msgid "&View control ..."
 #~ msgstr "Parametry &widoku..."
 
-#, fuzzy
 #~ msgid "&Fit to page width"
-#~ msgstr "&Id¼ do strony..."
+#~ msgstr "&Dopasuj do szeroko¶ci strony"
 
 #~ msgid "&Redisplay"
 #~ msgstr "&Od¶wie¿"
@@ -850,9 +805,8 @@ msgstr "&Powiêkszenie"
 #~ msgid "Hide Ghostscript messages"
 #~ msgstr "Ukryj komunikaty ghostscript"
 
-#, fuzzy
 #~ msgid "Force changes to ..."
-#~ msgstr "Zmieñ parametry na "
+#~ msgstr "Wymu¶ zmiany w..."
 
 #~ msgid "&1."
 #~ msgstr "&1."

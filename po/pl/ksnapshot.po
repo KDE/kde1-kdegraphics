@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot \n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-01-03 23:38+0100\n"
+"PO-Revision-Date: 1999-01-19 16:54+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgid "snapshot"
 msgstr "zrzut ekranu"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -29,7 +29,7 @@ msgstr ""
 "KSnapshot  zosta³ napisany przez Richarda Moore'a (rich@kde.org)\n"
 "i jest udostêpniony na licencji LGPL\n"
 "\n"
-"Wersja: "
+"Wersja: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
