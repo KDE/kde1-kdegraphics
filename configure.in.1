@@ -45,14 +45,9 @@ dnl Image readers/writers
 AC_FIND_GIF
 AC_FIND_JPEG
 AC_FIND_TIFF
-KIMGIO_LIBS="\$(LIBJPEG) \$(LIBTIFF)"
+KDE_CHECK_KIMGIO dnl this should make the next two lines obsolete
+KIMGIO_LIBS="\$(LIBJPEG) \$(LIBTIFF) \$(LIBPNG)"
 AC_SUBST(KIMGIO_LIBS)
-
-# AC_CHECK_LIB(png, main, 
-# [ LIBPNG="-lpng -lz"
-#  AC_DEFINE_UNQUOTED(HAVE_LIBPNG)
-# ])
-AC_SUBST(LIBPNG)
 
 dnl Checks for header files.
 AC_HEADER_DIRENT
