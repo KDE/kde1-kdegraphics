@@ -95,12 +95,13 @@ msgstr "bezimen.gif"
 
 #: kpaint.cpp:124
 msgid "Unsaved Changes"
-msgstr "Nespremljene Promjene"
+msgstr "Nespremljene promjene"
 
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Promjene nisu spremljene, izgubiti æe te ih ukoliko zatvorite ovaj prozor."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -188,7 +189,7 @@ msgstr "Informacije..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Promijeni velièinu..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -224,7 +225,7 @@ msgstr "Izbor podruèja"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Zaobljeni pravokutnik"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -244,7 +245,7 @@ msgstr "Spremi Opcije"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -252,6 +253,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"

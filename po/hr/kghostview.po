@@ -270,7 +270,7 @@ msgstr "Obnovi sadr¾aj"
 
 #: kghostview.cpp:402 kghostview.cpp:404
 msgid "Not known"
-msgstr ""
+msgstr "Nepoznat"
 
 #: kghostview.cpp:415
 msgid "Configure interpreter"
@@ -282,7 +282,7 @@ msgstr "&Otvori ..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "Otvori &skora¹nji"
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -454,7 +454,7 @@ msgstr "Èitaj niz stranicu"
 
 #: kghostview.cpp:705
 msgid "Toggle this page mark"
-msgstr ""
+msgstr "Uklj./isklj. ovu oznaku stranice"
 
 #: kghostview.cpp:727
 msgid "Sc.100 of 100  P.100 of 100"
@@ -542,7 +542,7 @@ msgid ""
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
-"Verzija :\t0.6 alpha\n"
+"Inaèica :\t0.6 alpha\n"
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
@@ -563,6 +563,8 @@ msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
+"Niste upisali ime datoteke\n"
+"prema tome nista nije ispisano u datoteku.\n"
 
 #: kghostview.cpp:1640
 #, c-format
@@ -574,6 +576,8 @@ msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
+"Ispis nije uspio buduæi da je nije dan\n"
+"popis stranica koje treba ispisati.\n"
 
 #: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
 #: kghostview.cpp:2509
@@ -731,7 +735,7 @@ msgstr "&Raspon"
 
 #: print.cpp:219
 msgid "to"
-msgstr ""
+msgstr "na"
 
 #: print.cpp:232
 msgid "Print document in re&verse order"
@@ -743,7 +747,7 @@ msgstr "&Podesi ..."
 
 #: print.cpp:289
 msgid "Range error"
-msgstr ""
+msgstr "Gre¹ka u rasponu"
 
 #: print.cpp:290
 msgid ""
@@ -754,6 +758,12 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
+"Raspon stranica koji je une¹en za ispis\n"
+"nije prepoznatljiv.\n"
+"\n"
+"Raspon mora le¾ati u rasponu stranica za ovaj\n"
+"dio dokumenta.\n"
+"Provjerite statusnu traku za informacije.\n"
 
 #: viewcontrol.cpp:36
 msgid "Force changes to ..."
