@@ -19,14 +19,12 @@ msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Nastala chyba pri otváraní cieµového súboru: %s"
 
 #: utils.cpp:72
-#, fuzzy, c-format
 msgid "copyFile - There was an error reading source file: %s"
-msgstr "copyFile - Nastala chyba pri otváraní zdrojového súboru: %s"
+msgstr "copyFile - Nastala chyba pri èítaní zdrojového súboru: %s"
 
 #: utils.cpp:80
-#, fuzzy, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
-msgstr "copyFile - Nastala chyba pri otváraní cieµového súboru: %s"
+msgstr "copyFile - Nastala chyba pri zapisovaní cieµového súboru: %s"
 
 #: utils.cpp:93
 #, c-format
@@ -748,36 +746,35 @@ msgstr "Chybné pixmap dáta v schránke!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr ""
+msgstr "Prieèinky:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"
-msgstr ""
+msgstr "Obsah:"
 
 #: kicondetaillist.cpp:50
 msgid "Name"
-msgstr ""
+msgstr "Meno"
 
 #: kicondetaillist.cpp:52
-#, fuzzy
 msgid "Size"
-msgstr "Veµkos»:"
+msgstr "Veµkos»"
 
 #: kicondetaillist.cpp:55
 msgid "Permissions"
-msgstr ""
+msgstr "Práva"
 
 #: kicondetaillist.cpp:57
 msgid "Date"
-msgstr ""
+msgstr "Dátum"
 
 #: kicondetaillist.cpp:60
 msgid "Owner"
-msgstr ""
+msgstr "Vlastník"
 
 #: kicondetaillist.cpp:62
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
@@ -800,6 +797,8 @@ msgid ""
 "\n"
 "seems to be malformed.\n"
 msgstr ""
+"\n"
+"vyzerá by» chybné.\n"
 
 #: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
 #: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
@@ -827,6 +826,8 @@ msgid ""
 "\n"
 "doesn't exist or isn't readable.\n"
 msgstr ""
+"\n"
+"neexistuje alebo sa z neho nedá èíta».\n"
 
 #: kicon.cpp:160
 msgid ""
@@ -863,6 +864,11 @@ msgid ""
 "*.gif|GIF files (*.gif)\n"
 "*jpg|JPEG files (*.jpg)\n"
 msgstr ""
+"*|V¹etky súbory (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF súbory (*.gif)\n"
+"*jpg|JPEG súbory (*.jpg)\n"
+
 
 #: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
@@ -942,7 +948,7 @@ msgstr "Vytvori» novú ikonku"
 
 #: debug.cpp:20
 msgid "Fatal!"
-msgstr ""
+msgstr "Záva¾né!"
 
 #: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."
