@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi \n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1998-06-23 23:48+0200\n"
+"PO-Revision-Date: 1999-01-03 12:00+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -64,7 +64,7 @@ msgstr "A to co? Problem DVI!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Zmieni³ siê stan pliku"
 
 #: dviwin.cpp:513 kdvi.cpp:937
 #, fuzzy
@@ -474,9 +474,8 @@ msgid "Small text button set to shrink factor "
 msgstr "Przycisk ma³ego tekstu ustawia wspó³czynnik powiêkszenia "
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
 msgid "Shrink: %d"
-msgstr "Powiêkszenie: xx"
+msgstr "Powiêkszenie: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"

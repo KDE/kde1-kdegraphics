@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-11-17 10:48+0100\n"
-"PO-Revision-Date: 1998-06-23 18:15+0200\n"
+"PO-Revision-Date: 1999-01-03 12:15+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -178,7 +178,7 @@ msgstr "&Nazwa drukarki"
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr "Polecenie drukowania"
+msgstr "&Polecenie drukowania"
 
 #: print.cpp:89
 msgid "&Environment variable"
@@ -384,11 +384,11 @@ msgstr "Konfiguruj interpreter"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Nowy"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Nowy"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -529,6 +529,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - przegl±darka dokumentów PostScriptowych\n"
+"dla ¶rodowiska KDE.\n"
+"\n"
+"Napisana przez Marka Donohoe <donohoe@kde.org, w oparciu\n"
+"o pracê Tima Theisena.\n"
+"Zawiera fragmenty kodu z programu gv autorstwa Johanesa Plassa,\n"
+"m.in. obs³ugê plików skompresowanych i PDF.\n"
+"Spójrz na stronê http://wwwthep.physik.uni-mainz.de/~plass/gv\n"
+"\n"
+"T³umaczenie: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>"
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -671,6 +681,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Ustaw zmienn± ¶rodowiskow± (PRINTER lub LPDEST) dla nazwy\n"
+"drukarki, aby mo¿na j± tak¿e by³o uwzglêdniæ."
 
 #: kghostview.cpp:1661
 #, fuzzy, c-format

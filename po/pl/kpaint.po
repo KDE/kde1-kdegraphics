@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
 "POT-Creation-Date: 1998-11-18 13:52+0100\n"
-"PO-Revision-Date: 1998-06-24 00:06+0200\n"
+"PO-Revision-Date: 1999-01-03 12:26+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -233,15 +233,12 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " wersja "
 
 #: kpaint.cpp:496
 #, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -299,7 +296,7 @@ msgstr "Spray"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: manager.cpp:81
 msgid "Area Select"
