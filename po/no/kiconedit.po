@@ -101,272 +101,276 @@ msgstr "Lim inn som &ny"
 
 #: kiconedit.cpp:403
 msgid "Clea&r"
-msgstr ""
+msgstr "&Rens"
 
 #: kiconedit.cpp:405
 msgid "Select &all"
-msgstr ""
+msgstr "Merk &alle"
 
 #: kiconedit.cpp:407
 msgid "&Edit"
-msgstr ""
+msgstr "&Rediger"
 
 #: kiconedit.cpp:411
 msgid "1:1"
-msgstr ""
+msgstr "1:1"
 
 #: kiconedit.cpp:412
 msgid "1:5"
-msgstr ""
+msgstr "1:5"
 
 #: kiconedit.cpp:413
 msgid "1:10"
-msgstr ""
+msgstr "1:10"
 
 #: kiconedit.cpp:417
 msgid "Zoom &in"
-msgstr ""
+msgstr "&Forsørre"
 
 #: kiconedit.cpp:418
 msgid "Zoom &out"
-msgstr ""
+msgstr "F&orminske"
 
 #: kiconedit.cpp:419
 msgid "Zoom factor"
-msgstr ""
+msgstr "Forstørringsfaktor"
 
 #: kiconedit.cpp:420
 msgid "&View"
-msgstr ""
+msgstr "&Vis"
 
 #: kiconedit.cpp:425
 msgid "&Resize"
-msgstr ""
+msgstr "&Endre størresle"
 
 #: kiconedit.cpp:427
 msgid "&GrayScale"
-msgstr ""
+msgstr "&Gråskala"
 
 #: kiconedit.cpp:431
 msgid "&Icon"
-msgstr ""
+msgstr "&Ikon"
 
 #: kiconedit.cpp:435
 msgid "Freehand"
-msgstr ""
+msgstr "Frihånd"
 
 #: kiconedit.cpp:436
 msgid "Rectangle"
-msgstr ""
+msgstr "Rektangel"
 
 #: kiconedit.cpp:437
 msgid "Filled rectangle"
-msgstr ""
+msgstr "Fyll rektangel"
 
 #: kiconedit.cpp:438
 msgid "Circle"
-msgstr ""
+msgstr "Sirkel"
 
 #: kiconedit.cpp:439
 msgid "Filled circle"
-msgstr ""
+msgstr "Fyllt sirkel"
 
 #: kiconedit.cpp:440
 msgid "Ellipse"
-msgstr ""
+msgstr "Elipse"
 
 #: kiconedit.cpp:441
 msgid "Filled ellipse"
-msgstr ""
+msgstr "Fyllt elipse"
 
 #: kiconedit.cpp:442 kiconedit.cpp:568
 msgid "Spray"
-msgstr ""
+msgstr "Sprei"
 
 #: kiconedit.cpp:443 kiconedit.cpp:570
 msgid "Flood fill"
-msgstr ""
+msgstr "Sprengfylle"
 
 #: kiconedit.cpp:444
 msgid "Line"
-msgstr ""
+msgstr "Linje"
 
 #: kiconedit.cpp:445
 msgid "Eraser (Transparent)"
-msgstr ""
+msgstr "Sletter (Gjennomsiktig)"
 
 #: kiconedit.cpp:447
 msgid "&Tools"
-msgstr ""
+msgstr "&Verktøy"
 
 #: kiconedit.cpp:451
 msgid "Toggle &Grid"
-msgstr ""
+msgstr "Slå av/på &grind"
 
 #: kiconedit.cpp:455
 msgid "Toggle &toolbar"
-msgstr ""
+msgstr "Slå av/på &verktøylinje"
 
 #: kiconedit.cpp:458
 msgid "Toggle &drawing tools"
-msgstr ""
+msgstr "Slå av/på &tegneverktøyer"
 
 #: kiconedit.cpp:461
 msgid "Toggle &statusbar"
-msgstr ""
+msgstr "Slå av/på &statuslinjer"
 
 #: kiconedit.cpp:465
 msgid "&Save options"
-msgstr ""
+msgstr "&Lagre valg"
 
 #: kiconedit.cpp:466
 msgid "&Options"
-msgstr ""
+msgstr "&Valg"
 
 #: kiconedit.cpp:470
 msgid "&Help"
-msgstr ""
+msgstr "&Hjelp"
 
 #: kiconedit.cpp:488
 msgid "New File"
-msgstr ""
+msgstr "Ny fil"
 
 #: kiconedit.cpp:490
 msgid "Open a file"
-msgstr ""
+msgstr "Åpne en fil"
 
 #: kiconedit.cpp:492
 msgid "Save the file"
-msgstr ""
+msgstr "Lagre filen"
 
 #: kiconedit.cpp:495
 msgid "Print icon"
-msgstr ""
+msgstr "Skriv ut ikon"
 
 #: kiconedit.cpp:498
 msgid "Cut"
-msgstr ""
+msgstr "Klipp ut"
 
 #: kiconedit.cpp:500
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: kiconedit.cpp:502
 msgid "Paste"
-msgstr ""
+msgstr "Lim inn"
 
 #: kiconedit.cpp:506
 msgid "Resize"
-msgstr ""
+msgstr "Endre størrelse"
 
 #: kiconedit.cpp:509
 msgid "GrayScale"
-msgstr ""
+msgstr "Gråskala"
 
 #: kiconedit.cpp:516
 msgid "Zoom out"
-msgstr ""
+msgstr "Forminsk"
 
 #: kiconedit.cpp:518
 msgid "Zoom in"
-msgstr ""
+msgstr "Forstørre"
 
 #: kiconedit.cpp:521
 msgid "Toggle grid"
-msgstr ""
+msgstr "Slå av/på grind"
 
 #: kiconedit.cpp:526
 msgid "New Window"
-msgstr ""
+msgstr "Nytt vindu"
 
 #: kiconedit.cpp:548
 msgid "Find pixel"
-msgstr ""
+msgstr "Finn punkt"
 
 #: kiconedit.cpp:550
 msgid "Draw freehand"
-msgstr ""
+msgstr "Tegn ved frihånd"
 
 #: kiconedit.cpp:552
 msgid "Select area"
-msgstr ""
+msgstr "Velg område"
 
 #: kiconedit.cpp:554
 msgid "Draw line"
-msgstr ""
+msgstr "Tegne linje"
 
 #: kiconedit.cpp:556
 msgid "Draw rectangle"
-msgstr ""
+msgstr "Tegne rektangel"
 
 #: kiconedit.cpp:558
 msgid "Draw filled rectangle"
-msgstr ""
+msgstr "Tegne fyllt rektangl"
 
 #: kiconedit.cpp:560
 msgid "Draw circle"
-msgstr ""
+msgstr "Tegne sirkel"
 
 #: kiconedit.cpp:562
 msgid "Draw filled circle"
-msgstr ""
+msgstr "Tegne fyllt sirkel"
 
 #: kiconedit.cpp:564
 msgid "Draw ellipse"
-msgstr ""
+msgstr "Tegne elipse"
 
 #: kiconedit.cpp:566
 msgid "Draw filled ellipse"
-msgstr ""
+msgstr "Tegne fyllt elipse"
 
 #: kiconedit.cpp:573
 msgid "Erase"
-msgstr ""
+msgstr "Slett"
 
 #: kiconedit.cpp:900
 msgid "Sorry - not implemented."
-msgstr ""
+msgstr "Beklager - ikke implementert."
 
 #: kiconedit.cpp:1002 kiconedit.cpp:1009
 #, c-format
 msgid "Colors: %u"
-msgstr ""
+msgstr "Farger: %u"
 
 #: kicongrid.cpp:424
 msgid "There was an error loading a blank image.\n"
-msgstr ""
+msgstr "Det oppstod en feil under lasting av et blankt bilde.\n"
 
 #: kicongrid.cpp:425
 msgid "Error"
-msgstr ""
+msgstr "Feil"
 
 #: kicongrid.cpp:517
 msgid "All selected"
-msgstr ""
+msgstr "Alt valgt"
 
 #: kicongrid.cpp:528
 msgid "Cleared"
-msgstr ""
+msgstr "Renset"
 
 #: kicongrid.cpp:578
 msgid "Selected area cutted"
-msgstr ""
+msgstr "Valgt område klippet ut"
 
 #: kicongrid.cpp:581
 msgid "Selected area copied"
-msgstr ""
+msgstr "Valgt område kopiert"
 
 #: kicongrid.cpp:608
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
 msgstr ""
+"Det var en kopiering:\n"
+"til utklippstavlen!"
 
 #: kicongrid.cpp:626
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
 msgstr ""
+"Bildet i utklippstavlen er større enn gjeldende bilde!\n"
+"Lime inn som nytt bilde?"
 
 #: kicongrid.cpp:639
 msgid "Pasting"
@@ -374,7 +378,7 @@ msgstr "Limer inn"
 
 #: kicongrid.cpp:674 kicongrid.cpp:704
 msgid "Done pasting"
-msgstr ""
+msgstr "Ferdig med innliming"
 
 #: kicongrid.cpp:679 kicongrid.cpp:708
 msgid "Invalid pixmap data in clipboard!\n"
@@ -419,7 +423,7 @@ msgstr "FEIL"
 
 #: kicon.cpp:114
 msgid "The KDE Icon Editor has found a recover file for:\n"
-msgstr ""
+msgstr "KDE Ikonredigerer har funnet en erstatningsfil for:\n"
 
 #: kicon.cpp:116 kicon.cpp:263
 msgid ""
@@ -463,7 +467,7 @@ msgstr "KIcon: Det var en feillåsing:\n"
 
 #: kicon.cpp:213 kicon.cpp:269
 msgid "KIcon: There was a QT error loading:\n"
-msgstr ""
+msgstr "KIcon: Det oppstod en QT-feil under lasting:\n"
 
 #: kicon.cpp:261
 msgid "The KDE Icon Editor has found a recover\n"
