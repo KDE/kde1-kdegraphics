@@ -1,8 +1,9 @@
 msgid ""
-msgstr "Project-Id-Version: kuser\n"
-       "POT-Creation-Date: 1998-03-21 18:32+0300\n"
-       "PO-Revision-Date: 1998-03-23 00:00+0100\n"
-       "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
+msgstr ""
+"Project-Id-Version: kuser\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: 1998-03-23 00:00+0100\n"
+"Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:514
@@ -13,36 +14,41 @@ msgstr "Aviso"
 msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
-msgstr "A alteração na geração de fontes só se dará\n"
-       "quando você reiniciar o kdvi!"
+msgstr ""
+"A alteração na geração de fontes só se dará\n"
+"quando você reiniciar o kdvi!"
 
 #: dviwin.cpp:233
 msgid ""
 "The change in font path will be effective\n"
 "only after you start kdvi again!"
-msgstr "A alteração na localização das fontes só se dará\n"
-       "quando você reiniciar o kdvi!"
+msgstr ""
+"A alteração na localização das fontes só se dará\n"
+"quando você reiniciar o kdvi!"
 
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
-msgstr "A alteração no modo Metafonte só se dará\n"
-       "quando você reiniciar o kdvi!"
+msgstr ""
+"A alteração no modo Metafonte só se dará\n"
+"quando você reiniciar o kdvi!"
 
 #: dviwin.cpp:284
 msgid ""
 "The change in resolution will be effective\n"
 "only after you start kdvi again!"
-msgstr "A alteração de resolução só se dará\n"
-       "quando você reiniciar o kdvi!"
+msgstr ""
+"A alteração de resolução só se dará\n"
+"quando você reiniciar o kdvi!"
 
 #: dviwin.cpp:301
 msgid ""
 "The change in gamma will be effective\n"
 "only after you start kdvi again!"
-msgstr "A alteração do gamma só se dará\n"
-       "quando você reiniciar o kdvi!"
+msgstr ""
+"A alteração do gamma só se dará\n"
+"quando você reiniciar o kdvi!"
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
@@ -103,14 +109,6 @@ msgstr "&Largura da página"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Redesenhar página"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Anterior"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Seguinte"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -174,9 +172,9 @@ msgid ""
 "\n"
 "by Markku Hihnala"
 msgstr ""
-       "\n"
-       "\n"
-       "Markku Hihnala"
+"\n"
+"\n"
+"Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
@@ -502,10 +500,6 @@ msgstr "Barras de Rolagem"
 msgid "Number of recent files"
 msgstr "Número de arquivos recentes"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Aparência"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Gerar fontes faltantes"
@@ -530,10 +524,6 @@ msgstr "Fator de redução para texto pequeno"
 msgid "Shrink factor for large text"
 msgstr "Fator de redução para texto grande"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Fontes"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Mostrar especiais do postscript"
@@ -553,10 +543,6 @@ msgstr "Visualização"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papel"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Imprimir"
 
 #: print.cpp:63
 msgid "Print "
@@ -666,10 +652,6 @@ msgstr "Utilizar &mpage"
 msgid "&Add"
 msgstr "&Adicionar"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Remover"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Comando para a &spooler:"
@@ -681,3 +663,21 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impressão"
+
+#~ msgid "&Previous"
+#~ msgstr "&Anterior"
+
+#~ msgid "&Next"
+#~ msgstr "&Seguinte"
+
+#~ msgid "Appearance"
+#~ msgstr "Aparência"
+
+#~ msgid "Fonts"
+#~ msgstr "Fontes"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "&Remove"
+#~ msgstr "&Remover"

@@ -1,8 +1,9 @@
 msgid ""
-msgstr "Project-Id-Version: kuser\n"
-       "POT-Creation-Date: 1998-03-21 18:32+0300\n"
-       "PO-Revision-Date: 1998-03-23 00:00+0100\n"
-       "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
+msgstr ""
+"Project-Id-Version: kuser\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: 1998-03-23 00:00+0100\n"
+"Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -24,20 +25,21 @@ msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
-msgstr "\n"
-       "Este programa é um software livre; podendo ser redistribuido e/ou "
-       "modificado\n"
-       "sob os termos da Licença Geral Publica GNU como é publicada pela\n"
-       "Free Software Foundation; quer seja a versão 2 da Licença, ou\n"
-       "(por sua opção) uma versão mais recente.\n"
-       "Este programa é distribuído na expectativa que seja útil,\n"
-       "mas SEM NENHUMA GARANTIA; sem sequer a garantia implícita de\n"
-       "MERCANTIBILIDADE ou APTIDÃO PARA UM FIM EM PARTICULAR.  Veja a\n"
-       "Licença Geral Pública GNU para maiores detalhes.\n"
-       "\n"
-       "Deve haver uma cópia da Licença Geral Pública GNU\n"
-       "com este programa; se não, escreva para a Free Software\n"
-       "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"\n"
+"Este programa é um software livre; podendo ser redistribuido e/ou "
+"modificado\n"
+"sob os termos da Licença Geral Publica GNU como é publicada pela\n"
+"Free Software Foundation; quer seja a versão 2 da Licença, ou\n"
+"(por sua opção) uma versão mais recente.\n"
+"Este programa é distribuído na expectativa que seja útil,\n"
+"mas SEM NENHUMA GARANTIA; sem sequer a garantia implícita de\n"
+"MERCANTIBILIDADE ou APTIDÃO PARA UM FIM EM PARTICULAR.  Veja a\n"
+"Licença Geral Pública GNU para maiores detalhes.\n"
+"\n"
+"Deve haver uma cópia da Licença Geral Pública GNU\n"
+"com este programa; se não, escreva para a Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:54
 msgid "&Section"
@@ -47,8 +49,8 @@ msgstr "&Seção"
 msgid "&Page"
 msgstr "&Página"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2215
-#: kghostview.cpp:2227 kghostview.cpp:2232 kghostview.cpp:2515
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
+#: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
 #, c-format
 msgid "of %d"
 msgstr "de %d"
@@ -113,7 +115,7 @@ msgstr "&Imagem"
 msgid "&Backing store"
 msgstr "&Armazenar fundo"
 
-#: interpreter.cpp:244 kkeydialog.cpp:230
+#: interpreter.cpp:244 kkeydialog.cpp:233
 msgid "&Defaults"
 msgstr "Pa&drões"
 
@@ -121,508 +123,489 @@ msgstr "Pa&drões"
 msgid "gs"
 msgstr "gs"
 
-#: kaccel.cpp:166
+#: kaccel.cpp:169
 msgid "CTRL+O"
 msgstr "CTRL+O"
 
-#: kaccel.cpp:170
+#: kaccel.cpp:173
 msgid "CTRL+N"
 msgstr "CTRL+N"
 
-#: kaccel.cpp:174
+#: kaccel.cpp:177
 msgid "CTRL+W"
 msgstr "CTRL+W"
 
-#: kaccel.cpp:178
+#: kaccel.cpp:181
 msgid "CTRL+S"
 msgstr "CTRL+S"
 
-#: kaccel.cpp:181 kaccel.cpp:401 kghostview.cpp:347 kghostview.cpp:368
-#: kghostview.cpp:432 kghostview.cpp:1286
-msgid "Print"
-msgstr "Imprimir"
-
-#: kaccel.cpp:182
+#: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "CTRL+P"
 
-#: kaccel.cpp:186
+#: kaccel.cpp:189
 msgid "CTRL+Q"
 msgstr "CTRL+Q"
 
-#: kaccel.cpp:190
+#: kaccel.cpp:193
 msgid "CTRL+X"
 msgstr "CTRL+X"
 
-#: kaccel.cpp:194
+#: kaccel.cpp:197
 msgid "CTRL+C"
 msgstr "CTRL+C"
 
-#: kaccel.cpp:198
+#: kaccel.cpp:201
 msgid "CTRL+V"
 msgstr "CTRL+V"
 
-#: kaccel.cpp:202
+#: kaccel.cpp:205
 msgid "CTRL+Z"
 msgstr "CTRL+Z"
 
-#: kaccel.cpp:206
+#: kaccel.cpp:209
 msgid "CTRL+F"
 msgstr "CTRL+F"
 
-#: kaccel.cpp:210
+#: kaccel.cpp:213
 msgid "CTRL+R"
 msgstr "CTRL+R"
 
-#: kaccel.cpp:213 kaccel.cpp:425
+#: kaccel.cpp:216 kaccel.cpp:443
 msgid "Insert"
 msgstr "Inserir"
 
-#: kaccel.cpp:214
+#: kaccel.cpp:217
 msgid "CTRL+Insert"
 msgstr "CTRL+Insert"
 
-#: kaccel.cpp:217 kaccel.cpp:428
-msgid "Home"
-msgstr "Home"
-
-#: kaccel.cpp:218
+#: kaccel.cpp:221
 msgid "CTRL+Home"
 msgstr "CTRL+Home"
 
-#: kaccel.cpp:221 kaccel.cpp:431
+#: kaccel.cpp:224 kaccel.cpp:449
 msgid "End"
 msgstr "End"
 
-#: kaccel.cpp:222
+#: kaccel.cpp:225
 msgid "CTRL+End"
 msgstr "CTRL+End"
 
-#: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
+#: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
 msgid "Prior"
 msgstr "Anterior"
 
-#: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
+#: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
 msgid "Next"
 msgstr "Próximo"
 
-#: kaccel.cpp:234
+#: kaccel.cpp:237
 msgid "F1"
 msgstr "F1"
 
-#: kghostview.cpp:202
+#: kghostview.cpp:199
 msgid "Document information"
 msgstr "Informações do documento"
 
-#: kghostview.cpp:216 kghostview.cpp:349 kghostview.cpp:370 kghostview.cpp:439
+#: kghostview.cpp:213
+#, fuzzy
+msgid "Page Setup"
+msgstr "Configuração da impressora"
+
+#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
 msgstr "Ver Controle"
 
-#: kghostview.cpp:350 kghostview.cpp:371 kghostview.cpp:444
+#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
 msgid "Go To Page"
 msgstr "Ir Para Página"
 
-#: kghostview.cpp:351 kghostview.cpp:372 kghostview.cpp:437
+#: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
 msgid "Zoom In"
 msgstr "Aumentar"
 
-#: kghostview.cpp:352 kghostview.cpp:373 kghostview.cpp:438
+#: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
 msgid "Zoom Out"
 msgstr "Diminuir"
 
-#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:442
+#: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
 msgid "Next Page"
 msgstr "Próxima Página"
 
-#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:443
+#: kghostview.cpp:358 kghostview.cpp:379 kghostview.cpp:447
 msgid "Prev Page"
 msgstr "Página Anterior"
 
-#: kghostview.cpp:355 kghostview.cpp:376
+#: kghostview.cpp:359 kghostview.cpp:380
 msgid "Scroll Up"
 msgstr "Subir"
 
-#: kghostview.cpp:356 kghostview.cpp:377
+#: kghostview.cpp:360 kghostview.cpp:381
 msgid "Scroll Down"
 msgstr "Descer"
 
-#: kghostview.cpp:357 kghostview.cpp:378
+#: kghostview.cpp:361 kghostview.cpp:382
 msgid "Scroll Left"
 msgstr "Esquerda"
 
-#: kghostview.cpp:358 kghostview.cpp:379
+#: kghostview.cpp:362 kghostview.cpp:383
 msgid "Scroll Right"
 msgstr "Direita"
 
-#: kghostview.cpp:359 kghostview.cpp:380 kghostview.cpp:440
+#: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
 msgid "Redisplay"
 msgstr "Mostrar novamente"
 
-#: kghostview.cpp:402 kghostview.cpp:404
+#: kghostview.cpp:406 kghostview.cpp:408
 msgid "Not known"
 msgstr "Desconhecido"
 
-#: kghostview.cpp:415
+#: kghostview.cpp:419
 msgid "Configure interpreter"
 msgstr "Configurar interpretador"
 
-#: kghostview.cpp:490
+#: kghostview.cpp:494
 msgid "&Open ..."
 msgstr "&Abrir ..."
 
-#: kghostview.cpp:491
+#: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Abrir &recente"
 
-#: kghostview.cpp:496
+#: kghostview.cpp:503
+#, fuzzy
+msgid "Page Set&up ..."
+msgstr "&Configurar..."
+
+#: kghostview.cpp:505
 msgid "&Print ..."
 msgstr "&Imprimir ..."
 
-#: kghostview.cpp:504
+#: kghostview.cpp:513
 msgid "Zoom &in"
 msgstr "&Aumentar"
 
-#: kghostview.cpp:506
+#: kghostview.cpp:515
 msgid "Zoom &out"
 msgstr "&Diminuir"
 
-#: kghostview.cpp:508
-msgid "&View control ..."
-msgstr "&Ver controle ..."
+#: kghostview.cpp:517
+#, fuzzy
+msgid "&Zoom ..."
+msgstr "&Info ..."
 
-#: kghostview.cpp:511
-msgid "&Fit to page width"
-msgstr "&Largura da página"
-
-#: kghostview.cpp:513
-msgid "&Redisplay"
-msgstr "&Atualizar"
-
-#: kghostview.cpp:515
+#: kghostview.cpp:522
 msgid "&Info ..."
 msgstr "&Info ..."
 
-#: kghostview.cpp:520
+#: kghostview.cpp:527
 msgid "&Previous Page"
 msgstr "Página &Anterior"
 
-#: kghostview.cpp:522
+#: kghostview.cpp:529
 msgid "&Next page"
 msgstr "Página &seguinte"
 
-#: kghostview.cpp:524
+#: kghostview.cpp:531
 msgid "&Go to page ..."
 msgstr "&Ir para página ..."
 
-#: kghostview.cpp:527
+#: kghostview.cpp:534
 msgid "Go to &start"
 msgstr "Ir para &início"
 
-#: kghostview.cpp:529
+#: kghostview.cpp:536
 msgid "Go to &end"
 msgstr "Ir para &fim"
 
-#: kghostview.cpp:531
+#: kghostview.cpp:538
 msgid "&Read down"
 msgstr "&Ler para baixo"
 
-#: kghostview.cpp:536
+#: kghostview.cpp:543
 msgid "Mark &current page"
 msgstr "Marcar página a&tual"
 
-#: kghostview.cpp:539
+#: kghostview.cpp:546
 msgid "Mark &all pages"
 msgstr "Marcar tod&as as páginas"
 
-#: kghostview.cpp:541
+#: kghostview.cpp:548
 msgid "Mark &even pages"
 msgstr "Marcar páginas par&es"
 
-#: kghostview.cpp:543
+#: kghostview.cpp:550
 msgid "Mark &odd pages"
 msgstr "Marcar páginas &ímpares"
 
-#: kghostview.cpp:546
+#: kghostview.cpp:553
 msgid "&Toggle page marks"
 msgstr "&Mudar marcações de página"
 
-#: kghostview.cpp:549
+#: kghostview.cpp:556
 msgid "&Remove page marks"
 msgstr "&Remover marcações de página"
 
-#: kghostview.cpp:560
+#: kghostview.cpp:567
 msgid "Show &tool bar"
 msgstr "Mostrar barra de &ferramentas"
 
-#: kghostview.cpp:561
+#: kghostview.cpp:568
 msgid "Show st&atus bar"
 msgstr "Mostrar barra de &status"
 
-#: kghostview.cpp:562
+#: kghostview.cpp:569
 msgid "Show &page list"
 msgstr "Mostrar lista de &páginas"
 
-#: kghostview.cpp:564
+#: kghostview.cpp:571
 msgid "Configure &interpreter ..."
 msgstr "Configurar &interpretador ..."
 
-#: kghostview.cpp:565
+#: kghostview.cpp:572
 msgid "Configure &key bindings ..."
 msgstr "Configurar &teclas ..."
 
-#: kghostview.cpp:567
+#: kghostview.cpp:574
 msgid "&Save options"
 msgstr "&Salvar Opções"
 
-#: kghostview.cpp:574
+#: kghostview.cpp:581
 msgid "&About this application"
 msgstr "&Sobre esta aplicação"
 
-#: kghostview.cpp:576
+#: kghostview.cpp:583
 msgid "&Help for this application"
 msgstr "A&juda para esta aplicação"
 
-#: kghostview.cpp:578
+#: kghostview.cpp:585
 msgid "&Copyright"
 msgstr "&Copyright"
 
-#: kghostview.cpp:585
+#: kghostview.cpp:592
 msgid "&Go"
 msgstr "&Ir"
 
-#: kghostview.cpp:586
+#: kghostview.cpp:593
 msgid "&Pagemarks"
 msgstr "Marcas de &Página"
 
-#: kghostview.cpp:654
+#: kghostview.cpp:661
 msgid "New window ..."
 msgstr "Nova janela ..."
 
-#: kghostview.cpp:657
+#: kghostview.cpp:664
 msgid "Open file ..."
 msgstr "Abrir arquivo ..."
 
-#: kghostview.cpp:662
+#: kghostview.cpp:672
 msgid "Print document ..."
 msgstr "Imprimir documento ..."
 
-#: kghostview.cpp:667
+#: kghostview.cpp:677
 msgid "Zoom in"
 msgstr "Aumentar"
 
-#: kghostview.cpp:670
+#: kghostview.cpp:680
 msgid "Zoom out"
 msgstr "Diminuir"
 
-#: kghostview.cpp:673
-msgid "Change view ..."
-msgstr "Mudar visão ..."
-
-#: kghostview.cpp:683
+#: kghostview.cpp:685
 msgid "Go back"
 msgstr "Recuar"
 
-#: kghostview.cpp:686
+#: kghostview.cpp:688
 msgid "Go forward"
 msgstr "Avançar"
 
-#: kghostview.cpp:689
+#: kghostview.cpp:691
 msgid "Go to page ..."
 msgstr "Ir para a página ..."
 
-#: kghostview.cpp:694
+#: kghostview.cpp:696
 msgid "Go to start"
 msgstr "Ir para inicio"
 
-#: kghostview.cpp:697
+#: kghostview.cpp:699
 msgid "Go to end"
 msgstr "Ir para fim"
 
-#: kghostview.cpp:700
+#: kghostview.cpp:702
 msgid "Read down the page"
 msgstr "Ler para baixo a página"
 
-#: kghostview.cpp:705
+#: kghostview.cpp:707
 msgid "Toggle this page mark"
 msgstr "Mudar esta marcação de página"
 
-#: kghostview.cpp:727
+#: kghostview.cpp:729
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "Sc.100 de 100 P.100 de 100"
 
-#: kghostview.cpp:728
+#: kghostview.cpp:730
 #, c-format
 msgid "100 %"
 msgstr "100 %"
 
-#: kghostview.cpp:729
+#: kghostview.cpp:731
 msgid "Upside Down"
 msgstr "De Cabeça Para Baixo"
 
-#: kghostview.cpp:754
+#: kghostview.cpp:756
 msgid "Malformed URL."
 msgstr "URL Incorreta."
 
-#: kghostview.cpp:766
+#: kghostview.cpp:768
 msgid ""
 "Already waiting\n"
 "for an internet job to finish.\n"
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
-msgstr "Já à espera\n"
-       "que um processo internet termine.\n"
-       "Por favor espere que acabe.\n"
-       "Opcionalmente pare o programa em execução."
+msgstr ""
+"Já à espera\n"
+"que um processo internet termine.\n"
+"Por favor espere que acabe.\n"
+"Opcionalmente pare o programa em execução."
 
-#: kghostview.cpp:775
+#: kghostview.cpp:777
 msgid "Could not start or find KFM."
 msgstr "Não foi possível iniciar ou encontrar o KFM"
 
-#: kghostview.cpp:1220 kghostview.cpp:2307 viewcontrol.cpp:67
+#: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Retrato"
 
-#: kghostview.cpp:1222 kghostview.cpp:2313 viewcontrol.cpp:68
+#: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Paisagem"
 
-#: kghostview.cpp:1224 kghostview.cpp:2311 viewcontrol.cpp:69
+#: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "Paisagem Marítima"
 
-#: kghostview.cpp:1226 kghostview.cpp:2309 viewcontrol.cpp:70
+#: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "Ao contrário"
 
-#: kghostview.cpp:1264
+#: kghostview.cpp:1262
 msgid "Go to ..."
 msgstr "Ir para ..."
 
-#: kghostview.cpp:1418
-msgid "Turn antialiasing on"
-msgstr "Ligar antialiasing"
+#: kghostview.cpp:1337
+#, fuzzy
+msgid "Zoom"
+msgstr "Aumentar"
 
-#: kghostview.cpp:1420
-msgid "Turn antialiasing off"
-msgstr "Desligar antialiasing"
-
-#: kghostview.cpp:1431
-msgid "Show Ghostscript messages"
-msgstr "Mostrar mensagens do Ghostscript"
-
-#: kghostview.cpp:1433
-msgid "Hide Ghostscript messages"
-msgstr "Esconder mensagens do Ghostscript"
-
-#: kghostview.cpp:1498
+#: kghostview.cpp:1523
 msgid "Version 0.6"
 msgstr "Versão 0.6"
 
-#: kghostview.cpp:1499
+#: kghostview.cpp:1524
 msgid "Sorry, not ready yet"
 msgstr "Lamento, ainda não disponível"
 
-#: kghostview.cpp:1506
+#: kghostview.cpp:1531
 msgid "About kghostview"
 msgstr "Sobre o kghostview"
 
-#: kghostview.cpp:1507
+#: kghostview.cpp:1532
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
-msgstr "Versão :\t0.6 alpha\n"
-       "Autor : Mark Donohoe\n"
-       "Mail : donohoe@kde.org"
+msgstr ""
+"Versão :\t0.6 alpha\n"
+"Autor : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1559 kghostview.cpp:1675
+#: kghostview.cpp:1584 kghostview.cpp:1700
 msgid "Error printing"
 msgstr "Erro ao imprimir"
 
-#: kghostview.cpp:1569
+#: kghostview.cpp:1594
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
-       "Escolheu imprimir todas as páginas para um arquivo.\n"
-       "Isto iria produzir um documento idêntico ao\n"
-       "que está carregado atualmente no visualizador.\n"
-       "Não há necessidade de imprimir todas as páginas para um novo arquivo."
+"Escolheu imprimir todas as páginas para um arquivo.\n"
+"Isto iria produzir um documento idêntico ao\n"
+"que está carregado atualmente no visualizador.\n"
+"Não há necessidade de imprimir todas as páginas para um novo arquivo."
 
-#: kghostview.cpp:1582
+#: kghostview.cpp:1607
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
-       "Nenhum nome foi dado portanto\n"
-       "não foi possível imprimir para o arquivo.\n"
+"Nenhum nome foi dado portanto\n"
+"não foi possível imprimir para o arquivo.\n"
 
-#: kghostview.cpp:1640
+#: kghostview.cpp:1665
 #, c-format
 msgid "Print failure : %s"
 msgstr "Falha na impressão : %s"
 
-#: kghostview.cpp:1676
+#: kghostview.cpp:1701
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
-       "Impressão falhou porque a lista de\n"
-       "páginas a imprimir estava vazia.\n"
+"Impressão falhou porque a lista de\n"
+"páginas a imprimir estava vazia.\n"
 
-#: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
-#: kghostview.cpp:2509
+#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
+#: kghostview.cpp:2534
 msgid "of 1    "
 msgstr "de 1    "
 
-#: kghostview.cpp:2211 kghostview.cpp:2223 kghostview.cpp:2511
+#: kghostview.cpp:2236 kghostview.cpp:2248 kghostview.cpp:2536
 #, c-format
 msgid "of %d    "
 msgstr "de %d    "
 
-#: kghostview.cpp:2213 kghostview.cpp:2225 kghostview.cpp:2513
-#: kghostview.cpp:2520
+#: kghostview.cpp:2238 kghostview.cpp:2250 kghostview.cpp:2538
+#: kghostview.cpp:2545
 #, c-format
 msgid "of %d  "
 msgstr "de %d  "
 
-#: kghostview.cpp:2485
+#: kghostview.cpp:2510
 msgid "Sc.1 "
 msgstr "Sc.1 "
 
-#: kghostview.cpp:2488
+#: kghostview.cpp:2513
 msgid "P.1 "
 msgstr "P.1 "
 
-#: kghostview.cpp:2490 kghostview.cpp:2503
+#: kghostview.cpp:2515 kghostview.cpp:2528
 #, c-format
 msgid "P.%d "
 msgstr "P.%d "
 
-#: kghostview.cpp:2505
+#: kghostview.cpp:2530
 #, c-format
 msgid "Sc.%d "
 msgstr "Sc.%d "
 
-#: kkeydialog.cpp:308
+#: kkeydialog.cpp:312
 msgid "Current key"
 msgstr "Tecla atual"
 
-#: kkeydialog.cpp:319
+#: kkeydialog.cpp:323
 msgid "&Action"
 msgstr "&Ação"
 
-#: kkeydialog.cpp:378
+#: kkeydialog.cpp:382
 msgid "&No key"
 msgstr "&Nenhuma tecla"
 
-#: kkeydialog.cpp:386
+#: kkeydialog.cpp:390
 msgid "&Default key"
 msgstr "Tecla pa&drão"
 
-#: kkeydialog.cpp:394
+#: kkeydialog.cpp:398
 msgid "&Custom key"
 msgstr "&Tecla definida"
 
@@ -635,16 +618,16 @@ msgid ""
 " [filename] [siwtches]\n"
 "\n"
 msgstr ""
-       " [nome do arquivo] [parâmetros]\n"
-       "\n"
+" [nome do arquivo] [parâmetros]\n"
+"\n"
 
 #: main.cpp:28
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
-       "Veja a documentação do KDE e do QT para\n"
-       "opções da linha de comando\n"
+"Veja a documentação do KDE e do QT para\n"
+"opções da linha de comando\n"
 
 #: main.cpp:30
 msgid "Error on command line"
@@ -682,7 +665,7 @@ msgstr "Mensagens do Ghostscript"
 msgid "&Clear"
 msgstr "&Limpar"
 
-#: messages.cpp:59 viewcontrol.cpp:114
+#: messages.cpp:59
 msgid "&Dismiss"
 msgstr "&Fechar"
 
@@ -751,29 +734,66 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
-       "O intervalo de página inserido não\n"
-       "foi entendido.\n"
-       "\n"
-       "O intervalo especificado tem de estar dentro\n"
-       "do intervalo de páginas desta parte do documento\n"
-       "Esta informação está disponível na barra de status.\n"
+"O intervalo de página inserido não\n"
+"foi entendido.\n"
+"\n"
+"O intervalo especificado tem de estar dentro\n"
+"do intervalo de páginas desta parte do documento\n"
+"Esta informação está disponível na barra de status.\n"
 
-#: viewcontrol.cpp:36
-msgid "Force changes to ..."
-msgstr "Forçar mudanças a ..."
-
-#: viewcontrol.cpp:78
-msgid "&magnification"
+#: viewcontrol.cpp:75
+#, fuzzy
+msgid "magnification"
 msgstr "a&mpliação"
 
-#: viewcontrol.cpp:86
-msgid "m&edia"
+#: viewcontrol.cpp:85
+#, fuzzy
+msgid "&Media"
 msgstr "míd&ia"
 
-#: viewcontrol.cpp:94
-msgid "&orientation"
+#: viewcontrol.cpp:93
+#, fuzzy
+msgid "&Orientation"
 msgstr "&orientação"
 
-#: viewcontrol.cpp:111
+#: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Aplicar"
+
+#: zoom.cpp:46
+#, fuzzy
+msgid "&Magnification"
+msgstr "a&mpliação"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "&View control ..."
+#~ msgstr "&Ver controle ..."
+
+#~ msgid "&Fit to page width"
+#~ msgstr "&Largura da página"
+
+#~ msgid "&Redisplay"
+#~ msgstr "&Atualizar"
+
+#~ msgid "Change view ..."
+#~ msgstr "Mudar visão ..."
+
+#~ msgid "Turn antialiasing on"
+#~ msgstr "Ligar antialiasing"
+
+#~ msgid "Turn antialiasing off"
+#~ msgstr "Desligar antialiasing"
+
+#~ msgid "Show Ghostscript messages"
+#~ msgstr "Mostrar mensagens do Ghostscript"
+
+#~ msgid "Hide Ghostscript messages"
+#~ msgstr "Esconder mensagens do Ghostscript"
+
+#~ msgid "Force changes to ..."
+#~ msgstr "Forçar mudanças a ..."

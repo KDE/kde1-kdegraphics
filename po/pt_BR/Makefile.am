@@ -3,7 +3,7 @@
 GMFILES = kpaint.gmo kghostview.gmo kdvi.gmo kfax.gmo
 POFILES = $(GMFILES:.gmo=.po)
 
-LANG = de
+LANG = pt_BR
 
 localedir = $(kde_locale)
 

@@ -750,7 +750,7 @@ msgstr "ingrandimento"
 msgid "&Media"
 msgstr "&Media"
 
-#: viewcontrol.cpp:9
+#: viewcontrol.cpp:93
 msgid "&Orientation"
 msgstr "&Orientazione"
 

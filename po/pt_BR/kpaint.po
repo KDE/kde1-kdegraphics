@@ -1,16 +1,18 @@
 msgid ""
-msgstr "Project-Id-Version: kuser\n"
-       "POT-Creation-Date: 1998-03-21 18:32+0300\n"
-       "PO-Revision-Date: 1998-03-23 00:00+0100\n"
-       "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
+msgstr ""
+"Project-Id-Version: kuser\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: 1998-03-23 00:00+0100\n"
+"Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
 #: app.cpp:45
 msgid ""
 "\n"
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr "\n"
-       "(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
-       "Veja o arquivo LICENSE para maiores detalhes\n"
+msgstr ""
+"\n"
+"(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
+"Veja o arquivo LICENSE para maiores detalhes\n"
 
 #: app.cpp:46
 msgid "Usage: "
@@ -91,8 +93,7 @@ msgstr "Alterações Não Gravadas"
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-       "Há modificações não salvas, vai perdê-las se fechar esta janela agora."
+msgstr "Há modificações não salvas, vai perdê-las se fechar esta janela agora."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -244,9 +245,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
-       "\n"
-       "\n"
-       "(c) "
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -264,12 +265,9 @@ msgstr "KPaint: Não foi possível abrir o arquivo"
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
-msgstr "Erro: Não foi possível abrir o arquivo\n"
-       "KPaint não conseguiu abrir o arquivo especificado."
-
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Continuar"
+msgstr ""
+"Erro: Não foi possível abrir o arquivo\n"
+"KPaint não conseguiu abrir o arquivo especificado."
 
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
@@ -281,9 +279,9 @@ msgid ""
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
-       "Erro: Formato Desconhecido\n"
-       "KPaint não reconhece o formato do arquivo especificado\n"
-       "ou o arquivo está corrompido."
+"Erro: Formato Desconhecido\n"
+"KPaint não reconhece o formato do arquivo especificado\n"
+"ou o arquivo está corrompido."
 
 #: kpaint.cpp:745
 msgid "Open Location:"
@@ -312,10 +310,6 @@ msgstr "Propriedades de Preenchimento"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Padrão de Preenchimento"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Nenhum"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -400,3 +394,9 @@ msgstr "Cor da Linha..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Redondângulo"
+
+#~ msgid "Continue"
+#~ msgstr "Continuar"
+
+#~ msgid "None"
+#~ msgstr "Nenhum"
