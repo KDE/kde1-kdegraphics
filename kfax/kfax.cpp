@@ -430,7 +430,7 @@ void TopLevel::setupMenuBar(){
 
 
   options->setCheckable(TRUE);
-  options->insertItem(i18n("&Fax Options"),this,SLOT(faxoptions()));
+  options->insertItem(i18n("&Fax Options..."),this,SLOT(faxoptions()));
   options->insertSeparator(-1);
   toolID   = options->insertItem(i18n("&Tool Bar"),this,SLOT(toggleToolBar()));
   statusID = options->insertItem(i18n("&Status Bar"),this,SLOT(toggleStatusBar()));	
