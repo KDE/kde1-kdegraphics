@@ -344,11 +344,11 @@ msgstr "Aseta tulkkia"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Uusi"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Uusi"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -633,6 +633,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Aseta ympäristömuuttuja (PRINTER tai LPDEST esimerkiksi) jotta tulostin "
+"otetaan huomioon."
 
 #: kghostview.cpp:1654
 #, c-format

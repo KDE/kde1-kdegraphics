@@ -89,7 +89,7 @@ msgstr "Asetukset ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Uusi"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -124,13 +124,12 @@ msgid "&Redraw page"
 msgstr "&Päivitä"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Edellinen sivu"
+msgstr "&Edellinen"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Seuraava"
 
 #: kdvi.cpp:207
 msgid "&First"

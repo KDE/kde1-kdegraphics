@@ -269,7 +269,7 @@ msgstr "Kuvan korkeus:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Peruuta"
 
 #: palette.cpp:100
 msgid "Edit Colour"
@@ -305,7 +305,7 @@ msgstr "Täyttökuvio:"
 
 #: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
-msgstr ""
+msgstr "Ei mikään"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"

@@ -208,7 +208,7 @@ msgstr "Lataan '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Valmis"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -314,7 +314,7 @@ msgstr "Tarkka"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Tavallinen"
 
 #: options.cpp:81
 msgid "Display Options:"
