@@ -197,8 +197,8 @@ void Fileman::initToolBar()
   //do a repositioning of the mainwidget after the toolbars have
   //been moved. Note that a repositioning of the op level widget
   //is been done before
-  connect( ktoolbar1, SIGNAL( moved(Position)), this, SLOT( doPositioning()));
-  connect( ktoolbar2, SIGNAL( moved(Position)), this, SLOT( doPositioning())); 
+  connect( ktoolbar1, SIGNAL( moved(BarPosition)), this, SLOT( doPositioning()));
+  connect( ktoolbar2, SIGNAL( moved(BarPosition)), this, SLOT( doPositioning())); 
 }
 
 void Fileman::initMainWidget()
