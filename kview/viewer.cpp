@@ -10,6 +10,8 @@
 
 #include<qpopmenu.h>
 #include<qmsgbox.h>
+#include<qprintdialog.h>
+#include<qprinter.h>
 #include<qstrlist.h>
 #include<qaccel.h>
 #include<qtimer.h>
@@ -48,6 +50,7 @@ KImageViewer::KImageViewer()
 	_popFilterID( 0 ),
 
 	_file( 0 ),
+	_edit( 0 ),
 	_zoom( 0 ),
 	_transform( 0 ),
 	_desktop( 0 ),
@@ -105,6 +108,23 @@ KImageViewer::KImageViewer()
 
 	_accel->connectItem( _accel->insertItem( Key_Z ), // zoom
 			this, SLOT(zoomCustom()) );
+	_accel->connectItem( _accel->insertItem( Key_C ), // crop
+			_canvas, SLOT(cropImage()) );
+	_accel->connectItem( _accel->insertItem( Key_Period ), // 10% zoom
+			this, SLOT(zoomIn10()) );
+	_accel->connectItem( _accel->insertItem( Key_Comma ),
+			this, SLOT(zoomOut10()) );
+
+	_accel->connectItem( _accel->insertItem(  Key_BracketLeft ), // 50%
+			this, SLOT(zoomOut50()) );
+	_accel->connectItem( _accel->insertItem( Key_BracketRight ), // 200%
+			this, SLOT(zoomIn200()) );
+
+	_accel->connectItem( _accel->insertItem(  Key_A ), // Maxpect
+			_canvas, SLOT(maxpectToWin()) );
+
+	_accel->connectItem( _accel->insertItem( Key_M ), // Max
+			_canvas, SLOT(maxToWin()) );
 
 	_accel->connectItem( _accel->insertItem( Key_S ), // slideshow
 			_imageList, SLOT(toggleSlideShow()) );
@@ -130,6 +150,7 @@ KImageViewer::~KImageViewer()
 	delete _canvas;
 
 	delete _file;
+	delete _edit;
 	delete _zoom;
 	delete _transform;
 	delete _desktop;
@@ -290,6 +311,7 @@ void KImageViewer::about()
 void KImageViewer::makeRootMenu(QMenuData *menu)
 {
 	menu->insertItem( i18n( "&File" ),	_file );
+	menu->insertItem( i18n( "&Edit" ),	_edit );
 	menu->insertItem( i18n( "&Zoom" ),	_zoom );
 	menu->insertItem( i18n( "&Transform" ),	_transform );
 	menu->insertItem( i18n( "To &Desktop"),	_desktop );
@@ -301,12 +323,13 @@ void KImageViewer::makeRootMenu(QMenuData *menu)
 	menu->insertItem( i18n( "&Options" ), _aggreg );
 	
 	menu->insertSeparator();
-	menu->insertItem( i18n( "&Help" ),	_help );
+	menu->insertItem( i18n( "&Help" ), _help );
 }
 
 void KImageViewer::makeRootMenu(KMenuBar *menu)
 {
 	menu->insertItem( i18n( "&File" ),	_file );
+	menu->insertItem( i18n( "&Edit" ),	_edit );
 	menu->insertItem( i18n( "&Zoom" ),	_zoom );
 	menu->insertItem( i18n( "&Transform" ),	_transform );
 	menu->insertItem( i18n( "To &Desktop"),	_desktop );
@@ -318,65 +341,89 @@ void KImageViewer::makeRootMenu(KMenuBar *menu)
 	menu->insertItem( i18n( "&Images" ), _aggreg );
 
 	menu->insertSeparator();
-	menu->insertItem( i18n( "&Help" ),	_help );
+	menu->insertItem( i18n( "&Help" ),  _help );
 }
 
 void KImageViewer::makePopupMenus()
 {
 	_file		= new QPopupMenu;
+	_edit		= new QPopupMenu;
 	_zoom		= new QPopupMenu;
 	_transform	= new QPopupMenu;
 	_desktop	= new QPopupMenu;
 	_aggreg	= new QPopupMenu;
 	_help		= new QPopupMenu;
 
-	_file->insertItem( i18n( "&Open.." ), this, SLOT(load()) );
-	_file->insertItem( i18n( "&Save As.." ), this, SLOT(saveAs()) );
+	// file pulldown
+
+	_file->insertItem( i18n( "&Open..." ), this, SLOT(load()) );
+	_file->insertItem( i18n( "&Save As..." ), this, SLOT(saveAs()) );
+	_file->insertSeparator();
+	_file->insertItem( i18n( "&Print..." ), this, SLOT(printImage()) );
 	_file->insertSeparator();
 	_file->insertItem( i18n( "&Close" ), this, SLOT(closeWindow()) );
 	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()) );
 
-
-	_zoom->insertItem( i18n( "&Full Screen" ), this, SLOT(fullScreen()),
+	// edit pulldown
+	_edit->insertItem( i18n( "&Full Screen" ), this, SLOT(fullScreen()),
 			Key_F );
-	_zoom->insertSeparator();
-	_zoom->insertItem( i18n( "&Zoom..." ), 	this, SLOT(zoomCustom()) );
-	_zoom->insertItem( i18n( "Zoom &in 10%" ), this, SLOT(zoomIn10()) );
-	_zoom->insertItem( i18n( "Zoom &out 10%"), this, SLOT(zoomOut10()));
-	_zoom->insertItem( i18n( "&Double size" ), this, SLOT(zoomIn200()) );
-	_zoom->insertItem( i18n( "&Half size"), this, SLOT(zoomOut50()));
-
-	_transform->insertItem( i18n( "&Reset"), this, SLOT(reset()),
+	_edit->insertSeparator();
+	_edit->insertItem( i18n( "&Crop" ), 	_canvas, SLOT(cropImage()),
+			Key_C );
+	_edit->insertSeparator();
+	_edit->insertItem( i18n( "&Reset"), this, SLOT(reset()),
 		CTRL + Key_R );
-	_transform->insertSeparator();
+
+	// zoom pulldown
+
+	_zoom->insertItem( i18n( "&Zoom..." ), 	this, SLOT(zoomCustom()),
+			Key_Z );
+	_zoom->insertItem( i18n( "Zoom &in 10%" ), this, SLOT(zoomIn10()),
+			Key_Period );
+	_zoom->insertItem( i18n( "Zoom &out 10%"), this, SLOT(zoomOut10()),
+			Key_Comma );
+	_zoom->insertItem( i18n( "&Double size" ), this, SLOT(zoomIn200()),
+			Key_BracketRight );
+	_zoom->insertItem( i18n( "&Half size"), this, SLOT(zoomOut50()),
+			Key_BracketLeft );
+	_zoom->insertItem( i18n( "&Max size"), _canvas, SLOT(maxToWin()),
+			Key_M );
+	_zoom->insertItem( i18n( "Max/&aspect"), _canvas, SLOT(maxpectToWin()),
+			Key_A );
+
+	// transform pulldown
+
 	_transform->insertItem( i18n( "Rotate &clockwise" ), 
 			this, SLOT(rotateClock()) );
 	_transform->insertItem( i18n( "Rotate &anti-clockwise" ), 
 			this, SLOT(rotateAntiClock()) );
-	_transform->insertSeparator();
 	_transform->insertItem( i18n( "Flip &vertical" ),
 			this, SLOT(flipVertical()) );
 	_transform->insertItem( i18n( "Flip &horizontal" ),
 			this, SLOT(flipHorizontal()) );
+
+	// desktop pulldown
 
 	_desktop->insertItem( i18n( "&Tile" ), this, SLOT( tile() )  );
 	_desktop->insertItem( i18n( "&Max" ),  this, SLOT( max() )   );
 	_desktop->insertItem( i18n("Max&pect"),this, SLOT(maxpect()) );
 
 
-	int id = _aggreg->insertItem( i18n("&List.."), this,
+	int id = _aggreg->insertItem( i18n("&List..."), this,
 		SLOT(toggleImageList()), Key_I );
 	_aggreg->setItemChecked( id, false );
 	_aggreg->insertSeparator();
-	_aggreg->insertItem( i18n("&Previous"), _imageList, SLOT(prev()), Key_Backspace );
-	_aggreg->insertItem( i18n("&Next"), _imageList, SLOT(next()), Key_Tab );
+	_aggreg->insertItem( i18n("&Previous"), _imageList, SLOT(prev()), 
+			Key_Backspace );
+	_aggreg->insertItem( i18n("&Next"), _imageList, SLOT(next()), 
+			Key_Tab );
 	_aggreg->insertSeparator();
 	_aggreg->insertItem( i18n("&Slideshow On/Off"), _imageList,
 		SLOT(toggleSlideShow()), Key_S );
 
 	_help->insertItem( i18n( "&Contents" ), this, SLOT(help()) );
 	_help->insertSeparator();
-	_help->insertItem( i18n( "&About KView.." ), this, SLOT(about()) );
+	_help->insertItem( i18n( "&About KView..." ), this, SLOT(about()) );
 }
 
 void KImageViewer::closeWindow()
@@ -557,7 +604,7 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		_imageList->pauseSlideShow();
 	}
 
-	setStatus( i18n( "Loading.." ) );
+	setStatus( i18n( "Loading..." ) );
 	_canvas->load( file );
 	setStatus( 0 );
 
@@ -741,8 +788,28 @@ void KImageViewer::restoreProperties( KConfig *cfg )
 
 void KImageViewer::saveOptions( KConfig * ) const
 {
+	// TODO: stub
 }
 
 void KImageViewer::restoreOptions( const KConfig * group )
 {
+	// TODO: stub
+}
+
+void KImageViewer::printImage()
+{
+	QPrinter printer;
+
+	// get settings
+	if( QPrintDialog::getPrinterSetup( &printer ) == false )
+		return;
+
+	// print
+
+	setStatus( i18n( "Printing..." ) );
+	QApplication::setOverrideCursor( WaitCursor );
+	_canvas->copyImage( &printer );
+	printer.newPage();
+	QApplication::restoreOverrideCursor();
+	setStatus( 0 );
 }

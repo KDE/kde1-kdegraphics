@@ -102,7 +102,7 @@ public slots:
 	void loadURL( const char *url );
 
 	/**
-	* Queues into the view list. if
+	* Queues into the view list.
 	*/
 	void appendURL( const char *url, bool show = false );
 
@@ -110,6 +110,11 @@ public slots:
 	* Toggle full screen mode.
 	*/
 	void fullScreen();
+
+	/**
+	* Ask for print settings and print the image.
+	*/
+	void printImage();
 
 protected:
 
@@ -141,6 +146,7 @@ private:
 	QPopupMenu	*_contextMenu;
 
 	QPopupMenu	*_file;
+	QPopupMenu	*_edit;
 	QPopupMenu	*_zoom;
 	QPopupMenu	*_transform;
 	QPopupMenu	*_desktop;
