@@ -6,19 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KView 1.8\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-16 15:20+0200\n"
 "PO-Revision-Date: 1998-12-02A 12:00+0001\n"
-"Last-Translator: Francois-Xavier DURANCEAU <Francois-Xavier.Duranceau@loria.fr>\n"
+"Last-Translator: Francois-Xavier DURANCEAU "
+"<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:74
+#: viewer.cpp:77
 msgid "no image loaded"
 msgstr "aucune image chargée"
 
-#: viewer.cpp:82 viewer.cpp:491
+#: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
 msgstr "Prêt"
 
@@ -39,43 +40,43 @@ msgstr "Entrer le facteur de Zoom (100 = 1x) :"
 msgid "Illegal zoom factor"
 msgstr "Facteur de zoom illégal"
 
-#: viewer.cpp:237
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "A propos de KView"
 
-#: viewer.cpp:245 viewer.cpp:262
+#: viewer.cpp:293 viewer.cpp:310
 msgid "&Zoom"
 msgstr "&Zoom"
 
-#: viewer.cpp:246 viewer.cpp:263
+#: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
 msgstr "&Transformation"
 
-#: viewer.cpp:247 viewer.cpp:264
+#: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
 msgstr "Sur le &Bureau"
 
-#: viewer.cpp:249
+#: viewer.cpp:297
 msgid "Fi&lter"
 msgstr "Fi&ltre"
 
-#: viewer.cpp:266
+#: viewer.cpp:314
 msgid "F&ilter"
 msgstr "F&iltre"
 
-#: viewer.cpp:270
+#: viewer.cpp:318
 msgid "&Images"
 msgstr "&Images"
 
-#: viewer.cpp:285
+#: viewer.cpp:333
 msgid "&Open.."
 msgstr "&Ouvrir.."
 
-#: viewer.cpp:286
+#: viewer.cpp:334
 msgid "&Save As.."
 msgstr "Enregistrer &sous.."
 
-#: viewer.cpp:292
+#: viewer.cpp:340
 msgid "&Full Screen"
 msgstr "&Plein écran"
 
@@ -83,12 +84,12 @@ msgstr "&Plein écran"
 msgid "&Zoom..."
 msgstr "&Zoom..."
 
-#: viewer.cpp:295
+#: viewer.cpp:344
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "Zoom a&vant 10%"
 
-#: viewer.cpp:296
+#: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Zoom a&rrière 10%"
@@ -101,39 +102,39 @@ msgstr "Taille &double"
 msgid "&Half size"
 msgstr "Tai&lle moitié"
 
-#: viewer.cpp:300
+#: viewer.cpp:349
 msgid "&Reset"
 msgstr "&Recharger"
 
-#: viewer.cpp:303
+#: viewer.cpp:352
 msgid "Rotate &clockwise"
 msgstr "&Rotation +90°"
 
-#: viewer.cpp:305
+#: viewer.cpp:354
 msgid "Rotate &anti-clockwise"
 msgstr "R&otation -90°"
 
-#: viewer.cpp:308
+#: viewer.cpp:357
 msgid "Flip &vertical"
 msgstr "Miroir &vertical"
 
-#: viewer.cpp:310
+#: viewer.cpp:359
 msgid "Flip &horizontal"
 msgstr "Miroir &horizontal"
 
-#: viewer.cpp:313
+#: viewer.cpp:362
 msgid "&Tile"
 msgstr "M&osaïque"
 
-#: viewer.cpp:314
+#: viewer.cpp:363
 msgid "&Max"
 msgstr "&Max"
 
-#: viewer.cpp:315
+#: viewer.cpp:364
 msgid "Max&pect"
 msgstr "Max&pect"
 
-#: viewer.cpp:318
+#: viewer.cpp:367
 msgid "&List.."
 msgstr "&Liste.."
 
@@ -145,19 +146,19 @@ msgstr "&Précédent"
 msgid "&Next"
 msgstr "&Suivant"
 
-#: viewer.cpp:325
+#: viewer.cpp:374
 msgid "&Slideshow On/Off"
 msgstr "&Diaporama On/Off"
 
-#: viewer.cpp:330
+#: viewer.cpp:379
 msgid "&About KView.."
 msgstr "&A propos de KView.."
 
-#: viewer.cpp:377 viewer.cpp:384
+#: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
 msgstr "Transfert exitstant non achevé."
 
-#: viewer.cpp:398
+#: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
 msgstr "Impossible d'obtenir un nom de transfert temporaire."
 
@@ -165,39 +166,39 @@ msgstr "Impossible d'obtenir un nom de transfert temporaire."
 msgid "Transfer error: "
 msgstr "Erreur de transfert : "
 
-#: viewer.cpp:503
+#: viewer.cpp:558
 msgid "Loading.."
 msgstr "Chargement.."
 
-#: colour.cpp:23
+#: colour.cpp:29
 msgid "Brightening..."
 msgstr "Eclaircissement..."
 
-#: colour.cpp:37
+#: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Intensité:Eclaircissement"
 
-#: colour.cpp:53
+#: colour.cpp:63
 msgid "Darkening..."
 msgstr "Assombrissement..."
 
-#: colour.cpp:66
+#: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Intensité:Assombrissement"
 
-#: colour.cpp:100
+#: colour.cpp:114
 msgid "Converting to Greyscale..."
 msgstr "Conversion en niveaux de gris..."
 
-#: colour.cpp:129
+#: colour.cpp:143
 msgid "Greyscale"
 msgstr "Niveaux de gris"
 
-#: colour.cpp:143
+#: colour.cpp:161
 msgid "Smoothing..."
 msgstr "Lissage..."
 
-#: colour.cpp:209
+#: colour.cpp:227
 msgid "Smooth"
 msgstr "Lissage"
 
@@ -213,19 +214,19 @@ msgstr "Correction gamma..."
 msgid "Gamma Correct..."
 msgstr "Correction gamma..."
 
-#: ilistdlg.cpp:53
+#: ilistdlg.cpp:57
 msgid "Prev"
 msgstr "Précédent"
 
-#: ilistdlg.cpp:57
+#: ilistdlg.cpp:61
 msgid "Shu&ffle"
 msgstr "Mé&langer"
 
-#: ilistdlg.cpp:62
+#: ilistdlg.cpp:66
 msgid "Next"
 msgstr "Suivant"
 
-#: ilistdlg.cpp:66
+#: ilistdlg.cpp:70
 msgid "Start slide"
 msgstr "Lancer &diaporama"
 
@@ -233,19 +234,19 @@ msgstr "Lancer &diaporama"
 msgid "Interval.."
 msgstr "Intervalle.."
 
-#: ilistdlg.cpp:71
+#: ilistdlg.cpp:80
 msgid "Loop"
 msgstr "En boucle"
 
-#: ilistdlg.cpp:79
+#: ilistdlg.cpp:94
 msgid "Image List"
 msgstr "Liste des images"
 
-#: ilistdlg.cpp:256
+#: ilistdlg.cpp:268
 msgid "Stop &slide"
 msgstr "Stopper le &diaporama"
 
-#: ilistdlg.cpp:264
+#: ilistdlg.cpp:276
 msgid "Start &slide"
 msgstr "Lancer le &diaporama"
 
