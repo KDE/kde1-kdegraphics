@@ -38,14 +38,14 @@ void KDragSource::mousePressEvent( QMouseEvent * /*e*/ )
       debug("Bad image");
     else
     {
-      QImageDrag di( img, this );
+      QImageDrag *di = new QImageDrag( img, this );
       debug("KDragSource::mousePressEvent - before dragCopy");
 #if QT_VERSION > 140
       QPixmap pm(Icon("image.xpm"));
       QPoint pp(pm.width()/2, pm.height()/2);
-      di.setPixmap(pm, pp);
+      di->setPixmap(pm, pp);
 #endif
-      di.dragCopy();
+      di->dragCopy();
     }
   }
   else debug("Unknown datatype: %s", type.data());
