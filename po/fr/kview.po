@@ -2,15 +2,14 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: KView 1.8\n"
 "POT-Creation-Date: 1998-10-16 15:20+0200\n"
-"PO-Revision-Date: 1998-12-02A 12:00+0001\n"
+"PO-Revision-Date: 1998-12-07 22:00+0001\n"
 "Last-Translator: Francois-Xavier DURANCEAU "
 "<Francois-Xavier.Duranceau@loria.fr>\n"
-"Language-Team: Français <LL@li.org>\n"
+"Language-Team: Français <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
@@ -25,7 +24,7 @@ msgstr "Prêt"
 
 #: viewer.cpp:186
 msgid "Net saving not yet implemented"
-msgstr "Enregistrement réseau pas encore implémenté"
+msgstr "L'enregistrement réseau n'est pas encore implanté"
 
 #: viewer.cpp:194
 #, c-format
@@ -34,7 +33,7 @@ msgstr "%s : écrit"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr "Entrer le facteur de Zoom (100 = 1x) :"
+msgstr "Facteur de Zoom (100 = 1x) :"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
@@ -73,8 +72,8 @@ msgid "&Open.."
 msgstr "&Ouvrir.."
 
 #: viewer.cpp:334
-msgid "&Save As.."
-msgstr "Enregistrer &sous.."
+msgid "&Save As..."
+msgstr "Enregistrer &sous..."
 
 #: viewer.cpp:340
 msgid "&Full Screen"
@@ -108,11 +107,11 @@ msgstr "&Recharger"
 
 #: viewer.cpp:352
 msgid "Rotate &clockwise"
-msgstr "&Rotation +90°"
+msgstr "&Rotation +90° (droite)"
 
 #: viewer.cpp:354
 msgid "Rotate &anti-clockwise"
-msgstr "R&otation -90°"
+msgstr "R&otation -90° (gauche)"
 
 #: viewer.cpp:357
 msgid "Flip &vertical"
@@ -132,19 +131,19 @@ msgstr "&Max"
 
 #: viewer.cpp:364
 msgid "Max&pect"
-msgstr "Max&pect"
+msgstr ""
 
 #: viewer.cpp:367
-msgid "&List.."
-msgstr "&Liste.."
+msgid "&List..."
+msgstr "&Liste..."
 
 #: viewer.cpp:371
 msgid "&Previous"
-msgstr "&Précédent"
+msgstr "&Précédente"
 
 #: viewer.cpp:372
 msgid "&Next"
-msgstr "&Suivant"
+msgstr "&Suivante"
 
 #: viewer.cpp:374
 msgid "&Slideshow On/Off"
@@ -156,7 +155,7 @@ msgstr "&A propos de KView.."
 
 #: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
-msgstr "Transfert exitstant non achevé."
+msgstr "Un transfert est encore en cours."
 
 #: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
@@ -203,12 +202,12 @@ msgid "Smooth"
 msgstr "Lissage"
 
 #: colour.cpp:248
-msgid "Enter gamma value (0...1):"
-msgstr "Entrer la valeur gamma (0...1) :"
+msgid "Enter gamma value ( >0 ):"
+msgstr "Entrer la valeur gamma ( >0 ) :"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr "Correction gamma..."
+msgstr "Correction gamma en cours..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
@@ -228,7 +227,7 @@ msgstr "Suivant"
 
 #: ilistdlg.cpp:70
 msgid "Start slide"
-msgstr "Lancer &diaporama"
+msgstr "Lancer le &diaporama"
 
 #: ilistdlg.cpp:75
 msgid "Interval.."
