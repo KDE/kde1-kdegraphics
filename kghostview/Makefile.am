@@ -8,16 +8,16 @@ SUBDIRS = doc
 bin_PROGRAMS = 	kghostview
 kghostview_SOURCES = marklist.cpp copyright.cpp interpreter.cpp messages.cpp \
 info.cpp print.cpp goto.cpp viewcontrol.cpp main.cpp kghostview.cpp \
-kpswidget.cpp ps.c kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp zoom.cpp
+kpswidget.cpp ps.c  zoom.cpp
 noinst_HEADERS =  marklist.h copyright.h interpreter.h messages.h info.h \
-print.h goto.h viewcontrol.h kghostview.h kpswidget.h ps.h kaccel.h \
-kkeydialog.h kckey.h kglobalaccel.h zoom.h
+print.h goto.h viewcontrol.h kghostview.h kpswidget.h ps.h  \
+zoom.h
 kghostview_LDADD = $(all_libraries) -lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
 kghostview_LDFLAGS = $(LDFLAGS) $(KDE_RPATH)
 
 BUILTSOURCES = marklist.moc copyright.moc interpreter.moc messages.moc \
 info.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc \
-kaccel.moc kkeydialog.moc kglobalaccel.moc zoom.moc
+zoom.moc
 DISTCLEANFILES = marklist.moc copyright.moc interpreter.moc messages.moc \
 info.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc \
 zoom.moc
@@ -27,18 +27,6 @@ EXTRA_DIST = kghostview.kdelnk kghostview.xpm mini-kghostview.xpm
 zoom.cpp:zoom.moc
 zoom.moc: zoom.h
 	$(MOC) zoom.h -o zoom.moc
-
-kglobalaccel.cpp:kglobalaccel.moc
-kglobalaccel.moc: kglobalaccel.h
-	$(MOC) kglobalaccel.h -o kglobalaccel.moc
-
-kkeydialog.cpp:kkeydialog.moc
-kkeydialog.moc: kkeydialog.h
-	$(MOC) kkeydialog.h -o kkeydialog.moc
-
-kaccel.cpp:kaccel.moc
-kaccel.moc: kaccel.h
-	$(MOC) kaccel.h -o kaccel.moc
 
 marklist.cpp:marklist.moc
 marklist.moc: marklist.h

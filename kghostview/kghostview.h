@@ -8,7 +8,7 @@
 #include "print.h"
 #include "copyright.h"
 #include "marklist.h"
-#include "kaccel.h"
+#include <kaccel.h>
 #include <ktopwidget.h>
 
 #include <stdlib.h>
