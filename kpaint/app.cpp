@@ -5,6 +5,7 @@
 #include <kapp.h>
 #include "kpaint.h"
 #include "app.h"
+#include <X11/Xlib.h>
 
 Atom 		KDEChangePalette, KDEChangeGeneral;
 Display 	*kde_display;
