@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-11-13 01:48+0100\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Date: 1998-07-31 11:38:54+0400\n"
 "From: Andy Pershin <apa@penza.com.ru>\n"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-11-13 01:48+0100\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
 "PO-Revision-Date: 1998-10-17 13:45+0200\n"
 "Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
 

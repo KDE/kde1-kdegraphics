@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kedit\n"
-"POT-Creation-Date: 1998-11-13 01:48+0100\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
 "PO-Revision-Date: 1998-05-17 20:00-0500-\n"
 "Last-Translator: Vlatko Cingoski <vlatko@eml.hiroshima-u.ac.jp>\n"
 "Language-Team: Macedonian\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KFax1.0\n"
-"POT-Creation-Date: 1998-11-13 01:48+0100\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
 "PO-Revision-Date: 1998-08-07 CET:GMT+1\n"
 "Last-Translator: Roel Vester <Roel.Vester@siemens.nl>\n"
 "Language-Team: Nederlands <LL@li.org>\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-13 01:48+0100\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
 "PO-Revision-Date: 1998-08-19 01:14+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
