@@ -1,3 +1,7 @@
+1999-02-08  Harri Porten  <porten@kde.org>
+
+	* fixed segfault caused by infinite recursion in kfaxerror()
+
 Sun May  3 16:48:13 1998  Bernd Johannes Wuebben  <wuebben@math.cornell.edu>
 
 	* fixed print dialog 

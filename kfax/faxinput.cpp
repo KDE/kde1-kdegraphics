@@ -30,7 +30,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 #include <kapp.h>
 
 void statusbarupdate(char* name,int width,int height,char* res);
-extern "C" void kfaxerror(char* title,char* error);
+extern void kfaxerror(char* title,char* error);
 
 #define	FAXMAGIC	"\000PC Research, Inc\000\000\000\000\000\000"
 
