@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KFax1.0\n"
+"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"PO-Revision-Date: 1998-08-07 CET:GMT+1\n"
+"Last-Translator: Roel Vester <Roel.Vester@siemens.nl>\n"
+"Language-Team: Nederlands <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: about.cpp:39
+msgid "About KFax"
+msgstr "Over KFax"
+
+#: about.cpp:58
+msgid "Version "
+msgstr "Versie"
+
+#: kfax.cpp:222 kfax.cpp:820
+msgid "Show &Tool Bar"
+msgstr "Toon &Tool Bar"
+
+#: kfax.cpp:224 kfax.cpp:813
+msgid "Hide &Tool Bar"
+msgstr "&Verberg Tool Bar"
+
+#: kfax.cpp:227 kfax.cpp:793
+msgid "Show &Status Bar"
+msgstr "Toon &Status Bar"
+
+#: kfax.cpp:229 kfax.cpp:786
+msgid "Hide &Status Bar"
+msgstr "Verberg S&tatus Bar"
+
+#: kfax.cpp:380
+msgid "&About..."
+msgstr "&Over"
+
+#: kfax.cpp:381
+msgid "Help page"
+msgstr "Help"
+
+#: kfax.cpp:382
+msgid "KFax &Help "
+msgstr "KFax &Help"
+
+#: kfax.cpp:384
+msgid "&Open Fax..."
+msgstr "&Open Fax"
+
+#: kfax.cpp:385
+msgid "&Add Fax..."
+msgstr "To&evoegen Fax"
+
+#: kfax.cpp:388
+msgid "Open &URL..."
+msgstr "Open &URL"
+
+#: kfax.cpp:389
+msgid "Save to U&RL..."
+msgstr "Opslaan naar U&RL..."
+
+#: kfax.cpp:390
+msgid "&Close Fax"
+msgstr "S&luiten Fax"
+
+#: kfax.cpp:397
+msgid "&Next Page"
+msgstr "&Volgende Bladzijde"
+
+#: kfax.cpp:398
+msgid "&Prev Page"
+msgstr "Vo&rige Bladzijde"
+
+#: kfax.cpp:399
+msgid "&First Page"
+msgstr "&Eerste bladzijde"
+
+#: kfax.cpp:400
+msgid "&Last Page"
+msgstr "&Laatste bladzijde"
+
+#: kfax.cpp:402
+msgid "&Rotate Page"
+msgstr "&Draai Pagina"
+
+#: kfax.cpp:403
+msgid "&Mirror Page"
+msgstr "S&piegel bladzijde"
+
+#: kfax.cpp:404
+msgid "&Flip Page"
+msgstr "&Draai bladzijde om"
+
+#: kfax.cpp:406
+msgid "Zoom &in"
+msgstr "&Vergroten"
+
+#: kfax.cpp:407
+msgid "Zoom &out"
+msgstr "Ver&kleinen"
+
+#: kfax.cpp:412
+msgid "&Fax Options"
+msgstr "&Fax opties"
+
+#: kfax.cpp:414
+msgid "&Tool Bar"
+msgstr "&Tool Bar"
+
+#: kfax.cpp:415
+msgid "&Status Bar"
+msgstr "&Status Balk"
+
+#: kfax.cpp:442
+msgid "Go back"
+msgstr "Ga terug"
+
+#: kfax.cpp:445
+msgid "Go forward"
+msgstr "Ga vooruit"
+
+#: kfax.cpp:450
+msgid "Go to start"
+msgstr "Ga naar de start"
+
+#: kfax.cpp:453
+msgid "Go to end"
+msgstr "Ga naar het eind"
+
+#: kfax.cpp:459
+msgid "Zoom in"
+msgstr "Vergroten"
+
+#: kfax.cpp:462
+msgid "Zoom out"
+msgstr "Verkleinen"
+
+#: kfax.cpp:467
+msgid "Print document"
+msgstr "Afdrukken document"
+
+#: kfax.cpp:476
+msgid "Go to page ..."
+msgstr "Ga naar bladzijde ..."
+
+#: kfax.cpp:562
+msgid "Open Location:"
+msgstr "Open Lokatie"
+
+#: kfax.cpp:578
+msgid "You need to open a Fax first"
+msgstr "U moet eerst een fax openen"
+
+#: kfax.cpp:584
+msgid "Save to Location:"
+msgstr "Opslaan naar Lokatie"
+
+#: kfax.cpp:625
+msgid "Select Facsimile to Open"
+msgstr "Selecteer fax om te openen"
+
+#: kfax.cpp:662
+msgid "Select Facsimile to Add"
+msgstr "Selecteer fax om toe te voegen"
+
+#: kfax.cpp:804
+msgid "Not yet implemented"
+msgstr "Nog niet gemaakt"
+
+#: kfax.cpp:854
+msgid "     There is no document active      "
+msgstr "    Er is geen document aanwezig     "
+
+#: kfax.cpp:988
+#, c-format
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Onvoldoende pagina dimensies:\n"
+"Breedte %.2f Hoogte %.2f\n"
+#: kfax.cpp:1004
+#, c-format
+msgid "Can't print to \"%s\"\n"
+msgstr "Kan niet afdrukken naar \"%s\"\n"
+
+#: kfax.cpp:1015
+#, c-format
+msgid "Couldn't create %s\n"
+msgstr "Kon %s niet maken\n"
+
+#: kfax.cpp:1085
+msgid "Saving ..."
+msgstr "Bezig met opslaan"
+
+#: kfax.cpp:1092
+msgid "Loading ..."
+msgstr "Inlezen"
+
+#: kfax.cpp:1119 kfax.cpp:1155
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"Mislukking in 'Kopieren bestand()'\n"
+"Kon bestand niet opslaan"
+
+#: kfax.cpp:1125
+msgid "Saved"
+msgstr "Opgeslagen"
+
+#: kfax.cpp:1132 kfax.cpp:1194
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax wacht al\n"
+"tot een internet opdracht klaar is\n"
+"Wacht alstublieft tot deze opdracht verwerkt is\n"
+
+#: kfax.cpp:1143 kfax.cpp:1207
+msgid "Could not communicate with KFM"
+msgstr "Kan geen contact krijgen met KFM"
+
+#: kfax.cpp:1184
+#, c-format
+msgid "Loading '%s'"
+msgstr "Inlezen '%s'"
+
+#: kfax.cpp:1201
+msgid "Calling KFM"
+msgstr "KFM starten"
+
+#: kfax.cpp:1214
+msgid "Starting Job"
+msgstr "Taak starten"
+
+#: kfax.cpp:1217
+msgid "Connected"
+msgstr "Aangesloten"
+
+#: kfax.cpp:1219
+msgid "Waiting..."
+msgstr "Wachten..."
+
+#: kfax.cpp:2070
+msgid "You need to open a fax page first."
+msgstr "U moet eerst een fax bladzijde openen"
+
+#: kfax.cpp:2740
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Een bestand met deze naam bestaat al\n"
+"Wilt u het overschrijven ?\n"
+"\n"
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "KFax opties dialoog"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Ruwe Fax resolutie:"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Fijn"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Beeldscherm opties:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Landschap"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Ondersteboven"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Inverse"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Ruwe Fax Data is:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "LS-Bit eerst"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Ruwe Fax is:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "Ruwe Fax breedte:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "Hoogte:"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "KFax Printer Dialoog"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Als Postscript afdrukken naar printer"
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Print opdracht"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Als Postscript afdrukken naar bestand:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Bladeren"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Omvang bladzijde"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Schaal fax naar bladzijde omvang"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Printer marges toevoegen (gemeten in cm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Horizontaal:"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Vertikaal:"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Selecteer bestand"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "U moet een bestandsnaam geven als u naar bestand wilt printen"
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"U moet een printer commando als \"lpr\" ingeven\n"
+"als u wilt printen."
+
