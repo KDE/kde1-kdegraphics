@@ -1,0 +1,597 @@
+#Hungarian messages for KGhostview
+#Copyright (C) 1998 Free Software Foundation, Inc.
+#Szâkely Krisztiﬂn <szekelyk@edasz.hu>, 1998.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kghostscript VERSION\n"
+"POT-Creation-Date: 1998-04-09 23:44+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Szâkely Krisztiﬂn <szekelyk@edasz.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: copyright.cpp:17
+msgid "Copyright"
+msgstr "Szerzi jog"
+
+#: copyright.cpp:31
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"\n"
+"\n"
+"Ez egy szabad program; tovﬂbbadhatod âs/vagy mdosçthatod\n"
+"a Free Software Foundation ﬂltal kiadott GNU General Public License\n"
+"2-es vagy bﬂrmely kâsbbi (vﬂlaszthat) verziban foglaltak szerint.\n"
+"\n"
+"\n"
+"E program annak remenyâben kâszíl, hogy hasznos lesz de\n"
+"MINDEN GARANCIA N–LKõL;  A râszleteket lﬂsd a GNU General Public License-ben.\n"
+"\n"
+"\n"
+"A programmal kellett kapnod egy pâldﬂnyt a GNU General Public License-\n"
+"-bl; ha nem, akkor çrj a Free Software Foundation-nak, 675 Mass Ave\n"
+"Cambridge, MA 02139, USA."
+
+#: goto.cpp:27
+msgid "Section"
+msgstr "Szekci"
+
+#: goto.cpp:40
+msgid "Page"
+msgstr "Oldal"
+
+#: goto.cpp:84 goto.cpp:90 goto.cpp:106 kghostview.cpp:1980
+#: kghostview.cpp:1992 kghostview.cpp:1997 kghostview.cpp:2252
+#, c-format
+msgid "of %d"
+msgstr "%d-bl"
+
+#: info.cpp:28
+msgid "File :"
+msgstr "Fﬂjl :"
+
+#: info.cpp:33
+msgid "Title :"
+msgstr "Cçm :"
+
+#: info.cpp:38
+msgid "Date :"
+msgstr "Dﬂtum :"
+
+#: interpreter.cpp:22
+msgid "General"
+msgstr "¬ltalﬂnos"
+
+#: interpreter.cpp:28
+msgid "Interpreter name"
+msgstr "–rtelmez neve"
+
+#: interpreter.cpp:42
+msgid "Antialiasing"
+msgstr "–lsimçtﬂs"
+
+#: interpreter.cpp:47
+msgid "Platform fonts"
+msgstr "Platform fontok"
+
+#: interpreter.cpp:52
+msgid "Messages"
+msgstr "õzenetek"
+
+#: interpreter.cpp:59
+msgid "Palette"
+msgstr "Paletta"
+
+#: interpreter.cpp:64
+msgid "Color"
+msgstr "Szçn"
+
+#: interpreter.cpp:68
+msgid "Grayscale"
+msgstr "Szírkeskﬂla"
+
+#: interpreter.cpp:72
+msgid "Monochrome"
+msgstr "Monokrom"
+
+#: interpreter.cpp:78
+msgid "Backing"
+msgstr "Back-up"
+
+#: interpreter.cpp:83
+msgid "Pixmap"
+msgstr "Pixelkâp"
+
+#: interpreter.cpp:87
+msgid "Backing store"
+msgstr "Back-up tﬂrolﬂs"
+
+#: interpreter.cpp:103
+msgid "Defaults"
+msgstr "Alapârtâkek"
+
+#: interpreter.cpp:160
+msgid "gs"
+msgstr "gs"
+
+#: kghostview.cpp:140 kghostview.cpp:240 kghostview.cpp:317 kghostview.cpp:371
+msgid "Information"
+msgstr "Informﬂci"
+
+#: kghostview.cpp:147 kghostview.cpp:227 kghostview.cpp:278 kghostview.cpp:362
+#: kghostview.cpp:1136
+msgid "Print"
+msgstr "Nyomtat"
+
+#: kghostview.cpp:154 kghostview.cpp:229 kghostview.cpp:284 kghostview.cpp:369
+msgid "View Control"
+msgstr "Nâzet kontrol"
+
+#: kghostview.cpp:225 kghostview.cpp:272 kghostview.cpp:364
+msgid "New"
+msgstr "ıj"
+
+#: kghostview.cpp:230 kghostview.cpp:287 kghostview.cpp:374
+msgid "Go To Page"
+msgstr "Menj a lapra"
+
+#: kghostview.cpp:231 kghostview.cpp:290 kghostview.cpp:367
+msgid "Zoom In"
+msgstr "Nagyçt"
+
+#: kghostview.cpp:232 kghostview.cpp:293 kghostview.cpp:368
+msgid "Zoom Out"
+msgstr "Kicsinyçt"
+
+#: kghostview.cpp:233 kghostview.cpp:296 kghostview.cpp:372
+msgid "Next Page"
+msgstr "K˜vetkez oldal"
+
+#: kghostview.cpp:234 kghostview.cpp:299 kghostview.cpp:373
+msgid "Prev Page"
+msgstr "Elz oldal"
+
+#: kghostview.cpp:235 kghostview.cpp:302
+msgid "Scroll Up"
+msgstr "G˜rgetâs fel"
+
+#: kghostview.cpp:236 kghostview.cpp:305
+msgid "Scroll Down"
+msgstr "G˜rgetâs le"
+
+#: kghostview.cpp:237 kghostview.cpp:308
+msgid "Scroll Left"
+msgstr "G˜rgetâs balra"
+
+#: kghostview.cpp:238 kghostview.cpp:311
+msgid "Scroll Right"
+msgstr "G˜rgetâs jobbra"
+
+#: kghostview.cpp:239 kghostview.cpp:314 kghostview.cpp:370
+msgid "Redisplay"
+msgstr "ıjrarajzol"
+
+#: kghostview.cpp:347
+msgid "Configure interpreter"
+msgstr "–rtelmez beﬂllçtﬂsa"
+
+#: kghostview.cpp:403
+msgid "&New"
+msgstr "&ıj"
+
+#: kghostview.cpp:404
+msgid "&Open ..."
+msgstr "&Megnyit ..."
+
+#: kghostview.cpp:405
+msgid "&Close"
+msgstr "&Bezﬂr"
+
+#: kghostview.cpp:407
+msgid "&Print ..."
+msgstr "&Nyomtat ..."
+
+#: kghostview.cpp:409
+msgid "&1."
+msgstr "&1."
+
+#: kghostview.cpp:410
+msgid "&2."
+msgstr "&2."
+
+#: kghostview.cpp:411
+msgid "&3."
+msgstr "&3."
+
+#: kghostview.cpp:412
+msgid "&4."
+msgstr "&4."
+
+#: kghostview.cpp:414
+msgid "E&xit"
+msgstr "&Kilâpâs"
+
+#: kghostview.cpp:422
+msgid "Zoom &in"
+msgstr "Nagyçt"
+
+#: kghostview.cpp:424
+msgid "Zoom &out"
+msgstr "Kicsinyçt"
+
+#: kghostview.cpp:426
+msgid "&View control ..."
+msgstr "&Nâzet kontrol ..."
+
+#: kghostview.cpp:429
+msgid "&Shrink wrap"
+msgstr "&Shrink wrap"
+
+#: kghostview.cpp:431
+msgid "&Redisplay"
+msgstr "&ıjrarajzol"
+
+#: kghostview.cpp:433
+msgid "&Info ..."
+msgstr "&Informﬂci ..."
+
+#: kghostview.cpp:438
+msgid "&Next page"
+msgstr "&K˜vetkez oldal"
+
+#: kghostview.cpp:440
+msgid "&Previous Page"
+msgstr "&Elz oldal"
+
+#: kghostview.cpp:442
+msgid "&Go to page ..."
+msgstr "&Menj az adott oldalra ..."
+
+#: kghostview.cpp:445
+msgid "Go to &start"
+msgstr "E&lejâre"
+
+#: kghostview.cpp:447
+msgid "Go to &end"
+msgstr "&Vâgâre"
+
+#: kghostview.cpp:449
+msgid "&Read down"
+msgstr "&Teljes beolvasﬂs"
+
+#: kghostview.cpp:459
+msgid "&Configure interpreter ..."
+msgstr "&–rtelmez beﬂllçtﬂsa ..."
+
+#: kghostview.cpp:461
+msgid "Show &tool bar"
+msgstr "Eszk˜zsor"
+
+#: kghostview.cpp:462
+msgid "Show &status bar"
+msgstr "¬llapotsor"
+
+#: kghostview.cpp:463
+msgid "Configure &key bindings ..."
+msgstr "Billentyì hozzﬂrendelâsek ..."
+
+#: kghostview.cpp:465
+msgid "&Save Options"
+msgstr "&Opcik mentâse"
+
+#: kghostview.cpp:472
+msgid "&About this application"
+msgstr "&Nâvjegy"
+
+#: kghostview.cpp:474
+msgid "&Help for this application"
+msgstr "&Sîg"
+
+#: kghostview.cpp:476
+msgid "&Copyright"
+msgstr "&Szerzi jog"
+
+#: kghostview.cpp:481
+msgid "&File"
+msgstr "&Fﬂjl"
+
+#: kghostview.cpp:482
+msgid "&View"
+msgstr "&Nâzet"
+
+#: kghostview.cpp:483
+msgid "&Go"
+msgstr "&Menj"
+
+#: kghostview.cpp:484
+msgid "&Options"
+msgstr "&Opcik"
+
+#: kghostview.cpp:486
+msgid "&Help"
+msgstr "&Sîg"
+
+#: kghostview.cpp:569
+msgid "Go back"
+msgstr "Vissza"
+
+#: kghostview.cpp:572
+msgid "Go forward"
+msgstr "Elre"
+
+#: kghostview.cpp:575
+msgid "Go to page ..."
+msgstr "Menj az adott oldalra ..."
+
+#: kghostview.cpp:580
+msgid "Change view ..."
+msgstr "Nâzet vﬂltoztatﬂs ..."
+
+#: kghostview.cpp:585
+msgid "Print document"
+msgstr "Dokumentum nyomtatﬂs"
+
+#: kghostview.cpp:588
+msgid "Mark this page"
+msgstr "Oldal kijel˜lâse"
+
+#: kghostview.cpp:593
+msgid "Go to start"
+msgstr "Elejâre"
+
+#: kghostview.cpp:596
+msgid "Go to end"
+msgstr "Vâgâre"
+
+#: kghostview.cpp:599
+msgid "Read down the page"
+msgstr "Az oldal teljes beolvasﬂsa"
+
+#: kghostview.cpp:626
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "100 Sc. a 100-bl 100 P. a 100-bl"
+
+#: kghostview.cpp:627
+#, c-format
+msgid "100 %"
+msgstr "100 %"
+
+#: kghostview.cpp:628
+msgid "Upside Down"
+msgstr "Fentrl lefelâ"
+
+#: kghostview.cpp:653 kghostview.cpp:664 kghostview.cpp:674
+msgid "Sorry"
+msgstr "Sajnﬂlom"
+
+#: kghostview.cpp:653
+msgid "Malformed URL."
+msgstr "Rossz URL."
+
+#: kghostview.cpp:665
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+"Egy internet hozzﬂfârâs mﬂr\n"
+"folyamatban van.\n"
+"Kârem vﬂrjon amig befejezdik vagy\n"
+"ﬂllçtsa le a hozzﬂfârâst."
+
+#: kghostview.cpp:674
+msgid "Could not start or find KFM."
+msgstr "Nem indçthat vagy nem talﬂlhat a KFM."
+
+#: kghostview.cpp:879 main.cpp:101
+msgid "KGhostview: Version 0.5"
+msgstr "KGhostview: 0.5 Verzi"
+
+#: kghostview.cpp:1074 kghostview.cpp:2062 viewcontrol.cpp:29
+msgid "Portrait"
+msgstr "¬ll"
+
+#: kghostview.cpp:1076 kghostview.cpp:2068 viewcontrol.cpp:30
+msgid "Landscape"
+msgstr "Fekv (Landscape)"
+
+#: kghostview.cpp:1078 kghostview.cpp:2066 viewcontrol.cpp:31
+msgid "Seascape"
+msgstr "Fekv (Seascape)"
+
+#: kghostview.cpp:1080 kghostview.cpp:2064 viewcontrol.cpp:32
+msgid "Upside down"
+msgstr "Fentrl lefelâ"
+
+#: kghostview.cpp:1118
+msgid "Go to"
+msgstr "Menj a"
+
+#: kghostview.cpp:1257
+msgid "Turn antialiasing on"
+msgstr "–lsimçtﬂs be"
+
+#: kghostview.cpp:1259
+msgid "Turn antialiasing off"
+msgstr "–lsimçtﬂs ki"
+
+#: kghostview.cpp:1270
+msgid "Show Ghostscript messages"
+msgstr "Ghostscript ízenetek megjelençtâse"
+
+#: kghostview.cpp:1272
+msgid "Hide Ghostscript messages"
+msgstr "Ghostscript ízenetek elrejtâse"
+
+#: kghostview.cpp:1321
+msgid "Version 0.5"
+msgstr "0.5 Verzi"
+
+#: kghostview.cpp:1322
+msgid "Sorry, not ready yet"
+msgstr "Sajnos mâg nincs kâsz"
+
+#: kghostview.cpp:1329
+msgid "About kghostview"
+msgstr "Nâvjegy"
+
+#: kghostview.cpp:1330
+msgid ""
+"Version :\t0.5 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+"Verzi :\t0.5 alpha\n"
+"Szerz : Mark Donohoe\n"
+"Cçm : donohoe@kde.org"
+
+#: kghostview.cpp:1376 kghostview.cpp:1377 kghostview.cpp:1378
+msgid "Printer Name : "
+msgstr "Nyomtat neve : "
+
+#: kghostview.cpp:1442
+msgid "Print failure : lpr"
+msgstr "Nyomtatﬂsi hiba : lpr"
+
+#: kghostview.cpp:1974 kghostview.cpp:1986 kghostview.cpp:2223
+#: kghostview.cpp:2246
+msgid "of 1    "
+msgstr "1-bl  "
+
+#: kghostview.cpp:1976 kghostview.cpp:1988 kghostview.cpp:2248
+#, c-format
+msgid "of %d    "
+msgstr "%d-bl  "
+
+#: kghostview.cpp:1978 kghostview.cpp:1990 kghostview.cpp:2250
+#: kghostview.cpp:2257
+#, c-format
+msgid "of %d  "
+msgstr "%d-bl "
+
+#: kghostview.cpp:2082
+msgid "&1. "
+msgstr "&1. "
+
+#: kghostview.cpp:2086
+msgid "&2. "
+msgstr "&2. "
+
+#: kghostview.cpp:2090
+msgid "&3. "
+msgstr "&3. "
+
+#: kghostview.cpp:2094
+msgid "&4. "
+msgstr "&4. "
+
+#: kghostview.cpp:2222
+msgid "Sc.1 "
+msgstr "1. Sc. "
+
+#: kghostview.cpp:2225
+msgid "P.1 "
+msgstr "1. P. "
+
+#: kghostview.cpp:2227 kghostview.cpp:2240
+#, c-format
+msgid "P.%d "
+msgstr "%d P. "
+
+#: kghostview.cpp:2242
+#, c-format
+msgid "Sc.%d "
+msgstr "%d Sc. "
+
+#: main.cpp:19
+#, c-format
+msgid "Usage: %s\n"
+msgstr "Hasznﬂlat: %s\n"
+
+#: main.cpp:20
+msgid "[filename]\n"
+msgstr "[fﬂjlnâv]\n"
+
+#: main.cpp:21
+msgid "See Qt documentation for command line options\n"
+msgstr "A parancssori opcikat lﬂsd a Qt dokumentﬂciban\n"
+
+#: main.cpp:89
+#, c-format
+msgid ""
+"The file\n"
+"\"%s\"\n"
+"could not be found."
+msgstr ""
+"A \"%s\"\n"
+"fﬂjl nem talﬂlhat."
+
+#: main.cpp:96
+msgid "Didn't recognise file\n"
+msgstr "Nem felismerhet fﬂjl\n"
+
+#: messages.cpp:17
+msgid "Ghostscript messages"
+msgstr "Ghostscript ízenetek"
+
+#: messages.cpp:35
+msgid "Clear"
+msgstr "T˜r˜l"
+
+#: print.cpp:27
+msgid "Printer name"
+msgstr "Nyomtat neve"
+
+#: print.cpp:38
+msgid "Pages"
+msgstr "Oldalak"
+
+#: print.cpp:43
+msgid "All"
+msgstr "Mind"
+
+#: print.cpp:44
+msgid "Even"
+msgstr "Pﬂros"
+
+#: print.cpp:45
+msgid "Odd"
+msgstr "Pﬂratlan"
+
+#: print.cpp:46
+msgid "Marked"
+msgstr "Kijel˜ltek"
+
+#: viewcontrol.cpp:23
+msgid "Force changes"
+msgstr "Vﬂltozﬂsok azonnali vâgrehajtﬂsa"
+
+#: viewcontrol.cpp:45
+msgid "Magnification"
+msgstr "Nagyçtﬂs"
+
+#: viewcontrol.cpp:50
+msgid "Orientation"
+msgstr "Irﬂnyultsﬂg"
+
+#: viewcontrol.cpp:55
+msgid "Media"
+msgstr "Mâdia"
