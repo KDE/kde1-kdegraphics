@@ -74,7 +74,8 @@ KTemplateEditDlg::KTemplateEditDlg(QWidget *parent) : QDialog(parent, 0, true)
 
 void KTemplateEditDlg::slotTextChanged(const char *)
 {
-  if(ln_name->text() && strlen(ln_name->text()) > 0 && strlen(ln_path->text()) > 0)
+  if(ln_name->text() && strlen(ln_name->text()) > 0 && 
+     ln_path->text() && strlen(ln_path->text()) > 0)
   {
     if(ok) ok->setEnabled(true);
   }

@@ -76,14 +76,13 @@
 #define ID_DRAW_RECT         532
 #define ID_DRAW_CIRCLE       533
 #define ID_DRAW_ELLIPSE      534
-#define ID_DRAW_SELECT       535
-#define ID_DRAW_SPRAY        536
-#define ID_DRAW_RECT_FILL    537
-#define ID_DRAW_CIRCLE_FILL  538
-#define ID_DRAW_ELLIPSE_FILL 539
-#define ID_DRAW_LINE         540
-#define ID_DRAW_FIND         541
-#define ID_DRAW_ERASE        542
+#define ID_DRAW_SPRAY        535
+#define ID_DRAW_RECT_FILL    536
+#define ID_DRAW_CIRCLE_FILL  537
+#define ID_DRAW_ELLIPSE_FILL 538
+#define ID_DRAW_LINE         539
+#define ID_DRAW_FIND         540
+#define ID_DRAW_ERASE        541
 
 #define ID_OPTIONS_TOGGLE_GRID  560
 #define ID_OPTIONS_TOGGLE_TOOL1 561
@@ -96,6 +95,8 @@
 #define ID_IMAGE_GRAYSCALE      571
 #define ID_IMAGE_MAPTOKDE       572
 
+#define ID_SELECT_RECT          580
+#define ID_SELECT_CIRCLE        581
 
 /**
 * KIconEdit
@@ -174,7 +175,7 @@ private:
   KMenuBar *menubar;
   KToolBar *toolbar, *drawtoolbar;
   KStatusBar *statusbar;
-  QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent;
+  QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent, *select;
   KIconEditGrid *grid;
   KIconToolsView *toolsw;
   QWidget *mainview;

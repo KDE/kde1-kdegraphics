@@ -185,7 +185,8 @@ void KIconEditGrid::mousePressEvent( QMouseEvent *e )
 
   switch( tool )
   {
-    case Select:
+    case SelectRect:
+    case SelectCircle:
       isselecting = true;
       break;
     default:
@@ -239,7 +240,10 @@ void KIconEditGrid::mouseMoveEvent( QMouseEvent *e )
 
   if(isselecting)
   {
-    drawRect(false);
+    if(tool == SelectRect)
+      drawRect(false);
+    else
+      drawEllipse(false);
     return;
   }
 
@@ -545,8 +549,10 @@ QImage *KIconEditGrid::getSelection(bool cut)
 {
   const QRect rect = pntarray.boundingRect();
 
+/*
   if( QT_VERSION >= 140 && !cut)
     return new QImage(img->copy((QRect&)rect));
+*/
 
   int nx = 0, ny = 0, nw = 0, nh = 0;
   rect.rect(&nx, &ny, &nw, &nh);
@@ -833,15 +839,20 @@ void KIconEditGrid::setTool(DrawTool t)
   btndown = false;
   tool = t;
 
-  if(tool != Select)
+  if(tool != SelectRect && tool != SelectCircle)
     isselecting = false;
 
   switch( tool )
   {
-    case Select:
+    case SelectRect:
       isselecting = true;
+      setCursor(cursor_aim);
+      break;
+    case SelectCircle:
+      isselecting = true;
+      setCursor(cursor_aim);
+      break;
     case Line:
-      //KMsgBox::message(this, i18n("Warning"), i18n("Sorry - not implemented."));
     case Ellipse:
     case Circle:
     case FilledEllipse:
@@ -941,7 +952,7 @@ void KIconEditGrid::drawEllipse(bool drawit)
   pntarray.resize(0);
   drawPointArray(a, Mark);
   //repaint();
-  if(tool == Circle || tool == FilledCircle)
+  if(tool == Circle || tool == FilledCircle || tool == SelectCircle)
     pntarray.makeEllipse(x, y, d, d);
   else if(tool == Ellipse || tool == FilledEllipse)
     pntarray.makeEllipse(x, y, cx, cy);
@@ -967,6 +978,8 @@ void KIconEditGrid::drawEllipse(bool drawit)
   }
 
   drawPointArray(pntarray, Mark);
+  if(tool == SelectCircle && pntarray.size() > 0 && !ispasting)
+    emit selecteddata(true);
 }
 
 void KIconEditGrid::drawRect(bool drawit)
@@ -1025,7 +1038,7 @@ void KIconEditGrid::drawRect(bool drawit)
   }
 
   drawPointArray(pntarray, Mark);
-  if(tool == Select && pntarray.size() > 0 && !ispasting)
+  if(tool == SelectRect && pntarray.size() > 0 && !ispasting)
     emit selecteddata(true);
 }
 

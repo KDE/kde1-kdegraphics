@@ -12,6 +12,8 @@ toolbar_DATA =	fileclose.xpm \
 	rectangle.xpm \
 	filledrectangle.xpm \
 	areaselect.xpm \
+	selectrect.xpm \
+	selectcircle.xpm \
 	flood.xpm \
 	grid.xpm \
 	pointer.xpm \

@@ -1,5 +1,5 @@
 /*
-    KDE Draw - a small graphics drawing program for the KDE.
+    KDE Icon Editor - a small graphics drawing program for the KDE.
     Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
 
     This program is free software; you can redistribute it and/or
@@ -68,8 +68,8 @@ public:
   KIconEditGrid( QWidget * parent = 0, const char *name = 0);
   virtual ~KIconEditGrid();
 
-  enum DrawTool { Line, Freehand, FloodFill, Spray, Rect, FilledRect,
-                  Circle, FilledCircle, Ellipse, FilledEllipse, Eraser, Select, Find };
+  enum DrawTool { Line, Freehand, FloodFill, Spray, Rect, FilledRect, Circle,
+        FilledCircle, Ellipse, FilledEllipse, Eraser, SelectRect, SelectCircle, Find };
   enum DrawAction { Mark, UnMark, Draw };
 
   bool isModified() { return modified; };

@@ -225,8 +225,8 @@ void KIconEdit::slotClear()
 
 void KIconEdit::slotSelectAll()
 {
-  toggleTool(ID_DRAW_SELECT);
-  grid->setTool(KIconEditGrid::Select);
+  //toggleTool(ID_DRAW_SELECT);
+  grid->setTool(KIconEditGrid::SelectRect);
   grid->editSelectAll();
 }
 
@@ -340,9 +340,11 @@ void KIconEdit::slotTools( int id )
 {
   switch(id)
   {
-    case ID_DRAW_SELECT:
-      toggleTool(id);
-      grid->setTool(KIconEditGrid::Select);
+    case ID_SELECT_RECT:
+      grid->setTool(KIconEditGrid::SelectRect);
+      break;
+    case ID_SELECT_CIRCLE:
+      grid->setTool(KIconEditGrid::SelectCircle);
       break;
     case ID_DRAW_FREEHAND:
       toggleTool(id);

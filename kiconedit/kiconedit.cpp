@@ -44,7 +44,6 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   drawtoolbar = 0L;
   statusbar = 0L;
   mainview = 0L;
-  pprops->winwidth = pprops->winheight = 0;
 
   msgtimer = new QTimer(this);
   CHECK_PTR(msgtimer);
@@ -156,7 +155,8 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   debug("Updating statusbar");
   slotUpdateStatusSize(grid->cols(), grid->rows());
   slotUpdateStatusScaling(grid->scaling(), true);
-  slotUpdateStatusName(icon->url().data());
+  if(icon->url().length())
+    slotUpdateStatusName(icon->url().data());
   slotUpdateCopy(false);
   uint *c = 0, n = 0;
   n = grid->getColors(c);
@@ -217,6 +217,9 @@ KIconEdit::~KIconEdit()
     delete tools;
     delete options;
     delete help;
+    delete select;
+    delete recent;
+    delete zoom;
 
   debug("KIconEdit - Destructor: done");
 }
@@ -516,6 +519,16 @@ KToolBar *KIconEdit::setupToolBar()
          SIGNAL(clicked()), this, SLOT(slotCopy()), TRUE, i18n("Copy"));
   toolbar->insertButton(Icon("editpaste.xpm"),ID_EDIT_PASTE,
          SIGNAL(clicked()), this, SLOT(slotPaste()), TRUE, i18n("Paste"));
+
+  select = new QPopupMenu;
+  CHECK_PTR(select);
+  select->insertItem(Icon("selectrect.xpm"), ID_SELECT_RECT);
+  select->insertItem(Icon("selectcircle.xpm"), ID_SELECT_CIRCLE);
+  connect( select, SIGNAL(activated(int)), SLOT(slotTools(int)));
+
+  toolbar->insertButton(Icon("areaselect.xpm"), ID_SELECT_RECT, select, true, i18n("Select area"));
+  //drawtoolbar->setToggle(ID_DRAW_SELECT, true);
+
   toolbar->insertSeparator();
 #if QT_VERSION >= 140
   toolbar->insertButton(Icon("transform.xpm"),ID_IMAGE_RESIZE, TRUE, 
@@ -530,8 +543,10 @@ KToolBar *KIconEdit::setupToolBar()
   toolbar->insertSeparator();
   toolbar->insertButton(Icon("viewmag-.xpm"),ID_VIEW_ZOOM_OUT, TRUE, 
 			  i18n("Zoom out"));
+  toolbar->setDelayedPopup(ID_VIEW_ZOOM_OUT, zoom);
   toolbar->insertButton(Icon("viewmag+.xpm"),ID_VIEW_ZOOM_IN, TRUE, 
 			  i18n("Zoom in"));
+  toolbar->setDelayedPopup(ID_VIEW_ZOOM_IN, zoom);
   toolbar->insertSeparator();
   toolbar->insertButton(Icon("grid.xpm"),ID_OPTIONS_TOGGLE_GRID, TRUE, 
 			  i18n("Toggle grid"));
@@ -569,8 +584,7 @@ KToolBar *KIconEdit::setupDrawToolBar()
   drawtoolbar->setToggle(ID_DRAW_FIND, true);
   drawtoolbar->insertButton(Icon("paintbrush.xpm"), ID_DRAW_FREEHAND, TRUE, i18n("Draw freehand"));
   drawtoolbar->setToggle(ID_DRAW_FREEHAND, true);
-  drawtoolbar->insertButton(Icon("areaselect.xpm"), ID_DRAW_SELECT, TRUE, i18n("Select area"));
-  drawtoolbar->setToggle(ID_DRAW_SELECT, true);
+
   drawtoolbar->insertButton(Icon("line.xpm"), ID_DRAW_LINE, TRUE, i18n("Draw line"));
   drawtoolbar->setToggle(ID_DRAW_LINE, true);
   drawtoolbar->insertButton(Icon("rectangle.xpm"),ID_DRAW_RECT, TRUE, i18n("Draw rectangle"));
@@ -629,7 +643,7 @@ void KIconEdit::addRecent(const char *filename)
 {
   Properties *pprops = props(this);
   //debug("addRecent - checking %s", filename);
-  if(filename && strlen(filename) == 0 || pprops->recentlist->contains(filename))
+  if(!filename || strlen(filename) == 0 || pprops->recentlist->contains(filename))
     return;
   //debug("addRecent - adding %s", filename);
 
