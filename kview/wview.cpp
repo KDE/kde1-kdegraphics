@@ -22,8 +22,10 @@
 #include "QwViewport.h"
 #include "viewport.h"
 #include "kerror.h"
+#include "version.h"
 
 #include <kurl.h>
+
 //extern    QStrList  Fileman::fileList;
 
 int winCount=0;
@@ -76,12 +78,12 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 	ImageRoot = new QPopupMenu;
 
 	// Main Menu
-
+/*
 	Menu->insertItem("&File", File);
 	Menu->insertItem("&Image", Image);
 	Menu->insertSeparator();
 	Menu->insertItem("&Help", Help);
-
+*/
 	// File Menu
 
 	File->insertItem("&Open File..", this, SLOT(loadImage()), CTRL+Key_O);
@@ -123,7 +125,14 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 
 	// Help Menu
 
-	id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
+//	Help = kapp->getHelpMenu(true, 0 ); 
+
+	//id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
+
+    	Menu->insertItem("&File", File);
+        Menu->insertItem("&Image", Image);
+        Menu->insertSeparator();
+        Menu->insertItem("&Help", Help); 
 
 
 	// Toggle menu if Image is clicked.
@@ -193,7 +202,7 @@ bool WView::loadLocal(const char *filename)
 		return FALSE;
 	}
 
-	if( !file.isReadable() ) {
+	if( !file.isReadable() ) 	   {
 		emit kviewError( KViewError::accessDenied );
 		if (!loaded) sendCloseSignal();
 		loadSuccess = FALSE;
@@ -234,7 +243,9 @@ void WView::loadImage()
 void WView::loadURL()
 {
 	DlgLocation *locDlg = new DlgLocation("Enter URL to image", "");
-	locDlg->setCaption("kview: enter URL..");	
+        QString sTemp = kapp->getCaption();
+        sTemp += ": enter URL...";
+	locDlg->setCaption( sTemp );	
 	locDlg->show();	
 
 	QString result = locDlg->getText();

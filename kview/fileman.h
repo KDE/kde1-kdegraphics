@@ -58,6 +58,7 @@ public:
 public slots:
 
   // menubar action
+  void menuCallback(int); 
   void aboutKview();
   void saveOptions();
 

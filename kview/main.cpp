@@ -46,7 +46,10 @@ int main(int argc, char **argv)
 		  f.sprintf( "%s/%s", buffer, argv[i] );
 		}*/
 	    }
-	  Fileman::appendFileList(QString(qApp->argv()[i]));
+
+	  // VERY UGLY HACK,  I don't have time to make it better
+          if ( f != "Image Viewer" && f != "-caption" && f != "%u" && f != "%c" )
+	  	Fileman::appendFileList(QString(qApp->argv()[i]));
 	  i++;
 	}
     }

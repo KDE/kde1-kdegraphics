@@ -1,0 +1,6 @@
+Version 0.11.4
+  * [Robert Williams]  Added KVIEW_VERSION to version.h   
+  * [Robert Williams]  Added getCaption()
+  * [Robert Williams]  Added -caption "%c" to kview.kdelnk 
+  * [Robert Williams]  Ugly hack in main.cpp to ignore -caption
+  * [Robert Williams]  Added getHelpmenu() to fileman.cpp

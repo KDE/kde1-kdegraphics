@@ -39,7 +39,7 @@ Fileman::Fileman(const char *name, WView *)
 {
   setMinimumSize(250, 350);
   setMaximumSize(700, 1400);  
-  setCaption("KView Display Manager");
+  setCaption( kapp->getCaption() );
 
   // count all display manager windows
   manList.setAutoDelete(FALSE);
@@ -91,10 +91,14 @@ void Fileman::initMenuBar()
   //options = new QPopupMenu();
   //options->insertItem("Save Options", this, SLOT(saveOptions()));
 
+  QPopupMenu *help = kapp->getHelpMenu(true, 0);
+
+  connect (help, SIGNAL (activated (int)), SLOT (menuCallback (int))); 
+/*
   help = new QPopupMenu ();
   help->insertItem("About KView",  this, SLOT(aboutKview()));
   help->insertItem("Help on KView",this, SLOT(invokeHelp()));
-
+*/
   
   menubar = new KMenuBar(this,"menubar");
   menubar->insertItem("File", file);
@@ -566,7 +570,9 @@ void Fileman::slotOpen()
 void Fileman::slotOpenUrl()
 {
   DlgLocation *locDlg = new DlgLocation("Enter URL to image", "");
-  locDlg->setCaption("kview: enter URL..");	
+  QString sTemp = kapp->getCaption();
+  sTemp += ": enter URL...";
+  locDlg->setCaption( sTemp );	
   locDlg->show();	
   
   QString result = locDlg->getText();
@@ -609,10 +615,12 @@ void Fileman::aboutKview()
   QString text;
   text.sprintf("kview %d.%d.%d \n",VERSIONNR,SUBVERSIONNR,PATCHLEVEL);
   text += "(c) 1996, 1997 by \n";
-  text += "Sirtaj Singh Kang,  <taj@kde.org>\n";
-  text += "Martin Hartig,  <hartig@mathematik.uni-kl.de>";
-  QMessageBox::message("About kview", text.data(),
-			"Ok"); 
+  text += "Sirtaj Singh Kang (taj@kde.org)\n";
+  text += "Martin Hartig (hartig@mathematik.uni-kl.de)";
+  QString sTemp = "About ";
+  sTemp += kapp->getCaption();
+  QMessageBox::about( NULL, sTemp, text.data() );
+			
 }
 
 void Fileman::saveOptions()
@@ -976,4 +984,7 @@ void Fileman::slotDropEvent( KDNDDropZone * dropZone ){
 	updateListbox(3);
 }
 
-
+void Fileman::menuCallback(int item) {
+  if ( item == 2 )
+	aboutKview();
+}
