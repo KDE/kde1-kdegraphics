@@ -685,14 +685,3 @@ msgstr "n-up"
 msgid "Printing method"
 msgstr "Método de impressão"
 
-#~ msgid "Appearance"
-#~ msgstr "Aparência"
-
-#~ msgid "Fonts"
-#~ msgstr "Fontes"
-
-#~ msgid "Print"
-#~ msgstr "Imprimir"
-
-#~ msgid "&Remove"
-#~ msgstr "&Remover"

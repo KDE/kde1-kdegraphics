@@ -414,20 +414,3 @@ msgstr "Largura do Fax:"
 msgid "height:"
 msgstr "altura:"
 
-#~ msgid "About KFax"
-#~ msgstr "Sobre KFax"
-
-#~ msgid "Version "
-#~ msgstr "Versão "
-
-#~ msgid "&About..."
-#~ msgstr "&Sobre..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "A&juda do KFax"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Selecione Fax para Abrir"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Selecione Fax para Adicionar"

@@ -401,11 +401,3 @@ msgstr "Cor da Linha..."
 msgid "Roundangle"
 msgstr "Redondângulo"
 
-#~ msgid "KPaint"
-#~ msgstr "KPaint"
-
-#~ msgid " version "
-#~ msgstr " versão "
-
-#~ msgid "(c) "
-#~ msgstr "(c) "
