@@ -28,7 +28,7 @@ int            Fileman::manCount;
 extern KApplication *theApp;
 extern QList<WView> windowList;
 
-Fileman::Fileman(const char *name, WView *myparent)
+Fileman::Fileman(const char *name, WView *)
     : KTopLevelWidget(name)
 {
   setMinimumSize(250, 350);
@@ -687,7 +687,7 @@ Fileman::~Fileman()
   delete imageWindow;
 }
 
-void Fileman::closeEvent(QCloseEvent *_ev)
+void Fileman::closeEvent(QCloseEvent *)
 {
   closeWindow();
 }
@@ -795,7 +795,7 @@ void Fileman::slotLineEdit()
   }
 }
 
-void Fileman::WViewCloseClicked(int item)
+void Fileman::WViewCloseClicked(int)
 {
   //kview 0.12.0  WView *imagewin;
   //              printf("REC %d\n",item);

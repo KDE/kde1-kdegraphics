@@ -396,7 +396,7 @@ void WView::newWindow(){
 }
 
 
-void WView::closeEvent( QCloseEvent *_ev)
+void WView::closeEvent( QCloseEvent *)
 {
   //  int item = windowList.findRef(this);
   //  printf("close %d \n",item);

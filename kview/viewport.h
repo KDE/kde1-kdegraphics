@@ -9,7 +9,7 @@
 #define _SSK_WVIEWPORT_H
 
 #include <qlabel.h>
-#include <kpixmap.h>
+#include <qpixmap.h>
 #include <qwmatrix.h>
 #include <qpopmenu.h>
 
