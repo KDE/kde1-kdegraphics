@@ -49,4 +49,4 @@ install-data-local:
 uninstall-local:
 
 messages:
-	@XGETTEXT@ -C -ktranslate -ki18n -x ../../kdelibs/po/kde.pot *.cpp && mv messages.po ../po/kghostview.pot
+	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot $(kcmkeys_SOURCES) && mv messages.po ../po/kghostview.pot

@@ -37,9 +37,8 @@ icon_DATA = kview.xpm
 
 EXTRA_DIST = $(lnk_DATA) $(icon_DATA) mini-kview.xpm
 
-# make messages.po. Move this one to ../po/ and "make merge" in po
 messages:
-	$(XGETTEXT) -C -ktranslate -ki18n -x ../../kdelibs/po/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
+	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
 
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)

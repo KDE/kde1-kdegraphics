@@ -40,9 +40,8 @@ install-data-local:
 uninstall-local:
 	-rm -f $(APPSDIR)/kiconedit.kdelnk
 
-# make messages.po. Move this one to ../po/ and "make merge" in po
 messages:
-	$(XGETTEXT) -C -ktranslate -ki18n $(kiconedit_SOURCES) && mv messages.po ../po/kiconedit.pot
+	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot $(kiconedit_SOURCES) && mv messages.po ../po/kiconedit.pot
 
 
 

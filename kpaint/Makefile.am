@@ -45,7 +45,7 @@ uninstall-local:
 	-rm -f $(kde_minidir)/kpaint.xpm
 
 messages:
-	@XGETTEXT@ -C -ktranslate -ki18n -x ../../kdelibs/po/kde.pot *.cpp && mv messages.po ../po/kpaint.pot
+	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot $(kpaint_SOURCES) && mv messages.po ../po/kpaint.pot
 
 canvas.cpp:canvas.moc
 canvas.moc: canvas.h
