@@ -7,9 +7,8 @@
 #include <stdio.h>
 #include <kcolordlg.h>
 #include <klocale.h>
+#include <kapp.h>
 #include "properties.h"
-
-#define klocale KLocale::klocale()
 
 propertiesDialog::propertiesDialog(int pages,
 				   QWidget *parent= 0, const char *name= 0)

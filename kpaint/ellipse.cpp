@@ -9,8 +9,6 @@
 #include "ellipse.h"
 #include "../app.h"
 
-#define klocale KLocale::klocale()
-
 extern MyApp *kpaintApp;
 
 Ellipse::Ellipse() : Tool()

@@ -16,8 +16,6 @@
 #include "tools/rectangle.h"
 #include "tools/spraycan.h"
 
-#define klocale KLocale::klocale()
-
 Manager::Manager(Canvas *c, QWidget *top) : QObject()
 {
   assert(c != NULL);

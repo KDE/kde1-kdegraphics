@@ -6,8 +6,6 @@
 #include "version.h"
 #include "app.h"
 
-#define klocale KLocale::klocale()
-
 MyApp::MyApp( int &argc, char **argv, const QString appname)
   : KApplication( argc, argv, appname)
 {

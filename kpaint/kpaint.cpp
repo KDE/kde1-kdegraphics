@@ -40,10 +40,6 @@ extern MyApp *kpaintApp;
 extern FormatManager *formatMngr;
 extern int openwins;
 
-KLocale locale( "kpaint" ); // the globale locale instance
-
-#define klocale KLocale::klocale()
-
 KPaint::KPaint(char *url_= NULL) : KTopLevelWidget()
 {
   int w, h; 

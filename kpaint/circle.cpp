@@ -11,8 +11,6 @@
 #include "circle.h"
 #include "../app.h"
 
-#define klocale KLocale::klocale()
-
 extern MyApp *kpaintApp;
 
 Circle::Circle() : Tool()

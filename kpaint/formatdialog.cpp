@@ -2,10 +2,9 @@
 
 #include <qpushbt.h>
 #include <klocale.h>
+#include <kapp.h>
 #include "formatdialog.h"
 #include "formats.h"
-
-#define klocale KLocale::klocale()
 
 extern FormatManager *formatMngr;
 

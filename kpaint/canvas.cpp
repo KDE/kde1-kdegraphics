@@ -6,11 +6,10 @@
 #include <strings.h>
 #include <qpainter.h>
 #include <klocale.h>
+#include <kapp.h>
 #include <math.h>
 #include "canvas.h"
 #include "tools/tool.h"
-
-#define klocale KLocale::klocale()
 
 Canvas::Canvas(int width, int height,
 	       QWidget *parent= 0, const char *name=0)

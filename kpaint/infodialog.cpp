@@ -6,10 +6,9 @@
 #include <qlined.h>
 #include <qimage.h>
 #include <klocale.h>
+#include <kapp.h>
 #include "infodialog.h"
 #include "formats.h"
-
-#define klocale KLocale::klocale()
 
 extern FormatManager *formatMngr;
 

@@ -10,8 +10,6 @@
 #include "pen.h"
 #include "../app.h"
 
-#define klocale KLocale::klocale()
-
 extern MyApp *kpaintApp;
 
 Pen::Pen() : Tool()

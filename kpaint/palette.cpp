@@ -2,10 +2,9 @@
 #include <qbrush.h>
 #include <kcolordlg.h>
 #include <klocale.h>
+#include <kapp.h>
 #include <stdio.h>
 #include "palette.h"
-
-#define klocale KLocale::klocale()
 
 paletteWidget::paletteWidget(QPixmap *p, QWidget *parent= 0, const char *name= 0)
   : QTableView(parent, name)

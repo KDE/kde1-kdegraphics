@@ -10,8 +10,6 @@
 #include "spraycan.h"
 #include "../app.h"
 
-#define klocale KLocale::klocale()
-
 extern MyApp *kpaintApp;
 
 

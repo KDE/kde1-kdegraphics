@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include "canvassize.h"
 #include <klocale.h>
-
-#define klocale KLocale::klocale()
+#include <kapp.h>
 
 canvasSizeDialog::canvasSizeDialog(QWidget *parent= 0, const char *name= 0)
  : QDialog (parent, name, TRUE)

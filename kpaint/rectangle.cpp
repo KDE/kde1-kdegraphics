@@ -9,8 +9,6 @@
 #include "rectangle.h"
 #include "../app.h"
 
-#define klocale KLocale::klocale()
-
 extern MyApp *kpaintApp;
 
 Rectangle::Rectangle() : Tool()

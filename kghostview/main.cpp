@@ -14,8 +14,6 @@
 
 Display 	*kde_display;
 
-KLocale local("kghostview");
-
 void Syntax(char *call)
 {
     printf(i18n("Usage: %s\n"), call);

@@ -1,8 +1,7 @@
 #include <qpushbt.h>
 #include <klocale.h>
+#include <kapp.h>
 #include "palettedialog.h"
-
-#define klocale KLocale::klocale()
 
 paletteDialog::paletteDialog(QPixmap *p, QWidget *parent= 0, const char *name= 0)
   : QDialog(parent, name, TRUE)
