@@ -45,6 +45,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- grafikkfremviser. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -108,7 +111,7 @@ msgstr "&Nullstill"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Preferanser..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -158,25 +161,23 @@ msgstr "Drei &horisontalt"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "F&lislegg på skrivebord"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "Til &skrivebord"
+msgstr "&Maks på skrivebordet"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Maks&pekt"
+msgstr "Maks&pekt på skrivebordet"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Hvordan gjør jeg..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "H&var er en..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -289,33 +290,31 @@ msgstr "Start &lysbilde"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "kview-preferanser"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Bruk"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Ved lasting"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "&Lukk vindu"
+msgstr "Endre størrelse på vindu"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Endre "
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Ingen endring av størrelse"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "&Lysbildefremvisning av/på"
+msgstr "Lysbildefremvisning"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -323,20 +322,8 @@ msgstr "Sløyfe"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Lysbildeintervall (sek)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
-
-#~ msgid "&Tile"
-#~ msgstr "&Side ved side"
-
-#~ msgid "&Max"
-#~ msgstr "&Maks"
-
-#~ msgid "Interval.."
-#~ msgstr "Interval..."
-
-#~ msgid "Time between slides (sec):"
-#~ msgstr "Tid mellom lydbilder (sek):"
+msgstr "&Taster"
