@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1998-12-04 22:41 CET\n"
+"PO-Revision-Date: 1999-01-09 23:45 CET\n"
 "Last-Translator: Francois-Xavier DURANCEAU "
 "<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français\n"
@@ -70,12 +70,11 @@ msgstr "Un problème DVI est survenu !\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Etat du fichier modifié."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
-msgstr "Fichier rechargé"
+msgstr "Fichier rechargé."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -472,9 +471,9 @@ msgid "Small text button set to shrink factor "
 msgstr "Boutton \"petit texte\" réglé pour facteur de réduction "
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Diminuer: xx"
+msgstr "Réduction : %d"
 
 #: marklist.cpp:37
 msgid "Mark current"

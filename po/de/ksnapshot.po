@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1998-11-15 11:40+0100\n"
+"PO-Revision-Date: 1999-01-10 11:25+MET\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: de <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,6 @@ msgid "snapshot"
 msgstr "Schnappschuß"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -31,7 +30,7 @@ msgstr ""
 "KSnapshot unterliegt dem Copyright von Richard Moore (rich@kde.org)\n"
 "und ist unter der LGPL veröffentlicht.\n"
 "\n"
-"Version: "
+"Version: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1998-12-13 13:55+0100\n"
-"PO-Revision-Date: 1998-11-15 12:20+0100\n"
+"PO-Revision-Date: 1999-01-10 11:45+MET\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Translator: Stephan Kulow <coolo@kde.org>\n"
 
@@ -36,7 +36,6 @@ msgid "About KView"
 msgstr "Über KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Liste..."
 
@@ -50,7 +49,7 @@ msgstr "&Nächster"
 
 #: viewer.cpp:373 viewer.cpp:474
 msgid "&Slideshow On/Off"
-msgstr "&Diashow An/Aus"
+msgstr "&Diashow an/aus"
 
 #: viewer.cpp:382
 msgid "&Zoom"
@@ -73,13 +72,12 @@ msgid "&Images"
 msgstr "&Bilder"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
-msgstr "&Speichern unter"
+msgstr "&Speichern unter..."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "&Fenster schließen"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -87,7 +85,7 @@ msgstr "&Ganzer Bildschirm"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Beschneiden"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -116,22 +114,20 @@ msgid "&Half size"
 msgstr "&Halb so groß"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "&Halb so groß"
+msgstr "&Maximale Größe"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Max&pekt"
+msgstr "Maximale &Ansicht"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
-msgstr "&Rechtsherum rotieren"
+msgstr "&Rechtsherum drehen"
 
 #: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
-msgstr "&Linksherum rotieren"
+msgstr "&Linksherum drehen"
 
 #: viewer.cpp:453
 msgid "Flip &vertical"
@@ -147,14 +143,13 @@ msgstr "&Teilen"
 
 #: viewer.cpp:461
 msgid "&Max"
-msgstr "&Maximum"
+msgstr "&Maximal"
 
 #: viewer.cpp:462
 msgid "Max&pect"
 msgstr "Max&pekt"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
 msgstr "&Über KView..."
 
@@ -171,36 +166,33 @@ msgid "Transfer error: "
 msgstr "Übertragungsfehler: "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
 msgstr "Lade..."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Konnte %s nicht laden"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Aufhellen..."
+msgstr "Drucken..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Helligkeitsfaktor eingeben (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Helligkeitsfaktor muß positiv sein"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Helligkeit ändern..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
-msgstr "Intensität:Heller"
+msgstr "Intensität:Helligkeit"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -219,27 +211,24 @@ msgid "Smooth"
 msgstr "Geglättet"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
-msgstr "Gamma-Wert (0...1):"
+msgstr "Gamma-Wert (>0):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Ungültiger Gamma-Wert"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Gamma-Korrektur..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Korrigiere Gamma..."
+msgstr "Intensität:Gamma-Korrektur..."
 
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Intervall..."
+msgstr "Extern..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -247,7 +236,7 @@ msgstr "Voriger"
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
-msgstr "&Zufall"
+msgstr "&Zufällig"
 
 #: ilistdlg.cpp:66
 msgid "Next"
@@ -280,15 +269,3 @@ msgstr "Diashow &starten"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Zeit zwischen Dias (sec):"
-
-#~ msgid "Fi&lter"
-#~ msgstr "Fi&lter"
-
-#~ msgid "&Open.."
-#~ msgstr "&Öffnen"
-
-#~ msgid "Darkening..."
-#~ msgstr "Abdunkeln..."
-
-#~ msgid "Intensity:Darken"
-#~ msgstr "Intensität:Dunkler"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1998-11-13 23:00+MET\n"
+"PO-Revision-Date: 1999-01-10 11:15+MET\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgstr "&Neu..."
 
 #: kiconedit.cpp:402
 msgid "Open recent"
-msgstr "&Kürzlich benutzte"
+msgstr "&Zuletzt benutzte"
 
 #: kiconedit.cpp:423
 msgid "&Exit"
@@ -149,7 +149,7 @@ msgstr "Spray"
 
 #: kiconedit.cpp:489 kiconedit.cpp:689
 msgid "Flood fill"
-msgstr "Gießkanne"
+msgstr "Durchgehende Füllung"
 
 #: kiconedit.cpp:490
 msgid "Line"
@@ -198,6 +198,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"KDE Icon Editor\n"
+"\n"
+"Ein Graphik-Programm zur Erzeugung von Icons\n"
+"unter Verwendung der KDE Icon Palette\n"
+"\n"
+"Copyright 1998 Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -547,7 +555,7 @@ msgid ""
 msgstr ""
 "Gitter ein/aus\n"
 "\n"
-"Schaltet das Gitter der Bearbeitungsfläche ein und aus"
+"Schaltet das Gitter der Arbeitsfläche ein/aus"
 
 #: kiconedit.cpp:866
 msgid ""
@@ -717,11 +725,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "Breite"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "Höhe"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
@@ -978,7 +986,7 @@ msgstr "Nichts zu machen!"
 
 #: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."
-msgstr "Entschuldigung - nicht implementiert"
+msgstr "Sorry - nicht implementiert"
 
 #: kiconeditslots.cpp:471 kiconeditslots.cpp:478
 #, c-format
