@@ -25,6 +25,9 @@
 #include <qstrlist.h> 
 
 #include <stdlib.h>
+#include <signal.h>
+#include <time.h>
+
 #include "kfax.h"
 #include "kfax.moc"
 
