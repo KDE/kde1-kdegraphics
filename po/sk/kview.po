@@ -79,7 +79,7 @@ msgstr "M&axpect"
 
 #: fileman.cpp:138 wview.cpp:126
 msgid "&Contents"
-msgstr ""
+msgstr "&Obsah"
 
 #: viewport.cpp:41
 msgid "Clockwise"
@@ -130,7 +130,6 @@ msgid "KView Display Manager"
 msgstr "KView mana¾ér"
 
 #: fileman.cpp:101
-#, fuzzy
 msgid "Open &URL..."
 msgstr "Otvori» URL..."
 
@@ -147,7 +146,6 @@ msgid "Save Options"
 msgstr "Ulo¾i» nastavenie"
 
 #: fileman.cpp:139
-#, fuzzy
 msgid "&About KView"
 msgstr "Informácie o KView"
 
@@ -240,88 +238,3 @@ msgstr "(c) 1996 - 1998 \n"
 msgid "About KView"
 msgstr "Informácie o KView"
 
-#~ msgid "Help on KView"
-#~ msgstr "Pomocník KView"
-
-#~ msgid "kview: Open..."
-#~ msgstr "kview: Otvori»..."
-
-#~ msgid "Enter URL to image"
-#~ msgstr "Zadajte URL k obrázku"
-
-#~ msgid "kview: enter URL.."
-#~ msgstr "kview: zadajte URL.."
-
-#~ msgid "About kview"
-#~ msgstr "O KView"
-
-#~ msgid "JPEG saving unimplemented.\n"
-#~ msgstr "Ukladanie JPEGov neimplementované.\n"
-
-#~ msgid "error: file empty.\n"
-#~ msgstr "chyba: prázdny súbor.\n"
-
-#~ msgid "warning: premature EOF in file.\n"
-#~ msgstr "varovanie: predèasný koniec súboru.\n"
-
-#~ msgid "Oops"
-#~ msgstr "Oops"
-
-#~ msgid "kview message"
-#~ msgstr "správa kview"
-
-#~ msgid "Unknown Error"
-#~ msgstr "Neznáma chyba"
-
-#~ msgid "kview couldn't find the file."
-#~ msgstr "kview nemô¾e nájs» súbor."
-
-#~ msgid "kview was denied read access to the file."
-#~ msgstr "kview nemô¾e pristupova» k súboru"
-
-#~ msgid "kview didn't recognize the image format."
-#~ msgstr "kview nerozpoznal formát obrázku"
-
-#~ msgid "That's not a valid URL."
-#~ msgstr "Nie je to korektné URL."
-
-#~ msgid "kview couldn't recognize the remote file."
-#~ msgstr "kview nemô¾e rozozna» vzdialený súbor."
-
-#~ msgid ""
-#~ "kview is already performing an IO operation.Wait for the job to finish, or "
-#~ "cancel it."
-#~ msgstr ""
-#~ "KView u¾ uskutoèòuje IO operáciu. Poèkajte prosím, kým sa dokonèí alebo ju "
-#~ "zru¹te."
-
-#~ msgid ""
-#~ "Couldn't run or connect to KFM.\n"
-#~ "Wont be able to load internet files."
-#~ msgstr ""
-#~ "Nemô¾em spusti» alebo pripoji» sa ku KFM.\n"
-#~ "Nebudem môc» naèíta» súbory z internetu."
-
-#~ msgid "cached %s\n"
-#~ msgstr "ke¹ované: %s\n"
-
-#~ msgid "Couldn't run kfm"
-#~ msgstr "Nemô¾em spusti» kfm"
-
-#~ msgid ""
-#~ "the KDE file manager is either not installed,\n"
-#~ "\ror not installed properly. kview won't be able\n"
-#~ "\rto load internet files."
-#~ msgstr ""
-#~ "súborový mana¾ér KDE nie je nain¹talovaný alebo\n"
-#~ "\rnie je správne nain¹talovaný. kview nebude môc»\n"
-#~ "\rnaèítava» súbory z internetu."
-
-#~ msgid "Bummer"
-#~ msgstr "Bummer"
-
-#~ msgid "Image Info"
-#~ msgstr "Informácie"
-
-#~ msgid "KView(%d) "
-#~ msgstr "KView(%d) "

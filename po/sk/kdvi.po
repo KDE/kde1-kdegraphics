@@ -533,7 +533,6 @@ msgid "Shrink factor for large text"
 msgstr "Stupeò zmen¹enia pre veµký text"
 
 #: prefs.cpp:326
-#, fuzzy
 msgid "Show postscript specials"
 msgstr "Zobrazova» postskript. zvlá¹tnosti"
 

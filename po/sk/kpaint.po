@@ -269,7 +269,7 @@ msgstr "Vý¹ka obrázku:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Zru¹i»"
 
 #: palette.cpp:100
 msgid "Edit Colour"

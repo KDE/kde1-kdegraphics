@@ -311,7 +311,7 @@ msgstr "Akurát"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normálne"
 
 #: options.cpp:81
 msgid "Display Options:"

@@ -38,7 +38,6 @@ msgid "Remove page marks"
 msgstr "Odstráni» znaèky"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
 msgstr "Strana"
 
@@ -491,6 +490,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - the PostSkript prehliadaè pre\n"
+"K Desktop Environment.\n"
+"\n"
+"Napísal Mark Donohoe <donohoe@kde.org>, zalo¾ené na pôvodnej\n"
+"práci Tim-a Theisen-a.\n"
+"\n"
+"Obsahuje kód z Johanesovho Plassovho gv. Toto pridáva podporu\n"
+"kompresie a PDF formátu.\n"
+"\n"
+"Bli¾¹ie informácie na http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
