@@ -1118,7 +1118,7 @@ void KPaint::helpAbout()
   QString aMessageHeader( i18n( "About" ) );
   aMessageHeader + APPNAME;
 
-  QMessageBox::about( 0, kapp->getCaption(), "KPaint" ); 
+  QMessageBox::about( 0, aMessageHeader, "KPaint" );
 
 //  QMessageBox::message(aMessageHeader,
 //		       APPVERSTR "\n" APPAUTHOR "\n" APPAUTHOREMAIL);
