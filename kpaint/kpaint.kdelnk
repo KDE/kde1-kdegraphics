@@ -8,6 +8,7 @@ Comment[pl]=Prosty program graficzny
 Comment[fi]=Yksinkertainen piirto-ohjelma
 Comment[hu]=Egy egyszerû rajzprogram
 Comment[pt]=Um Programa Simples de Pintura
+Comment[sk]=Jednoduchý kresliaci program
 Terminal=0
 Type=Application
 Name=Paint
@@ -15,4 +16,5 @@ Name[pl]=Paint
 Name[fi]=Piirto-ohjelma
 Name[hu]=Rajzoló
 Name[pt]=Pintor
+Name[sk]=Maµovanie
 
