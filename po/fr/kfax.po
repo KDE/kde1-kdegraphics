@@ -295,8 +295,8 @@ msgstr "Sélectionner un nom de fichier"
 
 #: print.cpp:280
 msgid "You must enter a file name if you wish to print to a file."
-msgstr "Vous devez donner un nom de fichier si vous voulez imprimer"
-" dans un fichier."
+msgstr ""
+"Vous devez donner un nom de fichier si vous voulez imprimer dans un fichier."
 
 #: print.cpp:290
 msgid ""

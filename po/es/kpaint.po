@@ -97,8 +97,7 @@ msgstr "Cambios no guardados"
 #: kpaint.cpp:173
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-"No ha guardado los cambios, los perderá si cierra esta ventana ahora."
+msgstr "No ha guardado los cambios, los perderá si cierra esta ventana ahora."
 
 #: kpaint.cpp:210
 msgid "New Canvas"
@@ -440,7 +439,8 @@ msgstr "Angulo Redondo"
 #~ msgstr "KPaint: Imposible encontrar KFM"
 
 #~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Error: KPaint no puede encontrar un KFM en ejecución ni iniciar uno."
+#~ msgstr ""
+#~ "Error: KPaint no puede encontrar un KFM en ejecución ni iniciar uno."
 
 #~ msgid "KPaint: Network Load Failed"
 #~ msgstr "KPaint: Error cargando de la red"
