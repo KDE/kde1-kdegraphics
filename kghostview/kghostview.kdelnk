@@ -3,6 +3,7 @@
 Name=PS Viewer
 Name[fr]=Visualiseur Postscript
 Name[de]=PS-Betrachter
+Name[no]=PS-fremviser
 Name[pl]=PS Viewer
 Name[fi]=PS Näyttäjä
 Name[hu]=PS nézõ
@@ -18,6 +19,7 @@ DocPath=kghostview/index.html
 Comment=PostScript document viewer
 Comment[fr]=Visualiseur de fichiers Postscript
 Comment[de]=Betrachter für PostScript-Dokumente
+Comment[no]=Fremviser for PostScript-dokumenter
 Comment[pl]=Podgl±darka dokumentów PostScriptowych
 Comment[fi]=Postscript dokumentin näyttäjä
 Comment[hu]=PostScript dokumentum nézõ
