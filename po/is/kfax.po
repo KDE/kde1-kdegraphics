@@ -6,12 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1998-1-04 10:45-0500\n"
+"PO-Revision-Date: 1998-02-01 10:00-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso8859-1\n"
-"Content-Transfer-Encoding: ENCODING\n"
 
 # kfax.cpp:233 kfax.cpp:827
 #: kfax.cpp:233 kfax.cpp:827
@@ -44,6 +41,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 # kfax.cpp:402
 #: kfax.cpp:402
@@ -354,7 +357,7 @@ msgstr "Gerð: TIFF"
 # kfax.cpp:2427
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr "Gerp: Raw "
+msgstr "Gerð: Raw "
 
 # kfax.cpp:2738
 #: kfax.cpp:2738
@@ -365,6 +368,7 @@ msgid ""
 msgstr ""
 "Þessi skrá er til nú þegar.\n"
 "Viltu skrifa yfir hana?\n"
+"\n"
 
 # faxinput.cpp:111
 #: faxinput.cpp:111
@@ -453,7 +457,7 @@ msgstr "KFax stillingar"
 # options.cpp:64
 #: options.cpp:64
 msgid "Raw Fax Resolution:"
-msgstr "Hrá fax upplausn"
+msgstr "Fax upplausn (hrá):"
 
 # options.cpp:68 options.cpp:149
 #: options.cpp:68 options.cpp:149
@@ -468,7 +472,7 @@ msgstr "Birtistillingar:"
 # options.cpp:85
 #: options.cpp:85
 msgid "Landscape"
-msgstr "Á lengd"
+msgstr "Langsnið"
 
 # options.cpp:89
 #: options.cpp:89
