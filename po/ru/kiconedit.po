@@ -1,0 +1,654 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 1998-08-03 19:33+0200\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Date: 1998-07-31 11:38:54+0400\n"
+"From: Andy Pershin <apa@penza.com.ru>\n"
+"Xgettext-Options: -C -ktranslate -ki18n\n"
+
+#: utils.cpp:57
+#, c-format
+msgid "copyFile - There was an error opening destination file: %s"
+msgstr ""
+
+#: utils.cpp:72
+#, c-format
+msgid "copyFile - There was an error opening source file: %s"
+msgstr ""
+
+#: utils.cpp:84
+#, fuzzy, c-format
+msgid "removeFile - There was an error removing the file: %s"
+msgstr "Во время сохранения произошла ошибка:\n"
+
+#: kicon.cpp:50 kicon.cpp:72 kicon.cpp:160 kicon.cpp:240 kicon.cpp:319
+#: kicon.cpp:372 kicon.cpp:408 kiconedit.cpp:225 kiconeditslots.cpp:41
+#: kiconeditslots.cpp:100 kiconeditslots.cpp:378 kicongrid.cpp:616
+#: kicongrid.cpp:632 kicongrid.cpp:687 kicongrid.cpp:716
+msgid "Warning"
+msgstr "Внимание"
+
+#: kiconedit.cpp:226 kiconeditslots.cpp:42 kiconeditslots.cpp:101
+msgid ""
+"The current file has been modified.\n"
+"Do you want to save it?"
+msgstr ""
+"Этот файл изменялся.\n"
+"Вы не хотите его сохранить?"
+
+#: kiconedit.cpp:388
+#, fuzzy
+msgid "Select All"
+msgstr "Выбрать область"
+
+#: kiconedit.cpp:405
+#, fuzzy
+msgid "New &window"
+msgstr "Новое окно"
+
+#: kiconedit.cpp:408
+#, fuzzy
+msgid "&New..."
+msgstr "Новый"
+
+#: kiconedit.cpp:410
+#, fuzzy
+msgid "&Open..."
+msgstr "&Открыть"
+
+#: kiconedit.cpp:412
+msgid "Open recent"
+msgstr ""
+
+#: kiconedit.cpp:415
+msgid "&Save"
+msgstr "Сохранить"
+
+#: kiconedit.cpp:417
+#, fuzzy
+msgid "Save &as..."
+msgstr "Сохранить как"
+
+#: kiconedit.cpp:419
+#, fuzzy
+msgid "&Print..."
+msgstr "Печать"
+
+#: kiconedit.cpp:423
+msgid "&Close"
+msgstr "Закрыть"
+
+#: kiconedit.cpp:425
+#, fuzzy
+msgid "&Exit"
+msgstr "Редактировать"
+
+#: kiconedit.cpp:427
+msgid "&File"
+msgstr "Файл"
+
+#: kiconedit.cpp:431
+msgid "Cu&t"
+msgstr "Вырезать"
+
+#: kiconedit.cpp:434
+msgid "&Copy"
+msgstr "Копировать"
+
+#: kiconedit.cpp:437
+msgid "&Paste"
+msgstr "Вставить"
+
+#: kiconedit.cpp:440
+msgid "Paste as &new"
+msgstr ""
+
+#: kiconedit.cpp:442
+msgid "Clea&r"
+msgstr "Очистить"
+
+#: kiconedit.cpp:444
+#, fuzzy
+msgid "Select &all"
+msgstr "Выбрать область"
+
+#: kiconconfig.cpp:134 kiconedit.cpp:446
+msgid "&Edit"
+msgstr "Редактировать"
+
+#: kiconedit.cpp:450
+msgid "1:1"
+msgstr ""
+
+#: kiconedit.cpp:451
+msgid "1:5"
+msgstr ""
+
+#: kiconedit.cpp:452
+msgid "1:10"
+msgstr ""
+
+#: kiconedit.cpp:457
+msgid "Zoom &in"
+msgstr "Увеличить"
+
+#: kiconedit.cpp:458
+msgid "Zoom &out"
+msgstr "Уменьшить"
+
+#: kiconedit.cpp:459
+#, fuzzy
+msgid "Zoom factor"
+msgstr "Уменьшить"
+
+#: kiconedit.cpp:461
+msgid "&View"
+msgstr "Просмотр"
+
+#: kiconedit.cpp:466
+msgid "&Resize"
+msgstr ""
+
+#: kiconedit.cpp:468
+msgid "&GrayScale"
+msgstr ""
+
+#: kiconedit.cpp:473
+msgid "&Icon"
+msgstr ""
+
+#: kiconedit.cpp:477
+msgid "Freehand"
+msgstr "Карандаш"
+
+#: kiconedit.cpp:478
+msgid "Rectangle"
+msgstr "Прямоугольник"
+
+#: kiconedit.cpp:479
+msgid "Filled rectangle"
+msgstr "Закрашенный прямоугольник"
+
+#: kiconedit.cpp:480
+msgid "Circle"
+msgstr "Окружность"
+
+#: kiconedit.cpp:481
+#, fuzzy
+msgid "Filled circle"
+msgstr "Закрашенный прямоугольник"
+
+#: kiconedit.cpp:482
+msgid "Ellipse"
+msgstr "Эллипс"
+
+#: kiconedit.cpp:483
+#, fuzzy
+msgid "Filled ellipse"
+msgstr "Закрашенный прямоугольник"
+
+#: kiconedit.cpp:484 kiconedit.cpp:616
+msgid "Spray"
+msgstr "Дихлофос"
+
+#: kiconedit.cpp:485 kiconedit.cpp:618
+msgid "Flood fill"
+msgstr "Равномерная заливка"
+
+#: kiconedit.cpp:486
+msgid "Line"
+msgstr "Линия"
+
+#: kiconedit.cpp:487
+msgid "Eraser (Transparent)"
+msgstr "Стерка (прозрачная)"
+
+#: kiconedit.cpp:490
+msgid "&Tools"
+msgstr "Инструменты"
+
+#: kiconedit.cpp:494
+msgid "&Configure"
+msgstr ""
+
+#: kiconedit.cpp:496
+msgid "Toggle &Grid"
+msgstr "Сетка"
+
+#: kiconedit.cpp:499
+#, fuzzy
+msgid "Toggle &toolbar"
+msgstr "Сетка"
+
+#: kiconedit.cpp:502
+#, fuzzy
+msgid "Toggle &drawing tools"
+msgstr "Сетка"
+
+#: kiconedit.cpp:505
+#, fuzzy
+msgid "Toggle &statusbar"
+msgstr "Сетка"
+
+#: kiconedit.cpp:509
+msgid "&Save options"
+msgstr ""
+
+#: kiconedit.cpp:511
+#, fuzzy
+msgid "&Options"
+msgstr "&Открыть"
+
+#: kiconedit.cpp:515
+msgid "&Help"
+msgstr "Помощь"
+
+#: kiconedit.cpp:533
+msgid "New File"
+msgstr "Новый файл"
+
+#: kiconedit.cpp:535
+msgid "Open a file"
+msgstr "Открыть файл"
+
+#: kiconedit.cpp:537
+msgid "Save the file"
+msgstr "Сохранить файл"
+
+#: kiconedit.cpp:540
+msgid "Print icon"
+msgstr "Напечатать иконку"
+
+#: kiconedit.cpp:543
+msgid "Cut"
+msgstr "Вырезать"
+
+#: kiconedit.cpp:545
+msgid "Copy"
+msgstr "Копировать"
+
+#: kiconedit.cpp:547
+msgid "Paste"
+msgstr "Вставить"
+
+#: kiconedit.cpp:551
+msgid "Resize"
+msgstr ""
+
+#: kiconedit.cpp:554
+msgid "GrayScale"
+msgstr ""
+
+#: kiconedit.cpp:561
+msgid "Zoom out"
+msgstr "Уменьшить"
+
+#: kiconedit.cpp:563
+msgid "Zoom in"
+msgstr "Увеличить"
+
+#: kiconedit.cpp:566
+msgid "Toggle grid"
+msgstr "Переключить сетку"
+
+#: kiconedit.cpp:572
+#, fuzzy
+msgid "New Window"
+msgstr "Новое окно"
+
+#: kiconedit.cpp:596
+msgid "Find pixel"
+msgstr "Найти пиксел"
+
+#: kiconedit.cpp:598
+msgid "Draw freehand"
+msgstr "Свободное творчество"
+
+#: kiconedit.cpp:600
+msgid "Select area"
+msgstr "Выбрать область"
+
+#: kiconedit.cpp:602
+msgid "Draw line"
+msgstr "Рисовать линию"
+
+#: kiconedit.cpp:604
+msgid "Draw rectangle"
+msgstr "Рисовать прямоугольник"
+
+#: kiconedit.cpp:606
+msgid "Draw filled rectangle"
+msgstr "Рисовать залитый прямоугольник"
+
+#: kiconedit.cpp:608
+msgid "Draw circle"
+msgstr "Рисовать окружность"
+
+#: kiconedit.cpp:610
+#, fuzzy
+msgid "Draw filled circle"
+msgstr "Рисовать залитый прямоугольник"
+
+#: kiconedit.cpp:612
+msgid "Draw ellipse"
+msgstr "Рисовать эллипс"
+
+#: kiconedit.cpp:614
+#, fuzzy
+msgid "Draw filled ellipse"
+msgstr "Рисовать эллипс"
+
+#: kiconedit.cpp:621
+msgid "Erase"
+msgstr "Стереть"
+
+#: kicongrid.cpp:432
+#, fuzzy
+msgid "There was an error loading a blank image.\n"
+msgstr "Произошла ошибка во время загрузки:\n"
+
+#: kicongrid.cpp:433
+msgid "Error"
+msgstr "Ошибка"
+
+#: kicongrid.cpp:525
+msgid "All selected"
+msgstr ""
+
+#: kicongrid.cpp:536
+#, fuzzy
+msgid "Cleared"
+msgstr "Очистить"
+
+#: kicongrid.cpp:584
+#, fuzzy
+msgid "Selected area cutted"
+msgstr "Выбрать область"
+
+#: kicongrid.cpp:587
+#, fuzzy
+msgid "Selected area copied"
+msgstr "Выбрать область"
+
+#: kicongrid.cpp:615
+#, fuzzy
+msgid ""
+"There was an copying:\n"
+"to the clipboard!"
+msgstr "Произошло копирование:\n"
+
+#: kicongrid.cpp:633
+msgid ""
+"The clipboard image is larger than the current image!\n"
+"Paste as new image?"
+msgstr ""
+
+#: kicongrid.cpp:646
+#, fuzzy
+msgid "Pasting"
+msgstr "Вставить"
+
+#: kicongrid.cpp:681 kicongrid.cpp:711
+msgid "Done pasting"
+msgstr ""
+
+#: kicongrid.cpp:686 kicongrid.cpp:715
+msgid "Invalid pixmap data in clipboard!\n"
+msgstr "Неверные данные в кармане!\n"
+
+#: kicontools.cpp:71
+msgid "System Colors"
+msgstr ""
+"Системные\n"
+"цвета"
+
+#: kicontools.cpp:78
+msgid "Custom Colors"
+msgstr ""
+"Выбранные\n"
+"цвета"
+
+#: kiconfiledlg.cpp:37
+#, fuzzy
+msgid "Open image"
+msgstr "Открыть файл"
+
+#: kiconfiledlg.cpp:51
+#, fuzzy
+msgid "Save image As"
+msgstr "Сохранить как"
+
+#: kicon.cpp:47
+#, fuzzy
+msgid "There was an error removing temporary backup file:\n"
+msgstr "Во время сохранения произошла ошибка:\n"
+
+#: kicon.cpp:73 kicon.cpp:241 kicon.cpp:320 kicon.cpp:409
+msgid ""
+"We've got a KFM job running.\n"
+"Please wait."
+msgstr ""
+
+#: kicon.cpp:96
+msgid "The URL:\n"
+msgstr ""
+
+#: kicon.cpp:99 kicon.cpp:145 kicon.cpp:168 kicon.cpp:180 kicon.cpp:193
+#: kicon.cpp:206 kicon.cpp:217 kicon.cpp:363 kicon.cpp:396
+msgid "ERROR"
+msgstr ""
+
+#: kicon.cpp:115
+msgid "The KDE Icon Editor has found a recover file for:\n"
+msgstr ""
+
+#: kicon.cpp:117 kicon.cpp:264
+msgid ""
+"\n"
+"Do you want to open this?"
+msgstr ""
+
+#: kicon.cpp:118 kicon.cpp:265 kicon.cpp:273
+msgid "Information"
+msgstr ""
+
+#: kicon.cpp:142
+#, fuzzy
+msgid "The file:\n"
+msgstr "Сохранить файл"
+
+#: kicon.cpp:159
+#, fuzzy
+msgid ""
+"The Icon Editor is already downloading a non-local file.\n"
+"Please wait.\n"
+msgstr ""
+"В редакторе уже имеется загруженный файл.\n"
+"Подождите пока не завершится его редактирование."
+
+#: kicon.cpp:169
+msgid "Couldn't initiate KFM!"
+msgstr ""
+
+#: kicon.cpp:177
+#, fuzzy
+msgid "There was a KFM error creating a backup for:\n"
+msgstr "Во время сохранения произошла ошибка:\n"
+
+#: kicon.cpp:190 kicon.cpp:360
+#, fuzzy
+msgid "There was an error creating a backup for:\n"
+msgstr "Во время сохранения произошла ошибка:\n"
+
+#: kicon.cpp:203
+#, fuzzy
+msgid "KIcon: There was a error locking:\n"
+msgstr "Произошла ошибка во время загрузки:\n"
+
+#: kicon.cpp:214 kicon.cpp:270
+#, fuzzy
+msgid "KIcon: There was a QT error loading:\n"
+msgstr "Произошла ошибка во время загрузки:\n"
+
+#: kicon.cpp:262
+msgid "The KDE Icon Editor has found a recover\n"
+msgstr ""
+
+#: kicon.cpp:263
+msgid "file for an unsaved icon."
+msgstr ""
+
+#: kicon.cpp:373
+msgid "Couldn't initiate KFM"
+msgstr ""
+
+#: kicon.cpp:386
+msgid "Done saving"
+msgstr ""
+
+#: kicon.cpp:393
+msgid "There was an error saving:\n"
+msgstr "Во время сохранения произошла ошибка:\n"
+
+#: kresize.cpp:29
+msgid "Size:"
+msgstr "Размер:"
+
+#: kiconconfig.cpp:51 kresize.cpp:50
+msgid "&Ok"
+msgstr ""
+
+#: kiconconfig.cpp:55 kresize.cpp:55
+msgid "&Cancel"
+msgstr ""
+
+#: kresize.cpp:64
+#, fuzzy
+msgid "Select size:"
+msgstr "Выбрать область"
+
+#: knew.cpp:34
+msgid "Standard file"
+msgstr "Стандартный файл"
+
+#: knew.cpp:39
+msgid "Source file"
+msgstr "Исходный файл"
+
+#: knew.cpp:44
+msgid "Compressed file"
+msgstr "Пожатый файл"
+
+#: knew.cpp:49
+msgid "Standard folder"
+msgstr "Стандартная папка"
+
+#: knew.cpp:54
+msgid "Standard package"
+msgstr "Стандартный пакет"
+
+#: knew.cpp:59
+msgid "Mini folder"
+msgstr "Минипапка"
+
+#: knew.cpp:64
+msgid "Mini package"
+msgstr "Минипакет"
+
+#: knew.cpp:156 knew.cpp:258 knew.cpp:308
+msgid "Create from scratch"
+msgstr ""
+
+#: knew.cpp:158 knew.cpp:313
+msgid "Create from template"
+msgstr "Создать из шаблона"
+
+#: kiconconfig.cpp:116 knew.cpp:194
+msgid "Templates:"
+msgstr "Шаблоны:"
+
+#: knew.cpp:252
+msgid "Select icontype"
+msgstr "Выберите тип иконки"
+
+#: knew.cpp:263
+msgid "Create new icon"
+msgstr "Создать новую иконку"
+
+#: kiconeditslots.cpp:378
+msgid "Sorry - not implemented."
+msgstr "Извините - еще не реализовано."
+
+#: kiconeditslots.cpp:445 kiconeditslots.cpp:452
+#, c-format
+msgid "Colors: %u"
+msgstr "Цвета: %u"
+
+#: kiconconfig.cpp:27
+#, fuzzy
+msgid "Template"
+msgstr "Шаблоны:"
+
+#: kiconconfig.cpp:28
+msgid "Description:"
+msgstr ""
+
+#: kiconconfig.cpp:30
+#, fuzzy
+msgid "Path:"
+msgstr "Вставить"
+
+#: kiconconfig.cpp:60
+msgid "&Browse..."
+msgstr ""
+
+#: kiconconfig.cpp:131
+msgid "&Add"
+msgstr ""
+
+#: kiconconfig.cpp:138
+msgid "&Remove"
+msgstr ""
+
+#: kiconconfig.cpp:231
+msgid "Color or pixmap"
+msgstr ""
+
+#: kiconconfig.cpp:238
+msgid "Browse..."
+msgstr ""
+
+#: kiconconfig.cpp:312
+msgid "Keys"
+msgstr ""
+
+#: kiconconfig.cpp:317
+msgid "Configure keys"
+msgstr ""
+
+#: kiconconfig.cpp:324
+#, fuzzy
+msgid "Templates"
+msgstr "Шаблоны:"
+
+#: kiconconfig.cpp:329
+#, fuzzy
+msgid "Configure Icon templates"
+msgstr "Создать из шаблона"
+
+#: kiconconfig.cpp:336
+msgid "Appearance"
+msgstr ""
+
+#: kiconconfig.cpp:341
+msgid "Configure background"
+msgstr ""
+
+#~ msgid "&Quit"
+#~ msgstr "Выход"
+
+#~ msgid "Straight line"
+#~ msgstr "Странная линия"
+
+#~ msgid "Draw straight line"
+#~ msgstr "Рисовать перпендикуляр"
