@@ -1,3 +1,7 @@
+1998-12-05  Alex Zepeda  <garbanzo@hooked.net>
+
+	* README: Use a "new" style README.
+
 1998-11-13  Alex Zepeda  <garbanzo@hooked.net>
 
 	* Makefile.cvs (all): Use an updated Makefile.cvs from kdenetwork that
