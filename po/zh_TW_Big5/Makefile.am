@@ -1,9 +1,9 @@
 
 # This has to be set. The rest should be reusable
-GMFILES = kpaint.gmo kghostview.gmo kdvi.gmo
+GMFILES = kpaint.gmo kghostview.gmo 
 POFILES = $(GMFILES:.gmo=.po)
 
-LANG = de
+LANG = zh_TW_Big5
 
 localedir = $(kde_locale)
 
