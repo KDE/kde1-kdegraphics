@@ -121,7 +121,7 @@ msgstr "Voreinstellungen"
 
 #: interpreter.cpp:339
 msgid "gs"
-msgstr ""
+msgstr "gs"
 
 #: kghostview.cpp:191 kghostview.cpp:305 kghostview.cpp:361 kghostview.cpp:450
 msgid "View Control"
@@ -359,7 +359,7 @@ msgstr "Sk.100 von 100  S.100 von 100"
 #: kghostview.cpp:741
 #, c-format
 msgid "100 %"
-msgstr ""
+msgstr "100 %"
 
 #: kghostview.cpp:742
 msgid "Upside Down"
