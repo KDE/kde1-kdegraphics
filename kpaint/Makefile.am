@@ -19,6 +19,12 @@ kpaint_SOURCES = main.cpp app.cpp canvas.cpp kpaint.cpp manager.cpp \
 	spraycan.cpp rectangle.cpp pen.cpp areaselect.cpp depthdialog.cpp \
 	roundangle.cpp navwidget.cpp sidebar.cpp view.cpp
 
+noinst_HEADERS = QwViewport.h areaselect.h canvas.h canvassize.h circle.h \
+	depthdialog.h ellipse.h formatdialog.h formats.h gif.h infodialog.h \
+	jpeg.h kpaint.h kundo.h line.h main.h manager.h navwidget.h palette.h \
+	palettedialog.h pen.h properties.h rectangle.h roundangle.h sidebar.h \
+	spraycan.h tool.h version.h view.h
+
 DISTCLEANFILES = canvas.moc app.moc kpaint.moc manager.moc infodialog.moc \
 	depthdialog.moc properties.moc formatdialog.moc palette.moc \
 	palettedialog.moc QwViewport.moc tool.moc spraycan.moc circle.moc \
@@ -27,7 +33,9 @@ DISTCLEANFILES = canvas.moc app.moc kpaint.moc manager.moc infodialog.moc \
 
 bin_PROGRAMS = kpaint
 
-SUBDIRS = doc toolpics
+SUBDIRS = doc toolpics images
+
+EXTRA_DIST = $(apps_DATA) $(icon_DATA) mini-kpaint.xpm
 
 install-data-local: mini-kpaint.xpm
 	$(mkinstalldirs) $(kde_minidir)

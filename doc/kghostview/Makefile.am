@@ -7,3 +7,4 @@ index-5.html index-6.html logotp3.gif
 # you have given the datas in data_DATA
 datadir = $(kde_htmldir)/en/kghostview
 
+EXTRA_DIST = $(data_DATA)

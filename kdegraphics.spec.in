@@ -3,13 +3,13 @@
 Name: %{name}
 Summary: K Desktop Environment - Graphic Applications
 Version: %{version}
-Release: 2
-Source: ftp.kde.org:/pub/kde/stable/Beta4/distribution/tgz/source/%{name}-%{version}-1.src.tar.gz
+Release: 1
+Source: ftp.kde.org:/pub/kde/stable/1.0pre/distribution/tgz/source/%{name}-%{version}-1.src.tar.gz
 Group: X11/KDE/Graphics
 BuildRoot: /tmp/realhot_%{name}
 Copyright: GPL
 Requires: qt >= 1.33
-Packager: Preston Brown <pbrown@kde.org>
+Packager: Kalle Dalheimer <kalle@kde.org>
 Distribution: KDE
 Vendor: The KDE Team
 
@@ -28,7 +28,7 @@ kview: displays numerous graphic file formats
 %prep
 rm -rf $RPM_BUILD_ROOT
 
-%setup -n kdegraphics
+%setup -n kdegraphics-%{version}
 
 %build
 export KDEDIR=/opt/kde

@@ -37,7 +37,7 @@ kkeydialog.moc: kkeydialog.h
 kaccel.cpp:kaccel.moc
 kaccel.moc: kaccel.h
 	$(MOC) kaccel.h -o kaccel.moc
-	
+
 standard.cpp:standard.moc
 standard.moc: standard.h
 	$(MOC) standard.h -o standard.moc

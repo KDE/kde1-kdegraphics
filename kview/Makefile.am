@@ -35,6 +35,8 @@ lnk_DATA = kview.kdelnk
 icondir = $(kde_icondir)
 icon_DATA = kview.xpm
 
+EXTRA_DIST = $(lnk_DATA) $(icon_DATA) mini-kview.xpm
+
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) ./mini-kview.xpm $(kde_minidir)/kview.xpm

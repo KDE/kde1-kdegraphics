@@ -18,3 +18,5 @@ toolbar_DATA =	circle.xpm \
 
 toolbardir = $(kde_datadir)/kpaint/toolbar
 
+EXTRA_DIST = $(toolbar_DATA)
+

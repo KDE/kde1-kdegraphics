@@ -63,7 +63,6 @@ extern "C" {
 }
 
 #include "kkeydialog.h"
-#include "zoom.h"
 
 #include "kghostview.moc"
 #include "marklist.moc"
@@ -1329,25 +1328,6 @@ void KGhostview::zoomOut()
 
 void KGhostview::zoom()
 {
-	char temp_text[20];
-	
-	int magfac = (int)(100*page->xdpi/default_xdpi);
-	
-	Zoom z( &magfac );
-	z.setCaption( i18n( "Zoom" ) );
-	if( z.exec() ) {
-		page->disableInterpreter();
-		changed = True;
-		page->xdpi= default_xdpi*magfac/100.0;
-		page->ydpi= default_ydpi*magfac/100.0;
-		page->layout();
-		page->resize(page->width(), page->height());
-		page->repaint();
-		sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-		statusbar->changeItem( temp_text, ID_MAGSTEP );
-		show_page(current_page);
-		shrinkWrap();
-	}
 }
 
 void KGhostview::nextPage()

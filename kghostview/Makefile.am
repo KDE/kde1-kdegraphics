@@ -22,6 +22,8 @@ DISTCLEANFILES = marklist.moc copyright.moc interpreter.moc messages.moc \
 info.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc \
 zoom.moc
 
+EXTRA_DIST = kghostview.kdelnk kghostview.xpm mini-kghostview.xpm
+
 zoom.cpp:zoom.moc
 zoom.moc: zoom.h
 	$(MOC) zoom.h -o zoom.moc
@@ -41,39 +43,39 @@ kaccel.moc: kaccel.h
 marklist.cpp:marklist.moc
 marklist.moc: marklist.h
 	$(MOC) marklist.h -o marklist.moc
-	
+
 copyright.cpp:copyright.moc
 copyright.moc: copyright.h
 	$(MOC) copyright.h -o copyright.moc
-	
+
 interpreter.cpp:interpreter.moc
 interpreter.moc: interpreter.h
 	$(MOC) interpreter.h -o interpreter.moc
-	
+
 messages.cpp:messages.moc
 messages.moc: messages.h
 	$(MOC) messages.h -o messages.moc
-	
+
 info.cpp:info.moc
 info.moc: info.h
 	$(MOC) info.h -o info.moc
-	
+
 print.cpp:print.moc
 print.moc: print.h
 	$(MOC) print.h -o print.moc
-	
+
 goto.cpp:goto.moc
 goto.moc: goto.h
 	$(MOC) goto.h -o goto.moc
-	
+
 viewcontrol.cpp:viewcontrol.moc
 viewcontrol.moc: viewcontrol.h
 	$(MOC) viewcontrol.h -o viewcontrol.moc
-	
+
 kghostview.cpp:kghostview.moc
 kghostview.moc: kghostview.h
 	$(MOC) kghostview.h -o kghostview.moc
-	
+
 kpswidget.cpp:kpswidget.moc
 kpswidget.moc: kpswidget.h
 	$(MOC) kpswidget.h -o kpswidget.moc
