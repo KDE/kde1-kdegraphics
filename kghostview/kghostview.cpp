@@ -307,10 +307,14 @@ void KGhostview::writeSettings()
 	str2.setNum( height() );
 	config->writeEntry( "Height", str2 );
 
-	config->writeEntry( "Antialiasing", page->antialias ? "on" : "off" );
-	config->writeEntry( "Fit to window", fitWindow ? "yes" : "no" );
-	config->writeEntry( "Statusbar", hide_statusbar ? "off" : "on" );
-	config->writeEntry( "Toolbar", hide_toolbar ? "off" : "on" );
+	config->writeEntry( "Antialiasing", 
+						page->antialias ? QString( "on" ) : QString( "off" ) );
+	config->writeEntry( "Fit to window", 
+						fitWindow ? QString( "yes" ) : QString( "no" ) );
+	config->writeEntry( "Statusbar", 
+						hide_statusbar ? QString( "off" ) : QString( "on" ) );
+	config->writeEntry( "Toolbar", 
+						hide_toolbar ? QString( "off" ) : QString( "on" ) );
 
 	changed = FALSE;
 }
