@@ -7,6 +7,7 @@ TerminalOptions=
 Path=
 Terminal=0
 BinaryPattern=kview;
+DocPath=kview/index.html
 Comment=KDE Image Viewer
 [Binding]
 Protocols=file;http;ftp;

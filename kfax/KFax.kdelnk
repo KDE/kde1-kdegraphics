@@ -1,5 +1,6 @@
 # KDE Config File
 [KDE Desktop Entry]
+DocPath=kfax/index.html
 BinaryPattern=kfax;
 Protocols=file;ftp;http;tar;cgi;
 MimeType=image/fax-g3;
