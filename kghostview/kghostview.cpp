@@ -1423,9 +1423,9 @@ QString KGhostview::print_file(QString name, Bool whole_mode)
 		
 		//printf("Opening file\n");
 	
-		while ( (bytes = ::read( ::fileno(tmpfile), buf, BUFSIZ)) ) {
+		while ( (bytes = ::read( fileno(tmpfile), buf, BUFSIZ)) ) {
 			//printf("bytes written= %d\n", bytes);
-	   		bytes = ::write( ::fileno(printer), buf, bytes);
+	   		bytes = ::write( fileno(printer), buf, bytes);
 	   		//printf("bytes written= %d\n", bytes);
 	   	}
 		::fclose(tmpfile);
