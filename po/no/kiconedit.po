@@ -112,7 +112,7 @@ msgstr "&Endre størrelse"
 
 #: kiconedit.cpp:472
 msgid "&GrayScale"
-msgstr "&Gråskala"
+msgstr "&Gråtoner"
 
 #: kiconedit.cpp:477
 msgid "&Icon"
@@ -148,7 +148,7 @@ msgstr "Fylt elipse"
 
 #: kiconedit.cpp:488 kiconedit.cpp:687
 msgid "Spray"
-msgstr "Sprei"
+msgstr "Spray"
 
 #: kiconedit.cpp:489 kiconedit.cpp:689
 msgid "Flood fill"
@@ -240,7 +240,7 @@ msgstr "Endre størrelse"
 
 #: kiconedit.cpp:615
 msgid "GrayScale"
-msgstr "Gråskala"
+msgstr "Gråtoner"
 
 #: kiconedit.cpp:622
 msgid "Zoom out"
@@ -511,10 +511,10 @@ msgid ""
 "Gray scale the current icon.\n"
 "(Warning: The result is likely to contain colors not in the icon palette"
 msgstr ""
-"Gråskala\n"
+"Gråtoner\n"
 "\n"
-"Gjør gjeldende ikon om til gråskala.\n"
-"(Varsel: Resultatet vil trolig inneholde farger som ikke er i ikonpalettet"
+"Gjør gjeldende ikon om til gråtoner.\n"
+"(Advarsel: Resultatet vil trolig inneholde farger som ikke er i ikonpalettet"
 
 #: kiconedit.cpp:855
 msgid ""
@@ -689,7 +689,7 @@ msgid ""
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
-"Sprei\n"
+"Spray\n"
 "\n"
 "Tegn spredte punkter med gjeldende farge"
 
