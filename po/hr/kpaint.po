@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"POT-Creation-Date: 1998-05-07 18:22+0200\n"
 "PO-Revision-Date: 1998-04-29 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: iso-8859-2\n"
 
-#: app.cpp:40
+#: app.cpp:45
 msgid ""
 "\n"
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
@@ -21,27 +21,33 @@ msgstr ""
 "\n"
 "(c) Richard J. Moore 1997 Izdano pod GPL, pogledajte LICENSE za detalje\n"
 
-#: app.cpp:41
+#: app.cpp:46
 msgid "Usage: "
 msgstr "Uporaba:"
 
-#: app.cpp:43
+#: app.cpp:48
 msgid " [url | filename]\n"
 msgstr " [url | ime_datoteke ]\n"
 
-#: areaselect.cpp:20
+#: areaselect.cpp:17
 msgid "Area Selection"
 msgstr "Izbor podruèja"
 
-#: canvassize.cpp:12
-msgid "Width"
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Velièina canvasa"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
 msgstr "©irina"
 
-#: canvassize.cpp:13
-msgid "Height"
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
 msgstr "Visina"
 
-#: circle.cpp:20 kpaint.cpp:354
+#: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
 msgstr "Kru¾nica"
 
@@ -61,7 +67,7 @@ msgstr "8 (256 Boja)"
 msgid "24 (True Colour)"
 msgstr "24 (Istinska Boja)"
 
-#: ellipse.cpp:18 kpaint.cpp:353
+#: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
 msgstr "Elipsa"
 
@@ -85,155 +91,176 @@ msgstr "©irina slike:"
 msgid "Image Height:"
 msgstr "Visina slike:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Otka¾i"
-
-#: kpaint.cpp:44 kpaint.cpp:758
+#: kpaint.cpp:52 kpaint.cpp:603
 msgid "untitled.gif"
 msgstr "bezimen.gif"
 
-#: kpaint.cpp:117
+#: kpaint.cpp:124
 msgid "Unsaved Changes"
 msgstr "Nespremljene Promjene"
 
-#: kpaint.cpp:164
+#: kpaint.cpp:125
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
+
+#: kpaint.cpp:160
 msgid "New Canvas"
 msgstr "Novi canvas"
 
-#: kpaint.cpp:167
+#: kpaint.cpp:163
 msgid "Open File"
 msgstr "Otvori datoteku"
 
-#: kpaint.cpp:170
+#: kpaint.cpp:166
 msgid "Save File"
 msgstr "Spremi datoteku"
 
-#: kpaint.cpp:184 kpaint.cpp:338
+#: kpaint.cpp:180 kpaint.cpp:332
 msgid "Zoom In"
 msgstr "Uveæaj"
 
-#: kpaint.cpp:187 kpaint.cpp:339
+#: kpaint.cpp:183 kpaint.cpp:333
 msgid "Zoom Out"
 msgstr "Umanji"
 
-#: kpaint.cpp:318
+#: kpaint.cpp:312
 msgid "Open Image..."
 msgstr "Otvori sliku..."
 
-#: kpaint.cpp:319
+#: kpaint.cpp:313
 msgid "New Image..."
 msgstr "Nova slika..."
 
-#: kpaint.cpp:320
-msgid "Save Image..."
+#: kpaint.cpp:314
+#, fuzzy
+msgid "Save Image"
 msgstr "Spremi sliku..."
 
-#: kpaint.cpp:321
+#: kpaint.cpp:315
 msgid "Save Image As..."
 msgstr "Spremi sliku kao..."
 
-#: kpaint.cpp:322
+#: kpaint.cpp:316
 msgid "Image Format..."
 msgstr "Vrst slike..."
 
-#: kpaint.cpp:324
+#: kpaint.cpp:318
 msgid "Open from URL..."
 msgstr "Otvori iz URL..."
 
-#: kpaint.cpp:325
+#: kpaint.cpp:319
 msgid "Save to URL..."
 msgstr "Spremi na URL..."
 
-#: kpaint.cpp:327
+#: kpaint.cpp:321
 msgid "New Window"
 msgstr "Novi prozor"
 
-#: kpaint.cpp:328
+#: kpaint.cpp:322
 msgid "Close Window"
 msgstr "Zatvori prozor"
 
-#: kpaint.cpp:330
+#: kpaint.cpp:324
 msgid "Exit"
 msgstr "Izlaz"
 
-#: kpaint.cpp:333
+#: kpaint.cpp:327
 msgid "Copy Region"
 msgstr "Kopiraj podruèje"
 
-#: kpaint.cpp:334
+#: kpaint.cpp:328
 msgid "Cut Region"
 msgstr "Izre¾i podruèje"
 
-#: kpaint.cpp:335
+#: kpaint.cpp:329
 msgid "Paste Region"
 msgstr "Umetni podruèje"
 
-#: kpaint.cpp:336
+#: kpaint.cpp:330
 msgid "Paste As Image"
 msgstr "Umetni kao sliku"
 
-#: kpaint.cpp:340
+#: kpaint.cpp:334
 msgid "Mask..."
 msgstr "Maska..."
 
-#: kpaint.cpp:343
+#: kpaint.cpp:337
 msgid "Information..."
 msgstr "Informacije..."
 
-#: kpaint.cpp:344
+#: kpaint.cpp:338
+msgid "Resize..."
+msgstr ""
+
+#: kpaint.cpp:339
 msgid "Edit Palette..."
 msgstr "Uredi paletu..."
 
-#: kpaint.cpp:345
+#: kpaint.cpp:340
 msgid "Change Colour Depth..."
 msgstr "Promijeni dubinu boja..."
 
-#: kpaint.cpp:348
+#: kpaint.cpp:343
 msgid "Tool Properties..."
 msgstr "Pode¹avanja alata..."
 
-#: kpaint.cpp:350 pen.cpp:19
+#: kpaint.cpp:345 pen.cpp:17
 msgid "Pen"
 msgstr "Olovka"
 
-#: kpaint.cpp:351 line.cpp:22
+#: kpaint.cpp:346 line.cpp:19
 msgid "Line"
 msgstr "Crta"
 
-#: kpaint.cpp:352 rectangle.cpp:19
+#: kpaint.cpp:347 rectangle.cpp:17
 msgid "Rectangle"
 msgstr "Èetverokut"
 
-#: kpaint.cpp:355 spraycan.cpp:22
+#: kpaint.cpp:350 spraycan.cpp:19
 msgid "Spray Can"
 msgstr "Sprej"
 
-#: kpaint.cpp:356
+#: kpaint.cpp:351
 msgid "Area Select"
 msgstr "Izbor podruèja"
 
-#: kpaint.cpp:361
+#: kpaint.cpp:352
+msgid "Round Angle"
+msgstr ""
+
+#: kpaint.cpp:357
 msgid "Show Tools Toolbar"
 msgstr "Poka¾i Alate"
 
-#: kpaint.cpp:362
+#: kpaint.cpp:358
 msgid "Show Commands Toolbar"
 msgstr "Poka¾i traku sa naredbama"
 
-#: kpaint.cpp:363
+#: kpaint.cpp:359
 msgid "Show Status Bar"
 msgstr "Poka¾i traku sa statusom"
 
-#: kpaint.cpp:364
+#: kpaint.cpp:360
 msgid "Save Options"
 msgstr "Spremi Opcije"
 
-#: kpaint.cpp:382
+#: kpaint.cpp:369
+msgid "KPaint"
+msgstr ""
+
+#: kpaint.cpp:371
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+
+#: kpaint.cpp:380
 msgid "&Image"
 msgstr "&Slika"
 
-#: kpaint.cpp:383
+#: kpaint.cpp:381
 msgid "&Tool"
 msgstr "&Alati"
 
@@ -249,8 +276,7 @@ msgstr ""
 "Gre¹ka: Ne mogu otvoriti datoteku\n"
 "KPaint nije mogao otvoriti tra¾enu datoteku."
 
-#: kpaint.cpp:537 kpaint.cpp:547 kpaint.cpp:570 kpaint.cpp:585 kpaint.cpp:596
-#: kpaint.cpp:651 kpaint.cpp:682 kpaint.cpp:697 kpaint.cpp:708
+#: kpaint.cpp:537 kpaint.cpp:547
 msgid "Continue"
 msgstr "Nastavi"
 
@@ -268,63 +294,15 @@ msgstr ""
 "KPaint ne razumije vrstu zapisa zadane datoteke ili\n"
 "je ona o¹teæena."
 
-#: kpaint.cpp:566 kpaint.cpp:678
-msgid "KPaint: Malformed URL"
-msgstr "KPaint: Neispravan URL"
-
-#: kpaint.cpp:567 kpaint.cpp:679
-msgid ""
-"Error: Malformed URL\n"
-"KPaint does not understand the specifed URL, check it's correct."
-msgstr ""
-"Gre¹ka: Neispravan URL\n"
-"KPaint ne razumije navedeni URL, provjerite je li ispravan."
-
-#: kpaint.cpp:583 kpaint.cpp:695
-msgid ""
-"KPaint is already accessing a remote file, you must\n"
-"cancel the current remote job or wait for it to complete."
-msgstr ""
-"KPaint veæ pristupa udaljenoj datoteci, morate\n"
-"otkazati trenutni posao ili èekati da zavr¹i."
-
-#: kpaint.cpp:594
-msgid "KPaint: Could not find KFM"
-msgstr "KPaint: Ne mogu naæi KFM"
-
-#: kpaint.cpp:595 kpaint.cpp:707
-msgid "Error: KPaint could not find a running KFM or start one itself."
-msgstr "Gre¹ka: KPaint ne mo¾e naæi pokrenut KFM ili ga startati."
-
-#: kpaint.cpp:647
-msgid "KPaint: Network Load Failed"
-msgstr "KPaint: Uèitavanje preko mre¾e nije uspjelo"
-
-#: kpaint.cpp:648
-msgid ""
-"Error: Netword Load Failed\n"
-"Something went wrong :-("
-msgstr ""
-"Gre¹ka: Uèitavanje preko mre¾e nije uspjelo\n"
-"Ne¹to je po¹lo lo¹e :-("
-
-#: kpaint.cpp:706
-msgid "KPaint: Could not start KFM"
-msgstr "KPaint: Ne mogu pokrenuti KFM"
-
-#: kpaint.cpp:734
-msgid "Canvas Size"
-msgstr "Velièina canvasa"
-
-#: kpaint.cpp:901
+#: kpaint.cpp:745
 msgid "Open Location:"
 msgstr "Otvori lokaciju:"
 
-#: kpaint.cpp:933
+#: kpaint.cpp:769
 msgid "Save to Location:"
 msgstr "Spremi na lokaciju:"
 
-#: manager.cpp:61
+#: manager.cpp:69
 msgid "Tool Properties"
 msgstr "Pode¹avanja alata"
 
@@ -332,98 +310,142 @@ msgstr "Pode¹avanja alata"
 msgid "Edit Colour"
 msgstr "Uredi boju"
 
-#: properties.cpp:20
+#: properties.cpp:21
 msgid "Line Properties"
 msgstr "Pode¹avanja linije"
 
-#: properties.cpp:22
+#: properties.cpp:23
 msgid "Fill Properties"
 msgstr "Pode¹avanja ispunjenja"
 
-#: properties.cpp:68
+#: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Uzorak ispunjenja"
 
-#: properties.cpp:74 properties.cpp:240
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
 msgstr "Ni¹ta"
 
-#: properties.cpp:75 properties.cpp:235
+#: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
 msgstr "Jednoliko"
 
-#: properties.cpp:76
+#: properties.cpp:78 properties.cpp:132
 msgid "Vertical Lines"
 msgstr "Okomite crte"
 
-#: properties.cpp:77
+#: properties.cpp:79 properties.cpp:133
 msgid "Horizontal Lines"
 msgstr "Vodoraven crte"
 
-#: properties.cpp:78
+#: properties.cpp:80 properties.cpp:134
 msgid "Grid"
 msgstr "Mre¾a"
 
-#: properties.cpp:79
+#: properties.cpp:81 properties.cpp:135
 msgid "Diagonal Lines //"
 msgstr "Dijagonalne crte //"
 
-#: properties.cpp:80
+#: properties.cpp:82 properties.cpp:136
 msgid "Diagonal Lines \\"
 msgstr "Dijagonalne crte \\"
 
-#: properties.cpp:81
+#: properties.cpp:83 properties.cpp:137
 msgid "Diagonal Grid"
 msgstr "Dijagonalna mre¾a"
 
-#: properties.cpp:91
+#: properties.cpp:93
 msgid "Custom"
 msgstr "Posebno"
 
-#: properties.cpp:94
+#: properties.cpp:96 properties.cpp:149
 msgid "Pattern Filename:"
 msgstr "Naziv uzorka:"
 
-#: properties.cpp:104
+#: properties.cpp:106
 msgid "Set Fill Colour..."
 msgstr "Postavi boju ispunjenja..."
 
-#: properties.cpp:230
+#: properties.cpp:283 properties.cpp:344
 msgid "Line Style:"
 msgstr "Stil crte:"
 
-#: properties.cpp:236
+#: properties.cpp:289 properties.cpp:349
 msgid "Dashed"
 msgstr "Crtice"
 
-#: properties.cpp:237
+#: properties.cpp:290 properties.cpp:350
 msgid "Dotted"
 msgstr "Toèkice"
 
-#: properties.cpp:238
+#: properties.cpp:291 properties.cpp:351
 msgid "Dash Dot"
 msgstr "Crtica, toèka"
 
-#: properties.cpp:239
+#: properties.cpp:292 properties.cpp:352
 msgid "Dash Dot Dot"
 msgstr "Crtica, toèka, toèka"
 
-#: properties.cpp:244
+#: properties.cpp:297 properties.cpp:356
 msgid "Line Width:"
 msgstr "Debljina crte:"
 
-#: properties.cpp:254
+#: properties.cpp:307 properties.cpp:366
 msgid "End style:"
 msgstr "Izgled zavr¹etka:"
 
-#: properties.cpp:259 properties.cpp:272
+#: properties.cpp:312 properties.cpp:325 properties.cpp:370 properties.cpp:377
 msgid "Not Yet"
 msgstr "Jo¹ ne"
 
-#: properties.cpp:266
+#: properties.cpp:319 properties.cpp:373
 msgid "Join style:"
 msgstr "Izgled spoja:"
 
-#: properties.cpp:278
+#: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Postavi boju crte..."
+
+#: roundangle.cpp:19
+#, fuzzy
+msgid "Roundangle"
+msgstr "Èetverokut"
+
+#~ msgid "Dismiss"
+#~ msgstr "Otka¾i"
+
+#~ msgid "KPaint: Malformed URL"
+#~ msgstr "KPaint: Neispravan URL"
+
+#~ msgid ""
+#~ "Error: Malformed URL\n"
+#~ "KPaint does not understand the specifed URL, check it's correct."
+#~ msgstr ""
+#~ "Gre¹ka: Neispravan URL\n"
+#~ "KPaint ne razumije navedeni URL, provjerite je li ispravan."
+
+#~ msgid ""
+#~ "KPaint is already accessing a remote file, you must\n"
+#~ "cancel the current remote job or wait for it to complete."
+#~ msgstr ""
+#~ "KPaint veæ pristupa udaljenoj datoteci, morate\n"
+#~ "otkazati trenutni posao ili èekati da zavr¹i."
+
+#~ msgid "KPaint: Could not find KFM"
+#~ msgstr "KPaint: Ne mogu naæi KFM"
+
+#~ msgid "Error: KPaint could not find a running KFM or start one itself."
+#~ msgstr "Gre¹ka: KPaint ne mo¾e naæi pokrenut KFM ili ga startati."
+
+#~ msgid "KPaint: Network Load Failed"
+#~ msgstr "KPaint: Uèitavanje preko mre¾e nije uspjelo"
+
+#~ msgid ""
+#~ "Error: Netword Load Failed\n"
+#~ "Something went wrong :-("
+#~ msgstr ""
+#~ "Gre¹ka: Uèitavanje preko mre¾e nije uspjelo\n"
+#~ "Ne¹to je po¹lo lo¹e :-("
+
+#~ msgid "KPaint: Could not start KFM"
+#~ msgstr "KPaint: Ne mogu pokrenuti KFM"
