@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-04-09 18:29+0200\n"
-"PO-Revision-Date: 1998-03-12 13:45 MET\n"
+"PO-Revision-Date: 1998-04-17 15:42 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,21 +47,20 @@ msgid "Circle"
 msgstr "Kruh"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "©íøka obrázku:"
+msgstr "Barevná hloubka obrázku:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (bitmapa)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 barev)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (pravé barvy)"
 
 #: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
@@ -216,14 +215,12 @@ msgid "Area Select"
 msgstr "Výbìr oblasti"
 
 #: kpaint.cpp:361
-#, fuzzy
 msgid "Show Tools Toolbar"
-msgstr "Zobrazovat nástrojovou li¹tu"
+msgstr "Zobrazovat li¹tu nástrojù"
 
 #: kpaint.cpp:362
-#, fuzzy
 msgid "Show Commands Toolbar"
-msgstr "Zobrazovat nástrojovou li¹tu"
+msgstr "Zobrazovat li¹tu pøíkazù"
 
 #: kpaint.cpp:363
 msgid "Show Status Bar"
@@ -263,14 +260,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Neznámý formát"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Chyba: Neznámý formát\n"
-"KPAint nerozumí formátu specifikovaného souboru ne soubor je naru¹ený."
+"KPAint nerozumí formátu specifikovaného souboru\n"
+"nebo je  soubor naru¹ený."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -404,11 +401,11 @@ msgstr "Teèkovaná"
 
 #: properties.cpp:238
 msgid "Dash Dot"
-msgstr ""
+msgstr "Èárka teèka"
 
 #: properties.cpp:239
 msgid "Dash Dot Dot"
-msgstr ""
+msgstr "Èárka teèka teèka"
 
 #: properties.cpp:244
 msgid "Line Width:"
@@ -429,6 +426,3 @@ msgstr "Nastav barvu èáry..."
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Nastav barvu èáry ..."
-
-#~ msgid "About..."
-#~ msgstr "Informace ..."

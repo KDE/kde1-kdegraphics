@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-04-09 18:29+0200\n"
-"PO-Revision-Date: 1998-03-28 23:16 MET\n"
+"PO-Revision-Date: 1998-04-17 15:39 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -213,9 +213,8 @@ msgid "Prior"
 msgstr ""
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
-msgstr "Následující strana"
+msgstr ""
 
 #: kaccel.cpp:234
 msgid "F1"
@@ -283,7 +282,7 @@ msgstr "&Otevøít ..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "Otevøít ne&dávný"
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -302,9 +301,8 @@ msgid "&View control ..."
 msgstr "&Nastavení zobrazení ..."
 
 #: kghostview.cpp:511
-#, fuzzy
 msgid "&Fit to page width"
-msgstr "&Jdi na stranu ..."
+msgstr "&Pøizpùsobit ¹íøce stránky"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -551,7 +549,7 @@ msgstr ""
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "Chyba tisku"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -621,34 +619,30 @@ msgid "Sc.%d "
 msgstr "Odd.%d "
 
 #: kkeydialog.cpp:308
-#, fuzzy
 msgid "Current key"
-msgstr "&Aktuální"
+msgstr "Aktuální klávesa"
 
 #: kkeydialog.cpp:319
-#, fuzzy
 msgid "&Action"
-msgstr "&Oddíl"
+msgstr "&Akce"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "®ád&ná klávesa"
 
 #: kkeydialog.cpp:386
-#, fuzzy
 msgid "&Default key"
-msgstr "Impli&citní"
+msgstr "Impli&citní klávesa"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "&Vlastní kláveka"
 
 #: main.cpp:25
 msgid "Usage: "
 msgstr "Pou¾ití: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
@@ -666,7 +660,7 @@ msgstr ""
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Chyba na pøíkazové øádce"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -795,53 +789,3 @@ msgstr "&orientace"
 #: viewcontrol.cpp:111
 msgid "&Apply"
 msgstr "&Aplikovat"
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr "&Stáhnout okraje"
-
-#~ msgid "Printing error"
-#~ msgstr "Chyba tisku"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid "Command line error"
-#~ msgstr "Chyba pøíkazové øádky"
-
-#~ msgid ""
-#~ "The document named\n"
-#~ "%s\n"
-#~ "could not be opened.\n"
-#~ "No document has been loaded.\n"
-#~ "\n"
-#~ "Error: %s"
-#~ msgstr ""
-#~ "Není mo¾né otevøít dokument\n"
-#~ "%s.\n"
-#~ "®ádný dokument nebyl nahrán.\n"
-#~ "\n"
-#~ "Chyba: %s"
-
-#~ msgid "Open file error"
-#~ msgstr "Chyba pøi otevírání souboru"
