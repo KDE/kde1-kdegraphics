@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KSNAPSHOT\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "valokuva"
+
+#: ksnapshot.cpp:93
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+"Paina `Kaappaa' nappia, ja napsauta ikkunaa\n"
+"kaapataksesi siit‰ kuvan.\n"
+"\n"
+"KSnapshot copyright Richard Moore (rich@kde.org)\n"
+"julkaistu LGPL lisenssin alla\n"
+"\n"
+"Versio: "
+
+#: ksnapshot.cpp:127
+msgid "Filename:"
+msgstr "Tiedostonimi:"
+
+#: ksnapshot.cpp:159
+msgid "Delay:"
+msgstr "Viive:"
+
+#: ksnapshot.cpp:168
+msgid "seconds."
+msgstr "sekuntia."
+
+#: ksnapshot.cpp:188
+msgid "Auto raise"
+msgstr "Automaattinosta"
+
+#: ksnapshot.cpp:189
+msgid "Hide KSnapshot window"
+msgstr "Piilota KSnapshot -ikkuna"
+
+#: ksnapshot.cpp:191
+msgid "Only grab the window containing the cursor"
+msgstr "Kaappa vain ikkuna jossa osoitin on"
+
+#: ksnapshot.cpp:222
+msgid "Grab"
+msgstr "Kaappaa"
+
+#: ksnapshot.cpp:452
+msgid "Error: Unable to save image"
+msgstr "Virhe: Kuvan tallennus ei onnistunut"
+
+#: ksnapshot.cpp:453
+msgid "Dismiss"
+msgstr "Hylk‰‰"
+
+#: ksnapshot.cpp:457
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot ei saanut tallennettua kuvaa\n"
+"%s."
+
+#: ksnapshot.cpp:467
+msgid "KSnapshot preview"
+msgstr "KSnapshot esikatselu"
