@@ -11,3 +11,5 @@ inst-apps
 libtool
 stamp-h
 stamp-h.in
+automoc
+perlbin
