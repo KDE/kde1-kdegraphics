@@ -38,38 +38,32 @@ msgid "Image Depth:"
 msgstr "Nombre de plans de couleurs :"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 couleurs)"
+msgstr "1 (2 couleurs)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 couleurs)"
+msgstr "4 (16 couleurs)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 couleurs)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 couleurs)"
+msgstr "15 (32k couleurs)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 couleurs)"
+msgstr "16 (64k couleurs)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (couleurs réelles)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (couleurs réelles)"
+msgstr "32 (couleurs réelles)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -232,15 +226,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " version "
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -297,7 +287,7 @@ msgstr "Bombe"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: manager.cpp:81
 msgid "Area Select"
