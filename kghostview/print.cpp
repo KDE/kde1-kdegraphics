@@ -34,10 +34,6 @@ PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
 	setFocusPolicy(QWidget::StrongFocus);
 	setCaption( i18n( "Printer setup" ) );
 	
-	printerName = pname;
-	spoolerCommand = spooler;
-	printerVariable = variable;
-	
 	int border = 10;
 	
 	QBoxLayout *topLayout = new QVBoxLayout( this, border );

@@ -22,10 +22,6 @@ public:
 	QLineEdit* leSpool;
 	QLineEdit* leVar;
 	
-	QString printerName;
-	QString printerVariable;
-	QString spoolerCommand;
-	
 };
 
 class PrintDialog : public QDialog {
