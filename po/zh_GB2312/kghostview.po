@@ -1,0 +1,247 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkpanel\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"PO-Revision-Date: 1998-02-21 05:04+0800\n"
+"Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
+"Language-Team: zh_CN ( gb2312 )\n"
+
+msgid "&About this application"
+msgstr "有关这个应用程序[&A]"
+
+msgid "&Copyright"
+msgstr "版权[&C]"
+
+msgid "&Go"
+msgstr "跳至[&G]"
+
+msgid "&Go to page ..."
+msgstr "跳至页...[&G]"
+
+msgid "&Grayscale"
+msgstr "灰度[&G]"
+
+msgid "&Help for this application"
+msgstr "这个应用程序的帮助[&H]"
+
+msgid "&Info ..."
+msgstr "信息[&I] ..."
+
+msgid "&Next page"
+msgstr "下一页[&N]"
+
+msgid "&Open ..."
+msgstr "打开[&O] ..."
+
+msgid "&Pagemarks"
+msgstr "页标记[&P]"
+
+msgid "&Previous Page"
+msgstr "前一页[&P]"
+
+msgid "&Print ..."
+msgstr "打印[&P] ..."
+
+msgid "&Read down"
+msgstr "往下读[&R]"
+
+msgid "&Redisplay"
+msgstr "重绘[&R]"
+
+msgid "&Remove page marks"
+msgstr "去除页标记[&R]"
+
+msgid "&Save options"
+msgstr "保存选项[&S]"
+
+msgid "&Toggle page marks"
+msgstr "切换页标记[&T]"
+
+msgid "&View control ..."
+msgstr "视图控制[&V] ..."
+
+msgid "About kghostview"
+msgstr "关于 kghostview"
+
+msgid "Change view ..."
+msgstr "改变视图 ..."
+
+msgid "Configure &interpreter ..."
+msgstr "配置解释器[&I] ..."
+
+msgid "Configure &key bindings ..."
+msgstr "配置按键关联[&K] ..."
+
+msgid "Configure interpreter"
+msgstr "配置解释器"
+
+msgid "Copyright"
+msgstr "版权宣告"
+
+msgid "Could not start or find KFM."
+msgstr "无法运行或找不到 KFM."
+
+msgid "General"
+msgstr "一般"
+
+msgid "Ghostscript messages"
+msgstr "Ghostscipt 消息"
+
+msgid "Go To Page"
+msgstr "跳至页数"
+
+msgid "Go back"
+msgstr "往后"
+
+msgid "Go forward"
+msgstr "往前"
+
+msgid "Go to &end"
+msgstr "跳至最后[&E]"
+
+msgid "Go to &start"
+msgstr "跳至开头[&S]"
+
+msgid "Go to ..."
+msgstr "跳至 ..."
+
+msgid "Go to end"
+msgstr "跳至最后"
+
+msgid "Go to page ..."
+msgstr "跳至...页"
+
+msgid "Go to start"
+msgstr "跳至开头"
+
+msgid "Hide Ghostscript messages"
+msgstr "隐藏 Ghostscript 讯息"
+
+msgid "Home"
+msgstr "回到起点"
+
+msgid "Malformed URL."
+msgstr "不正确的 URL"
+
+msgid "Mark &all pages"
+msgstr "标记全部页[&A]"
+
+msgid "Mark &current page"
+msgstr "标记当前页[&C]"
+
+msgid "Mark &even pages"
+msgstr "标记偶数页[&E]"
+
+msgid "Mark &odd pages"
+msgstr "标记奇数页[&O]"
+
+msgid "Mark all pages"
+msgstr "标记全部页"
+
+msgid "Mark current page"
+msgstr "标记当前页"
+
+msgid "Mark even pages"
+msgstr "标记偶数页"
+
+msgid "Mark odd pages"
+msgstr "标记奇数页"
+
+msgid "Next Page"
+msgstr "下一页"
+
+msgid "P.%d "
+msgstr "页数.%d "
+
+msgid "P.1 "
+msgstr "页数.1 "
+
+msgid "Pages"
+msgstr "页"
+
+msgid "Palette"
+msgstr "调色板"
+
+msgid "Prev Page"
+msgstr "前一页"
+
+msgid "Print"
+msgstr "打印"
+
+msgid "Read down the page"
+msgstr "此页往下读"
+
+msgid "Redisplay"
+msgstr "重绘"
+
+msgid "Remove page marks"
+msgstr "去除页标记"
+
+msgid "Sc.%d "
+msgstr "章节.%d "
+
+msgid "Sc.1 "
+msgstr "章节.1 "
+
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "章节: 100 of 100  页数:100 of 100"
+
+msgid "Scroll Down"
+msgstr "往下卷动"
+
+msgid "Scroll Left"
+msgstr "往左卷动"
+
+msgid "Scroll Right"
+msgstr "往右卷动"
+
+msgid "Scroll Up"
+msgstr "往上卷动"
+
+msgid "Show &page list"
+msgstr "显示页列表[&P]"
+
+msgid "Show &tool bar"
+msgstr "显示工具条[&T]"
+
+msgid "Show Ghostscript messages"
+msgstr "显示 Ghostscript 消息"
+
+msgid "Show st&atus bar"
+msgstr "显示状态行[&A]"
+
+msgid "Sorry, not ready yet"
+msgstr "抱歉, 尚未准备好"
+
+msgid "Toggle page marks"
+msgstr "切换页标记"
+
+msgid "Turn antialiasing off"
+msgstr "关闭平滑功能"
+
+msgid "Turn antialiasing on"
+msgstr "打开平滑功能"
+
+msgid "Usage: "
+msgstr "用法: "
+
+msgid "Version 0.6"
+msgstr "版本: 0.6"
+
+msgid "View Control"
+msgstr "视图控制"
+
+msgid "Zoom &in"
+msgstr "放大[&I]"
+
+msgid "Zoom &out"
+msgstr "缩小[&O]"
+
+msgid "Zoom In"
+msgstr "放大"
+
+msgid "Zoom Out"
+msgstr "缩小"
+
+msgid "gs"
+msgstr "gs"
