@@ -118,7 +118,7 @@ int main( int argc, char **argv )
 					QString s;
 					s.sprintf( i18n("The document named\n%s\n"\
 							"could not be opened.\n"\
-							"No document has been loaded.\n\n%s" ),
+							"No document has been loaded.\n\nError: %s" ),
 						   argv[1], strerror(errno) );
 
 					/* Stephan: this is highly unportable 

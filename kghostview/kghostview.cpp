@@ -1684,8 +1684,8 @@ QString KGhostview::printToFile( bool allMode, QStrList *ml )
 	}
 	
     if ( ( pswrite = fopen( s.data(), "w" ) ) == 0L ) {
-		QString buf( "Attempt to open file for writing failed.\n" );
-		if (errno <= sys_nerr) buf.append( sys_errlist[errno] );
+		QString buf;
+		buf.sprintf( "Attempt to open file for writing failed.\n%s", strerror(errno));
 		return buf;
     } else {
 		psCopyDoc( pswrite, ml );
@@ -1894,17 +1894,14 @@ void KGhostview::openFile( QString name )
     
 		if ( ( fp = fopen(name, "r") ) == 0 ) {
 	    	
-	    	QString s;
-			s.sprintf( "The document \n%s\ncould not be opened.\n"\
-						"No document has been loaded.\n\n", name.data() );
-			if (errno <= sys_nerr) {
-				s.append( "Error:\n" );
-				s.append( sys_errlist[errno] );
-			}
- 			
-			QMessageBox::warning(0, "File open error", s );
-	    	return ;
-	    	
+		    QString s;
+		    s.sprintf( "The document \n%s\ncould not be opened.\n"\
+			       "No document has been loaded.\n\n"
+			       "Error:%s", name.data(), strerror(errno) );
+		    
+		    QMessageBox::warning(0, "File open error", s );
+		    return ;
+		    
 		} else {
 
 	    	oldfilename.sprintf( filename.data() );
