@@ -91,7 +91,7 @@ void KColorGrid::show()
 */
 void KColorGrid::paintEvent(QPaintEvent *e)
 {
-  debug("KColorGrid::paintEvent");
+  //debug("KColorGrid::paintEvent");
 
   //updateScrollBars();
   //QWidget::paintEvent(e);
@@ -116,7 +116,7 @@ void KColorGrid::paintEvent(QPaintEvent *e)
   lastrow = (lastrow >= rows) ? rows : lastrow;
   lastcol = (lastcol >= cols) ? cols : lastcol;
   //debug("%d x %d  -  row: %d x %d", urect.x(), urect.y(), urect.width(), urect.height());
-  //debug("col: %d -> %d  -  row: %d -> %d", firstcol, lastcol, firstrow, lastrow);
+  debug("col: %d -> %d  -  row: %d -> %d", firstcol, lastcol, firstrow, lastrow);
 
 /*
   if(this->isA("KDrawGrid"))
@@ -279,7 +279,8 @@ void KColorGrid::setColor( int colNum, uint col, bool update )
   }
 
   //debug("KColorGrid::setColor - before updateCell");
-  updateCell( colNum/numCols(), colNum%numCols(), false );
+  repaint((colNum%numCols())*cellsize,(colNum/numCols())*cellsize,  cellsize, cellsize);
+  //updateCell( colNum/numCols(), colNum%numCols(), false );
   //debug("KColorGrid::setColor - after updateCell");
 }
 

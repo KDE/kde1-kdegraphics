@@ -20,6 +20,8 @@
 
 #include <qdragobject.h>
 #include <qstrlist.h>
+#include <qprintdialog.h>
+#include <qpaintdevicemetrics.h>
 #include "debug.h"
 #include "kiconedit.h"
 #include "pics/logo.xpm"
@@ -167,13 +169,20 @@ void KIconEdit::slotPrint()
 {
   file->setItemEnabled(ID_FILE_PRINT, false);
   toolbar->setItemEnabled(ID_FILE_PRINT, false);
-  QPrinter prt;
-  if ( prt.setup(this) )
+
+  if ( QPrintDialog::getPrinterSetup(printer) )
   {
-    prt.setCreator("KDE Draw");
+    int margin = 10, yPos = 0;
+    printer->setCreator("KDE Icon Editor");
     QPainter p;
-    p.begin( &prt );
-    p.drawPixmap( 0,0, grid->pixmap() );
+    QFontMetrics fm = p.fontMetrics();
+    p.begin( printer );
+    QPaintDeviceMetrics metrics( printer ); // need width/height
+
+    p.drawText( margin, margin + yPos, metrics.width(), fm.lineSpacing(),
+                        ExpandTabs | DontClip, icon->url().data() );
+    yPos = yPos + fm.lineSpacing();
+    p.drawPixmap( margin, margin + yPos, grid->pixmap() );
     p.end();
   }
   file->setItemEnabled(ID_FILE_PRINT, true);

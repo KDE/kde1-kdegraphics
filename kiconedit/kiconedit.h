@@ -213,6 +213,7 @@ protected:
   KIconEditProperties *kiprops;
   QWhatsThis *what;
   QImage img;
+  QPrinter *printer;
 };
 
 

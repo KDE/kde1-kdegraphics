@@ -163,6 +163,7 @@ protected slots:
   void checkClipboard();
 
 protected:
+  virtual void paintEvent(QPaintEvent*);
   virtual void paintCell( QPainter*, int, int );
   //virtual void resizeEvent(QResizeEvent*);
   virtual void mousePressEvent(QMouseEvent*);

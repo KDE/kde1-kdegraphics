@@ -48,6 +48,9 @@ void KIconEdit::init()
   initMetaObject();
   setCaption(kapp->getCaption());
 
+  printer = new QPrinter;
+  CHECK_PTR(printer);
+
   if(!windowList)
   {
     debug("KIconEdit::KIconEdit() Globalizing windowlist");
@@ -90,7 +93,7 @@ void KIconEdit::init()
   icon = new KIcon(this, &grid->image());
   CHECK_PTR(icon);
 
-  dropzone = new KDNDDropZone( gridview, DndURL);
+  dropzone = new KDNDDropZone( grid, DndURL);
   CHECK_PTR(dropzone);
   connect( dropzone, SIGNAL( dropAction( KDNDDropZone *) ), 
     this, SLOT( slotDropEvent( KDNDDropZone *) ) );
@@ -190,6 +193,8 @@ KIconEdit::~KIconEdit()
       delete newicon;
     newicon = 0L; 
 */
+    if(printer)
+      delete printer;
     if(what)
       delete what;
     what = 0L;
