@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1999-01-16 15:30+0200\n"
+"PO-Revision-Date: 1999-01-29 22:30+0200\n"
 "Last-Translator: Francois-Xavier DURANCEAU "
 "<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
@@ -40,6 +40,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 #: kfax.cpp:402
 msgid "Help page"
@@ -147,19 +153,19 @@ msgstr "Aller à la page ..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "l: 00000 h: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Rés: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Type: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "P:XXXsurXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -226,6 +232,9 @@ msgid ""
 "for an internet job to finish\n"
 "Please wait until has finished\n"
 msgstr ""
+"KEdit attend déjà la fin d'une tâche\n"
+"utilisant la connexion Internet.\n"
+"Veuillez attendre la fin de cette tâche\n"
 
 #: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
@@ -263,17 +272,17 @@ msgstr "Vous devez d'abord ouvrir une page de fax."
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "P.%d sur %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "L: %d H: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Rés: %s"
 
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
@@ -285,11 +294,11 @@ msgstr "Normal"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Type: Tiff "
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Type: Raw "
 
 #: kfax.cpp:2738
 msgid ""
@@ -311,7 +320,7 @@ msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
-msgstr ""
+msgstr "KFax - Impression"
 
 #: print.cpp:57
 msgid "Print as Postscript to Printer"
@@ -368,15 +377,15 @@ msgstr ""
 
 #: options.cpp:54
 msgid "KFax Options Dialog"
-msgstr ""
+msgstr "Options de KFax"
 
 #: options.cpp:64
 msgid "Raw Fax Resolution:"
-msgstr ""
+msgstr "Résolution Fax Raw :"
 
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 #: options.cpp:81
 msgid "Display Options:"
@@ -388,7 +397,7 @@ msgstr "Paysage"
 
 #: options.cpp:89
 msgid "Upside Down"
-msgstr ""
+msgstr "Tête en bas"
 
 #: options.cpp:93
 msgid "Invert"
@@ -408,7 +417,7 @@ msgstr ""
 
 #: options.cpp:135
 msgid "Raw Fax width:"
-msgstr "Raw Fax largeur :"
+msgstr "Fax Raw largeur :"
 
 #: options.cpp:142
 msgid "height:"
