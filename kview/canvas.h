@@ -46,7 +46,7 @@ public:
 	/**
 	*
 	*/
-	int save( const char *URL, const char *format=0 ) const;
+	bool save( const char *URL, const char *format=0 );
 
 	/**
 	* Resets the image to as loaded.
@@ -76,6 +76,8 @@ public:
 	void maxpectToDesktop() const;
 
 	QImage getImage() const;
+
+	QString url() const;
 
 public slots:
 	void setImage( const QImage& );
@@ -115,6 +117,11 @@ private:
 inline void KImageCanvas::setStatus( Error e )
 {
 	_status = e;
+}
+
+inline QString KImageCanvas::url() const
+{
+	return _file;
 }
 
 #endif // SSK_CANVAS_H

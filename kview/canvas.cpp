@@ -87,10 +87,17 @@ int KImageCanvas::load( const char *file, const char *URL )
 	return 0;
 }
 
-int KImageCanvas::save( const char *, const char *) const
+bool KImageCanvas::save( const char *urls, const char *format )
 {
-	//TODO: stub
-	return 0;
+	if( urls == 0 ) {
+		warning( "KImageCanvas::save called with null url" );
+	}
+
+	if( format == 0 ) {
+		format = "BMP";
+	}
+
+	return _client->pixmap()->save( urls, format );
 }
 
 void KImageCanvas::reset()

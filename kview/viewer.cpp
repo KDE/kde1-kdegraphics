@@ -159,7 +159,35 @@ void KImageViewer::load()
 
 void KImageViewer::saveAs()
 {
-	//TODO: stub
+	KFileDialog dlg( "", 0, 0, 0, true, false );
+	QString urls = dlg.getSaveFileURL();
+
+
+	if ( urls.length() <= 0 ) {
+		return;
+	}
+
+	KURL url( urls );
+	bool stat = false;
+
+	if( url.isMalformed() ) {
+		stat = _canvas->save( urls );
+	}
+	else if( url.isLocalFile() ) {
+		stat = _canvas->save( url.path() );
+	}
+	else {
+		message( i18n("Net saving not yet implemented") );
+	}
+
+	if( stat == false ) {
+		return;
+	}
+
+	QString msg = urls;
+	msg += ": ";
+	msg += i18n( "written" );
+	message( msg );
 }
 
 void KImageViewer::zoomIn10()

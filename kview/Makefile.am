@@ -1,5 +1,7 @@
 SUBDIRS = kimgio layout doc
 bin_PROGRAMS= kview
+LIBJPEG=@LIBJPEG@
+LIBTIFF=@LIBTIFF@
 
 #CORBA_SRC = kmicoapp.h kmicoapp.cpp
 CORBA_SRC=
@@ -23,7 +25,8 @@ EXTRA_DIST = $(lnk_DATA)
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = kimgio/libkimgio.a layout/liblayout.a \
-	-lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 -ljpeg -lm
+	-lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 \
+		$(LIBJPEG) $(LIBTIFF) -lm
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
