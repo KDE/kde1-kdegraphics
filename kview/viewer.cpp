@@ -667,8 +667,8 @@ void KImageViewer::loadFile( const char *file, const char *url )
 
 	if( _canvas->status() != KImageCanvas::OK ) {
 
-		QString msg = "Couldn't load ";
-		msg += url;
+		QString msg;
+		msg.sprintf(i18n("Couldn't load %s"), url);
 		message( msg );
 	}
 	else {
