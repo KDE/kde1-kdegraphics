@@ -1,7 +1,7 @@
 # $Id$
 
 LDFLAGS	=	$(all_libraries) $(KDE_RPATH)
-LDADD   =       -lkfile -lkfm       ./libtiffax/libtif.a  -lm $(LIB_KDEUI) 
+LDADD   =               ./libtiffax/libtif.a  -lm $(LIB_KFILE) 
 INCLUDES=	-I./libtiffax $(all_includes)
 
 ####### Files

@@ -12,7 +12,7 @@ kpswidget.cpp ps.c  zoom.cpp
 noinst_HEADERS =  marklist.h copyright.h interpreter.h messages.h info.h \
 print.h goto.h viewcontrol.h kghostview.h kpswidget.h ps.h  \
 zoom.h
-kghostview_LDADD = -lkfile -lkfm       $(LIB_KDEUI)
+kghostview_LDADD =         $(LIB_KFILE)
 kghostview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 BUILTSOURCES = marklist.moc copyright.moc interpreter.moc messages.moc \
