@@ -5,6 +5,10 @@
 // $Id$
 ///
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #ifdef HAVE_LIBPNG
 #include<stdio.h>
 #include<qimage.h>

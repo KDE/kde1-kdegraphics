@@ -11,6 +11,9 @@
 /* defines if having libjpeg (always 1) */
 #undef HAVE_LIBJPEG
 
+/* defines if you have libpng */
+#undef HAVE_LIBPNG
+
 /* defines which to take for ksize_t */
 #undef ksize_t
 
