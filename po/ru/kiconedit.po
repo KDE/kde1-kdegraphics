@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1998-12-29 01:14+0600\n"
+"PO-Revision-Date: 1999-06-05 17:37+07:00\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -180,7 +180,7 @@ msgstr "Показать/Скрыть панель инструментов"
 
 #: kiconedit.cpp:506
 msgid "Toggle &drawing tools"
-msgstr ""
+msgstr "Скрыть/показать инструменты для рисования"
 
 #: kiconedit.cpp:509
 msgid "Toggle &statusbar"
@@ -201,15 +201,22 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"Редактор пиктограмм KDE\n"
+"\n"
+"Программа для рисования пиктограмм\n"
+"с использованием палитры KDE\n"
+"\n"
+"Copyright 1998 by Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
-msgstr ""
+msgstr "Что это ...?"
 
 #: kiconedit.cpp:579
-#, fuzzy
 msgid "Drag source"
-msgstr "Рисовать окружность"
+msgstr "Тащить источник"
 
 #: kiconedit.cpp:584
 msgid "New File"
@@ -312,6 +319,13 @@ msgid ""
 "(Tip: Hold the magnify button down for a few seconds to zoom to a predefined "
 "scale"
 msgstr ""
+"Планшет для рисования\n"
+"\n"
+"Планшет для рисования - это область, где вы рисуете пиктограммы.\n"
+"Вы можете увеличить и уменьшить изображение используя линзу\n"
+"из панели инструментов. (Подсказка: Задержите кнопку линзы на\n"
+"несколько секунд для того, чтобы перейти к установленному заранее\n"
+"увеличению"
 
 #: kiconedit.cpp:791
 msgid ""
@@ -319,6 +333,9 @@ msgid ""
 "\n"
 "This is a visual represantation of the current cursor position"
 msgstr ""
+"Линейки\n"
+"\n"
+"Это визуальное представление позиции курсора"
 
 #: kiconedit.cpp:795
 msgid ""
@@ -333,6 +350,16 @@ msgid ""
 "\t- Number of colors\n"
 "\t- Application messages"
 msgstr ""
+"Строка статуса\n"
+"\n"
+"Строка статуса показывает информацию о статусе текущей пиктограммы.\n"
+"Поля:\n"
+"\n"
+"  - Позиция курсора\n"
+"  - Размер\n"
+"  - Увеличение\n"
+"  - Количество цветов\n"
+"  - Сообщения приложения"
 
 #: kiconedit.cpp:804
 msgid ""
@@ -340,6 +367,9 @@ msgid ""
 "\n"
 "This is a 1:1 preview of the current icon"
 msgstr ""
+"Предпросмотр\n"
+"\n"
+"Это предпросмотр текущей пиктограммы 1:1"
 
 #: kiconedit.cpp:807
 msgid ""
@@ -347,6 +377,9 @@ msgid ""
 "\n"
 "Here you can select colors from the KDE Icon Palette."
 msgstr ""
+"Системные цвета\n"
+"\n"
+"Здесь вы можете выбрать цвета из системной палитры KDE."
 
 #: kiconedit.cpp:810
 msgid ""
@@ -355,6 +388,10 @@ msgid ""
 "Here you can build a palette of custom colors.\n"
 "Just double-click on a box to edit the color"
 msgstr ""
+"Собственные цвета\n"
+"\n"
+"Здесь вы можете создать палитру собственных цветов.\n"
+"Щелкните дважды по квадрату для редактирования"
 
 #: kiconedit.cpp:816
 msgid ""
@@ -362,6 +399,9 @@ msgid ""
 "\n"
 "Create a new icon either from a template or by specifying the size"
 msgstr ""
+"Новая\n"
+"\n"
+"Создать новую пиктограмму либо из шаблона, либо указав размер"
 
 #: kiconedit.cpp:819
 msgid ""
@@ -369,6 +409,9 @@ msgid ""
 "\n"
 "Open an existing icon"
 msgstr ""
+"Открыть\n"
+"\n"
+"Открыть существующую пиктограмму"
 
 #: kiconedit.cpp:822
 msgid ""
@@ -376,6 +419,9 @@ msgid ""
 "\n"
 "Save the current icon"
 msgstr ""
+"Сохранить\n"
+"\n"
+"Сохранить текущую пиктограмму"
 
 #: kiconedit.cpp:825
 msgid ""
@@ -384,6 +430,9 @@ msgid ""
 "Opens a print dialog to let you print the current icon. (Doesn't realy work "
 "as expected"
 msgstr ""
+"Печатать\n"
+"\n"
+"Открыть диалог печати, который позволит напечатать текущую пиктограмму. (Работает не совсем так, как бы хотелось)"
 
 #: kiconedit.cpp:829
 msgid ""
@@ -393,6 +442,11 @@ msgid ""
 "\n"
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
+"Вырезать\n"
+"\n"
+"Вырезать текущее выделение из пиктограммы\n"
+"\n"
+"(Подсказка: можно делать как прямоугольные так и круговые выделения)"
 
 #: kiconedit.cpp:833
 msgid ""
@@ -402,6 +456,11 @@ msgid ""
 "\n"
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
+"Копировать\n"
+"\n"
+"Копировать текущее выделение из пиктограммы\n"
+"\n"
+"(Подсказка: можно делать как прямоугольные так и круговые выделения)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -415,6 +474,13 @@ msgid ""
 "(Tip: Select \"Paste transparent pixels\" in the configuration dialog if you "
 "also want to paste transparent)"
 msgstr ""
+"Вставить\n"
+"\n"
+"Вставить содержимое кармана в текущую пиктограмму.\n"
+"\n"
+"Если содержание больше, чем текущая пиктограмма, можно вставить в новую.\n"
+"\n"
+"(Подсказка: Выберите \"Вставлять прозрачные пикселы\" в диалоге настройки если хотите вставлять прозрачно)"
 
 #: kiconedit.cpp:844
 msgid ""
@@ -424,6 +490,11 @@ msgid ""
 "\n"
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
+"Выбрать\n"
+"\n"
+"Выбрать область пиктограммы используя мышь.\n"
+"\n"
+"(Подсказка: можно делать как прямоугольные так и круговые выделения)"
 
 #: kiconedit.cpp:848
 msgid ""
@@ -431,6 +502,9 @@ msgid ""
 "\n"
 "Smoothly resizes the icon while trying to preserve the contents"
 msgstr ""
+"Изменить размер\n"
+"\n"
+"Мягко изменяет размер, стараясь сохранить содержимое"
 
 #: kiconedit.cpp:851
 msgid ""
@@ -439,6 +513,10 @@ msgid ""
 "Gray scale the current icon.\n"
 "(Warning: The result is likely to contain colors not in the icon palette"
 msgstr ""
+"Полутона\n"
+"\n"
+"Перевести текущую пиктограмму в полутона.\n"
+"(Предупреждение: скорее всего результат будет содержать цвета, отсутствующие в текущей палитре пиктограммы)"
 
 #: kiconedit.cpp:855
 msgid ""
@@ -448,6 +526,11 @@ msgid ""
 "\n"
 "(Tip: Hold the button down for a few seconds to zoom to a predefined scale"
 msgstr ""
+"Уменьшить\n"
+"\n"
+"Уменьшить на единицу\n"
+"\n"
+"(Подсказка: Задержите кнопку линзы на несколько секунд для того, чтобы перейти к установленному заранее увеличению)"
 
 #: kiconedit.cpp:859
 msgid ""
@@ -457,6 +540,11 @@ msgid ""
 "\n"
 "(Tip: Hold the button down for a few seconds to zoom to a predefined scale"
 msgstr ""
+"Увеличить\n"
+"\n"
+"Увеличить на единицу.\n"
+"\n"
+"(Подсказка: Задержите кнопку линзы на несколько секунд для того, чтобы перейти к установленному заранее увеличению)"
 
 #: kiconedit.cpp:863
 msgid ""
@@ -464,6 +552,9 @@ msgid ""
 "\n"
 "Toggles the grid in the icon edit grid on/off"
 msgstr ""
+"Включить/выключить сетку\n"
+"\n"
+"Включает/выключает сетку на области редактирования"
 
 #: kiconedit.cpp:866
 msgid ""
@@ -471,6 +562,9 @@ msgid ""
 "\n"
 "Opens a new Icon Editor window."
 msgstr ""
+"Новое окно\n"
+"\n"
+"Открывает новое окно редактора пиктограмм."
 
 #: kiconedit.cpp:869
 msgid ""
@@ -478,6 +572,9 @@ msgid ""
 "\n"
 "Well since you're reading this I guess you found out ;-)"
 msgstr ""
+"Что это...?\n"
+"\n"
+"Так как вы это читаете я думаю уже догадались :-)"
 
 #: kiconedit.cpp:872
 msgid ""
@@ -489,6 +586,11 @@ msgid ""
 "(Note: The drag source uses the QT XDND protocol which is not yet standard "
 "in KDE)"
 msgstr ""
+"Перетащить пиктограмму\n"
+"\n"
+"С этой кнопки вы можете перетащить копию текущей пиктограммы и бросить ее на окно, которое позволяет такую операцию, например на другой редактор пиктограмм.\n"
+"\n"
+"(Замечание: Перетаскивание использует QT XDND протокол, который еще не является стандартом в KDE)"
 
 #: kiconedit.cpp:880
 msgid ""
@@ -496,6 +598,9 @@ msgid ""
 "\n"
 "Draw non-linear lines"
 msgstr ""
+"Свободное рисование\n"
+"\n"
+"Рисует не прямые линии"
 
 #: kiconedit.cpp:883
 msgid ""
@@ -503,6 +608,9 @@ msgid ""
 "\n"
 "Fill adjoining pixels with the same color with the current color"
 msgstr ""
+"Закрашивать\n"
+"\n"
+"Закрашивает примыкающие пикселы текущим цветом"
 
 #: kiconedit.cpp:886
 msgid ""
@@ -570,6 +678,9 @@ msgid ""
 "\n"
 "Draw a straight line vertically, horizontically or in 45 dgr. angles"
 msgstr ""
+"Линия\n"
+"\n"
+"Рисует прямую линию вертикально, горизонтально и под углом 45 градусов"
 
 #: kiconedit.cpp:907
 msgid ""
@@ -577,6 +688,9 @@ msgid ""
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
+"Распылитель\n"
+"\n"
+"Рисует рассеянные пикселы текущего цвета"
 
 #: kiconedit.cpp:910
 msgid ""
@@ -584,6 +698,9 @@ msgid ""
 "\n"
 "The color of the pixel clicked on will be the current drawcolor"
 msgstr ""
+"Найти\n"
+"\n"
+"Щелкните на пиксел, цвет которого хотите сделать текущим"
 
 #: kiconedit.cpp:913
 msgid ""
@@ -594,14 +711,19 @@ msgid ""
 "(Tip: If you want to draw transparent with a different tool then first click "
 "on \"Erase\" then on the tool you want to use)"
 msgstr ""
+"Удалить\n"
+"\n"
+"Удаляет пикселы. Делает пикселы прозрачными\n"
+"\n"
+"(Подсказка: Если хотите делать пикселы прозрачными при помощи другого инструмента, нажмите на \"Удалить\" и потом на инструмент, который хотите использовать)"
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "ширина"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "высота"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
@@ -636,6 +758,8 @@ msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
 msgstr ""
+"Изображение в кармане больше, чем текущая пиктограмма!\n"
+"Вставить в новое изображение?"
 
 #: kicongrid.cpp:998
 msgid "Pasting"
@@ -651,15 +775,15 @@ msgstr "Неверные данные в кармане!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr ""
+msgstr "Папки:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"
-msgstr ""
+msgstr "Содержание:"
 
 #: kicondetaillist.cpp:50
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 #: kicondetaillist.cpp:52
 msgid "Size"
@@ -690,16 +814,18 @@ msgid ""
 "We've got a KFM job running.\n"
 "Please wait."
 msgstr ""
+"KFM работает.\n"
+"Пожалуйста подождите."
 
 #: kicon.cpp:97
 msgid "The URL:\n"
-msgstr ""
+msgstr "URL:\n"
 
 #: kicon.cpp:99
 msgid ""
 "\n"
 "seems to be malformed.\n"
-msgstr ""
+msgstr "\nнекорректен.\n"
 
 #: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
 #: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
@@ -708,13 +834,13 @@ msgstr "ОШИБКА"
 
 #: kicon.cpp:116
 msgid "The KDE Icon Editor has found a recover file for:\n"
-msgstr ""
+msgstr "Редактор пиктограмм KDE нашел файл восстановления для:\n"
 
 #: kicon.cpp:118 kicon.cpp:285
 msgid ""
 "\n"
 "Do you want to open this?"
-msgstr ""
+msgstr "\nОткрыть?"
 
 #: kicon.cpp:143
 msgid "The file:\n"
@@ -724,40 +850,35 @@ msgstr "Файл:\n"
 msgid ""
 "\n"
 "doesn't exist or isn't readable.\n"
-msgstr ""
+msgstr "\nне существует или не читается.\n"
 
 #: kicon.cpp:160
-#, fuzzy
 msgid ""
 "The Icon Editor is already downloading a non-local file.\n"
 "Please wait.\n"
 msgstr ""
-"В редакторе уже имеется загруженный файл.\n"
-"Подождите пока не завершится его редактирование."
+"Редактор загружает удаленный файл.\n"
+"Подождите до завершения.\n"
 
 #: kicon.cpp:170
 msgid "Couldn't initiate KFM!"
-msgstr ""
+msgstr "Ошибка запуска KFM!"
 
 #: kicon.cpp:178
-#, fuzzy
 msgid "There was a KFM error creating a backup for:\n"
-msgstr "Во время сохранения произошла ошибка:\n"
+msgstr "Произошла ошибка KFM при создании резервной копии для:\n"
 
 #: kicon.cpp:191 kicon.cpp:396
-#, fuzzy
 msgid "There was an error creating a backup for:\n"
-msgstr "Во время сохранения произошла ошибка:\n"
+msgstr "Произошла ошибка при создании резервной копии для:\n"
 
 #: kicon.cpp:204
-#, fuzzy
 msgid "KIcon: There was a error locking:\n"
-msgstr "Произошла ошибка во время загрузки:\n"
+msgstr "Произошла ошибка при попытке установить лок:\n"
 
 #: kicon.cpp:215 kicon.cpp:291
-#, fuzzy
 msgid "KIcon: There was a QT error loading:\n"
-msgstr "Произошла ошибка во время загрузки:\n"
+msgstr "Произошла ошибка QT при загрузке:\n"
 
 #: kicon.cpp:261
 msgid ""
@@ -766,22 +887,26 @@ msgid ""
 "*.gif|GIF files (*.gif)\n"
 "*jpg|JPEG files (*.jpg)\n"
 msgstr ""
+"*|Все файлы (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF файлы (*.gif)\n"
+"*jpg|JPEG файлы (*.jpg)\n"
 
 #: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
-msgstr ""
+msgstr "Редактор пиктограмм KDE нашел сохраненную копию, которую можно восстановить\n"
 
 #: kicon.cpp:284
 msgid "file for an unsaved icon."
-msgstr ""
+msgstr "файл для не записанных пиктограмм."
 
 #: kicon.cpp:409
 msgid "Couldn't initiate KFM"
-msgstr ""
+msgstr "Ошибка запуска KFM"
 
 #: kicon.cpp:422
 msgid "Done saving"
-msgstr ""
+msgstr "Запись завершена"
 
 #: kicon.cpp:429
 msgid "There was an error saving:\n"
@@ -792,9 +917,8 @@ msgid "Size:"
 msgstr "Размер:"
 
 #: kresize.cpp:64
-#, fuzzy
 msgid "Select size:"
-msgstr "Выбрать область"
+msgstr "Выбрать размер"
 
 #: knew.cpp:34
 msgid "Standard file"
@@ -806,7 +930,7 @@ msgstr "Исходный файл"
 
 #: knew.cpp:44
 msgid "Compressed file"
-msgstr "Пожатый файл"
+msgstr "Сжатый файл"
 
 #: knew.cpp:49
 msgid "Standard folder"
@@ -826,7 +950,7 @@ msgstr "Минипакет"
 
 #: knew.cpp:156 knew.cpp:258 knew.cpp:308
 msgid "Create from scratch"
-msgstr ""
+msgstr "Создать с нуля"
 
 #: knew.cpp:158 knew.cpp:313
 msgid "Create from template"
@@ -846,7 +970,7 @@ msgstr "Создать новую иконку"
 
 #: debug.cpp:20
 msgid "Fatal!"
-msgstr ""
+msgstr "Фатальная ошибка!"
 
 #: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."
@@ -858,201 +982,117 @@ msgid "Colors: %u"
 msgstr "Цвета: %u"
 
 #: kiconconfig.cpp:30
-#, fuzzy
 msgid "Template"
-msgstr "Шаблоны:"
+msgstr "Шаблон:"
 
 #: kiconconfig.cpp:31
 msgid "Description:"
-msgstr ""
+msgstr "Описание:"
 
 #: kiconconfig.cpp:33
-#, fuzzy
 msgid "Path:"
-msgstr "Вставить"
+msgstr "Путь"
 
 #: kiconconfig.cpp:63
 msgid "&Browse..."
-msgstr ""
+msgstr "Просмотр..."
 
 #: kiconconfig.cpp:136
 msgid "&Add"
-msgstr ""
+msgstr "Добавить"
 
 #: kiconconfig.cpp:248
 msgid "Color or pixmap"
-msgstr ""
+msgstr "Цвет или изображение"
 
 #: kiconconfig.cpp:256
 msgid "Colored background"
-msgstr ""
+msgstr "Цветной фон"
 
 #: kiconconfig.cpp:261
 msgid "Pixmap background"
-msgstr ""
+msgstr "Фон-изображение"
 
 #: kiconconfig.cpp:276
 msgid "&Color..."
-msgstr ""
+msgstr "Цвет..."
 
 #: kiconconfig.cpp:279
-#, fuzzy
 msgid "&Pixmap..."
-msgstr "Печать"
+msgstr "&Растр..."
 
 #: kiconconfig.cpp:287
 msgid "&Built-in"
-msgstr ""
+msgstr "Встроенный"
 
 #: kiconconfig.cpp:291
 msgid "Example"
-msgstr ""
+msgstr "Пример"
 
 #: kiconconfig.cpp:399
-#, fuzzy
 msgid "Main Toolbar"
-msgstr "Минипапка"
+msgstr "Основная панель инструментов"
 
 #: kiconconfig.cpp:402
-#, fuzzy
 msgid "Drawing tools"
-msgstr "Сетка"
+msgstr "Инструменты для рисования"
 
 #: kiconconfig.cpp:406
 msgid ""
 "Note: Other settings of the toolbars can be reached\n"
 "from the toolbar \"handle\" or from the \"Options\" menu"
 msgstr ""
+"Заметка: Другие настройки панелей инструментов доступны\n"
+"из панели \"handle\" или из меню \"Настройки\""
 
 #: kiconconfig.cpp:425 kiconconfig.cpp:438
 msgid "Show Icon"
-msgstr ""
+msgstr "Показывать пиктограмму"
 
 #: kiconconfig.cpp:430 kiconconfig.cpp:443
 msgid "Show Icon and Text"
-msgstr ""
+msgstr "Показывать пиктограмму и текст"
 
 #: kiconconfig.cpp:434 kiconconfig.cpp:447
 msgid "Show Text"
-msgstr ""
+msgstr "Показывать текст"
 
 #: kiconconfig.cpp:505
-#, fuzzy
 msgid "Paste mode"
-msgstr "Вставить"
+msgstr "Режим вставки"
 
 #: kiconconfig.cpp:507
-#, fuzzy
 msgid "Paste transparent pixels"
-msgstr "Стерка (прозрачная)"
+msgstr "Вставлять прозрачные пикселы"
 
 #: kiconconfig.cpp:511
 msgid "Show rulers"
-msgstr ""
+msgstr "Показывать линейки"
 
 #: kiconconfig.cpp:593
 msgid "Keys"
-msgstr ""
+msgstr "Клавиши"
 
 #: kiconconfig.cpp:598
 msgid "Configure keys"
-msgstr ""
+msgstr "Настроить клавиши"
 
 #: kiconconfig.cpp:605
-#, fuzzy
 msgid "Templates"
-msgstr "Шаблоны:"
+msgstr "Шаблоны"
 
 #: kiconconfig.cpp:610
-#, fuzzy
 msgid "Configure Icon templates"
-msgstr "Создать из шаблона"
+msgstr "Настроить шаблоны"
 
 #: kiconconfig.cpp:622
 msgid "Configure background"
-msgstr ""
+msgstr "Настроить фон"
 
 #: kiconconfig.cpp:630
-#, fuzzy
 msgid "Toolbars"
-msgstr "Инструменты"
+msgstr "Панели инструментов"
 
 #: kiconconfig.cpp:642
 msgid "Icon grid"
-msgstr ""
-
-#, fuzzy
-#~ msgid "Open image"
-#~ msgstr "Открыть файл"
-
-#, fuzzy
-#~ msgid "Save image As"
-#~ msgstr "Сохранить как"
-
-#~ msgid "Warning"
-#~ msgstr "Внимание"
-
-#, fuzzy
-#~ msgid "New &window"
-#~ msgstr "Новое окно"
-
-#, fuzzy
-#~ msgid "&Open..."
-#~ msgstr "&Открыть"
-
-#~ msgid "&Save"
-#~ msgstr "Сохранить"
-
-#, fuzzy
-#~ msgid "Save &as..."
-#~ msgstr "Сохранить как"
-
-#, fuzzy
-#~ msgid "&Print..."
-#~ msgstr "Печать"
-
-#~ msgid "&Close"
-#~ msgstr "Закрыть"
-
-#~ msgid "&File"
-#~ msgstr "Файл"
-
-#~ msgid "&Copy"
-#~ msgstr "Копировать"
-
-#~ msgid "&Paste"
-#~ msgstr "Вставить"
-
-#~ msgid "&Edit"
-#~ msgstr "Редактировать"
-
-#~ msgid "&View"
-#~ msgstr "Просмотр"
-
-#, fuzzy
-#~ msgid "&Options"
-#~ msgstr "&Открыть"
-
-#~ msgid "&Help"
-#~ msgstr "Помощь"
-
-#~ msgid "Open a file"
-#~ msgstr "Открыть файл"
-
-#~ msgid "Cut"
-#~ msgstr "Вырезать"
-
-#~ msgid "Copy"
-#~ msgstr "Копировать"
-
-#~ msgid "Error"
-#~ msgstr "Ошибка"
-
-#~ msgid "&Quit"
-#~ msgstr "Выход"
-
-#~ msgid "Straight line"
-#~ msgstr "Странная линия"
-
-#~ msgid "Draw straight line"
-#~ msgstr "Рисовать перпендикуляр"
+msgstr "Сетка"

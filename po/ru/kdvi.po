@@ -39,7 +39,7 @@ msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Изменения в режиме меташрифтов будут действовать\n"
+"Изменения в режиме мета-шрифтов будут действовать\n"
 "только после перезапуска kdvi!"
 
 #: dviwin.cpp:283
@@ -210,7 +210,7 @@ msgstr "Открыть документ ..."
 
 #: kdvi.cpp:262
 msgid "Reload document"
-msgstr "Перегрзить документ"
+msgstr "Перегрузить документ"
 
 #: kdvi.cpp:263
 msgid "Print ..."
@@ -495,7 +495,7 @@ msgstr "Пометить нечетные"
 
 #: marklist.cpp:42
 msgid "Toggle marks"
-msgstr "Перключить пометки"
+msgstr "Переключить пометки"
 
 #: marklist.cpp:43
 msgid "Remove marks"
@@ -539,7 +539,7 @@ msgstr "Разрешение"
 
 #: prefs.cpp:282
 msgid "Metafont mode"
-msgstr "Режим меташрифта"
+msgstr "Режим мета-шрифта"
 
 #: prefs.cpp:291
 msgid "PK Font Path"

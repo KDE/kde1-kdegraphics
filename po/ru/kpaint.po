@@ -99,7 +99,7 @@ msgstr "untitled.gif"
 
 #: kpaint.cpp:172
 msgid "Unsaved Changes"
-msgstr "Незаписанные изменения"
+msgstr "Не записанные изменения"
 
 #: kpaint.cpp:173
 msgid ""
@@ -210,7 +210,7 @@ msgstr "Показать инструменты"
 
 #: kpaint.cpp:483
 msgid "Show Commands Toolbar"
-msgstr "Показать инструменты комманд"
+msgstr "Показать инструменты команд"
 
 #: kpaint.cpp:484
 msgid "Show Status Bar"
@@ -400,7 +400,7 @@ msgstr "Еще нет"
 
 #: properties.cpp:319 properties.cpp:373
 msgid "Join style:"
-msgstr "Присоеденить тип:"
+msgstr "Присоединить тип:"
 
 #: properties.cpp:331
 msgid "Set Line Colour..."

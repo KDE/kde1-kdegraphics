@@ -92,7 +92,7 @@ msgstr "Повернуть страницу"
 
 #: kfax.cpp:423
 msgid "&Mirror Page"
-msgstr "Зеркльно отобразить страницу"
+msgstr "Зеркально отобразить страницу"
 
 #: kfax.cpp:424
 msgid "&Flip Page"
@@ -328,7 +328,7 @@ msgstr "Напечатать в Postscript на принтер"
 
 #: print.cpp:62
 msgid "Print Command:"
-msgstr "Сомманда печати:"
+msgstr "Команда печати:"
 
 #: print.cpp:71
 msgid "Print as Postscript to File:"
@@ -360,7 +360,7 @@ msgstr "Вертикально:"
 
 #: print.cpp:258
 msgid "Select Filename"
-msgstr "Вберите имя:"
+msgstr "Выберите имя:"
 
 #: print.cpp:280
 msgid "You must enter a file name if you wish to print to a file."
@@ -371,7 +371,7 @@ msgid ""
 "You must enter a print command such as \"lpr\"\n"
 " if you wish to print to a printer."
 msgstr ""
-"Вы должны ввести комманду печати, такую как \"lpr\"\n"
+"Вы должны ввести команду печати, такую как \"lpr\"\n"
 " если вы желаете печатать на принтер."
 
 #: options.cpp:56
