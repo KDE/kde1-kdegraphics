@@ -393,7 +393,8 @@ msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "Les polices PK manquantes seront inscrites dans 'missfont.log'"
 
 #: kdvi.cpp:730
-msgid "Postscript specials are rendered"
+#, fuzzy
+msgid "Postcsript specials are rendered"
 msgstr "Le postscript est affiché"
 
 #: kdvi.cpp:731

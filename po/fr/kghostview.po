@@ -567,8 +567,8 @@ msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
-"L'opération d'impression dans un fichier a échoué\n¨
-"car vous n'avez pas indiqué de nom de fichier."
+"L'opération d'impression dans un fichier a échoué\n"
+"car vous n'avez pas indiqué de nom de fichier.\n"
 
 #: kghostview.cpp:1640
 #, c-format
@@ -642,8 +642,9 @@ msgid "Usage: "
 msgstr "Utilisation : "
 
 #: main.cpp:27
+#, fuzzy
 msgid ""
-" [filename] [switches]\n"
+" [filename] [siwtches]\n"
 "\n"
 msgstr ""
 " [fichier] [options]\n"
