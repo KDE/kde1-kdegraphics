@@ -1,0 +1,383 @@
+# Esperantaj mesaøoj por "kfax"
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Wolfram Diestel <diestel@rzaix340.rz.uni-leipzig.de>, 1998.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kfax 1.0\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: 1998-07-25 11:00+0100\n"
+"Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
+"Language-Team: Esperanto <eo@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-3\n"
+"Content-Transfer-Encoding: 8-bit\n"     
+
+#: about.cpp:39
+msgid "About KFax"
+msgstr "Pri Kfax"
+
+#: about.cpp:58
+msgid "Version "
+msgstr "Versio "
+
+#: kfax.cpp:222 kfax.cpp:820
+msgid "Show &Tool Bar"
+msgstr "Montru &Illistelon"
+
+#: kfax.cpp:224 kfax.cpp:813
+msgid "Hide &Tool Bar"
+msgstr "Kaþu &Illistelon"
+
+#: kfax.cpp:227 kfax.cpp:793
+msgid "Show &Status Bar"
+msgstr "Montru &Statolistelon"
+
+#: kfax.cpp:229 kfax.cpp:786
+msgid "Hide &Status Bar"
+msgstr "Kaþu &Statolistelon"
+
+#: kfax.cpp:380
+msgid "&About..."
+msgstr "&Pri..."
+
+#: kfax.cpp:381
+msgid "Help page"
+msgstr "Helppaøo"
+
+#: kfax.cpp:382
+msgid "KFax &Help "
+msgstr "Kfax &Helpo "
+
+#: kfax.cpp:384
+msgid "&Open Fax..."
+msgstr "&Malfermu fakson..."
+
+#: kfax.cpp:385
+msgid "&Add Fax..."
+msgstr "&Aldonu fakson..."
+
+#: kfax.cpp:388
+msgid "Open &URL..."
+msgstr "Malfermu &URLon..."
+
+#: kfax.cpp:389
+msgid "Save to U&RL..."
+msgstr "Sekurigu al U&RL..."
+
+#: kfax.cpp:390
+msgid "&Close Fax"
+msgstr "F&ermu fakson"
+
+#: kfax.cpp:397
+msgid "&Next Page"
+msgstr "&Sekva paøo"
+
+#: kfax.cpp:398
+msgid "&Prev Page"
+msgstr "&Antaýa paøo"
+
+#: kfax.cpp:399
+msgid "&First Page"
+msgstr "&Unua paøo"
+
+#: kfax.cpp:400
+msgid "&Last Page"
+msgstr "&Lasta paøo"
+
+#: kfax.cpp:402
+msgid "&Rotate Page"
+msgstr "&Rotaciu paøon"
+
+#: kfax.cpp:403
+msgid "&Mirror Page"
+msgstr "S&pegulu paøon"
+
+#: kfax.cpp:404
+msgid "&Flip Page"
+msgstr "&Renversu paøon"
+
+#: kfax.cpp:406
+msgid "Zoom &in"
+msgstr "&Grandigu"
+
+#: kfax.cpp:407
+msgid "Zoom &out"
+msgstr "&Malgrandigu"
+
+#: kfax.cpp:412
+msgid "&Fax Options"
+msgstr "&Faksopcioj"
+
+#: kfax.cpp:414
+msgid "&Tool Bar"
+msgstr "&Illistelo"
+
+#: kfax.cpp:415
+msgid "&Status Bar"
+msgstr "&Statolistelo"
+
+#: kfax.cpp:442
+msgid "Go back"
+msgstr "Iru retro"
+
+#: kfax.cpp:445
+msgid "Go forward"
+msgstr "Iru antaýen"
+
+#: kfax.cpp:450
+msgid "Go to start"
+msgstr "Iru al komenco"
+
+#: kfax.cpp:453
+msgid "Go to end"
+msgstr "Iru al fino"
+
+#: kfax.cpp:459
+msgid "Zoom in"
+msgstr "Grandigu"
+
+#: kfax.cpp:462
+msgid "Zoom out"
+msgstr "Malgrandigu"
+
+#: kfax.cpp:467
+msgid "Print document"
+msgstr "Presu dokumenton"
+
+#: kfax.cpp:476
+msgid "Go to page ..."
+msgstr "Iru al paøo..."
+
+#: kfax.cpp:562
+msgid "Open Location:"
+msgstr "Malfermu situon:"
+
+#: kfax.cpp:578
+msgid "You need to open a Fax first"
+msgstr "Vi devas malfermi fakson unue"
+
+#: kfax.cpp:584
+msgid "Save to Location:"
+msgstr "Sekurigu al situo:"
+
+#: kfax.cpp:625
+msgid "Select Facsimile to Open"
+msgstr "Elektu fakson malfermendan"
+
+#: kfax.cpp:662
+msgid "Select Facsimile to Add"
+msgstr "Elektu fakson aldonendan"
+
+#: kfax.cpp:804
+msgid "Not yet implemented"
+msgstr "Ankoraý ne implementita"
+
+#: kfax.cpp:854
+msgid "     There is no document active      "
+msgstr "    Neniu dokumento estas aktiva     "
+
+#: kfax.cpp:988
+#, c-format
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Nevaldia paøformato:\n"
+"Larøeco %.2f, Alteco %.2f\n"
+
+#: kfax.cpp:1004
+#, c-format
+msgid "Can't print to \"%s\"\n"
+msgstr "Ne eblas presi al \"%s\"\n"
+
+#: kfax.cpp:1015
+#, c-format
+msgid "Couldn't create %s\n"
+msgstr "Ne eblis krei %s\n"
+
+#: kfax.cpp:1085
+msgid "Saving ..."
+msgstr "Sekurigante ..."
+
+#: kfax.cpp:1092
+msgid "Loading ..."
+msgstr "Legante ..."
+
+#: kfax.cpp:1119 kfax.cpp:1155
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"Eraro en 'copy file()'\n"
+"Ne eblis sekurigi dosieron!"
+
+#: kfax.cpp:1125
+msgid "Saved"
+msgstr "Sekurigita"
+
+#: kfax.cpp:1132 kfax.cpp:1194
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax ankoraý atendas la finon\n"
+"de interreta tasko. Bonvolu\n"
+"anti øian plenumon.\n"
+
+#: kfax.cpp:1143 kfax.cpp:1207
+msgid "Could not communicate with KFM"
+msgstr "Ne eblis komuniki kun Kfm"
+
+#: kfax.cpp:1184
+#, c-format
+msgid "Loading '%s'"
+msgstr "Legante '%s'"
+
+#: kfax.cpp:1201
+msgid "Calling KFM"
+msgstr "Vokante Kfm"
+
+#: kfax.cpp:1214
+msgid "Starting Job"
+msgstr "Komencante taskon"
+
+#: kfax.cpp:1217
+msgid "Connected"
+msgstr "Kontaktinta"
+
+#: kfax.cpp:1219
+msgid "Waiting..."
+msgstr "Atendate..."
+
+#: kfax.cpp:2070
+msgid "You need to open a fax page first."
+msgstr "Vi devas unue malfermi fakspagon."
+
+#: kfax.cpp:2740
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Dosiero kun tiu nomo jam ekzistas\n"
+"Æu vi volas anstataýigi øin?\n"
+"\n"
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "Kfax-konfigura¼o"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Distingebleco"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Aýtomata"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Alta"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Aspekto"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "horizontala"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "renversigita"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "inversa"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "En faksdatumoj:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "la malgrava bito (LS-Bit) estas unua"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Kunpremalgoritmo:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "Faks-larøeco"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "-alteco:"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "KFax-Presdialogo"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Presu kiel postskripto al presilo"
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Preskomando:"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Presu kiel postskripto al dosiero:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Rigardu"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Grandeco:"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Etendu fakson al paøgrandeco"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Aldonu presilmarøenojn (en cm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Horizontale:"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Vertikale:"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Elektu dosiernomon"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "Vi devas indiki dosiernomon se vi volas presi al dosiero."
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"Vi devas indiki presilkomandon kiel ekz. \"lpr\"\n"
+" se vi volas presi al presilo."
+
+
+
+
+
+
+
+
