@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-06-18 22:44+0200\n"
-"PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
+"PO-Revision-Date: 1998-06-20 19:24 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -263,7 +263,7 @@ msgstr "&Obrázek"
 
 #: kpaint.cpp:381
 msgid "&Tool"
-msgstr "&Nástroj"
+msgstr "Nás&troj"
 
 #: kpaint.cpp:533
 msgid "KPaint: Could not open file"

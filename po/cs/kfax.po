@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1998-01-28 14:59+0100\n"
-"PO-Revision-Date: 1998-03-12 14:19 MET\n"
+"PO-Revision-Date: 1998-06-20 19:27 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,11 +55,11 @@ msgstr "&Otevøít fax..."
 
 #: kfax.cpp:385
 msgid "&Add Fax..."
-msgstr "Pørid&at fax ..."
+msgstr "Pøid&at fax ..."
 
 #: kfax.cpp:388
 msgid "Open &URL..."
-msgstr "Otevøít &URL..."
+msgstr "Otevøít UR&L..."
 
 #: kfax.cpp:389
 msgid "Save to U&RL..."
