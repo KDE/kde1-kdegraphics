@@ -95,9 +95,15 @@ extern struct documentmedia papersizes[];
 	   structure.  Returns NULL if file does not Conform to commenting
 	   conventions . */
 
+/* Jake Hamby patch 18/3/98 */
+/*struct document *psscan(FILE *);*/
 
-struct document *psscan(FILE *);
-
+struct document *psscan(
+           FILE **fileP, const char *filename, const char *tmpprefix, 
+ 	  char **filename_dscP, const char *cmd_scan_pdf,
+ 	  char **filename_uncP, const char *cmd_uncompress);
+	  
+/* end of patch */
 
 	/* free data structure malloc'ed by psscan */
 

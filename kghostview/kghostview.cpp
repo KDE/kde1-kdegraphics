@@ -48,6 +48,9 @@
 
 #define PAGELIST_WIDTH 75
 
+
+#include <qmsgbox.h>
+
 #include <kmisc.h>
 #include "kghostview.h"
 #include "version.h"
@@ -74,7 +77,7 @@ QList <KGhostview> KGhostview::windowList;
 KGhostview::KGhostview( QWidget *, char *name )
 	: KTopLevelWidget( name )
 {   
-    //printf("KGhostview::KGhostview\n");
+//    printf("KGhostview::KGhostview\n");
   
 	windowList.append( this );
     
@@ -139,11 +142,11 @@ KGhostview::KGhostview( QWidget *, char *name )
 	
 	marklist->setSelectColors( kapp->selectColor, kapp->selectTextColor);
 	
-	//connect( marklist, SIGNAL(selected(const char *)), // Dutta 16/3/98
+	//connect( marklist, SIGNAL(selected(const char *)), // Duda 16/3/98
 	//	SLOT(pageActivated(const char *)) );
 	
 	connect( marklist, SIGNAL(selected( int )), 
-		SLOT(pageActivated( int )) ); // Dutta 16/3/98
+		SLOT(pageActivated( int )) ); // Duda 16/3/98
 	
 	//QToolTip::add( marklist, "Select page and mark pages for printing" );
 	
@@ -190,7 +193,7 @@ KGhostview::KGhostview( QWidget *, char *name )
   	//printf("Do info dialog\n");
   
   	infoDialog = new InfoDialog( 0, "info dialog" );
-  	infoDialog->setCaption(i18n("Information"));
+  	infoDialog->setCaption(i18n("Document information"));
   	
   	//
   	//	PRINTING DEFAULTS
@@ -269,19 +272,20 @@ KGhostview::KGhostview( QWidget *, char *name )
 	
 	if (psfile) {
 		setup();
-		show_page( 0 );
-		marklist->select( 0 );
+		//show_page( 0 );
+		//marklist->select( 0 );
 	}
 }
 
-//void KGhostview::pageActivated( const char * text) // Dutta 16/3/98
+//void KGhostview::pageActivated( const char * text) // Duda 16/3/98
 //{
 //	int pg = QString( text ).toInt();
 //	show_page(pg-1);
 //}
 
-void KGhostview::pageActivated( int pg ) // Dutta 16/3/98
+void KGhostview::pageActivated( int pg ) // Duda 16/3/98
 {
+//	printf("KGhostview::pageActivated\n");
 	show_page(pg);
 }
 
@@ -448,9 +452,9 @@ void KGhostview::info()
 		infoDialog->dateLabel->setText(doc->date);
 		infoDialog->dateLabel->setMinimumSize( infoDialog->dateLabel->sizeHint() );
 	} else {
-		infoDialog->titleLabel->setText("");
+		infoDialog->titleLabel->setText( i18n("Not known") );
 		infoDialog->titleLabel->setMinimumSize( infoDialog->titleLabel->sizeHint() );
-		infoDialog->dateLabel->setText("");
+		infoDialog->dateLabel->setText( i18n("Not known") );
 		infoDialog->dateLabel->setMinimumSize( infoDialog->dateLabel->sizeHint() );
 	}
 		
@@ -634,6 +638,11 @@ void KGhostview::createMenubar()
 		"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"\
 		"work by Tim Theisen.\n"\
 		"\n"\
+		"Incorporates code from Johanes Plass' gv. This adds compressed and\n"\
+		"PDF file support.\n"\
+		"\n"\
+		"See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"\
+		"\n"\
 		"This program is free software; you can redistribute it and/or modify\n"\
 		"it under the terms of the GNU General Public License as published by\n"\
 		"the Free Software Foundation; either version 2 of the License, or\n"\
@@ -691,19 +700,19 @@ void KGhostview::fileMenuActivated( int item )
 			break;
 			
 		case ID_FILE_A:
-			open_file( lastOpened[0] );
+			openFile( lastOpened[0] );
 			break;
 			
 		case ID_FILE_B:
-			open_file( lastOpened[1] );
+			openFile( lastOpened[1] );
 			break;
 			
 		case ID_FILE_C:
-			open_file( lastOpened[2] );
+			openFile( lastOpened[2] );
 			break;
 			
 		case ID_FILE_D:
-			open_file( lastOpened[3] );
+			openFile( lastOpened[3] );
 			break;
 			
 		case ID_FILE_QUIT:
@@ -827,7 +836,7 @@ void KGhostview::openNetFile( const char *_url )
 
 	// Just a usual file ?
 	if ( strcmp( u.protocol(), "file" ) == 0 && !u.hasSubProtocol() ) {
-		open_file( u.path() );
+		openFile( u.path() );
 		return;
 	}
 
@@ -859,7 +868,7 @@ void KGhostview::slotKFMFinished()
 {
 	if ( kfmAction == KGhostview::GET ) {
 		KURL u( tmpFile.data() );
-		open_file( u.path() );
+		openFile( u.path() );
 		
 		// Clean up
 		unlink( tmpFile.data() );
@@ -1349,7 +1358,7 @@ void KGhostview::applyViewChanges()
 
 void KGhostview::goToPage()
 {
-    //printf("KGhostview::goToPage\n");
+    printf("KGhostview::goToPage\n");
 
 	GoTo gt(this, "Go to");
 	gt.setCaption(i18n("Go to ..."));
@@ -1364,7 +1373,7 @@ void KGhostview::goToPage()
 		current_page=gt.current_page;
 		
 		marklist->select(current_page);
-		show_page(current_page);
+		//show_page(current_page);
 	}
 }
 
@@ -1372,13 +1381,17 @@ void KGhostview::print()
 {
     //printf("KGhostview::print\n");
 	
-	pd = new PrintDialog( this, "print dialog" );
+	pd = new PrintDialog( this, "print dialog", doc->numpages, 
+								( marklist->markList()->count() > 0 ) );
 	pd->setCaption(i18n("Print"));
 	
 	if( pd->exec() ) {
-		printSelection = pd->modeComboBox->currentItem()+1;
-		printerName = pd->nameLineEdit->text();
-		printStart();
+		printStart( pd->pgMode, pd->cbOrder->isChecked(),
+					pd->cbFile->isChecked(),
+					pd->printerName, pd->spoolerCommand,
+					pd->printerVariable,
+					QString( pd->leStart->text() ).toInt(),
+					QString( pd->leEnd->text() ).toInt() );
 	}
 }
 
@@ -1428,7 +1441,7 @@ void KGhostview::nextPage()
 			return;
     }
 	marklist->select(new_page);
-    show_page(new_page);
+    //show_page(new_page);
     page->scrollTop();
 }
 
@@ -1439,7 +1452,7 @@ void KGhostview::goToStart()
     int new_page = 0;
     
 	marklist->select(new_page);
-    show_page(new_page);
+    //show_page(new_page);
     page->scrollTop();
 }
 
@@ -1454,7 +1467,7 @@ void KGhostview::goToEnd()
     }
     
 	marklist->select(new_page);
-    show_page(new_page);
+    //show_page(new_page);
     page->scrollTop();
 }
 
@@ -1472,7 +1485,7 @@ void KGhostview::prevPage()
     }
 	
 	marklist->select(new_page);
-    show_page(new_page);
+    //show_page(new_page);
     page->scrollTop();
 }
 
@@ -1484,11 +1497,11 @@ void KGhostview::openNewFile()
 	if ( filename )
 		dir = QFileInfo( filename ).dirPath();	
 	
-	QString s = QFileDialog::getOpenFileName( dir, "*.*ps", this);
+	QString s = QFileDialog::getOpenFileName( dir, "*.*ps*", this);
 	if ( s.isNull() )
 		return;
     
-    open_file(s);
+    openFile(s);
 }
 
 
@@ -1595,225 +1608,249 @@ void KGhostview::about()
 
 }
 
-void KGhostview::printStart()
+void KGhostview::printStart( int mode, bool reverseOrder, 
+					bool toFile,
+					QString printerName, QString spoolerCommand,
+					QString printerVariable,
+					int pgStart, int pgEnd )
 {
-    //printf("KGhostview::printStart\n");
-
+	QStrList *ml = new QStrList;
+	
+	switch( mode ) {
+		case PrintDialog::All:
+			break;
+				
+		case PrintDialog::Current:
+			ml->append( marklist->text( current_page ) );
+			break;
+				
+		case PrintDialog::Marked:
+			ml = marklist->markList();
+			break;
+				
+		case PrintDialog::Range:
+			if ( pgStart <= pgEnd )
+				for( int i = pgStart-1; i< pgEnd; i++ )
+					ml->append( marklist->text( i ) );
+			else 
+				for( int i = pgEnd-1; i< pgStart; i++ )
+					ml->append( marklist->text( i ) );
+			break;
+	}
+	
+	if ( reverseOrder ) {
+		QStrList *sl = new QStrList;
+		for( ml->last(); ml->current(); ml->prev() )
+			sl->append( ml->current() );
+		*ml = *sl;
+		delete sl;
+	}
+	
 	QString error;
-	//int  i;
-	//int copy_marked_list[1000];
-	int mode=PRINT_WHOLE;
 	
-	//for(i=0;i<1000;i++) {
-	//	copy_marked_list[i]=mark_page_list[i];
-	//	mark_page_list[i]=0;
-	//}
-	
-	switch( printSelection ) {
-		case 1:	mode=PRINT_WHOLE;
-				break;
-				
-		case 2:	mode=PRINT_MARKED;
-				//for(i=1;i<1000;i+=2) {
-				//	mark_page_list[i]=1;
-				//}
-				break;
-				
-		/*case 3:	mode=PRINT_MARKED;
-				for(i=0;i<1000;i+=2)
-					mark_page_list[i]=1;
-				break;
-				
-		case 4:	mode=PRINT_MARKED;
-				for(i=0;i<1000;i++)
-					mark_page_list[i]=copy_marked_list[i];
-				break;*/
-	}
-
-	if (error = print_file( printerName, (mode == PRINT_WHOLE))) {
-	    char *buf = (char *)malloc(strlen(error) +
-				 strlen(i18n("Printer Name : ")) + 2);
-	    sprintf(buf, "%s\n%s", error.data(), i18n("Printer Name : "));
-	    fprintf(stderr, "%s\n%s\n", error.data(), i18n("Printer Name : ")); //prompt
-	    free(buf);
+	if ( toFile ) {
+		error = printToFile( ( mode == PrintDialog::All ), ml );
+	} else { 
+		error = printToPrinter( printerName, spoolerCommand, printerVariable,
+						( mode == PrintDialog::All ), ml );
 	}
 	
-	//for(i=0;i<1000;i++) {
-	//	mark_page_list[i]=copy_marked_list[i];
-	//}
+	if ( error ) QMessageBox::warning( 0, i18n( "Printing error" ), error );
+	
+	delete ml;
 }
 
-//*********************************************************************************
-//
-//	POSTSCRIPT PARSING AND HANDLING FOR GHOSTSCRIPT
-//
-//	Look out !! This stuff is pretty messy.
-//
-//*********************************************************************************
-
-
-QString KGhostview::print_file(QString name, Bool whole_mode)
+QString KGhostview::printToFile( bool allMode, QStrList *ml )
 {
-    //printf("KGhostview::print_file\n");
+	FILE *pswrite;
+
+	if ( allMode ) {
+		QString buf( i18n(	"You chose to print all pages to a file.\n"
+					"This would produce a document identical to\n"
+					"that currently loaded into the viewer.\n"
+					"There is no need to print all pages into a new file.") );
+		return buf;
+	}
+	
+	QString dir;
+	if ( filename )
+		dir = QFileInfo( filename ).dirPath();	
+	
+	QString s = QFileDialog::getSaveFileName( dir, "*.*ps*", this);
+	if ( s.isNull() ) {
+		QString buf( i18n(	"No file name was given so\n"\
+					"nothing could be printed to a file.\n") );
+		return buf;
+	}
+	
+    if ( ( pswrite = fopen( s.data(), "w" ) ) == 0L ) {
+		QString buf( "Attempt to open file for writing failed.\n" );
+		if (errno <= sys_nerr) buf.append( sys_errlist[errno] );
+		return buf;
+    } else {
+		psCopyDoc( pswrite, ml );
+		fclose( pswrite );
+		return 0;
+    }
+}
+
+QString KGhostview::printToPrinter( QString printerName, QString spoolerCommand,
+						QString printerVariable, bool allMode, QStrList *ml )
+{
+//    printf("KGhostview::print_file\n");
 
     FILE *printer;
-    SIGVAL (*oldsig)(int);
-    int bytes=0;
-    char buf[BUFSIZ];
+    SIGVAL (*oldsig) (int);
+    int bytes = 0;
+    char buf[ BUFSIZ ];
     Bool failed;
     QString ret_val;
 
 	page->disableInterpreter();
 
-	// For SYSV, SVR4, USG printer variable=LPDEST, print command=lp
+	// For SYSV, SVR4, USG printer variable="LPDEST", print command=lp
+	// Other systems printer variable="PRINTER", print command=lpr
+	
+	printerVariable.append("\"");
+	printerVariable.prepend("\"");
 
-    if (name.data() != '\0') {
-		setenv("PRINTER", name, True); // print variable
+    if ( printerName.data() != '\0') {
+		setenv( printerVariable.data(), printerName.data(), True );
     }
-    
-    oldsig = signal(SIGPIPE, SIG_IGN);
-    printer = popen("lpr", "w");	// print command
-   
-    if (toc_text && !whole_mode) {
-		pscopydoc(printer);
-		
-		//printf("Done pscopydoc\n");
-		
+    oldsig = signal( SIGPIPE, SIG_IGN );
+    printer = popen( spoolerCommand.data(), "w" );
+	
+    if ( toc_text && !allMode ) {
+		psCopyDoc( printer, ml );
     } else {
-		FILE *tmpfile = ::fopen(filename, "r");
-		
-		//printf("Opening file\n");
-	
-		while ( (bytes = ::read( fileno(tmpfile), buf, BUFSIZ)) ) {
-			//printf("bytes written= %d\n", bytes);
+		FILE *tmpfile = ::fopen( filename, "r" );
+
+		while ( ( bytes = ::read( fileno(tmpfile), buf, BUFSIZ ) ) ) {
 	   		bytes = ::write( fileno(printer), buf, bytes);
-	   		//printf("bytes written= %d\n", bytes);
 	   	}
-		::fclose(tmpfile);
-		
-		//printf("closed tmpfile\n");
+		::fclose( tmpfile );
     }
 	
-    failed = (pclose(printer) != 0);
+    failed = ( pclose( printer ) != 0 );
 	
-    if (failed) {
-		sprintf(buf, i18n("Print failure : lpr")); // print error, command
-		ret_val = QString(buf);
+    if ( failed ) {
+		sprintf( buf, 
+			i18n( "Print failure : %s" ), spoolerCommand.data() );
+		ret_val = QString( buf );
     } else {
 		ret_val = 0;
     }
 	
-	signal(SIGPIPE, oldsig);
-	
-    return(ret_val);
+	signal( SIGPIPE, oldsig );
+    return( ret_val );
 }
 
-/* length calculates string length at compile time */
-/* can only be used with character constants */
-#define length(a) (sizeof(a)-1)
+// length calculates string length at compile time
+// can only be used with character constants
 
-/* Copy the headers, marked pages, and trailer to fp */
+#define length( a ) ( sizeof( a ) - 1 )
 
-void KGhostview::pscopydoc(FILE *fp)
+// Copy the headers, marked pages, and trailer to fp
+
+void KGhostview::psCopyDoc( FILE *fp, QStrList *ml )
 {
-    //printf("KGhostview::pscopydoc\n");
+//    printf("KGhostview::pscopydoc\n");
 
     FILE *psfile;
-    char text[PSLINELENGTH];
+    char text[ PSLINELENGTH ];
     char *comment;
     Bool pages_written = False;
     Bool pages_atend = False;
-   // Bool marked_pages = False;
     int pages = 0;
     int page = 1;
-    unsigned int i, j;
+    unsigned int i;
     long here;
 
-	QStrList *ml = new QStrList;
-	ml = marklist->markList();
-
-    psfile = fopen(filename, "r");
+    psfile = fopen( filename, "r" );
 
 	pages = ml->count();
-    if (pages == 0) {	/* User forgot to mark the pages */
-		KMsgBox::message (0, i18n("Print"),
-			i18n("No pages have been marked for printing."));
+    if ( pages == 0 ) {
+		KMsgBox::message( 0, i18n( "Printing error" ),
+			i18n(	"Printing failed because the list of\n"\
+					"pages to be printed was empty.\n" ) );
+		return;
     }
 
     here = doc->beginheader;
-    while ( (comment = pscopyuntil(psfile, fp, here,
-				 doc->endheader, "%%Pages:")) ) {
-	here = ftell(psfile);
-	if (pages_written || pages_atend) {
-	    free(comment);
-	    continue;
-	}
-	sscanf(comment+length("%%Pages:"), "%s", text);
-	if (strcmp(text, "(atend)") == 0) {
-	    fputs(comment, fp);
-	    pages_atend = True;
-	} else {
-	    switch (sscanf(comment+length("%%Pages:"), "%*d %d", &i)) {
-		case 1:
-		    fprintf(fp, "%%%%Pages: %d %d\n", pages, i);
-		    break;
-		default:
-		    fprintf(fp, "%%%%Pages: %d\n", pages);
-		    break;
-	    }
-	    pages_written = True;
-	}
-	free(comment);
+    while ( ( comment = pscopyuntil( psfile, fp, here,
+				doc->endheader, "%%Pages:" ) ) ) {
+		here = ftell( psfile );
+		if ( pages_written || pages_atend ) {
+	    	free( comment );
+	    	continue;
+		}
+		sscanf( comment + length("%%Pages:" ), "%s", text );
+		if ( strcmp( text, "(atend)" ) == 0 ) {
+	    	fputs( comment, fp );
+	    	pages_atend = True;
+		} else {
+	    	switch ( sscanf( comment + length( "%%Pages:" ), "%*d %d", &i ) ) {
+			case 1:
+		    	fprintf( fp, "%%%%Pages: %d %d\n", pages, i );
+		    	break;
+			default:
+		    	fprintf( fp, "%%%%Pages: %d\n", pages );
+		    	break;
+	    	}
+	    	pages_written = True;
+		}
+		free(comment);
     }
-    pscopy(psfile, fp, doc->beginpreview, doc->endpreview);
-    pscopy(psfile, fp, doc->begindefaults, doc->enddefaults);
-    pscopy(psfile, fp, doc->beginprolog, doc->endprolog);
-    pscopy(psfile, fp, doc->beginsetup, doc->endsetup);
-		
-	// Marklist changes	
-	// You have a list of paghes iterate through that list
-	//
+    pscopy( psfile, fp, doc->beginpreview, doc->endpreview );
+    pscopy( psfile, fp, doc->begindefaults, doc->enddefaults );
+    pscopy( psfile, fp, doc->beginprolog, doc->endprolog );
+    pscopy( psfile, fp, doc->beginsetup, doc->endsetup );
 	
-	for(ml->first(); ml->current(); ml->next() ) {
-		
-		// Need for both i and j comes from legacy code
-		i = j = QString( ml->current() ).toInt()-1;
+	QStrListIterator it( *ml );
 	
-	    comment = pscopyuntil(psfile, fp, doc->pages[i].begin,
-				  doc->pages[i].end, "%%Page:");
-	    fprintf(fp, "%%%%Page: %s %d\n",
-		    doc->pages[i].label, page++);
-	    free(comment);
-	    pscopy(psfile, fp, -1, doc->pages[i].end);
+	for(; it.current(); ++it ) {
+		
+		i = QString( it.current() ).toInt() - 1;
+	
+	    comment = pscopyuntil( psfile, fp, doc->pages[i].begin,
+				  					doc->pages[i].end, "%%Page:" );
+	    
+		fprintf( fp, "%%%%Page: %s %d\n",
+		    		doc->pages[i].label, page++ );
+	    
+		free( comment );
+	    pscopy( psfile, fp, -1, doc->pages[i].end );
 	}
 
     here = doc->begintrailer;
-    while ( (comment = pscopyuntil(psfile, fp, here,
-				 doc->endtrailer, "%%Pages:")) ) {
-	here = ftell(psfile);
-	if (pages_written) {
-	    free(comment);
-	    continue;
-	}
-	switch (sscanf(comment+length("%%Pages:"), "%*d %d", &i)) {
-	    case 1:
-		fprintf(fp, "%%%%Pages: %d %d\n", pages, i);
-		break;
-	    default:
-		fprintf(fp, "%%%%Pages: %d\n", pages);
-		break;
-	}
-	pages_written = True;
-	free(comment);
+    while ( ( comment = pscopyuntil(psfile, fp, here,
+				 			doc->endtrailer, "%%Pages:" ) ) ) {
+		here = ftell( psfile );
+		if ( pages_written ) {
+	    	free( comment );
+	    	continue;
+		}
+		switch ( sscanf( comment + length( "%%Pages:" ), "%*d %d", &i ) ) {
+	    	case 1:
+			fprintf( fp, "%%%%Pages: %d %d\n", pages, i );
+			break;
+	    	default:
+			fprintf( fp, "%%%%Pages: %d\n", pages );
+			break;
+		}
+		pages_written = True;
+		free( comment );
     }
-    fclose(psfile);
-
-	delete ml;
-
-    //if (marked_pages) fprintf(stderr, "Should unmark?\n");
+    fclose( psfile );
 }
+
 #undef length
 
+//*********************************************************************************
+//
+//	Look out below !! This stuff is pretty messy.
+//
+//*********************************************************************************
 
 
 Bool KGhostview::same_document_media()
@@ -1839,63 +1876,52 @@ Bool KGhostview::same_document_media()
     return False;
 }
 
-QString KGhostview::open_file( QString name )
+void KGhostview::openFile( QString name )
 {
-    //printf("KGhostview::open_file\n");
+//    printf("KGhostview::openFile\n");
 
     FILE *fp;
     struct stat sbuf;
 
-	if ( name.data() == '\0' )	
-		return( 0 );
+	if ( name.isNull() ) {
+		QMessageBox::warning(0, "File open error", 
+			"No file name was specified\n"\
+			"No document was loaded.\n" );
+		return;
+	}
 	
     if (strcmp(name, "-")) {
     
-		if ((fp = fopen(name, "r")) == 0) {
-		
-	    	/*
-	    	
-	    	char *buf = (char *)malloc(strlen(open_fail) +
-					  strlen(sys_errlist[errno]) + 1);
-	    	sprintf(buf, open_fail);
-	    	if (errno <= sys_nerr) strcat(buf, sys_errlist[errno]);
-	    	
-	    	*/
-	    	
-	    	// Error report on failure to open file not handled.
-	    	
-	    	//printf("Open file failed\n");
+		if ( ( fp = fopen(name, "r") ) == 0 ) {
 	    	
 	    	QString s;
-			s.sprintf( "The file\n\"%s\"\ncould not be found.", name.data());
- 			KMsgBox::message(0, "Error", s, 2 );
-	    	
-	    	return( 0 );
+			s.sprintf( "The document \n%s\ncould not be opened.\n"\
+						"No document has been loaded.\n\n", name.data() );
+			if (errno <= sys_nerr) {
+				s.append( "Error:\n" );
+				s.append( sys_errlist[errno] );
+			}
+ 			
+			QMessageBox::warning(0, "File open error", s );
+	    	return ;
 	    	
 		} else {
 
 	    	oldfilename.sprintf( filename.data() );
-	    	//printf("oldfilename = %s\n", oldfilename.data() );
 	    	filename.sprintf( name.data() );
-	    	//printf("filename = %s\n", filename.data() );
 	    	if ( psfile ) {
-	    		//printf("existing file -closing\n");
 	    		fclose( psfile );
 	    	}
 	    	psfile = fp;
 	    	stat( filename, &sbuf );
 	    	mtime = sbuf.st_mtime;
 	    	
-	    	new_file(0);
-	    	
-	    	//QString s( "KGhostview : " );
-	    	//s += QFileInfo( filename ).fileName();
-	    	//setCaption( s );
+	    	new_file( 0 );
       		setName();
 			
-			marklist->select(0);
-	    	show_page(0);
-	    	return( 0 );
+			//marklist->select(0);
+	    	//show_page(0);
+	    	return;
 		}
 		
     } else {
@@ -1907,14 +1933,11 @@ QString KGhostview::open_file( QString name )
 		
 		new_file(0);
 		
-		//QString s( "KGhostview : " );
-	    //s += QFileInfo( filename ).fileName();
-	    //setCaption( s );
 		setName();
 		
-		marklist->select(0);
+		//marklist->select(0);
       	
-		return(0);
+		return;
     }
 }
 
@@ -2141,7 +2164,7 @@ void KGhostview::build_pagemedia_menu()
 Bool useful_page_labels;
 Bool	KGhostview::setup()
 {
-    //printf("KGhostview::setup\n");
+//    printf("KGhostview::setup\n");
 
     int oldtoc_entry_length;
 	int k;
@@ -2173,7 +2196,32 @@ Bool	KGhostview::setup()
     // Scan document and start setting things up
     if (psfile) {
     	//printf ("Scan file -");
-    	doc = psscan(psfile);
+    	//doc = psscan(psfile); // 18/3/98 Jake Hamby patch
+
+// 18/3/98 Jake Hamby patch
+
+char *filename_dscP = 0;
+char *filename_uncP = 0;
+const char *cmd_scan_pdf = "gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
+const char *cmd_uncompress = "gzip -d -c %s > %s";
+doc = psscan(&psfile, filename, "/tmp/kghostview", &filename_dscP,
+   cmd_scan_pdf, &filename_uncP, cmd_uncompress);
+
+// UNIX won't delete these files until the last reference is closed,
+// so we can unlink() them now
+
+if(filename_dscP) {
+	unlink(filename_dscP);
+	free(filename_dscP);
+}
+
+if (filename_uncP) {
+	unlink(filename_uncP);
+	free(filename_uncP);
+}
+
+// end of patch
+
     	//if (doc == 0) //printf(" 0 FILE - ");
     	//printf ("scanned\n");
     }
@@ -2444,7 +2492,7 @@ void KGhostview::new_file(int number)
 
 void KGhostview::show_page(int number)
 {
-    //printf("KGhostview::show_page\n");
+//    printf("KGhostview::show_page\n");
 
     struct stat sbuf;
     Bool new_orient = FALSE, new_media = FALSE;

@@ -10,16 +10,20 @@
 #include <qcombo.h>
 
 class MessagesDialog : public QDialog {
-	Q_OBJECT
-public:
 
+	Q_OBJECT
+
+public:
 	MessagesDialog( QWidget *parent, const char *name );
 	QMultiLineEdit *messageBox;
 	QPushButton* cancel;
+	QFrame *frame;
 	
 public slots:
-
 	void clear();
+	
+protected slots:
+	void resizeEvent( QResizeEvent * );
 };
 
 #endif

@@ -17,84 +17,84 @@
 
 #include <qaccel.h>
 #include <qlayout.h>
+#include <qradiobt.h>
+#include <qgrpbox.h>
+#include <qvalidator.h>
+
 
 #include <klocale.h>
 #include <kapp.h>
 #include <kbuttonbox.h>
+#include <qmsgbox.h>
 
-PrintDialog::PrintDialog( QWidget *parent, const char *name )
+PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
+				QString spooler, QString variable )
 	: QDialog( parent, name, TRUE )
 {
 	setFocusPolicy(QWidget::StrongFocus);
+	setCaption( i18n( "Printer setup" ) );
 	
-	//QFrame* tmpQFrame;
-	//tmpQFrame = new QFrame( this );
-	//tmpQFrame->setGeometry( 5, 5, 250, 100 );
-	//tmpQFrame->setFrameStyle( QFrame::Box | QFrame::Sunken );
-	//tmpQFrame->setLineWidth( 1 );
-
-	int border = 5;
-	int vertSpacing = 0;
+	printerName = name;
+	spoolerCommand = spooler;
+	printerVariable = variable;
+	
+	int border = 10;
 	
 	QBoxLayout *topLayout = new QVBoxLayout( this, border );
 	
 	topLayout->addStretch( 10 );
 	
-	QGridLayout *grid = new QGridLayout( 5, 3, 5 );
+	QGridLayout *grid = new QGridLayout( 7, 2, 5 );
 	topLayout->addLayout( grid );
 	
-	grid->addRowSpacing(0,10);
-	//grid->setRowStretch(1,10);
-	grid->addRowSpacing(2,2);
-	//grid->setRowStretch(3,10);
-	grid->addRowSpacing(4,10);
+
+	grid->addRowSpacing(2,5);
+	grid->addRowSpacing(4,5);
 
 	grid->setColStretch(0,10);
-	grid->setColStretch(1,20);
-	grid->setColStretch(2,10);
-	//grid->setColStretch(3,10);
-	//grid->setColStretch(4,0);
-
+	grid->setColStretch(1,100);
+	
+	leName = new QLineEdit( this );
+	leName->setFocus();
+	leName->setFixedHeight( leName->sizeHint().height() );
+	leName->setText( pname );
+	
+	grid->addWidget( leName, 1, 1 );
+	
 	QLabel* tmpQLabel;
-	tmpQLabel = new QLabel( this );
-	//tmpQLabel->setGeometry( 25, 25, 80, 25 );
-	tmpQLabel->setText( i18n("Printer name") );
-	tmpQLabel->setAlignment( 290 );
+	tmpQLabel = new QLabel( leName, i18n("&Printer name"), this );
+	tmpQLabel->setAlignment( AlignRight | AlignVCenter | ShowPrefix );
 	tmpQLabel->setMinimumSize( tmpQLabel->sizeHint() );
-
+	
 	grid->addWidget( tmpQLabel, 1, 0 );
 	
-	nameLineEdit = new QLineEdit( this );
-	//nameLineEdit->setGeometry( 115, 25, 100, 25 );
-	nameLineEdit->setText( "lp" );
-	nameLineEdit->setFocus();
-	nameLineEdit->setFixedHeight( nameLineEdit->sizeHint().height() );
+	leSpool = new QLineEdit( this );
+	leSpool->setFixedHeight( leName->sizeHint().height() );
+	leSpool->setText( spooler );
 	
-	grid->addWidget( nameLineEdit, 1, 1 );
-
-	tmpQLabel = new QLabel( this );
-	//tmpQLabel->setGeometry( 30, 60, 75, 25 );
-	tmpQLabel->setText( i18n("Pages") );
-	tmpQLabel->setAlignment( 290 );
+	grid->addWidget( leSpool, 3, 1 );
+	
+	tmpQLabel = new QLabel( leSpool, i18n("&Spooler command"), this );
+	tmpQLabel->setAlignment(  AlignRight | AlignVCenter | ShowPrefix );
 	tmpQLabel->setMinimumSize( tmpQLabel->sizeHint() );
 	
 	grid->addWidget( tmpQLabel, 3, 0 );
 	
-	modeComboBox = new QComboBox( FALSE, this );
-	//modeComboBox->setGeometry( 115, 60, 100, 25 );
-	modeComboBox->insertItem( i18n("All") );
-	//modeComboBox->insertItem( i18n("Even") );
-	//modeComboBox->insertItem( i18n("Odd") );
-	modeComboBox->insertItem( i18n("Marked") );
-	modeComboBox->setFixedHeight( modeComboBox->sizeHint().height() );
-
-	grid->addWidget( modeComboBox, 3, 1 );
+	leVar = new QLineEdit( this );
+	leVar->setFixedHeight( leName->sizeHint().height() );
+	leVar->setText( variable );
+	
+	grid->addWidget( leVar, 5, 1 );
+	
+	tmpQLabel = new QLabel( leVar, i18n("&Environment variable"), this );
+	tmpQLabel->setAlignment(  AlignRight | AlignVCenter | ShowPrefix );
+	tmpQLabel->setMinimumSize( tmpQLabel->sizeHint() );
+	
+	grid->addWidget( tmpQLabel, 5, 0 );
 	
 	QFrame* tmpQFrame;
 	tmpQFrame = new QFrame( this );
-	//tmpQFrame->setGeometry( 5, 5, 250, 100 );
 	tmpQFrame->setFrameStyle( QFrame::HLine | QFrame::Sunken );
-	//tmpQFrame->setLineWidth( 1 );
 	tmpQFrame->setMinimumHeight( tmpQFrame->sizeHint().height() );
 	
 	topLayout->addWidget( tmpQFrame );
@@ -103,37 +103,222 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	
 	KButtonBox *bbox = new KButtonBox( this );
 	bbox->addStretch( 10 );
+		
+	QPushButton* ok = bbox->addButton( i18n("&OK") );
+	connect( ok, SIGNAL(clicked()), SLOT(setStrings()) );
+	
+	QPushButton* cancel = bbox->addButton( i18n("&Cancel") );
+	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
+		
+	bbox->layout();
+	topLayout->addWidget( bbox );
 
-	QPushButton* ok;
-	ok = bbox->addButton( i18n("OK") );
+	topLayout->activate();
 	
-	
-	//ok = new QPushButton( this );
-	//ok->setGeometry( 115, 115, 65, 30 );
-	//ok->setText( i18n("OK") );
-	//ok->setAutoDefault(TRUE);
-	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
+	resize( 300,0 );
+}
 
-	QPushButton* cancel;
-	cancel = bbox->addButton( i18n("Cancel") );
+void PrintSetup::setStrings() {
 	
-	//cancel = new QPushButton( this );
-	//cancel->setGeometry( 190, 115, 60, 30 );
-	//cancel->setText( i18n("Cancel") );
-	//cancel->setAutoDefault(TRUE);
+	printerName.sprintf( leName->text() );
+	spoolerCommand.sprintf( leSpool->text() );
+	printerVariable.sprintf( leVar->text() );
+	
+	accept();
+}
+
+
+PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
+							bool marked )		
+	: QDialog( parent, name, TRUE )
+{
+	setFocusPolicy(QWidget::StrongFocus);
+	
+	pgMode = All;
+	printerName.sprintf( "lp0" );
+	spoolerCommand.sprintf( "lpr" );
+	printerVariable.sprintf( "PRINTER" );
+	pgMax = maxPages;
+	pgStart=0; pgEnd=0;
+	
+	int border = 10;
+	
+	QBoxLayout *topLayout = new QVBoxLayout( this, border );
+	
+	cbFile = new QCheckBox( i18n("Print to file"), this );
+	cbFile->setFixedHeight( cbFile->sizeHint().height() );
+	
+	topLayout->addWidget( cbFile );
+	
+	QGroupBox *group = new QGroupBox( i18n( "Pages" ), this );
+	topLayout->addWidget( group, 10 );
+	
+	QGridLayout *grid = new QGridLayout( group, 5, 7, 5 );
+	
+	grid->setRowStretch( 0, 10 );
+	grid->setRowStretch( 1, 100 );
+	grid->setRowStretch( 2, 0 );
+	grid->setRowStretch( 3, 100 );
+	grid->setRowStretch( 4, 10 );
+	
+	grid->setColStretch( 0, 0 );
+	grid->setColStretch( 1, 100 );
+	grid->setColStretch( 2, 100 );
+	grid->setColStretch( 3, 100 );
+	grid->setColStretch( 4, 0 );
+	grid->setColStretch( 5, 100 );
+	grid->setColStretch( 6, 0 );
+		
+	pgGroup = new QButtonGroup( group );
+	pgGroup->hide();
+    pgGroup->setExclusive( true );
+	connect( pgGroup, SIGNAL( clicked( int ) ), SLOT( slotPageMode( int ) ) );
+	
+	int widest = 0;
+
+    QRadioButton *rb = new QRadioButton( i18n("&All"), group );
+	rb->setFixedHeight( rb->sizeHint().height()+6 );
+	rb->setChecked( true );
+    pgGroup->insert( rb, All );
+	
+	grid->addWidget( rb, 1, 1 );
+	
+	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
+	
+	rb = new QRadioButton( i18n("&Current"), group );
+	rb->setFixedHeight( rb->sizeHint().height()+6 );
+    pgGroup->insert( rb, Current );
+	
+	grid->addWidget( rb, 1, 2 );
+
+	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
+		
+	rb = new QRadioButton( i18n("&Marked"), group );
+	rb->setFixedHeight( rb->sizeHint().height()+6 );
+	if ( !marked ) rb->setEnabled( false );
+    pgGroup->insert( rb, Marked );
+	
+	grid->addWidget( rb, 3, 1 );
+
+	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
+	
+	rb = new QRadioButton( i18n("&Range"), group );
+	rb->setFixedHeight( rb->sizeHint().height()+6 );
+    pgGroup->insert( rb, Range );
+	
+	grid->addWidget( rb, 3, 2 );
+	
+	if ( rb->sizeHint().width() > widest ) widest = rb->sizeHint().width();
+	
+	leStart = new QLineEdit( group );
+	leStart->setFixedHeight( rb->sizeHint().height()+6 );
+	
+	grid->addWidget( leStart, 3, 3 );
+	
+	lTo = new QLabel( group );
+	lTo->setText( i18n("to") );
+	lTo->setAlignment( AlignCenter );
+	lTo->setMinimumSize( lTo->sizeHint() );
+
+	grid->addWidget( lTo, 3, 4 );
+	
+	leEnd = new QLineEdit( group );
+	leEnd->setFixedHeight( rb->sizeHint().height()+6 );
+	
+	grid->addWidget( leEnd, 3, 5 );
+	
+	group->setMinimumSize( QSize( 4*widest+25, 4*(rb->sizeHint().height()+6) ) );
+	
+	cbOrder = new QCheckBox( i18n("Print document in re&verse order"), this );
+	cbOrder->setFixedHeight( cbOrder->sizeHint().height() );
+	
+	topLayout->addWidget( cbOrder );
+	
+	
+	QFrame* tmpQFrame;
+	tmpQFrame = new QFrame( this );
+	tmpQFrame->setFrameStyle( QFrame::HLine | QFrame::Sunken );
+	tmpQFrame->setMinimumHeight( tmpQFrame->sizeHint().height() );
+	
+	topLayout->addWidget( tmpQFrame );
+	
+	// CREATE BUTTONS
+	
+	KButtonBox *bbox = new KButtonBox( this );
+	
+	QPushButton* setup = bbox->addButton( i18n("&Setup ...") );
+	connect( setup, SIGNAL(clicked()), SLOT( setup()) );
+	
+	
+	bbox->addStretch( 10 );
+
+	QPushButton* ok = bbox->addButton( i18n("&OK") );
+	connect( ok, SIGNAL(clicked()), SLOT( checkRange() ) );
+
+	QPushButton* cancel = bbox->addButton( i18n("&Cancel") );
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
 
 	bbox->layout();
 	topLayout->addWidget( bbox );
 	
-	//resize( 260, 150 );
-	//setMaximumSize( 260, 150 );
-	//setMinimumSize( 260, 150 );
-	
 	topLayout->activate();
+	
+	slotPageMode( All );
 	
 	resize( 250, 0 );
 	
+}
+
+void PrintDialog::setup()
+{
+	PrintSetup *ps = new PrintSetup( this, "print setup", printerName,
+		 spoolerCommand, printerVariable );
+	
+	if( ps->exec() ) {}
+}
+
+void PrintDialog::checkRange()
+{
+	if ( pgMode == Range ) {
+	
+		if ( QString( leStart->text() ).toInt() < 1 
+				|| QString( leStart->text() ).toInt() > pgMax
+				|| QString( leEnd->text() ).toInt() < 1 
+				|| QString( leEnd->text() ).toInt() > pgMax ) {
+
+			QMessageBox::critical( 0, i18n( "Range error" ),
+				i18n(	"The range of pages entered for printing\n"\
+						"can't be understood.\n\n"\
+						"The range specified must lie within the page\n"\
+						"range for this part of the document.\n"\
+						"Check the status bar for this information.\n" ) );
+			return;
+		}
+	}
+	
+	accept();		
+}
+
+void PrintDialog::slotPageMode( int m )
+{
+	pgMode = m;
+
+	switch ( pgMode ) {
+
+	case Range:
+	    
+	   	leStart->setEnabled( true );
+	    leEnd->setEnabled( true );
+		lTo->setEnabled( true );
+	    break;
+	
+	default:
+	    
+	    leStart->setEnabled( false );
+	    leEnd->setEnabled( false );
+		lTo->setEnabled( false );
+	    break;
+	}
 }
 
 

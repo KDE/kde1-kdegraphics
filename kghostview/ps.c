@@ -23,6 +23,27 @@
  *      FAX: (608)262-9777         Madison, WI   53706
  */
 
+/* 18/3/98 Jake Hamby patch */
+
+/*
+ * 98/03/17: Jake Hamby (jehamby@lightside.com):
+ * Added support for compressed/gzipped Postscript and PDF files.
+ * Compressed files are gunzipped to a temporary file, and PDF files are
+ * scanned by calling Ghostscript to generate a fake DSC file.
+ * This is based on code from GV 3.5.8, which is available at:
+ *    http://wwwthep.physik.uni-mainz.de/~plass/gv/
+ */
+ 
+/* GV by 	Johannes Plass
+ *			Department of Physics
+ *			Johannes Gutenberg University
+ *			Mainz, Germany
+ *		
+ *			<plass@thep.physik.uni-mainz.de>
+ */
+ 
+/* end of patch */
+
 #include <stdlib.h>
 #include <stdio.h>
 #ifndef SEEK_SET
@@ -48,23 +69,23 @@
 	/* list of standard paper sizes from Adobe's PPD. */
 
 struct documentmedia papersizes[] = {
-    "Letter",		 612,  792,
-    "LetterSmall",	 612,  792,
-    "Tabloid",		 792, 1224,
-    "Ledger",		1224,  792,
-    "Legal",		 612, 1008,
-    "Statement",	 396,  612,
-    "Executive",	 540,  720,
-    "A3",		 842, 1190,
-    "A4",		 595,  842,
-    "A4Small",		 595,  842,
-    "A5",		 420,  595,
-    "B4",		 729, 1032,
-    "B5",		 516,  729,
-    "Folio",		 612,  936,
-    "Quarto",		 610,  780,
-    "10x14",		 720, 1008,
-    NULL,		   0,    0
+    {"Letter",		 612,  792,},
+    {"LetterSmall",	 612,  792,},
+    {"Tabloid",		 792, 1224,},
+    {"Ledger",		1224,  792,},
+    {"Legal",		 612, 1008,},
+    {"Statement",	 396,  612,},
+    {"Executive",	 540,  720,},
+    {"A3",		 842, 1190,},
+    {"A4",		 595,  842,},
+    {"A4Small",		 595,  842,},
+    {"A5",		 420,  595,},
+    {"B4",		 729, 1032,},
+    {"B5",		 516,  729,},
+    {"Folio",		 612,  936,},
+    {"Quarto",		 610,  780,},
+    {"10x14",		 720, 1008,},
+    {NULL,		   0,    0}
 };
 
 
@@ -183,11 +204,46 @@ static int  blank();
  *    loss.  There was no replacement readily available, so the mechanic
  *    installed a wing from a DC-2.
  */
+ 
+/* Jake Hamby patch 18/3/98 */
+/* Following text added */
+ 
+#include <sys/stat.h>
+int
+file_fileIsNotUseful(fn)
+  char *fn;
+{
+  struct stat s;
+  int r=0;
+  if (!fn || stat(fn,&s)  || (S_ISDIR(s.st_mode)) || s.st_size==0) r=1;
+  return(r);
+}
+
+char *
+file_getTmpFilename(tmpprefix)
+   char *tmpprefix;
+{
+  char *buf = malloc(BUFSIZ);
+  if (buf == NULL) {
+	fprintf(stderr, "Fatal Error: Dynamic memory exhausted.\n");
+	exit(-1);
+  }
+  sprintf(buf, "%s%i", tmpprefix, (int) time(0L));
+  return buf;
+}
+
+/* end of patch */
 
 struct document *
-psscan(file)
-    FILE *file;
+/* Jake Hamby patch 18/3/98 */
+/* psscan(file)
+    FILE *file;*/
+psscan(FILE **fileP, const char *filename, const char *tmpprefix, 
+        char **filename_dscP, const char *cmd_scan_pdf, 
+        char **filename_uncP, const char *cmd_uncompress)
 {
+	FILE *file; /* Added in patch */
+/* end of patch */
     struct document *doc;
     int bb_set = NONE;
     int pages_set = NONE;
@@ -212,6 +268,48 @@ psscan(file)
     char *cp;
     struct documentmedia *dmp;
     
+/* Jake Hamby patch */
+/* Following code added */
+
+if (cmd_uncompress) {
+	char b[2];
+	if (!(fread(b, sizeof(char),2, *fileP) == 2)
+	|| b[0] != '\037' || (b[1] != '\235' && b[1] != '\213')) {
+		rewind(*fileP);
+		cmd_uncompress=NULL;
+	}
+}
+if (cmd_uncompress) {
+	struct document *retval = NULL;
+	FILE *tmpfile = (FILE*)NULL;
+	char *filename_unc;
+	char cmd[BUFSIZ];
+	/*char s[BUFSIZ];*/
+	filename_unc = file_getTmpFilename(tmpprefix);
+	sprintf(cmd,cmd_uncompress,filename,filename_unc);
+	fprintf(stderr, "uncompress command:%s\n",cmd);
+	if (system(cmd) || file_fileIsNotUseful(filename_unc)) {
+		unc_exec_failed:
+		fprintf(stderr, "uncompressing failed\n");
+		if (tmpfile) fclose(tmpfile);
+		unlink(filename_unc);
+		unc_ok:
+		free(filename_unc);
+		return(retval);
+	}
+	tmpfile = fopen(filename_unc, "r");
+	if (!tmpfile) goto unc_exec_failed;
+	fclose(*fileP);
+	*fileP = tmpfile;
+	retval = psscan(fileP,filename_unc,tmpprefix,filename_dscP,cmd_scan_pdf,NULL,NULL);
+	*filename_uncP = strdup(filename_unc);
+	goto unc_ok;
+}
+
+file = *fileP;
+
+/*end of patch */
+
     rewind(file);
     if (readline(line, sizeof line, file, &position, &line_len) == NULL) {
 	fprintf(stderr, "Warning: empty file.\n");
@@ -227,11 +325,49 @@ psscan(file)
 	    exit(-1);
 	}
 	memset(doc, 0, sizeof(struct document));
+
+/* Jake Hamby patch 18/3/98 */
+
 	sscanf(line, "%*s %s", text);
-	doc->epsf = iscomment(text, "EPSF-");
+	/*doc->epsf = iscomment(text, "EPSF-");*/
+	doc->epsf = iscomment(text, "EPSF"); /* Hamby - This line changed */
 	doc->beginheader = position;
 	section_len = line_len;
-    } else {
+/* Start of added code section */
+} else if (iscomment(line,"%PDF-") && cmd_scan_pdf) {
+	struct document *retval = NULL;
+	FILE *tmpfile = (FILE*)NULL;
+	char *filename_dsc;
+	char cmd[512];
+	char s[512];
+	filename_dsc=file_getTmpFilename(tmpprefix);
+	sprintf(cmd,cmd_scan_pdf,filename,filename_dsc);
+	fprintf(stderr, "PDF scan command:%s\n",cmd);
+	if (system(cmd) || file_fileIsNotUseful(filename_dsc)) {
+		scan_exec_failed:
+		sprintf(s,"Execution of\n%s\nfailed.",cmd);
+		scan_failed:
+		fprintf(stderr, "Error: %s\n", s);
+		if (tmpfile) fclose(tmpfile);
+		unlink(filename_dsc);
+		scan_ok:
+		free(filename_dsc);
+		return(retval);
+	}
+	tmpfile = fopen(filename_dsc, "r");
+	if (!tmpfile) goto scan_exec_failed;
+	fclose(*fileP);
+	*fileP = tmpfile;
+	retval = psscan(fileP,filename_dsc,tmpprefix,filename_dscP,cmd_scan_pdf,NULL,NULL);
+	if (!retval) {
+		sprintf(s,"Scanning\n%s\nfailed.",filename_dsc);
+		goto scan_failed;
+	}
+	*filename_dscP = strdup(filename_dsc);
+	goto scan_ok;
+/* end of added code section */
+/* end of patch */
+	} else {
 	return(NULL);
     }
 

@@ -1,9 +1,9 @@
 
-16/3/98
+18/3/98
 Mark Donohoe
 Please direct any bug reports to me (donohoe@kde.org).
 
-KGHOSTVIEW 0.6.3 - Alpha release
+KGHOSTVIEW 0.7 - Beta release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -24,15 +24,32 @@ INSTALL
 
 If Ghostview works for you then so should KGhostview.
 However, all VMS support has been removed and it has only
-been tested on Linux. Printer support for SYSV, SVR4 and USG
-is missing from this release.
+been tested on Linux.
+
+For printer support on SYSV, SVR4 and USG systems go into print setup and set
+the spool command to "lp", the printer name to your desired printer
+( eg. "lp0" ) and the environment variable name to "LPDEST".
 
 TODO
 
-- PDF support
-- Standardise kdvi and kghostview
-- Clean fix for the XError (Bad window parameter) bug
+- Improve PDF support
+- Finalise kdvi and kghostview standard
 - Generally clean code
+
+CHANGES V0.7
+
+- Patch from Jake Hamy <jehamby@lightside.com> which incorporates code from
+  Johanes Plass' GV. This adds (1) Compressed file support, (2) PDF support
+  ( Currently limited by ghostscript's poor handling of this format )
+- Fixed major performance bug which caused gs to be repeatedly restarted
+- Improved print dialog
+  - Print to file
+  - Print all, current, marked, or range of pages
+  - Setup spooler command, printer name
+  - Reverse order of printing
+- Much better keyboard support
+- Improved geometry management
+- Improved warning and error dialogs
 
 CHANGES V0.6.3
 

@@ -11,7 +11,7 @@
 #include <stdio.h>
 
 #include <qfiledlg.h>
-#include <kmsgbox.h>
+#include <qmsgbox.h>
 #include <klocale.h>
 #include <kapp.h>
 #include <kurl.h>
@@ -22,10 +22,12 @@ Display *kde_display;
 
 void Syntax(char *call)
 {
-    printf(i18n("Usage: %s\n"), call);
-    printf(i18n("[filename]\n"));
-    printf(i18n("See Qt documentation for command line options\n"));
-    exit(1);
+	QString s( i18n( "Usage: " ) );
+	s.append( call );
+	s.append( i18n( " [filename] <siwtches>\n\n" ) );
+	s.append( i18n( "See KDE and Qt documentation for\n"\
+					"command line options.\n" ) );
+	QMessageBox::warning( 0, i18n( "Command line error" ), s );
 }
 
 class MyApp : public KApplication
@@ -55,9 +57,9 @@ bool MyApp::x11EventFilter( XEvent *ev ) {
 	
 	if(ev->xany.type == ClientMessage) {
 		kg->page->mwin = ev->xclient.data.l[0];
-		fprintf(stderr, 
-			"kghostview: Ghostscript communication window set as 0x%lx\n",
-			kg->page->mwin);
+		//fprintf(stderr, 
+		//	"kghostview: Ghostscript communication window set as 0x%lx\n",
+		//	kg->page->mwin);
 		
 		XClientMessageEvent *cme = ( XClientMessageEvent * ) ev;
 		
@@ -112,17 +114,23 @@ int main( int argc, char **argv )
 			}
 			else
 			{
-			    if ((kg->psfile = fopen(argv[1], "r")) == 0) {
-				QString s;
-				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."),
-					   argv[1] );
- 				KMsgBox::message(0, i18n("Error"), s, 2 );
+			    if ( ( kg->psfile = fopen( argv[1], "r") ) == 0 ) {
+					QString s;
+					s.sprintf( i18n("The document named\n%s\n"\
+									"could not be opened.\n"\
+									"No document has been loaded.\n\n" ),
+					   			argv[1] );
+
+					if (errno <= sys_nerr) {
+						s.append( "Error:\n" );
+						s.append( sys_errlist[errno] );
+					}	   
+
+ 					QMessageBox::warning(0, i18n("Open file error"), s );
 			    }
 			    stat(kg->filename, &sbuf);
 			    kg->mtime = sbuf.st_mtime;
 			}
-		} else {
-			printf( i18n("Didn't recognise file\n") );
 		}
 	} else {
 		KGhostview *kg = new KGhostview ();

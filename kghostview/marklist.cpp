@@ -239,10 +239,21 @@ void MarkListTable::mouseMoveEvent ( QMouseEvent *e )
 	} while ( i != drag );
 }
 
+const char * MarkListTable::text( int index )
+{
+	if( index < 0 || index > (int) items.count() ) {
+		printf("MarkList: Index out of range");
+		return 0;
+	}
+	
+	MarkListTableItem *it = items.at( index );
+	return it->text();
+}
+
 void MarkListTable::select( int i )
 {
 	if ( i < 0 || i >= (signed) items.count() || i == sel )
-		return;
+		return ;
 
 	MarkListTableItem *it = items.at( i );
 	if ( sel != -1 )
@@ -258,7 +269,7 @@ void MarkListTable::select( int i )
 	updateCell( i, 1 );
 	//updateCell( i, 2 );
 	emit selected( i );
-	//emit selected( it->text() ); // Dutta 16/3/98
+	emit selected( it->text() );
 	if ( ( i<=0 || rowIsVisible( i-1 ) ) &&
 	     ( i>= (signed) items.count()-1 || rowIsVisible( i+1 ) ) )
 		return;
@@ -360,8 +371,13 @@ MarkList::MarkList( QWidget * parent = 0, const char * name = 0 )
 	
 	 
 	connect ( listTable, SIGNAL( selected( int ) ),
-		this, SLOT( select( int ) ) ); 
+		this, SLOT( selectSig( int ) ) ); 
 	
+}
+
+const char * MarkList::text( int index )
+{
+	return listTable->text( index );
 }
 
 void MarkList::setSelectColors( QColor bg, QColor fg ) 
@@ -398,6 +414,10 @@ void MarkList::clear()
 void MarkList::select(int index)
 {
 	listTable->select( index );
+}
+
+void MarkList::selectSig(int index)
+{
 	emit selected( index );
 }
 

@@ -76,7 +76,7 @@ public:
 	void set_magstep(int i);
 	void magnify(float *dpi, int magstep);
 	void new_file(int number);
-	QString open_file(QString name);
+	void openFile( QString name );
 	Bool same_document_media();
 	Bool set_new_orientation(int number);
 	Bool set_new_pagemedia( int number );
@@ -105,11 +105,19 @@ public:
 	Bool force_pagemedia;
 	Bool force_orientation;
 	int orientation;
-	int mark_page_list[1000];
+		
+	void printStart( int mode, bool reverseOrder, bool toFile, 
+					QString printerName, QString spoolerCommmand,
+					QString printerVariable,
+					int pgStart, int pgEnd );
+				
+	QString printToFile( bool allMode, QStrList *ml  );
+				
+	QString printToPrinter( QString printerName, 
+				QString spoolerCommand, QString printerVariable,
+				bool allMode, QStrList *ml  );
 	
-	QString print_file(QString name, Bool whole_mode);
-	void pscopydoc(FILE *fp);
-	void printStart();
+	void psCopyDoc( FILE *fp, QStrList *ml );
 	
 	void bindKeys();
 	void changeMenuAccel( QPopupMenu *menu, int id, const char *functionName );

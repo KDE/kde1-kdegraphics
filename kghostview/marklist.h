@@ -43,6 +43,7 @@ public:
 	void	setAutoUpdate ( bool enable );
 	void	clear();
 	int	rowHeight();
+	const char *text( int index );
 	
 	QColor selectColor;
 	QColor selectTextColor;
@@ -58,7 +59,7 @@ public slots:
 
 signals:
 	void	selected( int index );
-	// void	selected( const char * text );	// Dutta 16/3/98
+	void	selected( const char * text );
 
 protected:
 	void	mousePressEvent ( QMouseEvent* );
@@ -90,6 +91,7 @@ public:
 	void	setAutoUpdate ( bool enable );
 	void	clear();
 	void 	setSelectColors( QColor bg, QColor fg );
+	const char *text( int index );
 	
 	QColor selectColor;
 	QColor selectTextColor;
@@ -108,6 +110,9 @@ signals:
 	
 protected:
 	void resizeEvent( QResizeEvent * );
+
+private slots:
+	void	selectSig(int index);
 
 private:
 	QLabel *markLabel;

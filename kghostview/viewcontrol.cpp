@@ -28,131 +28,96 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
 	
-	QBoxLayout *topLayout = new QVBoxLayout( this, 5 );
-	
-	topLayout->addSpacing( 10 );
-	
-	QBoxLayout *paddingLayout = new QHBoxLayout();
-	topLayout->addLayout( paddingLayout, 10 );
-	
+	QBoxLayout *topLayout = new QVBoxLayout( this, 10 );
+		
 	QGroupBox* vcGroupBox;
 	vcGroupBox = new QGroupBox(  this );
-	//vcGroupBox->setGeometry( 5, 10, 250, 150 );
 	vcGroupBox->setFrameStyle( 49 );
-	vcGroupBox->setTitle( i18n("Force changes to ") );
+	vcGroupBox->setTitle( i18n("Force changes to ...") );
 	vcGroupBox->setAlignment( 1 );
 	
-	paddingLayout->addSpacing( 0 );
-	paddingLayout->addWidget( vcGroupBox, 10 );
-	paddingLayout->addSpacing( 0 );
+	topLayout->addWidget( vcGroupBox, 10 );
 	
-	topLayout->addSpacing( 10 );
+	QGridLayout *grid = new QGridLayout( vcGroupBox, 5, 4, 5 );
 	
-	QGridLayout *grid = new QGridLayout( vcGroupBox, 5, 4, 10 );
-	
-	grid->setRowStretch(0,10);
+	grid->setRowStretch(0,0);
 	grid->setRowStretch(1,10);
 	grid->setRowStretch(2,10);
 	grid->setRowStretch(3,10);
-	grid->setRowStretch(4,10);
+	grid->setRowStretch(4,0);
 
 	grid->setColStretch(0,0);
-	grid->setColStretch(1,10);
-	grid->setColStretch(2,100);
+	grid->setColStretch(1,0);
+	grid->setColStretch(2,10);
 	grid->setColStretch(3,0);
-
 	
+	grid->addRowSpacing(0,10);
+
+	magComboBox = new QComboBox( FALSE, vcGroupBox );
+	magComboBox->setFixedHeight( magComboBox->sizeHint().height() );
+
+	grid->addWidget( magComboBox, 1, 2 );
+	
+	mediaComboBox = new QComboBox( FALSE, vcGroupBox );
+	mediaComboBox->setFixedHeight( magComboBox->sizeHint().height() );
+	
+	grid->addWidget( mediaComboBox, 2, 2 );
+	
+	orientComboBox = new QComboBox( FALSE, vcGroupBox );
+	orientComboBox->insertItem(i18n("Portrait"));
+	orientComboBox->insertItem(i18n("Landscape"));
+	orientComboBox->insertItem(i18n("Seascape"));
+	orientComboBox->insertItem(i18n("Upside down"));
+	orientComboBox->setFixedHeight( magComboBox->sizeHint().height() );
+					
+	grid->addWidget( orientComboBox, 3, 2 );
+		
 	int labelWidth = 0;
 
 	QLabel* vcLabel;
-	vcLabel = new QLabel( vcGroupBox );
-	//vcLabel->setGeometry( 20, 75, 90, 30 );
-	vcLabel->setText( i18n("Magnification") );
-	vcLabel->setAlignment( 290 );
+	vcLabel = new QLabel( magComboBox, i18n("&magnification"), vcGroupBox );
+	vcLabel->setAlignment( AlignRight | AlignVCenter | ShowPrefix );
 	if ( vcLabel->sizeHint().width() > labelWidth )
 		labelWidth = vcLabel->sizeHint().width();
 	vcLabel->setMinimumWidth( labelWidth );
 
 	grid->addWidget( vcLabel, 1, 1 );
 
-	vcLabel = new QLabel( vcGroupBox );
-	//vcLabel->setGeometry( 35, 110, 75, 30 );
-	vcLabel->setText( i18n("Media") );
-	vcLabel->setAlignment( 290 );
+	vcLabel = new QLabel( mediaComboBox, i18n("m&edia"), vcGroupBox );
+	vcLabel->setAlignment( AlignRight | AlignVCenter | ShowPrefix );
 	if ( vcLabel->sizeHint().width() > labelWidth )
 		labelWidth = vcLabel->sizeHint().width();
 	vcLabel->setMinimumWidth( labelWidth );
 	
 	grid->addWidget( vcLabel, 2, 1 );
 	
-	vcLabel = new QLabel( vcGroupBox );
-	//vcLabel->setGeometry( 35, 40, 75, 30 );
-	vcLabel->setText( i18n("Orientation") );
-	vcLabel->setAlignment( 290 );
+	vcLabel = new QLabel( orientComboBox, i18n("&orientation"), vcGroupBox );
+	vcLabel->setAlignment( AlignRight | AlignVCenter | ShowPrefix );
 	if ( vcLabel->sizeHint().width() > labelWidth )
 		labelWidth = vcLabel->sizeHint().width();
 	vcLabel->setMinimumWidth( labelWidth );
 	
 	grid->addWidget( vcLabel, 3, 1 );
-
-	magComboBox = new QComboBox( FALSE, vcGroupBox );
-	//magComboBox->setGeometry( 120, 80, 110, 25 );
-	magComboBox->setFixedHeight( magComboBox->sizeHint().height() );
-
-	grid->addWidget( magComboBox, 1, 2 );
 	
-	mediaComboBox = new QComboBox( FALSE, vcGroupBox );
-	//mediaComboBox->setGeometry( 120, 115, 110, 25 );
-	mediaComboBox->setFixedHeight( magComboBox->sizeHint().height() );
-	
-	grid->addWidget( mediaComboBox, 2, 2 );
-	
-	orientComboBox = new QComboBox( FALSE, vcGroupBox );
-	//orientComboBox->setGeometry( 120, 45, 110, 25 );
-	orientComboBox->insertItem(i18n("Portrait"));
-	orientComboBox->insertItem(i18n("Landscape"));
-	orientComboBox->insertItem(i18n("Seascape"));
-	orientComboBox->insertItem(i18n("Upside down"));
-	//orientComboBox->setFocus();
-	orientComboBox->setFixedHeight( magComboBox->sizeHint().height() );
-					
-	grid->addWidget( orientComboBox, 3, 2 );
-
-	vcGroupBox->setMinimumHeight( 4*(magComboBox->sizeHint().height()+10) );
+	vcGroupBox->setMinimumHeight( 4*magComboBox->sizeHint().height()+20 );
 	vcGroupBox->setMinimumWidth(
 		40 + labelWidth + orientComboBox->sizeHint().width() );
-	
-	topLayout->addStretch( 10 );
 	
 	// CREATE BUTTONS
 	
 	KButtonBox *bbox = new KButtonBox( this );
 	bbox->addStretch( 10 );
 
-	QPushButton* ok;
-	ok = bbox->addButton( i18n("OK") );
-	//ok = new QPushButton( this );
-	//ok->setGeometry( 120, 170, 60, 30 );
-	//ok->setText( i18n("Apply") );
-	//ok->setAutoDefault(TRUE);
+	QPushButton *ok = bbox->addButton( i18n("&Apply") );
 	connect( ok, SIGNAL(clicked()), SLOT(okClicked()) );
 
-	QPushButton* apply;
-	apply = bbox->addButton( i18n("Cancel") );
-	//apply = new QPushButton( this );
-	//apply->setGeometry( 190, 170, 60, 30 );
-	//apply->setText( i18n("Cancel") );
-	//apply->setAutoDefault(TRUE);
+	QPushButton *apply = bbox->addButton( i18n("&Dismiss") );
 	connect( apply, SIGNAL(clicked()), SLOT(reject()) );
 
 
 	bbox->layout();
 	topLayout->addWidget( bbox );
 
-	//resize( 260, 205 );
-	//setMaximumSize( 260, 205 );
-	//setMinimumSize( 260, 205 );
-	
 	topLayout->activate();
 	
 	resize( 250 ,0);
