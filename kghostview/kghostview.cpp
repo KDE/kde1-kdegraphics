@@ -171,13 +171,13 @@ KGhostview::KGhostview( QWidget *, char *name )
     // MENUBAR
     //
     
-	createMenubar();
-	
-	//
-	// TOOLBAR
-	//
-	
-	createToolbar();
+    createMenubar();
+    
+    //
+    // TOOLBAR
+    //
+    
+    createToolbar();
 	
     //
     // STATUSBAR
@@ -291,61 +291,60 @@ KGhostview::KGhostview( QWidget *, char *name )
 	resize( options_width, options_height );
 	show();
 	
-	if (psfile) {
-		setup();
-		//show_page( 0 );
-		//marklist->select( 0 );
-	}
+	if (psfile)
+	  {
+	    setup();
+	    //show_page( 0 );
+	    //marklist->select( 0 );
+	  }
 }
 
-//void KGhostview::pageActivated( const char * text) // Duda 16/3/98
-//{
-//	int pg = QString( text ).toInt();
-//	show_page(pg-1);
-//}
-
-void KGhostview::pageActivated( int pg ) // Duda 16/3/98
+void
+KGhostview::pageActivated( int pg ) // Duda 16/3/98
 {
-//	printf("KGhostview::pageActivated\n");
-	show_page(pg);
+  show_page(pg);
 }
 
-void KGhostview::updateRects()
+void
+KGhostview::updateRects()
 {	
-	//printf("KTopLevelWidget::updateRects()\n");
-	
-	KTopLevelWidget::updateRects();
-	
-	//printf("KTopLevelWidget::updateRects() returned\n");
+  //printf("KTopLevelWidget::updateRects()\n");
+  
+  KTopLevelWidget::updateRects();
+  
+  //printf("KTopLevelWidget::updateRects() returned\n");
 
-	marklist->setGeometry( 0, 0,
-		PAGELIST_WIDTH-1,
-		mainFrame->height());
-		
-	divider->setGeometry( PAGELIST_WIDTH, 0, PAGELIST_WIDTH+3,
-		mainFrame->height());
-
-	if( marklist->isVisible() ) {
-		page->setGeometry( PAGELIST_WIDTH+3, 0,
-			mainFrame->width()-PAGELIST_WIDTH-3,
-			mainFrame->height() );
-		
-	} else {
-		page->setGeometry( 0, 0,
-			mainFrame->width(),
-			mainFrame->height() );
-	}
+  marklist->setGeometry( 0, 0,
+			 PAGELIST_WIDTH-1,
+			 mainFrame->height());
+  
+  divider->setGeometry( PAGELIST_WIDTH, 0, PAGELIST_WIDTH+3,
+			mainFrame->height());
+  
+  if( marklist->isVisible() )
+    {
+      page->setGeometry( PAGELIST_WIDTH+3, 0,
+			 mainFrame->width()-PAGELIST_WIDTH-3,
+			 mainFrame->height() );
+      
+    }
+  else
+    {
+      page->setGeometry( 0, 0,
+			 mainFrame->width(),
+			 mainFrame->height() );
+    }
 }
 
-KGhostview::~KGhostview()
-{
-	//printf("KGhostview::~KGhostview()\n");
-	
-	//windowList.removeRef(this);
-	
-	//delete menubar;
-	//delete toolbar;
-}
+//KGhostview::~KGhostview()
+//{
+  //printf("KGhostview::~KGhostview()\n");
+  
+  //windowList.removeRef(this);
+  
+  //delete menubar;
+  //delete toolbar;
+//}
 
 void KGhostview::bindKeys()
 {    
@@ -1868,65 +1867,74 @@ Bool KGhostview::same_document_media()
     return False;
 }
 
-void KGhostview::openFile( QString name )
+void
+KGhostview::openFile( QString name )
 {
-//    printf("KGhostview::openFile\n");
-
-    FILE *fp;
-    struct stat sbuf;
-
-	if ( name.isNull() ) {
-		QMessageBox::warning(0, "Error opening file", 
-			"No file name was specified.\n"\
-			"No document was loaded.\n" );
-		return;
+  //    printf("KGhostview::openFile\n");
+  
+  FILE *fp;
+  struct stat sbuf;
+  
+  if ( name.isNull() )
+    {
+      QMessageBox::warning(0, "Error opening file", 
+			   "No file name was specified.\n"\
+			   "No document was loaded.\n" );
+      return;
+    }
+  
+  if (strcmp(name, "-"))
+    {
+      
+      if ( ( fp = fopen(name, "r") ) == 0 )
+	{
+	  
+	  QString s;
+	  s.sprintf( "The document could not be opened.\n"\
+		     "No document has been loaded.\n\n"\
+		     "%s\nError: %s", name.data(), strerror( errno ) );
+	  
+	  QMessageBox::warning(0, "Error opening file", s );
+	  return ;
+	  
 	}
-	
-    if (strcmp(name, "-")) {
-    
-		if ( ( fp = fopen(name, "r") ) == 0 ) {
-	    	
-	    	QString s;
-			s.sprintf( "The document could not be opened.\n"\
-						"No document has been loaded.\n\n"\
-						"%s\nError: %s", name.data(), strerror( errno ) );
- 			
-			QMessageBox::warning(0, "Error opening file", s );
-	    	return ;
-	    	
-		} else {
-
-	    	oldfilename.sprintf( filename.data() );
-	    	filename.sprintf( name.data() );
-	    	if ( psfile ) {
-	    		fclose( psfile );
-	    	}
-	    	psfile = fp;
-	    	stat( filename, &sbuf );
-	    	mtime = sbuf.st_mtime;
-	    	
-	    	new_file( 0 );
-      		setName();
-			
-			//marklist->select(0);
-	    	//show_page(0);
-	    	return;
-		}
-		
-    } else {
-    
-		oldfilename.sprintf( filename.data() );
-		filename.sprintf( name.data() );
-		if ( psfile ) fclose( psfile );
-		psfile = 0;
-		
-		new_file(0);
-		
-		setName();
-		
-		//marklist->select(0);
-      	
-		return;
+      else
+	{
+	  
+	  oldfilename.sprintf( filename.data() );
+	  filename.sprintf( name.data() );
+	  if ( psfile )
+	    {
+	      fclose( psfile );
+	    }
+	  psfile = fp;
+	  stat( filename, &sbuf );
+	  mtime = sbuf.st_mtime;
+	  
+	  new_file( 0 );
+	  setName();
+	  
+	  //marklist->select(0);
+	  //show_page(0);
+	  return;
+	}
+      
+    }
+  else
+    {
+      
+      oldfilename.sprintf( filename.data() );
+      filename.sprintf( name.data() );
+      if ( psfile ) fclose( psfile );
+      psfile = 0;
+      
+      new_file(0);
+      
+      setName();
+      
+      //marklist->select(0);
+      
+      return;
     }
 }
 
@@ -1943,8 +1951,7 @@ KGhostview::set_new_orientation(int number)
   //printf("******	Set new orientation\n");
 
   if (doc)
-    printf ("Current orientation: (%d)\n Default: (%d)\n",
-	    orientation, doc->default_page_orientation);
+    //    printf ("Current orientation: (%d)\n Default: (%d)\n",	    orientation, doc->default_page_orientation);
 
   if (force_orientation)
     {
@@ -2185,268 +2192,318 @@ void KGhostview::build_pagemedia_menu()
 }
 
 
-Bool useful_page_labels;
-Bool	KGhostview::setup()
+Bool useful_page_labels; /// -- ?
+Bool
+KGhostview::setup()
 {
-//    printf("KGhostview::setup\n");
-
-    int oldtoc_entry_length;
-	int k;
-    int this_page, last_page=0;
-	char temp_text[20];
+  //    printf("KGhostview::setup\n");
+  
+  int oldtoc_entry_length;
+  int k;
+  int this_page, last_page=0;
+  char temp_text[20];
+  
+  
+  if ( ! filename )
+    return False;
+  
+  //printf("Gone into setup\n");
+  // Reset to a known state.
+  psfree( olddoc );
+  //printf("Freed olddoc\n");
+  olddoc = doc;
+  doc = 0;
+  current_page = -1;
+  toc_text = 0;
+  oldtoc_entry_length = toc_entry_length;
+  //printf("Next - pages in part\n");
+  for(k=0;k<10;k++)
+    pages_in_part[k]=0;
+  num_parts=0;
+  
+  marklist->setAutoUpdate( FALSE );
+  //marklist->select(0);
+  marklist->clear();
+  
+  //printf("Reset state\n");
+  
+  // Scan document and start setting things up
+  if (psfile) {
+    //printf ("Scan file -");
+    //doc = psscan(psfile); // 18/3/98 Jake Hamby patch
     
+    // 18/3/98 Jake Hamby patch
     
-    if ( ! filename ) return False;
+    char *filename_dscP = 0;
+    char *filename_uncP = 0;
+    const char *cmd_scan_pdf = "gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
+    const char *cmd_uncompress = "gzip -d -c %s > %s";
+    doc = psscan(&psfile, filename, _PATH_TMP"/kghostview", &filename_dscP,
+		 cmd_scan_pdf, &filename_uncP, cmd_uncompress);
     
-    //printf("Gone into setup\n");
-    // Reset to a known state.
-    psfree( olddoc );
-    //printf("Freed olddoc\n");
-    olddoc = doc;
-    doc = 0;
-    current_page = -1;
-    toc_text = 0;
-    oldtoc_entry_length = toc_entry_length;
-    //printf("Next - pages in part\n");
-    for(k=0;k<10;k++) pages_in_part[k]=0;
-    num_parts=0;
-	
-	marklist->setAutoUpdate( FALSE );
-	//marklist->select(0);
-	marklist->clear();
-	
-	//printf("Reset state\n");
-	
-    // Scan document and start setting things up
-    if (psfile) {
-    	//printf ("Scan file -");
-    	//doc = psscan(psfile); // 18/3/98 Jake Hamby patch
-
-// 18/3/98 Jake Hamby patch
-
-char *filename_dscP = 0;
-char *filename_uncP = 0;
-const char *cmd_scan_pdf = "gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
-const char *cmd_uncompress = "gzip -d -c %s > %s";
-doc = psscan(&psfile, filename, _PATH_TMP"/kghostview", &filename_dscP,
-   cmd_scan_pdf, &filename_uncP, cmd_uncompress);
-
-// UNIX won't delete these files until the last reference is closed,
-// so we can unlink() them now
-
-if(filename_dscP) {
+    // UNIX won't delete these files until the last reference is closed,
+    // so we can unlink() them now
+    
+    if(filename_dscP)
+      {
 	unlink(filename_dscP);
 	free(filename_dscP);
-}
-
-if (filename_uncP) {
+      }
+    
+    if (filename_uncP)
+      {
 	unlink(filename_uncP);
 	free(filename_uncP);
+      }
+    
+    // end of patch
+    
+    //if (doc == 0) //printf(" 0 FILE - ");
+    //printf ("scanned\n");
+  }
+  
+  //
+  // Build table of contents
+  // Well, that's what it used to be called !!
+  //
+  if (doc && (!doc->epsf && doc->numpages > 0 ||
+	      doc->epsf && doc->numpages > 1))
+    {
+      int maxlen = 0;
+      unsigned int i, j;
+      useful_page_labels = False;
+      
+      if (doc->numpages == 1)
+	useful_page_labels = True;
+
+      for (i = 1; i < doc->numpages; i++)
+	if ( (useful_page_labels =
+	      (useful_page_labels || 
+	       strcmp(doc->pages[i-1].label, doc->pages[i].label))))
+	  break;
+
+      if (useful_page_labels)
+	{
+	  for (i = 0; i < doc->numpages; i++) 
+	    if((unsigned int)maxlen<strlen(doc->pages[i].label))
+	      maxlen=strlen(doc->pages[i].label);
+	}
+      else
+	{
+	  double x;
+	  x = doc->numpages;
+	  maxlen = (int)( log10(x) + 1 );
+	}
+      toc_entry_length = maxlen + 3;
+      toc_length = doc->numpages * toc_entry_length - 1;
+      toc_text = 1;
+      
+      for (i = 0; i < doc->numpages;i++)
+	{
+	  if (useful_page_labels)
+	    {
+	      if (doc->pageorder == DESCEND)
+		{
+		  j = (doc->numpages - 1) - i;
+		}
+	      else
+		{
+		  j = i;
+		}
+	      this_page=atoi(doc->pages[j].label);
+	      if(last_page>this_page)
+		{
+		  num_parts++;
+		}
+	      if (num_parts<10) pages_in_part[num_parts]++;
+	      
+	      last_page=this_page;
+	    }
+	}
+      page->filename = 0;
+      //printf("Set 0 filename for gs -- use pipe\n");
+      
+      QString s;
+      // finally set maked list
+      for ( i = 1; i <= doc->numpages;i++)
+	{
+	  j = doc->numpages-i;
+	  s.sprintf( "%s", doc->pages[j].label );
+	  marklist->insertItem( s, 0 );
+	}
+    }
+  else
+    {
+      toc_length = 0;
+      toc_entry_length = 3;
+      page->filename.sprintf( filename );
+      //printf("Set filename -- gs will open this file\n");
+      QString s;
+      s.sprintf( "1" );
+      marklist->insertItem( s, 0 );
+    }
+  //printf("Parsed document structure\n");
+  
+  marklist->setAutoUpdate( TRUE );
+  //marklist->select(0);
+  marklist->update();
+  
+  
+  //printf("number of parts %d\n", num_parts);
+  if (doc)
+    {
+      if (num_parts>10 || (unsigned int)num_parts==doc->numpages) 
+	{
+	  num_parts=0;
+	  pages_in_part[0]=doc->numpages;
+	}
+      if(num_parts==0)
+	{
+	  if(doc->numpages==0) 
+	    {
+	      sprintf(page_total_label, i18n("of 1    "));
+	    } 
+	  else if(doc->numpages>0 && doc->numpages<10)
+	    {
+	      sprintf(page_total_label, i18n("of %d    "), doc->numpages);
+	    } 
+	  else if (doc->numpages<100)
+	    {
+	      sprintf(page_total_label, i18n("of %d  "), doc->numpages);
+	    }
+	  else if (doc) 
+	    {
+	      sprintf(page_total_label, i18n("of %d"), doc->numpages);
+	    }
+	  else
+	    {
+	      sprintf(page_total_label, "         ");
+	    }
+	}
+      else
+	{
+	  if(pages_in_part[0]==0) 
+	    {
+	      sprintf(page_total_label, i18n("of 1    "));
+	    } 
+	  else if(pages_in_part[0]>0 && pages_in_part[0]<10) 
+	    {
+	      sprintf(page_total_label, i18n("of %d    "), pages_in_part[0]);
+	    } 
+	  else if (pages_in_part[0]<100) 
+	    {
+	      sprintf(page_total_label, i18n("of %d  "), pages_in_part[0]);
+	    }
+	  else if (doc) 
+	    {
+	      sprintf(page_total_label, i18n("of %d"), pages_in_part[0]);
+	    }
+	  else
+	    {
+	      sprintf(page_total_label, "         ");
+	    }
+	  
+	  sprintf(part_total_label, i18n("of %d"), num_parts+1);
+	}
+    }
+  //printf("Made table of contents\n");
+  
+  build_pagemedia_menu();
+  //printf("Built pagemedia menu\n");
+  
+  // Reset ghostscript and output messages popup
+  if (!doc || !olddoc ||
+      strcmp(oldfilename, filename) ||
+      olddoc->beginprolog != doc->beginprolog ||
+      olddoc->endprolog != doc->endprolog ||
+      olddoc->beginsetup != doc->beginsetup ||
+      olddoc->endsetup != doc->endsetup )
+    {
+      //printf("reset messages\n");
+      
+      page->disableInterpreter();
+      //printf("Disabled Interpreter\n");
+      
+      /**************************************************************
+       *	XtUnmanageChild(infopopup);
+       *	XmTextReplace(infotext, 0, output_position, 0_string);
+       *	info_up = False;
+       *	XtSetArg(args[0], XmNcursorPosition, 0);
+       *	XtSetValues(infotext, args, ONE);
+       *	output_position=0;
+       **************************************************************/
+    }
+  
+  if(current_page==-1) current_page=0;
+  
+  toolbar->setItemEnabled(ID_ZOOM_IN, TRUE);
+  toolbar->setItemEnabled(ID_ZOOM_OUT, TRUE);
+  toolbar->setItemEnabled(ID_RELOAD, TRUE);
+  toolbar->setItemEnabled(ID_PRINT, TRUE);
+  toolbar->setItemEnabled(ID_MARK, TRUE);
+  m_file->setItemEnabled(printID, TRUE);
+  
+  if(toc_text)
+    {
+      if( (unsigned int)current_page+1<doc->numpages )
+	{
+	  m_go->setItemEnabled(nextID, TRUE);
+	  toolbar->setItemEnabled(ID_NEXT, TRUE);
+	}
+      if( current_page-1>=0 )
+	{
+	  m_go->setItemEnabled(prevID, TRUE);
+	  toolbar->setItemEnabled(ID_PREV, TRUE);
+	}
+      m_go->setItemEnabled(goToPageID, TRUE);
+      m_go->setItemEnabled(goToStartID, TRUE);
+      m_go->setItemEnabled(goToEndID, TRUE);
+      m_go->setItemEnabled(readDownID, TRUE);
+      toolbar->setItemEnabled(ID_PAGE, TRUE);
+      toolbar->setItemEnabled(ID_START, TRUE);
+      toolbar->setItemEnabled(ID_END, TRUE);
+      toolbar->setItemEnabled(ID_READ, TRUE);
+    }
+  m_view->setItemEnabled(viewControlID, TRUE);
+  m_view->setItemEnabled(zoomInID, TRUE);
+  m_view->setItemEnabled(zoomOutID, TRUE);
+  m_view->setItemEnabled(shrinkWrapID, TRUE);
+  m_view->setItemEnabled(redisplayID, TRUE);
+  m_view->setItemEnabled(infoID, TRUE);
+  m_pagemarks->setItemEnabled(markCurrentID, TRUE);
+  m_pagemarks->setItemEnabled(markAllID, TRUE);
+  m_pagemarks->setItemEnabled(markEvenID, TRUE);
+  m_pagemarks->setItemEnabled(markOddID, TRUE);
+  m_pagemarks->setItemEnabled(toggleMarksID, TRUE);
+  m_pagemarks->setItemEnabled(removeMarksID, TRUE);
+  
+  statusbar->changeItem( filename.data(), ID_FILENAME );
+  switch(orientation)
+    {
+    case 1:
+      statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
+      break;
+    case 2:
+      statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
+      break;
+    case 3:
+      statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
+      break;
+    case 4:
+      statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
+      break;
+    }
+  sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
+  statusbar->changeItem( temp_text, ID_MAGSTEP );
+  
+  marklist->setAutoUpdate( TRUE );
+  marklist->update();
+  marklist->select(0);
+
+  //printf("Setup finished\n");
+  return oldtoc_entry_length != toc_entry_length;
 }
 
-// end of patch
-
-    	//if (doc == 0) //printf(" 0 FILE - ");
-    	//printf ("scanned\n");
-    }
-    
-    //
-    // Build table of contents
-    // Well, that's what it used to be called !!
-    //
-    if (doc && (!doc->epsf && doc->numpages > 0 ||
-		 doc->epsf && doc->numpages > 1)) {
-		int maxlen = 0;
-		unsigned int i, j;
-		useful_page_labels = False;
-
-		if (doc->numpages == 1) useful_page_labels = True;
-		for (i = 1; i < doc->numpages; i++)
-			if ( (useful_page_labels = (useful_page_labels ||
-				strcmp(doc->pages[i-1].label, doc->pages[i].label)))) break;
-		if (useful_page_labels) {
-			for (i = 0; i < doc->numpages; i++) 
-			if((unsigned int)maxlen<strlen(doc->pages[i].label))
-				maxlen=strlen(doc->pages[i].label);
-		} else {
-			double x;
-			x = doc->numpages;
-			maxlen = (int)( log10(x) + 1 );
-		}
-		toc_entry_length = maxlen + 3;
-		toc_length = doc->numpages * toc_entry_length - 1;
-		toc_text = 1;
-
-		for (i = 0; i < doc->numpages;
-			 i++) {
-			if (useful_page_labels) {
-			if (doc->pageorder == DESCEND) {
-				j = (doc->numpages - 1) - i;
-			} else {
-				j = i;
-			}
-				this_page=atoi(doc->pages[j].label);
-				if(last_page>this_page) {
-					num_parts++;
-				}
-				if (num_parts<10) pages_in_part[num_parts]++;
-			
-				last_page=this_page;
-			} else {
-			}
-		}
-		page->filename = 0;
-		//printf("Set 0 filename for gs -- use pipe\n");
-		
-		QString s;
-		// finally set maked list
-		for ( i = 1; i <= doc->numpages;
-			 i++) {
-			 j = doc->numpages-i;
-			 s.sprintf( "%s", doc->pages[j].label );
-			marklist->insertItem( s, 0 );
-		}
-		
-    } else {
-		toc_length = 0;
-		toc_entry_length = 3;
-		page->filename.sprintf( filename );
-		//printf("Set filename -- gs will open this file\n");
-		QString s;
-		s.sprintf( "1" );
-		marklist->insertItem( s, 0 );
-    }
-	//printf("Parsed document structure\n");
-	
-	marklist->setAutoUpdate( TRUE );
-	//marklist->select(0);
-	marklist->update();
-
-	
-	//printf("number of parts %d\n", num_parts);
-	if (doc) {
-		 if (num_parts>10 || (unsigned int)num_parts==doc->numpages) {
-			num_parts=0;
-			pages_in_part[0]=doc->numpages;
-		}
-		if(num_parts==0) {
-			if(doc->numpages==0) {
-				sprintf(page_total_label, i18n("of 1    "));
-			} else if(doc->numpages>0 && doc->numpages<10) {
-				sprintf(page_total_label, i18n("of %d    "), doc->numpages);
-			} else if (doc->numpages<100) {
-				sprintf(page_total_label, i18n("of %d  "), doc->numpages);
-			} else if (doc) {
-				sprintf(page_total_label, i18n("of %d"), doc->numpages);
-			} else {
-				sprintf(page_total_label, "         ");
-			}
-		} else {
-			if(pages_in_part[0]==0) {
-				sprintf(page_total_label, i18n("of 1    "));
-			} else if(pages_in_part[0]>0 && pages_in_part[0]<10) {
-				sprintf(page_total_label, i18n("of %d    "), pages_in_part[0]);
-			} else if (pages_in_part[0]<100) {
-				sprintf(page_total_label, i18n("of %d  "), pages_in_part[0]);
-			} else if (doc) {
-				sprintf(page_total_label, i18n("of %d"), pages_in_part[0]);
-			} else {
-				sprintf(page_total_label, "         ");
-			}
-
-			sprintf(part_total_label, i18n("of %d"), num_parts+1);
-		}
-	}
-	//printf("Made table of contents\n");
-	
-	build_pagemedia_menu();
-	//printf("Built pagemedia menu\n");
-	
-	// Reset ghostscript and output messages popup
-    if (
-    	!doc || !olddoc ||
-		strcmp(oldfilename, filename) ||
-		olddoc->beginprolog != doc->beginprolog ||
-		olddoc->endprolog != doc->endprolog ||
-		olddoc->beginsetup != doc->beginsetup ||
-		olddoc->endsetup != doc->endsetup
-	) {
-		//printf("reset messages\n");
-
-		page->disableInterpreter();
-		//printf("Disabled Interpreter\n");
-		
-			/**************************************************************
-			 *	XtUnmanageChild(infopopup);
-			 *	XmTextReplace(infotext, 0, output_position, 0_string);
-			 *	info_up = False;
-			 *	XtSetArg(args[0], XmNcursorPosition, 0);
-			 *	XtSetValues(infotext, args, ONE);
-			 *	output_position=0;
-			 **************************************************************/
-    }
-	
-	if(current_page==-1) current_page=0;
-	
-	toolbar->setItemEnabled(ID_ZOOM_IN, TRUE);
-	toolbar->setItemEnabled(ID_ZOOM_OUT, TRUE);
-	toolbar->setItemEnabled(ID_RELOAD, TRUE);
-    toolbar->setItemEnabled(ID_PRINT, TRUE);
-    toolbar->setItemEnabled(ID_MARK, TRUE);
-    m_file->setItemEnabled(printID, TRUE);
-    
-	if(toc_text) {
-		if( (unsigned int)current_page+1<doc->numpages ) {
-			m_go->setItemEnabled(nextID, TRUE);
-			toolbar->setItemEnabled(ID_NEXT, TRUE);
-		}
-		if( current_page-1>=0 ) {
-			m_go->setItemEnabled(prevID, TRUE);
-			toolbar->setItemEnabled(ID_PREV, TRUE);
-		}
-		m_go->setItemEnabled(goToPageID, TRUE);
-		m_go->setItemEnabled(goToStartID, TRUE);
-		m_go->setItemEnabled(goToEndID, TRUE);
-		m_go->setItemEnabled(readDownID, TRUE);
-		toolbar->setItemEnabled(ID_PAGE, TRUE);
-		toolbar->setItemEnabled(ID_START, TRUE);
-		toolbar->setItemEnabled(ID_END, TRUE);
-		toolbar->setItemEnabled(ID_READ, TRUE);
-	}
-	m_view->setItemEnabled(viewControlID, TRUE);
-	m_view->setItemEnabled(zoomInID, TRUE);
-	m_view->setItemEnabled(zoomOutID, TRUE);
-	m_view->setItemEnabled(shrinkWrapID, TRUE);
-	m_view->setItemEnabled(redisplayID, TRUE);
-	m_view->setItemEnabled(infoID, TRUE);
-	m_pagemarks->setItemEnabled(markCurrentID, TRUE);
-	m_pagemarks->setItemEnabled(markAllID, TRUE);
-	m_pagemarks->setItemEnabled(markEvenID, TRUE);
-	m_pagemarks->setItemEnabled(markOddID, TRUE);
-	m_pagemarks->setItemEnabled(toggleMarksID, TRUE);
-	m_pagemarks->setItemEnabled(removeMarksID, TRUE);
-	
-	statusbar->changeItem( filename.data(), ID_FILENAME );
-	switch(orientation) {
-		case 1:	statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
-				break;
-		case 2:	statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
-				break;
-		case 3:	statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
-				break;
-		case 4:	statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
-				break;
-	}
-	sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-	statusbar->changeItem( temp_text, ID_MAGSTEP );
-
-	marklist->setAutoUpdate( TRUE );
-	marklist->update();
-	marklist->select(0);
-
-    //printf("Setup finished\n");
-    return oldtoc_entry_length != toc_entry_length;
-}
 
 void KGhostview::changeFileRecord()
 {
@@ -2520,11 +2577,12 @@ void KGhostview::new_file( int number )
 
     if (set_new_orientation(number)) layout_changed = True;
     if (set_new_pagemedia(number)) layout_changed = True;
-    if (layout_changed) {
-    	//printf("Layout should change -- call KPS method\n");
-    	page->KPSLayout( True );
-		shrinkWrap();
-    }
+    if (layout_changed)
+      {
+	//printf("Layout should change -- call KPS method\n");
+	page->KPSLayout( True );
+	shrinkWrap();
+      }
 
 }
 
@@ -2724,18 +2782,13 @@ void KGhostview::magnify(float *dpi, int magstep)
 
     if (magstep < shrink_magsteps)
       {
-	*dpi = (int)((* dpi) *
-		     ((double)magstep/shrink_magsteps));
+	*dpi = ceil ( (int)((* dpi) *
+		     ((double)magstep/shrink_magsteps)) );
       }
     else
       {
-	*dpi = (int)((*dpi) + 
+	*dpi = ceil( (int)((*dpi) + 
 		     2*(*dpi)*
-		     ( (double) (magstep-shrink_magsteps)/expand_magsteps) );
+		     ( (double) (magstep-shrink_magsteps)/expand_magsteps)) );
       }
 }
-
-
-
-
-

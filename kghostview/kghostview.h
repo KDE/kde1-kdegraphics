@@ -64,7 +64,7 @@ class KGhostview : public KTopLevelWidget
 
 public:
 	KGhostview( QWidget *parent=0, char *name=0 );
-	~KGhostview();
+	//~KGhostview();
 
 	// Tells us what kind of job kghostview is waiting for.
     
