@@ -24,7 +24,7 @@ LIBDIR = $(prefix)/lib
 SHAREDIR=$(prefix)/share
 ICONDIR = $(SHAREDIR)/icons
 DOCSDIR = $(SHAREDIR)/doc/default/HTML/kghostview
-KDELNKDIR = $(SHAREDIR)/Graphics/applnk
+KDELNKDIR = $(SHAREDIR)/applnk/Graphics
 
 
 ########## Implicit Rules ##########
