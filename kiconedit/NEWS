@@ -9,7 +9,7 @@ _______________
  - Added drop site indication when using XDND.
  - Added QWhatsThis help (this is great!).
  - Started playing with XDND. The toolbar now has a drag source and the grid
-   supports both XDND and KNDN.
+   supports both XDND and KDND.
  - Added rulers (can be toggled from the configuration dialog).
  - Circular selection.
  - Configuration dialog:
