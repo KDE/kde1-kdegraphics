@@ -1,0 +1,674 @@
+# Icelandic translation of kdvi.pot
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Thorarinn R. Einarsson <thori@mindspring.com>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kdvi\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"PO-Revision-Date: 1998-11-04 10:38-0500\n"
+"Last-Translator: Thorarinn R. Einarsson <thori@mindspring.com>\n"
+"Language-Team: Icelandic <kde-isl@mmedia.is>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=8859-1\n"
+"Content-Transfer-Encoding: MIME\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:516
+msgid "Notice"
+msgstr "Tilkynning"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Breytingar á myndun leturs taka gildi næst\n"
+"þegar þú keyrir kdvi!"
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Breytingar á letur slóð taka gildi\n"
+"næst þegar þú keyrir kdvi!"
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Breytingar á Metafont ham taka gildi\n"
+"næst þegar þú keyrir kdvi!"
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Breytingar á upplausn taka gildi næst\n"
+"þegar þú keyrir kdvi!"
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Breytingar á Gamma taka gildi næst\n"
+"þegar þú keyrir kdvi!"
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "HÆ"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "Hvað er þetta? DVI vandamál!\n"
+
+#: kdvi.cpp:95
+msgid "No document"
+msgstr "Ekkert skjal"
+
+#: kdvi.cpp:111
+msgid "Toggle Menubar"
+msgstr "Víxla valslá"
+
+#: kdvi.cpp:113
+msgid "Mark page"
+msgstr "Merkja síðu"
+
+#: kdvi.cpp:115
+msgid "Redraw"
+msgstr "Endurteikna"
+
+#: kdvi.cpp:117
+msgid "Preferences ..."
+msgstr "Stillingar..."
+
+#: kdvi.cpp:176
+msgid "&Open ..."
+msgstr "&Opna..."
+
+#: kdvi.cpp:183
+msgid "Open &recent"
+msgstr "Opna &nýlegt"
+
+#: kdvi.cpp:185
+msgid "&Print ..."
+msgstr "&Prenta..."
+
+#: kdvi.cpp:193
+msgid "Zoom &in"
+msgstr "Renna &að"
+
+#: kdvi.cpp:194
+msgid "Zoom &out"
+msgstr "Renna &frá"
+
+#: kdvi.cpp:195
+msgid "&Fit to page"
+msgstr "&Fylla út síðuna"
+
+#: kdvi.cpp:196
+msgid "Fit to page &width"
+msgstr "&Fylla á breidd"
+
+#: kdvi.cpp:198
+msgid "&Redraw page"
+msgstr "&Endurteikna síðu"
+
+#: kdvi.cpp:207
+msgid "&First"
+msgstr "&Fyrsta"
+
+#: kdvi.cpp:208
+msgid "&Last"
+msgstr "&Síðasta"
+
+#: kdvi.cpp:209
+msgid "&Go to ..."
+msgstr "Fara á &bls..."
+
+#: kdvi.cpp:212
+msgid "&Page"
+msgstr "&Blaðsíða"
+
+#: kdvi.cpp:217
+msgid "&Preferences ..."
+msgstr "&Stillingar..."
+
+#: kdvi.cpp:218
+msgid "&Keys ..."
+msgstr "&Lyklar..."
+
+#: kdvi.cpp:220
+msgid "Make PK-&fonts"
+msgstr "Gera PK-&letur"
+
+#: kdvi.cpp:222
+msgid "Show PS"
+msgstr "Sýna PS"
+
+#: kdvi.cpp:224
+msgid "Show &Menubar"
+msgstr "Sýna &valslá"
+
+#: kdvi.cpp:226
+msgid "Show &Buttons"
+msgstr "Sýna &hnappa"
+
+#: kdvi.cpp:228
+msgid "Show Page Lis&t"
+msgstr "Sýna bls. lis&ta"
+
+#: kdvi.cpp:230
+msgid "Show &Statusbar"
+msgstr "Sýna &stöðuslá"
+
+#: kdvi.cpp:232
+msgid "Show Scro&llbars"
+msgstr "Sýna rennis&lár"
+
+#: kdvi.cpp:241
+msgid "DVI Viewer"
+msgstr "DVI skoðari"
+
+#: kdvi.cpp:243
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"eftir Markku Hihnala"
+
+#: kdvi.cpp:263
+msgid "Open document ..."
+msgstr "Opna skjal..."
+
+#: kdvi.cpp:264
+msgid "Reload document"
+msgstr "Sækja skjal aftur"
+
+#: kdvi.cpp:265
+msgid "Print ..."
+msgstr "Prenta..."
+
+#: kdvi.cpp:267
+msgid "Go to first page"
+msgstr "Fara á fyrstu bls"
+
+#: kdvi.cpp:268
+msgid "Go to previous page"
+msgstr "Fara á næstu bls"
+
+#: kdvi.cpp:269
+msgid "Go down then top of next page"
+msgstr "Fara efst á næstu síðu"
+
+#: kdvi.cpp:270
+msgid "Go to next page"
+msgstr "Fara á næstu síðu"
+
+#: kdvi.cpp:271
+msgid "Go to last page"
+msgstr "Á síðustu síðu"
+
+#: kdvi.cpp:273
+msgid "Decrease magnification"
+msgstr "Minnka stækkun"
+
+#: kdvi.cpp:274
+msgid "Small text"
+msgstr "Lítinn texta"
+
+#: kdvi.cpp:275
+msgid "Large text"
+msgstr "Stórann texta"
+
+#: kdvi.cpp:276
+msgid "Increase magnification"
+msgstr "Auka stækkun"
+
+#: kdvi.cpp:301
+msgid "Scroll window and switch the page"
+msgstr "Renna glugga og skipta blaðsíðu"
+
+#: kdvi.cpp:310
+msgid "Select page and mark pages for printing"
+msgstr "Velja blaðsíðu og merkja til prentunar"
+
+#: kdvi.cpp:325
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:327
+msgid "Shrink: xx"
+msgstr "Smækka: xx"
+
+#: kdvi.cpp:329
+msgid "Page: xxxx / xxxx"
+msgstr "Bls: xxxx / xxxx"
+
+#: kdvi.cpp:344 kdvi.cpp:397
+msgid "New window"
+msgstr "Nýjann glugga"
+
+#: kdvi.cpp:345 kdvi.cpp:398
+msgid "Open file"
+msgstr "Opna skjal"
+
+#: kdvi.cpp:346 kdvi.cpp:399
+msgid "Print dialog"
+msgstr "Útprentun"
+
+#: kdvi.cpp:348 kdvi.cpp:401
+msgid "Zoom in"
+msgstr "Renna að"
+
+#: kdvi.cpp:349 kdvi.cpp:402
+msgid "Zoom out"
+msgstr "Renna frá"
+
+#: kdvi.cpp:350 kdvi.cpp:403
+msgid "Fit window"
+msgstr "Aðlaga glugga"
+
+#: kdvi.cpp:351 kdvi.cpp:404
+msgid "Fit width"
+msgstr "Aðlaga breidd"
+
+#: kdvi.cpp:352 kdvi.cpp:405
+msgid "Redraw page"
+msgstr "Endurteikna síðu"
+
+#: kdvi.cpp:353 kdvi.cpp:407
+msgid "Next page"
+msgstr "Næstu síðu"
+
+#: kdvi.cpp:354 kdvi.cpp:406
+msgid "Previous page"
+msgstr "Fyrri síðu"
+
+#: kdvi.cpp:355 kdvi.cpp:409
+msgid "Last page"
+msgstr "Síðustu síðu"
+
+#: kdvi.cpp:356 kdvi.cpp:408
+msgid "First page"
+msgstr "Fyrstu síðu"
+
+#: kdvi.cpp:357 kdvi.cpp:410
+msgid "Goto page"
+msgstr "Fara á síðu"
+
+#: kdvi.cpp:358
+msgid "Configure keys"
+msgstr "Setja upp lykla"
+
+#: kdvi.cpp:359 kdvi.cpp:411
+msgid "Toggle show PS"
+msgstr "Víxla PS sýn"
+
+#: kdvi.cpp:360 kdvi.cpp:412
+msgid "Toggle menu bar"
+msgstr "Víxla valslá"
+
+#: kdvi.cpp:361 kdvi.cpp:413
+msgid "Toggle button bar"
+msgstr "Víxla hnappaslá"
+
+#: kdvi.cpp:362 kdvi.cpp:414
+msgid "Toggle page list"
+msgstr "Víxla blaðsíðulista"
+
+#: kdvi.cpp:363 kdvi.cpp:415
+msgid "Toggle status bar"
+msgstr "Víxla stöðuslá"
+
+#: kdvi.cpp:364 kdvi.cpp:416
+msgid "Toggle scroll bars"
+msgstr "Víxla rennislám"
+
+#: kdvi.cpp:468
+msgid "File open dialog is open"
+msgstr "Skráargluggi er opinn"
+
+#: kdvi.cpp:517
+msgid "Can't read file:\n"
+msgstr "Get ekki hlaðið skrá:\n"
+
+#: kdvi.cpp:523
+msgid "Opening "
+msgstr "Opna "
+
+#: kdvi.cpp:548
+msgid "Opened "
+msgstr "Opnaði"
+
+#: kdvi.cpp:558
+msgid "Print dialog is open"
+msgstr "Útprentunargluggi er opinn"
+
+#: kdvi.cpp:573
+msgid "View size fits page"
+msgstr "Sýn passar í glugga"
+
+#: kdvi.cpp:582
+msgid "View width fits page"
+msgstr "Sýn passar á breidd"
+
+#: kdvi.cpp:674
+msgid "Preferences applied"
+msgstr "Stillingum breytt"
+
+#: kdvi.cpp:678
+msgid " Page "
+msgstr " Síða "
+
+#: kdvi.cpp:680
+msgid "Go to page"
+msgstr "Fara á síðu"
+
+#: kdvi.cpp:694
+msgid "Go to"
+msgstr "Fara á"
+
+#: kdvi.cpp:715
+msgid "Missing PK-fonts will be generated"
+msgstr "PK-letur sem vantar verða mynduð"
+
+#: kdvi.cpp:716
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "PK-letur sem vantar verða skráð í 'missfont.log'"
+
+#: kdvi.cpp:732
+msgid "Postscript specials are rendered"
+msgstr "Postscript víðteiknað"
+
+#: kdvi.cpp:733
+msgid "Postscript specials are not rendered"
+msgstr "Postscript tákn ekki víðteiknuð"
+
+#: kdvi.cpp:749
+msgid "No menu bar"
+msgstr "Engin valslá"
+
+#: kdvi.cpp:749
+msgid "Menu bar is shown"
+msgstr "Valslá er til sýnd"
+
+#: kdvi.cpp:767
+msgid "No button bar"
+msgstr "Engin hnappaslá"
+
+#: kdvi.cpp:767
+msgid "Button bar is shown"
+msgstr "Hnappaslá er sýnd"
+
+#: kdvi.cpp:781
+msgid "Tool bar is shown"
+msgstr "Tækjaslá er sýnd"
+
+#: kdvi.cpp:781
+msgid "No tool bar"
+msgstr "Engin tækjaslá"
+
+#: kdvi.cpp:805
+msgid "No status bar"
+msgstr "Engin stöðuslá"
+
+#: kdvi.cpp:805
+msgid "Status bar is shown"
+msgstr "Stöðuslá er sýnd"
+
+#: kdvi.cpp:819
+msgid "Scroll bars are shown"
+msgstr "Rennislár eru sýndar"
+
+#: kdvi.cpp:819
+msgid "No scroll bars"
+msgstr "Engar rennislár"
+
+#: kdvi.cpp:876
+msgid "Page: "
+msgstr "Síða: "
+
+#: kdvi.cpp:876
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:907
+msgid "Large text button set to shrink factor "
+msgstr "Smækkunarstuðull stærri texta "
+
+#: kdvi.cpp:915
+msgid "Small text button set to shrink factor "
+msgstr "Smækkunarstuðull smærri texta"
+
+#: kdvi.cpp:939
+msgid "File reloaded"
+msgstr "Skjal endurhlaðið"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Merkja núverandi"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Afmerkja núverandi"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Merkja allar"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Merkja sléttar"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Merkja odda"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Víxla merkingum"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Eyða merkingum"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "Stillingar"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Valslá"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Hnappaslá"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Stöðuslá"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Síðulisti"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Rennislár"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Fjöldi nýlegra skjala"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Framkalla týndar leturgerðir"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Upplausn"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Metafont hamur"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "PK leturslóð"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Smækkunarstuðull smærri texta"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Smækkunarstuðull stærri texta"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Sýna postscript"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Afstallað postscript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Víðteikna"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Pappír"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Prenta "
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "Get ekki opnað dvi skjal!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Get ekki opnað dvi úttaksskjal!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "Ræð ekki við þessa dvi útgáfu!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Rangt blaðsíðuspan"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Sjálfgefinn prentari"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "&Nafn skjals:"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&Allar"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "&Núverandi"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Merktar"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "&Span"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "Ö&fugt"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 síða á bls"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 síður á bls"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 síður á bls"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Fylla raðir"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Fylla dálka"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "&Uppsetning"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Blaðsíðuröð"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Blaðsíður"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Prenta á"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Prentuppsetning"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Prentarar"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "Að &innan"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "Nota ps&nup"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "Nota &mpage"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "&Bæta við"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "&Spólaraskipun:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n-up"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Prentaðferð"

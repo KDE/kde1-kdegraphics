@@ -1,0 +1,359 @@
+# Icelandic translation of kfax.po
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Thorarinn Einarsson <thori@mindspring.com>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kfax\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"PO-Revision-Date: 1998-1-04 10:45-0500\n"
+"Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
+"Language-Team: is <kde-isl@mmedia.is>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: kfax.cpp:233 kfax.cpp:828
+msgid "Show &Tool Bar"
+msgstr "Sýna &tækjaslá"
+
+#: kfax.cpp:235 kfax.cpp:821
+msgid "Hide &Tool Bar"
+msgstr "Fela &tækjaslá"
+
+#: kfax.cpp:238 kfax.cpp:801
+msgid "Show &Status Bar"
+msgstr "Sýna &stöðuslá"
+
+#: kfax.cpp:240 kfax.cpp:794
+msgid "Hide &Status Bar"
+msgstr "Fela &stöðuslá"
+
+#: kfax.cpp:403
+msgid "Help page"
+msgstr "Hjálparsíða"
+
+#: kfax.cpp:405
+msgid "&Open Fax..."
+msgstr "&Opna fax..."
+
+#: kfax.cpp:406
+msgid "&Add Fax..."
+msgstr "Nýtt f&ax..."
+
+#: kfax.cpp:409
+msgid "Open &URL..."
+msgstr "Opna sló&ð..."
+
+#: kfax.cpp:410
+msgid "Save to U&RL..."
+msgstr "Vista sem s&lóð..."
+
+#: kfax.cpp:411
+msgid "&Close Fax"
+msgstr "&Loka faxi"
+
+#: kfax.cpp:418
+msgid "&Next Page"
+msgstr "&Næsta síða"
+
+#: kfax.cpp:419
+msgid "&Prev Page"
+msgstr "&Fyrri síða"
+
+#: kfax.cpp:420
+msgid "&First Page"
+msgstr "F&yrsta síða"
+
+#: kfax.cpp:421
+msgid "&Last Page"
+msgstr "&Síðasta síða"
+
+#: kfax.cpp:423
+msgid "&Rotate Page"
+msgstr "S&núa síðu"
+
+#: kfax.cpp:424
+msgid "&Mirror Page"
+msgstr "S&pegla síðu"
+
+#: kfax.cpp:425
+msgid "&Flip Page"
+msgstr "&Hvolfa síðu"
+
+#: kfax.cpp:427
+msgid "Zoom &in"
+msgstr "Renna &að"
+
+#: kfax.cpp:428
+msgid "Zoom &out"
+msgstr "Renna &frá"
+
+#: kfax.cpp:433
+msgid "&Fax Options"
+msgstr "&Fax stillingar"
+
+#: kfax.cpp:435
+msgid "&Tool Bar"
+msgstr "&Tækjaslá"
+
+#: kfax.cpp:436
+msgid "&Status Bar"
+msgstr "&Stöðuslá"
+
+#: kfax.cpp:463
+msgid "Go back"
+msgstr "Til baka"
+
+#: kfax.cpp:466
+msgid "Go forward"
+msgstr "Áfram"
+
+#: kfax.cpp:471
+msgid "Go to start"
+msgstr "Fara á byrjun"
+
+#: kfax.cpp:474
+msgid "Go to end"
+msgstr "Fara á enda"
+
+#: kfax.cpp:480
+msgid "Zoom in"
+msgstr "Renna að"
+
+#: kfax.cpp:483
+msgid "Zoom out"
+msgstr "Renna frá"
+
+#: kfax.cpp:488
+msgid "Print document"
+msgstr "Prenta skjal"
+
+#: kfax.cpp:497
+msgid "Go to page ..."
+msgstr "Fara á bls..."
+
+#: kfax.cpp:583
+msgid "Open Location:"
+msgstr "Opna slóð:"
+
+#: kfax.cpp:599
+msgid "You need to open a Fax first"
+msgstr "Þú þarft að opna eitthvað fax fyrst"
+
+#: kfax.cpp:605
+msgid "Save to Location:"
+msgstr "Vista í:"
+
+#: kfax.cpp:812
+msgid "Not yet implemented"
+msgstr "Ekki tilbúið"
+
+#: kfax.cpp:862
+msgid "     There is no document active      "
+msgstr "      Það er ekkert skjal virkt       "
+
+#: kfax.cpp:996
+#, c-format
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Ólögleg stærð á skjali:\n"
+"Breidd %.2f  Hæð %.2f\n"
+
+#: kfax.cpp:1012
+#, c-format
+msgid "Can't print to \"%s\"\n"
+msgstr "Get ekki prentað á \"%s\"\n"
+
+#: kfax.cpp:1023
+#, c-format
+msgid "Couldn't create %s\n"
+msgstr "Gat ekki búið til %s\n"
+
+#: kfax.cpp:1093
+msgid "Saving ..."
+msgstr "Vista..."
+
+#: kfax.cpp:1100
+msgid "Loading ..."
+msgstr "Sæki..."
+
+#: kfax.cpp:1127 kfax.cpp:1163
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"'copy file()' brást\n"
+"Gat ekki vistað skrá!"
+
+#: kfax.cpp:1133
+msgid "Saved"
+msgstr "Vistað"
+
+#: kfax.cpp:1140 kfax.cpp:1202
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax er að bíða eftir að aðgerð\n"
+"á netinu klári sitt starf.\n"
+"Hinkraðu við á meðan\n"
+
+
+#: kfax.cpp:1151 kfax.cpp:1215
+msgid "Could not communicate with KFM"
+msgstr "Samskipti við skráarstjórann (KFM) eru í ólagi"
+
+#: kfax.cpp:1192
+#, c-format
+msgid "Loading '%s'"
+msgstr "Hleð '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr "Búið"
+
+#: kfax.cpp:1209
+msgid "Calling KFM"
+msgstr "Kalla á skráarstjórann (KFM)"
+
+#: kfax.cpp:1222
+msgid "Starting Job"
+msgstr "Byrja á aðgerð"
+
+#: kfax.cpp:1225
+msgid "Connected"
+msgstr "Tenging náðist"
+
+#: kfax.cpp:1227
+msgid "Waiting..."
+msgstr "Bíð..."
+
+#: kfax.cpp:2078
+msgid "You need to open a fax page first."
+msgstr "Þú þarft fyrst að opna fax blaðsíðu."
+
+#: kfax.cpp:2748
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Þessi skrá er til nú þegar.\n"
+"Viltu skrifa yfir hana?\n"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "KFax Prentun"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Senda sem Postscript til prentara"
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Prentskipun:"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Prenta sem Postscript í skrá:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Leita"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Blaðsíðustærð:"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Stilla fax á blaðsíðustærð"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Bæta spássíum f. prentun (mælt í sm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Lárétt"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Lóðrétt"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Veldu skráarnafn"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "Þú verður að gefa upp skráarnafn ef þú vilt prenta út í skrá."
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"Þú verður að slá inn prentskipun eins og \"lpr\"\n"
+" ef þú vilt senda til prentara."
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "KFax stillingar"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Hrá fax upplausn"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Sjálfvirkt"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Fínkorna"
+
+#: options.cpp:74
+msgid "Normal"
+msgstr "Venjulegt"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Birtistillingar:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Á lengd"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Á hvolfi"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Öfugt"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Hrá fax gögn eru:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "LS-Bit fyrst"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Hrá föx eru:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "Hrá fax breidd:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "hæð:"
