@@ -556,6 +556,12 @@ msgid ""
 "(Note: The drag source uses the QT XDND protocol which is not yet standard "
 "in KDE)"
 msgstr ""
+"Træk & Slip\n"
+"\n"
+"Fra denne knap kan du trække en kopi af det aktuelle ikon og droppe "
+"det på et vindue der understøtter drop, f.eks. et andet Ikon Editor vindue.\n"
+"\n"
+"(Bemærk: Træk og slip knappen bruger QTs XDND protokol som endnu ikke er standard i KDE)."
 
 #: kiconedit.cpp:873
 msgid ""
@@ -563,6 +569,9 @@ msgid ""
 "\n"
 "Draw non-linear lines"
 msgstr ""
+"Frihånd\n"
+"\n"
+"Tegn ikke lineære linier"
 
 #: kiconedit.cpp:876
 msgid ""
@@ -570,6 +579,9 @@ msgid ""
 "\n"
 "Fill adjoining pixels with the same color with the current color"
 msgstr ""
+"Udfyld\n"
+"\n"
+"Fyld tilstødende pixels med samme farve som den aktuelle"
 
 #: kiconedit.cpp:879
 #, fuzzy
@@ -577,7 +589,9 @@ msgid ""
 "Rectangle\n"
 "\n"
 "Draw a rectangle"
-msgstr "Rektangel"
+msgstr "Rektangel\n"
+"\n"
+"Tegn et rektangel"
 
 #: kiconedit.cpp:882
 #, fuzzy
@@ -585,7 +599,9 @@ msgid ""
 "Filled rectangle\n"
 "\n"
 "Draw a filled rectangle"
-msgstr "Udfyldt rektangel"
+msgstr "Udfyldt rektangel\n"
+"\n"
+"Tegn et udfyldt rektangel"
 
 #: kiconedit.cpp:885
 #, fuzzy
@@ -593,7 +609,9 @@ msgid ""
 "Circle\n"
 "\n"
 "Draw a circle"
-msgstr "Cirkel"
+msgstr "Cirkel\n"
+"\n"
+"Tegn en cirkel"
 
 #: kiconedit.cpp:888
 #, fuzzy
@@ -601,7 +619,9 @@ msgid ""
 "Filled circle\n"
 "\n"
 "Draw a filled circle"
-msgstr "Udfyldt cirkel"
+msgstr "Udfyldt cirkel\n"
+"\n"
+"Tegn en udfyldt cirkel"
 
 #: kiconedit.cpp:891
 #, fuzzy
@@ -609,7 +629,9 @@ msgid ""
 "Ellipse\n"
 "\n"
 "Draw an ellipse"
-msgstr "Ellipse"
+msgstr "Ellipse\n"
+"\n"
+"Tegn en ellipse"
 
 #: kiconedit.cpp:894
 #, fuzzy
@@ -617,7 +639,9 @@ msgid ""
 "Filled ellipse\n"
 "\n"
 "Draw a filled ellipse"
-msgstr "Udfyldt ellipse"
+msgstr "Udfyldt ellipse\n"
+"\n"
+"Tegn en udfyldt ellipse"
 
 #: kiconedit.cpp:897
 msgid ""
@@ -625,6 +649,9 @@ msgid ""
 "\n"
 "Draw a straight line vertically, horizontically or in 45 dgr. angles"
 msgstr ""
+"Linie\n"
+"\n"
+"Tegn en lige linie vertikalt, horisontalt eller i en 45 graders vinkel"
 
 #: kiconedit.cpp:900
 msgid ""
@@ -632,6 +659,9 @@ msgid ""
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
+"Spray\n"
+"\n"
+"Tegn spredte pixels i den aktuelle farve"
 
 #: kiconedit.cpp:903
 msgid ""
@@ -639,6 +669,9 @@ msgid ""
 "\n"
 "The color of the pixel clicked on will be the current drawcolor"
 msgstr ""
+"Find\n"
+"\n"
+"Den farve i billedet du klikker på vil blive den aktuelle tegnefarve"
 
 #: kiconedit.cpp:906
 msgid ""
@@ -649,6 +682,12 @@ msgid ""
 "(Tip: If you want to draw transparent with a different tool then first click "
 "on \"Erase\" then on the tool you want to use)"
 msgstr ""
+"Visk ud\n"
+"\n"
+"Udvisk pixels. Sæt pixels til at være transparente\n"
+"\n"
+"(Tip: Hvis du vil tegne transparent med et andet tegneværktøj så klik først "
+"på \"Visk ud\", og derefter det værktøj du vil bruge)"
 
 #: kicongrid.cpp:651
 #, fuzzy
@@ -936,7 +975,7 @@ msgid ""
 "Note: Other settings of the toolbars can be reached\n"
 "from the toolbar \"handle\" or from the \"Options\" menu"
 msgstr ""
-"Note: Andre indstillinger for værktøjsbjælkerne kan nås\n"
+"Bemærk: Andre indstillinger for værktøjsbjælkerne kan nås\n"
 "via værktøjsbjælke \"håndtaget\" eller via menuen \"Indstillinger\""
 
 #: kiconconfig.cpp:424 kiconconfig.cpp:437
