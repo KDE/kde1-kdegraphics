@@ -1,0 +1,560 @@
+
+#: copyright.cpp:17
+msgid "Copyright"
+msgstr ""
+
+#: copyright.cpp:31
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#: goto.cpp:27
+msgid "Section"
+msgstr ""
+
+#: goto.cpp:40
+msgid "Page"
+msgstr ""
+
+#: goto.cpp:84 goto.cpp:90 goto.cpp:106 kghostview.cpp:1980
+#: kghostview.cpp:1992 kghostview.cpp:1997 kghostview.cpp:2252
+#, c-format
+msgid "of %d"
+msgstr ""
+
+#: info.cpp:28
+msgid "File :"
+msgstr ""
+
+#: info.cpp:33
+msgid "Title :"
+msgstr ""
+
+#: info.cpp:38
+msgid "Date :"
+msgstr ""
+
+#: interpreter.cpp:22
+msgid "General"
+msgstr ""
+
+#: interpreter.cpp:28
+msgid "Interpreter name"
+msgstr ""
+
+#: interpreter.cpp:42
+msgid "Antialiasing"
+msgstr ""
+
+#: interpreter.cpp:47
+msgid "Platform fonts"
+msgstr ""
+
+#: interpreter.cpp:52
+msgid "Messages"
+msgstr ""
+
+#: interpreter.cpp:59
+msgid "Palette"
+msgstr ""
+
+#: interpreter.cpp:64
+msgid "Color"
+msgstr ""
+
+#: interpreter.cpp:68
+msgid "Grayscale"
+msgstr ""
+
+#: interpreter.cpp:72
+msgid "Monochrome"
+msgstr ""
+
+#: interpreter.cpp:78
+msgid "Backing"
+msgstr ""
+
+#: interpreter.cpp:83
+msgid "Pixmap"
+msgstr ""
+
+#: interpreter.cpp:87
+msgid "Backing store"
+msgstr ""
+
+#: interpreter.cpp:103
+msgid "Defaults"
+msgstr ""
+
+#: interpreter.cpp:160
+msgid "gs"
+msgstr ""
+
+#: kghostview.cpp:140 kghostview.cpp:240 kghostview.cpp:317 kghostview.cpp:371
+msgid "Information"
+msgstr ""
+
+#: kghostview.cpp:147 kghostview.cpp:227 kghostview.cpp:278 kghostview.cpp:362
+#: kghostview.cpp:1136
+msgid "Print"
+msgstr ""
+
+#: kghostview.cpp:154 kghostview.cpp:229 kghostview.cpp:284 kghostview.cpp:369
+msgid "View Control"
+msgstr ""
+
+#: kghostview.cpp:225 kghostview.cpp:272 kghostview.cpp:364
+msgid "New"
+msgstr ""
+
+#: kghostview.cpp:230 kghostview.cpp:287 kghostview.cpp:374
+msgid "Go To Page"
+msgstr ""
+
+#: kghostview.cpp:231 kghostview.cpp:290 kghostview.cpp:367
+msgid "Zoom In"
+msgstr ""
+
+#: kghostview.cpp:232 kghostview.cpp:293 kghostview.cpp:368
+msgid "Zoom Out"
+msgstr ""
+
+#: kghostview.cpp:233 kghostview.cpp:296 kghostview.cpp:372
+msgid "Next Page"
+msgstr ""
+
+#: kghostview.cpp:234 kghostview.cpp:299 kghostview.cpp:373
+msgid "Prev Page"
+msgstr ""
+
+#: kghostview.cpp:235 kghostview.cpp:302
+msgid "Scroll Up"
+msgstr ""
+
+#: kghostview.cpp:236 kghostview.cpp:305
+msgid "Scroll Down"
+msgstr ""
+
+#: kghostview.cpp:237 kghostview.cpp:308
+msgid "Scroll Left"
+msgstr ""
+
+#: kghostview.cpp:238 kghostview.cpp:311
+msgid "Scroll Right"
+msgstr ""
+
+#: kghostview.cpp:239 kghostview.cpp:314 kghostview.cpp:370
+msgid "Redisplay"
+msgstr ""
+
+#: kghostview.cpp:347
+msgid "Configure interpreter"
+msgstr ""
+
+#: kghostview.cpp:403
+msgid "&New"
+msgstr ""
+
+#: kghostview.cpp:404
+msgid "&Open ..."
+msgstr ""
+
+#: kghostview.cpp:405
+msgid "&Close"
+msgstr ""
+
+#: kghostview.cpp:407
+msgid "&Print ..."
+msgstr ""
+
+#: kghostview.cpp:409
+msgid "&1."
+msgstr ""
+
+#: kghostview.cpp:410
+msgid "&2."
+msgstr ""
+
+#: kghostview.cpp:411
+msgid "&3."
+msgstr ""
+
+#: kghostview.cpp:412
+msgid "&4."
+msgstr ""
+
+#: kghostview.cpp:414
+msgid "E&xit"
+msgstr ""
+
+#: kghostview.cpp:422
+msgid "Zoom &in"
+msgstr ""
+
+#: kghostview.cpp:424
+msgid "Zoom &out"
+msgstr ""
+
+#: kghostview.cpp:426
+msgid "&View control ..."
+msgstr ""
+
+#: kghostview.cpp:429
+msgid "&Shrink wrap"
+msgstr ""
+
+#: kghostview.cpp:431
+msgid "&Redisplay"
+msgstr ""
+
+#: kghostview.cpp:433
+msgid "&Info ..."
+msgstr ""
+
+#: kghostview.cpp:438
+msgid "&Next page"
+msgstr ""
+
+#: kghostview.cpp:440
+msgid "&Previous Page"
+msgstr ""
+
+#: kghostview.cpp:442
+msgid "&Go to page ..."
+msgstr ""
+
+#: kghostview.cpp:445
+msgid "Go to &start"
+msgstr ""
+
+#: kghostview.cpp:447
+msgid "Go to &end"
+msgstr ""
+
+#: kghostview.cpp:449
+msgid "&Read down"
+msgstr ""
+
+#: kghostview.cpp:459
+msgid "&Configure interpreter ..."
+msgstr ""
+
+#: kghostview.cpp:461
+msgid "Show &tool bar"
+msgstr ""
+
+#: kghostview.cpp:462
+msgid "Show &status bar"
+msgstr ""
+
+#: kghostview.cpp:463
+msgid "Configure &key bindings ..."
+msgstr ""
+
+#: kghostview.cpp:465
+msgid "&Save Options"
+msgstr ""
+
+#: kghostview.cpp:472
+msgid "&About this application"
+msgstr ""
+
+#: kghostview.cpp:474
+msgid "&Help for this application"
+msgstr ""
+
+#: kghostview.cpp:476
+msgid "&Copyright"
+msgstr ""
+
+#: kghostview.cpp:481
+msgid "&File"
+msgstr ""
+
+#: kghostview.cpp:482
+msgid "&View"
+msgstr ""
+
+#: kghostview.cpp:483
+msgid "&Go"
+msgstr ""
+
+#: kghostview.cpp:484
+msgid "&Options"
+msgstr ""
+
+#: kghostview.cpp:486
+msgid "&Help"
+msgstr ""
+
+#: kghostview.cpp:569
+msgid "Go back"
+msgstr ""
+
+#: kghostview.cpp:572
+msgid "Go forward"
+msgstr ""
+
+#: kghostview.cpp:575
+msgid "Go to page ..."
+msgstr ""
+
+#: kghostview.cpp:580
+msgid "Change view ..."
+msgstr ""
+
+#: kghostview.cpp:585
+msgid "Print document"
+msgstr ""
+
+#: kghostview.cpp:588
+msgid "Mark this page"
+msgstr ""
+
+#: kghostview.cpp:593
+msgid "Go to start"
+msgstr ""
+
+#: kghostview.cpp:596
+msgid "Go to end"
+msgstr ""
+
+#: kghostview.cpp:599
+msgid "Read down the page"
+msgstr ""
+
+#: kghostview.cpp:626
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr ""
+
+#: kghostview.cpp:627
+#, c-format
+msgid "100 %"
+msgstr ""
+
+#: kghostview.cpp:628
+msgid "Upside Down"
+msgstr ""
+
+#: kghostview.cpp:653 kghostview.cpp:664 kghostview.cpp:674
+msgid "Sorry"
+msgstr ""
+
+#: kghostview.cpp:653
+msgid "Malformed URL."
+msgstr ""
+
+#: kghostview.cpp:665
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+
+#: kghostview.cpp:674
+msgid "Could not start or find KFM."
+msgstr ""
+
+#: kghostview.cpp:879 main.cpp:101
+msgid "KGhostview: Version 0.5"
+msgstr ""
+
+#: kghostview.cpp:1074 kghostview.cpp:2062 viewcontrol.cpp:29
+msgid "Portrait"
+msgstr ""
+
+#: kghostview.cpp:1076 kghostview.cpp:2068 viewcontrol.cpp:30
+msgid "Landscape"
+msgstr ""
+
+#: kghostview.cpp:1078 kghostview.cpp:2066 viewcontrol.cpp:31
+msgid "Seascape"
+msgstr ""
+
+#: kghostview.cpp:1080 kghostview.cpp:2064 viewcontrol.cpp:32
+msgid "Upside down"
+msgstr ""
+
+#: kghostview.cpp:1118
+msgid "Go to"
+msgstr ""
+
+#: kghostview.cpp:1257
+msgid "Turn antialiasing on"
+msgstr ""
+
+#: kghostview.cpp:1259
+msgid "Turn antialiasing off"
+msgstr ""
+
+#: kghostview.cpp:1270
+msgid "Show Ghostscript messages"
+msgstr ""
+
+#: kghostview.cpp:1272
+msgid "Hide Ghostscript messages"
+msgstr ""
+
+#: kghostview.cpp:1321
+msgid "Version 0.5"
+msgstr ""
+
+#: kghostview.cpp:1322
+msgid "Sorry, not ready yet"
+msgstr ""
+
+#: kghostview.cpp:1329
+msgid "About kghostview"
+msgstr ""
+
+#: kghostview.cpp:1330
+msgid ""
+"Version :\t0.5 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+
+#: kghostview.cpp:1376 kghostview.cpp:1377 kghostview.cpp:1378
+msgid "Printer Name : "
+msgstr ""
+
+#: kghostview.cpp:1442
+msgid "Print failure : lpr"
+msgstr ""
+
+#: kghostview.cpp:1974 kghostview.cpp:1986 kghostview.cpp:2223
+#: kghostview.cpp:2246
+msgid "of 1    "
+msgstr ""
+
+#: kghostview.cpp:1976 kghostview.cpp:1988 kghostview.cpp:2248
+#, c-format
+msgid "of %d    "
+msgstr ""
+
+#: kghostview.cpp:1978 kghostview.cpp:1990 kghostview.cpp:2250
+#: kghostview.cpp:2257
+#, c-format
+msgid "of %d  "
+msgstr ""
+
+#: kghostview.cpp:2082
+msgid "&1. "
+msgstr ""
+
+#: kghostview.cpp:2086
+msgid "&2. "
+msgstr ""
+
+#: kghostview.cpp:2090
+msgid "&3. "
+msgstr ""
+
+#: kghostview.cpp:2094
+msgid "&4. "
+msgstr ""
+
+#: kghostview.cpp:2222
+msgid "Sc.1 "
+msgstr ""
+
+#: kghostview.cpp:2225
+msgid "P.1 "
+msgstr ""
+
+#: kghostview.cpp:2227 kghostview.cpp:2240
+#, c-format
+msgid "P.%d "
+msgstr ""
+
+#: kghostview.cpp:2242
+#, c-format
+msgid "Sc.%d "
+msgstr ""
+
+#: main.cpp:19
+#, c-format
+msgid "Usage: %s\n"
+msgstr ""
+
+#: main.cpp:20
+msgid "[filename]\n"
+msgstr ""
+
+#: main.cpp:21
+msgid "See Qt documentation for command line options\n"
+msgstr ""
+
+#: main.cpp:89
+#, c-format
+msgid ""
+"The file\n"
+"\"%s\"\n"
+"could not be found."
+msgstr ""
+
+#: main.cpp:96
+msgid "Didn't recognise file\n"
+msgstr ""
+
+#: messages.cpp:17
+msgid "Ghostscript messages"
+msgstr ""
+
+#: messages.cpp:35
+msgid "Clear"
+msgstr ""
+
+#: print.cpp:27
+msgid "Printer name"
+msgstr ""
+
+#: print.cpp:38
+msgid "Pages"
+msgstr ""
+
+#: print.cpp:43
+msgid "All"
+msgstr ""
+
+#: print.cpp:44
+msgid "Even"
+msgstr ""
+
+#: print.cpp:45
+msgid "Odd"
+msgstr ""
+
+#: print.cpp:46
+msgid "Marked"
+msgstr ""
+
+#: viewcontrol.cpp:23
+msgid "Force changes"
+msgstr ""
+
+#: viewcontrol.cpp:45
+msgid "Magnification"
+msgstr ""
+
+#: viewcontrol.cpp:50
+msgid "Orientation"
+msgstr ""
+
+#: viewcontrol.cpp:55
+msgid "Media"
+msgstr ""
