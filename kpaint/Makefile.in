@@ -100,5 +100,6 @@ realclean:  clean
 	$(MAKE) -C tools realclean
 	-rm -f kpaint
 
-
+messages:
+	@XGETTEXT@ -C --keyword=translate -x ../../kdelibs/po/kde.po *.cpp
 
