@@ -1,5 +1,4 @@
 #include <kdebug.h>
-#include <qimage.h>
 #include <kimgio.h>
 #include "formats.h"
 #include "gif.h"
@@ -27,6 +26,14 @@ static FormatRecord formatlist[]= {
     0, 0,
   },
 #endif
+  {
+    "JPEG",
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat,
+    "^\377\330\377\340",
+    "*.jpeg *.jpg",
+    "jpeg",
+    0, 0,
+  },
   {
     "BMP",
     FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
@@ -91,6 +98,7 @@ void FormatManager::init(FormatRecord formatlist[])
 				 0, 
 				 rec->read_format, rec->write_format);
    }
+   // Register the ones implemented by kimgio (tiff, jpeg, png, ...)
    kimgioRegister();
 }
 	  
