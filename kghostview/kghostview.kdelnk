@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=PS Viewer
 Name[cs]=Prohlí¾eè PS souborù
+Name[da]=PS fremviser
 Name[de]=PS-Betrachter
 Name[es]=Visor Postscript
 Name[fi]=PS -Näyttäjä
@@ -24,6 +25,7 @@ Type=Application
 DocPath=kghostview/index.html
 Comment=PostScript document viewer
 Comment[cs]=Prohlí¾eè Postscriptových souborù
+Comment[da]=PostScript dokument fremviser
 Comment[de]=Betrachter für PostScript-Dokumente
 Comment[es]=Visor de documentos Postscript
 Comment[fi]=Postscript dokumentin näyttäjä
