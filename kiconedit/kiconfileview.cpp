@@ -37,7 +37,7 @@ QPixmap *KIconFileView::pix_lfolder = 0;
 QPixmap *KIconFileView::pix_file = 0;
 QPixmap *KIconFileView::pix_lfile = 0;
 
-bool KIconFileView::checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
+bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
 {
    if( !pixmap->load( filepath ))
      return false;
@@ -77,7 +77,7 @@ bool KIconFileView::checkXVFile(const KFileInfo *i, const char *filepath, QPixma
    return true;
 }
 
-bool KIconFileView::scalePixmap(QPixmap *pixmap)
+bool scalePixmap(QPixmap *pixmap)
 {
   int w, h;
     

@@ -28,6 +28,9 @@ class QWidget;
 #include <qpixmap.h>
 #include <kfileinfocontents.h>
 
+bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap);
+bool scalePixmap(QPixmap *pixmap);
+
 class KIconFileView : public QTableView, public KFileInfoContents {
     Q_OBJECT
 
@@ -55,8 +58,6 @@ protected:
     virtual int  cellWidth ( int col );
 
     void highlightItem(int row, int col);
-    bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap);
-    bool scalePixmap(QPixmap *pixmap);
 
     static QPixmap *pix_folder;
     static QPixmap *pix_lfolder;

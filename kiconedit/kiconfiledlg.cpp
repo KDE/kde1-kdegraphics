@@ -23,6 +23,8 @@
 #include <qlayout.h>
 #include "kiconfiledlg.h"
 #include "kiconfileview.h"
+#include "kiconcombiview.h"
+#include "kicondetaillist.h"
 
 KIconFileDlg::KIconFileDlg(const char *dirName, const char *filter,
 				 QWidget *parent, const char *name, 
@@ -131,19 +133,17 @@ KFileInfoContents *KIconFileDlg::initFileList( QWidget *parent )
 
     if (!mixDirsAndFiles)
 	
-        return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
-/*
-	return new KCombiView(KCombiView::DirList, 
-				  showDetails ? KCombiView::DetailView 
-				  : KCombiView::SimpleView,
+        //return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
+
+	return new KIconCombiView(KIconCombiView::DirList, 
+				  showDetails ? KIconCombiView::DetailView 
+				  : KIconCombiView::SimpleView,
 				  useSingleClick, dir->sorting(),
 				  parent, "_combi");
-  */  
     else
 	
 	if (showDetails)
-	    return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
-	    //return new KFileDetailList(useSingleClick, dir->sorting(), parent, "_details");
+	    return new KIconDetailList(useSingleClick, dir->sorting(), parent, "_details");
 	else
 	    return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
     
