@@ -1,7 +1,7 @@
 /*  
     kdraw - a small graphics drawing program for the KDE
 
-    Copyright (C) 1998 Thomas Tanghus (tanghus@earthling.net)
+    Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public

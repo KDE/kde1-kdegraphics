@@ -1,7 +1,7 @@
 /*  
     kiconedit - a small graphics drawing program for the KDE
 
-    Copyright (C) 1998 Thomas Tanghus (tanghus@earthling.net)
+    Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -23,10 +23,10 @@
 #define __KIE_VERSION_H__
 
 #define KIE_VERSION_MAJOR 0
-#define KIE_VERSION_MINOR 3
-#define KIE_VERSION_RELEASE 2
+#define KIE_VERSION_MINOR 4
+#define KIE_VERSION_RELEASE 0
 #define KIE_VERSION ((KIE_VERSION_MAJOR * 100) + (KIE_VERSION_MINOR *10) + KIE_VERSION_RELEASE)
-#define KIE_VERSION_STRING "0.3.2"
+#define KIE_VERSION_STRING "0.4.0"
 
 
 

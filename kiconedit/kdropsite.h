@@ -3,6 +3,9 @@
 
 #include <qwidget.h>
 #include <qdropsite.h>
+#include <qcursor.h>
+#include <qbitmap.h>
+
 
 class KDropSite: public QObject, QDropSite
 {
@@ -23,6 +26,9 @@ protected:
     void dragLeaveEvent( QDragLeaveEvent * );
     void dropEvent( QDropEvent * );
 
+    void createCursors();
+
+    QCursor cursorImage, cursorText;
     // this is a normal even
     //void mousePressEvent( QMouseEvent * );
 };

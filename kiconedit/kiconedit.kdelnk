@@ -1,21 +1,22 @@
 # KDE Config File
 [KDE Desktop Entry]
-SwallowTitle=
+BinaryPattern=kiconedit;
 SwallowExec=
-BinaryPattern=kdraw;
+SwallowTitle=
+Comment=An icon editor for creating KDE icons
 Comment[da]=En ikon editor til at lave KDE ikoner
 Comment[no]=En ikonredigerer for å lage KDE-ikoner
 Name=Icon Editor
-Protocols=file;ftp;http;tar;cgi;
-MiniIcon=kiconedit.xpm
 Name[da]=Ikon Editor
 Name[no]=Ikonredigerer
-MimeType=image/gif;image/jpeg;image/tiff;image/x-xpm;
-Comment=An icon editor for creating KDE icons
+Protocols=file;ftp;http;tar;cgi;
+MimeType=image/x-xpm;
 Exec=kiconedit -caption "%c" %i %m %u
 Icon=kiconedit.xpm
+MiniIcon=kiconedit.xpm
 TerminalOptions=
 Path=
 DocPath=kiconedit/index.html
 Type=Application
 Terminal=0
+

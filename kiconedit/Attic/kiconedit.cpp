@@ -643,7 +643,8 @@ bool KIconEdit::setupToolBar()
   toolbar->insertSeparator();
 
   toolbar->insertButton(Icon("newwin.xpm"),ID_FILE_NEWWIN,
-         SIGNAL(clicked()), this, SLOT(slotNewWin()), TRUE, i18n("New Window"));
+         SIGNAL(clicked()), this, SLOT(slotNewWin()), TRUE,
+                          i18n("New Window"));
   toolbar->alignItemRight( ID_FILE_NEWWIN, true);
     
   toolbar->insertWidget(ID_HELP_WHATSTHIS, btwhat->sizeHint().width(), btwhat);
@@ -819,10 +820,51 @@ bool KIconEdit::setupWhatsThis()
   str = i18n("Whats is...?\n\nWell since you're reading this I guess you found out ;-)");
   what->add(toolbar->getButton(ID_HELP_WHATSTHIS), str.data());
 
-  str = i18n("Drag source\n\nFrom this button you're supposed to be able to drag out a copy of the current icon.");
+  str = i18n("Drag source\n\nFrom this button you can drag out a copy of the current icon"
+             " and drop it on a drop enabled window, eg. another Icon Editor.\n\n"
+             "(Note: The drag source uses the QT XDND protocol which is not"
+             " yet standard in KDE)");
   what->add(dragbutton, str.data());
 
   // Setup help for the tools toolbar
+
+  str = i18n("Free hand\n\nDraw non-linear lines");
+  what->add(drawtoolbar->getButton(ID_DRAW_FREEHAND), str.data());
+
+  str = i18n("Flood fill\n\nFill adjoining pixels with the same color with the current color");
+  what->add(drawtoolbar->getButton(ID_DRAW_FILL), str.data());
+
+  str = i18n("Rectangle\n\nDraw a rectangle");
+  what->add(drawtoolbar->getButton(ID_DRAW_RECT), str.data());
+
+  str = i18n("Filled rectangle\n\nDraw a filled rectangle");
+  what->add(drawtoolbar->getButton(ID_DRAW_RECT_FILL), str.data());
+
+  str = i18n("Circle\n\nDraw a circle");
+  what->add(drawtoolbar->getButton(ID_DRAW_CIRCLE), str.data());
+
+  str = i18n("Filled circle\n\nDraw a filled circle");
+  what->add(drawtoolbar->getButton(ID_DRAW_CIRCLE_FILL), str.data());
+
+  str = i18n("Ellipse\n\nDraw an ellipse");
+  what->add(drawtoolbar->getButton(ID_DRAW_ELLIPSE), str.data());
+
+  str = i18n("Filled ellipse\n\nDraw a filled ellipse");
+  what->add(drawtoolbar->getButton(ID_DRAW_ELLIPSE_FILL), str.data());
+
+  str = i18n("Line\n\nDraw a straight line vertically, horizontically or in 45 dgr. angles");
+  what->add(drawtoolbar->getButton(ID_DRAW_LINE), str.data());
+
+  str = i18n("Spray\n\nDraw scattered pixels in the current color");
+  what->add(drawtoolbar->getButton(ID_DRAW_SPRAY), str.data());
+
+  str = i18n("Find\n\nThe color of the pixel clicked on will be the current drawcolor");
+  what->add(drawtoolbar->getButton(ID_DRAW_FIND), str.data());
+
+  str = i18n("Erase\n\nErase pixels. Set the pixels to be transparent\n\n"
+             "(Tip: If you want to draw transparent with a different tool"
+             " then first click on \"Erase\" then on the tool you want to use)");
+  what->add(drawtoolbar->getButton(ID_DRAW_ERASE), str.data());
 
   debug("setupWhatsThis - done");
   return true;
@@ -830,9 +872,10 @@ bool KIconEdit::setupWhatsThis()
 
 void KIconEdit::addRecent(const char *filename)
 {
-  Properties *pprops = props(this);
+  QString str = filename;
   //debug("addRecent - checking %s", filename);
-  if(!filename || strlen(filename) == 0 || pprops->recentlist->contains(filename))
+  Properties *pprops = props(this);
+  if(str.isEmpty() || pprops->recentlist->contains(filename))
     return;
   //debug("addRecent - adding %s", filename);
 

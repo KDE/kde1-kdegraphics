@@ -72,13 +72,13 @@ void KGridView::setSizes()
     _hruler->setBigMarkDistance(10);
     _vruler->setBigMarkDistance(10);
 
-    _hruler->showTinyMarks(false);
+    _hruler->showTinyMarks(true);
     _hruler->showLittleMarks(false);
     _hruler->showMediumMarks(true);
     _hruler->showBigMarks(true);
     _hruler->showEndMarks(true);
 
-    _vruler->showTinyMarks(false);
+    _vruler->showTinyMarks(true);
     _vruler->showLittleMarks(false);
     _vruler->showMediumMarks(true);
     _vruler->showBigMarks(true);
@@ -623,7 +623,7 @@ const QPixmap &KIconEditGrid::pixmap()
 void KIconEditGrid::getImage(QImage *image)
 {
   debug("KIconEditGrid::getImage");
-  image = &img;
+  *image = img;
 }
 
 bool KIconEditGrid::zoomTo(int scale)
