@@ -2,12 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1999-02-06 22:08+0100\n"
-"Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
-"Language-Team: Spanish <kde-es@kyb.uni-stuttgart.de>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"PO-Revision-Date: 1999-02-16 12:55+0200\n"
+"Last-Translator: José Ruiz-Poveda <ruizpoveda@yahoo.com>\n"
 
 #: dviwin.cpp:215 dviwin.cpp:231 dviwin.cpp:245 dviwin.cpp:282 dviwin.cpp:299
 #: kdvi.cpp:514
@@ -64,11 +60,11 @@ msgstr "¿Qué es esto? ¡Un problema con el DVI!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr "Estado del archivo cambiado."
+msgstr "Ha cambiado el estado del fichero."
 
 #: dviwin.cpp:513 kdvi.cpp:937
 msgid "File reloaded."
-msgstr "Archivo Releído."
+msgstr "Fichero cargado de nuevo."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -466,7 +462,6 @@ msgid "Small text button set to shrink factor "
 msgstr "Botón de texto pequeño asignado al factor de reducción"
 
 #: kdvi.cpp:931
-#, c-format
 msgid "Shrink: %d"
 msgstr "Encoger: %d"
 
@@ -596,7 +591,7 @@ msgstr "Impresora por defecto"
 
 #: printData.cpp:31
 msgid "&File Name:"
-msgstr "Nombre fich.:"
+msgstr "Nombre &fich.:"
 
 #: printData.cpp:58
 msgid "&All"
