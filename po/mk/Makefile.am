@@ -1,6 +1,6 @@
 
 # This has to be set. The rest should be reusable
-GMOFILES = kghostview.gmo 
+GMOFILES = kghostview.gmo kfax.gmo
 POFILES = $(GMOFILES:.gmo=.po)
 
 LANG = mk
