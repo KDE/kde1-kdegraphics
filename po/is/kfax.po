@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1998-02-01 10:00-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -340,12 +340,12 @@ msgid "Res: %s"
 msgstr "Uppl: %s"
 
 # kfax.cpp:2416 options.cpp:71
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Fínkorna"
 
 # kfax.cpp:2416 options.cpp:74
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Venjulegt"
 
@@ -450,61 +450,61 @@ msgstr ""
 " ef þú vilt senda til prentara."
 
 # options.cpp:54
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "KFax stillingar"
 
-# options.cpp:64
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Fax upplausn (hrá):"
-
-# options.cpp:68 options.cpp:149
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Sjálfvirkt"
-
 # options.cpp:81
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Birtistillingar:"
 
 # options.cpp:85
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Langsnið"
 
 # options.cpp:89
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Á hvolfi"
 
 # options.cpp:93
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Öfugt"
 
+# options.cpp:64
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Fax upplausn (hrá):"
+
+# options.cpp:68 options.cpp:149
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Sjálfvirkt"
+
 # options.cpp:102
-#: options.cpp:102
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Hrá fax gögn eru:"
 
 # options.cpp:106
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "LS-Bit fyrst"
 
 # options.cpp:114
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Hrá föx eru:"
 
 # options.cpp:135
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Hrá fax breidd:"
 
 # options.cpp:142
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "hæð:"

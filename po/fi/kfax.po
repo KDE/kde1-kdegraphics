@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-03-08 16:14:13-0500\n"
 "From: Bernd Johannes Wuebben,201 Lincoln Hall,,256-1036, "
@@ -278,11 +278,11 @@ msgstr "L: %d K: %d"
 msgid "Res: %s"
 msgstr "Res: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Tarkka"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Tavallinen"
 
@@ -369,51 +369,51 @@ msgstr ""
 "Sinun on annettava tulostuskomento, kuten \"lpr\"\n"
 " jos haluat tulostaa tulostimelle."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "KFax Asetusdialogi"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Raakafaksin tarkkuus:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Automaattinen"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Näytön asetukset:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Vaakasuntainen"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Ylösalaisin"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Käänteinen"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Raakafaksin tarkkuus:"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Automaattinen"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Raakafaksidata on:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "LS-bitit ensin"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Raakafaksit ovat:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Raakafaksin leveys:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "korkeus:"
 

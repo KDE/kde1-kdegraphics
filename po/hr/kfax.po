@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1999-01-28 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -282,11 +282,11 @@ msgstr "©: %d V: %d"
 msgid "Res: %s"
 msgstr "Rez: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Fino"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Normalno"
 
@@ -373,50 +373,50 @@ msgstr ""
 "Morate unjeti naredbu za ispisivanje poput \"lpr\"\n"
 "ukoliko ¾elite ispisivati na pisaèu."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "KFax Opcije"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Sirova Fax Rezolucija"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Opcije za prikazivanje:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Polo¾eno"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Naopaèke"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Okreni"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Sirova Fax Rezolucija"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Sirovi Fax podaci su:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "Prvo LS-Bit"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Sirovi Faxovi su:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "©irina Faxa:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "visina:"

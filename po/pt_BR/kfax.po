@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1998-03-23 00:00+0100\n"
 "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
@@ -275,11 +275,11 @@ msgstr "W: %d H: %d"
 msgid "Res: %s"
 msgstr "Res: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Fina"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Normal"
 
@@ -366,50 +366,50 @@ msgstr ""
 "Você deve inserir um comando de impressão como \"lpr\"\n"
 " se deseja imprimir para uma impressora."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "Diálogo de Opções do KFax"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Resolução do Fax:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Opções de Visualização:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Paisagem"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "De Cabeça Para Baixo"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Invertido"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Resolução do Fax:"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Dados do Fax são:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "LS-Bit primeiro"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Fax são:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Largura do Fax:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "altura:"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax 1.0\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1998-05-01 13:00+0001\n"
 "Last-Translator: Juraj Bednar <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -279,11 +279,11 @@ msgstr "©: %d V: %d"
 msgid "Res: %s"
 msgstr "Roz: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Akurát"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Normálne"
 
@@ -370,51 +370,51 @@ msgstr ""
 "Musíte zada» tlaèový príkaz ako napr. \"lpr\"\n"
 " ak chcete tlaèi» na tlaèiareò."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "Nastavenie KFaxu"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Rozlí¹enie faxu:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Zobrazenie:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Na ¹írku"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Hore nohami"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Opaène"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Rozlí¹enie faxu:"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Formát RAW FAX dát:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "LS-Bit prvý"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "RAW faxy sú:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "©írka RAW faxu:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "vý¹ka:"
 

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version:  kfax-1.1\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1999-02-28 17:41+0100\n"
 "Last-Translator: Romuald Texier <texierr@worldnet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -286,11 +286,11 @@ msgstr "L: %d U: %d"
 msgid "Res: %s"
 msgstr "Spis: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Spis"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Boas"
 
@@ -376,50 +376,50 @@ msgstr ""
 "Ret eo deoc'h reiñ un urzhiad moulañ evel \"lpr\"\n"
 "m'ho peus c'hoant moulañ gant ur voulerez."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "Prenestr dibaboù KFax"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Spister pelleiladenn diaoz :"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Emgefreek"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Dibaboù diskwel :"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Dremmwel"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Penn-bouzell"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Eilpennañ"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Spister pelleiladenn diaoz :"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Emgefreek"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Roadoù pelleiladenn diaoz a zo :"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "Bit NT da gentañ"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "pelleiladennoù diaoz a zo :"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Ledander pelleiladennoù diaoz :"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "uhelder"

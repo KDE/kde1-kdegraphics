@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1999-03-12 16:30+0200\n"
 "Last-Translator: Francois-Xavier DURANCEAU & Alain "
 "Gibaud<Francois-Xavier.Duranceau@loria.fr>\n"
@@ -286,11 +286,11 @@ msgid "Res: %s"
 msgstr "Rés: %s"
 
 # ++Gib: C'est la résolution qui est fine ou normale
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Fine"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Normale"
 
@@ -377,52 +377,52 @@ msgstr ""
 "Vous devez entrer une commande d'impression telle que \"lpr\"\n"
 " si vous voulez imprimer vers une imprimante."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "Options de KFax"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Résolution Brute :"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Options d'affichage :"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Paysage"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Tête en bas"
 
 # ++Gib: Inverse plutot que inverser (qui deborde de la boite !!!)
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Inverse"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Résolution Brute :"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Données Brutes :"
 
 # ++Gib: LS == Less Significant pour moi (ie bit 0)
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "Bit 0 d'abord"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Facsimilé Brut :"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Largeur Brute :"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "Hauteur :"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 1.0\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1998-06-29 11:00+0200\n"
 "Last-Translator: Kerem ERZURUMLU <kerem@linux.org.tr>\n"
 "Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
@@ -278,11 +278,11 @@ msgstr ""
 msgid "Res: %s"
 msgstr ""
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Ýyi"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr ""
 
@@ -367,51 +367,51 @@ msgstr ""
 "Yazýcýya yazdýrmak istiyorsanýz\n"
 "\"lpr\" gibi bir komutu girmelisiniz."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "KFax Seçenekler Penceresi"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Ham Faks Çözünürlüðü:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Otomatik"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Görüntüleme Özellikleri:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Yatay"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Baþ Aþaðý"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Evir"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Ham Faks Çözünürlüðü:"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Otomatik"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Ham Faks Verileri:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "Önce LS-ikili"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Ham Facsimili:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Ham Faks geniþliði:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "yükseklik:"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kfax\n"
-"POT-Creation-Date: 1999-01-25 01:42+0100\n"
+"POT-Creation-Date: 1999-04-12 02:16+0200\n"
 "PO-Revision-Date: 1999-02-16 26:43-0500\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
@@ -283,11 +283,11 @@ msgstr "W: %d H: %d"
 msgid "Res: %s"
 msgstr "Res: %s"
 
-#: kfax.cpp:2416 options.cpp:71
+#: kfax.cpp:2416 options.cpp:119
 msgid "Fine"
 msgstr "Skarp"
 
-#: kfax.cpp:2416 options.cpp:74
+#: kfax.cpp:2416 options.cpp:124
 msgid "Normal"
 msgstr "Normal"
 
@@ -374,50 +374,50 @@ msgstr ""
 "Du må indskrive en udskriftskommando som f eks \"lpr\"\n"
 " hvis du ønsker at udskrive til en skriver."
 
-#: options.cpp:54
+#: options.cpp:56
 msgid "KFax Options Dialog"
 msgstr "KFax' valgdialog"
 
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Råfaxopløsning:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:81
+#: options.cpp:74
 msgid "Display Options:"
 msgstr "Vis muligheder:"
 
-#: options.cpp:85
+#: options.cpp:80
 msgid "Landscape"
 msgstr "Liggende"
 
-#: options.cpp:89
+#: options.cpp:85
 msgid "Upside Down"
 msgstr "Op ned"
 
-#: options.cpp:93
+#: options.cpp:90
 msgid "Invert"
 msgstr "Vend"
 
-#: options.cpp:102
+#: options.cpp:109
+msgid "Raw Fax Resolution:"
+msgstr "Råfaxopløsning:"
+
+#: options.cpp:114 options.cpp:222
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:144
 msgid "Raw Fax Data are:"
 msgstr "Råfaxdata er:"
 
-#: options.cpp:106
+#: options.cpp:150
 msgid "LS-Bit first"
 msgstr "LS-Bit først"
 
-#: options.cpp:114
+#: options.cpp:168
 msgid "Raw Facsimili are:"
 msgstr "Råfaksimile er:"
 
-#: options.cpp:135
+#: options.cpp:202
 msgid "Raw Fax width:"
 msgstr "Råfaksbredde:"
 
-#: options.cpp:142
+#: options.cpp:212
 msgid "height:"
 msgstr "højde:"
