@@ -90,9 +90,8 @@ msgid "Zoom &out"
 msgstr "U&manji"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "&Fax Opcije"
+msgstr "&Fax opcije..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -214,7 +213,7 @@ msgstr "Uèitavam '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Gotovo"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -252,6 +251,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Ne mogu otvoriti:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -327,7 +328,7 @@ msgstr "Fino"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normalno"
 
 #: options.cpp:81
 msgid "Display Options:"
