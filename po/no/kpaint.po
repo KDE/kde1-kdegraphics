@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kpaint\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1998-04-13 17:48+0100\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -29,173 +29,137 @@ msgstr "Bruk: "
 msgid " [url | filename]\n"
 msgstr " [url | filnavn]\n"
 
-#: kpaint.cpp:53 kpaint.cpp:606
+#: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
 msgstr "gif uten tittel"
 
-#: kpaint.cpp:127
+#: kpaint.cpp:172
 msgid "Unsaved Changes"
 msgstr "Ikke lagrede endringer"
 
-#: kpaint.cpp:128
+#: kpaint.cpp:173
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
 "Du har ulagrede endringer, du vil miste dem hvis du lukker dette vindu nå."
 
-#: kpaint.cpp:163
+#: kpaint.cpp:210
 msgid "New Canvas"
 msgstr "Nytt lærret"
 
-#: kpaint.cpp:166
+#: kpaint.cpp:213
 msgid "Open File"
 msgstr "Åpen fil"
 
-#: kpaint.cpp:169
+#: kpaint.cpp:216
 msgid "Save File"
 msgstr "Lagre fil"
 
-#: kpaint.cpp:183 kpaint.cpp:335
+#: kpaint.cpp:230 kpaint.cpp:450
 msgid "Zoom In"
 msgstr "Zoom inn"
 
-#: kpaint.cpp:186 kpaint.cpp:336
+#: kpaint.cpp:233 kpaint.cpp:451
 msgid "Zoom Out"
 msgstr "Zoom ut"
 
-#: kpaint.cpp:315
+#: kpaint.cpp:430
 msgid "Open Image..."
 msgstr "Åpne bilde..."
 
-#: kpaint.cpp:316
+#: kpaint.cpp:431
 msgid "New Image..."
 msgstr "Nytt bilde..."
 
-#: kpaint.cpp:317
+#: kpaint.cpp:432
 msgid "Save Image"
 msgstr "Lagre bilde"
 
-#: kpaint.cpp:318
+#: kpaint.cpp:433
 msgid "Save Image As..."
 msgstr "Lagre bilde som..."
 
-#: kpaint.cpp:319
+#: kpaint.cpp:434
 msgid "Image Format..."
 msgstr "Billedformat..."
 
-#: kpaint.cpp:321
+#: kpaint.cpp:436
 msgid "Open from URL..."
 msgstr "Åpne fra URL..."
 
-#: kpaint.cpp:322
+#: kpaint.cpp:437
 msgid "Save to URL..."
 msgstr "Lagre til URL..."
 
-#: kpaint.cpp:324
+#: kpaint.cpp:439
 msgid "New Window"
 msgstr "Nytt vindu"
 
-#: kpaint.cpp:325
+#: kpaint.cpp:440
 msgid "Close Window"
 msgstr "Lukk vindu"
 
-#: kpaint.cpp:327
-msgid "Exit"
-msgstr "Gå ut"
-
-#: kpaint.cpp:330
+#: kpaint.cpp:445
 msgid "Copy Region"
 msgstr "Kopier region"
 
-#: kpaint.cpp:331
+#: kpaint.cpp:446
 msgid "Cut Region"
 msgstr "Klipp region"
 
-#: kpaint.cpp:332
+#: kpaint.cpp:447
 msgid "Paste Region"
 msgstr "Lim inn region"
 
-#: kpaint.cpp:333
+#: kpaint.cpp:448
 msgid "Paste As Image"
 msgstr "Lim inn som bilde"
 
-#: kpaint.cpp:337
+#: kpaint.cpp:452
 msgid "Mask..."
 msgstr "Masker..."
 
-#: kpaint.cpp:340
+#: kpaint.cpp:455
 msgid "Information..."
 msgstr "Informasjon..."
 
-#: kpaint.cpp:341
+#: kpaint.cpp:456
 msgid "Resize..."
 msgstr "Endre størrelse..."
 
-#: kpaint.cpp:342
+#: kpaint.cpp:457
 msgid "Edit Palette..."
 msgstr "Rediger palett..."
 
-#: kpaint.cpp:343
+#: kpaint.cpp:458
 msgid "Change Colour Depth..."
 msgstr "Endre fargedybde..."
 
-#: kpaint.cpp:346
+#: kpaint.cpp:461
 msgid "Tool Properties..."
 msgstr "Verktøyegenskaper..."
 
-#: kpaint.cpp:348 pen.cpp:17
-msgid "Pen"
-msgstr "Penn"
-
-#: kpaint.cpp:349 line.cpp:19
-msgid "Line"
-msgstr "Linje"
-
-#: kpaint.cpp:350 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rektangel"
-
-#: ellipse.cpp:16 kpaint.cpp:351
-msgid "Ellipse"
-msgstr "Ellipse"
-
-#: circle.cpp:18 kpaint.cpp:352
-msgid "Circle"
-msgstr "Sirkel"
-
-#: kpaint.cpp:353 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spraykanne"
-
-#: kpaint.cpp:354
-msgid "Area Select"
-msgstr "Områdevalg"
-
-#: kpaint.cpp:355
-msgid "Round Angle"
-msgstr "Avrunnet firkant"
-
-#: kpaint.cpp:360
+#: kpaint.cpp:482
 msgid "Show Tools Toolbar"
 msgstr "Vis verktøylinje"
 
-#: kpaint.cpp:361
+#: kpaint.cpp:483
 msgid "Show Commands Toolbar"
 msgstr "Vis kommandoenes verktøylinje"
 
-#: kpaint.cpp:362
+#: kpaint.cpp:484
 msgid "Show Status Bar"
 msgstr "Vis statuslinje"
 
-#: kpaint.cpp:363
+#: kpaint.cpp:485
 msgid "Save Options"
 msgstr "Lagre valg"
 
-#: kpaint.cpp:372
+#: kpaint.cpp:494
 msgid "KPaint"
 msgstr "KPaint"
 
-#: kpaint.cpp:374
+#: kpaint.cpp:496
 msgid ""
 "\n"
 "\n"
@@ -205,19 +169,19 @@ msgstr ""
 "\n"
 "(c) "
 
-#: kpaint.cpp:383
+#: kpaint.cpp:505
 msgid "&Image"
 msgstr "&Bilde"
 
-#: kpaint.cpp:384
+#: kpaint.cpp:506
 msgid "&Tool"
 msgstr "&Verktøy"
 
-#: kpaint.cpp:536
+#: kpaint.cpp:681
 msgid "KPaint: Could not open file"
 msgstr "KPaint: Kunne ikke åpne fil"
 
-#: kpaint.cpp:537
+#: kpaint.cpp:682
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -225,11 +189,11 @@ msgstr ""
 "Feil: Kunne ikke åpne fil\n"
 "KPaint kunne ikke åpne den angitte fil."
 
-#: kpaint.cpp:545
+#: kpaint.cpp:690
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Ukjent format"
 
-#: kpaint.cpp:546
+#: kpaint.cpp:691
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -238,15 +202,39 @@ msgstr ""
 "Feil: Ukjent format\n"
 "KPaint forstår ikke formatet til den angitte fil eller filen er ødelagt."
 
-#: kpaint.cpp:748
-msgid "Open Location:"
-msgstr "Åpne plassering:"
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+msgid "Ellipse"
+msgstr "Ellipse"
 
-#: kpaint.cpp:772
-msgid "Save to Location:"
-msgstr "Lagre til plassering:"
+#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+msgid "Circle"
+msgstr "Sirkel"
 
-#: manager.cpp:69
+#: manager.cpp:68 pen.cpp:17
+msgid "Pen"
+msgstr "Penn"
+
+#: manager.cpp:70 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rektangel"
+
+#: line.cpp:19 manager.cpp:72
+msgid "Line"
+msgstr "Linje"
+
+#: manager.cpp:74 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spraykanne"
+
+#: manager.cpp:76
+msgid "Area Select"
+msgstr "Områdevalg"
+
+#: manager.cpp:81
+msgid "Round Angle"
+msgstr "Avrunnet firkant"
+
+#: manager.cpp:85
 msgid "Tool Properties"
 msgstr "Verktøyegenskaper"
 
@@ -274,7 +262,7 @@ msgstr "Forkast"
 msgid "Edit Colour"
 msgstr "Rediger farge"
 
-#: formatdialog.cpp:21
+#: formatdialog.cpp:29
 msgid "File Format:"
 msgstr "Filformat:"
 
@@ -386,7 +374,7 @@ msgstr "Kople sammen stil:"
 msgid "Set Line Colour..."
 msgstr "Sett linjefarge..."
 
-#: areaselect.cpp:17
+#: areaselect.cpp:20
 msgid "Area Selection"
 msgstr "Områdevalg"
 
@@ -395,17 +383,51 @@ msgid "Image Depth:"
 msgstr "Billeddybde:"
 
 #: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (Bitmappe)"
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 farger)"
 
 #: depthdialog.cpp:25
-msgid "8 (256 Colour)"
+#, fuzzy
+msgid "4 (16 Colours)"
 msgstr "8 (256 farger)"
 
 #: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 farger)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 farger)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 farger)"
+
+#: depthdialog.cpp:29
 msgid "24 (True Colour)"
+msgstr "24 (sannhetsfarger)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
 msgstr "24 (sannhetsfarger)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
+
+#~ msgid "Exit"
+#~ msgstr "Gå ut"
+
+#~ msgid "Open Location:"
+#~ msgstr "Åpne plassering:"
+
+#~ msgid "Save to Location:"
+#~ msgstr "Lagre til plassering:"
+
+#~ msgid "1 (Bitmap)"
+#~ msgstr "1 (Bitmappe)"

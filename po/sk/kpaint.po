@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -30,172 +30,136 @@ msgstr "Pou¾itie:"
 msgid " [url | filename]\n"
 msgstr " [url | názov súboru]\n"
 
-#: kpaint.cpp:53 kpaint.cpp:606
+#: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
 msgstr "bez_mena.gif"
 
-#: kpaint.cpp:127
+#: kpaint.cpp:172
 msgid "Unsaved Changes"
 msgstr "Zmeny neulo¾ené"
 
-#: kpaint.cpp:128
+#: kpaint.cpp:173
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr "Neulo¾ili ste zmeny, stratíte ich, ak teraz zavriete toto okno."
 
-#: kpaint.cpp:163
+#: kpaint.cpp:210
 msgid "New Canvas"
 msgstr "Nová kresliaca plocha"
 
-#: kpaint.cpp:166
+#: kpaint.cpp:213
 msgid "Open File"
 msgstr "Otvori» súbor"
 
-#: kpaint.cpp:169
+#: kpaint.cpp:216
 msgid "Save File"
 msgstr "Ulo¾i» súbor"
 
-#: kpaint.cpp:183 kpaint.cpp:335
+#: kpaint.cpp:230 kpaint.cpp:450
 msgid "Zoom In"
 msgstr "Zväè¹i»"
 
-#: kpaint.cpp:186 kpaint.cpp:336
+#: kpaint.cpp:233 kpaint.cpp:451
 msgid "Zoom Out"
 msgstr "Zmen¹i»"
 
-#: kpaint.cpp:315
+#: kpaint.cpp:430
 msgid "Open Image..."
 msgstr "Otvori» obrázok..."
 
-#: kpaint.cpp:316
+#: kpaint.cpp:431
 msgid "New Image..."
 msgstr "Nový obrázok..."
 
-#: kpaint.cpp:317
+#: kpaint.cpp:432
 msgid "Save Image"
 msgstr "Ulo¾i» obrázok..."
 
-#: kpaint.cpp:318
+#: kpaint.cpp:433
 msgid "Save Image As..."
 msgstr "Ulo¾i» obrázok ako..."
 
-#: kpaint.cpp:319
+#: kpaint.cpp:434
 msgid "Image Format..."
 msgstr "Formát obrázku"
 
-#: kpaint.cpp:321
+#: kpaint.cpp:436
 msgid "Open from URL..."
 msgstr "Otvori» z URL..."
 
-#: kpaint.cpp:322
+#: kpaint.cpp:437
 msgid "Save to URL..."
 msgstr "Ulo¾i» na URL..."
 
-#: kpaint.cpp:324
+#: kpaint.cpp:439
 msgid "New Window"
 msgstr "Nové okno"
 
-#: kpaint.cpp:325
+#: kpaint.cpp:440
 msgid "Close Window"
 msgstr "Zavrie» okno"
 
-#: kpaint.cpp:327
-msgid "Exit"
-msgstr "Ukonèi»"
-
-#: kpaint.cpp:330
+#: kpaint.cpp:445
 msgid "Copy Region"
 msgstr "Kopírova» oblas»"
 
-#: kpaint.cpp:331
+#: kpaint.cpp:446
 msgid "Cut Region"
 msgstr "Vystrihnú» oblas»"
 
-#: kpaint.cpp:332
+#: kpaint.cpp:447
 msgid "Paste Region"
 msgstr "Vlo¾i» oblas»"
 
-#: kpaint.cpp:333
+#: kpaint.cpp:448
 msgid "Paste As Image"
 msgstr "Vlo¾i» ako obrázok"
 
-#: kpaint.cpp:337
+#: kpaint.cpp:452
 msgid "Mask..."
 msgstr "Maska"
 
-#: kpaint.cpp:340
+#: kpaint.cpp:455
 msgid "Information..."
 msgstr "Informácie..."
 
-#: kpaint.cpp:341
+#: kpaint.cpp:456
 msgid "Resize..."
 msgstr "Zmeni» veµkos»..."
 
-#: kpaint.cpp:342
+#: kpaint.cpp:457
 msgid "Edit Palette..."
 msgstr "Upravi» paletu..."
 
-#: kpaint.cpp:343
+#: kpaint.cpp:458
 msgid "Change Colour Depth..."
 msgstr "Zmeni» farebnú håbku..."
 
-#: kpaint.cpp:346
+#: kpaint.cpp:461
 msgid "Tool Properties..."
 msgstr "Vlastnosti nástrojov..."
 
-#: kpaint.cpp:348 pen.cpp:17
-msgid "Pen"
-msgstr "Pero"
-
-#: kpaint.cpp:349 line.cpp:19
-msgid "Line"
-msgstr "Èiara"
-
-#: kpaint.cpp:350 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Obdå¾nik"
-
-#: ellipse.cpp:16 kpaint.cpp:351
-msgid "Ellipse"
-msgstr "Elipsa"
-
-#: circle.cpp:18 kpaint.cpp:352
-msgid "Circle"
-msgstr "Kruh"
-
-#: kpaint.cpp:353 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Sprej"
-
-#: kpaint.cpp:354
-msgid "Area Select"
-msgstr "Výber oblasti"
-
-#: kpaint.cpp:355
-msgid "Round Angle"
-msgstr "Zaoblený obdå¾nik"
-
-#: kpaint.cpp:360
+#: kpaint.cpp:482
 msgid "Show Tools Toolbar"
 msgstr "Zobrazova» nástrojovú li¹tu pomôcok"
 
-#: kpaint.cpp:361
+#: kpaint.cpp:483
 msgid "Show Commands Toolbar"
 msgstr "Zobrazova» nástrojovú li¹tu príkazov"
 
-#: kpaint.cpp:362
+#: kpaint.cpp:484
 msgid "Show Status Bar"
 msgstr "Zobrazova» stavovú li¹tu"
 
-#: kpaint.cpp:363
+#: kpaint.cpp:485
 msgid "Save Options"
 msgstr "Ulo¾i» nastavenie"
 
-#: kpaint.cpp:372
+#: kpaint.cpp:494
 msgid "KPaint"
 msgstr "KPaint"
 
-#: kpaint.cpp:374
+#: kpaint.cpp:496
 msgid ""
 "\n"
 "\n"
@@ -205,19 +169,19 @@ msgstr ""
 "\n"
 "(c) "
 
-#: kpaint.cpp:383
+#: kpaint.cpp:505
 msgid "&Image"
 msgstr "&Obrázok"
 
-#: kpaint.cpp:384
+#: kpaint.cpp:506
 msgid "&Tool"
 msgstr "&Nástroj"
 
-#: kpaint.cpp:536
+#: kpaint.cpp:681
 msgid "KPaint: Could not open file"
 msgstr "KPaint: nemô¾em otvori» súbor"
 
-#: kpaint.cpp:537
+#: kpaint.cpp:682
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -225,11 +189,11 @@ msgstr ""
 "Chyba: nemô¾em otvori» súbor\n"
 "KPaint nemohol otvori» ¹pecifikovaný súbor."
 
-#: kpaint.cpp:545
+#: kpaint.cpp:690
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Neznámy formát"
 
-#: kpaint.cpp:546
+#: kpaint.cpp:691
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -239,15 +203,39 @@ msgstr ""
 "KPAint nerozumie formátu ¹pecifikovaného súboru\n"
 "alebo je súbor poru¹ený."
 
-#: kpaint.cpp:748
-msgid "Open Location:"
-msgstr "Otvori» miesto:"
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+msgid "Ellipse"
+msgstr "Elipsa"
 
-#: kpaint.cpp:772
-msgid "Save to Location:"
-msgstr "Ulo¾i» na miesto:"
+#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+msgid "Circle"
+msgstr "Kruh"
 
-#: manager.cpp:69
+#: manager.cpp:68 pen.cpp:17
+msgid "Pen"
+msgstr "Pero"
+
+#: manager.cpp:70 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Obdå¾nik"
+
+#: line.cpp:19 manager.cpp:72
+msgid "Line"
+msgstr "Èiara"
+
+#: manager.cpp:74 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Sprej"
+
+#: manager.cpp:76
+msgid "Area Select"
+msgstr "Výber oblasti"
+
+#: manager.cpp:81
+msgid "Round Angle"
+msgstr "Zaoblený obdå¾nik"
+
+#: manager.cpp:85
 msgid "Tool Properties"
 msgstr "Vlastnosti nástroja"
 
@@ -275,7 +263,7 @@ msgstr "Zru¹i»"
 msgid "Edit Colour"
 msgstr "Upravi» farbu"
 
-#: formatdialog.cpp:21
+#: formatdialog.cpp:29
 msgid "File Format:"
 msgstr "Dátový formát:"
 
@@ -387,7 +375,7 @@ msgstr "©týl spojenia..."
 msgid "Set Line Colour..."
 msgstr "Farba èiary"
 
-#: areaselect.cpp:17
+#: areaselect.cpp:20
 msgid "Area Selection"
 msgstr "Výber oblasti"
 
@@ -396,17 +384,51 @@ msgid "Image Depth:"
 msgstr "Håbka farby :"
 
 #: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (Bitmapa)"
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 Farieb)"
 
 #: depthdialog.cpp:25
-msgid "8 (256 Colour)"
+#, fuzzy
+msgid "4 (16 Colours)"
 msgstr "8 (256 Farieb)"
 
 #: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 Farieb)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 Farieb)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 Farieb)"
+
+#: depthdialog.cpp:29
 msgid "24 (True Colour)"
+msgstr "24 (Verná farba)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
 msgstr "24 (Verná farba)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Zaoblený obdå¾nik"
+
+#~ msgid "Exit"
+#~ msgstr "Ukonèi»"
+
+#~ msgid "Open Location:"
+#~ msgstr "Otvori» miesto:"
+
+#~ msgid "Save to Location:"
+#~ msgstr "Ulo¾i» na miesto:"
+
+#~ msgid "1 (Bitmap)"
+#~ msgstr "1 (Bitmapa)"

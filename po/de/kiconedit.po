@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1998-07-29 23:00+MET\n"
 "Last-Translator: Gregor Zumstein <zumstein@ssd.ethz.ch>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -10,22 +10,32 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 "Translator: Gregor Zumstein <zumstein@ssd.ethz.ch>\n"
 
-#: utils.cpp:57
+#: utils.cpp:65
 #, c-format
 msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Fehler beim Öffnen der Zieldatei %s"
 
 #: utils.cpp:72
+#, fuzzy, c-format
+msgid "copyFile - There was an error reading source file: %s"
+msgstr "copyFile - Fehler beim Öffnen der Quelldatei %s"
+
+#: utils.cpp:80
+#, fuzzy, c-format
+msgid "copyFile - There was an error writing to destination file: %s"
+msgstr "copyFile - Fehler beim Öffnen der Zieldatei %s"
+
+#: utils.cpp:93
 #, c-format
 msgid "copyFile - There was an error opening source file: %s"
 msgstr "copyFile - Fehler beim Öffnen der Quelldatei %s"
 
-#: utils.cpp:84
+#: utils.cpp:105
 #, c-format
 msgid "removeFile - There was an error removing the file: %s"
 msgstr "removeFile - Fehler beim Löschen der Datei: %s"
 
-#: kiconedit.cpp:233 kiconeditslots.cpp:60 kiconeditslots.cpp:119
+#: kiconedit.cpp:239 kiconeditslots.cpp:62 kiconeditslots.cpp:121
 msgid ""
 "The current file has been modified.\n"
 "Do you want to save it?"
@@ -33,250 +43,250 @@ msgstr ""
 "Die aktuelle Datei wurde geändert. \n"
 "Wollen Sie sie speichern?"
 
-#: kiconedit.cpp:367
+#: kiconedit.cpp:373
 #, fuzzy
 msgid "Select All"
 msgstr "&Alles auswählen"
 
-#: kiconedit.cpp:385
+#: kiconedit.cpp:391
 #, fuzzy
 msgid "New &Window"
 msgstr "Neues Fenster"
 
-#: kiconedit.cpp:390
+#: kiconedit.cpp:396
 msgid "&New..."
 msgstr "&Neu..."
 
-#: kiconedit.cpp:396
+#: kiconedit.cpp:402
 msgid "Open recent"
 msgstr "&Kürzlich benutzte"
 
-#: kiconedit.cpp:417
+#: kiconedit.cpp:423
 msgid "&Exit"
 msgstr "&Beenden"
 
-#: kiconedit.cpp:425
+#: kiconedit.cpp:431
 msgid "Cu&t"
 msgstr "&Ausschneiden"
 
-#: kiconedit.cpp:434
+#: kiconedit.cpp:440
 msgid "Paste as &new"
 msgstr "Einfügen in &Neues"
 
-#: kiconedit.cpp:437
+#: kiconedit.cpp:443
 msgid "Clea&r"
 msgstr "&Löschen"
 
-#: kiconedit.cpp:441
+#: kiconedit.cpp:447
 msgid "Select &all"
 msgstr "&Alles auswählen"
 
-#: kiconedit.cpp:448
+#: kiconedit.cpp:454
 msgid "1:1"
 msgstr "1:1"
 
-#: kiconedit.cpp:449
+#: kiconedit.cpp:455
 msgid "1:5"
 msgstr "1:5"
 
-#: kiconedit.cpp:450
+#: kiconedit.cpp:456
 msgid "1:10"
 msgstr "1:10"
 
-#: kiconedit.cpp:455
+#: kiconedit.cpp:461
 msgid "Zoom &in"
 msgstr "Ver&grössern"
 
-#: kiconedit.cpp:456
+#: kiconedit.cpp:462
 msgid "Zoom &out"
 msgstr "Ver&kleinern"
 
-#: kiconedit.cpp:457
+#: kiconedit.cpp:463
 msgid "Zoom factor"
 msgstr "&Zoomfaktor"
 
-#: kiconedit.cpp:464
+#: kiconedit.cpp:470
 msgid "&Resize"
 msgstr "&Grösse ändern"
 
-#: kiconedit.cpp:466
+#: kiconedit.cpp:472
 msgid "&GrayScale"
 msgstr "Grau&stufen"
 
-#: kiconedit.cpp:471
+#: kiconedit.cpp:477
 msgid "&Icon"
 msgstr "&Icon"
 
-#: kiconedit.cpp:475
+#: kiconedit.cpp:481
 msgid "Freehand"
 msgstr "&Freihand"
 
-#: kiconedit.cpp:476
+#: kiconedit.cpp:482
 msgid "Rectangle"
 msgstr "Rechteck"
 
-#: kiconedit.cpp:477
+#: kiconedit.cpp:483
 msgid "Filled rectangle"
 msgstr "Gefülltes Rechteck"
 
-#: kiconedit.cpp:478
+#: kiconedit.cpp:484
 msgid "Circle"
 msgstr "Kreis"
 
-#: kiconedit.cpp:479
+#: kiconedit.cpp:485
 msgid "Filled circle"
 msgstr "Gefüllter Kreis"
 
-#: kiconedit.cpp:480
+#: kiconedit.cpp:486
 msgid "Ellipse"
 msgstr "Ellipse"
 
-#: kiconedit.cpp:481
+#: kiconedit.cpp:487
 msgid "Filled ellipse"
 msgstr "Gefüllte Ellipse"
 
-#: kiconedit.cpp:482 kiconedit.cpp:680
+#: kiconedit.cpp:488 kiconedit.cpp:686
 msgid "Spray"
 msgstr "Spray"
 
-#: kiconedit.cpp:483 kiconedit.cpp:682
+#: kiconedit.cpp:489 kiconedit.cpp:688
 msgid "Flood fill"
 msgstr "Giesskanne"
 
-#: kiconedit.cpp:484
+#: kiconedit.cpp:490
 msgid "Line"
 msgstr "Linie"
 
-#: kiconedit.cpp:485
+#: kiconedit.cpp:491
 msgid "Eraser (Transparent)"
 msgstr "Radierer (transparent)"
 
-#: kiconedit.cpp:488
+#: kiconedit.cpp:494
 msgid "&Tools"
 msgstr "&Werkzeuge"
 
-#: kiconedit.cpp:492
+#: kiconedit.cpp:498
 msgid "&Configure"
 msgstr ""
 
-#: kiconedit.cpp:494
+#: kiconedit.cpp:500
 msgid "Toggle &Grid"
 msgstr "&Gitter sichtbar"
 
-#: kiconedit.cpp:497
+#: kiconedit.cpp:503
 msgid "Toggle &toolbar"
 msgstr "&Werkzeugleiste sichtbar"
 
-#: kiconedit.cpp:500
+#: kiconedit.cpp:506
 msgid "Toggle &drawing tools"
 msgstr "&Malwerkzeug sichtbar"
 
-#: kiconedit.cpp:503
+#: kiconedit.cpp:509
 msgid "Toggle &statusbar"
 msgstr "&Statuszeile sichtbar"
 
-#: kiconedit.cpp:507
+#: kiconedit.cpp:513
 msgid "&Save options"
 msgstr "O&ptionen speichern"
 
-#: kiconedit.cpp:563
+#: kiconedit.cpp:569
 msgid "What is ...?"
 msgstr ""
 
-#: kiconedit.cpp:572
+#: kiconedit.cpp:578
 #, fuzzy
 msgid "Drag source"
 msgstr "Kreis zeichnen"
 
-#: kiconedit.cpp:577
+#: kiconedit.cpp:583
 msgid "New File"
 msgstr "Neue Datei"
 
-#: kiconedit.cpp:581
+#: kiconedit.cpp:587
 msgid "Save the file"
 msgstr "Datei speichern"
 
-#: kiconedit.cpp:584
+#: kiconedit.cpp:590
 msgid "Print icon"
 msgstr "Icon drucken"
 
-#: kiconedit.cpp:599
+#: kiconedit.cpp:605
 msgid "Select area"
 msgstr "Ausschnitt wählen"
 
-#: kiconedit.cpp:605
+#: kiconedit.cpp:611
 msgid "Resize"
 msgstr "Grösse ändern"
 
-#: kiconedit.cpp:608
+#: kiconedit.cpp:614
 msgid "GrayScale"
 msgstr "Graustufen"
 
-#: kiconedit.cpp:615
+#: kiconedit.cpp:621
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: kiconedit.cpp:618
+#: kiconedit.cpp:624
 msgid "Zoom in"
 msgstr "Vergrössern"
 
-#: kiconedit.cpp:622
+#: kiconedit.cpp:628
 msgid "Toggle grid"
 msgstr "Gitter an/ab"
 
-#: kiconedit.cpp:633
+#: kiconedit.cpp:639
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: kiconedit.cpp:661
+#: kiconedit.cpp:667
 msgid "Find pixel"
 msgstr "Zeiger"
 
-#: kiconedit.cpp:663
+#: kiconedit.cpp:669
 msgid "Draw freehand"
 msgstr "Freihand zeichnen"
 
-#: kiconedit.cpp:666
+#: kiconedit.cpp:672
 msgid "Draw line"
 msgstr "Linie zeichnen"
 
-#: kiconedit.cpp:668
+#: kiconedit.cpp:674
 msgid "Draw rectangle"
 msgstr "Rechteck zeichnen"
 
-#: kiconedit.cpp:670
+#: kiconedit.cpp:676
 msgid "Draw filled rectangle"
 msgstr "Gefülltes Rechteck zeichnen"
 
-#: kiconedit.cpp:672
+#: kiconedit.cpp:678
 msgid "Draw circle"
 msgstr "Kreis zeichnen"
 
-#: kiconedit.cpp:674
+#: kiconedit.cpp:680
 msgid "Draw filled circle"
 msgstr "Gefüllten Kreis zeichnen"
 
-#: kiconedit.cpp:676
+#: kiconedit.cpp:682
 msgid "Draw ellipse"
 msgstr "Ellipse zeichnen"
 
-#: kiconedit.cpp:678
+#: kiconedit.cpp:684
 msgid "Draw filled ellipse"
 msgstr "Gefüllte Ellipse zeichnen"
 
-#: kiconedit.cpp:685
+#: kiconedit.cpp:691
 msgid "Erase"
 msgstr "Löschen"
 
-#: kiconedit.cpp:708
+#: kiconedit.cpp:714
 msgid "System Colors"
 msgstr "Systemfarben"
 
-#: kiconedit.cpp:738
+#: kiconedit.cpp:744
 msgid "Custom Colors"
 msgstr "Benutzerdefinierte Farben"
 
-#: kiconedit.cpp:779
+#: kiconedit.cpp:785
 msgid ""
 "Icon draw grid\n"
 "\n"
@@ -286,14 +296,14 @@ msgid ""
 "scale"
 msgstr ""
 
-#: kiconedit.cpp:784
+#: kiconedit.cpp:790
 msgid ""
 "Rulers\n"
 "\n"
 "This is a visual represantation of the current cursor position"
 msgstr ""
 
-#: kiconedit.cpp:788
+#: kiconedit.cpp:794
 msgid ""
 "Statusbar\n"
 "\n"
@@ -307,21 +317,21 @@ msgid ""
 "\t- Application messages"
 msgstr ""
 
-#: kiconedit.cpp:797
+#: kiconedit.cpp:803
 msgid ""
 "Preview\n"
 "\n"
 "This is a 1:1 preview of the current icon"
 msgstr ""
 
-#: kiconedit.cpp:800
+#: kiconedit.cpp:806
 msgid ""
 "System colors\n"
 "\n"
 "Here you can select colors from the KDE Icon Palette."
 msgstr ""
 
-#: kiconedit.cpp:803
+#: kiconedit.cpp:809
 msgid ""
 "Custom colors\n"
 "\n"
@@ -329,28 +339,28 @@ msgid ""
 "Just double-click on a box to edit the color"
 msgstr ""
 
-#: kiconedit.cpp:809
+#: kiconedit.cpp:815
 msgid ""
 "New\n"
 "\n"
 "Create a new icon either from a template or by specifying the size"
 msgstr ""
 
-#: kiconedit.cpp:812
+#: kiconedit.cpp:818
 msgid ""
 "Open\n"
 "\n"
 "Open an existing icon"
 msgstr ""
 
-#: kiconedit.cpp:815
+#: kiconedit.cpp:821
 msgid ""
 "Save\n"
 "\n"
 "Save the current icon"
 msgstr ""
 
-#: kiconedit.cpp:818
+#: kiconedit.cpp:824
 msgid ""
 "Print\n"
 "\n"
@@ -358,7 +368,7 @@ msgid ""
 "as expected"
 msgstr ""
 
-#: kiconedit.cpp:822
+#: kiconedit.cpp:828
 msgid ""
 "Cut\n"
 "\n"
@@ -367,7 +377,7 @@ msgid ""
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
 
-#: kiconedit.cpp:826
+#: kiconedit.cpp:832
 msgid ""
 "Copy\n"
 "\n"
@@ -376,7 +386,7 @@ msgid ""
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
 
-#: kiconedit.cpp:830
+#: kiconedit.cpp:836
 msgid ""
 "Paste\n"
 "\n"
@@ -389,7 +399,7 @@ msgid ""
 "also want to paste transparent)"
 msgstr ""
 
-#: kiconedit.cpp:837
+#: kiconedit.cpp:843
 msgid ""
 "Select\n"
 "\n"
@@ -398,14 +408,14 @@ msgid ""
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
 
-#: kiconedit.cpp:841
+#: kiconedit.cpp:847
 msgid ""
 "Resize\n"
 "\n"
 "Smoothly resizes the icon while trying to preserve the contents"
 msgstr ""
 
-#: kiconedit.cpp:844
+#: kiconedit.cpp:850
 msgid ""
 "Gray scale\n"
 "\n"
@@ -413,7 +423,7 @@ msgid ""
 "(Warning: The result is likely to contain colors not in the icon palette"
 msgstr ""
 
-#: kiconedit.cpp:848
+#: kiconedit.cpp:854
 msgid ""
 "Zoom out\n"
 "\n"
@@ -422,7 +432,7 @@ msgid ""
 "(Tip: Hold the button down for a few seconds to zoom to a predefined scale"
 msgstr ""
 
-#: kiconedit.cpp:852
+#: kiconedit.cpp:858
 msgid ""
 "Zoom in\n"
 "\n"
@@ -431,28 +441,28 @@ msgid ""
 "(Tip: Hold the button down for a few seconds to zoom to a predefined scale"
 msgstr ""
 
-#: kiconedit.cpp:856
+#: kiconedit.cpp:862
 msgid ""
 "Toggle grid\n"
 "\n"
 "Toggles the grid in the icon edit grid on/off"
 msgstr ""
 
-#: kiconedit.cpp:859
+#: kiconedit.cpp:865
 msgid ""
 "New window\n"
 "\n"
 "Opens a new Icon Editor window."
 msgstr ""
 
-#: kiconedit.cpp:862
+#: kiconedit.cpp:868
 msgid ""
 "Whats is...?\n"
 "\n"
 "Well since you're reading this I guess you found out ;-)"
 msgstr ""
 
-#: kiconedit.cpp:865
+#: kiconedit.cpp:871
 msgid ""
 "Drag source\n"
 "\n"
@@ -463,21 +473,21 @@ msgid ""
 "in KDE)"
 msgstr ""
 
-#: kiconedit.cpp:873
+#: kiconedit.cpp:879
 msgid ""
 "Free hand\n"
 "\n"
 "Draw non-linear lines"
 msgstr ""
 
-#: kiconedit.cpp:876
+#: kiconedit.cpp:882
 msgid ""
 "Flood fill\n"
 "\n"
 "Fill adjoining pixels with the same color with the current color"
 msgstr ""
 
-#: kiconedit.cpp:879
+#: kiconedit.cpp:885
 #, fuzzy
 msgid ""
 "Rectangle\n"
@@ -485,7 +495,7 @@ msgid ""
 "Draw a rectangle"
 msgstr "Rechteck zeichnen"
 
-#: kiconedit.cpp:882
+#: kiconedit.cpp:888
 #, fuzzy
 msgid ""
 "Filled rectangle\n"
@@ -493,7 +503,7 @@ msgid ""
 "Draw a filled rectangle"
 msgstr "Gefülltes Rechteck zeichnen"
 
-#: kiconedit.cpp:885
+#: kiconedit.cpp:891
 #, fuzzy
 msgid ""
 "Circle\n"
@@ -501,7 +511,7 @@ msgid ""
 "Draw a circle"
 msgstr "Kreis zeichnen"
 
-#: kiconedit.cpp:888
+#: kiconedit.cpp:894
 #, fuzzy
 msgid ""
 "Filled circle\n"
@@ -509,7 +519,7 @@ msgid ""
 "Draw a filled circle"
 msgstr "Gefüllten Kreis zeichnen"
 
-#: kiconedit.cpp:891
+#: kiconedit.cpp:897
 #, fuzzy
 msgid ""
 "Ellipse\n"
@@ -517,7 +527,7 @@ msgid ""
 "Draw an ellipse"
 msgstr "Ellipse zeichnen"
 
-#: kiconedit.cpp:894
+#: kiconedit.cpp:900
 #, fuzzy
 msgid ""
 "Filled ellipse\n"
@@ -525,28 +535,28 @@ msgid ""
 "Draw a filled ellipse"
 msgstr "Gefüllte Ellipse zeichnen"
 
-#: kiconedit.cpp:897
+#: kiconedit.cpp:903
 msgid ""
 "Line\n"
 "\n"
 "Draw a straight line vertically, horizontically or in 45 dgr. angles"
 msgstr ""
 
-#: kiconedit.cpp:900
+#: kiconedit.cpp:906
 msgid ""
 "Spray\n"
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
 
-#: kiconedit.cpp:903
+#: kiconedit.cpp:909
 msgid ""
 "Find\n"
 "\n"
 "The color of the pixel clicked on will be the current drawcolor"
 msgstr ""
 
-#: kiconedit.cpp:906
+#: kiconedit.cpp:912
 msgid ""
 "Erase\n"
 "\n"
@@ -556,27 +566,27 @@ msgid ""
 "on \"Erase\" then on the tool you want to use)"
 msgstr ""
 
-#: kicongrid.cpp:651
+#: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
 msgstr "Fehler beim Laden eines neuen Bildes aufgetreten.\n"
 
-#: kicongrid.cpp:789
+#: kicongrid.cpp:830
 msgid "All selected"
 msgstr "Alles ausgewählt"
 
-#: kicongrid.cpp:800
+#: kicongrid.cpp:841
 msgid "Cleared"
 msgstr "Gelöscht"
 
-#: kicongrid.cpp:842
+#: kicongrid.cpp:883
 msgid "Selected area cutted"
 msgstr "Gewählten Bereich ausgeschnitten"
 
-#: kicongrid.cpp:845
+#: kicongrid.cpp:886
 msgid "Selected area copied"
 msgstr "Gewählten Bereich kopiert"
 
-#: kicongrid.cpp:923
+#: kicongrid.cpp:964
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -584,7 +594,7 @@ msgstr ""
 "Etwas wurde in die\n"
 "Zwischenablage kopiert"
 
-#: kicongrid.cpp:944
+#: kicongrid.cpp:985
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -592,31 +602,57 @@ msgstr ""
 "Das Bild in der Zwischenablage ist grösser als das aktuelle Bild!\n"
 "Als neues Bild einfügen?"
 
-#: kicongrid.cpp:957
+#: kicongrid.cpp:998
 msgid "Pasting"
 msgstr "Füge ein"
 
-#: kicongrid.cpp:989 kicongrid.cpp:1016
+#: kicongrid.cpp:1030 kicongrid.cpp:1057
 msgid "Done pasting"
 msgstr "Eingefügt!"
 
-#: kicongrid.cpp:994 kicongrid.cpp:1020
+#: kicongrid.cpp:1035 kicongrid.cpp:1061
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Ungültige Bilddaten in der Zwischenablage!\n"
 
-#: kiconfiledlg.cpp:37
-msgid "Open image"
-msgstr "Bild öffnen"
+#: kiconcombiview.cpp:81
+msgid "Folders:"
+msgstr ""
 
-#: kiconfiledlg.cpp:51
-msgid "Save image As"
-msgstr "Bild speichern als"
+#: kiconcombiview.cpp:82
+msgid "Contents:"
+msgstr ""
 
-#: kicon.cpp:47
+#: kicondetaillist.cpp:50
+msgid "Name"
+msgstr ""
+
+#: kicondetaillist.cpp:52
+#, fuzzy
+msgid "Size"
+msgstr "Grösse"
+
+#: kicondetaillist.cpp:55
+msgid "Permissions"
+msgstr ""
+
+#: kicondetaillist.cpp:57
+#, fuzzy
+msgid "Date"
+msgstr "Einfügen"
+
+#: kicondetaillist.cpp:60
+msgid "Owner"
+msgstr ""
+
+#: kicondetaillist.cpp:62
+msgid "Group"
+msgstr ""
+
+#: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
 msgstr "Fehler beim Löschen der temporären Sicherungskopie:\n"
 
-#: kicon.cpp:73 kicon.cpp:241 kicon.cpp:321 kicon.cpp:424
+#: kicon.cpp:74 kicon.cpp:258 kicon.cpp:342 kicon.cpp:445
 msgid ""
 "We've got a KFM job running.\n"
 "Please wait."
@@ -624,20 +660,26 @@ msgstr ""
 "Ein KFM Job wurde gestartet.\n"
 "Bitte warten."
 
-#: kicon.cpp:96
+#: kicon.cpp:97
 msgid "The URL:\n"
 msgstr "Die URL:\n"
 
-#: kicon.cpp:99 kicon.cpp:145 kicon.cpp:168 kicon.cpp:180 kicon.cpp:193
-#: kicon.cpp:206 kicon.cpp:217 kicon.cpp:378 kicon.cpp:411
+#: kicon.cpp:99
+msgid ""
+"\n"
+"seems to be malformed.\n"
+msgstr ""
+
+#: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
+#: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
 msgid "ERROR"
 msgstr "FEHLER"
 
-#: kicon.cpp:115
+#: kicon.cpp:116
 msgid "The KDE Icon Editor has found a recover file for:\n"
 msgstr "Es gibt eine automatische Sicherungskopie der Datei\n"
 
-#: kicon.cpp:117 kicon.cpp:264
+#: kicon.cpp:118 kicon.cpp:285
 msgid ""
 "\n"
 "Do you want to open this?"
@@ -645,11 +687,17 @@ msgstr ""
 "\n"
 "Wollen Sie sie öffnen?"
 
-#: kicon.cpp:142
+#: kicon.cpp:143
 msgid "The file:\n"
 msgstr "Die Datei:\n"
 
-#: kicon.cpp:159
+#: kicon.cpp:145
+msgid ""
+"\n"
+"doesn't exist or isn't readable.\n"
+msgstr ""
+
+#: kicon.cpp:160
 msgid ""
 "The Icon Editor is already downloading a non-local file.\n"
 "Please wait.\n"
@@ -657,43 +705,51 @@ msgstr ""
 "Der Icon Editor lädt bereits eine entfernte Datei.\n"
 "Bitte warten.\n"
 
-#: kicon.cpp:169
+#: kicon.cpp:170
 msgid "Couldn't initiate KFM!"
 msgstr "Konnte KFM nicht starten!"
 
-#: kicon.cpp:177
+#: kicon.cpp:178
 msgid "There was a KFM error creating a backup for:\n"
 msgstr "KFM Fehler beim Anlegen der Sicherungsdatei für:\n"
 
-#: kicon.cpp:190 kicon.cpp:375
+#: kicon.cpp:191 kicon.cpp:396
 msgid "There was an error creating a backup for:\n"
 msgstr "Fehler beim Anlegen der Sicherungsdatei für:\n"
 
-#: kicon.cpp:203
+#: kicon.cpp:204
 msgid "KIcon: There was a error locking:\n"
 msgstr "KIcon: Fehler beim Locken von\n"
 
-#: kicon.cpp:214 kicon.cpp:270
+#: kicon.cpp:215 kicon.cpp:291
 msgid "KIcon: There was a QT error loading:\n"
 msgstr "KIcon: QT-Fehler beim Laden von\n"
 
-#: kicon.cpp:262
+#: kicon.cpp:261
+msgid ""
+"*|All files (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF files (*.gif)\n"
+"*jpg|JPEG files (*.jpg)\n"
+msgstr ""
+
+#: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
 msgstr "Der KDE Icon Editor hat eine automatische Sicherungskopie\n"
 
-#: kicon.cpp:263
+#: kicon.cpp:284
 msgid "file for an unsaved icon."
 msgstr "für ein noch nicht gespeichertes Icon gefunden."
 
-#: kicon.cpp:388
+#: kicon.cpp:409
 msgid "Couldn't initiate KFM"
 msgstr "Konnte KFM nicht starten"
 
-#: kicon.cpp:401
+#: kicon.cpp:422
 msgid "Done saving"
 msgstr "Gespeichert"
 
-#: kicon.cpp:408
+#: kicon.cpp:429
 msgid "There was an error saving:\n"
 msgstr "Fehler beim Speichern von\n"
 
@@ -741,7 +797,7 @@ msgstr "Von Grund auf neu"
 msgid "Create from template"
 msgstr "Mit Vorlage"
 
-#: kiconconfig.cpp:119 knew.cpp:194
+#: kiconconfig.cpp:120 knew.cpp:194
 msgid "Templates:"
 msgstr "Vorlagen:"
 
@@ -753,137 +809,147 @@ msgstr "Icontyp wählen"
 msgid "Create new icon"
 msgstr "Neues Icon erzeugen"
 
-#: kiconeditslots.cpp:394
+#: debug.cpp:20
+msgid "Fatal!"
+msgstr ""
+
+#: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."
 msgstr "Entschuldigung - nicht implementiert"
 
-#: kiconeditslots.cpp:462 kiconeditslots.cpp:469
+#: kiconeditslots.cpp:471 kiconeditslots.cpp:478
 #, c-format
 msgid "Colors: %u"
 msgstr "Farben: %u"
 
-#: kiconconfig.cpp:29
+#: kiconconfig.cpp:30
 #, fuzzy
 msgid "Template"
 msgstr "Vorlagen:"
 
-#: kiconconfig.cpp:30
+#: kiconconfig.cpp:31
 msgid "Description:"
 msgstr ""
 
-#: kiconconfig.cpp:32
+#: kiconconfig.cpp:33
 msgid "Path:"
 msgstr ""
 
-#: kiconconfig.cpp:62
+#: kiconconfig.cpp:63
 msgid "&Browse..."
 msgstr ""
 
-#: kiconconfig.cpp:135
+#: kiconconfig.cpp:136
 msgid "&Add"
 msgstr ""
 
-#: kiconconfig.cpp:247
+#: kiconconfig.cpp:248
 msgid "Color or pixmap"
 msgstr ""
 
-#: kiconconfig.cpp:255
+#: kiconconfig.cpp:256
 msgid "Colored background"
 msgstr ""
 
-#: kiconconfig.cpp:260
+#: kiconconfig.cpp:261
 msgid "Pixmap background"
 msgstr ""
 
-#: kiconconfig.cpp:275
+#: kiconconfig.cpp:276
 msgid "&Color..."
 msgstr ""
 
-#: kiconconfig.cpp:278
+#: kiconconfig.cpp:279
 #, fuzzy
 msgid "&Pixmap..."
 msgstr "&Drucken"
 
-#: kiconconfig.cpp:286
+#: kiconconfig.cpp:287
 msgid "&Built-in"
 msgstr ""
 
-#: kiconconfig.cpp:290
+#: kiconconfig.cpp:291
 msgid "Example"
 msgstr ""
 
-#: kiconconfig.cpp:398
+#: kiconconfig.cpp:399
 #, fuzzy
 msgid "Main Toolbar"
 msgstr "Mini Verzeichnis"
 
-#: kiconconfig.cpp:401
+#: kiconconfig.cpp:402
 #, fuzzy
 msgid "Drawing tools"
 msgstr "&Malwerkzeug sichtbar"
 
-#: kiconconfig.cpp:405
+#: kiconconfig.cpp:406
 msgid ""
 "Note: Other settings of the toolbars can be reached\n"
 "from the toolbar \"handle\" or from the \"Options\" menu"
 msgstr ""
 
-#: kiconconfig.cpp:424 kiconconfig.cpp:437
+#: kiconconfig.cpp:425 kiconconfig.cpp:438
 msgid "Show Icon"
 msgstr ""
 
-#: kiconconfig.cpp:429 kiconconfig.cpp:442
+#: kiconconfig.cpp:430 kiconconfig.cpp:443
 msgid "Show Icon and Text"
 msgstr ""
 
-#: kiconconfig.cpp:433 kiconconfig.cpp:446
+#: kiconconfig.cpp:434 kiconconfig.cpp:447
 msgid "Show Text"
 msgstr ""
 
-#: kiconconfig.cpp:504
+#: kiconconfig.cpp:505
 #, fuzzy
 msgid "Paste mode"
 msgstr "Einfügen"
 
-#: kiconconfig.cpp:506
+#: kiconconfig.cpp:507
 #, fuzzy
 msgid "Paste transparent pixels"
 msgstr "Radierer (transparent)"
 
-#: kiconconfig.cpp:510
+#: kiconconfig.cpp:511
 msgid "Show rulers"
 msgstr ""
 
-#: kiconconfig.cpp:592
+#: kiconconfig.cpp:593
 msgid "Keys"
 msgstr ""
 
-#: kiconconfig.cpp:597
+#: kiconconfig.cpp:598
 msgid "Configure keys"
 msgstr ""
 
-#: kiconconfig.cpp:604
+#: kiconconfig.cpp:605
 #, fuzzy
 msgid "Templates"
 msgstr "Vorlagen:"
 
-#: kiconconfig.cpp:609
+#: kiconconfig.cpp:610
 #, fuzzy
 msgid "Configure Icon templates"
 msgstr "Mit Vorlage"
 
-#: kiconconfig.cpp:621
+#: kiconconfig.cpp:622
 msgid "Configure background"
 msgstr ""
 
-#: kiconconfig.cpp:629
+#: kiconconfig.cpp:630
 #, fuzzy
 msgid "Toolbars"
 msgstr "&Werkzeuge"
 
-#: kiconconfig.cpp:641
+#: kiconconfig.cpp:642
 msgid "Icon grid"
 msgstr ""
+
+#~ msgid "Open image"
+#~ msgstr "Bild öffnen"
+
+#~ msgid "Save image As"
+#~ msgstr "Bild speichern als"
 
 #~ msgid "Warning"
 #~ msgstr "Warnung"
@@ -936,9 +1002,6 @@ msgstr ""
 
 #~ msgid "Copy"
 #~ msgstr "Kopieren"
-
-#~ msgid "Paste"
-#~ msgstr "Einfügen"
 
 #~ msgid "Error"
 #~ msgstr "Fehler"

@@ -83,6 +83,7 @@ msgid "&Zoom..."
 msgstr "&Zv‰Ëπiª..."
 
 #: viewer.cpp:344
+#, c-format
 msgid "Zoom &in 10%"
 msgstr "Zv‰Ëπiª &o 10%"
 
@@ -250,4 +251,3 @@ msgstr "&Spustiª prem."
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "»as medzi polÌËkami (sek):"
-

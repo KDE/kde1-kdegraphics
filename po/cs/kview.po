@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
-"POT-Creation-Date: 1998-10-26 11:00+0100\n"
+"POT-Creation-Date: 1998-10-16 15:20+0200\n"
 "PO-Revision-Date: 1998-10-28 19:41 CET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -13,224 +13,210 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: viewer.cpp:80
+#: viewer.cpp:77
 msgid "no image loaded"
 msgstr "nebyl naèten ¾ádný soubor"
 
-#: viewer.cpp:88 viewer.cpp:589
+#: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
 msgstr "Pøipravený"
 
-#: viewer.cpp:207
+#: viewer.cpp:186
 msgid "Net saving not yet implemented"
 msgstr "Sí»ové ukladaní není implementováno"
 
-#: viewer.cpp:215
+#: viewer.cpp:194
 #, c-format
 msgid "%s: written"
 msgstr "%s: zapsaný"
 
-#: viewer.cpp:253
+#: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Zadejte faktor zvìt¹ení (100 = 1x):"
 
-#: viewer.cpp:257
+#: viewer.cpp:236
 msgid "Illegal zoom factor"
 msgstr "Nedovolený faktor zmìny velikosti"
 
-#: viewer.cpp:306
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "Informace o KView"
 
-#: viewer.cpp:315 viewer.cpp:333
+#: viewer.cpp:293 viewer.cpp:310
 msgid "&Zoom"
 msgstr "&Zvìt¹it"
 
-#: viewer.cpp:316 viewer.cpp:334
+#: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
 msgstr "&Transformovat"
 
-#: viewer.cpp:317 viewer.cpp:335
+#: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
 msgstr "Na &plochu"
 
-#: viewer.cpp:319
+#: viewer.cpp:297
 msgid "Fi&lter"
 msgstr "Fi&ltr"
 
-#: viewer.cpp:337
+#: viewer.cpp:314
 msgid "F&ilter"
 msgstr "F&iltr"
 
-#: viewer.cpp:341
+#: viewer.cpp:318
 msgid "&Images"
 msgstr "O&brázky"
 
-#: viewer.cpp:360
-msgid "&Save As..."
+#: viewer.cpp:333
+msgid "&Open.."
+msgstr "&Otevøít.."
+
+#: viewer.cpp:334
+#, fuzzy
+msgid "&Save As.."
 msgstr "&Ulo¾it jako.."
 
-#: viewer.cpp:368
+#: viewer.cpp:340
 msgid "&Full Screen"
 msgstr "&Celá obrazovka"
 
-#: viewer.cpp:371
-msgid "&Crop"
-msgstr "&Oøíznout"
-
-#: viewer.cpp:374
-msgid "&Reset"
-msgstr "&Obnovit"
-
-#: viewer.cpp:379
+#: viewer.cpp:343
 msgid "&Zoom..."
 msgstr "&Zvìt¹it..."
 
-#: viewer.cpp:381
+#: viewer.cpp:344
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "Zvìt¹it &o 10%"
 
-#: viewer.cpp:383
+#: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Zmen¹&it o 10%"
 
-#: viewer.cpp:385
+#: viewer.cpp:346
 msgid "&Double size"
 msgstr "&Dvojnásobná velikost"
 
-#: viewer.cpp:387
+#: viewer.cpp:347
 msgid "&Half size"
 msgstr "&Polovièní velikost"
 
-#: viewer.cpp:389
-msgid "&Max size"
-msgstr "&Maximální velikost"
+#: viewer.cpp:349
+msgid "&Reset"
+msgstr "&Obnovit"
 
-#: viewer.cpp:391
-msgid "Max/&aspect"
-msgstr "Max/a&spect"
-
-#: viewer.cpp:396
+#: viewer.cpp:352
 msgid "Rotate &clockwise"
 msgstr "Rotovat ve &smìru hod. ruèièek"
 
-#: viewer.cpp:398
+#: viewer.cpp:354
 msgid "Rotate &anti-clockwise"
 msgstr "Rotovat prot&i smìru hod. ruèièek"
 
-#: viewer.cpp:400
+#: viewer.cpp:357
 msgid "Flip &vertical"
 msgstr "Pøevrátit &vertikálnì"
 
-#: viewer.cpp:402
+#: viewer.cpp:359
 msgid "Flip &horizontal"
 msgstr "Pøevrátit &horizontálnì"
 
-#: viewer.cpp:407
+#: viewer.cpp:362
 msgid "&Tile"
 msgstr "Vytapetov&at"
 
-#: viewer.cpp:408
+#: viewer.cpp:363
 msgid "&Max"
 msgstr "&Max"
 
-#: viewer.cpp:409
+#: viewer.cpp:364
 msgid "Max&pect"
 msgstr "Max&pect"
 
-#: viewer.cpp:412
-msgid "&List..."
+#: viewer.cpp:367
+#, fuzzy
+msgid "&List.."
 msgstr "&Seznam..."
 
-#: viewer.cpp:421
+#: viewer.cpp:371
+msgid "&Previous"
+msgstr "&Pøedchádzejíci"
+
+#: viewer.cpp:372
+msgid "&Next"
+msgstr "&Následující"
+
+#: viewer.cpp:374
 msgid "&Slideshow On/Off"
 msgstr "&Promítání Zapnout/Vypnout"
 
-#: viewer.cpp:426
-msgid "&About KView..."
+#: viewer.cpp:379
+#, fuzzy
+msgid "&About KView.."
 msgstr "&Informace o aplikaci KView"
 
-#: viewer.cpp:473 viewer.cpp:480
+#: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
 msgstr "Existující pøenos je¹tì není úplný."
 
-#: viewer.cpp:494
+#: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
 msgstr "Není mo¾né získat doèasné jméno pøenosu."
 
-#: viewer.cpp:533
+#: viewer.cpp:486
 msgid "Transfer error: "
 msgstr "Chyba pøenosu: "
 
-#: viewer.cpp:607
-msgid "Loading..."
+#: viewer.cpp:558
+#, fuzzy
+msgid "Loading.."
 msgstr "Nahrávám..."
 
-#: viewer.cpp:809
-msgid "Printing..."
-msgstr "Tisknu..."
-
-#: colour.cpp:32
-msgid "Enter brightness factor (%):"
-msgstr "Vlo¾te faktor zesvìtlení (%):"
-
-#: colour.cpp:37
-msgid "Brightness factor must be positive"
-msgstr "Faktor zesvìtlení musí být kladný"
-
-#: colour.cpp:44
+#: colour.cpp:29
 msgid "Brightening..."
 msgstr "Zesvìtluji..."
 
-#: colour.cpp:58
+#: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Intenzita:Zesvìtlit"
 
-#: colour.cpp:78
+#: colour.cpp:63
 msgid "Darkening..."
 msgstr "Ztmavuji..."
 
-#: colour.cpp:91
+#: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Intenzita:Ztmavit"
 
-#: colour.cpp:132
+#: colour.cpp:114
 msgid "Converting to Greyscale..."
 msgstr "Konvertuji do odstínù ¹edi..."
 
-#: colour.cpp:161
+#: colour.cpp:143
 msgid "Greyscale"
 msgstr "Odstíny ¹edi"
 
-#: colour.cpp:179
+#: colour.cpp:161
 msgid "Smoothing..."
 msgstr "Vyhlazuji..."
 
-#: colour.cpp:245
+#: colour.cpp:227
 msgid "Smooth"
 msgstr "Vyhladit"
 
-#: colour.cpp:266
-msgid "Enter gamma value ( >0 ):"
+#: colour.cpp:248
+#, fuzzy
+msgid "Enter gamma value (0...1):"
 msgstr "Zadajte hodnotu gamma ( >0 ):"
 
-#: colour.cpp:269
-msgid "Bad Gamma value"
-msgstr "Chybna hodnota Gamma"
-
-#: colour.cpp:275
+#: colour.cpp:254
 msgid "Gamma-correcting..."
 msgstr "Koriguji gamma faktor..."
 
-#: colour.cpp:328
-msgid "Intensity:Gamma Correct..."
-msgstr "Intenzita:Gamma korekce"
-
-#: colour.cpp:342
-msgid "External.."
-msgstr "Externí.."
+#: colour.cpp:305
+#, fuzzy
+msgid "Gamma Correct..."
+msgstr "Koriguji gamma faktor..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -272,11 +258,29 @@ msgstr "&Spustit promítání"
 msgid "Time between slides (sec):"
 msgstr "Èas mezi políèky (sek):"
 
-#~ msgid "&Open.."
-#~ msgstr "&Otevøít.."
+#~ msgid "&Crop"
+#~ msgstr "&Oøíznout"
 
-#~ msgid "&Previous"
-#~ msgstr "&Pøedchádzejíci"
+#~ msgid "&Max size"
+#~ msgstr "&Maximální velikost"
 
-#~ msgid "&Next"
-#~ msgstr "&Následující"
+#~ msgid "Max/&aspect"
+#~ msgstr "Max/a&spect"
+
+#~ msgid "Printing..."
+#~ msgstr "Tisknu..."
+
+#~ msgid "Enter brightness factor (%):"
+#~ msgstr "Vlo¾te faktor zesvìtlení (%):"
+
+#~ msgid "Brightness factor must be positive"
+#~ msgstr "Faktor zesvìtlení musí být kladný"
+
+#~ msgid "Bad Gamma value"
+#~ msgstr "Chybna hodnota Gamma"
+
+#~ msgid "Intensity:Gamma Correct..."
+#~ msgstr "Intenzita:Gamma korekce"
+
+#~ msgid "External.."
+#~ msgstr "Externí.."

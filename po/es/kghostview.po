@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1998-10-17 13:45+0200\n"
 "Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
 
@@ -639,8 +639,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
-"Configure la variable de entorno (a PRINTER o LPDEST por ejemplo) para que el "
-"nombre de la Impresora sea tomada en la cuenta."
+"Configure la variable de entorno (a PRINTER o LPDEST por ejemplo) para que "
+"el nombre de la Impresora sea tomada en la cuenta."
 
 #: kghostview.cpp:1654
 #, c-format

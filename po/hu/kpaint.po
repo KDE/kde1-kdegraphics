@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdehelp 0.5.2\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1997-09-21 19:39+MET\n"
 "Last-Translator: Nagy Balazs <julian7@kva.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -30,195 +30,158 @@ msgstr "Használat: "
 msgid " [url | filename]\n"
 msgstr " [url | filenév]\n"
 
-#: kpaint.cpp:53 kpaint.cpp:606
+#: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
 msgstr "nevtelen.gif"
 
-#: kpaint.cpp:127
+#: kpaint.cpp:172
 msgid "Unsaved Changes"
 msgstr ""
 
-#: kpaint.cpp:128
+#: kpaint.cpp:173
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
 
-#: kpaint.cpp:163
+#: kpaint.cpp:210
 msgid "New Canvas"
 msgstr "Új keret"
 
-#: kpaint.cpp:166
+#: kpaint.cpp:213
 msgid "Open File"
 msgstr "Megnyitás"
 
-#: kpaint.cpp:169
+#: kpaint.cpp:216
 msgid "Save File"
 msgstr "Mentés"
 
-#: kpaint.cpp:183 kpaint.cpp:335
+#: kpaint.cpp:230 kpaint.cpp:450
 msgid "Zoom In"
 msgstr "Nagyít"
 
-#: kpaint.cpp:186 kpaint.cpp:336
+#: kpaint.cpp:233 kpaint.cpp:451
 msgid "Zoom Out"
 msgstr "Kicsinyít"
 
-#: kpaint.cpp:315
+#: kpaint.cpp:430
 msgid "Open Image..."
 msgstr "Kép megnyitása..."
 
-#: kpaint.cpp:316
+#: kpaint.cpp:431
 msgid "New Image..."
 msgstr "Új kép..."
 
-#: kpaint.cpp:317
+#: kpaint.cpp:432
 #, fuzzy
 msgid "Save Image"
 msgstr "Kép mentése..."
 
-#: kpaint.cpp:318
+#: kpaint.cpp:433
 msgid "Save Image As..."
 msgstr "Kép mentése másként..."
 
-#: kpaint.cpp:319
+#: kpaint.cpp:434
 msgid "Image Format..."
 msgstr "Képformátum..."
 
-#: kpaint.cpp:321
+#: kpaint.cpp:436
 msgid "Open from URL..."
 msgstr "Megnyitás URL-rõl..."
 
-#: kpaint.cpp:322
+#: kpaint.cpp:437
 msgid "Save to URL..."
 msgstr "Mentés URL-re..."
 
-#: kpaint.cpp:324
+#: kpaint.cpp:439
 msgid "New Window"
 msgstr "Új ablak"
 
-#: kpaint.cpp:325
+#: kpaint.cpp:440
 msgid "Close Window"
 msgstr "Ablak bezárása"
 
-#: kpaint.cpp:327
-#, fuzzy
-msgid "Exit"
-msgstr "&Szerkesztés"
-
-#: kpaint.cpp:330
+#: kpaint.cpp:445
 msgid "Copy Region"
 msgstr "Részlet másolása"
 
-#: kpaint.cpp:331
+#: kpaint.cpp:446
 msgid "Cut Region"
 msgstr "Részlet kivágása"
 
-#: kpaint.cpp:332
+#: kpaint.cpp:447
 msgid "Paste Region"
 msgstr "Részlet beillesztése"
 
-#: kpaint.cpp:333
+#: kpaint.cpp:448
 msgid "Paste As Image"
 msgstr "Beillesztés képként"
 
-#: kpaint.cpp:337
+#: kpaint.cpp:452
 msgid "Mask..."
 msgstr "Maszk..."
 
-#: kpaint.cpp:340
+#: kpaint.cpp:455
 msgid "Information..."
 msgstr "Információ..."
 
-#: kpaint.cpp:341
+#: kpaint.cpp:456
 msgid "Resize..."
 msgstr ""
 
-#: kpaint.cpp:342
+#: kpaint.cpp:457
 msgid "Edit Palette..."
 msgstr "Paletta javítása..."
 
-#: kpaint.cpp:343
+#: kpaint.cpp:458
 msgid "Change Colour Depth..."
 msgstr "Színmélység változtatása..."
 
-#: kpaint.cpp:346
+#: kpaint.cpp:461
 msgid "Tool Properties..."
 msgstr "Eszközök tulajdonságai..."
 
-#: kpaint.cpp:348 pen.cpp:17
-msgid "Pen"
-msgstr "Ecset"
-
-#: kpaint.cpp:349 line.cpp:19
-msgid "Line"
-msgstr "Vonal"
-
-#: kpaint.cpp:350 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Téglalap"
-
-#: ellipse.cpp:16 kpaint.cpp:351
-msgid "Ellipse"
-msgstr "Ellipszis"
-
-#: circle.cpp:18 kpaint.cpp:352
-msgid "Circle"
-msgstr "Kör"
-
-#: kpaint.cpp:353 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Festékszóró"
-
-#: kpaint.cpp:354
-msgid "Area Select"
-msgstr ""
-
-#: kpaint.cpp:355
-msgid "Round Angle"
-msgstr ""
-
-#: kpaint.cpp:360
+#: kpaint.cpp:482
 msgid "Show Tools Toolbar"
 msgstr ""
 
-#: kpaint.cpp:361
+#: kpaint.cpp:483
 msgid "Show Commands Toolbar"
 msgstr ""
 
-#: kpaint.cpp:362
+#: kpaint.cpp:484
 msgid "Show Status Bar"
 msgstr ""
 
-#: kpaint.cpp:363
+#: kpaint.cpp:485
 #, fuzzy
 msgid "Save Options"
 msgstr "Beállítások..."
 
-#: kpaint.cpp:372
+#: kpaint.cpp:494
 #, fuzzy
 msgid "KPaint"
 msgstr "A KPaint névjegye"
 
-#: kpaint.cpp:374
+#: kpaint.cpp:496
 msgid ""
 "\n"
 "\n"
 "(c) "
 msgstr ""
 
-#: kpaint.cpp:383
+#: kpaint.cpp:505
 msgid "&Image"
 msgstr "&Kép"
 
-#: kpaint.cpp:384
+#: kpaint.cpp:506
 msgid "&Tool"
 msgstr "&Eszközök"
 
-#: kpaint.cpp:536
+#: kpaint.cpp:681
 msgid "KPaint: Could not open file"
 msgstr "KPaint: nem lehet megnyitni a file-t"
 
-#: kpaint.cpp:537
+#: kpaint.cpp:682
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -226,11 +189,11 @@ msgstr ""
 "Hiba: nem lehet megnyitni a file-t\n"
 "A KPaint nem tudja megnyitni a kiválasztott file-t."
 
-#: kpaint.cpp:545
+#: kpaint.cpp:690
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: ismeretlen formátum"
 
-#: kpaint.cpp:546
+#: kpaint.cpp:691
 #, fuzzy
 msgid ""
 "Error: Unknown Format\n"
@@ -241,15 +204,39 @@ msgstr ""
 "A KPaint nem ismerte fel a kiválasztott file formátumát, vagy a file "
 "megsérült."
 
-#: kpaint.cpp:748
-msgid "Open Location:"
-msgstr "Hely megnyitása:"
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+msgid "Ellipse"
+msgstr "Ellipszis"
 
-#: kpaint.cpp:772
-msgid "Save to Location:"
-msgstr "Mentés helyszínre:"
+#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+msgid "Circle"
+msgstr "Kör"
 
-#: manager.cpp:69
+#: manager.cpp:68 pen.cpp:17
+msgid "Pen"
+msgstr "Ecset"
+
+#: manager.cpp:70 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Téglalap"
+
+#: line.cpp:19 manager.cpp:72
+msgid "Line"
+msgstr "Vonal"
+
+#: manager.cpp:74 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Festékszóró"
+
+#: manager.cpp:76
+msgid "Area Select"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Round Angle"
+msgstr ""
+
+#: manager.cpp:85
 msgid "Tool Properties"
 msgstr "Eszközök tulajdonságai"
 
@@ -277,7 +264,7 @@ msgstr "Mégsem"
 msgid "Edit Colour"
 msgstr "Színek beállítása"
 
-#: formatdialog.cpp:21
+#: formatdialog.cpp:29
 msgid "File Format:"
 msgstr "File formátum:"
 
@@ -391,7 +378,7 @@ msgstr "Csatlakozási stílus"
 msgid "Set Line Colour..."
 msgstr "Vonalszín beállítása..."
 
-#: areaselect.cpp:17
+#: areaselect.cpp:20
 msgid "Area Selection"
 msgstr ""
 
@@ -401,21 +388,47 @@ msgid "Image Depth:"
 msgstr "Kép szélesség:"
 
 #: depthdialog.cpp:24
-msgid "1 (Bitmap)"
+msgid "1 (2 Colours)"
 msgstr ""
 
 #: depthdialog.cpp:25
-msgid "8 (256 Colour)"
+msgid "4 (16 Colours)"
 msgstr ""
 
 #: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:29
 msgid "24 (True Colour)"
+msgstr ""
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
 msgstr ""
 
 #: roundangle.cpp:19
 #, fuzzy
 msgid "Roundangle"
 msgstr "Téglalap"
+
+#, fuzzy
+#~ msgid "Exit"
+#~ msgstr "&Szerkesztés"
+
+#~ msgid "Open Location:"
+#~ msgstr "Hely megnyitása:"
+
+#~ msgid "Save to Location:"
+#~ msgstr "Mentés helyszínre:"
 
 #~ msgid "Continue"
 #~ msgstr "Tovább"

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: graphics\n"
-"POT-Creation-Date: 1998-10-13 13:32+0200\n"
+"POT-Creation-Date: 1998-10-16 15:20+0200\n"
 "PO-Revision-Date: 1998-09-17 13:38+MST\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -11,214 +11,249 @@ msgstr ""
 "Content-Type: text/plain; charset=iso8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: viewer.cpp:74
+#: viewer.cpp:77
 msgid "no image loaded"
 msgstr ""
 
-#: viewer.cpp:82 viewer.cpp:519
+#: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
 msgstr "Spreman"
 
-#: viewer.cpp:180
+#: viewer.cpp:186
 msgid "Net saving not yet implemented"
 msgstr ""
 
-#: viewer.cpp:189
-msgid "written"
+#: viewer.cpp:194
+#, fuzzy, c-format
+msgid "%s: written"
 msgstr "zapisano"
 
-#: viewer.cpp:265
+#: viewer.cpp:232
+msgid "Enter Zoom factor (100 = 1x):"
+msgstr ""
+
+#: viewer.cpp:236
+msgid "Illegal zoom factor"
+msgstr ""
+
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "O KView"
 
-#: viewer.cpp:273 viewer.cpp:290
+#: viewer.cpp:293 viewer.cpp:310
 msgid "&Zoom"
 msgstr "&Uveæaj/Umanji"
 
-#: viewer.cpp:274 viewer.cpp:291
+#: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
 msgstr "&Transformiraj"
 
-#: viewer.cpp:275 viewer.cpp:292
+#: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
 msgstr "Na &radnu povr¹inu"
 
-#: viewer.cpp:277
+#: viewer.cpp:297
 msgid "Fi&lter"
 msgstr "Fi&lter"
 
-#: viewer.cpp:294
+#: viewer.cpp:314
 msgid "F&ilter"
 msgstr "F&ilter"
 
-#: viewer.cpp:298
+#: viewer.cpp:318
 msgid "&Images"
 msgstr "&Slike"
 
-#: viewer.cpp:313
+#: viewer.cpp:333
 msgid "&Open.."
 msgstr "&Otvori.."
 
-#: viewer.cpp:314
+#: viewer.cpp:334
 msgid "&Save As.."
 msgstr "&Spremi pod drugim imenom.."
 
-#: viewer.cpp:320
+#: viewer.cpp:340
 msgid "&Full Screen"
 msgstr "&Puni ekran"
 
-#: viewer.cpp:323
+#: viewer.cpp:343
+#, fuzzy
+msgid "&Zoom..."
+msgstr "&Uveæaj/Umanji"
+
+#: viewer.cpp:344
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "U&veæaj 10%"
 
-#: viewer.cpp:324
+#: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "U&manji 10%"
 
-#: viewer.cpp:325
-#, c-format
-msgid "&Zoom in 50%"
-msgstr "&Uveæaj 50%"
+#: viewer.cpp:346
+msgid "&Double size"
+msgstr ""
 
-#: viewer.cpp:326
-#, c-format
-msgid "Zoo&m out 50%"
-msgstr "Uma&nji 50%"
+#: viewer.cpp:347
+msgid "&Half size"
+msgstr ""
 
-#: viewer.cpp:328
+#: viewer.cpp:349
 msgid "&Reset"
 msgstr "&Poni¹ti"
 
-#: viewer.cpp:331
+#: viewer.cpp:352
 msgid "Rotate &clockwise"
 msgstr "&U smjeru kazaljke na satu"
 
-#: viewer.cpp:333
+#: viewer.cpp:354
 msgid "Rotate &anti-clockwise"
 msgstr "&Protivno smjeru kazaljke na satu"
 
-#: viewer.cpp:336
+#: viewer.cpp:357
 msgid "Flip &vertical"
 msgstr ""
 
-#: viewer.cpp:338
+#: viewer.cpp:359
 msgid "Flip &horizontal"
 msgstr ""
 
-#: viewer.cpp:341
+#: viewer.cpp:362
 msgid "&Tile"
 msgstr "Pop&loèaj"
 
-#: viewer.cpp:342
+#: viewer.cpp:363
 msgid "&Max"
 msgstr "&Max"
 
-#: viewer.cpp:343
+#: viewer.cpp:364
 msgid "Max&pect"
 msgstr ""
 
-#: viewer.cpp:346
+#: viewer.cpp:367
 msgid "&List.."
 msgstr "&Lista.."
 
-#: viewer.cpp:350
+#: viewer.cpp:371
 msgid "&Previous"
 msgstr "&Prija¹nja"
 
-#: viewer.cpp:351
+#: viewer.cpp:372
 msgid "&Next"
 msgstr "&Slijedeæa"
 
-#: viewer.cpp:353
+#: viewer.cpp:374
 msgid "&Slideshow On/Off"
 msgstr "Uklj./Isklj. &Slideshow"
 
-#: viewer.cpp:358
+#: viewer.cpp:379
 msgid "&About KView.."
 msgstr "&O KView.."
 
-#: viewer.cpp:405 viewer.cpp:412
+#: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
 msgstr ""
 
-#: viewer.cpp:426
+#: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
 msgstr ""
 
-#: viewer.cpp:537
+#: viewer.cpp:486
+#, fuzzy
+msgid "Transfer error: "
+msgstr "&Transformiraj"
+
+#: viewer.cpp:558
 msgid "Loading.."
 msgstr "Uèitavam.."
 
-#: colour.cpp:25
-msgid "Brightening.."
+#: colour.cpp:29
+msgid "Brightening..."
 msgstr ""
 
-#: colour.cpp:39
+#: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Intenzite:Svjetlije"
 
-#: colour.cpp:55
-msgid "Darkening.."
+#: colour.cpp:63
+msgid "Darkening..."
 msgstr ""
 
-#: colour.cpp:68
+#: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Intenzitet:Tamnije"
 
-#: colour.cpp:102
-msgid "Converting to Greyscale.."
+#: colour.cpp:114
+msgid "Converting to Greyscale..."
 msgstr ""
 
-#: colour.cpp:131
+#: colour.cpp:143
 msgid "Greyscale"
 msgstr ""
 
-#: colour.cpp:145
-msgid "Smoothing.."
+#: colour.cpp:161
+msgid "Smoothing..."
 msgstr ""
 
-#: colour.cpp:211
+#: colour.cpp:227
 msgid "Smooth"
 msgstr ""
 
-#: ilistdlg.cpp:55
+#: colour.cpp:248
+msgid "Enter gamma value (0...1):"
+msgstr ""
+
+#: colour.cpp:254
+msgid "Gamma-correcting..."
+msgstr ""
+
+#: colour.cpp:305
+msgid "Gamma Correct..."
+msgstr ""
+
+#: ilistdlg.cpp:57
 msgid "Prev"
 msgstr ""
 
-#: ilistdlg.cpp:59
+#: ilistdlg.cpp:61
 msgid "Shu&ffle"
 msgstr ""
 
-#: ilistdlg.cpp:64
+#: ilistdlg.cpp:66
 msgid "Next"
 msgstr ""
 
-#: ilistdlg.cpp:68
+#: ilistdlg.cpp:70
 msgid "Start slide"
 msgstr ""
 
-#: ilistdlg.cpp:73
+#: ilistdlg.cpp:75
 msgid "Interval.."
 msgstr "Interval.."
 
-#: ilistdlg.cpp:78
+#: ilistdlg.cpp:80
 msgid "Loop"
 msgstr "Kru¾i"
 
-#: ilistdlg.cpp:86
+#: ilistdlg.cpp:94
 msgid "Image List"
 msgstr "Lista slika"
 
-#: ilistdlg.cpp:263
+#: ilistdlg.cpp:268
 msgid "Stop &slide"
 msgstr ""
 
-#: ilistdlg.cpp:271
+#: ilistdlg.cpp:276
 msgid "Start &slide"
 msgstr ""
 
-#: ilistdlg.cpp:334
+#: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Vrijeme izmeðu slajdova (sek):"
+
+#~ msgid "&Zoom in 50%"
+#~ msgstr "&Uveæaj 50%"
+
+#~ msgid "Zoo&m out 50%"
+#~ msgstr "Uma&nji 50%"

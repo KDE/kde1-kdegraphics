@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
+"POT-Creation-Date: 1998-10-30 12:34+0100\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -646,8 +646,7 @@ msgstr ""
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
-msgstr ""
-"Namjestite okoli¹ne varijable (npr. PRINTER ili LPDEST) za ime pisaèa." 
+msgstr "Namjestite okoli¹ne varijable (npr. PRINTER ili LPDEST) za ime pisaèa."
 
 #: kghostview.cpp:1654
 #, c-format
