@@ -95,7 +95,7 @@ msgstr "Speilvend side"
 
 #: kfax.cpp:404
 msgid "&Flip Page"
-msgstr ""
+msgstr "&Sideomdreining"
 
 #: kfax.cpp:406
 msgid "Zoom &in"
