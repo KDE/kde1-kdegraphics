@@ -465,7 +465,7 @@ bool KIconEdit::setupMenuBar()
 #endif
   id = image->insertItem(Icon("grayscale.xpm"), i18n("&GrayScale"), ID_IMAGE_GRAYSCALE);
   
-  id = image->insertItem(Icon("kdepalette.xpm"), i18n("&Map to KDE palette"), ID_IMAGE_MAPTOKDE);
+  //id = image->insertItem(Icon("kdepalette.xpm"), i18n("&Map to KDE palette"), ID_IMAGE_MAPTOKDE);
   
   connect( image, SIGNAL(activated(int)), SLOT(slotImage(int)));
   menubar->insertItem(i18n("&Icon"), image);

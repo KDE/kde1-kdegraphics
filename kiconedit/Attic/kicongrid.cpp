@@ -807,7 +807,6 @@ QImage *KIconEditGrid::getSelection(bool cut)
   const QRect rect = pntarray.boundingRect();
   int nx = 0, ny = 0, nw = 0, nh = 0;
   rect.rect(&nx, &ny, &nw, &nh);
-  debug("KIconEditGrid: Selection Rect: %d %d %d %d", nx, ny, nw, nh);
 
   QImage *tmp = new QImage(nw, nh, 32);
   tmp->fill(TRANSPARENT);
@@ -820,9 +819,30 @@ QImage *KIconEditGrid::getSelection(bool cut)
     if(img->valid(x, y) && rect.contains(QPoint(x, y)))
     {
       *((uint*)tmp->scanLine(y-ny) + (x-nx)) = *((uint*)img->scanLine(y) + x);
-      //int cell = y * numCols() + x;
+      if(cut)
+      {
+        *((uint*)img->scanLine(y) + x) = TRANSPARENT;
+        setColor( (y*numCols()) + x, TRANSPARENT, false );
+      }
     }
   }
+
+  QPointArray a(pntarray.copy());
+  pntarray.resize(0);
+  drawPointArray(a, Mark);
+  emit selecteddata(false);
+  if(cut)
+  {
+    updateColors();
+    repaint(rect.x()*cellSize(), rect.y()*cellSize(),
+            rect.width()*cellSize(), rect.height()*cellSize(), false);
+    p = *img;
+    emit changed(p);
+    emit colorschanged(numColors(), data());
+    emit newmessage(i18n("Selected area cutted"));
+  }
+  else
+    emit newmessage(i18n("Selected area copied"));
 
   return tmp;
 }
