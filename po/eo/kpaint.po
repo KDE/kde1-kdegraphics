@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint 1.0\n"
-"POT-Creation-Date: 1998-11-09 01:58+0100\n"
+"POT-Creation-Date: 1998-11-10 02:07+0100\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
