@@ -103,7 +103,7 @@ msgstr "位图[&P]"
 
 #: interpreter.cpp:224
 msgid "&Backing store"
-msgstr "告速缓存[&B]"
+msgstr "高速缓存[&B]"
 
 #: interpreter.cpp:244 kkeydialog.cpp:230
 msgid "&Defaults"
