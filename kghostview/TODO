@@ -1,0 +1,18 @@
+Be sure viewtoolbar is being updated and is updating properly.
+Allow user to type any number into zoom box.
+"Recent" should not show blank entries and should be grayed if there are
+no recent files.
+Timer&stat-based reloading.
+Remove ViewControl dialog totally.
+Fix shrink_wrap():
+	set height for small images
+	don't get too wide on large images
+Multiple copies option in print dialog
+Standardize print dialog with other apps (?)
+Save previous print commands in kghostviewrc for use in a combobox
+
+Make this an Open Part.
+
+Send requests and bug reports to dsweet@chaos.umd.edu
+
+David Sweet
