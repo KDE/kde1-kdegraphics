@@ -15,3 +15,6 @@ uninstall:
 	for i in $(FILES); do \
 	 rm -f $(PICSDIR)/$$i ; \
 	done
+
+distclean:
+	rm -f Makefile

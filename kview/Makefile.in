@@ -15,10 +15,21 @@ MOC= @MOC@
 topdir = @topdir@
 
 INCLUDE= @all_includes@ -I.. 
+
+
+distclean:     clean
+       $(MAKE) -C doc distclean
+       $(MAKE) -C pics distclean
+       -rm -f Makefile
+
+
 LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif @LIBJPEG@ @LIBSOCKET@ 
 CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
+
+distclean:
+       rm -f Makefile
 # Part of libgr
 LIBPNG= -DHAVE_LIBPNG
 LLIBPNG= -lpng -lz

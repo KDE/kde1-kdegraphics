@@ -19,3 +19,6 @@ uninstall:
 	for i in $(FILES); do \
 	 rm -f $(DOCDIR)/$$i ; \
 	done
+
+distclean:
+       rm -f Makefile
