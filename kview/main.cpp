@@ -4,55 +4,46 @@
 //
 // $Id$
 
-#include<kfm.h>
-#include<kapp.h>
+//#include <qslider.h>
+#include "fileman.h"
+#include "wview.h"
 
-#include"wview.h"
+#include <qimage.h>
+#include <stdio.h>
+
+//QStrList fileList;
+
+KApplication *theApp;
+
 
 int main(int argc, char **argv)
 {
-	KApplication theApp(argc, argv, "kview");
-	WView *newWidget=0;
-	bool OneSucceeded=FALSE;
-	
-	// open windows with referenced images
-	if(qApp->argc()>1){
-
-		for(int ctr=1; ctr < theApp.argc(); ctr++) {
-
-			if( newWidget == 0)
-				newWidget = new WView(0, 0, 0);
-			
-			newWidget->load((theApp.argv())[ctr]);
-
-			if(newWidget->loadSucceeded()){
-				newWidget->sizeWindow();
-				newWidget->show();
-				newWidget = 0;
-				OneSucceeded = TRUE;
-			}
-		}
-
-		if( WView::windowCount() != 0) {
-			if(!OneSucceeded)
-				newWidget->show();
-
-			return theApp.exec();
-		}
-		else {
-			return -1;	
-		}
-
-	// No command line images... open empty dialog.
-	} 
-	else {
-
-		WView *appWidget = new WView(0,"kview", 0);
-
-		appWidget->show();
-
-		return theApp.exec();
-
+  int i;
+  theApp = new KApplication (argc, argv, "kview");
+  
+  if ( qApp->argc() > 1 )
+    {
+      i=1;
+      while ( i < qApp->argc() )
+	{
+	  QString f = qApp->argv()[i];
+	  
+	  if (i==1)
+	    {
+	      /*    if ( f.find( ":/" ) == -1 && f.left(1) != "/" )
+		{
+		  char buffer[ 1024 ];
+		  getcwd( buffer, 1023 );
+		  f.sprintf( "%s/%s", buffer, argv[i] );
+		}*/
+	    }
+	  Fileman::appendFileList(QString(qApp->argv()[i]));
+	  i++;
 	}
-	return -2;
+    }
+  
+  Fileman *man = new Fileman(0L,0L);
+  man->show();
+  man->firstClicked();
+  return theApp->exec();
 }

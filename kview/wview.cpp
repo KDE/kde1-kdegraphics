@@ -10,15 +10,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include <qapp.h>
-#include <qwidget.h>
-#include <qmsgbox.h>
 #include <qfiledlg.h>
-#include <qkeycode.h>
 #include <qaccel.h>
-#include <qpixmap.h>
 
+#include "wview.h"
 #include "wview.moc"
+
 #include "image_bmp.h"
 
 #include "QwViewport.h"
@@ -26,6 +23,11 @@
 #include "kerror.h"
 
 #include <kurl.h>
+//extern    QStrList  Fileman::fileList;
+
+int winCount=0;
+QList<WView> windowList;
+KViewError WView::errHandler;
 
 WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 	: QWidget(parent, name, f)
@@ -38,6 +40,7 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 	// no image yet;
 	loaded = FALSE;
 	loadSuccess = FALSE;
+	currentFilename = QString("::no file loaded");
 
 	QPixmap myIcon;
 	myIcon.loadFromData(image_bmp_data, image_bmp_len);
@@ -52,6 +55,11 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 	if (name)
 	setCaption(name);
 
+	// Martin
+	imageWidth = 0;
+	imageHeight = 0;
+	
+	
 	///////////////// Menus //////////////
 
 	Scroller = new QwViewport(this);
@@ -77,14 +85,11 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 
 	File->insertItem("&Open File..", this, SLOT(loadImage()), CTRL+Key_O);
 	File->insertItem("Open &URL..", this, SLOT(loadURL()), CTRL+Key_U);
-	id = File->insertItem("&Print..");
-	File->setItemEnabled(id, false);
 	File->insertSeparator();
 	File->insertItem("&New Window", this, SLOT(newWindow()), CTRL+Key_N);
 	File->insertSeparator();
 	File->insertItem("&Close",this, SLOT(closeWindow()),CTRL+Key_C);
 	File->insertItem("E&xit", qApp, SLOT(quit()), ALT + Key_Q );
-
 	// Image Menu
 
 	Image->insertItem("&Zoom", ImageZoom);
@@ -127,9 +132,12 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 
 	// Toggle menu if Image is clicked.
 	// "Feature": _must_ click on image (doesn't work with Viewport).
+
 	
 	connect(Viewport,SIGNAL(clicked()), this, SLOT(toggleMenu()));
-
+	//connect(Viewport,SIGNAL(showDispManager()),
+	//	this, SLOT(showManager()));
+	connect(Viewport,SIGNAL(doResize()), this, SLOT(sizeWindow()));
 	// Tells Scroller that image has changed size
 
 	connect(Viewport,SIGNAL(resized()),Scroller, SLOT(resizeScrollBars()));
@@ -156,6 +164,7 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 
 	connect(this, SIGNAL( kviewError( KViewError::Type ) ), 
 		&errHandler, SLOT( showMessage( KViewError::Type ) ) );
+	toggleMenu();
 
 }
 
@@ -183,12 +192,14 @@ bool WView::loadLocal(const char *filename)
 
 	if( !file.exists() ) {
 		emit kviewError( KViewError::badFileName );
+		if (!loaded) sendCloseSignal();
 		loadSuccess = FALSE;
 		return FALSE;
 	}
 
 	if( !file.isReadable() ) {
 		emit kviewError( KViewError::accessDenied );
+		if (!loaded) sendCloseSignal();
 		loadSuccess = FALSE;
 		return FALSE;
 	}
@@ -207,6 +218,7 @@ bool WView::loadLocal(const char *filename)
 
 	} else {
 		emit kviewError( KViewError::badFormat );
+		if (!loaded) sendCloseSignal();
 	}
 
 	return loadSuccess;
@@ -247,22 +259,23 @@ void WView::aboutBox()
 
 void WView::toggleMenu()
 {
-	if(Menu->isVisible()){
-		Menu->hide();
+  //    if(Menu->isVisible()){
+
+        	Menu->hide();
 		Scroller->move(0,0);
 		Scroller->resize(width(),height());
-	}
+   /*	}
 	else {
-		Menu->show();
-		Scroller->move(0, Menu->height());
-		Scroller->resize(width(),height()-Menu->height());
-	}
-
+	        Menu->show();
+	  	Scroller->move(0, Menu->height());
+	  	Scroller->resize(width(),height()-Menu->height());
+		}
+   */
 }
 
 void WView::sizeWindow()
 {
-	Menu->hide();
+        Menu->hide();
 	Scroller->move(0,0);
 	resize(Viewport->width(), Viewport->height());
 }
@@ -280,6 +293,9 @@ void WView::resizeEvent(QResizeEvent *)
 	else
 		Scroller->resize(width(), height());
 
+	//tell Viewport the size of the parent widget
+	Viewport->parwidth=width();
+	Viewport->parheight=height();
 }
 
 void WView::zoomIn()
@@ -301,7 +317,7 @@ void WView::zoomOut()
 void WView::rotateClockwise(){
 	if(!loaded) return;
 
-	Viewport->rotate(90.0);
+	Viewport->rotateClockwise();
 
 	repaint();
 }
@@ -309,7 +325,7 @@ void WView::rotateClockwise(){
 void WView::rotateAntiClockwise(){
 	if(!loaded) return;
 
-	Viewport->rotate(-90.0);
+	Viewport->rotateAntiClockwise();
 
 	repaint();
 }
@@ -379,16 +395,31 @@ void WView::newWindow(){
 	w->show();
 }
 
-void WView::closeWindow(){
-	if(winCount > 1)
-		close(TRUE);
-	else
-		qApp->quit();
+
+void WView::closeEvent( QCloseEvent *_ev)
+{
+  //  int item = windowList.findRef(this);
+  //  printf("close %d \n",item);
+  //  closeWindow();
+  sendCloseSignal();
 }
 
-int WView::winCount=0;
-QList<WView> WView::windowList;
-KViewError WView::errHandler;
+void WView::sendCloseSignal()
+{
+  int item = windowList.findRef(this);
+  //printf("close %d \n",item);
+  emit closeClicked(item);
+}
+
+void WView::closeWindow()
+{
+  if(winCount > 1)
+    delete this;
+  else
+    qApp->quit();
+}
+
+
 
 
 void WView::launchHelp(){
@@ -403,19 +434,26 @@ void WView::launchHelp(){
 	}
 }
 
-void WView::load(const char *file){
+bool WView::load(const char *file){
 
 	if( !strchr(file,':') ) {
 		loadLocal(file);
 		
 		if(loadSuccess){
 			imagePath = file;
-			setCaption(QString("kview: ")+ imagePath);
+			setCaption(QString("KView: ")+ imagePath);
+			currentFilename = imagePath; //Martin
+			currentFilename.detach();
+			QPixmap * image = Viewport->realPixmap();
+			imageWidth = image->width();
+			imageHeight= image->height();
+			emit doUpdate(1);
 		}
 			
 	}
 	else
 		loadNetFile(file);
+	return loadSuccess;
 }
 
 bool WView::loadNetFile(const char *file) {
@@ -474,6 +512,12 @@ void WView::slotKFMFinished()
 		if(loadSuccess) {
 			setCaption( QString("kview: ") + netFile );
 			imagePath = netFile.data();
+			currentFilename = netFile;  //Martin
+			currentFilename.detach();
+			QPixmap * image = Viewport->realPixmap();
+			imageWidth = image->width();
+			imageHeight= image->height();
+			emit doUpdate(3);
 		}
 
 	        // Clean up
@@ -504,3 +548,12 @@ void WView::imageInfo()
 
         QMessageBox::message("Image Info", Info, "Ok");
 }
+
+
+//------------------------------------------------------------
+//------------------------------------------------------------
+
+
+
+
+

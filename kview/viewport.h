@@ -8,8 +8,11 @@
 #ifndef _SSK_WVIEWPORT_H
 #define _SSK_WVIEWPORT_H
 
-#include<qlabel.h>
-#include<qwmatrix.h>
+#include <qlabel.h>
+#include <kpixmap.h>
+#include <qwmatrix.h>
+#include <qpopmenu.h>
+
 
 /// 
 /**	Widget containing the current image.
@@ -26,7 +29,8 @@ private:
 		QPixmap *image;
 		QWMatrix matrix;
 		int	oldContext;
-
+		QPopupMenu *lb_popup;
+		
 		void fitToPixmap();
 public:
 	///
@@ -38,12 +42,26 @@ public:
 
 	/// The image pixmap
 	QPixmap *realPixmap(){ return image; };
+	int parwidth,parheight;
 
+public slots:	
 	///
 	void scale(float x,float y);
 	///
-	void rotate(float angle);
-
+	void turnPixmap( QWMatrix S);
+	void doScalePlus();
+	void doScaleMinus();
+        void doScalePlusSmall();
+        void doScaleMinusSmall();
+	void rotateClockwise();
+	void rotateAntiClockwise();
+	void mirrorX();
+	void mirrorY();
+	void tileToDesktop();
+	void maxToDesktop();
+	void maxpectToDesktop();
+	void fitWindowToPixmap();
+	void fitPixmapToWindow();
 	/**@name signals
 	*/
 	//@{
@@ -55,6 +73,8 @@ signals:
 	///
 	void resized();
 	//@}
+	void showDispManager();
+	void doResize();
 
 protected:
 
@@ -62,7 +82,8 @@ protected:
 	void registerFormats();
 	///
 	void mousePressEvent(QMouseEvent *);
-
+	bool eventFilter (QObject *, QEvent * );
+	
 };
 
 #endif

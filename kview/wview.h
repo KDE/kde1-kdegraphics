@@ -18,11 +18,13 @@
 #include<qwidget.h>
 #include<qmenubar.h>
 #include<qlist.h>
+#include<qevent.h>  //Martin
 
 #include"kerror.h"
 
 class WViewPort;
 class QwViewport;
+class Fileman;
 
 /// 
 /** The main kview widget.
@@ -71,16 +73,21 @@ private:
 
 // List of kview windows
 
-	static QList<WView> windowList;
-	static int winCount;
+  //static QList<WView> windowList;
+  //static int winCount
 
 // Error Handler
-	static KViewError errHandler;
+        static KViewError errHandler;
+  
+        QString currentFilename;
+        int     imageWidth,imageHeight;
+        Fileman *man;
 
+        void sendCloseSignal();
 public:
 
 
-/// Loads an image from it's URL, using a KFM connection.
+/// Loads an image from its URL, using a KFM connection.
 
 	bool loadNetFile(const char *URL);
 
@@ -93,13 +100,23 @@ public:
 ///
 	~WView();
 
-/**@name slots
+  
+  char * getCurrentFilename() { return currentFilename.data(); }
+  void   changeImageName(char * text)
+  {
+    currentFilename = text;
+    currentFilename.detach();
+    setCaption(QString("kview: ")+ currentFilename);
+  }
+  int    getImageWidth() { return imageWidth;}
+  int    getImageHeight() { return imageHeight; }
+        QString getImageType()  { return imageFormat; } 
+
+  /**@name slots
 */
 //@{
 
 public slots:
-	
-
 /**@name image file manipulation
 */
 //@{
@@ -111,7 +128,7 @@ loads it with loadNetFile if it's a URL.
 
 Check <i>loadSuccess</i> to check image load status.
 */
-	void load(const char *locator);
+   bool load(const char *locator);
 
 /// Loads the image the user selects from a File dialog.
 	void loadImage();
@@ -143,8 +160,6 @@ Check <i>loadSuccess</i> to check image load status.
 	void newWindow();
 ///
 	void closeWindow();
-///
-	static int windowCount(){return winCount;};
 //@}
 
 
@@ -192,6 +207,9 @@ signals:
 	
 	void kviewError(KViewError::Type);
 
+        void doUpdate(int);
+
+        void closeClicked(int);
 //@}
 
 
@@ -201,8 +219,8 @@ protected:
 	void mousePressEvent(QMouseEvent *);
 	///
 	void resizeEvent(QResizeEvent *);
-
-
+  ///
+        void closeEvent( QCloseEvent *);
 };
 
 #endif

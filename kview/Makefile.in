@@ -1,22 +1,22 @@
 
 ##
-## Makefile for the kView image viewer 
-## (internal development version 0.6).
+## Makefile for the KView image viewer 
 ##
-## $Id$
 
 CXX = @CXX@
 MOC= @MOC@
 
-
-INCLUDE= @all_includes@ -I.. 
-LDFLAGS= @all_libraries@ -lkfm -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
-CXXFLAGS += -DHAVE_CONFIG_H
+INCLUDE	= @all_includes@ -I.. 
+LDFLAGS	= @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
+CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
 # Part of libgr
 LIBPNG= -DHAVE_LIBPNG
 LLIBPNG= -lpng -lz
+
+# uncomment this if you like to use the unsecure filename changer
+#LINEEDIT =-DLINEEDIT 
 
 ########
 #  Install locations
@@ -37,15 +37,15 @@ FORMATOBJ= jpeg.o gif.o kpng.o
 
 ######
 
-OBJS = main.o wview.o viewport.o formats.o QwViewport.o kerror.o $(FORMATOBJ)
+OBJS = main.o wview.o viewport.o formats.o QwViewport.o kerror.o fileman.o $(FORMATOBJ)
 SOURCE = main.cpp wview.cpp viewport.cpp formats.cpp QwViewport.cpp \
-	 kerror.cpp $(FORMATSRC)
+	 kerror.cpp fileman.cpp $(FORMATSRC)
 SRCDOCFILES = wview.h viewport.h kerror.h
 
 all: kview
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) $(FORMATS) $(INCLUDE) -c -o $@ $<
+	$(CXX) $(CXXFLAGS) $(LINEEDIT) $(FORMATS) $(INCLUDE) -c -o $@ $<
 
 %.moc: %.h
 	$(MOC) $< -o $@
@@ -54,7 +54,8 @@ kview: $(OBJS)
 	$(CXX) -o $@ $(OBJS) $(FORMATLIBS) $(LDFLAGS)
 
 main.o: main.cpp wview.moc
-wview.o: wview.cpp wview.moc viewport.h
+wview.o: wview.cpp wview.moc viewport.h fileman.moc
+fileman.o: fileman.cpp fileman.h fileman.moc wview.h 
 viewport.o: viewport.cpp viewport.moc
 kerror.o: kerror.cpp kerror.moc
 QwViewport.cpp: QwViewport.moc
@@ -71,16 +72,17 @@ clean::
 	-rm -f kview $(OBJS) *.moc
 
 install: kview
-
 	@INSTALL@ -m 755 kview $(BINPATH)
 	@INSTALL@ -d -m 755 $(LNKPATH)
 	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/kview
 	(cd doc && $(MAKE) install)
+	(cd pics && $(MAKE) install)
 
 uninstall:
 	rm -f $(BINPATH)/kview
 	rm -f $(LNKPATH)/kview.kdelnk
 	(cd doc && $(MAKE) uninstall)
+	(cd pics && $(MAKE) uninstall)
 
 srcdoc:	
 	cd doc; doc++ -j -H -d $(SRCDOCPATH) ../wview.h ../viewport.h \

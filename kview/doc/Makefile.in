@@ -1,6 +1,6 @@
-FILES =  kview.html kview.gif
+FILES =  kview.html kview.gif toolbar1.gif toolbar2.gif
 
-DOCDIR = @prefix@/doc/HTML
+DOCDIR = @prefix@/doc/HTML/kview
 INSTALL_DIR = @INSTALL@ -d -m 0755
 INSTALL_DATA = @INSTALL@ -m 644
 

@@ -13,9 +13,9 @@
 #include<qapp.h>
 #include<qmsgbox.h>
 #include<qcolor.h>
-#include <qpixmap.h>
 
-#include"viewport.moc"
+#include "viewport.h"
+#include "viewport.moc"
 
 WViewPort::WViewPort(const char *file=0, QWidget *parent=0, 
 		const char *name=0, WFlags f = 0)
@@ -26,9 +26,44 @@ WViewPort::WViewPort(const char *file=0, QWidget *parent=0,
 
 	setAutoResize(true);
 	
+	QPopupMenu *ImageZoom = new QPopupMenu;
+	ImageZoom->insertItem("+50%", this,
+			      SLOT(doScalePlus()));
+	ImageZoom->insertItem("+10%", this,
+			      SLOT(doScalePlusSmall()));
+	ImageZoom->insertItem("-10%", this,
+			      SLOT(doScaleMinusSmall()));
+	ImageZoom->insertItem("-50%", this,
+			      SLOT(doScaleMinus()));
+
+	QPopupMenu *ImageRotate = new QPopupMenu;
+	ImageRotate->insertItem("Clockwise",this,
+				SLOT(rotateClockwise()));
+	ImageRotate->insertItem("Anti-clock", this, 
+				SLOT(rotateAntiClockwise()));
+	ImageRotate->insertItem("Mirror X", this, 
+				SLOT(mirrorX()));
+	ImageRotate->insertItem("Mirror Y", this, 
+				SLOT(mirrorY()));
+	
+	QPopupMenu *ImageRoot = new QPopupMenu;
+	ImageRoot->insertItem("Ti&le", this, SLOT(tileToDesktop()));
+	ImageRoot->insertItem("Max Size", this, SLOT(maxToDesktop()));
+	ImageRoot->insertItem("Maxpect", this, SLOT(maxpectToDesktop()));
+	
+	lb_popup = new QPopupMenu;
+	lb_popup->insertItem("Zoom", ImageZoom);
+	lb_popup->insertItem("Rotate",ImageRotate);
+	lb_popup->insertItem("To Desktop",ImageRoot);
+	lb_popup->insertItem("Fit window size to pixmap size", this,
+			     SLOT(fitWindowToPixmap()));
+	lb_popup->insertItem("Fit pixmap size to window size", this,
+			     SLOT(fitPixmapToWindow()));
+	installEventFilter( this );
+
 	image = new QPixmap();
 	imagefile="";
-
+	
 	load(file);
 }
 
@@ -78,6 +113,35 @@ void WViewPort::mousePressEvent(QMouseEvent *)
 	emit clicked();
 }
 
+bool WViewPort::eventFilter(QObject *o, QEvent *ev){
+
+  static QPoint tmp_point;
+
+  (void) o;
+
+  if(ev->type() != Event_MouseButtonPress) 
+    return FALSE;
+    
+  QMouseEvent *e = (QMouseEvent *)ev;
+  /*
+    if(e->button() == RightButton) 
+    {
+      emit showDispManager();
+      return TRUE;
+    }
+  */
+  if(e->button() == LeftButton) 
+    {
+      tmp_point = QCursor::pos();
+      if(lb_popup)
+	lb_popup->popup(tmp_point);
+      return TRUE;
+    }
+  
+  return FALSE;
+  
+}
+
 void WViewPort::scale(float x, float y)
 {
 	QApplication::setOverrideCursor(waitCursor);
@@ -91,20 +155,132 @@ void WViewPort::scale(float x, float y)
 }
 
 
-void WViewPort::rotate( float angle )
+void WViewPort::doScalePlus()
 {
-	QApplication::setOverrideCursor(waitCursor);
+  QWMatrix S(1.5F, 0.0F, 0.0F, 1.5F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
 
-	matrix.rotate(angle);
-	setPixmap(image->xForm(matrix));
+void WViewPort::doScalePlusSmall()
+{
+  QWMatrix S(1.1F, 0.0F, 0.0F, 1.1F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
 
-	QApplication::restoreOverrideCursor();
+void WViewPort::doScaleMinusSmall()
+{
+  QWMatrix S(0.9090909090909F, 0.0F, 0.0F, 0.9090909090909F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
 
-	fitToPixmap();
+void WViewPort::doScaleMinus()
+{
+  QWMatrix S(0.66666666666F, 0.0F, 0.0F, 0.66666666666F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
+
+
+void WViewPort::mirrorX()
+{
+  QWMatrix S(-1.0F, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
+
+void WViewPort::mirrorY()
+{
+  QWMatrix S(1.0F, 0.0F, 0.0F, -1.0F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
+
+void WViewPort::rotateClockwise()
+{
+  QWMatrix S(0.0F, 1.0F, -1.0F, 0.0F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
+
+void WViewPort::rotateAntiClockwise()
+{
+  QWMatrix S(0.0F, -1.0F, 1.0F, 0.0F, 0.0F, 0.0F);
+  turnPixmap(S);
+}
+
+void WViewPort::turnPixmap( QWMatrix S)
+{
+  matrix = matrix * S;
+
+  QApplication::setOverrideCursor(waitCursor);
+  setPixmap(image->xForm(matrix));
+  QApplication::restoreOverrideCursor();
+  fitToPixmap();
+
+  emit doResize();
 }
 
 void WViewPort::fitToPixmap()
 {
 	resize( pixmap()->width(), pixmap()->height() );
 	emit resized();
+}
+
+
+void WViewPort::tileToDesktop()
+{
+  qApp->desktop()->setBackgroundPixmap( *this->pixmap());
+}
+
+void WViewPort::maxToDesktop()
+{ 
+  QWMatrix mat;
+  QPixmap image(*this->pixmap());
+  QWidget *deskWidget = qApp->desktop();
+  float swid, shei;
+  
+  shei= (float)deskWidget->height()/(float)image.height();
+  swid= (float)deskWidget->width()/(float)image.width();
+  
+  mat.scale(swid, shei);
+  
+  deskWidget->setBackgroundPixmap(image.xForm(mat));
+  
+  repaint();
+  
+}
+
+void WViewPort::maxpectToDesktop()
+{
+  
+  float sc;
+  QWidget *deskWidget = qApp->desktop();
+  QPixmap *currPix = pixmap();
+
+  float S = (float)deskWidget->height()/(float)deskWidget->width(),
+    I=(float)currPix->height()/(float)currPix->width();
+
+  if (S < I)
+    sc= (float)deskWidget->height()/(float)currPix->height();
+  else
+    sc= (float)deskWidget->width()/(float)currPix->width();
+  
+  QWMatrix mat;
+  QPixmap image(*this->pixmap());
+  
+  mat.scale(sc,sc);
+  
+  qApp->desktop()->setBackgroundPixmap(image.xForm(mat));
+  
+  repaint();
+}
+
+void WViewPort::fitWindowToPixmap()
+{
+  emit doResize();
+}
+
+void WViewPort::fitPixmapToWindow()
+{
+  float sx, sy;
+  sx = (float) parwidth / (float) (width());
+  sy = (float) parheight / (float) (height());
+  QWMatrix S(sx, 0.0F, 0.0F, sy, 0.0F, 0.0F);
+  turnPixmap(S);
 }
