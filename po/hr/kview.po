@@ -21,7 +21,7 @@ msgstr "Spreman"
 
 #: viewer.cpp:241
 msgid "Net saving not yet implemented"
-msgstr ""
+msgstr "Mre¾no spremanje jo¹ nije podr¾ano"
 
 #: viewer.cpp:249
 #, fuzzy, c-format
@@ -30,11 +30,11 @@ msgstr "zapisano"
 
 #: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Unesite faktor poveæanja (100 = 1x):"
 
 #: viewer.cpp:291
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Neispravan faktor poveæanja"
 
 #: viewer.cpp:340
 msgid "About KView"
@@ -84,7 +84,7 @@ msgstr "&Spremi pod drugim imenom.."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "Zatvori prozor"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -115,11 +115,11 @@ msgstr "U&manji 10%"
 
 #: viewer.cpp:438
 msgid "&Double size"
-msgstr ""
+msgstr "&Dvostruka velièina"
 
 #: viewer.cpp:440
 msgid "&Half size"
-msgstr ""
+msgstr "Polovica velièine"
 
 #: viewer.cpp:442
 #, fuzzy
@@ -140,11 +140,11 @@ msgstr "&Protivno smjeru kazaljke na satu"
 
 #: viewer.cpp:453
 msgid "Flip &vertical"
-msgstr ""
+msgstr "Okreni oko X osi"
 
 #: viewer.cpp:455
 msgid "Flip &horizontal"
-msgstr ""
+msgstr "Okreni oko Y osi"
 
 #: viewer.cpp:460
 msgid "&Tile"
@@ -165,11 +165,11 @@ msgstr "&O KView.."
 
 #: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
-msgstr ""
+msgstr "Postojeæi prijenos jo¹ nije gotov."
 
 #: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
-msgstr ""
+msgstr "Ne mogu dobiti privremeno ime za prijenos"
 
 #: viewer.cpp:581
 #, fuzzy
@@ -184,23 +184,23 @@ msgstr "Uèitavam.."
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Ne mogu uèitati %s"
 
 #: viewer.cpp:860
 msgid "Printing..."
-msgstr ""
+msgstr "Ispisujem..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Unesite faktor svjetline (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Svjetlina mora biti pozitivna"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Mijenjam svjetlinu..."
 
 #: colour.cpp:58
 #, fuzzy
@@ -209,53 +209,53 @@ msgstr "Intenzite:Svjetlije"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
-msgstr ""
+msgstr "Pretvaram u sive tonove..."
 
 #: colour.cpp:129
 msgid "Greyscale"
-msgstr ""
+msgstr "Sivi tonovi"
 
 #: colour.cpp:147
 msgid "Smoothing..."
-msgstr ""
+msgstr "Zaglaðivanje..."
 
 #: colour.cpp:213
 msgid "Smooth"
-msgstr ""
+msgstr "Glatko"
 
 #: colour.cpp:234
 msgid "Enter gamma value ( >0 ):"
-msgstr ""
+msgstr "Unesite gamma vrijednost ( >0 ):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Lo¹a gamma vrijednost"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Gamma korekcija..."
 
 #: colour.cpp:296
 #, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Intenzitet:Tamnije"
+msgstr "Intenzitet:gamma korekcija..."
 
 #: colour.cpp:310
 #, fuzzy
 msgid "External.."
-msgstr "Interval.."
+msgstr "Vanjsko.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
-msgstr ""
+msgstr "Prija¹nje"
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
-msgstr ""
+msgstr "Izmje¹aj"
 
 #: ilistdlg.cpp:66
 msgid "Next"
-msgstr ""
+msgstr "Slijedeæe"
 
 #: ilistdlg.cpp:70
 msgid "Start slide"
