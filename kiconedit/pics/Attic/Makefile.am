@@ -1,5 +1,5 @@
 
-SUBDIRS = icons toolbar mini
+SUBDIRS = icons toolbar mini large
 
 DISTCLEANFILES = Makefile *~
 

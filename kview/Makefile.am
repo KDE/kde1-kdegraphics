@@ -28,9 +28,12 @@ kde_icon_DATA = kview.xpm
 install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kview.xpm $(kde_minidir)/kview.xpm
+	$(mkinstalldirs) $(kde_icondir)
+	$(INSTALL_DATA) $(srcdir)/large-kview.xpm $(kde_icondir)/large/kview.xpm
 
 uninstall-local:
 	-rm -f $(kde_minidir)/kview.xpm
+	-rm -f $(kde_icondir)/large/kview.xpm
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot

@@ -36,14 +36,19 @@ bin_PROGRAMS = kpaint
 
 SUBDIRS = doc toolpics images
 
-EXTRA_DIST = $(apps_DATA) $(icon_DATA) mini-kpaint.xpm
+EXTRA_DIST = $(apps_DATA) $(icon_DATA) mini-kpaint.xpm large-kpaint.xpm
 
 install-data-local: mini-kpaint.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kpaint.xpm $(kde_minidir)/kpaint.xpm
+	$(mkinstalldirs) $(kde_icondir)/large
+	$(INSTALL_DATA) $(srcdir)/large-kpaint.xpm $(kde_icondir)/large/kpaint.xpm
+
 
 uninstall-local:
 	-rm -f $(kde_minidir)/kpaint.xpm
+	-rm -f $(kde_icondir)/large/kpaint.xpm
+
 
 messages:
 	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot *.cpp && mv messages.po ../po/kpaint.pot

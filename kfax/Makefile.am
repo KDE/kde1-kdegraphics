@@ -25,9 +25,11 @@ pics_DATA = kfax.tif kfaxlogo.xpm
 icondir = $(kde_icondir)
 icon_DATA = kfax.xpm
 
-EXTRA_DIST = $(apps_DATA) $(pics_DATA) $(icon_DATA) mini-kfax.xpm
+EXTRA_DIST = $(apps_DATA) $(pics_DATA) $(icon_DATA) mini-kfax.xpm large-kfax.xpm
 
 install-data-local: mini-kfax.xpm
+	$(mkinstalldirs) $(kde_icondir)/large
+	$(INSTALL_DATA) $(srcdir)/large-kfax.xpm $(kde_icondir)/large/kfax.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kfax.xpm $(kde_minidir)/kfax.xpm
 
@@ -36,6 +38,7 @@ messages:
 
 uninstall-local:
 	rm -f $(kde_minidir)/kfax.xpm
+	rm -f $(kde_icondir)/large/kfax.xpm
 
 ####### Explicit dependencies
 

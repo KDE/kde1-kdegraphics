@@ -20,14 +20,17 @@ icondir = $(kde_icondir)
 docs_DATA = index.html kfract.gif
 docsdir = $(kde_htmldir)/en/kfract
 
-EXTRA_DIST = $(lnk_DATA) $(icon_DATA) $(docs_DATA) mini-kfract.xpm
+EXTRA_DIST = $(lnk_DATA) $(icon_DATA) $(docs_DATA) mini-kfract.xpm large-kfract.xpm
 
 install-data-local: 
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kfract.xpm $(kde_minidir)/kfract.xpm
+	$(mkinstalldirs) $(kde_icondir)/large
+	$(INSTALL_DATA) $(srcdir)/large-kfract.xpm $(kde_icondir)/large/kfract.xpm
 
 uninstall:
 	rm -f $(kde_minidir)/kfract.xpm
+	rm -f $(kde_icondir)/large/kfract.xpm
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kfract_SOURCES) && mv messages.po ../po/kfract.pot
