@@ -1,6 +1,7 @@
 # KDE Config File 
 [KDE Desktop Entry]
 Name=PS Viewer
+MimeType=application/pdf;application/postscript;
 Exec=kghostview %u
 Icon=kghostview.xpm
 Type=Application

@@ -64,7 +64,7 @@ install-data-local:
 	$(mkinstalldirs) $(APPSDIR)
 	$(INSTALL_DATA) kghostview.kdelnk $(APPSDIR)
 	$(mkinstalldirs) $(kde_icondir)
-	$(INSTALL_DATA) kghostview.xpm $(kde_icondir)
+	$(INSTALL_DATA) kghostview.xpm $(kde_icondir)/kghostview.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) mini-kghostview.xpm $(kde_minidir)/kghostview.xpm
 
