@@ -34,7 +34,7 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
 
   debug("KIconEditProperties: reading properties");
 
-  pprops = new struct Properties;
+  pprops = new Properties;
 
   pprops->recentlist = new QStrList(true);
   CHECK_PTR(pprops->recentlist);
