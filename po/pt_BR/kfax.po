@@ -205,7 +205,7 @@ msgstr "Carregando '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Feito"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -311,7 +311,7 @@ msgstr "Fina"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: options.cpp:81
 msgid "Display Options:"

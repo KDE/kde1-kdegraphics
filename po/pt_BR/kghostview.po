@@ -30,9 +30,8 @@ msgid "Remove page marks"
 msgstr "Remover marcações de página"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "&Página"
+msgstr "Página"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -350,7 +349,7 @@ msgstr "Configurar interpretador"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Novo"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -489,6 +488,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - visualizador Postscript para \n"
+"o Ambiente de Trabalho KDE.\n"
+"\n"
+"Escrito por Mark Donohoe <donohoe@kde.org>, baseado no trabalho\n"
+"original de Tim Theisen.\n"
+"\n"
+"Incorpora código do gv de Johanes Plass - suporte a arquivos\n"
+"comprimidos e PDF.\n"
+"\n"
+"Veja http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
