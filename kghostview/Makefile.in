@@ -8,9 +8,9 @@ CXX	= @CXX@
 CC	= @CC@
 MOC	= @MOC@
 INCFL	= @all_includes@ -I. -I..
-CXXFLAGS += $(INCFL) -DHAVE_CONFIG_H
-CFLAGS = -O2 -Wall $(INCFL) -DHAVE_CONFIG_H
-LDFLAGS = @all_libraries@ -L. -lkdecore -lqt -lX11 -lXext -lm
+CXXFLAGS = @CXXFLAGS@ $(INCFL) -DHAVE_CONFIG_H
+CFLAGS = @CFLAGS@ $(INCFL) -DHAVE_CONFIG_H
+LDFLAGS = @LDFLAGS@ @all_libraries@ -L. -lkdecore -lqt -lX11 -lXext -lm
 
 ############# Install ##############
 

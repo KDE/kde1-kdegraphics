@@ -13,7 +13,6 @@ LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 INSTALL	=   	@INSTALL@
 CXX	= 	@CXX@
-OPTS	=	$(CXXFLAGS)
 DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
 LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
 METADIR	=	metas
@@ -25,8 +24,8 @@ METADIR	=	metas
 # End Configuration
 #
 
-CCFLAGS=	$(OPTS) $(DEFS) $(INCDIRS)
-LDFLAGS=	$(LIBDIR)
+CXXFLAGS=	@CXXFLAGS@ $(DEFS) $(INCDIRS)
+LDFLAGS=	@LDFLAGS@ $(LIBDIR)
 
 OBJ=	main.o \
 	app.o \
@@ -59,7 +58,7 @@ OBJS= $(addprefix objs/,$(OBJ))
 #
 
 objs/%.o:	%.cpp
-	$(CXX) -c $(CCFLAGS) -o $@ $<
+	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
 %.moc:	%.h
 	$(MOC) -o $(METADIR)/$@ $<
