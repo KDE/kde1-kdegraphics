@@ -14,7 +14,7 @@ char buf[BUFLEN+1];
 #define BBOX "%%BoundingBox:"
 #define BBOX_LEN strlen(BBOX)
 
-int bbox (char *fileName, int *x1, int *y1, int *x2, int *y2)
+int bbox (const char *fileName, int *x1, int *y1, int *x2, int *y2)
 {
   FILE * file;
   int a, b, c, d;

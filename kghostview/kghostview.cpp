@@ -46,7 +46,7 @@
 #include <unistd.h>
 #include <qmsgbox.h>
 
-#include <kmisc.h>
+#include <config.h>
 #include "kghostview.h"
 #include "version.h"
 

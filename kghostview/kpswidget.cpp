@@ -10,7 +10,7 @@
 *****************************************************************************/
 
 #include <qdrawutl.h>
-#include <kmisc.h>
+#include <config.h>
 #include "kpswidget.h"
 #include "kpswidget.moc"
 
