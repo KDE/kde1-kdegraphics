@@ -26,9 +26,6 @@ public:
 	QString printerVariable;
 	QString spoolerCommand;
 	
-public slots:
-	void setStrings();
-
 };
 
 class PrintDialog : public QDialog {

@@ -105,7 +105,7 @@ PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
 	bbox->addStretch( 10 );
 		
 	QPushButton* ok = bbox->addButton( i18n("&OK") );
-	connect( ok, SIGNAL(clicked()), SLOT(setStrings()) );
+	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
 	
 	QPushButton* cancel = bbox->addButton( i18n("&Cancel") );
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
@@ -117,17 +117,6 @@ PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
 	
 	resize( 300,0 );
 }
-
-
-void PrintSetup::setStrings() {
-	
-	printerName.sprintf( leName->text() );
-	spoolerCommand.sprintf( leSpool->text() );
-	printerVariable.sprintf( leVar->text() );
-	
-	accept();
-}
-
 
 PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 							bool marked )		
@@ -288,7 +277,11 @@ void PrintDialog::setup()
 		
 		
 
-	if( ps->exec() ) {}
+	if( ps->exec() ) {
+
+	printerName.sprintf( ps->leName->text() );
+	spoolerCommand.sprintf( ps->leSpool->text() );
+	printerVariable.sprintf( ps->leVar->text() );
 
 	/* Set the default options. */
 	KConfig *config = KApplication::getKApplication()->getConfig();
@@ -297,9 +290,10 @@ void PrintDialog::setup()
 	config->writeEntry ("Name", (const char *)printerName);
 	config->writeEntry ("Spool", (const char *)spoolerCommand);
 	config->writeEntry ("Variable", (const char*)printerVariable);
-
+	config->sync();
 
         delete ps;
+	}
 }
 
 void PrintDialog::checkRange()
