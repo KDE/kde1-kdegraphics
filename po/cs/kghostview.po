@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-05-30 17:41+0200\n"
-"PO-Revision-Date: 1998-04-17 15:39 MET DST\n"
+"PO-Revision-Date: 1998-06-01 09:12 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -220,9 +220,8 @@ msgid "Document information"
 msgstr "Informace o dokumentu"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Nastavení tiskárny"
+msgstr "Nastavení stránky"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -286,12 +285,11 @@ msgstr "Otevøít ne&dávný"
 
 #: kghostview.cpp:500
 msgid "&Reload"
-msgstr ""
+msgstr "O&bnovit"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Nastavit ..."
+msgstr "Nastavit stránk&u ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -306,9 +304,8 @@ msgid "Zoom &out"
 msgstr "Z&men¹it"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Zvìt¹ení ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -508,9 +505,8 @@ msgid "Go to ..."
 msgstr "Jdi na stranu ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Zvìt¹it"
+msgstr "Zvìt¹ení"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -758,52 +754,21 @@ msgstr ""
 "této informace.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "&zvìt¹ení"
+msgstr "zvìt¹ení"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "&media"
+msgstr "&Média"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "&orientace"
+msgstr "&Orientace"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Aplikovat"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "&zvìt¹ení"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Nastavení zobrazení ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Pøizpùsobit ¹íøce stránky"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Aktualizovat"
-
-#~ msgid "Change view ..."
-#~ msgstr "Znìò nastavení zobrazení ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Zapni antialiasing"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Vypni antialiasing"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Zobrazuj hlá¹ení Ghostscriptu"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Nezobrazuj hlá¹ení Ghostscriptu"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Vynutit zmìny ..."
+msgstr "&Zvìt¹ení"
