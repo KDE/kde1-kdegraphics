@@ -3,6 +3,9 @@
 Exec=kpaint %u
 Icon=kpaint.xpm
 DocPath=kpaint/index.html
-Info=A Simple Paint Program
+Comment=A Simple Paint Program
+Comment[pl]=Prosty program graficzny
 Terminal=0
 Type=Application
+Name=Paint
+Name[pl]=Paint

@@ -11,4 +11,6 @@ Extensions=
 Type=Application
 Terminal=0
 Comment=Generator for fractals
+Comment[pl]=Generator fraktali
 Name=Fractals Generator
+Name[pl]=Generatol fraktali

@@ -1,11 +1,13 @@
 # KDE Config File 
 [KDE Desktop Entry]
 Name=PS Viewer
+Name[pl]=PS Viewer
 MimeType=application/pdf;application/postscript;
 Exec=kghostview %f
 Icon=kghostview.xpm
 Type=Application
 DocPath=kghostview/index.html
 Comment=PostScript document viewer
+Comment[pl]=Podgl±darka dokumentów PostScriptowych
 Terminal=0
 MiniIcon=kghostview.xpm

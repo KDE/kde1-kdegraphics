@@ -1,6 +1,15 @@
 # Polish translation of KDE kpaint
-# Version 0.1.1
+# Version 0.1.2
 # (C) 1997 Piotr Roszatycki <dexter@fnet.com.pl>
+
+msgid "Contents"
+msgstr "Pomo&c"
+
+msgid "Release Notes"
+msgstr "Informacje &dodatkowe"
+
+msgid "About..."
+msgstr "&Informacje o kpaint"
 
 #: app.cpp:27 app.cpp:44 kpaint.cpp:204
 msgid "Close Window"
