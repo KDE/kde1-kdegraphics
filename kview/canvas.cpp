@@ -7,6 +7,7 @@
 
 #include<stdio.h>
 #include<unistd.h>
+#include<assert.h>
 
 #include<qcolor.h>
 #include<qpixmap.h>
@@ -14,6 +15,7 @@
 #include<assert.h>
 #include<qlabel.h>
 #include<qimage.h>
+#include<qpainter.h>
 
 #include"canvas.h"
 
@@ -27,7 +29,7 @@ KImageCanvas::KImageCanvas( QWidget *parent )
 	_client( 0 ),
 	_orig( 0 )
 {
-	_client = new QLabel( this );
+	_client = new KVImageHolder( this );
 	addChild( _client );
 
 	_client->show();
@@ -275,4 +277,68 @@ static QString loadStdin()
 	fclose( o );
 
 	return name;
+}
+
+KVImageHolder::KVImageHolder( QWidget *parent )
+		: QLabel( parent ), _selected( false ),
+		_painter( new QPainter )
+{
+	assert( _painter != 0 );
+}
+
+KVImageHolder::~KVImageHolder()
+{
+	delete _painter;
+}
+
+void KVImageHolder::mousePressEvent( QMouseEvent *ev )
+{
+	if( pixmap() == 0 ) {
+		return;
+	}
+
+	if( _selected ) {
+		// remove old rubberband
+		eraseSelect();
+		_selected = false;
+	}
+
+	_selection.setLeft( ev->x() );
+	_selection.setTop( ev->y() );
+}
+
+void KVImageHolder::mouseMoveEvent( QMouseEvent *ev )
+{
+	// currently called only on drag,
+	// so assume a selection has been started
+	if( !_selected ) {
+		_selected = true;
+	}
+	else {
+		eraseSelect();
+	}
+
+	_selection.setRight( ev->x() );
+	_selection.setBottom( ev->y() );
+
+	
+	_selection.normalize();
+	
+	drawSelect();
+}
+
+void KVImageHolder::drawSelect()
+{
+	_painter->begin( this );
+	_painter->setPen( QPen( DashLine ) );
+	_painter->drawRect( _selection );
+	_painter->end();
+}
+
+void KVImageHolder::eraseSelect()
+{
+	bitBlt( this, _selection.left(), _selection.top(),
+			pixmap(), _selection.left(), _selection.top(),
+			_selection.width(), _selection.height(),
+			CopyROP );
 }

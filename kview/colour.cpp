@@ -14,7 +14,7 @@
 
 #include"kcproc.h"
 
-static void modifyIntensity( QImage& image, int delta );
+static void modifyIntensity( QImage& image, double factor );
 
 // Brightness Filter
 
@@ -26,11 +26,26 @@ void BriteFilter::invoke( QImage before )
 		return;
 	}
 
+	KNumDialog dlg;
+	double pct = _pct;
+
+	if( !dlg.getNum( pct, i18n( "Enter brightness factor (%):" ) )) {
+		return;
+	}
+
+	if( !(pct > 0 ) ) {
+		emit message( i18n( "Brightness factor must be positive") );
+		return;
+	}
+
+	_pct = pct;
+	pct /= 100;
+
 	emit status( i18n( "Brightening..." ) );
 
 	QApplication::setOverrideCursor( waitCursor );    
 	QImage newimage = before;
-	modifyIntensity( newimage, 10 );
+	modifyIntensity( newimage, pct );
 	QApplication::restoreOverrideCursor();
 
 	emit changed( newimage );
@@ -64,7 +79,7 @@ void DarkFilter::invoke( QImage before )
 	QApplication::setOverrideCursor( waitCursor );    
 	QImage newimage = before;
 
-	modifyIntensity( newimage, -10 );
+	modifyIntensity( newimage, 0.8 );
 	QApplication::restoreOverrideCursor();
 
 	emit changed( newimage );
@@ -81,24 +96,27 @@ KImageFilter *DarkFilter::clone() const
 	return new DarkFilter;
 }
 
-static void modifyIntensity( QImage& image, int delta )
+static void modifyIntensity( QImage& image, double delta )
 {
 	for( int y = 0; y < image.height(); y++ ) {
 		QRgb *clr = (QRgb *) image.scanLine( y );
 		for( int x = image.width(); x != 0; x--, clr++ ) {
-			int red = qRed(*clr) + delta;
-			int green = qGreen(*clr) + delta;
-			int blue = qBlue(*clr) + delta;
 
-			if( red > 255 ) red = 255;
-			if( green > 255 ) green = 255;
-			if( blue > 255 ) blue = 255;
+			double red = qRed(*clr);
+			double green = qGreen(*clr);
+			double blue = qBlue(*clr);
 
-			if( red < 0 ) red = 0;
-			if( green < 0 ) green = 0;
-			if( blue < 0 ) blue = 0;
+			KColourProc::toHSV( red, green, blue );
 
-			*clr = qRgb( red, green, blue );
+			// blue is intensity, so modify
+			blue *= delta;
+			if( blue > 1 || blue < 0 ) {
+				continue;
+			}
+
+			KColourProc::toRGB( red, green, blue );
+
+			*clr = qRgb( (int)red, (int)green, (int)blue );
 		}
 	}
 }
@@ -245,8 +263,11 @@ void GammaFilter::invoke( QImage before )
 
 	double gamma = 1.0;
 
-	if( !dlg.getNum( gamma, i18n( "Enter gamma value (0...1):" ) ) 
-		|| gamma > 1.0 || gamma < 0 ) {
+	if( !dlg.getNum( gamma, i18n( "Enter gamma value ( >0 ):" ) ) 
+		|| gamma < 0 ) {
+
+		emit message( i18n( "Bad Gamma value" ) );
+
 		return;
 	}
 
@@ -293,6 +314,8 @@ void GammaFilter::invoke( QImage before )
 		after.convertDepth( olddepth );
 	}
 
+	// reset viewer
+
 	QApplication::restoreOverrideCursor();
 	setProgress( 0 );
 
@@ -302,7 +325,7 @@ void GammaFilter::invoke( QImage before )
 
 const char *GammaFilter::name() const
 {
-	return i18n( "Gamma Correct..." );
+	return i18n( "Intensity:Gamma Correct..." );
 }
 
 KImageFilter *GammaFilter::clone() const

@@ -518,6 +518,8 @@ void KImageViewer::setFilterMenu( KFiltMenuFactory *filtmenu )
 			this, SLOT(setProgress(int)) );
 		connect( filter, SIGNAL(status(const char *)),
 			this, SLOT(setStatus(const char *)) );
+		connect( filter, SIGNAL(message(const char *)),
+			this, SLOT(message(const char *)) );
 	}
 
 	_menuFact = filtmenu;

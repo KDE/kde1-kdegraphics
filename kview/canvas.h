@@ -5,12 +5,13 @@
 #ifndef SSK_CANVAS_H
 #define SSK_CANVAS_H
 
-#include<qwidget.h>
 #include<qstring.h>
 #include<qwmatrix.h>
+#include<qlabel.h>
 #include<qscrollview.h>
 
-class QLabel;
+class KVImageHolder;
+class QPainter;
 
 /**
 * @short KImageCanvas
@@ -104,7 +105,7 @@ private:
 	QString		_file;
 
 	QSize		_originalSize;
-	QLabel		*_client;
+	KVImageHolder	*_client;
 
 	QPixmap		*_orig;
 
@@ -123,5 +124,34 @@ inline QString KImageCanvas::url() const
 {
 	return _file;
 }
+
+class KVImageHolder : public QLabel
+{
+private:
+	QRect _selection;
+
+	bool _selected;
+
+	QPainter *_painter;
+
+public:
+	KVImageHolder( QWidget *parent = 0 );
+
+	virtual ~KVImageHolder();
+
+	/**
+	* Return the current selection.  If no selection has been made,
+	* the returned rectangle will be null.
+	*/
+	QRect selected() const;
+
+protected:
+	void mousePressEvent( QMouseEvent * );
+	void mouseMoveEvent( QMouseEvent * );
+
+private:
+	void drawSelect();
+	void eraseSelect();
+};
 
 #endif // SSK_CANVAS_H

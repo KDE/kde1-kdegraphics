@@ -60,6 +60,11 @@ signals:
 	* about their current status.
 	*/
 	void status( const char *status );
+
+	/**
+	* Raised when the filter wants to display a temporary message.
+	*/
+	void message( const char *message );
 	
 protected:
 	void setMaxProgress( int max );

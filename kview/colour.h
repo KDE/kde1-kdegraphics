@@ -9,12 +9,14 @@
 
 class BriteFilter : public KImageFilter
 {
+private:
+	double _pct;
 
 public:
 	/**
 	* BriteFilter Constructor
 	*/
-	BriteFilter() : KImageFilter() {}
+	BriteFilter() : KImageFilter(), _pct( 100 ) { }
 
 	/**
 	* BriteFilter Destructor
@@ -25,7 +27,8 @@ public:
         virtual const char *name() const;
 
 	virtual KImageFilter *clone() const;
-	
+
+
 };
 
 
