@@ -1,6 +1,6 @@
 
 # This has to be set. The rest should be reusable
-GMFILES = kpaint.gmo kghostview.gmo 
+GMFILES = kpaint.gmo kghostview.gmo kfax.gmo
 POFILES = $(GMFILES:.gmo=.po)
 
 LANG = zh_TW.Big5
