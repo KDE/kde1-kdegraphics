@@ -50,9 +50,12 @@ public:
 			int xspan=1, int yspan=1 );
 	QListBox *newListBox( int x, int y, 
 			int xspan=1, int yspan=1 );
-	KTypoLayout *newSubLayout( int x, int y, int xspan=1, int yspan=1 );
 
-	void startGroup();
+	KTypoLayout *newSubLayout( int x, int y, int xspan=1, int yspan=1 );
+	KTypoLayout *newSubGroup( const char *title, 
+		int x, int y, int xspan=1, int yspan=1 );
+
+	QButtonGroup *startGroup();
 	void endGroup();
 
 private:

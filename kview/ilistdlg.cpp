@@ -28,8 +28,7 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 
 	_slideTimer( 0 ),		// allocated by slide start
 	_slideInterval( 5 ),
-	_slideButton ( 0 ),
-	_loop ( 0 ),
+	_loop ( false ),
 	_paused( false ),
 
 	_list( new QStrList( true ) ), // deep copies
@@ -71,14 +70,6 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 		0, 5, 1, 1 );
 	connect( _slideButton, SIGNAL(clicked()), 
 			this, SLOT(toggleSlideShow()) );
-
-	QPushButton *interval= layout->newButton( i18n("Interval.."),
-		0, 6, 1, 1 );
-	connect( interval, SIGNAL(clicked()), 
-			this, SLOT(setInterval()) );
-	
-	_loop = layout->newCheckBox( i18n( "Loop" ), 0, 7, 1, 1 );
-	_loop->setChecked( false );
 
 	// accelerators
 	QAccel *accel = new QAccel( this );
@@ -293,7 +284,7 @@ void ImgListDlg::setSlideInterval( int seconds )
 void ImgListDlg::nextSlide()
 {
 	if( _list->current() == _list->getLast() ) {
-		if ( _loop->isChecked() ) {
+		if ( _loop ) {
 			first();
 		}
 		else {
@@ -332,18 +323,11 @@ void ImgListDlg::continueSlideShow()
 	}
 }
 
-void ImgListDlg::setInterval()
-{
-	KNumDialog dlg;
-	dlg.getNum( _slideInterval, 
-			i18n("Time between slides (sec):") );
-}
-
 void ImgListDlg::saveProperties( KConfig *cfg )
 {
 	// slideshow settings
 	cfg->writeEntry( "SlideInterval", _slideInterval );
-	cfg->writeEntry( "SlideLoop", _loop->isChecked() );
+	cfg->writeEntry( "SlideLoop", _loop );
 
 	// url list
 	cfg->writeEntry( "ListNumUrls", _list->count() );
@@ -370,7 +354,7 @@ void ImgListDlg::saveProperties( KConfig *cfg )
 void ImgListDlg::restoreProperties( KConfig *cfg )
 {
 	_slideInterval = cfg->readNumEntry( "SlideInterval", 5 );
-	_loop->setChecked( cfg->readBoolEntry( "SlideLoop", false ) );
+	_loop = cfg->readBoolEntry( "SlideLoop", false );
 
 	int urlCount = cfg->readNumEntry( "ListNumUrls", 0 );
 
@@ -404,10 +388,11 @@ void ImgListDlg::restoreProperties( KConfig *cfg )
 void ImgListDlg::saveOptions( KConfig *cfg ) const
 {
 	cfg->writeEntry( "SlideInterval", _slideInterval );
-	cfg->writeEntry( "SlideLoop", _loop->isChecked() );
+	cfg->writeEntry( "SlideLoop", _loop );
 }
 
 void ImgListDlg::restoreOptions( const KConfig *cfg )
 {
 	_slideInterval = cfg->readNumEntry( "SlideInterval", 5 );
+	_loop =  cfg->readBoolEntry( "SlideLoop", false );
 }

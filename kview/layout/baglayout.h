@@ -11,6 +11,7 @@
 #include<qlist.h>
 #include<qsize.h>
 
+class QFrame;
 
 /**
 * Similar to @ref QGridLayout but allows more refined control
@@ -41,14 +42,17 @@ private:
 	QSize	_min;
 	QSize	_max;
 
-	int	_topSpace;
-	int	_bottomSpace;
-	int	_leftSpace;
-	int	_rightSpace;
+	QRect	_contents;
+
+	int _topSpace;
+	int _bottomSpace;
+	int _leftSpace;
+	int _rightSpace;
 
 	void arrangeWidget( QWidget *w, KBagConstraints *c );
 	void calcGridExtent();
-
+	void updateContentRect();
+	void updateMinSize();
 public:
 	/**
 	* Create a KBagLayout object with the given grid size.
@@ -99,7 +103,7 @@ public:
 	 * @see ::setHSpace
 	 */
 	void setVSpace( int top, int bottom ) 
-		{ _topSpace = top; _bottomSpace = bottom; }
+		{ _topSpace = top; _bottomSpace = bottom; updateContentRect(); }
 
 	/** 
 	 * Set the blank horizontal space which will be left between the
@@ -107,7 +111,13 @@ public:
 	 * @see ::setVSpace
 	 */
 	void setHSpace( int left, int right )
-		{ _leftSpace = left; _rightSpace = right; }
+		{ _leftSpace = left; _rightSpace = right; updateContentRect(); }
+
+	/**
+	* Set the horizontal and vertical space to be the
+	* contents rect of a frame.
+	*/
+	void setSpaceContents( QFrame *frame );
 };
 
 

@@ -125,6 +125,8 @@ protected:
 	*
 	*/
 	void resizeEvent( QResizeEvent * );
+	
+	void mouseReleaseEvent( QMouseEvent * );
 
 	/**
 	* Sets the status.

@@ -51,6 +51,8 @@ private slots:
 
 	void setCutBuffer( QPixmap * );
 
+	void updateAllAccels();
+
 protected:
 	/**
 	* Create and initialize a new viewer widget and

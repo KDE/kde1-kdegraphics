@@ -28,7 +28,7 @@ KView::KView(int argc, char **argv)
 	: QObject( 0 ),
 	_app( argc, argv, "kview" ),
 	_filters( new KFilterList ),
-	_helper( new KHelpIndex( "kview/kview.idx" ) ),
+	_helper( new KHelpIndex( "kview/kview.index" ) ),
 	_viewers( new QList<KImageViewer> ),
 	_filtMenus( new QPtrDict<KFiltMenuFactory> ),
 	_cutBuffer( 0 )
@@ -118,6 +118,8 @@ KImageViewer *KView::makeViewer()
 		this, SLOT(newViewer()) );
 	connect( viewer, SIGNAL(wantToDie(KImageViewer *)),
 		this, SLOT(closeViewer(KImageViewer *)) );
+	connect( viewer, SIGNAL(accelChanged()),
+		this, SLOT( updateAllAccels()) );
 
 	return viewer;
 }
@@ -140,4 +142,13 @@ void KView::setCutBuffer( QPixmap *image )
 		delete _cutBuffer; _cutBuffer = 0;
 	}
 	
+}
+
+void KView::updateAllAccels()
+{
+	QListIterator<KImageViewer> iter( *_viewers );
+
+	for( ; iter.current(); ++iter ) {
+		iter.current()->updateAccel();
+	}
 }

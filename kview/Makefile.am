@@ -4,7 +4,7 @@ bin_PROGRAMS= kview
 #CORBA_SRC = kmicoapp.h kmicoapp.cpp
 CORBA_SRC=
 
-BUILT_SOURCES =  moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_ilistdlg.cpp moc_kview.cpp moc_viewer.cpp
+BUILT_SOURCES =  moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_ilistdlg.cpp moc_kview.cpp moc_prefdlg.cpp moc_viewer.cpp moc_kaccelmenuwatch.cpp
 
 INCLUDES = $(all_includes) -I/usr/local/mico/include -Ilayout
 kview_SOURCES = canvas.cpp kview.cpp main.cpp \
@@ -12,6 +12,7 @@ kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
 	colour.h colour.cpp filtmenu.h filtmenu.cpp ilistdlg.h ilistdlg.cpp \
 	numdlg.h numdlg.cpp kcproc.h kcproc.cpp khelpidx.h khelpidx.cpp \
+	prefdlg.h prefdlg.cpp kaccelmenuwatch.h kaccelmenuwatch.cpp \
 	$(CORBA_SRC) $(BUILT_SOURCES)
 
 lnkdir = $(kde_appsdir)/Graphics
@@ -29,6 +30,7 @@ srcdoc:
 	kdoc -a -p -H -d $(HOME)/web/src/kview kview *.h -lqt -lkdecore -lkdeui -lkfile 
 
 ###KMAKE-start (don't edit or delete this block)
+
 moc_canvas.cpp: canvas.h
 	$(MOC) canvas.h -o moc_canvas.cpp
 
@@ -41,10 +43,19 @@ moc_filtmenu.cpp: filtmenu.h
 moc_ilistdlg.cpp: ilistdlg.h
 	$(MOC) ilistdlg.h -o moc_ilistdlg.cpp
 
+moc_kmicoapp.cpp: kmicoapp.h
+	$(MOC) kmicoapp.h -o moc_kmicoapp.cpp
+
 moc_kview.cpp: kview.h
 	$(MOC) kview.h -o moc_kview.cpp
 
+moc_prefdlg.cpp: prefdlg.h
+	$(MOC) prefdlg.h -o moc_prefdlg.cpp
+
 moc_viewer.cpp: viewer.h
 	$(MOC) viewer.h -o moc_viewer.cpp
+
+moc_kaccelmenuwatch.cpp: kaccelmenuwatch.h
+	$(MOC) kaccelmenuwatch.h -o moc_kaccelmenuwatch.cpp
 
 ###KMAKE-end

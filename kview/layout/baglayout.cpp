@@ -6,6 +6,7 @@
 */
 
 #include<assert.h>
+#include<qframe.h>
 
 #include"baglayout.h"
 
@@ -29,6 +30,8 @@ KBagLayout::KBagLayout( QWidget *parent, int x, int y )
 	}
 
 	_parent->installEventFilter( this );
+
+	updateContentRect();
 }
 
 KBagLayout::~KBagLayout()
@@ -43,6 +46,14 @@ KBagConstraints *KBagLayout::addWidget( QWidget *widget )
 
 	_widgets->append( widget );
 	_cstr->insert( widget, c );
+
+	QSize hint = widget->sizeHint();
+
+	if( hint.isValid() ) {
+		widget->setMinimumSize( hint );
+	}
+
+	updateMinSize();
 
 	return c;
 }
@@ -92,6 +103,15 @@ void KBagLayout::activate()
 			(KBagConstraints *)
 			_cstr->find ( list.current() ) );
 	}
+
+#if 0
+	QRect c = _parent->childrenRect();
+
+	if( c.isValid() ) {
+		_parent->setMinimumSize( c.width(), c.height() );
+	}
+#endif
+
 }
 
 void KBagLayout::calcGridExtent()
@@ -129,10 +149,8 @@ void KBagLayout::arrangeWidget( QWidget *w, KBagConstraints *c )
 
 	int x=0, y=0, width=0, height=0;
 
-	int cellx = _parent->rect().width()/_grid.width()
-		- ( _leftSpace + _rightSpace );
-	int celly = _parent->rect().height()/_grid.height()
-		- ( _topSpace + _bottomSpace );
+	int cellx = _contents.width()/_grid.width();
+	int celly = _contents.height()/_grid.height();
 
 	_min.setWidth ( 0 );
 	_min.setHeight( 0 );
@@ -196,9 +214,9 @@ void KBagLayout::arrangeWidget( QWidget *w, KBagConstraints *c )
 	}
 
 	// move/resize widget.
-	w->setGeometry( _leftSpace + _parent->rect().left()	
+	w->setGeometry( _contents.left()	
 			+ cellx * c->gridX() + x,
-			_topSpace + _parent->rect().top()	
+			_contents.top()	
 			+ celly * c->gridY() + y,
 			width,
 			height );
@@ -208,8 +226,87 @@ void KBagLayout::arrangeWidget( QWidget *w, KBagConstraints *c )
 bool KBagLayout::eventFilter( QObject *receiver, QEvent *event ) 
 {
 	if( receiver == _parent && event->type() == Event_Resize ) {
+		updateContentRect();
 		activate();
 	}
 
 	return false;
+}
+
+void KBagLayout::setSpaceContents( QFrame *frame )
+{
+	assert( frame );
+
+	QRect r = frame->contentsRect();
+
+	_leftSpace = r.left() + 5;
+	_topSpace =  r.top() + 20; // to skip title
+	_rightSpace = frame->width() - (r.width() + r.left()) + 5;
+	_bottomSpace = frame->height() - (r.height() + r.top() ) + 5;
+
+	updateContentRect();
+}
+
+void KBagLayout::updateContentRect()
+{
+	_contents.setCoords( _leftSpace, _topSpace, 
+			_parent->rect().right() - _leftSpace,
+			_parent->rect().bottom() - _bottomSpace );
+
+//	updateMinSize();
+}
+
+void KBagLayout::updateMinSize()
+{
+	int width = 0;
+	int height = 0;
+	int *rowwidth = new int [ _grid.height() ];
+	int *colheight = new int [ _grid.width() ];
+
+	for( width = 0; width < _grid.height(); width++ ) {
+		rowwidth[ width ] = 0;
+	}
+
+	for( width = 0; width < _grid.width(); width++ ) {
+		colheight[ width ] = 0;
+	}
+
+	width = 0;
+
+	QListIterator<QWidget> list( *_widgets );
+
+	for( ; list.current(); ++list ) {
+		QWidget *w = list.current();
+		QSize s = w->minimumSize();
+		KBagConstraints *c = _cstr->find( w );
+
+		// increment size of every covered row/col
+
+		for( int x = 0; x < c->xSpan(); x++ ) {
+			colheight[ x + c->gridX() ] += s.height() 
+				+ 2 * c->ySpace();
+		}
+		
+		for( int y = 0; y < c->ySpan(); y++ ) {
+			rowwidth[ y + c->gridY() ] += s.width()
+				+ 2 * c->xSpace();
+		}
+	}
+
+	for( int x = 0; x < _grid.width(); x++ ) {
+		if( colheight[x] > height ) 
+			height = colheight[ x ];
+	}
+
+	for( int y = 0; y < _grid.height(); y++ ) {
+		if( rowwidth[y] > width ) 
+			width = rowwidth[ y ];
+	}
+//	debug( "min width: %d height: %d", width, height );
+
+	_parent->setMinimumSize( width + _leftSpace + _rightSpace, 
+		height + _topSpace + _bottomSpace );
+
+	delete [] rowwidth;
+	delete [] colheight;
 }

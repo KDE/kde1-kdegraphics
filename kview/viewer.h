@@ -6,10 +6,17 @@
 #define SSK_VIEWER_H
 
 #include<ktopwidget.h>
+#include<kaccel.h>
 #include<qwmatrix.h>
 
-class KDNDDropZone;
+class QMenuData;
+class QPopupMenu;
+class QMouseEvent;
+class QString;
+class QTimer;
+class QAccel;
 
+class KDNDDropZone;
 class KFiltMenuFactory;
 class KConfigGroup;
 class KImageCanvas;
@@ -17,16 +24,14 @@ class KImageFilter;
 class KLocale;
 class KMenuBar;
 class KStatusBar;
-class QMenuData;
-class QPopupMenu;
-class QMouseEvent;
-class QString;
-class QTimer;
-class ImgListDlg;
 class KFM;
 
+class ImgListDlg;
+class KAccelMenuWatch;
+
+
 /**
-* @short KImageViewer
+* Top-level window
 * @author Sirtaj Singh Kang (taj@kde.org)
 * @version $Id$
 */
@@ -53,6 +58,29 @@ public:
 	* Release the current cut buffer, if any.
 	*/
 	void freeCutBuffer();
+
+signals:
+	void wantHelp( const char *tag );
+
+	/**
+	* User has requested a new viewer object.
+	*/
+	void wantNewViewer();
+
+	/**
+	* Viewer has lost the will to live.
+	*/
+	void wantToDie( KImageViewer * );
+	
+	/**
+	* A new image has been placed in the clipboard.
+	*/
+	void newCutBuffer( QPixmap *buffer );
+
+	/**
+	* The accelerator object has been reconfigured.
+	*/
+	void accelChanged();
 
 public slots:
 	// File operations
@@ -96,8 +124,14 @@ public slots:
 	// Information
 	/** */
 	void help();
+	void helpHow();
+	void helpWhat();
+
 	/** */
 	void about();
+
+	/** */
+	void prefs();
 
 	/**
 	* Loads a file from a URL.
@@ -123,80 +157,9 @@ public slots:
 	void copy();
 	void paste();
 
-               void contextPress(const QPoint&);
+	void contextPress( const QPoint& );
 
-protected:
-
-	virtual void closeEvent( QCloseEvent * );
-
-	virtual void saveProperties( KConfig * ) const;
-	virtual void restoreProperties( KConfig * );
-
-	virtual void saveOptions( KConfig * ) const;
-	virtual void restoreOptions( KConfig * );
-
-private:
-	enum TransferDir {
-		Get,
-		Put
-	};
-
-	/** */
-	KImageCanvas	*_canvas;
-	bool		_imageLoaded;
-	
-	int		_barFilterID;
-	int		_popFilterID;
-	
-	/**
-	* Active when menubar hidden
-	*/
-	QAccel		*_accel;
-
-	/**
-	* Always active
-	*/
-	QAccel		*_paccel;
-
-	KMenuBar	*_menubar;
-	KStatusBar	*_statusbar;
-	QPopupMenu	*_contextMenu;
-
-	QPopupMenu	*_file;
-	QPopupMenu	*_edit;
-	QPopupMenu	*_zoom;
-	QPopupMenu	*_transform;
-	QPopupMenu	*_desktop;
-	QPopupMenu	*_aggreg;
-	QPopupMenu	*_help;
-
-	KFM		*_kfm;
-	QString		*_transSrc;
-	QString		*_transDest;
-	TransferDir	_transDir;
-
-	void makeRootMenu(QMenuData *);
-	void makeRootMenu(KMenuBar * );
-	void makePopupMenus();
-
-	KFiltMenuFactory *_menuFact;
-
-	QString 	*_pctBuffer;
-	int		_lastPct;
-
-	QTimer		*_msgTimer;
-
-	ImgListDlg	*_imageList;
-
-	QPoint		_posSave;
-	QSize		_sizeSave;
-	QWMatrix	_mat;
-
-	int		_zoomFactor;
-
-	bool		_autoMaxpect;
-
-	void loadFile( const char *file, const char *url = 0 );
+	void updateAccel();
 
 protected slots:
 	void newViewer();
@@ -217,13 +180,94 @@ private slots:
 
 	void setSize();
 
-signals:
-	void wantHelp( const char *tag );
+protected:
 
-	void wantNewViewer();
-	void wantToDie( KImageViewer * );
+	virtual void closeEvent( QCloseEvent * );
 
-	void newCutBuffer( QPixmap *buffer );
+	virtual void saveProperties( KConfig * ) const;
+	virtual void restoreProperties( KConfig * );
+
+	virtual void saveOptions( KConfig * ) const;
+	virtual void restoreOptions( KConfig * );
+
+private:
+	/** image canvas */
+	KImageCanvas	*_canvas;
+	bool		_imageLoaded;
+	
+
+	/**
+	* Configurable keybinding object
+	*/
+	KAccel		*_kaccel;
+	QAccel		*_paccel;
+	KAccelMenuWatch *_watcher;
+
+	KMenuBar	*_menubar;
+	KStatusBar	*_statusbar;
+	QPopupMenu	*_contextMenu;
+
+	/**
+	* temporary menu for conn() calls. Set it with
+	* setCMenu.
+	*/
+	QPopupMenu	*_cmenu;
+
+	QPopupMenu	*_file;
+	QPopupMenu	*_edit;
+	QPopupMenu	*_zoom;
+	QPopupMenu	*_transform;
+	QPopupMenu	*_desktop;
+	QPopupMenu	*_aggreg;
+	QPopupMenu	*_help;
+
+	int		_barFilterID;
+	int		_popFilterID;
+	
+	// Net transfer stuff
+
+	enum TransferDir {
+		Get,
+		Put
+	};
+
+	KFM		*_kfm;
+	QString		*_transSrc;
+	QString		*_transDest;
+	TransferDir	_transDir;
+
+	KFiltMenuFactory *_menuFact;
+
+	QString 	*_pctBuffer;
+	int		_lastPct;
+
+	QTimer		*_msgTimer;
+
+	ImgListDlg	*_imageList;
+
+	QPoint		_posSave;
+	QSize		_sizeSave;
+	QWMatrix	_mat;
+
+	int		_zoomFactor;
+
+	enum LoadMode { ResizeWindow, ResizeImage, ResizeNone };
+	LoadMode	_loadMode;
+
+private:
+	void makeAccel();
+	void makeRootMenu(QPopupMenu *);
+	void makeRootMenu(KMenuBar * );
+	void makePopupMenus();
+
+	void setCMenu( QPopupMenu *menu );
+	int conn( const char *text, const char *action,
+			QObject *receiver, const char *method, uint key = 0 );
+	int conn( const char *text, KAccel::StdAccel,
+			QObject *receiver, const char *method );
+
+	void loadFile( const char *file, const char *url = 0 );
+
 };
 
 #endif // SSK_VIEWER_H

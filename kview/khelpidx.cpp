@@ -104,8 +104,8 @@ bool KHelpIndex::readIndex( const char *path )
 			continue;
 		}
 
-		debug( "Inserting '%s' at '%s'", buffer + pos + len,
-			buffer );
+//		debug( "Inserting '%s' at '%s'", buffer + pos + len,
+//			buffer );
 	
 		_index->insert( buffer, 
 			new QString( buffer + pos + len ) );

@@ -76,8 +76,6 @@ private slots:
 	void select( int imageIndex );
 
 	void nextSlide();
-	void setInterval();
-
 private:
 	ImgListDlg& operator=( ImgListDlg& );
 	ImgListDlg( const ImgListDlg& );
@@ -85,7 +83,7 @@ private:
 	QTimer		*_slideTimer;
 	int		_slideInterval;
 	QPushButton	*_slideButton;
-	QCheckBox	*_loop;
+	bool		_loop;
 	bool		_paused;
 	
 	QStrList	*_list;

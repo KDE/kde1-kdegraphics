@@ -24,11 +24,14 @@
 #include<kfiledialog.h>
 #include<kstring.h>
 #include<kfm.h>
+#include<kaccel.h>
+#include<kaccelmenuwatch.h>
 
 #include"viewer.h"
 #include"canvas.h"
 #include"version.h"
 #include"numdlg.h"
+#include"prefdlg.h"
 
 #include"filter.h"
 #include"filtmenu.h"
@@ -49,6 +52,11 @@ KImageViewer::KImageViewer()
 	_barFilterID( 0 ),
 	_popFilterID( 0 ),
 
+	_kaccel( new KAccel( this ) ),
+	_paccel( new QAccel( this ) ),
+	_watcher( new KAccelMenuWatch( _kaccel, this ) ),
+
+	_cmenu( 0 ),
 	_file( 0 ),
 	_edit( 0 ),
 	_zoom( 0 ),
@@ -67,9 +75,10 @@ KImageViewer::KImageViewer()
 	_imageList( new ImgListDlg ),
 	_zoomFactor( 100 ),
 
-	_autoMaxpect( false )
+	_loadMode   ( ResizeWindow )
 {
 
+	// Image canvas
 	_canvas = new KImageCanvas( this );
 	
 	connect(_canvas, SIGNAL( contextPress(const QPoint&) ), 
@@ -78,8 +87,7 @@ KImageViewer::KImageViewer()
 	assert( _canvas );
 	setView( _canvas, FALSE );
 	
-	// set caption
-
+	// Caption
 	QString cap;
 	cap = kapp->appName().data();
 	cap += " - ";
@@ -97,77 +105,8 @@ KImageViewer::KImageViewer()
 	connect( _imageList, SIGNAL(selected(const char *)),
 		this, SLOT(loadURL(const char *)) );
 
-	// accelerators, enabled only when the menubar is
-	// turned off.
-	_accel = new QAccel( this );
-	_accel->setEnabled( false );
-
-
-	_accel->connectItem( _accel->insertItem( Key_F ), // full screen
-		this, SLOT(fullScreen()) );
-	_accel->connectItem( _accel->insertItem( Key_Escape ),
-			this, SLOT(fullScreen()) );
-	_accel->connectItem( _accel->insertItem( Key_I ), // image list
-			this, SLOT(toggleImageList()) );
-
-	_accel->connectItem( _accel->insertItem( Key_Z ), // zoom
-			this, SLOT(zoomCustom()) );
-	_accel->connectItem( _accel->insertItem( Key_C ), // crop
-			_canvas, SLOT(cropImage()) );
-	_accel->connectItem( _accel->insertItem( Key_Period ), // 10% zoom
-			this, SLOT(zoomIn10()) );
-	_accel->connectItem( _accel->insertItem( Key_Comma ),
-			this, SLOT(zoomOut10()) );
-
-	_accel->connectItem( _accel->insertItem(  Key_BracketLeft ), // 50%
-			this, SLOT(zoomOut50()) );
-	_accel->connectItem( _accel->insertItem( Key_BracketRight ), // 200%
-			this, SLOT(zoomIn200()) );
-
-	_accel->connectItem( _accel->insertItem(  Key_A ), // Maxpect
-			_canvas, SLOT(maxpectToWin()) );
-
-	_accel->connectItem( _accel->insertItem( Key_M ), // Max
-			_canvas, SLOT(maxToWin()) );
-
-	_accel->connectItem( _accel->insertItem( Key_S ), // slideshow
-			_imageList, SLOT(toggleSlideShow()) );
-	_accel->connectItem( _accel->insertItem( Key_Tab ), // next
-			_imageList, SLOT(next()) );
-	_accel->connectItem( _accel->insertItem( Key_Backspace ), // prev
-			_imageList, SLOT(prev()) );
-
-	_accel->connectItem( _accel->insertItem( CTRL + Key_R ),
-			this, SLOT(reset()) );
-
-	//
-	// perennially active accelerators
-	//
-	
-	// keyboard scrolling
-	_paccel = new QAccel( this );
-
-	_paccel->connectItem( _paccel->insertItem( Key_Down ),
-			_canvas, SLOT(lineDown()) );
-
-	_paccel->connectItem( _paccel->insertItem( Key_Up ),
-			_canvas, SLOT(lineUp()) );
-
-	_paccel->connectItem( _paccel->insertItem( Key_PageDown ),
-			_canvas, SLOT(pageDown()) );
-
-	_paccel->connectItem( _paccel->insertItem( Key_PageUp ),
-			_canvas, SLOT(pageUp()) );
-
-
-	_paccel->connectItem( _paccel->insertItem( Key_Right ),
-			_canvas, SLOT(lineRight()) );
-
-	_paccel->connectItem( _paccel->insertItem( Key_Left ),
-			_canvas, SLOT(lineLeft()) );
-
-	_paccel->connectItem( _paccel->insertItem( Key_Q ),	// quit
-			this, SLOT(quitApp()) );
+	// accelerators
+	makeAccel();
 
 	// Drop events forwarded to image list object
 
@@ -196,8 +135,8 @@ KImageViewer::~KImageViewer()
 	delete _pctBuffer;
 	delete _imageList;
 
-	delete _kfm;
-	_kfm = 0;
+
+	delete _kfm; _kfm = 0;
 
 	delete _transSrc;
 	_transSrc = 0;
@@ -338,44 +277,43 @@ void KImageViewer::help()
 void KImageViewer::about()
 {
 	QString aboutText;
-	aboutText.sprintf(i18n("KView -- Graphics viewer. %s"
-			       "\n""\nSirtaj S. Kang (taj@kde.org)\n"),
-			  KVIEW_VERSION);
+	
+	aboutText.sprintf( i18n( "KView -- Graphics viewer. %s\n"
+		"\nSirtaj S. Kang (taj@kde.org)\n" ), KVIEW_VERSION );
 
-	QMessageBox::about( this, i18n("About KView"), aboutText);
+	QMessageBox::about( this, i18n("About KView"), aboutText );
 }
 
-void KImageViewer::makeRootMenu(QMenuData *menu)
+void KImageViewer::makeRootMenu(QPopupMenu *menu)
 {
-    /*
-	menu->insertItem( i18n( "&File" ),	_file );
-	menu->insertItem( i18n( "&Edit" ),	_edit );
-	menu->insertItem( i18n( "&Zoom" ),	_zoom );
-	menu->insertItem( i18n( "&Transform" ),	_transform );
-	menu->insertItem( i18n( "To &Desktop"),	_desktop );
-	
-	_popFilterID = menu->insertItem( i18n( "Fi&lter"),	
-		_menuFact->filterMenu() );
-	menu->setItemEnabled( _popFilterID, false );
+	/*
+	   menu->insertItem( i18n( "&File" ),	_file );
+	   menu->insertItem( i18n( "&Edit" ),	_edit );
+	   menu->insertItem( i18n( "&Zoom" ),	_zoom );
+	   menu->insertItem( i18n( "&Transform" ),	_transform );
+	   menu->insertItem( i18n( "To &Desktop"),	_desktop );
 
-	menu->insertItem( i18n( "&Options" ), _aggreg );
-	
+	   _popFilterID = menu->insertItem( i18n( "Fi&lter"),	
+	   _menuFact->filterMenu() );
+	   menu->setItemEnabled( _popFilterID, false );
+
+	   menu->insertItem( i18n( "&Options" ), _aggreg );
+
+	   menu->insertSeparator();
+	   menu->insertItem( i18n( "&Help" ), _help );
+
+	 */	
+
+
+	setCMenu( menu );
+	conn( i18n("&List..."), "ImageList", this, SLOT(toggleImageList()) );
 	menu->insertSeparator();
-	menu->insertItem( i18n( "&Help" ), _help );
-	
-    */	
-    
-    menu->insertItem( i18n("&List..."), this,
-			 SLOT(toggleImageList()), Key_I );
-    menu->insertSeparator();
-    menu->insertItem( i18n("&Previous"), _imageList, SLOT(prev()),
+	conn( i18n("&Previous"), "Prev", _imageList, SLOT(prev()),
 			 Key_Backspace );
-    menu->insertItem( i18n("&Next"), _imageList, SLOT(next()),
-			 Key_Tab );
-    menu->insertSeparator();
-    menu->insertItem( i18n("&Slideshow On/Off"), _imageList,
-			 SLOT(toggleSlideShow()), Key_S );
-
+	conn( i18n("&Next"), "Next", _imageList, SLOT(next()), Key_Tab );
+	menu->insertSeparator();
+	conn( i18n("&Slideshow On/Off"), "Slideshow", _imageList,
+			SLOT(toggleSlideShow()), Key_S );
 }
 
 void KImageViewer::makeRootMenu(KMenuBar *menu)
@@ -408,78 +346,84 @@ void KImageViewer::makePopupMenus()
 
 	// file pulldown
 
-	_file->insertItem( i18n( "&Open..." ), this, SLOT(load()) );
-	_file->insertItem( i18n( "&Save As..." ), this, SLOT(saveAs()) );
+	setCMenu( _file );
+	conn( i18n( "&Open..." ), KAccel::Open, this, SLOT(load()) );
+	conn( i18n( "&Save As..." ), KAccel::Save, this, SLOT(saveAs()) );
+	conn( i18n( "&Print..." ), KAccel::Print, this, SLOT(printImage()));
 	_file->insertSeparator();
-	_file->insertItem( i18n( "&Print..." ), this, SLOT(printImage()) );
+	conn( i18n( "&New Window" ), KAccel::New, this, SLOT(newViewer()));
+	conn( i18n( "&Close Window" ),KAccel::Close, this, SLOT(closeViewer()));
 	_file->insertSeparator();
-	_file->insertItem( i18n( "&New Window" ), this, SLOT(newViewer()),
-		CTRL + Key_N );
-	_file->insertItem( i18n( "&Close Window" ), this, SLOT(closeViewer()));
-	_file->insertSeparator();
-	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()),
-		CTRL + Key_Q );
+	conn( i18n( "E&xit" ), KAccel::Quit, this, SLOT(quitApp()) );
 
 	// edit pulldown
-	_edit->insertItem( i18n( "&Full Screen" ), this, SLOT(fullScreen()),
+	setCMenu( _edit );
+	conn( i18n( "&Full Screen" ), "FullScreen", this, SLOT(fullScreen()),
 			Key_F );
 	_edit->insertSeparator();
-	_edit->insertItem( i18n( "&Crop" ), 	_canvas, SLOT(cropImage()),
-			Key_C );
+	conn( i18n( "&Crop" ), "Crop", _canvas, SLOT(cropImage()), Key_C );
 	_edit->insertSeparator();
-	_edit->insertItem( i18n( "&Reset"), this, SLOT(reset()),
-		CTRL + Key_R );
+	conn( i18n( "&Reset"), "Reset", this, SLOT(reset()), CTRL + Key_R );
+	_edit->insertSeparator();
+	conn( i18n( "&Preferences..."), "Prefs", this, SLOT(prefs()), 
+		CTRL + Key_P );
 
 	// zoom pulldown
 
-	_zoom->insertItem( i18n( "&Zoom..." ), 	this, SLOT(zoomCustom()),
-			Key_Z );
-	_zoom->insertItem( i18n( "Zoom &in 10%" ), this, SLOT(zoomIn10()),
+	setCMenu( _zoom );
+	conn( i18n( "&Zoom..." ), "Zoom", this, SLOT(zoomCustom()), Key_Z );
+	conn( i18n( "Zoom &in 10%" ), "ZoomIn10", this, SLOT(zoomIn10()),
 			Key_Period );
-	_zoom->insertItem( i18n( "Zoom &out 10%"), this, SLOT(zoomOut10()),
-			Key_Comma );
-	_zoom->insertItem( i18n( "&Double size" ), this, SLOT(zoomIn200()),
+	conn( i18n( "Zoom &out 10%"), "ZoomOut10", this,SLOT(zoomOut10()),
+			Key_Backspace );
+	conn( i18n( "&Double size" ), "ZoomIn200", this, SLOT(zoomIn200()),
 			Key_BracketRight );
-	_zoom->insertItem( i18n( "&Half size"), this, SLOT(zoomOut50()),
+	conn( i18n( "&Half size"), "ZoomOut50", this, SLOT(zoomOut50()), 
 			Key_BracketLeft );
-	_zoom->insertItem( i18n( "&Max size"), _canvas, SLOT(maxToWin()),
+	conn( i18n( "&Max size"), "Max", _canvas, SLOT(maxToWin()),
 			Key_M );
-	_zoom->insertItem( i18n( "Max/&aspect"), _canvas, SLOT(maxpectToWin()),
+	conn( i18n( "Max/&aspect"), "Maxpect", _canvas, SLOT(maxpectToWin()),
 			Key_A );
 
 	// transform pulldown
 
-	_transform->insertItem( i18n( "Rotate &clockwise" ),
-			this, SLOT(rotateClock()) );
-	_transform->insertItem( i18n( "Rotate &anti-clockwise" ),
-			this, SLOT(rotateAntiClock()) );
-	_transform->insertItem( i18n( "Flip &vertical" ),
-			this, SLOT(flipVertical()) );
-	_transform->insertItem( i18n( "Flip &horizontal" ),
-			this, SLOT(flipHorizontal()) );
+	setCMenu( _transform );
+	conn( i18n( "Rotate &clockwise" ), "RotateC", this, 
+			SLOT(rotateClock()), Key_Semicolon );
+	conn( i18n( "Rotate &anti-clockwise" ), "RotateAC", this, 
+			SLOT(rotateAntiClock()), Key_Comma );
+	conn( i18n( "Flip &vertical" ), "FlipV", this, SLOT(flipVertical()),
+		Key_V );
+	conn( i18n( "Flip &horizontal" ),"FlipH",this,SLOT(flipHorizontal()),
+		Key_H );
 
 	// desktop pulldown
 
-	_desktop->insertItem( i18n( "&Tile" ), this, SLOT( tile() )  );
-	_desktop->insertItem( i18n( "&Max" ),  this, SLOT( max() )   );
-	_desktop->insertItem( i18n("Max&pect"),this, SLOT(maxpect()) );
+	setCMenu( _desktop );
+	conn( i18n( "&Tile" ), "Tile", this, SLOT(tile()) );
+	conn( i18n( "&Max" ),  "Max", this, SLOT(max())   );
+	conn( i18n("Max&pect"), "Maxpect", this, SLOT(maxpect()) );
 
+	setCMenu( _aggreg );
 
-	int id = _aggreg->insertItem( i18n("&List..."), this,
-		SLOT(toggleImageList()), Key_I );
+	int id = conn( i18n("&List..."), "ImageList", this, 
+			SLOT(toggleImageList()), Key_I );
 	_aggreg->setItemChecked( id, false );
 	_aggreg->insertSeparator();
-	_aggreg->insertItem( i18n("&Previous"), _imageList, SLOT(prev()),
+	conn( i18n("&Previous"), "Prev", _imageList, SLOT(prev()),
 			Key_Backspace );
-	_aggreg->insertItem( i18n("&Next"), _imageList, SLOT(next()),
+	conn( i18n("&Next"), "Next", _imageList, SLOT(next()),
 			Key_Tab );
 	_aggreg->insertSeparator();
-	_aggreg->insertItem( i18n("&Slideshow On/Off"), _imageList,
-		SLOT(toggleSlideShow()), Key_S );
+	_aggreg->insertItem( i18n("&Slideshow On/Off"), "Slideshow", 
+		_imageList, SLOT(toggleSlideShow()), Key_S );
 
-	_help->insertItem( i18n( "&Contents" ), this, SLOT(help()) );
+	setCMenu( _help );
+	conn( i18n( "&Contents" ), KAccel::Help, this, SLOT(help()));
+	conn( i18n( "&How do I..." ), "HelpHow", this, SLOT(helpHow()));
+	conn( i18n( "&What is a..." ), "HelpWhat", this, SLOT(helpWhat()));
 	_help->insertSeparator();
-	_help->insertItem( i18n( "&About KView..." ), this, SLOT(about()) );
+	conn( i18n( "&About KView..." ), "About", this, SLOT(about()));
 }
 
 void KImageViewer::quitApp()
@@ -542,7 +486,8 @@ void KImageViewer::loadURL( const char *url )
 		_transDest->setStr( tempnam( 0, "kview_") );
 
 		if( _transSrc->isEmpty() || _transDest->isEmpty() ) {
-			message( i18n( "Couldn't get temporary transfer name." ) );
+			message( 
+			i18n( "Couldn't get temporary transfer name." ) );
 			return;
 		}
 
@@ -639,6 +584,10 @@ void KImageViewer::setFilterMenu( KFiltMenuFactory *filtmenu )
 	setMenu( _menubar );
 	_menubar->show();
 	_canvas->show();
+
+	_kaccel->readSettings();
+	_kaccel->setEnabled( true );
+	_watcher->updateMenus();
 }
 
 void KImageViewer::setStatus( const char *status )
@@ -656,6 +605,7 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		url = file;
 	}
 
+	// We need to do this, in case the image takes too long to load.
 	bool slide = _imageList->slideShowRunning();
 
 	if( slide ) {
@@ -663,8 +613,27 @@ void KImageViewer::loadFile( const char *file, const char *url )
 	}
 
 	setStatus( i18n( "Loading..." ) );
-	_canvas->load( file, 0, _autoMaxpect );
 
+	// load the image
+	_canvas->load( file, 0, _loadMode == ResizeImage );
+
+	if( _loadMode == ResizeWindow ) {
+		// FIXME: we are NOT including the window frame yet.
+
+		int iw = _canvas->contentsWidth();
+		int ih = _canvas->contentsHeight();
+
+		int xextra = width() - _canvas->width();
+		int yextra = height() - _canvas->height();
+
+		int xmax = kapp->desktop()->width()  - ( xextra + x() );
+		int ymax = kapp->desktop()->height() - ( yextra + y() );
+
+		resize( QMIN( iw, xmax ) + xextra,
+			QMIN( ih, ymax ) + yextra );
+	}
+
+	// update state
 
 	setStatus( 0 );
 
@@ -763,8 +732,6 @@ void KImageViewer::fullScreen()
 	if( _statusbar->isVisible() ) {
 		// change to full
 
-		_accel->setEnabled( true );
-			
 		_menubar->hide();
 		_statusbar->hide();
 
@@ -792,8 +759,6 @@ void KImageViewer::fullScreen()
 		_menubar->show();
 		_statusbar->show();
 		updateRects();
-
-		_accel->setEnabled( false );
 	}
 }
 
@@ -841,13 +806,43 @@ void KImageViewer::restoreProperties( KConfig *cfg )
 void KImageViewer::saveOptions( KConfig *cfg ) const
 {
 	KConfigGroupSaver save( cfg, "kview" );
-	cfg->writeEntry( "AutoMaxpect", _autoMaxpect );
+	QString lmode;
+
+	switch ( _loadMode ) {
+		case ResizeNone:	lmode = "ResizeNone";	break;
+		case ResizeImage:	lmode = "ResizeImage";	break;
+		case ResizeWindow:	
+		default:		lmode = "ResizeWindow"; break;
+	}
+	cfg->writeEntry( "LoadMode", lmode );
+
+	_imageList->saveOptions( cfg );
+	_kaccel->writeSettings( cfg );
 }
 
 void KImageViewer::restoreOptions( KConfig *cfg )
 {
 	KConfigGroupSaver save( cfg, "kview" );
-	_autoMaxpect = cfg->readBoolEntry( "AutoMaxpect", false );
+
+	QString lmode = cfg->readEntry( "LoadMode", "ResizeWindow" );
+
+	if ( !stricmp( lmode, "ResizeWindow" ) ) {
+		_loadMode = ResizeWindow;
+	}
+	else if ( !stricmp( lmode, "ResizeImage" ) ) {
+		_loadMode = ResizeImage;
+	}
+	else if ( !stricmp( lmode, "ResizeNone" ) ) {
+		_loadMode = ResizeNone;
+	}
+	else {
+		warning( "kview: warning: Unknown resize mode '%s'", 
+		(const char *)lmode );
+		_loadMode = ResizeWindow;
+	}
+
+	_imageList->restoreOptions( cfg );
+	_kaccel->readSettings( cfg );
 }
 
 void KImageViewer::printImage()
@@ -897,3 +892,104 @@ void KImageViewer::paste()
 {
 	// TODO: stub
 }
+
+void KImageViewer::prefs()
+{
+	KConfig *cfg = kapp->getConfig();
+	KViewPrefDlg dlg( cfg, _kaccel );
+
+	saveOptions( cfg );
+
+	if( dlg.exec() ) {
+		restoreOptions( cfg );
+
+		if ( dlg.keysDirty() ) {
+			emit accelChanged();
+		}
+	}
+}
+
+void KImageViewer::helpHow()
+{
+	emit wantHelp( "how" );
+}
+
+void KImageViewer::helpWhat()
+{
+	emit wantHelp( "what" );
+}
+
+
+void KImageViewer::makeAccel()
+{
+	// keyboard scrolling
+	_paccel = new QAccel( this );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Down ),
+			_canvas, SLOT(lineDown()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Up ),
+			_canvas, SLOT(lineUp()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_PageDown ),
+			_canvas, SLOT(pageDown()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_PageUp ),
+			_canvas, SLOT(pageUp()) );
+
+
+	_paccel->connectItem( _paccel->insertItem( Key_Right ),
+			_canvas, SLOT(lineRight()) );
+
+	_paccel->connectItem( _paccel->insertItem( Key_Left ),
+			_canvas, SLOT(lineLeft()) );
+
+	// Quit on Q. Not configurable. I don't care.
+	_paccel->connectItem( _paccel->insertItem( Key_Q ),	
+			this, SLOT(quitApp()) );
+}
+
+void KImageViewer::updateAccel()
+{
+	_kaccel->readSettings();
+	_watcher->updateMenus();
+}
+
+int KImageViewer::conn( const char *text, const char *action,
+	QObject *receiver, const char *method, uint key )
+{
+	assert( _cmenu != 0 );
+
+	int id = 0;
+	
+	_kaccel->insertItem( text, action, key );
+	_kaccel->connectItem( action, receiver, method );
+
+	id = _cmenu->insertItem( text, receiver, method );
+	_watcher->connectAccel( id, action );
+
+	return id;
+}
+
+int KImageViewer::conn( const char *text, KAccel::StdAccel action,
+	QObject *receiver, const char *method )
+{
+	assert( _cmenu != 0 );
+
+	_kaccel->insertStdItem( action, text );
+	_kaccel->connectItem( action, receiver, method );
+	int id = _cmenu->insertItem( text, receiver, method );
+
+	_watcher->connectAccel( id, action );
+
+	return id;
+}
+
+void KImageViewer::setCMenu( QPopupMenu *menu )
+{
+	assert( menu && _watcher );
+
+	_watcher->setMenu( menu );
+	_cmenu = menu;
+}
+

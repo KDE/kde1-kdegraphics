@@ -37,8 +37,8 @@ KImageCanvas::KImageCanvas( QWidget *parent )
 		this, SIGNAL ( contextPress(const QPoint&) ));
 	addChild( _client );
 
-	_client->show();
 	_client->setAutoResize( TRUE );
+	_client->hide();
 }
 
 KImageCanvas::~KImageCanvas()
@@ -105,7 +105,8 @@ int KImageCanvas::load( const char *file, const char *URL,
 			maxpect( this, &newImage );
 		}
 		_client->setImagePix( newImage );
-
+		_client->show();
+		
 		updateScrollBars();
 
 		_file = ( URL ? URL : realfile.data() );
@@ -366,6 +367,24 @@ void KImageCanvas::copyImage( QPaintDevice *dest ) const
 {
 	QPainter painter( dest );
 	painter.drawPixmap( 0, 0, *(_client->pixmap()) );
+}
+
+void KImageCanvas::mouseReleaseEvent( QMouseEvent *ev )
+{
+	// wheel support
+	// maybe one day this will work...
+
+#if 0
+	switch ( ev->button() ) {
+		case 4: lineUp();	break;
+		case 5: lineDown();	break;
+		default:	
+			QScrollView::mouseReleaseEvent( ev );
+	}
+#else
+	QScrollView::mouseReleaseEvent( ev );
+#endif
+
 }
 
 /*

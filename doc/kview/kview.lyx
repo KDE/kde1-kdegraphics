@@ -1,4 +1,4 @@
-#This file was created by <ssk> Thu Sep 24 16:20:12 1998
+#This file was created by <ssk> Tue Jan  5 01:19:30 1999
 #LyX 0.12 (C) 1995-1998 Matthias Ettrich and the LyX Team
 \lyxformat 2.15
 \textclass linuxdoc
@@ -35,7 +35,7 @@ Sirtaj Singh Kang <taj@kde.org>
 \layout Abstract
 
 KView lets you view graphics in many formats.
- It also facilitates simple image processing and format conversion operations.
+ It also allows simple image processing and format conversion operations.
 \layout Standard
 
 
@@ -46,11 +46,56 @@ KView lets you view graphics in many formats.
 
 \layout Section
 
-What is KView?
+Introduction
 \layout Standard
 
 KView is a simple image viewer/converter application.
- For time T = C + D, where C = time spent coding and D = time spent writing
- documentation and T is ever-diminishing, you will note that D is small
- since at this stage, increasing C is more fun.
+ 
+\layout Section
+
+
+\begin_inset LatexCommand \label{cmdline}
+
+\end_inset 
+
+Command Line Usage
+\layout Standard
+
+TODO
+\layout Section
+
+
+\begin_inset LatexCommand \label{how}
+
+\end_inset 
+
+How do I...
+\layout Standard
+
+TODO
+\layout Section
+
+
+\begin_inset LatexCommand \label{what}
+
+\end_inset 
+
+What is a...
+\layout Standard
+
+TODO
+\layout Section
+
+
+\begin_inset LatexCommand \label{notes}
+
+\end_inset 
+
+Notes
+\layout Standard
+
+TODO
+\layout Subsection
+
+Currently supported formats
 \the_end

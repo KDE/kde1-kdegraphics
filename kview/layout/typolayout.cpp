@@ -11,13 +11,14 @@
 #include<assert.h>
 
 #include<qpushbt.h>
-#include<qbttngrp.h>
 #include<qchkbox.h>
 #include<qlabel.h>
 #include<qlined.h>
 #include<qmlined.h>
 #include<qlistbox.h>
 #include<qradiobt.h>
+#include<qgroupbox.h>
+#include<qbuttongroup.h>
 
 KTypoLayout::KTypoLayout( QWidget *parent )
 	: KBagLayout( parent )
@@ -25,7 +26,7 @@ KTypoLayout::KTypoLayout( QWidget *parent )
 	assert( parent );
 
 	_parent = parent;
-	_group	= 0;
+	_group = 0;
 }
 
 QLabel *KTypoLayout::newLabel( const char *text, int x, int y, 
@@ -43,12 +44,11 @@ QPushButton *KTypoLayout::newButton( const char *text, int x, int y,
 			int xspan, int yspan )
 {
 	QPushButton *w = new QPushButton( text, _parent );
+	addWidget( w, x, y, xspan, yspan );
 
-	if( _group != 0 ) {
+	if( _group ) {
 		_group->insert( w );
 	}
-
-	addWidget( w, x, y, xspan, yspan );
 
 	return w;
 }
@@ -57,12 +57,11 @@ QRadioButton *KTypoLayout::newRadioButton( const char *text, int x, int y,
 			int xspan, int yspan )
 {
 	QRadioButton *w = new QRadioButton ( text, _parent );
+	addWidget( w, x, y, xspan, yspan );
 
-	if( _group != 0 ) {
+	if( _group ) {
 		_group->insert( w );
 	}
-
-	addWidget( w, x, y, xspan, yspan );
 
 	return w;
 }
@@ -98,8 +97,11 @@ QCheckBox *KTypoLayout::newCheckBox( const char *text, int x, int y,
 			int xspan, int yspan )
 {
 	QCheckBox *w = new QCheckBox ( text, _parent );
-
 	addWidget( w, x, y, xspan, yspan );
+
+	if( _group ) {
+		_group->insert( w );
+	}
 
 	return w;
 }
@@ -124,18 +126,29 @@ KTypoLayout *KTypoLayout::newSubLayout( int x, int y, int xspan, int yspan )
 	return sublayout;
 }
 
-void KTypoLayout::startGroup()
-{
-	if( _group ) {
-		endGroup();
-	}
 
+KTypoLayout *KTypoLayout::newSubGroup( const char *title, int x, int y, 
+	int xspan, int yspan )
+{
+	QGroupBox *holder = new QGroupBox( title, _parent );
+	holder->setLineWidth( 1 );
+	holder->setFrameStyle( QFrame::Box | QFrame::Raised );
+
+	addWidget( holder, x, y, xspan, yspan );
+
+	KTypoLayout *sublayout = new KTypoLayout( holder );
+	sublayout->setSpaceContents( holder );
+
+	return sublayout;
+}
+
+QButtonGroup *KTypoLayout::startGroup()
+{
 	_group = new QButtonGroup( _parent );
-	_group->setFrameStyle( QFrame::NoFrame );
+	_group->hide();
 }
 
 void KTypoLayout::endGroup()
 {
-//	delete _group;
 	_group = 0;
 }
