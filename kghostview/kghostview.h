@@ -178,6 +178,7 @@ private:
 	QPopupMenu *m_file;
 	QPopupMenu *m_view;
 	QPopupMenu *m_go;
+	QPopupMenu *m_pagemarks;
 	QPopupMenu *m_options;
 	QPopupMenu *m_help;
 	
@@ -209,6 +210,12 @@ private:
 	int file2ID;
 	int file3ID;
 	int file4ID;
+	int markCurrentID;
+	int markAllID;
+	int markEvenID;
+	int markOddID;
+	int toggleMarksID;
+	int removeMarksID;
 
 	Bool hide_toolbar;
 	Bool hide_statusbar;

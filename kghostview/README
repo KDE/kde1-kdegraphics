@@ -1,9 +1,9 @@
 
-28/9/97
+18/11/97
 Mark Donohoe
 Please direct any bug reports to me (donohoe@kde.org).
 
-KGHOSTVIEW 0.6 - Alpha release
+KGHOSTVIEW 0.6.1 - Alpha release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -14,7 +14,7 @@ uses the Qt toolkit.
 REQUIREMENTS
 
 1. Alladin ghostscript
-2. Qt 1.2+
+2. Qt 1.3+
 
 INSTALL
 
@@ -31,9 +31,14 @@ TODO
 
 - PDF support
 - Standardise kdvi and kghostview
-- Sort out menus
-- Remove blank recent files in File menu
-- Sort out hang when waiting for child process
+- Clean fix for the XError (Bad window parameter) bug.
+
+CHANGES V0.6.1
+
+- Style book compliant menu entries and toolbar buttons
+- Interim fix for XError (Bad window parameter) bug - no longer fatal
+- Overrides KApp. signal management
+- Copyrights
 
 CHANGES V0.6
 

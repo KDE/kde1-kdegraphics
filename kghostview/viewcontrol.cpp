@@ -1,3 +1,14 @@
+/****************************************************************************
+**
+** A dialog for the selection of the view of a document.
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
+
 #include <qcombo.h>
 #include <qframe.h>
 #include <qgrpbox.h>

@@ -1,18 +1,25 @@
+/****************************************************************************
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
 
 #include <stdlib.h>
 #include <stdio.h>
 
 #include <qfiledlg.h>
 #include <kmsgbox.h>
+#include <klocale.h>
 #include <kapp.h>
 
 #include "kghostview.h"
 
-#include <klocale.h>
-#include <kapp.h>
 #define i18n(X) klocale->translate(X)
 
-Display 	*kde_display;
+Display *kde_display;
 
 void Syntax(char *call)
 {
@@ -31,9 +38,6 @@ public:
 	~MyApp();
 };
 
-
-
-
 MyApp::MyApp( int &argc, char **argv, const QString &rAppName )
 			: KApplication( argc, argv, rAppName )
 {
@@ -44,7 +48,6 @@ MyApp::~MyApp()
 	//printf("MyApp::~MyApp()\n");
 }
 
-
 bool MyApp::x11EventFilter( XEvent *ev ) {
 	
 	for ( KGhostview *kg = KGhostview::windowList.first(); kg!=0;
@@ -53,6 +56,9 @@ bool MyApp::x11EventFilter( XEvent *ev ) {
 	
 	if(ev->xany.type == ClientMessage) {
 		kg->page->mwin = ev->xclient.data.l[0];
+		fprintf(stderr, 
+			"kghostview: Ghostscript communication window set as 0x%lx\n",
+			kg->page->mwin);
 		
 		XClientMessageEvent *cme = ( XClientMessageEvent * ) ev;
 		
@@ -79,6 +85,8 @@ int main( int argc, char **argv )
 {
 	MyApp a( argc, argv, "kghostview" );
 	
+	signal( SIGCHLD, SIG_DFL );
+	
 	struct stat sbuf;
 	
 	KGhostview *kg = new KGhostview ();
@@ -92,14 +100,14 @@ int main( int argc, char **argv )
 		if (strcmp(kg->filename, "-")) {
 			if ((kg->psfile = fopen(argv[1], "r")) == 0) {
 				QString s;
-				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."), argv[1]);
- 				KMsgBox::message(0, i18n("Error"), 
-                             s, 2 );
+				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."),
+							argv[1] );
+ 				KMsgBox::message(0, i18n("Error"), s, 2 );
 			}
 			stat(kg->filename, &sbuf);
 			kg->mtime = sbuf.st_mtime;
 		} else {
-			printf(i18n("Didn't recognise file\n"));
+			printf( i18n("Didn't recognise file\n") );
 		}
 	}
 	
@@ -111,10 +119,9 @@ int main( int argc, char **argv )
 	
 	if (kg->psfile) {
 		kg->setup();
-		kg->show_page(0);
-		kg->marklist->select(0);
+		kg->show_page( 0 );
+		kg->marklist->select( 0 );
 	}
-	
 	
 	return a.exec();
 }

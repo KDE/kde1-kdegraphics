@@ -1,3 +1,12 @@
+/****************************************************************************
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
+
 #define ID_NEXT 0
 #define ID_PREV 1
 #define ID_PAGE 2
@@ -501,10 +510,10 @@ void KGhostview::createMenubar()
 
     m_go = new QPopupMenu;
     CHECK_PTR( m_go );
-    nextID =
-    m_go->insertItem( i18n("&Next page"), this, SLOT( nextPage() ) );
     prevID =
     m_go->insertItem( i18n("&Previous Page"), this, SLOT( prevPage() ) );
+	nextID =
+	m_go->insertItem( i18n("&Next page"), this, SLOT( nextPage() ) );
     goToPageID =
     m_go->insertItem( i18n("&Go to page ..."), this, SLOT( goToPage() ) );
     m_go->insertSeparator();
@@ -514,6 +523,25 @@ void KGhostview::createMenubar()
     m_go->insertItem( i18n("Go to &end"), this, SLOT( goToEnd() ) );
     readDownID =
     m_go->insertItem( i18n("&Read down"), this, SLOT( dummy() ) );
+	
+	m_pagemarks = new QPopupMenu;
+    CHECK_PTR( m_pagemarks );
+	markCurrentID =
+    m_pagemarks->insertItem( i18n("Mark &current page"), this, 
+		SLOT( markPage() ) );
+    markAllID =
+    m_pagemarks->insertItem( i18n("Mark &all pages"), marklist, SLOT( markAll() ) );
+    markEvenID =
+    m_pagemarks->insertItem( i18n("Mark &even pages"), marklist, SLOT( markEven() ) );
+    markOddID =
+    m_pagemarks->insertItem( i18n("Mark &odd pages"), marklist, SLOT( markOdd() ) );
+    m_pagemarks->insertSeparator();
+    toggleMarksID =
+    m_pagemarks->insertItem( i18n("&Toggle page marks"), marklist, SLOT(
+	toggleMarks() ) );
+    removeMarksID =
+    m_pagemarks->insertItem( i18n("&Remove page marks"), marklist, SLOT(
+	removeMarks() ) );
     
   
     m_options = new QPopupMenu;
@@ -523,11 +551,11 @@ void KGhostview::createMenubar()
     // I've read the config file.
     
 	m_options->setCheckable( TRUE );
-	m_options->insertItem(i18n("&Configure interpreter ..."), ID_GHOSTSCRIPT);
-	m_options->insertSeparator();
     m_options->insertItem(i18n("Show &tool bar"), ID_TOOLBAR);
-    m_options->insertItem(i18n("Show &status bar"), ID_STATUSBAR);
+    m_options->insertItem(i18n("Show st&atus bar"), ID_STATUSBAR);
 	m_options->insertItem(i18n("Show &page list"), ID_PAGELIST);
+	m_options->insertSeparator();
+	m_options->insertItem(i18n("Configure &interpreter ..."), ID_GHOSTSCRIPT);
     m_options->insertItem(i18n("Configure &key bindings ..."), ID_CONFIGURE);
     m_options->insertSeparator();
     m_options->insertItem(i18n("&Save options"), ID_SAVE);
@@ -549,9 +577,35 @@ void KGhostview::createMenubar()
     menubar->insertItem( i18n("&File"), m_file );
     menubar->insertItem( i18n("&View"), m_view );
     menubar->insertItem( i18n("&Go"), m_go );
+	menubar->insertItem( i18n("&Pagemarks"), m_pagemarks );
     menubar->insertItem( i18n("&Options"), m_options);
-    menubar->insertSeparator();
-    menubar->insertItem( i18n("&Help"), m_help);
+	
+	menubar->insertSeparator();
+	
+	menubar->insertItem( i18n("&Help"), 
+		kapp->getHelpMenu( FALSE,
+		"\n"\
+		"KGhostview Version 0.6 - the PostScript document viewer for\n"\
+		"the K Desktop Environment.\n"\
+		"\n"\
+		"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"\
+		"work by Tim Theisen.\n"\
+		"\n"\
+		"This program is free software; you can redistribute it and/or modify\n"\
+		"it under the terms of the GNU General Public License as published by\n"\
+		"the Free Software Foundation; either version 2 of the License, or\n"\
+		"(at your option) any later version.\n"\
+		"\n"\
+		"This program is distributed in the hope that it will be useful,\n"\
+		"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"\
+		"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"\
+		"GNU General Public License for more details.\n"\
+		"\n"\
+		"You should have received a copy of the GNU General Public License\n"\
+		"along with this program; if not, write to the Free Software\n"\
+		"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+		)
+	);
 	
 	m_file->setItemEnabled(ID_PRINT, FALSE);
 	m_go->setItemEnabled(nextID, FALSE);
@@ -560,6 +614,12 @@ void KGhostview::createMenubar()
 	m_go->setItemEnabled(goToStartID, FALSE);
 	m_go->setItemEnabled(goToEndID, FALSE);
 	m_go->setItemEnabled(readDownID, FALSE);
+	m_pagemarks->setItemEnabled(markCurrentID, FALSE);
+	m_pagemarks->setItemEnabled(markAllID, FALSE);
+	m_pagemarks->setItemEnabled(markEvenID, FALSE);
+	m_pagemarks->setItemEnabled(markOddID, FALSE);
+	m_pagemarks->setItemEnabled(toggleMarksID, FALSE);
+	m_pagemarks->setItemEnabled(removeMarksID, FALSE);
 	m_view->setItemEnabled(viewControlID, FALSE);
 	m_view->setItemEnabled(zoomInID, FALSE);
 	m_view->setItemEnabled(zoomOutID, FALSE);
@@ -616,7 +676,17 @@ void KGhostview::createToolbar()
 
 	QPixmap pixmap;
 	toolbar = new KToolBar( this );
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "fileprint.xpm" );
+	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document"));
 
+	toolbar->insertSeparator();
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "viewzoom.xpm" );
+	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
+
+	toolbar->insertSeparator();
+	
 	pixmap = kapp->getIconLoader()->loadIcon( "back.xpm" );
 	toolbar->insertButton(pixmap, ID_PREV, FALSE, i18n("Go back"));
 
@@ -628,19 +698,6 @@ void KGhostview::createToolbar()
 
 	toolbar->insertSeparator();
 
-	pixmap = kapp->getIconLoader()->loadIcon( "viewzoom.xpm" );
-	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
-
-	toolbar->insertSeparator();
-
-	pixmap = kapp->getIconLoader()->loadIcon( "fileprint.xpm" );
-	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document"));
-
-	pixmap = kapp->getIconLoader()->loadIcon( "flag.xpm" );
-	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Mark this page"));
-
-	toolbar->insertSeparator();
-
 	pixmap = kapp->getIconLoader()->loadIcon( "start.xpm" );
 	toolbar->insertButton(pixmap, ID_START, FALSE, i18n("Go to start"));
 
@@ -649,6 +706,11 @@ void KGhostview::createToolbar()
 
 	pixmap = kapp->getIconLoader()->loadIcon( "next.xpm" );
 	toolbar->insertButton(pixmap, ID_READ, FALSE, i18n("Read down the page"));
+	
+	toolbar->insertSeparator();
+
+	pixmap = kapp->getIconLoader()->loadIcon( "flag.xpm" );
+	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Mark this page"));
 
 	// Register toolbar with KTopLevelWidget layout manager
 	
@@ -2200,6 +2262,12 @@ Bool	KGhostview::setup()
 	m_view->setItemEnabled(shrinkWrapID, TRUE);
 	m_view->setItemEnabled(redisplayID, TRUE);
 	m_view->setItemEnabled(infoID, TRUE);
+	m_pagemarks->setItemEnabled(markCurrentID, TRUE);
+	m_pagemarks->setItemEnabled(markAllID, TRUE);
+	m_pagemarks->setItemEnabled(markEvenID, TRUE);
+	m_pagemarks->setItemEnabled(markOddID, TRUE);
+	m_pagemarks->setItemEnabled(toggleMarksID, TRUE);
+	m_pagemarks->setItemEnabled(removeMarksID, TRUE);
 	
 	statusbar->changeItem( filename.data(), ID_FILENAME );
 	switch(orientation) {

@@ -48,6 +48,11 @@ public:
 public slots:
 	void	select(int);
 	void	markSelected();
+	void	markAll();
+	void	markEven();
+	void	markOdd();
+	void	toggleMarks();
+	void	removeMarks();
 
 signals:
 	void	selected( int index );
@@ -60,13 +65,7 @@ protected:
 	void	paintCell( QPainter *p, int row, int col );
 	int	cellWidth( int );
 	void	updateItem( int i );
-
-protected slots:
-	void	markAll();
-	void	markEven();
-	void	markOdd();
-	void	toggleMarks();
-	void	removeMarks();
+	
 
 private:
 	void	changeMarks( int, int = 0 );

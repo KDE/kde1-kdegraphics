@@ -1,3 +1,14 @@
+/****************************************************************************
+**
+** A dialog which displays the terms of the GNU Public License.
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -1,3 +1,13 @@
+/****************************************************************************
+**
+** A Qt PostScript widget.
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
 
 #include <qdrawutl.h>
 #include <kmisc.h>
@@ -6,9 +16,23 @@
 
 static Bool broken_pipe = False;
 
+int handler(Display *d, XErrorEvent *e){
+    char msg[80], req[80], number[80];
+
+    XGetErrorText(d, e->error_code, msg, sizeof(msg));
+    sprintf(number, "%d", e->request_code);
+    XGetErrorDatabaseText(d, "XRequest", number, "<unknown>", req, sizeof(req));
+
+    fprintf(stderr, "kghostview: %s(0x%lx): %s\n", req, e->resourceid, msg);
+
+    return 0;
+}
+
 KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 {
 	//printf("KPSWidget::KPSWidget\n");
+	
+	XSetErrorHandler(handler);
 	
   	fullView = new QWidget( this );
 	CHECK_PTR( fullView );
@@ -155,12 +179,14 @@ Bool KPSWidget::isInterpreterRunning()
 
 Bool KPSWidget::nextPage()
 {
-	//printf("KPSWidget::nextPage\n");
+	//debug("KPSWidget::nextPage");
 
     XEvent ev;
 
     if (interpreter_pid < 0) return False;
     if (mwin == None) return False;
+	
+	//debug("gs_window = %x, mwin = %x", gs_window, mwin);
 
     if (!busy) {
 		busy = True;

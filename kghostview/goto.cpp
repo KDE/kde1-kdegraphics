@@ -1,3 +1,14 @@
+/****************************************************************************
+**
+** A dialog for choosing which page of a document to view.
+**
+** Copyright (C) 1997 by Mark Donohoe.
+** Based on original work by Tim Theisen.
+**
+** This code is freely distributable under the GNU Public License.
+**
+*****************************************************************************/
+
 #include <stdlib.h>
 #include <stdio.h>
 
