@@ -23,7 +23,7 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Promjena u generatoru pisma biti æe uèinkovita\n"
+"Promjena u generatoru pisma biti æe primjenjena\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
 #: dviwin.cpp:233
@@ -31,7 +31,7 @@ msgid ""
 "The change in font path will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Promjena u putanji pisma biti æe uèinkovita\n"
+"Promjena u putanji pisma biti æe primjenjena\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
 #: dviwin.cpp:247
@@ -39,7 +39,7 @@ msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Promjena u MetaPismo naèinu rada biti æe uèinkovita\n"
+"Promjena u MetaPismo naèinu rada biti æe primjenjena\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
 #: dviwin.cpp:284
@@ -47,7 +47,7 @@ msgid ""
 "The change in resolution will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Promjena razluèivosti biti æe uèinkovita\n"
+"Promjena razluèivosti biti æe primjenjena\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
 #: dviwin.cpp:301
@@ -55,7 +55,7 @@ msgid ""
 "The change in gamma will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Promjena gamma korekcije biti æe uèinkovita\n"
+"Promjena gamma korekcije biti æe primjenjena\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
 #: dviwin.cpp:424 dviwin.cpp:458
@@ -71,24 +71,20 @@ msgid "No document"
 msgstr "Nema dokumenta"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
-msgstr "Prekidaè trake izbornika"
+msgstr "Uklj./isklj traku sa izbornicima"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Obilje¾i sve"
+msgstr "Obilje¾i stranicu"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
 msgstr "Obnovi stranicu"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
-msgstr "&Odrednice ..."
+msgstr "Odrednice ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
@@ -184,10 +180,9 @@ msgstr "Prika¾i trake za &pomicanje"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "DVI Preglednik"
 
 #: kdvi.cpp:240
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -255,7 +250,7 @@ msgstr "Izaberi stranicu i obilje¾i stranice za ispis"
 
 #: kdvi.cpp:322
 msgid "X:0000, Y:0000 "
-msgstr ""
+msgstr "X:0000, Y:0000 "
 
 #: kdvi.cpp:324
 msgid "Shrink: xx"
@@ -700,19 +695,3 @@ msgstr "n-gore"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Naèin ispisa"
-
-#~ msgid "&Contents"
-#~ msgstr "&Sadr¾aj"
-
-#~ msgid "About &Qt"
-#~ msgstr "O &Qt-u"
-
-#~ msgid "About Kdvi"
-#~ msgstr "O Kdvi-u"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - TeX DVI preglednik\n"
-#~ "Inaèica "

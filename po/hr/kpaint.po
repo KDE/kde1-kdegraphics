@@ -2,17 +2,16 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-04-09 18:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 1997-11-08 23:50+0100\n"
+"PO-Revision-Date: 1998-04-29 20:00-0500\n"
+"Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
+"Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Transfer-Encoding: iso-8859-2\n"
 
 #: app.cpp:40
 msgid ""
@@ -24,15 +23,15 @@ msgstr ""
 
 #: app.cpp:41
 msgid "Usage: "
-msgstr "Upotreba:"
+msgstr "Uporaba:"
 
 #: app.cpp:43
 msgid " [url | filename]\n"
-msgstr " [url | filename]\n"
+msgstr " [url | ime_datoteke ]\n"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
-msgstr ""
+msgstr "Izbor podruèja"
 
 #: canvassize.cpp:12
 msgid "Width"
@@ -47,21 +46,20 @@ msgid "Circle"
 msgstr "Kru¾nica"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "©irina slike:"
+msgstr "Dubina slike:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Bitmapa)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 Boja)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (Istinska Boja)"
 
 #: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
@@ -97,7 +95,7 @@ msgstr "bezimen.gif"
 
 #: kpaint.cpp:117
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Nespremljene Promjene"
 
 #: kpaint.cpp:164
 msgid "New Canvas"
@@ -156,9 +154,8 @@ msgid "Close Window"
 msgstr "Zatvori prozor"
 
 #: kpaint.cpp:330
-#, fuzzy
 msgid "Exit"
-msgstr "&Urednik"
+msgstr "Izlaz"
 
 #: kpaint.cpp:333
 msgid "Copy Region"
@@ -214,24 +211,24 @@ msgstr "Sprej"
 
 #: kpaint.cpp:356
 msgid "Area Select"
-msgstr ""
+msgstr "Izbor podruèja"
+
 
 #: kpaint.cpp:361
 msgid "Show Tools Toolbar"
-msgstr ""
+msgstr "Poka¾i Alate"
 
 #: kpaint.cpp:362
 msgid "Show Commands Toolbar"
-msgstr ""
+msgstr "Poka¾i traku sa naredbama"
 
 #: kpaint.cpp:363
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Poka¾i traku sa statusom"
 
 #: kpaint.cpp:364
-#, fuzzy
 msgid "Save Options"
-msgstr "Pode¹avanja..."
+msgstr "Spremi Opcije"
 
 #: kpaint.cpp:382
 msgid "&Image"
@@ -263,14 +260,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: nepoznata vrsta zapisa"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Gre¹ka: Nepoznata vrsta zapisa\n"
-"KPaint ne razumije vrstu zapisa zadane datoteke ili je ona o¹teæena."
+"KPaint ne razumije vrstu zapisa zadane datoteke ili\n"
+"je ona o¹teæena."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -414,11 +411,11 @@ msgstr "Crtica, toèka, toèka"
 
 #: properties.cpp:244
 msgid "Line Width:"
-msgstr "Debljina crte"
+msgstr "Debljina crte:"
 
 #: properties.cpp:254
 msgid "End style:"
-msgstr "Izgled zavr¹etka"
+msgstr "Izgled zavr¹etka:"
 
 #: properties.cpp:259 properties.cpp:272
 msgid "Not Yet"
@@ -431,36 +428,3 @@ msgstr "Izgled spoja:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Postavi boju crte..."
-
-#~ msgid "Save File As"
-#~ msgstr "Spremi datoteku kao"
-
-#~ msgid "This was a QString"
-#~ msgstr "Bio je to QString"
-
-#~ msgid "Cut"
-#~ msgstr "Izre¾i"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiraj"
-
-#~ msgid "Paste"
-#~ msgstr "Umetni"
-
-#~ msgid "Index"
-#~ msgstr "Indeks"
-
-#~ msgid "About KPaint"
-#~ msgstr "O programu KPaint"
-
-#~ msgid "&File"
-#~ msgstr "&Datoteka"
-
-#~ msgid "&Help"
-#~ msgstr "&Pomoæ"
-
-#~ msgid "Sorry"
-#~ msgstr "®alim"
-
-#~ msgid "Browse..."
-#~ msgstr "Potra¾i..."
