@@ -271,10 +271,10 @@ KGhostview::~KGhostview()
 {
 	//printf("KGhostview::~KGhostview()\n");
 	
-	windowList.removeRef(this);
+	//windowList.removeRef(this);
 	
-	delete menubar;
-	delete toolbar;
+	//delete menubar;
+	//delete toolbar;
 }
 
 void KGhostview::bindKeys()
@@ -957,17 +957,22 @@ void KGhostview::newWindow()
 
 void KGhostview::closeEvent( QCloseEvent * )
 {
-	//printf("%d windows\n", windowList.count());
+	printf("%d windows\n", windowList.count());
 	
 	if ( windowList.count() > 1 ) {
 		windowList.remove( this );
 		page->disableInterpreter();
+		debug("Disable interpreter");
 		delete toolbar;
+		debug("Delete toolbar");
 		delete menubar;
+		debug("Delete menubar");
     	delete this;
+		debug("Delete this");
 		for ( KGhostview *kg = windowList.first(); kg!=0;
 				kg = windowList.next() )
 			kg->page->disableInterpreter();
+		debug("Disable interpreter");
 	} else
 		qApp->quit();
 }

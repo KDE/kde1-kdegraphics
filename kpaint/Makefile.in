@@ -83,12 +83,14 @@ install: all
 	$(INSTALL_DIR) $(prefix)/share/applnk/Graphics
 	$(INSTALL_DATA) Paint.kdelnk $(prefix)/share/applnk/Graphics 
 	$(INSTALL_DATA) kpaint.xpm $(prefix)/share/icons
+	$(INSTALL_DATA) mini-kpaint.xpm $(prefix)/share/icons/mini/kpaint.xpm
 
 uninstall:
 	-rm -f $(prefix)/bin/kpaint
 	-rm -rf $(prefix)/share/doc/HTML/kpaint
 	-rm -f $(prefix)/share/applnk/Graphics/Paint.kdelnk
 	-rm -f $(prefix)/share/icons/kpaint.xpm
+	-rm -f $(prefix)/share/icons/mini/kpaint.xpm
 
 Makefile:	Makefile.in
 	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status

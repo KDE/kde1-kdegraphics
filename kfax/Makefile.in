@@ -13,6 +13,8 @@ MIMEDIR = @kde_mimedir@/image/
 DOCSDIR = @kde_htmldir@/en/kfax
 APPSDIR = @kde_appsdir@/Graphics
 PICSDIR = @kde_datadir@/kfax/pics/
+ICONDIR = @kde_icondir@
+MINIDIR = @kde_minidir@
 install = @INSTALL@
 INSTALL = $(install) -m 0755
 INSTALL_DATA = $(install) -m 0644
@@ -80,8 +82,8 @@ distclean: clean
 	rm -f Makefile
 
 install: all
-	$(INSTALL_DIR) $(BINDIR)
-	$(INSTALL) $(TARGET) $(BINDIR)
+	#$(INSTALL_DIR) $(BINDIR)
+	#$(INSTALL) $(TARGET) $(BINDIR)
 	(cd docs && $(MAKE) install)
 	$(INSTALL_DIR) $(PICSDIR)
 	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
@@ -90,11 +92,17 @@ install: all
 	$(INSTALL_DIR) $(APPSDIR)
 	$(INSTALL_DATA) fax-g3.kdelnk $(MIMEDIR)
 	$(INSTALL_DATA) KFax.kdelnk $(APPSDIR)/KFax.kdelnk
+	$(INSTALL_DIR) $(ICONDIR)
+	$(INSTALL_DATA)  kfax.xpm $(ICONDIR)
+	$(INSTALL_DIR) $(MINIDIR)
+	$(INSTALL_DATA)  mini-kfax.xpm $(MINIDIR)/kfax.xpm
 
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	(cd docs && $(MAKE) uninstall)
 	rm -f $(APPSDIR)/KFax.kdelnk
+	rm -f $(ICONDIR)/kfax.xpm
+	rm -f $(MINIDIR)/kfax.xpm
 
 ####### Explicit dependencies
 

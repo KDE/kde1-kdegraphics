@@ -31,6 +31,9 @@ TODO
 
 - PDF support
 - Standardise kdvi and kghostview
+- Sort out menus
+- Remove blank recent files in File menu
+- Sort out hang when waiting for child process
 
 CHANGES V0.6
 
