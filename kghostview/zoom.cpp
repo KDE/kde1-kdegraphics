@@ -78,7 +78,7 @@ Zoom::Zoom( QWidget *parent, const char *name )
       KButtonBox *bbox = new KButtonBox( this );
       bbox->addStretch( 10 );
               
-      apply = bbox->addButton( i18n("&OK") );
+      apply = bbox->addButton( i18n("&Apply") );
       connect( apply, SIGNAL(clicked()), SLOT(applyZoom()) );
       apply->setEnabled (false);
 

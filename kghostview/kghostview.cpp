@@ -996,11 +996,12 @@ void KGhostview::shrinkWrap()
       //  screen;  height should take kpanel into account (via KWM?)
       
       int w=d->width();
-      int h=d->width(); 	
-      if( new_width > w )
-	new_width = w;
-      if( new_height > h )
-	new_width = h;
+      int h=d->height();
+      QPoint ul = mapToGlobal (QPoint (0,0));
+      if( new_width > w-ul.x() )
+	new_width = w-ul.x();
+      if( new_height > h-ul.y() )
+	new_height = h-ul.y();
 
       if (prevwidth!=new_width || prevheight!=new_height)
 	resize( new_width, new_height );
