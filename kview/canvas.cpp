@@ -16,6 +16,7 @@
 #include<qlabel.h>
 #include<qimage.h>
 #include<qpainter.h>
+#include<qpen.h>
 
 #include"canvas.h"
 
@@ -89,11 +90,8 @@ int KImageCanvas::load( const char *file, const char *URL )
 		delete _orig; // delete old buffered image
 		_orig = 0;
 
-		_client->setPixmap( newImage );
-		_client->move(0, 0 );
-		_client->resize( newImage.width(),
-				newImage.height() );
-
+		_client->move( 0, 0 );
+		_client->setImagePix( newImage );
 		_originalSize = size();
 
 		updateScrollBars();
@@ -132,8 +130,8 @@ void KImageCanvas::reset()
 		return;
 	}
 
-	_client->setPixmap( *_orig );
-	_client->resize( _orig->size() );
+	_client->setImagePix( *_orig );
+	emit imageSizeChanged();
 }
 
 void KImageCanvas::clear()
@@ -150,10 +148,13 @@ void KImageCanvas::transformImage( const QWMatrix& mat )
 		return;
 	}
 
+	QApplication::setOverrideCursor( waitCursor );
 	QPixmap newimage = _orig->xForm( mat );
 
-	_client->resize( newimage.size() );
-	_client->setPixmap( newimage );
+	_client->clearSelection();
+	_client->setImagePix( newimage );
+
+	QApplication::restoreOverrideCursor();
 }
 
 void KImageCanvas::tileToDesktop() const
@@ -223,8 +224,8 @@ void KImageCanvas::setImage( const QImage& image )
 
 	QPixmap pixmap;
 	pixmap.convertFromImage( image );
-	_client->setPixmap( pixmap );
-	_client->resize( pixmap.size() );
+
+	_client->setImagePix( pixmap );
 
 	emit imageSizeChanged();
 }
@@ -243,6 +244,28 @@ QPixmap *KImageCanvas::transPixmap()
 
 	return client;
 }
+
+void KImageCanvas::cropImage()
+{
+	QRect select = _client->selected();
+
+	if ( select.isNull() ) {
+		return;
+	}
+
+	transPixmap();
+
+	QPixmap *oldpix = _client->pixmap();
+
+	QPixmap newpix( select.width(), select.height() );
+	
+	bitBlt( &newpix, 0, 0, oldpix, select.left(), 
+		select.top(), select.width(), select.height(), CopyROP );
+
+	_client->setImagePix( newpix );
+	emit imageSizeChanged();
+}
+
 
 #define BUF_SIZE 1024
 /**
@@ -279,9 +302,61 @@ static QString loadStdin()
 	return name;
 }
 
+
+void KImageCanvas::maxToWin()
+{
+	transPixmap();
+
+	const QPixmap *image = _client->pixmap();
+
+	if( image == 0 ) {
+		return;
+	}
+
+	double dh = (double)height()/(double)image->height();
+	double dw = (double)width()/(double)image->width();
+	QWMatrix mat;
+	mat.scale( dw, dh );
+
+	_client->setImagePix( image->xForm( mat ) );
+	emit imageSizeChanged();
+}
+
+void KImageCanvas::maxpectToWin()
+{
+	transPixmap();
+
+	QPixmap *image = _client->pixmap();
+
+	if( image == 0 )
+		return;
+
+	double dh = (double)height()/(double)image->height();
+	double dw = (double)width()/(double)image->width();
+	QWMatrix mat;
+
+	double d = ( dh < dw ? dh : dw );
+	mat.scale( d, d );
+
+	_client->setImagePix( image->xForm( mat ) );
+	emit imageSizeChanged();
+}
+
+void KImageCanvas::copyImage( QPaintDevice *dest ) const
+{
+	QPainter painter( dest );
+	painter.drawPixmap( 0, 0, *(_client->pixmap()) );
+}
+
+/*
+******************************
+* KVImageHolder implementation
+*/
+
 KVImageHolder::KVImageHolder( QWidget *parent )
 		: QLabel( parent ), _selected( false ),
-		_painter( new QPainter )
+		_painter( new QPainter ),
+		_pen( new QPen( QColor( 255, 255, 255 ), 0, DashLine ) )
 {
 	assert( _painter != 0 );
 }
@@ -289,6 +364,7 @@ KVImageHolder::KVImageHolder( QWidget *parent )
 KVImageHolder::~KVImageHolder()
 {
 	delete _painter;
+	delete _pen;
 }
 
 void KVImageHolder::mousePressEvent( QMouseEvent *ev )
@@ -311,34 +387,66 @@ void KVImageHolder::mouseMoveEvent( QMouseEvent *ev )
 {
 	// currently called only on drag,
 	// so assume a selection has been started
+	bool erase = _selected;
+
 	if( !_selected ) {
 		_selected = true;
 	}
-	else {
-		eraseSelect();
+
+	int r = (ev->x() < width()) ? ev->x() : width() - 1;
+	int b = (ev->y() < height()) ? ev->y() : height() - 1;
+
+	if( r != _selection.right() || b != _selection.bottom() ) {
+		if ( erase ) 
+			eraseSelect();
+		
+		_selection.setRight( r );
+		_selection.setBottom( b );
+
+		drawSelect();
 	}
-
-	_selection.setRight( ev->x() );
-	_selection.setBottom( ev->y() );
-
-	
-	_selection.normalize();
-	
-	drawSelect();
 }
 
 void KVImageHolder::drawSelect()
 {
 	_painter->begin( this );
-	_painter->setPen( QPen( DashLine ) );
+	_painter->setRasterOp( XorROP );
+	_painter->setPen( *_pen );
 	_painter->drawRect( _selection );
 	_painter->end();
 }
 
 void KVImageHolder::eraseSelect()
 {
-	bitBlt( this, _selection.left(), _selection.top(),
-			pixmap(), _selection.left(), _selection.top(),
-			_selection.width(), _selection.height(),
-			CopyROP );
+	QRect r = _selection.normalize();
+
+	bitBlt( this, r.left(), r.top(), pixmap(), r.left(), r.top(),
+			r.width(), r.height(), CopyROP );
 }
+
+void KVImageHolder::paintEvent( QPaintEvent *ev )
+{
+	QLabel::paintEvent( ev );
+
+	if( _selected ) {
+		drawSelect();
+	}
+}
+
+QRect KVImageHolder::selected() const
+{
+	if( !_selected ) {
+		return QRect();
+	}
+
+	return _selection.normalize();
+}
+
+void KVImageHolder::setImagePix( const QPixmap& pix )
+{
+	clearSelection();
+	setPixmap( pix );
+	resize( pix.size() );
+}
+
+

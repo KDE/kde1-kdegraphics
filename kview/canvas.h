@@ -12,6 +12,8 @@
 
 class KVImageHolder;
 class QPainter;
+class QPaintDevice;
+class QPen;
 
 /**
 * @short KImageCanvas
@@ -60,15 +62,19 @@ public:
 	void clear();
 	
 	/**
-	*
+	* Transform the image by the matrix.
 	*/
 	void transformImage( const QWMatrix& mat );
+
+
+
 	/**
-	*
+	* Tile the image to the desktop
 	*/
 	void tileToDesktop() const;
+
 	/**
-	*
+	* 
 	*/
 	void maxToDesktop() const;
 	/**
@@ -76,13 +82,31 @@ public:
 	*/
 	void maxpectToDesktop() const;
 
+
+
+	/**
+	* Get the current image.
+	*/
 	QImage getImage() const;
 
+	/**
+	* Get the url for the current image.
+	*/
 	QString url() const;
+
+	void copyImage( QPaintDevice *dest ) const;
 
 public slots:
 	void setImage( const QImage& );
 
+	/**
+	* Crop image to the current selection, if any.
+	* If there is no selection, nothing happens.
+	*/
+	void cropImage();
+
+	void maxToWin();
+	void maxpectToWin();
 protected:
 	/**
 	*
@@ -125,6 +149,9 @@ inline QString KImageCanvas::url() const
 	return _file;
 }
 
+/**
+* Image widget, used as child in canvas.
+*/
 class KVImageHolder : public QLabel
 {
 private:
@@ -133,6 +160,7 @@ private:
 	bool _selected;
 
 	QPainter *_painter;
+	QPen *_pen;
 
 public:
 	KVImageHolder( QWidget *parent = 0 );
@@ -145,9 +173,15 @@ public:
 	*/
 	QRect selected() const;
 
+	void clearSelection() { _selected = false; }
+
+	void setImagePix( const QPixmap& image );
+
 protected:
 	void mousePressEvent( QMouseEvent * );
 	void mouseMoveEvent( QMouseEvent * );
+
+	void paintEvent( QPaintEvent * );
 
 private:
 	void drawSelect();
