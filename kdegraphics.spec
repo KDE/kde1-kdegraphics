@@ -1,15 +1,15 @@
-%define version Beta3
+%define version @VERSION@
 %define name kdegraphics
 Name: %{name}
 Summary: K Desktop Environment - Graphic Applications
 Version: %{version}
-Release: 1 
-Source: ftp.kde.org:/pub/kde/unstable/CVS/snapshots/current/kdegraphics-%{version}.tar.gz
+Release: 2
+Source: ftp.kde.org:/pub/kde/stable/Beta4/distribution/tgz/source/%{name}-%{version}-1.src.tar.gz
 Group: X11/KDE/Graphics
 BuildRoot: /tmp/realhot_%{name}
 Copyright: GPL
-Requires: qt >= 1.31
-Packager: Magnus Pfeffer <pfeffer@unix-ag.uni-kl.de>
+Requires: qt >= 1.33
+Packager: Preston Brown <pbrown@kde.org>
 Distribution: KDE
 Vendor: The KDE Team
 
