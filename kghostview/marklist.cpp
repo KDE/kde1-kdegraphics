@@ -33,12 +33,12 @@ MarkList::MarkList( QWidget * parent , const char * name )
    	setNumCols( 3 );
 //	setBackgroundColor( colorGroup().normal().light(120) );
 	pup = new QPopupMenu(0, "pup");
-	pup->insertItem( "Mark current page", this, SLOT(markSelected()) );
-	pup->insertItem( "Mark all pages", this, SLOT(markAll()) );
-	pup->insertItem( "Mark even pages", this, SLOT(markEven()) );
-	pup->insertItem( "Mark odd pages", this, SLOT(markOdd()) );
-	pup->insertItem( "Toggle page marks", this, SLOT(toggleMarks()) );
-	pup->insertItem( "Remove page marks", this, SLOT(removeMarks()) );
+	pup->insertItem( i18n("Mark current page"), this, SLOT(markSelected()) );
+	pup->insertItem( i18n("Mark all pages"), this, SLOT(markAll()) );
+	pup->insertItem( i18n("Mark even pages"), this, SLOT(markEven()) );
+	pup->insertItem( i18n("Mark odd pages"), this, SLOT(markOdd()) );
+	pup->insertItem( i18n("Toggle page marks"), this, SLOT(toggleMarks()) );
+	pup->insertItem( i18n("Remove page marks"), this, SLOT(removeMarks()) );
 //	items.setAutoDelete( TRUE );
 	selectColor = QColor( black );
 	selectTextColor = QColor( white );

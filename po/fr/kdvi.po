@@ -24,41 +24,38 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans la génération des polices"
-"ne sera valable qu'après avoir redémarré kdvi !"
-""
+"Le changement dans la génération des policesne sera valable qu'après avoir "
+"redémarré kdvi !"
 
 #: dviwin.cpp:233
 msgid ""
 "The change in font path will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement du chemin des polices ne sera valable"
-"qu'après avoir redémarré kdvi !"
+"Le changement du chemin des polices ne sera valablequ'après avoir redémarré "
+"kdvi !"
 
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans le mode Metafont ne"
-"sera valable qu'après avoir redémarré kdvi !"
+"Le changement dans le mode Metafont nesera valable qu'après avoir redémarré "
+"kdvi !"
 
 #: dviwin.cpp:284
 msgid ""
 "The change in resolution will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement de résolution ne sera valable"
-"qu'après avoir redémarré kdvi !"
+"Le changement de résolution ne sera valablequ'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:301
 msgid ""
 "The change in gamma will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans les gamma ne sera valable"
-"qu'après avoir redémarré kdvi !"
+"Le changement dans les gamma ne sera valablequ'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
@@ -697,4 +694,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Méthode d'impression"
-

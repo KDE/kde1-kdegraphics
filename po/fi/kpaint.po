@@ -283,7 +283,9 @@ msgstr "KPaint: En löytä KFM:ää"
 
 #: kpaint.cpp:469 kpaint.cpp:581
 msgid "Error: KPaint could not find a running KFM or start one itself."
-msgstr "Virhe: KPaint ei löytänyt käynnissä olevaa KFM:ää eikä saanut käynnistettyä edes sitä."
+msgstr ""
+"Virhe: KPaint ei löytänyt käynnissä olevaa KFM:ää eikä saanut käynnistettyä "
+"edes sitä."
 
 #: kpaint.cpp:521
 msgid "KPaint: Network Load Failed"

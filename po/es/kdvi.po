@@ -27,7 +27,6 @@ msgstr ""
 "¡El cambio en la generación de las fuentes, será\n"
 "efectivo después de rearrancar otra vez el kdvi!"
 
-
 #: dviwin.cpp:233
 msgid ""
 "The change in font path will be effective\n"
@@ -36,7 +35,6 @@ msgstr ""
 "¡El cambio en la camino (path) de las fuentes será\n"
 "efectivo después de rearrancar otra vez el kdvi!"
 
-
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
@@ -44,7 +42,6 @@ msgid ""
 msgstr ""
 "¡El cambio en el el modo Metafont será efctivo\n"
 "después de rearrancar otra vez el kdvi!"
-
 
 #: dviwin.cpp:284
 msgid ""
@@ -372,7 +369,8 @@ msgstr "Las PK-fuentes no encontradas se van a generar"
 
 #: kdvi.cpp:715
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
-msgstr "Las PK-fuentes no encontradas se registrarar en el fichero 'missfont.log'"
+msgstr ""
+"Las PK-fuentes no encontradas se registrarar en el fichero 'missfont.log'"
 
 #: kdvi.cpp:731
 msgid "Postcsript specials are rendered"
@@ -443,7 +441,6 @@ msgstr ""
 "\n"
 "\n"
 "Markku Hihnala <mah@ee.oulu.fi>"
-
 
 #: kdvi.cpp:874
 msgid "Page: "
