@@ -1,10 +1,2 @@
-So much I don't even know where to start ...
-
-o Support for different printer page sizes. 
-  Currently the default is US letter, but faxes should print fine
-  on DIN-A4 printers too.
 o Page Marking 
 o Printing of only the Marked pages and printing of page ranges
-
-
-

@@ -3,11 +3,10 @@
 prefix  = @prefix@
 BINDIR  = $(prefix)/bin
 LIBDIR  = $(prefix)/lib
-PIXDIR  = $(prefix)/lib/pics/toolbar
-DOCSDIR = $(prefix)/doc/HTML/kfax
-APPSDIR = $(prefix)/apps/Graphics
-HELPF = $(prefix)/doc/HTML/kfax/kfax.tif
-HELP = -DHELPFILE=\"$(HELPF)\"
+TOOLDIR  = $(prefix)/share/toolbar
+DOCSDIR = $(prefix)/share/doc/default/HTML/kfax
+APPSDIR = $(prefix)/applnk/Graphics
+PICSDIR = $(prefix)/share/apps/kfax/pics/
 install = @INSTALL@
 INSTALL = $(install) -m 0755
 INSTALL_DATA = $(install) -m 0644
@@ -18,7 +17,7 @@ INSTALL_DIR = $(install) -d -m 0755
 CXXFLAGS=	@CXXFLAGS@  -DHAVE_CONFIG_H -I..
 CFLAGS=		@CFLAGS@  -DHAVE_CONFIG_H -I..
 
-LDFLAGS	=	@LDFLAGS@ @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lm -lXext -lX11 ./libtiffax/libtiffax.a
+LDFLAGS	=	@LDFLAGS@ @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lm -lXext -lX11 ./libtiffax/libtif.a
 INCDIR	=	@all_includes@ -I./libtiffax
 CXX	=	@CXX@
 CC      =	@CC@
@@ -26,16 +25,18 @@ MOC	=	@MOC@
 
 
 ####### Files
-HEADER = 	kfax.h faxexpand.h 
+HEADER = 	kfax.h faxexpand.h print.h options.h about.h
 
 
-SOURCES	=	kfax.cpp viewfax.cpp faxexpand.cpp faxinit.cpp faxinput.cpp fax2tiff.c fax2ps.c print.cpp options.cpp
+SOURCES	=	kfax.cpp viewfax.cpp faxexpand.cpp faxinit.cpp faxinput.cpp\
+		 fax2tiff.c fax2ps.c print.cpp options.cpp about.cpp
 
 
-OBJECTS	=	kfax.o viewfax.o faxexpand.o faxinit.o faxinput.o fax2tiff.o fax2ps.o print.o options.o
+OBJECTS	=	kfax.o viewfax.o faxexpand.o faxinit.o faxinput.o fax2tiff.o\
+		 fax2ps.o print.o options.o about.o
 
 
-SRCMETA	=	kfax.moc print.moc options.moc
+SRCMETA	=	kfax.moc print.moc options.moc about.moc
 
 
 TARGET	=	kfax
@@ -65,7 +66,6 @@ libtiff:
 depend:
 	@makedepend -I$(INCDIR) $(SOURCES) 2> /dev/null
 clean:
-	(cd libtiffax && $(MAKE) clean)
 	-rm -f *.o *.bak *~ *% #*
 	-rm -f $(SRCMETA) $(TARGET)
 
@@ -76,9 +76,12 @@ install: all
 	$(INSTALL_DIR) $(BINDIR)
 	$(INSTALL) $(TARGET) $(BINDIR)
 	(cd docs && $(MAKE) install)
-	$(INSTALL_DIR) $(PIXDIR)
-	$(INSTALL_DATA) zoomin.xpm $(PIXDIR)
-	$(INSTALL_DATA) zoomout.xpm $(PIXDIR)
+	$(INSTALL_DIR) $(TOOLDIR)
+	$(INSTALL_DATA) zoomin.xpm $(TOOLDIR)
+	$(INSTALL_DIR) $(PICSDIR)
+	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
+	$(INSTALL_DATA)  kfaxlogo.xpm $(PICSDIR)
+	$(INSTALL_DATA) zoomout.xpm $(TOOLDIR)
 	$(INSTALL_DIR) $(APPSDIR)
 	$(INSTALL_DATA) KFax.kdelnk $(APPSDIR)/KFax.kdelnk
 
@@ -86,8 +89,6 @@ uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	(cd docs && $(MAKE) uninstall)
 	rm -f $(APPSDIR)/KFax.kdelnk
-	rm -f $(PIXDIR)/zoomin.xpm
-	rm -f $(PIXDIR)/zoomout.xpm
 
 ####### Explicit dependencies
 
@@ -96,6 +97,9 @@ uninstall:
 
 kfax.moc: kfax.h
 	$(MOC) kfax.h -o kfax.moc
+
+about.moc: about.h
+	$(MOC) about.h -o about.moc
 
 print.moc: print.h
 	$(MOC) print.h -o print.moc

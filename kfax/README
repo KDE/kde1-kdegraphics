@@ -1,3 +1,11 @@
+KFax 0.3
+
+Added printing for g32 and g4, so that kfax can now print all fax formats.
+Added support for all pages sizes.
+
+Bernd
+wuebben@kde.org
+
 
 I am please to release KFax 0.2, the first public release of 
 KFax - a fax file viewer for the KDE project.

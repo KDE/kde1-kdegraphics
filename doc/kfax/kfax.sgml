@@ -10,8 +10,8 @@
 
 <title>The KFax Handbook
 <author>Bernd Johannes Wuebben, <tt/wuebben@kde.org/
-<date>Version 0.2, 14 June 1997
-<abstract>This Handbook describes KFax Version 0.2
+<date>Version 0.3, 5 Oct 1997
+<abstract>This Handbook describes KFax Version 0.3
 
 <!-- Table of contents -->
 <toc>
@@ -116,24 +116,15 @@ You can open and save files transparently on the internet.
 
 <sect1> Printing
 <p>
-KFax supports PostScript printing natively. Currently only US Letter format is 
-supported. However I expect printing to work reasonably well  on DIN-A4 printers as well.
-Elaborate support for other pages sizes, such as DIN-A4 and Legal etc will
-be available soon.
+KFax supports PostScript printing natively. 
+supported. 
 <p>
 
 
 Make sure your system is set up for printing PostScript documents. If you
 don't have a native PostScript printer get yourself
-ghostscript/ghostview version 4.03 or higher  from
-<url url="http://www.cs.wisc.edu/%7Eghost/">. Note, that there are now
-commercial grade ps fonts available which come with the current ghostview/ghostscript
-package. These fonts are a must for any quality printing of Postscript documents
-on a non-postscript printer. If you were disappointed by the results you got
-from ghostscript on your printer so far - get the new fonts, this
-will give you the best possible results. ( The above mentioned font problems
-will not affect KFax or its output, since fax data are raster-image data and do
-not contain font information.) 
+ghostscript/ghostview version 5 or newer  from
+<url url="http://www.cs.wisc.edu/%7Eghost/">.
 
 <p>
 <sect1> Fax Options

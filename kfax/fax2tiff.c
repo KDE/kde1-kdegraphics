@@ -1,6 +1,13 @@
-/* $Header$ */
-
 /*
+
+  $Id$
+
+  Copyright (C) 1997 Bernd Johannes Wuebben   
+                     wuebben@math.cornell.edu
+
+  This file adapted for kfax from tifflib:
+  
+  
  * Copyright (c) 1990-1995 Sam Leffler
  * Copyright (c) 1991-1995 Silicon Graphics, Inc.
  *
@@ -24,9 +31,7 @@
  * OF THIS SOFTWARE.
  */
 
-/* 
- * Convert a CCITT Group 3 FAX file to TIFF Group 3 format.
- */
+
 #include <stdio.h>
 #include <stdlib.h>		/* should have atof & getopt */
 #include <tiffiop.h>
@@ -70,7 +75,7 @@ DummyWriteProc(thandle_t fd, tdata_t buf, tsize_t size)
 }
 
 int
-fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit)
+fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit, int faxtype)
 {
   FILE *in;
   TIFF *out = NULL;
@@ -112,8 +117,9 @@ fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit)
   faxTIFF->tif_scanlinesize = TIFFScanlineSize(faxTIFF);
 	
   /* input is 2d-encoded */
-  /*	TIFFSetField(faxTIFF,
-	TIFFTAG_GROUP3OPTIONS, GROUP3OPT_2DENCODING);*/
+  /*  if(faxtype == 32)
+    TIFFSetField(faxTIFF,TIFFTAG_GROUP3OPTIONS, GROUP3OPT_2DENCODING);	
+    */
   /* input has 0 mean black */
   /*		TIFFSetField(faxTIFF,
 		TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_MINISBLACK);*/
@@ -184,8 +190,15 @@ fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit)
 
   /* NB: this must be done after directory info is setup */
   
-  TIFFSetField(faxTIFF, TIFFTAG_COMPRESSION, COMPRESSION_CCITTFAX3);
   
+  if(faxtype == 4)
+    TIFFSetField(faxTIFF, TIFFTAG_COMPRESSION, COMPRESSION_CCITTFAX4);
+  else /* faxtype == 32 or 31 */
+    TIFFSetField(faxTIFF, TIFFTAG_COMPRESSION, COMPRESSION_CCITTFAX3);
+  
+  if (faxtype == 32)
+    TIFFSetField(faxTIFF, TIFFTAG_GROUP3OPTIONS, GROUP3OPT_2DENCODING);  
+
   in = fopen(inputfile, "r" BINMODE);
   if (in == NULL) {
     fprintf(stderr,

@@ -176,7 +176,6 @@ private:
     int hide_toolbar;
     int hide_statusbar;
     int toolbar1;
-    
 
     KConfig *config;
     QString current_directory;
@@ -184,18 +183,19 @@ private:
 
     QScrollBar *	hsb;
     QScrollBar *	vsb;
-
+    QFrame* 	mainpane;
     KFM * kfm;
     QString tmpFile;
     QString netFile;
     action kfmAction;
     
     PrintDialog * printdialog;
+    struct printinfo pi;
 
 public slots:
 
     void set_colors();
-
+    void pageActivated(const char*);
     void saving_slot();
     void loading_slot();
     void setGeneralStatusField(QString string);

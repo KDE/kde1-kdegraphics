@@ -1,7 +1,7 @@
 [KDE Desktop Entry]
-Exec=kfax
+Exec=kfax %u
 Icon=edit.xpm
 DocPath=kfax/kfax.html
-Info=A Fax Viewer
+Comment=A Fax Viewer
 Terminal=0
 Type=Application

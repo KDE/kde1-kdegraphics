@@ -288,7 +288,7 @@ extern	double atof();
 static	void usage(int code);
 
 int
-fax2psmain(char* faxtiff_file,  FILE* psoutput)
+fax2psmain(char* faxtiff_file,  FILE* psoutput,float width, float height, int scale)
 {
 
     int c, pageNumber;
@@ -298,6 +298,11 @@ fax2psmain(char* faxtiff_file,  FILE* psoutput)
     TIFF* tif;
 
     mypsoutputfile = psoutput;
+    pageHeight = height;
+    pageWidth = width;
+    scaleToPage = scale;
+
+/*printf("Width %f Height %f\n",width,height);*/
 
     /*	    pageHeight = atof(optarg);*/
     /*	    scaleToPage = 1;*/

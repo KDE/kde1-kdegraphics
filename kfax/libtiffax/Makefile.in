@@ -79,14 +79,14 @@ OBJS	= \
 	tif_write.o \
 	tif_zip.o \
 	${NULL}
-TARGETS	= libtiffax.a
+TARGETS	= libtif.a
 
 all:	${TARGETS}
 
 
-libtiffax.a: ${OBJS}
-	${AR} ${AROPTS} libtiffax.a $?
-	${RANLIB} libtiffax.a
+libtif.a: ${OBJS}
+	${AR} ${AROPTS} libtif.a $?
+	${RANLIB} libtif.a
 
 ${OBJS}: tiffio.h tiff.h tif_dir.h
 ${OBJS}: tiffcomp.h tiffiop.h tiffconf.h

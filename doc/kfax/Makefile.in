@@ -1,6 +1,6 @@
 FILES = kfax-1.html kfax-2.html kfax-3.html kfax-4.html kfax-5.html kfax-6.html kfax.html 
 
-DOCDIR = @prefix@/doc/HTML/kfax
+DOCDIR = @prefix@/share/doc/HTML/kfax
 INSTALL_DIR = @INSTALL@ -d -m 0755
 INSTALL_DATA = @INSTALL@ -m 644
 

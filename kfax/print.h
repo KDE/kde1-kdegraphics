@@ -21,22 +21,6 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
   
-    $Log$
-    Revision 1.4  1997/06/14 06:03:00  wuebben
-    *** empty log message ***
-
-    Revision 1.3  1997/06/13 05:46:55  wuebben
-    *** empty log message ***
-
-    Revision 1.2  1997/06/12 22:11:17  wuebben
-    *** empty log message ***
-
-    Revision 1.1  1997/06/12 16:29:19  wuebben
-    Initial revision
-
-
-
-
 */
 
 
@@ -44,31 +28,46 @@
 #define _PRINT_DIALOG_H_
 
 #include <qmsgbox.h>
-#include <qpixmap.h>
 #include <qapp.h>
 #include <qfiledlg.h>
 #include <qframe.h> 
 #include <qbttngrp.h>
 #include <qchkbox.h>
 #include <qcombo.h>
-#include <qframe.h>
 #include <qgrpbox.h>
 #include <qlabel.h>
 #include <qlined.h>
 #include <qlistbox.h>
 #include <qpushbt.h>
 #include <qradiobt.h>
-#include <qscrbar.h>
 #include <qtooltip.h>
 
 #include <qstring.h>
 #include <qfont.h>
+#include <kapp.h>
+
+#define US_LETTER "US Letter 8.5x11 in"
+#define US_LEGAL "US Legal 8.5x14 in"
+#define US_LEDGER "US Ledger 11x17 in"
+#define US_EXECUTIVE "US Executive 7.25x10.5 in"
+#define JAP_LETTER "Japanese Letter 18.2x25.7 cm"
+#define JAP_LEGAL "Japanese Legal 25.7x36.4 cm"
+#define DIN_A3 "DIN A3 20.7x42 cm"
+#define DIN_A4 "DIN A4 21x29.7 cm"
+#define DIN_A5 "DIN A5 15.1x21 cm"
+#define DIN_A6 "DIN A6 10.7x14.8 cm"
+#define DIN_B4 "DIN B4 25.5x36.4 cm"
 
 
 struct printinfo {
   QString file;
   QString cmd;
   int lpr;
+  int scale;
+  int margins;
+  double xmargin;
+  double ymargin;
+  QString pagesize;
 };
 
 class PrintDialog : public QDialog {
@@ -92,6 +91,8 @@ public slots:
     void ready();
     void cancel();
     void filebuttontoggled();
+    void help();
+    void margins_toggled(bool);
 
 private:
 
@@ -99,9 +100,19 @@ private:
     QLineEdit *filename;
     QLineEdit *cmdedit;
     QLabel *cmdlabel;
+    QLabel *pagesizelabel;
+    QLabel *xmarginlabel;    
+    QLabel *ymarginlabel;
+
+    QLineEdit *xmarginedit;    
+    QLineEdit *ymarginedit;
+
     QRadioButton *filebutton;
     QRadioButton *lprbutton;
-   
+    QCheckBox *scalebutton;
+    QCheckBox *marginbutton;
+    QComboBox *papercombo;
+
     QButtonGroup *bg;
 
     QGroupBox	 *box1;
@@ -109,6 +120,7 @@ private:
     
     QPushButton	 *ok_button;
     QPushButton	 *cancel_button;
+    QPushButton	 *help_button;
     QPushButton	 *selectfile;
     
   struct printinfo pi;

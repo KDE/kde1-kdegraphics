@@ -1,4 +1,4 @@
-    /*
+   /*
 
     $Id$
 
@@ -30,7 +30,8 @@
 
 #include "kfax.h"
 #include "kfax.moc"
-
+#include "version.h"
+#include "about.h"
 
 TopLevel *toplevel;
 QFrame *faxqtwin;
@@ -53,8 +54,8 @@ void 	setfaxtitle(char* name);
 int     copyfile(char* to,char* from);
 
 extern  "C"{
-int     fax2psmain(char* faxtiff_file,  FILE* psoutput);
-int 	fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit);
+int    fax2psmain(char* faxtiff_file,FILE* psoutput, float width,float height,int scale);
+int    fax2tiffmain(char* inputfile, char* outputfile,int bitorder,int stretchit,int type);
 }
 
 extern void g31expand(struct pagenode *pn, drawfunc df);
@@ -130,7 +131,7 @@ extern  size_t Memused;
 
 extern int zfactor;
 int faxpagecounter = 0;
-
+bool buttondown;
 
 
 MyApp::MyApp(int &argc, char **argv , const QString& rAppName):
@@ -146,7 +147,17 @@ bool MyApp::x11EventFilter( XEvent * ev){
 
   if (KApplication::x11EventFilter(ev))
     return TRUE;
- 
+
+  if (ev->type  ==  ButtonRelease){
+    /* this is so that the cursor goes back to normal on leaving the fax window
+       and that the fax won't be moved when I reenter after I release the mouse*/
+
+    if (buttondown == true){
+      buttondown = false;
+      XDefineCursor(qtdisplay, Win, ReadyCursor);
+      XFlush(qtdisplay);
+    }
+  }
   if ( ev->xany.window == qtwin ||
        ev->xany.window == Win){
 
@@ -172,6 +183,7 @@ TopLevel::TopLevel (QWidget *, const char *name)
   kfm = 0L;
   file_dialog = NULL;
   printdialog = NULL;
+  buttondown = false;
   statusbar_timer = new QTimer(this);
   connect(statusbar_timer, SIGNAL(timeout()),this,SLOT(timer_slot()));
 
@@ -185,7 +197,9 @@ TopLevel::TopLevel (QWidget *, const char *name)
   readSettings();
 
   faxqtwin = new QFrame(this);
+
   qtwin = faxqtwin->winId();
+  faxqtwin->setFrameStyle(QFrame::Panel | QFrame::Sunken);
 
   // Create a Vertical scroll bar
 
@@ -200,7 +214,7 @@ TopLevel::TopLevel (QWidget *, const char *name)
   hsb->hide();
 
 
-  setView(faxqtwin);
+  setView(faxqtwin,TRUE);
   set_colors();
 
   if ( hide_toolbar )	
@@ -213,7 +227,7 @@ TopLevel::TopLevel (QWidget *, const char *name)
   else
     options->changeItem( "Hide &Status Bar", statusID );
 
-  setCaption("KFax 0.2");
+  setCaption("KFax "KFAXVERSION);
 
   KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
   connect( dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
@@ -239,6 +253,10 @@ TopLevel::~TopLevel (){
   delete options;
 }
 
+void TopLevel::pageActivated(const char*){
+
+
+}
 
 void TopLevel::setFaxTitle(char* name){
 
@@ -284,7 +302,7 @@ void TopLevel::resizeView(){
     PaneWidth = Image->width;
     PaneHeight = Image->height;
   }
-  
+
   //  printf("faxw %d qtw %d\n", PaneWidth , faxqtwin->width());
 
   if( (PaneHeight  > qwindow_height ) &&
@@ -413,12 +431,16 @@ void TopLevel::setupToolBar(){
 
 
   QString PIXDIR = "";
+  PIXDIR = mykapp->kdedir();
+  /*
   char *kdedir = getenv("KDEDIR");
   if(kdedir)
     PIXDIR.append(kdedir);
   else
     PIXDIR.append("/usr/local/kde");
-  PIXDIR.append("/lib/pics/toolbar/");
+    */
+
+  PIXDIR.append("/share/toolbar/");
 
   QPixmap pixmap;
   toolbar = new KToolBar( this );
@@ -560,7 +582,7 @@ void TopLevel::file_open_url(){
 void TopLevel::file_save_url(){
 
   if(!thispage || !thispage->pathname){
-    QMessageBox::message("Sorry","You need to open a Fax first","OK");
+    QMessageBox::information(this,"Sorry","You need to open a Fax first");
     return;
   }
 
@@ -728,11 +750,24 @@ void TopLevel::file_save_as(){
 
 void TopLevel::about(){
 
-  QMessageBox::message ("About KFax", "KFax Version 0.2.2\n"\
+  QDialog *dlg = new About(0);
+
+  QPoint point = this->mapToGlobal (QPoint (0,0));
+
+  QRect pos = this->geometry();
+  dlg->setGeometry(point.x() + pos.width()/2  - dlg->width()/2,
+		   point.y() + pos.height()/2 - dlg->height()/2, 
+		   dlg->width(),dlg->height());
+
+  dlg->exec();
+  delete dlg;
+
+  /*
+  QMessageBox::about(this,"About KFax", "KFax Version "KFAXVERSION"\n"\
 			"Copyright 1997\nBernd Johannes Wuebben\n"\
 			"wuebben@math.cornell.edu\n"\
-			"wuebben@kde.org\n","Ok");
-
+			"wuebben@kde.org\n");*/
+		      
 }
 
 void TopLevel::helpselected(){
@@ -773,7 +808,7 @@ void TopLevel::toggleStatusBar(){
 void TopLevel::dummy(){
 
 
-  QMessageBox::message("Sorry","Not yet implemented","OK");
+  QMessageBox::information(this,"Sorry","Not yet implemented");
 }
 
 void TopLevel::toggleToolBar(){
@@ -823,7 +858,7 @@ void TopLevel::print(){
 
 
   if(!thispage){
-    QMessageBox::message("Sorry","     There is no document active      ","OK");
+    QMessageBox::information(this,"Sorry","     There is no document active      ");
     return;
   }
 
@@ -832,6 +867,22 @@ void TopLevel::print(){
     connect(printdialog,SIGNAL(print()),this,SLOT(printIt()));
 
   }
+
+  struct printinfo newpi;
+
+  newpi.file = pi.file;
+  newpi.file.detach();
+  newpi.cmd = pi.cmd;
+  newpi.cmd.detach();
+  newpi.lpr = pi.lpr;
+  newpi.scale = pi.scale;
+  newpi.pagesize = pi.pagesize;
+  newpi.pagesize.detach();
+  newpi.margins = pi.margins;
+  newpi.xmargin = pi.xmargin;
+  newpi.ymargin = pi.ymargin;
+  
+  printdialog->setWidgets(&newpi);
 
   QPoint point = this->mapToGlobal (QPoint (0,0));
 
@@ -856,33 +907,119 @@ void TopLevel::printIt(){
 
   mykapp->processEvents();
 
-  struct printinfo *pi;
+  struct printinfo *newpi;
 
-  pi = printdialog->getInfo();
+  newpi = printdialog->getInfo();
 
+  pi.file = newpi->file;
+  pi.file.detach();
+  pi.cmd = newpi->cmd;
+  pi.cmd.detach();
+  pi.lpr = newpi->lpr;
+  pi.scale = newpi->scale;
+  pi.pagesize = newpi->pagesize;
+  pi.pagesize.detach();
+  pi.margins = newpi->margins;
+  pi.xmargin = newpi->xmargin;
+  pi.ymargin = newpi->ymargin;
+
+
+  float width = 8.5;
+  float height = 11;
+
+  if(strcmp(pi.pagesize.data(), US_LETTER) == 0){
+    width = 8.5;
+    height = 11;
+  }
+
+  if(strcmp(pi.pagesize.data(), US_LEGAL) == 0){
+    width = 8.5;
+    height = 14;
+  }
+
+  if(strcmp(pi.pagesize.data(), US_LEDGER) == 0){
+    width = 11;
+    height = 17;
+  }
+
+  if(strcmp(pi.pagesize.data(), US_EXECUTIVE) == 0){
+    width = 7.25;
+    height = 10.5;
+  }
+
+  if(strcmp(pi.pagesize.data(), DIN_A3) == 0){
+    width = 12.69;
+    height = 16.53;
+  }
+
+  if(strcmp(pi.pagesize.data(), DIN_A4) == 0){
+    width = 8.267;
+    height = 11.692;
+  }
+
+  if(strcmp(pi.pagesize.data(), DIN_A5) == 0){
+    width = 5.944;
+    height = 8.2675;
+  }
+
+  if(strcmp(pi.pagesize.data(), DIN_A6) == 0){
+    width = 4.2125;
+    height = 5.8258;
+  }
+
+  if(strcmp(pi.pagesize.data(), DIN_B4) == 0){
+    width = 10.04;
+    height = 14.33;
+  }
+
+  if(strcmp(pi.pagesize.data(), JAP_LETTER) == 0){
+    width = 7.165;
+    height = 10.1175;
+  }
+
+  if(strcmp(pi.pagesize.data(), JAP_LEGAL) == 0){
+    width = 10.1175;
+    height = 14.33;
+  }
+
+
+  if(pi.margins == 1){
+    width  = width - pi.xmargin/2.54*2.0; /* 2.0 since we want this margin both at the
+					     top as well as on the bottom */
+    height = height - pi.ymargin/2.54*2.0;
+  }
+
+  if(width <= 0.0 || height <=0.0 ){
+
+    QString str;
+    str.sprintf("Invalid page dimensions:\nWidth %.2f Height %.2f\n",width,height);
+    QMessageBox::warning(this, "Sorry",str.data(), "OK",0);
+
+    return;
+  }
 
   FILE* psfile;
 
-  if(pi->lpr){
+  if(pi.lpr){
 
     psfile = NULL;
-    psfile = popen(pi->cmd.data(),"w");
+    psfile = popen(pi.cmd.data(),"w");
 
     if(psfile == NULL){
       QString str;
-      str.sprintf("Can't print to \"%s\"\n",pi->cmd.data());
-      QMessageBox::message("Sorry",str.data(), "OK");
+      str.sprintf("Can't print to \"%s\"\n",pi.cmd.data());
+      QMessageBox::warning(this, "Sorry",str.data(), "OK",0);
       return;
     }
 
   }
   else{
 
-    psfile = fopen(pi->file.data(),"w");
+    psfile = fopen(pi.file.data(),"w");
     if(psfile == NULL){
       QString str;
-      str.sprintf("Couldn't create %s\n",pi->file.data());
-      QMessageBox::message("Sorry",str.data(), "OK");
+      str.sprintf("Couldn't create %s\n",pi.file.data());
+      QMessageBox::warning(this,"Sorry",str.data(), "OK",0);
       return;
     }
   }
@@ -890,8 +1027,6 @@ void TopLevel::printIt(){
   QApplication::setOverrideCursor( waitCursor );
   XDefineCursor(qtdisplay, Win, WorkCursor);
   mykapp->processEvents();
-
-
 
   struct pagenode *pn;
   QStrList filelist;
@@ -902,21 +1037,32 @@ void TopLevel::printIt(){
       continue; 
 
     filelist.append(pn->pathname);
-    //    printf("printing %s\n",pn->pathname);
 
     if(pn->type == FAX_TIFF){
 
-      fax2psmain(pn->pathname,psfile);
+      fax2psmain(pn->pathname,psfile,width,height,pi.scale);
+
     }
 
     if(pn->type == FAX_RAW){
 
+      int faxtype = 31;
+
+      if(defaultpage.expander ==  g32expand)
+	faxtype = 32;
+
+      if(defaultpage.expander ==  g4expand)
+	faxtype = 4;
+
+      if(defaultpage.expander ==  g31expand)
+	faxtype = 31;
+
+
       QString tempfile;
       tempfile = tmpnam(NULL);
-      //    printf("Tempfile %s\n",tempfile.data());
 
-      fax2tiffmain(pn->pathname,tempfile.data(),pn->lsbfirst,pn->vres?0:1);
-      fax2psmain(tempfile.data(),psfile);
+      fax2tiffmain(pn->pathname,tempfile.data(),pn->lsbfirst,pn->vres?0:1,faxtype);
+      fax2psmain(tempfile.data(),psfile,width,height,pi.scale);
       
       remove(tempfile.data());
 
@@ -924,7 +1070,7 @@ void TopLevel::printIt(){
 
   }
 
-  if(pi->lpr)
+  if(pi.lpr)
     pclose(psfile);
   else
     fclose(psfile);
@@ -957,44 +1103,49 @@ void TopLevel::loading_slot(){
 void TopLevel::saveNetFile( const char * _url)
 {
     
-
+    int res;
     netFile = _url;
     netFile.detach();
     KURL u( netFile.data() );
     if ( u.isMalformed() )
     {
-	QMessageBox::message ("Sorry", "Malformed URL", "Ok");
+	QMessageBox::warning(this,"Sorry", "Malformed URL", "Ok",0);
 	return;
     }
     
     // Just a usual file ?
     if ( strcmp( u.protocol(), "file" ) == 0 )
-   {
-     //     printf("usual file:%s\n",u.path());
-      QString string;
+      {
 
-      setGeneralStatusField(string);
-      copyfile(u.path(),thispage->pathname);
+	QString string;
+
+	setGeneralStatusField(string);
+	res = copyfile(u.path(),thispage->pathname);
+	if (res==0) {
+	  QMessageBox::warning(this, "Sorry", "Failure in 'copy file()'\n"\
+				"Couldn't save file!", "Ok",0);
+	  return;
+	} 
 
 
-      setGeneralStatusField("Saved");
-      return;
-    }
+	setGeneralStatusField("Saved");
+	return;
+      }
     
     if ( kfm != 0L )
-    {
-	QMessageBox::message ("Sorry", 
+      {
+	QMessageBox::warning(this,"Sorry", 
 			      "KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
 			      "Please wait until has finished\n", 
-			      "Ok");
+			      "Ok",0);
 	return;
     }
 
     kfm = new KFM;
     if ( !kfm->isOK() )
     {
-	QMessageBox::message ("Sorry", "Could not communicate with KFM", "Ok");
+	QMessageBox::warning(this,"Sorry", "Could not communicate with KFM", "Ok",0);
 	delete kfm;
 	kfm = 0L;
 	return;
@@ -1002,7 +1153,12 @@ void TopLevel::saveNetFile( const char * _url)
     
     tmpFile.sprintf( "/tmp/kfax%i", time( 0L ) );
 
-    copyfile(tmpFile.data(),thispage->pathname );
+    res = copyfile(tmpFile.data(),thispage->pathname );
+    if (res==0) {
+      QMessageBox::warning(this,"Sorry", "Failure in 'copy file()'\n"\
+			    "Couldn't save file!", "Ok",0);
+      return;
+    } 
 
     connect( kfm, SIGNAL( finished() ), this, SLOT( slotKFMFinished() ) );
     kfm->copy( tmpFile.data(), netFile.data() );
@@ -1019,7 +1175,7 @@ void TopLevel::openNetFile( const char * _url)
   KURL u( netFile.data() );
   if ( u.isMalformed() )
     {
-	QMessageBox::message ("Sorry", "Malformed URL", "Ok");
+	QMessageBox::warning(this, "Sorry", "Malformed URL", "Ok",0);
 	return;
     }
 
@@ -1036,11 +1192,11 @@ void TopLevel::openNetFile( const char * _url)
     
     if ( kfm != 0L )
     {
-	QMessageBox::message ("Sorry", 
+	QMessageBox::warning(this, "Sorry", 
 			      "KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
 			      "Please wait until has finished\n", 
-			      "Ok");
+			      "Ok",0);
 	return;
     }
 
@@ -1049,7 +1205,7 @@ void TopLevel::openNetFile( const char * _url)
     kfm = new KFM;
     if ( !kfm->isOK() )
     {
-	QMessageBox::message ("Sorry", "Could not communicate with KFM", "Ok");
+	QMessageBox::warning(this, "Sorry", "Could not communicate with KFM", "Ok",0);
 	delete kfm;
 	kfm = 0L;
 	return;
@@ -1271,24 +1427,19 @@ void TopLevel::readSettings(){
 		
 	 setFaxDefaults();
 	///////////////////////////////////////////////////
-	/*
+
 	config->setGroup("Printing");
 
-	str = config->readEntry("PrntCmd1");
-		if ( !str.isNull() )
-		  pi.command = str;
-
-	str = config->readEntry("PrintSelection");
-		if ( !str.isNull() )
-		  pi.selection = atoi(str.data());
-
-	str = config->readEntry("PrintRaw");
-		if ( !str.isNull() )
-		  pi.raw = atoi(str.data());
-
-
-		  */
-
+	pi.cmd = config->readEntry("PrintCommand","lpr");
+	pi.file = config->readEntry("PrintFile","");
+	pi.lpr = config->readNumEntry("print",1);
+	pi.scale = config->readNumEntry("scale",0);
+	pi.margins = config->readNumEntry("margins",0);
+	str = config->readEntry("xmargin","0.0");
+	pi.xmargin = atof(str.data());
+	str = config->readEntry("ymargin","0.0");
+	pi.ymargin = atof(str.data());
+	pi.pagesize = config->readEntry("PageSize",US_LETTER);
 }
 
 void TopLevel::writeSettings(){
@@ -1343,22 +1494,19 @@ void TopLevel::writeSettings(){
 	config->writeEntry("raw",fop.raw);
 
        ////////////////////////////////////////////
-	/*
+
 	config->setGroup("Printing");
 
-	config->writeEntry("PrntCmd1", pi.command);
-
-        string="";
-	string.sprintf("%d", pi.selection );
-	config->writeEntry("PrintSelection", string);
-
-	string="";
-	string.sprintf("%d", pi.raw );
-	config->writeEntry("PrintRaw", string);
-
-
-
-	*/
+	config->writeEntry("PrintCommand",pi.cmd);
+	config->writeEntry("PrintFile",pi.file);
+	config->writeEntry("print",pi.lpr);
+	config->writeEntry("scale",pi.scale);
+	config->writeEntry("PageSize",pi.pagesize);
+	config->writeEntry("margins",pi.margins);
+	string.sprintf("%.2f",pi.xmargin);
+	config->writeEntry("xmargin",string);
+	string.sprintf("%.2f",pi.ymargin);
+	config->writeEntry("ymargin",string);
 	config->sync();	
 }
 
@@ -1402,7 +1550,7 @@ void SetupDisplay(){
 
 			    */
 
-  Win = XCreateSimpleWindow(qtdisplay,qtwin,0,0,
+  Win = XCreateSimpleWindow(qtdisplay,qtwin,1,1,
 			    1,1,
 			    0,
 			    BlackPixel(qtdisplay,XDefaultScreen(qtdisplay)),
@@ -1421,7 +1569,7 @@ void SetupDisplay(){
 
   XSelectInput(qtdisplay, Win, Button2MotionMask | ButtonPressMask |
 	       ButtonReleaseMask | ExposureMask | KeyPressMask |
-	       SubstructureNotifyMask | OwnerGrabButtonMask |
+	       SubstructureNotifyMask | LeaveWindowMask | OwnerGrabButtonMask |
 	       StructureNotifyMask);
 
   XMapRaised(qtdisplay, Win);
@@ -1547,6 +1695,11 @@ void TopLevel::handle_X_event(XEvent Event){
       XRefreshKeyboardMapping((XMappingEvent *)(&Event));
 		break;
 
+    case LeaveNotify:
+      /*      buttondown = false;
+	XDefineCursor(qtdisplay, Win, ReadyCursor);
+	XFlush(qtdisplay);*/
+      break;
     case Expose:
       {
 
@@ -1556,11 +1709,6 @@ void TopLevel::handle_X_event(XEvent Event){
 	if(!Image)
 	  break;
 
-	/*	XPutImage(qtdisplay, Win, PaintGC, Image,
-		  max(xpos - qwindow_width/2,0), max(ypos - qwindow_height/2,0),
-		  0, 0, min(qwindow_width,Image->width)  , 
-		  min(qwindow_height,Image->height) );
-		  */
 	putimage = TRUE;
       }	
     break;
@@ -1677,9 +1825,11 @@ void TopLevel::handle_X_event(XEvent Event){
       Lasttime = Event.xbutton.time;
       ExpectConfNotify = 0;
 
+
       switch (Event.xbutton.button) {
 
       case Button1: 
+	buttondown = true;
 
 	switch (((Image->width > qwindow_width)<<1) |
 		(Image->height > qwindow_height)) {
@@ -1705,6 +1855,8 @@ void TopLevel::handle_X_event(XEvent Event){
       break;
 
     case MotionNotify:
+      if(!buttondown)
+	break;
       do { 
 
 	nx = Event.xmotion.x;
@@ -1728,6 +1880,7 @@ void TopLevel::handle_X_event(XEvent Event){
     
       if (Event.xbutton.button == Button1) {
 
+	buttondown = false;
 	XDefineCursor(qtdisplay, Win, ReadyCursor);
 	XFlush(qtdisplay);
       }
@@ -1914,7 +2067,7 @@ void TopLevel::helptiff(){
 
   if(!thispage){
     
-    QMessageBox::message("Sorry","There is no fax page active yet","OK");
+    QMessageBox::warning(this, "Sorry","You need to open a fax page first.","OK",0);
     return;
   }
 
@@ -1922,9 +2075,12 @@ void TopLevel::helptiff(){
   if( viewpage ) // we are already displaying the help page
     return;
 
+  
   if (helppage == NULL) {
-    if (!notetiff(HELPFILE)){
-      error();
+    QString file;
+    file = mykapp->kdedir();
+    file += "/share/apps/kfax/pics/kfax.tif";
+    if (!notetiff(file.data())){
       return;
     }
     else {
@@ -2165,8 +2321,7 @@ void TopLevel::FreeFax(){
 
 void TopLevel::error(){
 
-  putchar('\a');
-  fflush(stdout);
+  QApplication::beep();
 
 }
 
@@ -2255,12 +2410,25 @@ void TopLevel::uiUpdate(){
 
     statusbar->changeItem(thispage->name,ID_FNAME);
 
+    QString typestring;
+
     if(thispage->type == FAX_TIFF){
-      statusbar->changeItem("Type: Tiff",ID_TYPE);
-    }
+      typestring = "Type: Tiff ";
+    }	
     else if ( thispage->type == FAX_RAW){
-      statusbar->changeItem("Type: Raw",ID_TYPE);
+      typestring = "Type: Raw ";
     }
+
+    if ( thispage->expander == g31expand )
+      typestring += "G3";
+
+    if ( thispage->expander == g32expand )
+      typestring += "G3 2D";
+
+    if ( thispage->expander == g4expand )
+      typestring += "G4";
+
+    statusbar->changeItem(typestring.data(),ID_TYPE);
     QString memstr;
 
     memstr.sprintf("Mem: %d",Memused);
@@ -2272,7 +2440,7 @@ void TopLevel::uiUpdate(){
 
 void TopLevel::kfaxerror(char* title, char* error){
 
-  QMessageBox::message(title,error);
+  QMessageBox::warning(0,title,error,"OK",0);
 
 }
 
@@ -2323,13 +2491,17 @@ void TopLevel::putImage(){
 
   if (xpos!= ox || ypos!= oy || Refresh || Resize){
     
-    XResizeWindow(qtdisplay,Win,min(qwindow_width,Image->width ),
-		  min(qwindow_height,Image->height ));
+    /* In the following we use qwindow_height -1 etc since the main view
+       has a sunken frame and I need to offset by 1 pixel to the right and
+       one pixel down so that I don't paint my fax into the border of the frame*/
+
+    XResizeWindow(qtdisplay,Win,min(qwindow_width -1,Image->width ),
+		  min(qwindow_height -1,Image->height ));
     
     XPutImage(qtdisplay, Win, PaintGC, Image,
 	      max(xpos - qwindow_width/2,0), max(ypos - qwindow_height/2,0),
-	      0, 0, min(qwindow_width,Image->width)  , 
-	      min(qwindow_height,Image->height) );
+	      0, 0, min(qwindow_width -1,Image->width)  , 
+	      min(qwindow_height -1,Image->height) );
 
     vsb->setValue(max(ypos - qwindow_height/2,0));
     hsb->setValue(max(xpos - qwindow_width/2,0));
@@ -2562,21 +2734,35 @@ int copyfile(char* toname,char* fromname){
   FILE*  fromfile;
   FILE*  tofile;
 
+  if (QFile::exists(toname)) {
+    if(QMessageBox::warning( 0, "Warning:",
+			      "A file with this name already exists\n"
+			      "Do you want to overwrite it?\n\n",
+			      "Yes", "No",
+			      0, 1 ))
+      return 1;                    
+  }
 
   if((fromfile = fopen(fromname,"r")) == NULL)
     return 0;
 
-  if((tofile =  fopen(toname,"w")) == NULL)
+  if((tofile =  fopen(toname,"w")) == NULL){
+    fclose(fromfile);
     return 0;
+  }
 
 
   while((count = fread(buffer,sizeof(char),4*1028,fromfile))){
     count2 = fwrite(buffer,sizeof(char),count,tofile);
-    if (count2 != count)
+    if (count2 != count){
+      fclose(fromfile);
+      fclose(tofile);
       return 0;
+    }
 
   }
-
+  fclose(fromfile);
+  fclose(tofile);
   return 1;
 
 }

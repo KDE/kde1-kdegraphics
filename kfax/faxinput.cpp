@@ -106,7 +106,9 @@ notetiff(char *name)
 
 
     if ((tf = fopen(name, "r")) == NULL) {
-	perror(name);
+        QString mesg;
+	mesg.sprintf("Unable to open:\n%s\n",name);
+	kfaxerror("Sorry",mesg.data());
 	return 0;
     }
 
