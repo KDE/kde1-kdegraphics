@@ -146,19 +146,19 @@ msgstr "Fara á bls..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "b: 00000 h: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Uppl: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Gerð: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "S: XXXafXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -265,17 +265,17 @@ msgstr "Þú þarft fyrst að opna fax blaðsíðu."
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "S.%d af %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "B: %d H: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Uppl: %s"
 
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
@@ -287,11 +287,11 @@ msgstr "Venjulegt"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Gerð: TIFF"
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Gerp: Raw "
 
 #: kfax.cpp:2738
 msgid ""
