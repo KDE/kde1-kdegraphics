@@ -1,4 +1,4 @@
-## kdebase/Makefile.am
+## kdegraphics/Makefile.am $Id$
 ## (C) 1997 Stephan Kulow
 
 AUTOMAKE_OPTIONS = foreign 
