@@ -1,18 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 1998-01-05 22:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"PO-Revision-Date: 1998-01-09 00:50+0100\n"
+"Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
 
 #: copyright.cpp:28
 msgid "Copyright"
@@ -35,6 +27,20 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:59
 msgid "Section"
@@ -272,13 +278,12 @@ msgid "Show &tool bar"
 msgstr "Poka¿ pasek &narzêdzi"
 
 #: kghostview.cpp:560
-#, fuzzy
 msgid "Show st&atus bar"
 msgstr "Poka¿ pasek &stanu"
 
 #: kghostview.cpp:561
 msgid "Show &page list"
-msgstr ""
+msgstr "Poka¿ listê s&tron"
 
 #: kghostview.cpp:563
 msgid "Configure &interpreter ..."
@@ -398,9 +403,8 @@ msgid "Upside down"
 msgstr "Do góry nogami"
 
 #: kghostview.cpp:1277
-#, fuzzy
 msgid "Go to ..."
-msgstr "Id¼ do strony..."
+msgstr "Id¼ do ..."
 
 #: kghostview.cpp:1426
 msgid "Turn antialiasing on"
@@ -419,9 +423,8 @@ msgid "Hide Ghostscript messages"
 msgstr "Ukryj komunikaty ghostscript"
 
 #: kghostview.cpp:1504
-#, fuzzy
 msgid "Version 0.6"
-msgstr "Wersja 0.5"
+msgstr "Wersja 0.6"
 
 #: kghostview.cpp:1505
 msgid "Sorry, not ready yet"
@@ -432,13 +435,12 @@ msgid "About kghostview"
 msgstr "Informacje o kghostview"
 
 #: kghostview.cpp:1513
-#, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
-"Wersja :\t0.5 alfa\n"
+"Wersja :\t0.6 alpha\n"
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
@@ -452,23 +454,23 @@ msgstr "B³±d drukowania : lpr"
 
 #: kghostview.cpp:1660
 msgid "No pages have been marked for printing."
-msgstr ""
+msgstr "Brak zaznaczonych stron do drukowania."
 
 #: kghostview.cpp:2182 kghostview.cpp:2194 kghostview.cpp:2442
 #: kghostview.cpp:2465
 msgid "of 1    "
-msgstr "z 1    "
+msgstr "z 1     "
 
 #: kghostview.cpp:2184 kghostview.cpp:2196 kghostview.cpp:2467
 #, c-format
 msgid "of %d    "
-msgstr "z %d    "
+msgstr "z %d     "
 
 #: kghostview.cpp:2186 kghostview.cpp:2198 kghostview.cpp:2469
 #: kghostview.cpp:2476
 #, c-format
 msgid "of %d  "
-msgstr "z %d  "
+msgstr "z %d   "
 
 #: kghostview.cpp:2301
 msgid "&1. "
@@ -552,9 +554,8 @@ msgid "Marked"
 msgstr "Zaznaczone"
 
 #: viewcontrol.cpp:44
-#, fuzzy
 msgid "Force changes to "
-msgstr "Zmieñ parametry"
+msgstr "Zmieñ parametry na "
 
 #: viewcontrol.cpp:72
 msgid "Magnification"
@@ -567,57 +568,3 @@ msgstr "Format"
 #: viewcontrol.cpp:92
 msgid "Orientation"
 msgstr "Orientacja"
-
-# Polish translation of KDE kghostview
-# Version 0.1.0
-# (C) 1997 Piotr Roszatycki <dexter@fnet.com.pl>
-#~ msgid "About "
-#~ msgstr "&Informacje o "
-
-#~ msgid "About KDE"
-#~ msgstr "Informacje o KDE"
-
-#~ msgid "Information"
-#~ msgstr "Informacje"
-
-#~ msgid "New"
-#~ msgstr "Nowy"
-
-#~ msgid "&New"
-#~ msgstr "&Nowy"
-
-#~ msgid "&Close"
-#~ msgstr "&Zamknij"
-
-#~ msgid "E&xit"
-#~ msgstr "&Wyj¶cie"
-
-#~ msgid "&File"
-#~ msgstr "&Plik"
-
-#~ msgid "&View"
-#~ msgstr "&Widok"
-
-#~ msgid "&Options"
-#~ msgstr "&Opcje"
-
-#~ msgid "&Help"
-#~ msgstr "Pomo&c"
-
-#~ msgid "Sorry"
-#~ msgstr "Przykro mi"
-
-#~ msgid "KGhostview: Version 0.5"
-#~ msgstr "KGhostview: Wersja 0.5"
-
-#~ msgid "Go to"
-#~ msgstr "Id¼ do"
-
-#~ msgid "Clear"
-#~ msgstr "Skasuj"
-
-#~ msgid "Even"
-#~ msgstr "Parzyste"
-
-#~ msgid "Odd"
-#~ msgstr "Nieparzyste"

@@ -1,18 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kpaint \n"
 "POT-Creation-Date: 1998-01-05 22:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"PO-Revision-Date: 1998-01-09 00:47+0100\n"
+"Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
 
 #: app.cpp:40
 msgid ""
@@ -35,7 +27,7 @@ msgstr " [url | nazwa]\n"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
-msgstr ""
+msgstr "Zaznaczony obszar"
 
 #: canvassize.cpp:12
 msgid "Width"
@@ -83,7 +75,7 @@ msgstr "nienazwany.gif"
 
 #: kpaint.cpp:113
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Niezachowane zmiany"
 
 #: kpaint.cpp:161
 msgid "New Canvas"
@@ -142,9 +134,8 @@ msgid "Close Window"
 msgstr "Zamknij okno"
 
 #: kpaint.cpp:220
-#, fuzzy
 msgid "Exit"
-msgstr "&Edycja"
+msgstr "Wy&j¶cie"
 
 #: kpaint.cpp:223
 msgid "Copy Region"
@@ -200,20 +191,19 @@ msgstr "Spray"
 
 #: kpaint.cpp:246
 msgid "Area Select"
-msgstr ""
+msgstr "Zaznacz obszar"
 
 #: kpaint.cpp:251
 msgid "Show Toolbar"
-msgstr ""
+msgstr "Poka¿ pasek zadañ"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Poka¿ pasek stanu"
 
 #: kpaint.cpp:253
-#, fuzzy
 msgid "Save Options"
-msgstr "Opcje..."
+msgstr "Zachowaj opcje"
 
 #: kpaint.cpp:257
 msgid "Release Notes"
@@ -404,7 +394,7 @@ msgstr "Kreska kropka kropka"
 
 #: properties.cpp:244
 msgid "Line Width:"
-msgstr "Szeroko¶æ:"
+msgstr "Szeroko¶æ linii:"
 
 #: properties.cpp:254
 msgid "End style:"
@@ -420,43 +410,4 @@ msgstr "Styl ³±czenia:"
 
 #: properties.cpp:278
 msgid "Set Line Colour..."
-msgstr "Kolo&r..."
-
-# Polish translation of KDE kpaint
-# Version 0.1.2
-# (C) 1997 Piotr Roszatycki <dexter@fnet.com.pl>
-#~ msgid "Contents"
-#~ msgstr "Pomo&c"
-
-#~ msgid "Save File As"
-#~ msgstr "Zachowaj plik jako"
-
-#~ msgid "This was a QString"
-#~ msgstr "To by³ QString"
-
-#~ msgid "Cut"
-#~ msgstr "Wytnij"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiuj"
-
-#~ msgid "Paste"
-#~ msgstr "Wklej"
-
-#~ msgid "Index"
-#~ msgstr "Indeks"
-
-#~ msgid "About KPaint"
-#~ msgstr "Informacje..."
-
-#~ msgid "&File"
-#~ msgstr "&Plik"
-
-#~ msgid "&Help"
-#~ msgstr "Pomo&c"
-
-#~ msgid "Sorry"
-#~ msgstr "Przykro mi"
-
-#~ msgid "Browse..."
-#~ msgstr "Prze&gl±daj..."
+msgstr "Kolor &linii..."
