@@ -1,5 +1,5 @@
 
-SUBDIRS = ca cs de da nl ru sv it hu pl es pt fr hr fi zh_TW.Big5 sk el \
+SUBDIRS = br ca cs de da nl ru sv it hu pl es pt fr hr fi zh_TW.Big5 sk el \
 	no zh_CN.GB2312 mk pt_BR eo is ko tr 
 
 APPS = kdvi kfax kghostview kiconedit kpaint kview kfract ksnapshot

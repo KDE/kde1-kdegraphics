@@ -1,0 +1,90 @@
+# KTranslator Generated File
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ksnapshot-1.1\n"
+"POT-Creation-Date: 1999-01-10 01:46+0100\n"
+"PO-Revision-Date: Thu Feb 11 1999 21:48:01+0200\n"
+"Last-Translator: Romuald Texier <texierr@worldnet.fr>\n"
+"Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-1\n"
+"Content-Transfer-Encoding: 8 bit\n"
+"X-Generator: KTranslator v 0.4.0"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "skrammpaker"
+
+#: ksnapshot.cpp:94
+#, c-format
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: %s"
+msgstr ""
+"Pouezit war ar stokell `pakañ' ha klikit\n"
+"war ar prenestr da bakañ war-lerc'h.\n"
+"\n"
+"Gwirioù eilañ KSnapshot gant Richard Moore (rich@kde.org)\n"
+"Embannet dindan LGPL\n"
+"\n"
+"Aozerezh : %s"
+
+#: ksnapshot.cpp:129
+msgid "Filename:"
+msgstr "Anv restr :"
+
+#: ksnapshot.cpp:161
+msgid "Delay:"
+msgstr "Gedvezh :"
+
+#: ksnapshot.cpp:170
+msgid "seconds."
+msgstr "eilenn."
+
+#: ksnapshot.cpp:190
+msgid "Auto raise"
+msgstr "Lakaat war c'horre ent emgefreek"
+
+#: ksnapshot.cpp:191
+msgid "Hide KSnapshot window"
+msgstr "Kuzhaat prenestr KSnapshot"
+
+#: ksnapshot.cpp:193
+msgid "Only grab the window containing the cursor"
+msgstr "Pakañ ar prenestr a zo ar reti ennañ hepken"
+
+#: ksnapshot.cpp:224
+msgid "Grab"
+msgstr "Pakañ"
+
+#: ksnapshot.cpp:454
+msgid "Error: Unable to save image"
+msgstr "Skoilh : dic'houest da enrollañ ar skeudenn"
+
+#: ksnapshot.cpp:455
+msgid "Dismiss"
+msgstr "Dilezel"
+
+#: ksnapshot.cpp:459
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"N'eo ket bet gouest KSnapshot da enrollañ ar skeudenn e\n"
+"%s."
+
+#: ksnapshot.cpp:469
+msgid "KSnapshot preview"
+msgstr "Raksell KSnapshot"
