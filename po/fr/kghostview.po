@@ -234,7 +234,7 @@ msgstr "&Page"
 #: kghostview.cpp:2327 kghostview.cpp:2332 kghostview.cpp:2615
 #, c-format
 msgid "of %d"
-msgstr "de %d"
+msgstr "sur %d"
 
 #: kghostview.cpp:1269 kghostview.cpp:2406 viewcontrol.cpp:64
 msgid "Portrait"
@@ -659,18 +659,18 @@ msgstr ""
 #: kghostview.cpp:2309 kghostview.cpp:2321 kghostview.cpp:2586
 #: kghostview.cpp:2609
 msgid "of 1    "
-msgstr "de 1    "
+msgstr "sur 1    "
 
 #: kghostview.cpp:2311 kghostview.cpp:2323 kghostview.cpp:2611
 #, c-format
 msgid "of %d    "
-msgstr "de %d    "
+msgstr "sur %d    "
 
 #: kghostview.cpp:2313 kghostview.cpp:2325 kghostview.cpp:2613
 #: kghostview.cpp:2620
 #, c-format
 msgid "of %d  "
-msgstr "de %d  "
+msgstr "sur %d  "
 
 #: kghostview.cpp:2585
 msgid "Sc.1 "
@@ -692,7 +692,7 @@ msgstr "Sc. %d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
+msgstr "Facteur de &zoom"
 
 #~ msgid "View Control"
 #~ msgstr "Contrôle de l'affichage"
