@@ -65,6 +65,7 @@ libtiff:
 depend:
 	@makedepend -I$(INCDIR) $(SOURCES) 2> /dev/null
 clean:
+	(cd libtiffax && $(MAKE) clean)
 	-rm -f *.o *.bak *~ *% #*
 	-rm -f $(SRCMETA) $(TARGET)
 
