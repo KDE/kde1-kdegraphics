@@ -21,7 +21,7 @@ bin_PROGRAMS = kiconedit
 
 kiconedit_SOURCES = utils.cpp main.cpp kiconedit.cpp kicongrid.cpp kiconcolors.cpp kcolorgrid.cpp \
 	kiconfilebase.cpp kiconfiledlg.cpp kiconcombiview.cpp kiconfileview.cpp kicondetaillist.cpp \
-	kicontools.cpp kicon.cpp kresize.cpp knew.cpp debug.cpp properties.cpp xview.cpp \
+	kicontools.cpp kicon.cpp kresize.cpp knew.cpp debug.cpp properties.cpp \
 	kiconeditslots.cpp kiconconfig.cpp kdropsite.cpp kdragsource.cpp
 
 kiconedit_METASOURCES = USE_AUTOMOC

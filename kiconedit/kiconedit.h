@@ -32,8 +32,6 @@
 #include <ktoolbar.h>
 #include <kwm.h>
 #include <kaccel.h>
-#include <kkeydialog.h>
-#include <kruler.h>
 #include <qwidget.h>
 #include <qpixmap.h>
 #include <qfileinf.h> 

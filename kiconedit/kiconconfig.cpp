@@ -21,6 +21,7 @@
 #include <kcolordlg.h>
 #include "debug.h"
 #include "kiconconfig.h"
+#include "kiconfiledlg.h"
 #include "pics/logo.xpm"
 
 KTemplateEditDlg::KTemplateEditDlg(QWidget *parent) : QDialog(parent, 0, true)
@@ -107,7 +108,7 @@ const char *KTemplateEditDlg::getPath()
 
 void KTemplateEditDlg::slotBrowse()
 {
-  QString path = KFilePreviewDialog::getOpenFileName("/", "*.xpm");
+  QString path = KIconFileDlg::getOpenFileName("/", "*.xpm");
   if(!path.isEmpty())
     setPath(path);
 }
@@ -376,7 +377,7 @@ void KBackgroundConfig::selectColor()
 
 void KBackgroundConfig::selectPixmap()
 {
-  QString path = KFilePreviewDialog::getOpenFileName("/", "*.xpm");
+  QString path = KIconFileDlg::getOpenFileName("/", "*.xpm");
   if(!path.isEmpty())
   {
     QPixmap p(path.data());

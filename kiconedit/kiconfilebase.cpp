@@ -69,6 +69,8 @@ KIconFileBase::~KIconFileBase()
 
 bool KIconFileBase::checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
 {
+   bool hasimage = false;
+
    if( !pixmap->load( filepath ))
      return false;
 
@@ -80,26 +82,26 @@ bool KIconFileBase::checkXVFile(const KFileInfo *i, const char *filepath, QPixma
 
    QDir d(fi.dirPath());
 
-   if(!d.exists())
+   if( !d.exists() )
    {
-     if(!d.mkdir(d.path()))
+     if( !d.mkdir(d.path()) )
      {
+       /*
        if(!scalePixmap(pixmap))
          return false;
        return true;
+       */
      }
    }
 
-   if(!fi.exists())
+   if( !fi.exists() )
    {
-     write_xv_file(path.data(), *pixmap);
-
-     // Cannot use QPixmap::save as it complaines about file allready open :-(
-     //if(!pixmap->save(path.data(), "XV"))
-       //debug("Error saving XV thumbnail %s", path.data());
+     hasimage = scalePixmap(pixmap);
+     if(!pixmap->save(path.data(), "XV"))
+       debug("Error saving XV thumbnail %s", path.data());
    }
 
-   if(fi.exists())
+   if( fi.exists() && !hasimage )  
    {
      if( !pixmap->load( path.data(), "XV" ))
      {
@@ -107,11 +109,9 @@ bool KIconFileBase::checkXVFile(const KFileInfo *i, const char *filepath, QPixma
        return false;
      }
    }
-   else
-   {
-     if(!scalePixmap(pixmap))
-       return false;
-   }
+
+   if(!hasimage)
+     return scalePixmap(pixmap);
 
    return true;
 }
@@ -123,7 +123,7 @@ bool KIconFileBase::scalePixmap(QPixmap *pixmap)
   if ( pixmap->width() > pixmap->height() )
   {
     if ( pixmap->width() < 80 )
-      w =pixmap->width();
+      w = pixmap->width();
     else
       w = 80;
 

@@ -32,7 +32,6 @@
 #include <kkeydialog.h>
 #include <kmsgbox.h>
 #include <knotebook.h>
-#include <kfiledialog.h>
 #include <kbuttonbox.h>
 #include <kcolorbtn.h>
 #include "knew.h"

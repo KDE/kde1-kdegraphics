@@ -20,6 +20,7 @@
 
 #include <qwhatsthis.h>
 #include <qtooltip.h>
+#include <kruler.h>
 #include "debug.h"
 #include "kiconedit.h"
 #include "kdragsource.h"
