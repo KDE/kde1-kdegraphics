@@ -29,6 +29,7 @@ install-data-local:
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) $(srcdir)/mini-kview.xpm $(kde_minidir)/kview.xpm
 	$(mkinstalldirs) $(kde_icondir)
+	$(mkinstalldirs) $(kde_icondir)/large
 	$(INSTALL_DATA) $(srcdir)/large-kview.xpm $(kde_icondir)/large/kview.xpm
 
 uninstall-local:
