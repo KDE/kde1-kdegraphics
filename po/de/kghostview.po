@@ -1,17 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Project-Id-Version: kghostview\n"
+"PO-Revision-Date: 1997-09-02 23:12 +0100\n"
+"Last-Translator: Lars Doelle <lars.doelle@on-line.de>\n"
 
 #: copyright.cpp:17
 msgid "Copyright"
@@ -597,26 +589,3 @@ msgstr "Ausrichtung"
 msgid "Media"
 msgstr "Medium"
 
-#~ msgid "Cancel"
-#~ msgstr "Abbruch"
-
-#~ msgid "OK"
-#~ msgstr "Ok"
-
-#~ msgid "Quit"
-#~ msgstr "Beenden"
-
-#~ msgid "Open"
-#~ msgstr "÷ffen"
-
-#~ msgid "Close"
-#~ msgstr "Schlieﬂen"
-
-#~ msgid "Help"
-#~ msgstr "Hilfe"
-
-#~ msgid "Error"
-#~ msgstr "Fehler"
-
-#~ msgid "Apply"
-#~ msgstr "Ok"
