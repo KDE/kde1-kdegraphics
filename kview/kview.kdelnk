@@ -1,7 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Type=Application
-Exec=kview %u -caption "%c"
+Exec=kview %u -caption "%c" %i %m
 Icon=kview.xpm
 TerminalOptions=
 Path=
