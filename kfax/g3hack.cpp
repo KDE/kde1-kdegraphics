@@ -26,13 +26,13 @@ extern int optind, opterr;
 
 static char *progname;
 static char *banner = "\n%s version " VERSION "\n\n";
-static char *usage = "\
-
-usage: %s <-n count> <-h size> -o <outputfile> {inputfile}\n\n\
-Copy a g3-(1d)-fax file from stdin to stdout and delete any\n\
-   more than `count' identical trailing lines (default 10).\n\
-Optionally skip `size'-byte header.\n\
-Optionally named outputfile (else stdout).\n";
+static char *usage = ""
+""
+"usage: %s <-n count> <-h size> -o <outputfile> {inputfile}\n\n"
+"Copy a g3-(1d)-fax file from stdin to stdout and delete any\n"
+"   more than `count' identical trailing lines (default 10).\n"
+"Optionally skip `size'-byte header.\n"
+"Optionally named outputfile (else stdout).\n";
 
 #define nxtbit()	((imask>>=1) ? ((ibits&imask)!=0) :		\
 			 ((ibits=getchar()) == EOF) ? -1 :		\

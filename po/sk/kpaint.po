@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-05-07 18:22+0200\n"
+"POT-Creation-Date: 1998-05-30 17:41+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -101,8 +101,7 @@ msgstr "Zmeny neulo¾ené"
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-"Neulo¾ili ste zmeny, stratíte ich, ak teraz zavriete toto okno."
+msgstr "Neulo¾ili ste zmeny, stratíte ich, ak teraz zavriete toto okno."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -411,4 +410,3 @@ msgstr "Farba èiary"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Zaoblený obdå¾nik"
-
