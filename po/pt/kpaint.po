@@ -53,8 +53,7 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Disponibilizado atraves da GPL. Veja o ficheiro LICEN
-SE para detalhes\n"
+"(c) Richard J. Moore 1997 Disponibilizado atraves da GPL. Veja o ficheiro LICENSE para detalhes\n" 
 
 #: app.cpp:69
 msgid "Usage: "
@@ -272,7 +271,7 @@ msgid ""
 "KPaint is already accessing a remote file, you must\n"
 "cancel the current remote job or wait for it to complete."
 msgstr "KPaint já está a aceder a um ficheiro remoto, necessita\n"
-"de cancelar o trabalho remoto actual ou esperar que termine.""
+"de cancelar o trabalho remoto actual ou esperar que termine."
 
 #: kpaint.cpp:346
 msgid "KPaint: Could not find KFM"
@@ -280,8 +279,7 @@ msgstr "KPaint: Não foi possivel encontrar KFM"
 
 #: kpaint.cpp:347 kpaint.cpp:464
 msgid "Error: KPaint could not find a running KFM or start one itself."
-msgstr "Erro: KPaint não conseguiu encontrar um KFM a ser executado ou iniciar u
-m."
+msgstr "Erro: KPaint não conseguiu encontrar um KFM a ser executado ou iniciar um." 
 
 #: kpaint.cpp:402
 msgid "KPaint: Network Load Failed"

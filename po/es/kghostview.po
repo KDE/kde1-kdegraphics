@@ -20,7 +20,7 @@ msgid ""
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
 "\n"
-"Este programa es software libre; usted puede redistribuirlo y/o modificarlo\"
+"Este programa es software libre; usted puede redistribuirlo y/o modificarlo\n"
 "bajo los términos de la 'GNU General Public License' \n"
 "(Licencia Pública General GNU) publicada por la Free Software Foundation; \n"
 "ya sea la version 2 de esta licencia, o (según desee) cualquier otra versión.\n"
@@ -519,7 +519,7 @@ msgstr "[Nombre de fichero]\n"
 
 #: main.cpp:21
 msgid "See Qt documentation for command line options\n"
-msgstr "Ver la documentación de Qt para opciones de línea de comandos"
+msgstr "Ver la documentación de Qt para opciones de línea de comandos\n"
 
 #: main.cpp:89
 #, c-format

@@ -24,7 +24,7 @@ msgstr ""
 "Este programa é software livre; pode redistribui-lo e/ou modifica-lo\n"
 "sob os termos da Licensa Geral Publica GNU como é publicada pela\n"
 "Free Software Foundation; quer seja a versão 2 da Licensa, ou\n"
-"(por sua opção) uma versão mais recente.\n"
+"(por sua opção) uma versão mais recente."
 
 #: goto.cpp:27
 msgid "Section"
