@@ -10,7 +10,7 @@
 #include "areaselect.h"
 #include "app.h"
 
-#define TIMER_INTERVALL 600
+#define TIMER_INTERVALL 500
 
 
 AreaSelect::AreaSelect(const char *toolname) : Tool(toolname)
@@ -42,14 +42,7 @@ AreaSelect::disableSelection()
   // stop all the timer 
   killTimers();
   if (showedSF) {
-    QPainter paint;
-    paint.begin(canvas->zoomedPixmap());
-    paint.setPen(QPen(green, 0, DashLine));
-    paint.setRasterOp(DEFAULT_RASTER_OP);
-    paint.drawRect(startx, starty, lastx-startx, lasty-starty);
-    paint.end();
-    canvas->repaint(0);
-    showedSF = false;
+    drawFrame(); // to erase the frame
   }
 }
 
@@ -70,14 +63,7 @@ void AreaSelect::deactivating()
 void
 AreaSelect::timerEvent(QTimerEvent *)
 {
-  QPainter paint;
-  paint.begin(canvas->zoomedPixmap());
-  paint.setPen(QPen(green, 0, DashLine));
-  paint.setRasterOp(DEFAULT_RASTER_OP);
-  paint.drawRect(startx, starty, lastx-startx, lasty-starty);
-  paint.end();
-  canvas->repaint(0);
-  showedSF = !showedSF;
+  drawFrame();
 }
 
 void AreaSelect::mousePressEvent(QMouseEvent *e)
@@ -176,7 +162,8 @@ KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
-QPixmap *AreaSelect::pixmap()
+QPixmap *
+AreaSelect::pixmap()
 {
   QString pixdir;
 
@@ -184,6 +171,19 @@ QPixmap *AreaSelect::pixmap()
   pixdir.append("/kpaint/toolbar/");
   pixdir.append("areaselect.xpm");
   return new QPixmap(pixdir);
+}
+
+void 
+AreaSelect::drawFrame()
+{
+  QPainter paint;
+  paint.begin(canvas->zoomedPixmap());
+  paint.setPen(QPen(green, 0, DashLine));
+  paint.setRasterOp(DEFAULT_RASTER_OP);
+  paint.drawRect(startx, starty, lastx-startx, lasty-starty);
+  paint.end();
+  canvas->repaint(0);
+  showedSF = !showedSF;
 }
 
 #include "areaselect.moc"

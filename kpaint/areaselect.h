@@ -25,7 +25,10 @@ protected:
   virtual void deactivating();
   virtual void timerEvent(QTimerEvent *);
   QPixmap *pixmap();
+
 private:
+  void drawFrame();
+
   int startx, starty;
   int lastx, lasty;
   bool drawing, showedSF;

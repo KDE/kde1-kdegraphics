@@ -408,7 +408,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Canvas::save() returning %d\n", s);
 
 void Canvas::keyPressEvent(QKeyEvent *e)
 {
-KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyPressEvent() redirector called\n");
+  //KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyPressEvent() redirector called\n");
   if (isActive())
     currentTool->keyPressEvent(e);
 }
@@ -416,7 +416,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyPressEvent() redirector called\n");
 
 void Canvas::keyReleaseEvent(QKeyEvent *e)
 {
-KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyReleaseEvent() redirector called\n");
+  //KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyReleaseEvent() redirector called\n");
   if (isActive())
     currentTool->keyReleaseEvent(e);
 }

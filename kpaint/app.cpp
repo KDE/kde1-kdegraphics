@@ -15,7 +15,7 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
 
   if (isRestored()) {
 #if 0
-    for (int i= 1; KTopLevelWidget::canBeRestored(i); i++) {
+    for (int i= 1; KTMainWindow::canBeRestored(i); i++) {
       kp= new KPaint();
       kp->restore(i);
     }
@@ -25,15 +25,17 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
 #endif
   }
   else {
-    if (argc == 2) {
-      kp= new KPaint((const char *) (argv[1]));
-    }
-    else if (argc == 1) {
+    if (argc == 1) {
       kp= new KPaint();
+    }
+    else if (argc == 2 &&
+	     strcmp(argv[1],"-h")!=0 &&
+	     strcmp(argv[1],"--help")!=0 ) {
+      kp= new KPaint((const char *) (argv[1]));
     }
     else {
       usage();
-      ::exit(1);
+      ::exit(0);
     }
     kp->show();
   }
@@ -41,12 +43,23 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
 
 void MyApp::usage()
 {
-  printf("kpaint " APPVERSTR " " APPAUTHOREMAIL);
-  printf( klocale->translate("\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"));
-  printf(klocale->translate("Usage: "));
-  QString aParameter( APPNAME );
-  aParameter += klocale->translate(" [url | filename]\n");
+  /* FIXME !!!!!!
+   * No i18n available when invoked "kpaint -h" but "kpaint -h -e"
+   */
+
+  //  printf("kpaint " APPVERSTR " " APPAUTHOREMAIL);
+  printf("kpaint (c) %s",APPAUTHOR);
+  printf("%s\n", /*klocale->translate*/("Released under GPL see LICENSE for details"));
+  printf("%s %s %s\n", /*klocale->translate*/("Usage:"),
+	 APPNAME, /*klocale->translate*/("[url | filename]"));
+  /*
+  QString aParameter(' ');
+  aParameter += APPNAME;
+  aParameter += ' ';
+  aParameter += klocale->translate("[url | filename]");
+  aParameter += '\n';
   printf(aParameter.data());
+  */
 }
 
 #include "app.moc"

@@ -26,7 +26,7 @@ class ColorBar;
 class MainView;
 //class QVBoxLayout;
 
-class KPaint : public KTopLevelWidget
+class KPaint : public KTMainWindow
 {
 Q_OBJECT
 

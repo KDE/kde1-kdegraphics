@@ -68,7 +68,7 @@
 extern FormatManager *formatMngr;
 extern int openwins;
 
-KPaint::KPaint(const char *url) : KTopLevelWidget()
+KPaint::KPaint(const char *url) : KTMainWindow()
 {
   /*  int w, h; */
 
@@ -492,11 +492,11 @@ void KPaint::initMenus()
 */
   QPopupMenu *help = kapp->getHelpMenu(false, QString("        ")
 				       + i18n("KPaint") +
-                                         + " " + APPVERSTR
-                                         + i18n("\n\n(c) ") + APPAUTHOR 
-                                         + "(" 
-                                         + APPAUTHOREMAIL 
-                                         + ")\n\n" + APPLICENSE );  
+				       + i18n(" version ") + APPVERSTR
+				       + "\n\n" + i18n("(c) ") + APPAUTHOR 
+                                       /*  + "(" 
+					   + APPAUTHOREMAIL */
+                                         + "\n\n" + i18n(APPLICENSE) );  
 
   menu = new KMenuBar( this );
 

@@ -18,6 +18,8 @@
 
 #define DEFAULT_RASTER_OP NotROP
 
+class QPopupMenu;
+
 /**
  * @short Tool - Abstract base class
  * Tool is the parent of all kpaint tools, it provides virtual methods
@@ -80,6 +82,8 @@ public:
   virtual void keyReleaseEvent(QKeyEvent *) {};
   virtual void enterEvent(QEvent *) {};
   virtual void leaveEvent(QEvent *) {};
+
+  virtual const QPopupMenu *getMenu() { return NULL; };
 
   int id;
   inline const char *getName() const;

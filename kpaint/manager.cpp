@@ -20,6 +20,7 @@
 #include "roundangle.h"
 #include "spraycan.h"
 #include "areaselect.h"
+#include "text.h"
 
 Manager::Manager(Canvas *c)
  : QObject(), toolsToolBar(0L), statusBar(0L)
@@ -67,19 +68,21 @@ void Manager::createTools()
   list.last()->id = 1;
   list.append(new Pen( i18n("Pen")));
   list.last()->id = 2;
-  list.append(new Rectangle( i18n("Rectangle")));
-  list.last()->id = 3;
   list.append(new Line( i18n("Line")));
+  list.last()->id = 3;
+  list.append(new Rectangle( i18n("Rectangle")));
   list.last()->id = 4;
-  list.append(new SprayCan( i18n("Spray Can")));
+  list.append(new Roundangle( i18n("Round Angle")));
   list.last()->id = 5;
+  list.append(new SprayCan( i18n("Spray Can")));
+  list.last()->id = 6;
+  list.append(new Text( i18n("Text")));
+  list.last()->id = 7;
   as = new AreaSelect( i18n("Area Select"));
   connect(canvas, SIGNAL(selection(bool)),
 	  as, SLOT(selection(bool)));
   list.append(as);
-  as->id = 6;
-  list.append(new Roundangle( i18n("Round Angle")));
-  list.last()->id = 7;
+  as->id = 8;
 
   // Create the properties dialog
   props= new propertiesDialog(1, 0, i18n("Tool Properties"));
