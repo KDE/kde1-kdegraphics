@@ -280,6 +280,9 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
   connect(btcolor, SIGNAL(clicked()), SLOT(selectColor()));
   connect(btpix, SIGNAL(clicked()), SLOT(selectPixmap()));
 
+  QRadioButton *rbb = new QRadioButton(i18n("&Built-in"), grp1);
+  rbb->setFixedSize(rbb->sizeHint());
+
 
   QGroupBox *grp2 = new QGroupBox(i18n("Example"), this);
 
@@ -290,13 +293,17 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
   QBoxLayout *ml = new QVBoxLayout(this);
 
   QBoxLayout *l1 = new  QHBoxLayout(grp1, 20);
+  QBoxLayout *l1r = new  QVBoxLayout();
   QBoxLayout *l2 = new  QVBoxLayout(grp2, 15);
 
   l1->addWidget(btngrp, 0, AlignLeft);
-  l1->addWidget(bbox, 0, AlignLeft);
+  l1->addLayout(l1r);
+  l1r->addWidget(bbox, 0, AlignLeft);
+  l1r->addWidget(rbb, 0, AlignLeft);
   l2->addWidget(lb_ex);
 
-  if(pprops->backgroundmode == QWidget::FixedPixmap)
+  bgmode = pprops->backgroundmode;
+  if(bgmode == QWidget::FixedPixmap)
   {
     btngrp->setButton(1);
     btcolor->setEnabled(false);

@@ -1,5 +1,5 @@
 /*
-    kdraw - a small graphics drawing program for the KDE
+    kiconedit - a small graphics drawing program for the KDE
     Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
 
     This program is free software; you can redistribute it and/or

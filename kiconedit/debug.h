@@ -7,7 +7,8 @@
 #endif
 #define NO_DEBUG 1
 */
-#include <qapplication.h>    
+
+#include <qapp.h>    
 #include <stdio.h>    
 #include <stdlib.h>
 

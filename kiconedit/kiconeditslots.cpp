@@ -20,6 +20,7 @@
 
 #include "debug.h"
 #include "kiconedit.h"
+#include "pics/logo.xpm"
 
 void KIconEdit::slotNewWin()
 {
@@ -268,7 +269,23 @@ void KIconEdit::slotConfigure(int id)
     case ID_OPTIONS_CONFIGURE:
     {
       KIconConfig c(this);
-      c.exec();
+      if(c.exec())
+      {
+        Properties *pprops = props(this);
+        setupMenuBar();
+        if(pprops->backgroundmode == QWidget::FixedPixmap)
+        {
+          QPixmap pix(pprops->backgroundpixmap.data());
+          if(pix.isNull())
+          {
+            QPixmap pmlogo((const char**)logo);
+            pix = pmlogo;
+          }
+          viewport->viewport()->setBackgroundPixmap(pix);
+        }
+        else
+          viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
+      }
       //KKeyDialog::configureKeys( keys );
       break;
     }
