@@ -165,9 +165,9 @@ static char Usage[] = "usage: %s <flags> file ...\n"\
 
 
 extern "C"{
-int  getopt(int argc, char * const argv[],const char *optstring);
-char *optarg;
-int optind,opterr,optopt;
+extern int  getopt(int argc, char * const argv[],const char *optstring);
+extern char *optarg;
+extern int optind,opterr,optopt;
 }
 
 #define MAXZOOM	10

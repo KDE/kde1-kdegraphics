@@ -1,3 +1,8 @@
+1999-03-03  Harri Porten  <porten@kde.org>
+
+	* viewfax.cpp: prefix getopt declarations with 'extern'. Bug reported
+	by Oliver Oster <olio@zait.uni-bremen.de>
+
 1999-02-08  Harri Porten  <porten@kde.org>
 
 	* fixed segfault caused by infinite recursion in kfaxerror()
