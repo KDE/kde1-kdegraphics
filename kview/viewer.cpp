@@ -303,9 +303,10 @@ void KImageViewer::help()
 
 void KImageViewer::about()
 {
-	QMessageBox::about( this, i18n("About KView"),
-		"KView -- Graphics viewer. " KVIEW_VERSION "\n"
-		"\nSirtaj S. Kang (taj@kde.org)\n" );
+	QString str;
+	str.sprintf(i18n("KView -- Graphics viewer %s\n"
+		         "\nSirtaj S. Kang (taj@kde.org)\n"));
+	QMessageBox::about( this, i18n("About KView"), str);
 }
 
 void KImageViewer::makeRootMenu(QMenuData *menu)
