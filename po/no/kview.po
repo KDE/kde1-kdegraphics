@@ -15,28 +15,28 @@ msgstr ""
 
 #: viewer.cpp:77
 msgid "no image loaded"
-msgstr ""
+msgstr "intet bilde lastet"
 
 #: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
-msgstr ""
+msgstr "Klar"
 
 #: viewer.cpp:186
 msgid "Net saving not yet implemented"
-msgstr ""
+msgstr "Nettlagring foreløbig ikke implementert"
 
 #: viewer.cpp:194
 #, c-format
 msgid "%s: written"
-msgstr ""
+msgstr "%s: skrevet"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Skriv inn forstørringsfaktor (100 = 1x):"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Ulogliv forstørringsfaktor"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -48,7 +48,7 @@ msgstr "&Forstørr"
 
 #: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
-msgstr ""
+msgstr "&Omgjør"
 
 #: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
@@ -61,7 +61,7 @@ msgstr "&Side ved side"
 
 #: viewer.cpp:314
 msgid "F&ilter"
-msgstr ""
+msgstr "F&ilter"
 
 #: viewer.cpp:318
 #, fuzzy
@@ -75,43 +75,41 @@ msgstr "Å&pne fil..."
 
 #: viewer.cpp:334
 msgid "&Save As.."
-msgstr ""
+msgstr "&Lagre som..."
 
 #: viewer.cpp:340
 msgid "&Full Screen"
-msgstr ""
+msgstr "&Fullskjerm"
 
 #: viewer.cpp:343
-#, fuzzy
 msgid "&Zoom..."
-msgstr "&Forstørr"
+msgstr "&Forstørr..."
 
 #: viewer.cpp:344
 #, c-format
 msgid "Zoom &in 10%"
-msgstr ""
+msgstr "&Forstørr 10%"
 
 #: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
-msgstr ""
+msgstr "F&orminsk 10%"
 
 #: viewer.cpp:346
 msgid "&Double size"
-msgstr ""
+msgstr "&Doble størrelse"
 
 #: viewer.cpp:347
 msgid "&Half size"
-msgstr ""
+msgstr "&Halver størrelse"
 
 #: viewer.cpp:349
 msgid "&Reset"
-msgstr ""
+msgstr "&Nullstill"
 
 #: viewer.cpp:352
-#, fuzzy
 msgid "Rotate &clockwise"
-msgstr "&Klokkevis"
+msgstr "Roter &klokkevis"
 
 #: viewer.cpp:354
 #, fuzzy
@@ -127,7 +125,6 @@ msgid "Flip &horizontal"
 msgstr ""
 
 #: viewer.cpp:362
-#, fuzzy
 msgid "&Tile"
 msgstr "&Side ved side"
 
@@ -143,40 +140,39 @@ msgstr "Sidemaks"
 
 #: viewer.cpp:367
 msgid "&List.."
-msgstr ""
+msgstr "&List.."
 
 #: viewer.cpp:371
 msgid "&Previous"
-msgstr ""
+msgstr "&Forrige"
 
 #: viewer.cpp:372
 msgid "&Next"
-msgstr ""
+msgstr "&Neste"
 
 #: viewer.cpp:374
 msgid "&Slideshow On/Off"
-msgstr ""
+msgstr "&Lysbildefremvisning av/på"
 
 #: viewer.cpp:379
-#, fuzzy
 msgid "&About KView.."
-msgstr "&Om KView"
+msgstr "&Om KView.."
 
 #: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
-msgstr ""
+msgstr "Eksisterende overføring ikke fullført."
 
 #: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
-msgstr ""
+msgstr "Kunne ikke få midlertidig overføringsnavn."
 
 #: viewer.cpp:486
 msgid "Transfer error: "
-msgstr ""
+msgstr "Overføringsfeil: "
 
 #: viewer.cpp:558
 msgid "Loading.."
-msgstr ""
+msgstr "Laster.."
 
 #: colour.cpp:29
 msgid "Brightening..."

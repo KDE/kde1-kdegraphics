@@ -213,7 +213,7 @@ msgstr "Laster '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Fullført"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

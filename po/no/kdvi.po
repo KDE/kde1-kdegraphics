@@ -88,7 +88,7 @@ msgstr "&Preferanser ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Ny"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -123,13 +123,12 @@ msgid "&Redraw page"
 msgstr "&Tegne siden på nytt"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Forrige side"
+msgstr "&Forrige"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Neste"
 
 #: kdvi.cpp:207
 msgid "&First"

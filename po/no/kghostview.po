@@ -358,11 +358,11 @@ msgstr "Konfigurer oversetter"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Ny"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Ny"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -649,6 +649,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Sett miljøvariabel (til PRINTER eller LPDEST for eksempel) for skrivernavn "
+"til å bli tatt inn i konto."
 
 #: kghostview.cpp:1654
 #, c-format

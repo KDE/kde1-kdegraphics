@@ -41,9 +41,8 @@ msgid "Select All"
 msgstr "Merk alle"
 
 #: kiconedit.cpp:385
-#, fuzzy
 msgid "New &Window"
-msgstr "Nytt vindu"
+msgstr "Nytt &vindu"
 
 #: kiconedit.cpp:390
 msgid "&New..."
@@ -431,7 +430,6 @@ msgstr ""
 "(Tips: Du man merke både rektangulære og sirkulære seksjoner)"
 
 #: kiconedit.cpp:830
-#, fuzzy
 msgid ""
 "Paste\n"
 "\n"
@@ -445,10 +443,13 @@ msgid ""
 msgstr ""
 "Lim inn\n"
 "\n"
-"Paste the contents of the clipboard into the current icon.\n"
+"Lim inn innholdet av utklippstavlen til gjeldende ikon.\n"
 "\n"
 "Hvis innholdet er større enn gjeldende ikon kan du lime det inn i ett nytt "
 "vindu."
+"\n"
+"(Tips: Vel \"Lim inn gjennomsiktige punkter\" i konfigurasjonsdialogen "
+"hvis du også ønsker å lime inn gjennomsiktig)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -702,14 +703,12 @@ msgid "Cleared"
 msgstr "Renset"
 
 #: kicongrid.cpp:842
-#, fuzzy
 msgid "Selected area cutted"
-msgstr "Velg område"
+msgstr "Valgt område klippet ut"
 
 #: kicongrid.cpp:845
-#, fuzzy
 msgid "Selected area copied"
-msgstr "Velg område"
+msgstr "Valgt område kopiert"
 
 #: kicongrid.cpp:923
 msgid ""
@@ -946,32 +945,32 @@ msgid "Example"
 msgstr "Eksempel"
 
 #: kiconconfig.cpp:398
-#, fuzzy
 msgid "Main Toolbar"
-msgstr "Minimappe"
+msgstr "Miniverktøylinje"
 
 #: kiconconfig.cpp:401
-#, fuzzy
 msgid "Drawing tools"
-msgstr "Slå av/på &tegneverktøyer"
+msgstr "Tegneverktøy"
 
 #: kiconconfig.cpp:405
 msgid ""
 "Note: Other settings of the toolbars can be reached\n"
 "from the toolbar \"handle\" or from the \"Options\" menu"
 msgstr ""
+"Notis: Andre innstillinger av verktøylinjen kan bli oppnådd\n"
+"fra verktøylinjen-\"håndtaket\" eller fra \"Valg\"-menyen"
 
 #: kiconconfig.cpp:424 kiconconfig.cpp:437
 msgid "Show Icon"
-msgstr ""
+msgstr "Vis ikon"
 
 #: kiconconfig.cpp:429 kiconconfig.cpp:442
 msgid "Show Icon and Text"
-msgstr ""
+msgstr "Vis ikon og tekst"
 
 #: kiconconfig.cpp:433 kiconconfig.cpp:446
 msgid "Show Text"
-msgstr ""
+msgstr "Vis tekst"
 
 #: kiconconfig.cpp:504
 msgid "Paste mode"
@@ -1006,88 +1005,9 @@ msgid "Configure background"
 msgstr "Konfigurer bakgrunn"
 
 #: kiconconfig.cpp:629
-#, fuzzy
 msgid "Toolbars"
-msgstr "&Verktøy"
+msgstr "Verktøy"
 
 #: kiconconfig.cpp:641
 msgid "Icon grid"
 msgstr "Ikon-grind"
-
-#~ msgid "&Map to KDE palette"
-#~ msgstr "&Bind til KDE-palett"
-
-#~ msgid "Warning"
-#~ msgstr "Varsel"
-
-#~ msgid "New &window"
-#~ msgstr "Nytt &vindu"
-
-#~ msgid "&Open..."
-#~ msgstr "Å&pne..."
-
-#~ msgid "&Save"
-#~ msgstr "&Lagre"
-
-#~ msgid "Save &as..."
-#~ msgstr "Lagre &som..."
-
-#~ msgid "&Print..."
-#~ msgstr "Skriv &ut..."
-
-#~ msgid "&Close"
-#~ msgstr "&Lukk"
-
-#~ msgid "&File"
-#~ msgstr "&Fil"
-
-#~ msgid "&Copy"
-#~ msgstr "&Kopier"
-
-#~ msgid "&Paste"
-#~ msgstr "Lim &inn"
-
-#~ msgid "&Edit"
-#~ msgstr "&Rediger"
-
-#~ msgid "&View"
-#~ msgstr "&Vis"
-
-#~ msgid "&Options"
-#~ msgstr "&Valg"
-
-#~ msgid "&Help"
-#~ msgstr "&Hjelp"
-
-#~ msgid "Open a file"
-#~ msgstr "Åpne en fil"
-
-#~ msgid "Cut"
-#~ msgstr "Klipp ut"
-
-#~ msgid "Copy"
-#~ msgstr "Kopier"
-
-#~ msgid "Paste"
-#~ msgstr "Lim inn"
-
-#~ msgid "Error"
-#~ msgstr "Feil"
-
-#~ msgid "Information"
-#~ msgstr "Informasjon"
-
-#~ msgid "&Ok"
-#~ msgstr "&Ok"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Avbryt"
-
-#~ msgid "&Remove"
-#~ msgstr "&Fjern"
-
-#~ msgid "Appearance"
-#~ msgstr "Forekomst"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Forskjellig"
