@@ -412,7 +412,6 @@ msgid "Upside down"
 msgstr "Vzhùru nohama"
 
 #: kghostview.cpp:1277
-#, fuzzy
 msgid "Go to ..."
 msgstr "Jdi na stranu ..."
 
@@ -433,7 +432,6 @@ msgid "Hide Ghostscript messages"
 msgstr "Nezobrazuj hlá¹ení Ghostscriptu"
 
 #: kghostview.cpp:1504
-#, fuzzy
 msgid "Version 0.6"
 msgstr "Verze 0.6"
 
@@ -446,7 +444,6 @@ msgid "About kghostview"
 msgstr "Informace o kghostview"
 
 #: kghostview.cpp:1513
-#, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -454,7 +451,7 @@ msgid ""
 msgstr ""
 "Verze : \t0.6 alpha\n"
 "Autor : Mark Donohoe\n"
-"Mail: donohoe@kde.org"
+"Mail : donohoe@kde.org"
 
 #: kghostview.cpp:1555 kghostview.cpp:1556 kghostview.cpp:1557
 msgid "Printer Name : "
@@ -567,9 +564,8 @@ msgid "Marked"
 msgstr "Oznaèené"
 
 #: viewcontrol.cpp:44
-#, fuzzy
 msgid "Force changes to "
-msgstr "Vynutit zmìny"
+msgstr "Vynutit zmìny "
 
 #: viewcontrol.cpp:72
 msgid "Magnification"
@@ -582,60 +578,3 @@ msgstr "Medium"
 #: viewcontrol.cpp:92
 msgid "Orientation"
 msgstr "Orientace"
-
-#~ msgid "Close"
-#~ msgstr "Zavøít"
-
-#~ msgid "Cancel"
-#~ msgstr "Zru¹it"
-
-#~ msgid "Information"
-#~ msgstr "Informace"
-
-#~ msgid "Quit"
-#~ msgstr "Ukonèit"
-
-#~ msgid "Open"
-#~ msgstr "Otevøít"
-
-#~ msgid "New"
-#~ msgstr "Nový"
-
-#~ msgid "Help"
-#~ msgstr "Nápovìda"
-
-#~ msgid "&New"
-#~ msgstr "&Nový"
-
-#~ msgid "&Close"
-#~ msgstr "&Zavøít"
-
-#~ msgid "E&xit"
-#~ msgstr "U&konèit"
-
-#~ msgid "&File"
-#~ msgstr "&Soubor"
-
-#~ msgid "&View"
-#~ msgstr "&Pohled"
-
-#~ msgid "&Options"
-#~ msgstr "&Mo¾nosti"
-
-#~ msgid "&Help"
-#~ msgstr "&Nápovìda"
-
-#~ msgid "Sorry"
-#~ msgstr "Sorry"
-
-#~ msgid "Go to"
-#~ msgstr "Jdi na"
-
-#~ msgid "Error"
-#~ msgstr "Chyba"
-
-#~ msgid "Clear"
-#~ msgstr "Vymazat"
-
-#~ msgid "Apply"
-#~ msgstr "Pøevzít"

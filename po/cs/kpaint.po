@@ -29,7 +29,7 @@ msgstr ""
 
 #: areaselect.cpp:20
 msgid "Area Selection"
-msgstr ""
+msgstr "Výbìr oblasti"
 
 #: canvassize.cpp:12
 msgid "Width"
@@ -77,7 +77,7 @@ msgstr "neznamy.gif"
 
 #: kpaint.cpp:113
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Neulo¾eny zmìny"
 
 #: kpaint.cpp:161
 msgid "New Canvas"
@@ -136,9 +136,8 @@ msgid "Close Window"
 msgstr "Uzavøi okno"
 
 #: kpaint.cpp:220
-#, fuzzy
 msgid "Exit"
-msgstr "Úp&ravy"
+msgstr "Ukonèit"
 
 #: kpaint.cpp:223
 msgid "Copy Region"
@@ -194,20 +193,19 @@ msgstr "Sprej"
 
 #: kpaint.cpp:246
 msgid "Area Select"
-msgstr ""
+msgstr "Výbìr oblasti"
 
 #: kpaint.cpp:251
 msgid "Show Toolbar"
-msgstr ""
+msgstr "Zobrazovat nástrojovou li¹tu"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Zobrazovat informaèní li¹tu"
 
 #: kpaint.cpp:253
-#, fuzzy
 msgid "Save Options"
-msgstr "Mo¾nosti..."
+msgstr "Ulo¾it nastavení"
 
 #: kpaint.cpp:257
 msgid "Release Notes"
@@ -215,7 +213,7 @@ msgstr ""
 
 #: kpaint.cpp:258
 msgid "About..."
-msgstr ""
+msgstr "Informace ..."
 
 #: kpaint.cpp:263
 msgid "&Image"
@@ -363,7 +361,7 @@ msgstr "Diagonální møí¾ka"
 
 #: properties.cpp:91
 msgid "Custom"
-msgstr ""
+msgstr "U¾ivatelské"
 
 #: properties.cpp:94
 msgid "Pattern Filename:"
@@ -410,39 +408,5 @@ msgid "Join style:"
 msgstr "Nastav barvu èáry..."
 
 #: properties.cpp:278
-#, fuzzy
 msgid "Set Line Colour..."
-msgstr "Nastav barvu pro vyplòování..."
-
-#~ msgid "Save File As"
-#~ msgstr "Ulo¾ dokument jako"
-
-#~ msgid "This was a QString"
-#~ msgstr "Toto byl QString"
-
-#~ msgid "Cut"
-#~ msgstr "Vyjmout"
-
-#~ msgid "Copy"
-#~ msgstr "Kopírovat"
-
-#~ msgid "Paste"
-#~ msgstr "Vlo¾it"
-
-#~ msgid "Index"
-#~ msgstr "Index"
-
-#~ msgid "About KPaint"
-#~ msgstr "Informace o KPaintu"
-
-#~ msgid "&File"
-#~ msgstr "&Soubor"
-
-#~ msgid "&Help"
-#~ msgstr "&Nápovìda"
-
-#~ msgid "Sorry"
-#~ msgstr "Sorry"
-
-#~ msgid "Browse..."
-#~ msgstr "Listuj..."
+msgstr "Nastav barvu èáry ..."
