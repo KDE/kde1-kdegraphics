@@ -1,9 +1,13 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: kdegraphics \n"
+"Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1998-12-07 +0200\n"
+"PO-Revision-Date: 1999-02-06 22:02+0100\n"
 "Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
+"Language-Team: Spanish <kde-es@kyb.uni-stuttgart.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
@@ -31,6 +35,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 #: kfax.cpp:402
 msgid "Help page"
@@ -138,19 +148,19 @@ msgstr "Ir a la página ..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "w: 00000 h: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Res: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Tipo: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "P:XXXofXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -179,7 +189,7 @@ msgid ""
 "Width %.2f Height %.2f\n"
 msgstr ""
 "Tamaño de página no valido:\n"
-"Ancho %.2f Altura %.2f\n"
+"Ancho %.2f Alto %.2f\n"
 
 #: kfax.cpp:1011
 #, c-format
@@ -205,7 +215,7 @@ msgid ""
 "Couldn't save file!"
 msgstr ""
 "Error 'copiando archivo()'\n"
-"¡No puedo guardar archivo !"
+"¡No puedo guardar archivo!"
 
 #: kfax.cpp:1132
 msgid "Saved"
@@ -257,17 +267,17 @@ msgstr "Es necesario abrir una página primero"
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "P.%d de %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "W: %d H: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Res: %s"
 
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
@@ -279,11 +289,11 @@ msgstr "Normal"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Tipo: Tiff "
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Tipo: Raw "
 
 #: kfax.cpp:2738
 msgid ""
@@ -407,21 +417,3 @@ msgstr "Ancho de fax es"
 #: options.cpp:142
 msgid "height:"
 msgstr "Alto:"
-
-#~ msgid "About KFax"
-#~ msgstr "Acerca de KFax"
-
-#~ msgid "Version "
-#~ msgstr "Versión "
-
-#~ msgid "&About..."
-#~ msgstr "&Acerca de..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "&Ayuda KFax"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Seleccione un facsimil a abrir"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Seleccione un facsimil a añadir"
