@@ -15,7 +15,7 @@ INSTALL	=   	@INSTALL@
 CXX	= 	@CXX@
 OPTS	=	$(CXXFLAGS)
 DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
-LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11
+LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
 METADIR	=	metas
 
 # Uncomment this is you are using Qt 1.2 beta 3 or higher
@@ -84,7 +84,7 @@ kpaint:	tools $(METAS) $(OBJS)
 
 clean:
 	$(MAKE) -C tools clean
-	-rm -f $(OBJS) $(METADIR)/*.moc
+	-rm -f $(OBJS) $(METADIR)/*.moc kpaint tools/libkptools.a
 
 realclean:  clean
 	$(MAKE) -C tools realclean

@@ -16,7 +16,7 @@ LDFLAGS = @all_libraries@ -L. -lqt -lkdecore -lX11 -lXext -lm
 
 INSTALL = @INSTALL@ -m 0755
 INSTALL_DATA = @INSTALL@ -m 0644
-INSTALL_DIR = @mkinstalldirs@
+INSTALL_DIR = @INSTALL@ -d -m 0755
 
 prefix = @prefix@
 BINDIR = $(prefix)/bin
@@ -56,7 +56,7 @@ install:
 	[ -d $(BINDIR) ] || $(INSTALL_DIR) $(BINDIR)
 	$(INSTALL) $(TARGET) $(BINDIR)
 	[ -d $(DOCSDIR) ] || $(INSTALL_DIR) $(DOCSDIR)
-	$(INSTALL_DATA) ./doc/* $(DOCSDIR)
+	$(INSTALL_DATA) ./doc/kghostview.html $(DOCSDIR)
 
 clean:
 	rm -f core *~ *.bak *.BAK $(SRCMETA) $(OBJS) $(TARGET)
