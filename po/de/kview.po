@@ -2,12 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1998-10-16 15:20+0200\n"
-"PO-Revision-Date: 1998-10-15 16:20+0200\n"
-"Last-Translator: Stephan Kulow <coolo@kde.org>\n"
+"PO-Revision-Date: 1998-11-15 12:20+0100\n"
+"Translator: Stephan Kulow <coolo@kde.org>\n"
+"Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 
 #: viewer.cpp:77
 msgid "no image loaded"
-msgstr "kein Bild geladen"
+msgstr "Kein Bild geladen"
 
 #: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
@@ -15,7 +16,7 @@ msgstr "Fertig"
 
 #: viewer.cpp:186
 msgid "Net saving not yet implemented"
-msgstr "Speichern über's Internet (noch) nicht implementiert"
+msgstr "Speichern über's Internet noch nicht implementiert"
 
 #: viewer.cpp:194
 #, c-format
@@ -24,11 +25,11 @@ msgstr "%s: geschrieben"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Zoom-Faktor (100 = 1x):"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Unzulässiger Zoom-Faktor"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -60,21 +61,19 @@ msgstr "&Bilder"
 
 #: viewer.cpp:333
 msgid "&Open.."
-msgstr ""
+msgstr "&Öffnen"
 
 #: viewer.cpp:334
-#, fuzzy
 msgid "&Save As.."
 msgstr "&Speichern unter"
 
 #: viewer.cpp:340
 msgid "&Full Screen"
-msgstr "&Voller Bildschirm"
+msgstr "&Ganzer Bildschirm"
 
 #: viewer.cpp:343
-#, fuzzy
 msgid "&Zoom..."
-msgstr "&Zoom"
+msgstr "&Zoom..."
 
 #: viewer.cpp:344
 #, c-format
@@ -88,11 +87,11 @@ msgstr "10% ver&kleinern"
 
 #: viewer.cpp:346
 msgid "&Double size"
-msgstr ""
+msgstr "&Doppelt so groß"
 
 #: viewer.cpp:347
 msgid "&Half size"
-msgstr ""
+msgstr "&Halb so groß"
 
 #: viewer.cpp:349
 msgid "&Reset"
@@ -124,10 +123,9 @@ msgstr "&Maximum"
 
 #: viewer.cpp:364
 msgid "Max&pect"
-msgstr ""
+msgstr "Max&pekt"
 
 #: viewer.cpp:367
-#, fuzzy
 msgid "&List.."
 msgstr "&Liste..."
 
@@ -144,7 +142,6 @@ msgid "&Slideshow On/Off"
 msgstr "&Diashow An/Aus"
 
 #: viewer.cpp:379
-#, fuzzy
 msgid "&About KView.."
 msgstr "&Über KView..."
 
@@ -157,62 +154,56 @@ msgid "Couldn't get temporary transfer name."
 msgstr "Es konnte kein temporärer Dateiname gefunden werden."
 
 #: viewer.cpp:486
-#, fuzzy
 msgid "Transfer error: "
-msgstr "&Transformieren"
+msgstr "Übertragungsfehler: "
 
 #: viewer.cpp:558
-#, fuzzy
 msgid "Loading.."
 msgstr "Lade..."
 
 #: colour.cpp:29
-#, fuzzy
 msgid "Brightening..."
-msgstr "Heller machen..."
+msgstr "Aufhellen..."
 
 #: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Intensität:Heller"
 
 #: colour.cpp:63
-#, fuzzy
 msgid "Darkening..."
-msgstr "Dunkler machen..."
+msgstr "Abdunkeln..."
 
 #: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Intensität:Dunkler"
 
 #: colour.cpp:114
-#, fuzzy
 msgid "Converting to Greyscale..."
-msgstr "Konvertierung in Grauskalierung..."
+msgstr "Konvertierung in Graustufen..."
 
 #: colour.cpp:143
 msgid "Greyscale"
-msgstr "Grauskalierung"
+msgstr "Graustufen"
 
 #: colour.cpp:161
-#, fuzzy
 msgid "Smoothing..."
-msgstr "Glätten..."
+msgstr "Glättung..."
 
 #: colour.cpp:227
 msgid "Smooth"
-msgstr "Glatt"
+msgstr "Geglättet"
 
 #: colour.cpp:248
 msgid "Enter gamma value (0...1):"
-msgstr ""
+msgstr "Gamma-Wert (0...1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Gamma-Korrektur..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
-msgstr ""
+msgstr "Korrigiere Gamma..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -252,10 +243,4 @@ msgstr "Diashow &starten"
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
-msgstr "Zeit zwischen den Bildern (sec):"
-
-#~ msgid "&Zoom in 50%"
-#~ msgstr "50% verg&rößern"
-
-#~ msgid "Zoo&m out 50%"
-#~ msgstr "50% verk&leinern"
+msgstr "Zeit zwischen Dias (sec):"

@@ -1,0 +1,82 @@
+# KSnapshot
+# Copyright (C) Richard Moore (rich@kde.org).
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
+"PO-Revision-Date: 1998-11-15 11:40+0100\n"
+"Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
+"Language-Team: de <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO 8859-1\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "Schnappschuß"
+
+#: ksnapshot.cpp:93
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+"Drücken Sie den \"Aufnahme\"-Knopf, dann klicken Sie\n"
+"auf ein Fenster, um es aufzunehmen.\n"
+"\n"
+"KSnapshot unterliegt dem Copyright von Richard Moore (rich@kde.org)\n"
+"und ist unter der LGPL veröffentlicht.\n"
+"\n"
+"Version: "
+
+#: ksnapshot.cpp:127
+msgid "Filename:"
+msgstr "Dateiname:"
+
+#: ksnapshot.cpp:159
+msgid "Delay:"
+msgstr "Verzögerung:"
+
+#: ksnapshot.cpp:168
+msgid "seconds."
+msgstr "Sekunden:"
+
+#: ksnapshot.cpp:188
+msgid "Auto raise"
+msgstr "Fenster automatisch nach vorn"
+
+#: ksnapshot.cpp:189
+msgid "Hide KSnapshot window"
+msgstr "KSnapshot-Fenster verbergen"
+
+#: ksnapshot.cpp:191
+msgid "Only grab the window containing the cursor"
+msgstr "Nur Fenster aufnehmen, das den Cursor enthält"
+
+#: ksnapshot.cpp:222
+msgid "Grab"
+msgstr "Aufnehmen"
+
+#: ksnapshot.cpp:452
+msgid "Error: Unable to save image"
+msgstr "Fehler: Bild kann nicht gesichert werden"
+
+#: ksnapshot.cpp:453
+msgid "Dismiss"
+msgstr "Abbrechen"
+
+#: ksnapshot.cpp:457
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot konnte das Bild nicht sichern nach\n"
+"%s."
+
+#: ksnapshot.cpp:467
+msgid "KSnapshot preview"
+msgstr "KSnapshot Vorschau"

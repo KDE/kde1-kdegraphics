@@ -5,9 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-11-15 01:52+0100\n"
-"PO-Revision-Date: 1998-05-03 12:00+0100\n"
-"Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
+"POT-Creation-Date: 1998-11-14 01:52+0100\n"
+"PO-Revision-Date: 1998-11-15 12:00+0100\n"
+"Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
+"Last-Translator:Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -31,7 +32,7 @@ msgstr "&Statusleiste verbergen"
 
 #: kfax.cpp:403
 msgid "Help page"
-msgstr "Hilfseite"
+msgstr "Hilfeseite"
 
 #: kfax.cpp:405
 msgid "&Open Fax..."
@@ -90,9 +91,8 @@ msgid "Zoom &out"
 msgstr "Ver&kleinern"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "Fax-&Optionen..."
+msgstr "&Fax-Optionen..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -104,11 +104,11 @@ msgstr "&Statusleiste"
 
 #: kfax.cpp:463
 msgid "Go back"
-msgstr "Vorherige Seite"
+msgstr "Zurück"
 
 #: kfax.cpp:466
 msgid "Go forward"
-msgstr "Nächste Seite"
+msgstr "Weiter"
 
 #: kfax.cpp:471
 msgid "Go to start"
@@ -132,7 +132,7 @@ msgstr "Drucken"
 
 #: kfax.cpp:497
 msgid "Go to page ..."
-msgstr "Gehe zu Seite ..."
+msgstr "Gehe zu Seite..."
 
 #: kfax.cpp:583
 msgid "Open Location:"
@@ -144,7 +144,7 @@ msgstr "Sie müssen zuerst ein Fax öffnen."
 
 #: kfax.cpp:605
 msgid "Save to Location:"
-msgstr "Speichern unter URL:"
+msgstr "Speichern unter:"
 
 #: kfax.cpp:812
 msgid "Not yet implemented"
@@ -152,7 +152,7 @@ msgstr "Noch nicht implementiert"
 
 #: kfax.cpp:862
 msgid "     There is no document active      "
-msgstr "  Kein Dokument ist geöffnet worden   "
+msgstr "    Es ist kein Dokument geöffnet    "
 
 #: kfax.cpp:996
 #, c-format
@@ -166,7 +166,7 @@ msgstr ""
 #: kfax.cpp:1012
 #, c-format
 msgid "Can't print to \"%s\"\n"
-msgstr "Das Drucken auf ,,%s\" ist nicht möglich\n"
+msgstr "Das Drucken in ,,%s\" ist nicht möglich\n"
 
 #: kfax.cpp:1023
 #, c-format
@@ -201,11 +201,11 @@ msgid ""
 msgstr ""
 "KFax wartet bereits auf das Beenden\n"
 "eines Internetzugriffes.\n"
-"Bitte warten Sie bis er beendet wurde\n"
+"Bitte warten Sie, bis er beendet wurde\n"
 
 #: kfax.cpp:1151 kfax.cpp:1215
 msgid "Could not communicate with KFM"
-msgstr "Das Kommunizieren mit der KFM ist nicht möglich"
+msgstr "Kommunikation mit KFM war nicht möglich"
 
 #: kfax.cpp:1192
 #, c-format
@@ -214,7 +214,7 @@ msgstr "Lädt ,%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Abgeschlossen"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -242,7 +242,7 @@ msgid ""
 "Do you want to overwrite it?\n"
 "\n"
 msgstr ""
-"Eine Datei mit dem gleichen Namen existiert bereits\n"
+"Eine Datei mit dem Namen existiert bereits\n"
 "Wollen Sie diese überschreiben?\n"
 "\n"
 
@@ -252,6 +252,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Öffen nicht möglich von:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -365,21 +367,3 @@ msgstr "Rohfaxbreite"
 #: options.cpp:142
 msgid "height:"
 msgstr "Höhe:"
-
-#~ msgid "About KFax"
-#~ msgstr "Über KFax"
-
-#~ msgid "Version "
-#~ msgstr "Version "
-
-#~ msgid "&About..."
-#~ msgstr "&Info..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "KFax-&Hilfe"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Wählen Sie das zu öffnende Faxes aus"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Wählen Sie das hinzuzufügende Fax aus"
