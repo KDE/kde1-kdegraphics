@@ -2,7 +2,6 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -113,15 +112,15 @@ msgstr "&Editar"
 
 #: kiconedit.cpp:411
 msgid "1:1"
-msgstr ""
+msgstr "1:1"
 
 #: kiconedit.cpp:412
 msgid "1:5"
-msgstr ""
+msgstr "1:5"
 
 #: kiconedit.cpp:413
 msgid "1:10"
-msgstr ""
+msgstr "1:10"
 
 #: kiconedit.cpp:417
 msgid "Zoom &in"
@@ -181,7 +180,7 @@ msgstr "Elipse cheia"
 
 #: kiconedit.cpp:442 kiconedit.cpp:568
 msgid "Spray"
-msgstr ""
+msgstr "Spray"
 
 #: kiconedit.cpp:443 kiconedit.cpp:570
 msgid "Flood fill"
@@ -492,7 +491,7 @@ msgstr "Tamanho:"
 
 #: kresize.cpp:49
 msgid "&Ok"
-msgstr ""
+msgstr "&Ok"
 
 #: kresize.cpp:54
 msgid "&Cancel"
