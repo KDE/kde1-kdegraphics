@@ -13,6 +13,9 @@ Terminal=0
 Comment=Generator for fractals
 Comment[pl]=Generator fraktali
 Comment[fi]=Fraktaaleja luova ohjelma
+Comment[hu]=Fraktál készítõ
 Name=Fractals Generator
 Name[pl]=Generatol fraktali
 Name[fi]=Fraktaaliohjelma
+Name[hu]=Fraktál készítõ
+
