@@ -84,7 +84,7 @@ msgstr "Prekresli»"
 
 #: kdvi.cpp:114
 msgid "Preferences ..."
-msgstr "&Preferencie ..."
+msgstr "&Nastavenie ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
