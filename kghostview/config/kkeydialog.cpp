@@ -474,6 +474,9 @@ KKeyChooser::KKeyChooser( QDict<KKeyEntry> *aKeyDict, QWidget *parent )
 	wList->setAutoUpdate(TRUE);
 	wList->update();
 	
+	globalDict = new QDict<int> ( 37, false );
+	readGlobalKeys();
+	
 	topLayout->activate();
 }
 
@@ -496,6 +499,33 @@ void KKeyChooser::updateAction( int index )
 	else kbMode = CustomKey;
 
 	toChange( index );
+}
+
+void KKeyChooser::readGlobalKeys()
+{
+	// Insert all global keys into globalDict
+	int *keyCode;
+	KConfig *pConfig = kapp->getConfig();
+	KEntryIterator *gIt = pConfig->entryIterator( "Global Keys" );
+	gIt->toFirst();
+	while ( gIt->current() ) {
+		keyCode = new int;
+		*keyCode = stringToKey( gIt->current()->aValue );
+		globalDict->insert( gIt->currentKey(), keyCode);
+		//debug( " %s, %d", gIt->currentKey(), *keyCode );
+		++(*gIt);
+	}
+	
+	// Remove global keys which appear in the dictionary to be configured
+	aIt->toFirst();
+	while ( aIt->current() ) {
+		aIt->current()->aConfigKeyCode = aIt->current()->aCurrentKeyCode;
+		
+		if ( globalDict->find( aIt->currentKey() ) ) {
+			globalDict->remove( aIt->currentKey() );
+		}
+		++ ( *aIt );
+	}
 }
 
 void KKeyChooser::toChange( int index )
@@ -659,6 +689,8 @@ void KKeyChooser::defaultKey()
 void KKeyChooser::allDefault()
 {
 	// Change all configKeyCodes to default values
+	
+	int idx = wList->currentItem();
 
 	disconnect( wList, SIGNAL( highlighted( int ) ),
 		this, SLOT( updateAction( int ) ) );
@@ -684,9 +716,10 @@ void KKeyChooser::allDefault()
 		++(*aIt);
 	}
 	
-	wList->setAutoUpdate( true );
-	wList->update();
 	connect( wList, SIGNAL( highlighted( int ) ), SLOT( updateAction( int ) ) );
+	wList->setAutoUpdate( true );
+	//wList->update();
+	wList->setCurrentItem( idx );
 }
 
 #define MAX_FCTN_LENGTH 15
@@ -864,8 +897,35 @@ void KKeyChooser::editEnd()
 
 bool KKeyChooser::isKeyPresent()
 {
-	/* search the aConfigKeyCodes to find if this keyCode is already used
-	   elsewhere */
+	// Search the global key codes to find if this keyCode is already used
+	//  elsewhere
+	
+	QDictIterator<int> gIt( *globalDict );
+	
+	gIt.toFirst();
+	while ( gIt.current() ) {
+		//debug("current %s:%d code %d", gIt.currentKey(), *gIt.current(), pEntry->aConfigKeyCode);
+		if ( *gIt.current() == pEntry->aConfigKeyCode ) {
+			QString actionName( gIt.currentKey() );
+			actionName.stripWhiteSpace();
+
+			QString keyName = keyToString( *gIt.current() );
+			
+			QString str;
+			str.sprintf(
+				"The %s key combination has already been allocated\nto the global %s action.\n\nPlease choose a unique key combination.",
+				keyName.data(),
+				actionName.data() );
+				
+			QMessageBox::warning( this, "Global key conflict", str.data() );
+			
+			return TRUE;
+		}
+		++gIt;
+	}
+	
+	// Search the aConfigKeyCodes to find if this keyCode is already used
+	// elsewhere
 	aIt->toFirst();
 	while ( aIt->current() ) {
 		if ( aIt->current() != pEntry

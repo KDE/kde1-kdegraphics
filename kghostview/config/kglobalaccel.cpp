@@ -184,6 +184,9 @@ bool KGlobalAccel::grabKey( uint keysym, uint mod ) {
 
 	XSync(qt_xdisplay(),0);
 	XSetErrorHandler(savedErrorHandler);
+	
+	debug("       grabbed");
+	
 	if (grabFailed) {
 		// FIXME: ungrab all successfull grabs!
 		//warning("Global grab failed!");
@@ -251,20 +254,36 @@ QDict<KKeyEntry> KGlobalAccel::keyDict()
 
 void KGlobalAccel::readSettings()
 {
+	QString s;
+
 	KConfig *pConfig = kapp->getConfig();
-	pConfig->setGroup( "Keys" );
+	pConfig->setGroup( aGroup.data() );
 
 	QDictIterator<KKeyEntry> aKeyIt( aKeyDict );
 	aKeyIt.toFirst();
 #define pE aKeyIt.current()
 	while ( pE ) {
-		pE->aConfigKeyCode =
-			stringToKey( pConfig->readEntry( aKeyIt.currentKey(),
-							keyToString( pE->aConfigKeyCode ) ) );
-		pE->aCurrentKeyCode = pE->aConfigKeyCode;
-		if ( pE->aAccelId && pE->aCurrentKeyCode ) {
-			
+		s = pConfig->readEntry( aKeyIt.currentKey() );
+		
+		if ( s.isNull() )
+			pE->aConfigKeyCode = pE->aDefaultKeyCode;
+		else
+			pE->aConfigKeyCode = stringToKey( s.data() );
+		
+		if ( pE->bEnabled ) {
+			uint keysym = keyToXSym( pE->aCurrentKeyCode );
+			uint mod = keyToXMod( pE->aCurrentKeyCode );
+			ungrabKey( keysym, mod );
 		}
+		
+		pE->aCurrentKeyCode = pE->aConfigKeyCode;
+		
+		if ( pE->bEnabled ) {
+			uint keysym = keyToXSym( pE->aCurrentKeyCode );
+			uint mod = keyToXMod( pE->aCurrentKeyCode );
+			grabKey( keysym, mod );
+		}
+		
 		++aKeyIt;
 	}
 #undef pE
@@ -356,7 +375,10 @@ bool KGlobalAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 #define pE aKeyIt->current()
 	while( pE ) {
 		QString s;
-		if ( pE->aAccelId ) {
+		if ( pE->bEnabled ) {
+			uint keysym = keyToXSym( pE->aCurrentKeyCode );
+			uint mod = keyToXMod( pE->aCurrentKeyCode );
+			ungrabKey( keysym, mod );
 		}
 		++*aKeyIt;
 	}
@@ -383,9 +405,14 @@ bool KGlobalAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 		pEntry->aAccelId = pE->aAccelId;
 		pEntry->receiver = pE->receiver;
 		pEntry->member = new QString( pE->member->data() );
+		pEntry->bEnabled = pE->bEnabled;
 		
-		if ( pEntry->aAccelId && pEntry->aCurrentKeyCode ) {
+		if ( pEntry->bEnabled ) {
+			uint keysym = keyToXSym( pEntry->aCurrentKeyCode );
+			uint mod = keyToXMod( pEntry->aCurrentKeyCode );
+			grabKey( keysym, mod );
 		}
+		
 		++*aKeyIt;
 	}
 #undef pE
@@ -445,14 +472,19 @@ bool KGlobalAccel::ungrabKey( uint keysym, uint mod ) {
 void KGlobalAccel::writeSettings()
 {
 	KConfig *pConfig = kapp->getConfig();
-	pConfig->setGroup( "Keys" );
+	pConfig->setGroup( aGroup.data() );
 
 	QDictIterator<KKeyEntry> aKeyIt( aKeyDict );
 	aKeyIt.toFirst();
 	while ( aKeyIt.current() ) {
 		if ( aKeyIt.current()->bConfigurable )
-			pConfig->writeEntry( aKeyIt.currentKey(),
-				keyToString( aKeyIt.current()->aCurrentKeyCode ) );
+			if ( bGlobal )
+				pConfig->writeEntry( aKeyIt.currentKey(),
+					keyToString( aKeyIt.current()->aCurrentKeyCode ),
+					true, true );
+			 else
+				pConfig->writeEntry( aKeyIt.currentKey(),
+					keyToString( aKeyIt.current()->aCurrentKeyCode ) );
 		++aKeyIt;
 	}
 }

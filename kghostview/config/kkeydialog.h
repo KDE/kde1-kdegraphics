@@ -117,7 +117,21 @@ protected:
  * offers buttons to set all keys to defaults and invoke on-line help. 
  *
  * Two static methods are supplied which provide the most convienient interface
- * to the dialog.
+ * to the dialog. For example you could use KAccel and KKeyDialog like this
+ *
+ * KAccel keys;
+ * keys.insertStdItem( KAccel::Print );
+ * keys.insertItem( "Zoom in", "+" );
+ * 
+ * keys.connectItem( keys.stdAction( KAccel::Print ), SLOT( print() ) );
+ * keys.connectItem( "Zoom in", SLOT( zoomIn() ) );
+ *
+ * keys.readSettings();
+ *
+ * if( KKeyDialog::configureKeys( &keys ) ) {
+ *		keys.writeSettings();
+ *	}
+ *
  */
 class KKeyDialog : public QDialog
 {
@@ -167,6 +181,7 @@ protected slots:
 	void altClicked();
 	void editKey();
 	void editEnd();
+	void readGlobalKeys();
 
 protected:
 	void keyPressEvent( QKeyEvent *e );
@@ -175,6 +190,7 @@ protected:
 protected:
 	QDictIterator<KKeyEntry> *aIt;
 	QDictIterator<KKeyEntry> *aKeyIt;
+	QDict<int> *globalDict;
 	KKeyEntry *pEntry;
 	QString sEntryKey;
 	KSplitList *wList;

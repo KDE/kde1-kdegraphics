@@ -86,6 +86,7 @@ KGhostview::KGhostview( QWidget *, char *name )
 	ga = new KGlobalAccel();
 	ga->insertItem( "Wag the dog", "CTRL+SHIFT+W");
 	ga->connectItem( "Wag the dog", this, SLOT( openNewFile() ) );
+	ga->readSettings();
 	
 	isNetFile = false;
     
@@ -429,7 +430,7 @@ void KGhostview::configureGhostscript()
 void KGhostview::configureKeybindings()
 {
 	//keys->configureKeys( this );
-	if( KKeyDialog::configureKeys( ga ) ) {
+	if( KKeyDialog::configureKeys( keys ) ) {
 		updateMenuAccel();
 	}
 }
