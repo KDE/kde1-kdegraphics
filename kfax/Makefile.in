@@ -82,8 +82,8 @@ distclean: clean
 	rm -f Makefile
 
 install: all
-	#$(INSTALL_DIR) $(BINDIR)
-	#$(INSTALL) $(TARGET) $(BINDIR)
+	$(INSTALL_DIR) $(BINDIR)
+	$(INSTALL) $(TARGET) $(BINDIR)
 	(cd docs && $(MAKE) install)
 	$(INSTALL_DIR) $(PICSDIR)
 	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
