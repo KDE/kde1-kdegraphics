@@ -646,8 +646,7 @@ msgstr ""
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
-msgstr ""
-"Stilltu hvaða umhverfisbreyta er látin stjórna prentaranafni."
+msgstr "Stilltu hvaða umhverfisbreyta er látin stjórna prentaranafni."
 
 #: kghostview.cpp:1661
 #, c-format

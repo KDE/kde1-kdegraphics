@@ -469,6 +469,7 @@ msgid "Small text button set to shrink factor "
 msgstr "Smækkunarstuðull smærri texta"
 
 #: kdvi.cpp:931
+#, c-format
 msgid "Shrink: %d"
 msgstr "Smækka: %d"
 
