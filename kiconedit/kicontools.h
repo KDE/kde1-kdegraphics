@@ -57,8 +57,9 @@ public:
 
   virtual QSize sizeHint();
 
-  KSysColors *getSysColors() { return syscolors; };
-  KCustomColors *getCustomColors() { return customcolors; };
+  KSysColors *getSysColors() { return syscolors; }
+  KCustomColors *getCustomColors() { return customcolors; }
+  Preview *getPreviewWidget() { return preview; }
 
 signals:
   void newcolor(uint);

@@ -18,6 +18,7 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include <qdragobject.h>
 #include "debug.h"
 #include "kiconedit.h"
 #include "pics/logo.xpm"
@@ -236,30 +237,6 @@ void KIconEdit::slotOpenRecent(int id)
   Properties *pprops = props(this);
   debug("Recent: %s", pprops->recentlist->at((uint)id));
   icon->open(&grid->image(), pprops->recentlist->at(id));
-}
-
-void KIconEdit::slotDropEvent( KDNDDropZone * _dropZone )
-{
-  debug("KIconEdit::slotDropEvent");
-  QStrList & list = _dropZone->getURLList();
-  char *s;
-  bool loadedinthis = false;
-  
-  for ( s = list.first(); s != 0L; s = list.next() )
-  {
-    // Load the first file in this window
-    debug("KIconEdit:slotDropEvent - %s", s);
-    //s == list.getFirst();
-    if (!grid->isModified() && !loadedinthis) 
-    {
-      icon->open( &grid->image(), s );
-      loadedinthis = true;
-    }
-    else 
-    {
-      slotNewWin(s);
-    }
-  }    
 }
 
 void KIconEdit::slotConfigure(int id)
@@ -522,6 +499,71 @@ void KIconEdit::slotOpenBlank(const QSize s)
   icon->cleanup();
   grid->loadBlank( s.width(), s.height());
 }
+
+void KIconEdit::slotDropEvent( KDNDDropZone * _dropZone )
+{
+  debug("KIconEdit::slotDropEvent");
+  QStrList & list = _dropZone->getURLList();
+  char *s;
+  bool loadedinthis = false;
+  
+  for ( s = list.first(); s != 0L; s = list.next() )
+  {
+    // Load the first file in this window
+    debug("KIconEdit:slotDropEvent - %s", s);
+    //s == list.getFirst();
+    if (!grid->isModified() && !loadedinthis) 
+    {
+      icon->open( &grid->image(), s );
+      loadedinthis = true;
+    }
+    else 
+    {
+      slotNewWin(s);
+    }
+  }    
+}
+
+void KIconEdit::slotQDropEvent( QDropEvent *e )
+{
+  debug("Got QDropEvent!");
+  QImage image;
+  if ( QImageDrag::decode( e, image ) )
+  {
+    debug("Image decoded");
+    if(!image.isNull())
+    {
+      debug("Image is valid");
+      QPixmap p;
+      p = image;
+      QWidget *w = new QWidget;
+      w->setBackgroundPixmap(p);
+      w->show();
+      grid->load(&image);
+    }
+    else
+      debug("Image is invalid");
+    return;
+  }
+}
+
+void KIconEdit::slotQDragLeaveEvent( QDragLeaveEvent * /*e*/ )
+{
+  debug("Got QDragLeaveEvent!");
+}
+
+void KIconEdit::slotQDragEnterEvent( QDragEnterEvent *e )
+{
+  debug("Got QDragEnterEvent!");
+  if( QImageDrag::canDecode( e ) )
+  {
+    debug("  an image");
+    e->accept();
+  }
+  else
+    e->ignore();
+}
+
 
 
 

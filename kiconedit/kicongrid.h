@@ -62,7 +62,7 @@ class KGridView : public QFrame
 {
     Q_OBJECT
 public:
-  KGridView( QWidget * parent = 0, const char *name = 0);
+  KGridView( QImage image, QWidget * parent = 0, const char *name = 0);
 
   KRuler *hruler() { return _hruler;}
   KRuler *vruler() { return _vruler;}
@@ -95,7 +95,7 @@ class KIconEditGrid : public KColorGrid
 {
     Q_OBJECT
 public:
-  KIconEditGrid( QWidget * parent = 0, const char *name = 0);
+  KIconEditGrid( QImage image, QWidget * parent = 0, const char *name = 0);
   virtual ~KIconEditGrid();
 
   enum DrawTool { Line, Freehand, FloodFill, Spray, Rect, FilledRect, Circle,
@@ -105,7 +105,7 @@ public:
   bool isModified() { return modified; };
   void setModified(bool m) { modified = m; }
   const QPixmap &pixmap();
-  const QImage &image() { return *img; }
+  const QImage &image() { return img; }
   const QImage *clipboardImage(bool &ok);
   QImage *getSelection(bool);
   virtual QSize sizeHint();
@@ -124,6 +124,7 @@ public slots:
   void editPasteAsNew();
   void editSelectAll();
   void editClear();
+  void getImage(QImage *image);
 //#if QT_VERSION <= 140
   void editResize();
 //#endif
@@ -170,7 +171,7 @@ protected:
   QPoint start, end;
   QRect insrect;
   QSize cbsize;
-  QImage *img;
+  QImage img;
   QPixmap p;
   int selected, tool; //, numrows, numcols;
   bool modified, btndown, ispasting, isselecting;

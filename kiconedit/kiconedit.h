@@ -47,6 +47,7 @@
 #include "kiconconfig.h"
 #include "kicongrid.h"
 #include "kresize.h"
+#include "kdropsite.h"
 #include "properties.h"
 
 #define ID_FILE_NEWWIN  500
@@ -96,8 +97,15 @@
 #define ID_IMAGE_GRAYSCALE      571
 #define ID_IMAGE_MAPTOKDE       572
 
-#define ID_SELECT_RECT          580
-#define ID_SELECT_CIRCLE        581
+#define ID_SELECT               580
+#define ID_SELECT_RECT          581
+#define ID_SELECT_CIRCLE        582
+
+#define ID_HELP_WHATSTHIS       590
+
+class QWhatsThis;
+class QToolButton;
+class KDragSource;
 
 /**
 * KIconEdit
@@ -157,11 +165,16 @@ protected slots:
   void slotOpenBlank(const QSize);
   void slotDropEvent( KDNDDropZone * );
 
+  void slotQDropEvent( QDropEvent* );
+  void slotQDragLeaveEvent( QDragLeaveEvent* );
+  void slotQDragEnterEvent( QDragEnterEvent* );
+
 protected:
-  KMenuBar *setupMenuBar();
-  KToolBar *setupToolBar();
-  KToolBar *setupDrawToolBar();
-  KStatusBar *setupStatusBar();
+  bool setupMenuBar();
+  bool setupToolBar();
+  bool setupDrawToolBar();
+  bool setupStatusBar();
+  bool setupWhatsThis();
   virtual void closeEvent(QCloseEvent*);
   virtual void resizeEvent(QResizeEvent*);
   void writeConfig();
@@ -173,7 +186,6 @@ protected:
   KIconTemplateContainer *icontemplates;
 #endif
 
-private:
   KMenuBar *menubar;
   KToolBar *toolbar, *drawtoolbar;
   KStatusBar *statusbar;
@@ -187,7 +199,11 @@ private:
   QScrollView *viewport;
   KIcon *icon;
   KDNDDropZone *dropzone;
+  KDropSite *dropsite;
+  KDragSource *dragbutton;
   KIconEditProperties *kiprops;
+  QWhatsThis *what;
+  QImage img;
 };
 
 

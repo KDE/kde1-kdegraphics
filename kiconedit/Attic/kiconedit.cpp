@@ -18,8 +18,11 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include <qwhatsthis.h>
+#include <qtooltip.h>
 #include "debug.h"
 #include "kiconedit.h"
+#include "kdragsource.h"
 #include "main.h"
 #include "pics/logo.xpm"
 
@@ -43,6 +46,7 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   toolbar = 0L;
   drawtoolbar = 0L;
   statusbar = 0L;
+  what = 0L;
   mainview = 0L;
 
   msgtimer = new QTimer(this);
@@ -83,7 +87,7 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   }
   //viewport->setMouseTracking(true);
 
-  gridview = new KGridView(viewport->viewport()); //KIconEditView(this);
+  gridview = new KGridView(img, viewport->viewport()); //KIconEditView(this);
   CHECK_PTR(gridview);
   gridview->setShowRulers(pprops->showrulers);
 
@@ -106,15 +110,27 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   icon = new KIcon(this, &grid->image());
   CHECK_PTR(icon);
 
-  dropzone = new KDNDDropZone( this, DndURL);
+  dropzone = new KDNDDropZone( gridview, DndURL);
   CHECK_PTR(dropzone);
   connect( dropzone, SIGNAL( dropAction( KDNDDropZone *) ), 
     this, SLOT( slotDropEvent( KDNDDropZone *) ) );
 
+  dropsite = new KDropSite( grid );
+  CHECK_PTR(dropsite);
+  connect( dropsite, SIGNAL( dropAction( QDropEvent*) ), 
+    this, SLOT( slotQDropEvent( QDropEvent*) ) );
+
+  connect( dropsite, SIGNAL( dragLeave( QDragLeaveEvent*) ), 
+    this, SLOT( slotQDragLeaveEvent( QDragLeaveEvent*) ) );
+
+  connect( dropsite, SIGNAL( dragEnter( QDragEnterEvent*) ), 
+    this, SLOT( slotQDragEnterEvent( QDragEnterEvent*) ) );
+
+  setupStatusBar();
   setupMenuBar();
   setupToolBar();
   setupDrawToolBar();
-  setupStatusBar();
+  setupWhatsThis();
 
   connect( icon, SIGNAL( saved()),
            SLOT(slotSaved()));
@@ -198,6 +214,9 @@ KIconEdit::~KIconEdit()
       delete newicon;
     newicon = 0L; 
 */
+    if(what)
+      delete what;
+    what = 0L;
     if(toolbar)
       delete toolbar;
     toolbar = 0L; 
@@ -338,7 +357,7 @@ QSize KIconEdit::sizeHint()
     return QSize(-1, -1);
 }
 
-KMenuBar *KIconEdit::setupMenuBar()
+bool KIconEdit::setupMenuBar()
 {
   debug("setupMenuBar");
   if(!menubar)
@@ -524,7 +543,7 @@ KMenuBar *KIconEdit::setupMenuBar()
   //connect( menubar, SIGNAL(activated(int)), SLOT(slotActions(int)));
 
   debug("setupMenuBar - done");
-  return menubar;
+  return true;
 }
 
 void KIconEdit::updateMenuAccel()
@@ -546,14 +565,30 @@ void KIconEdit::updateMenuAccel()
 
 }
 
-KToolBar *KIconEdit::setupToolBar()
+bool KIconEdit::setupToolBar()
 {
   Properties *pprops = props(this);
   debug("setupToolBar");
+
   toolbar = new KToolBar(this);
   CHECK_PTR(toolbar);
   addToolBar(toolbar);
 
+  what = new QWhatsThis;
+  QWidget *btwhat = (QWidget*)what->whatsThisButton(toolbar);
+  QToolTip::add(btwhat, i18n("What is ...?"));
+
+  QImage i;
+  QPixmap p(Icon("image.xpm"));
+  i = p;
+  i = i.smoothScale(20, 20);
+  p = i;
+  dragbutton = new KDragSource("image/x-xpm", grid, SLOT(getImage(QImage*)), toolbar);
+  dragbutton->setPixmap(p);
+  QToolTip::add(dragbutton, i18n("Drag source"));
+
+  toolbar->insertWidget(-1, 22, dragbutton);
+  toolbar->insertSeparator();
   toolbar->insertButton(Icon("filenew.xpm"), ID_FILE_NEWFILE,
          SIGNAL(clicked()), this, SLOT(slotNew()), TRUE, i18n("New File"));
   toolbar->insertButton(Icon("fileopen.xpm"),ID_FILE_OPEN,
@@ -577,7 +612,7 @@ KToolBar *KIconEdit::setupToolBar()
   select->insertItem(Icon("selectcircle.xpm"), ID_SELECT_CIRCLE);
   connect( select, SIGNAL(activated(int)), SLOT(slotTools(int)));
 
-  toolbar->insertButton(Icon("areaselect.xpm"), ID_SELECT_RECT, select, true, i18n("Select area"));
+  toolbar->insertButton(Icon("areaselect.xpm"), ID_SELECT, select, true, i18n("Select area"));
   //drawtoolbar->setToggle(ID_DRAW_SELECT, true);
 
   toolbar->insertSeparator();
@@ -605,10 +640,14 @@ KToolBar *KIconEdit::setupToolBar()
   if(pprops->showgrid)
     ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(true);
 
+  toolbar->insertSeparator();
+
   toolbar->insertButton(Icon("newwin.xpm"),ID_FILE_NEWWIN,
          SIGNAL(clicked()), this, SLOT(slotNewWin()), TRUE, i18n("New Window"));
   toolbar->alignItemRight( ID_FILE_NEWWIN, true);
     
+  toolbar->insertWidget(ID_HELP_WHATSTHIS, btwhat->sizeHint().width(), btwhat);
+
   toolbar->setBarPos(pprops->maintoolbarpos);
   if(pprops->maintoolbarstat)
     toolbar->enable(KToolBar::Show);
@@ -620,10 +659,10 @@ KToolBar *KIconEdit::setupToolBar()
   connect( toolbar, SIGNAL(clicked(int)), SLOT(slotConfigure(int)));
 
   debug("setupToolBar - done");
-  return toolbar;
+  return true;
 }
 
-KToolBar *KIconEdit::setupDrawToolBar()
+bool KIconEdit::setupDrawToolBar()
 {
   debug("setupDrawToolBar");
   Properties *pprops = props(this);
@@ -667,10 +706,10 @@ KToolBar *KIconEdit::setupDrawToolBar()
   connect( drawtoolbar, SIGNAL(clicked(int)), SLOT(slotTools(int)));
 
   debug("setupDrawToolBar - done");
-  return drawtoolbar;
+  return true;
 }
 
-KStatusBar *KIconEdit::setupStatusBar()
+bool KIconEdit::setupStatusBar()
 {
   Properties *pprops = props(this);
   statusbar = new KStatusBar(this);
@@ -686,9 +725,108 @@ KStatusBar *KIconEdit::setupStatusBar()
     statusbar->enable(KStatusBar::Show);
   else
     statusbar->enable(KStatusBar::Hide);
-  return statusbar;
+  return true;
 }
 
+bool KIconEdit::setupWhatsThis()
+{ // QWhatsThis *what is created in setupToolbar
+
+  debug("setupWhatsThis");
+
+  // Create help for the custom widgets
+
+  QString str = i18n("Icon draw grid\n\nThe icon grid is the area where you draw the icons.\n"
+                 "You can zoom in and out using the magnifying glasses on the toolbar.\n"
+                 "(Tip: Hold the magnify button down for a few seconds to zoom to a predefined scale");
+  what->add(grid, str.data());
+
+  str = i18n("Rulers\n\nThis is a visual represantation of the current cursor position");
+  what->add(gridview->hruler(), str.data());
+  what->add(gridview->vruler(), str.data());
+
+  str = i18n("Statusbar\n\nThe statusbar gives information of the status "
+             "of the current icon. The fields are:\n\n"
+             "\t- Cursor position\n"
+             "\t- Size\n"
+             "\t- Zoom factor\n"
+             "\t- Number of colors\n"
+             "\t- Application messages");
+  what->add(statusbar, str.data());
+
+  str = i18n("Preview\n\nThis is a 1:1 preview of the current icon");
+  what->add(toolsw->getPreviewWidget(), str.data());
+
+  str = i18n("System colors\n\nHere you can select colors from the KDE Icon Palette.");
+  what->add(toolsw->getSysColors(), str.data());
+
+  str = i18n("Custom colors\n\nHere you can build a palette of custom colors.\n"
+             "Just double-click on a box to edit the color");
+  what->add(toolsw->getCustomColors(), str.data());
+
+  // Create help for the main toolbar
+
+  str = i18n("New\n\nCreate a new icon either from a template or by specifying the size");
+  what->add(toolbar->getButton(ID_FILE_NEWFILE), str.data());
+
+  str = i18n("Open\n\nOpen an existing icon");
+  what->add(toolbar->getButton(ID_FILE_OPEN), str.data());
+
+  str = i18n("Save\n\nSave the current icon");
+  what->add(toolbar->getButton(ID_FILE_SAVE), str.data());
+
+  str = i18n("Print\n\nOpens a print dialog to let you print the current icon."
+             " (Doesn't realy work as expected");
+  what->add(toolbar->getButton(ID_FILE_PRINT), str.data());
+
+  str = i18n("Cut\n\nCut the current selection out of the icon\n\n"
+             "(Tip: You can make both rectangular and circular selections)");
+  what->add(toolbar->getButton(ID_EDIT_CUT), str.data());
+
+  str = i18n("Copy\n\nCopy the current selection out of the icon\n\n"
+             "(Tip: You can make both rectangular and circular selections)");
+  what->add(toolbar->getButton(ID_EDIT_COPY), str.data());
+
+  str = i18n("Paste\n\nPaste the contents of the clipboard into the current icon.\n\n"
+             "If the contents is larger than the current icon you can paste it"
+             " in a new window.");
+  what->add(toolbar->getButton(ID_EDIT_PASTE), str.data());
+
+  str = i18n("Select\n\nSelect a section of the icon using the mouse.\n\n"
+             "(Tip: You can make both rectangular and circular selections)");
+  what->add(toolbar->getButton(ID_SELECT), str.data());
+
+  str = i18n("Resize\n\nSmoothly resizes the icon while trying to preserve the contents");
+  what->add(toolbar->getButton(ID_IMAGE_RESIZE), str.data());
+
+  str = i18n("Gray scale\n\nGray scale the current icon.\n"
+             "(Warning: The result is likely to contain colors not in the icon palette");
+  what->add(toolbar->getButton(ID_IMAGE_GRAYSCALE), str.data());
+
+  str = i18n("Zoom out\n\nZoom out by one.\n\n"
+             "(Tip: Hold the button down for a few seconds to zoom to a predefined scale");
+  what->add(toolbar->getButton(ID_VIEW_ZOOM_OUT), str.data());
+
+  str = i18n("Zoom in\n\nZoom in by one.\n\n"
+             "(Tip: Hold the button down for a few seconds to zoom to a predefined scale");
+  what->add(toolbar->getButton(ID_VIEW_ZOOM_IN), str.data());
+
+  str = i18n("Toggle grid\n\nToggles the grid in the icon edit grid on/off");
+  what->add(toolbar->getButton(ID_OPTIONS_TOGGLE_GRID), str.data());
+
+  str = i18n("New window\n\nOpens a new Icon Editor window.");
+  what->add(toolbar->getButton(ID_FILE_NEWWIN), str.data());
+
+  str = i18n("Whats is...?\n\nWell since you're reading this I guess you found out ;-)");
+  what->add(toolbar->getButton(ID_HELP_WHATSTHIS), str.data());
+
+  str = i18n("Drag source\n\nFrom this button you're supposed to be able to drag out a copy of the current icon.");
+  what->add(dragbutton, str.data());
+
+  // Setup help for the tools toolbar
+
+  debug("setupWhatsThis - done");
+  return true;
+}
 
 void KIconEdit::addRecent(const char *filename)
 {

@@ -28,7 +28,7 @@ int KIconEditProperties::instances = 0;
 KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
 {
   instances++;
-  debug("KIconEditProperties: instances %d", instances);
+  //debug("KIconEditProperties: instances %d", instances);
   if(pprops)
     return;
 
@@ -134,3 +134,4 @@ void KIconEditProperties::saveProperties(QWidget *parent)
   config->writeEntry("GridScaling", pprops->gridscaling);
   config->writeEntry("ShowRulers", pprops->showrulers);
 }
+
