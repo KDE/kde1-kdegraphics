@@ -1,3 +1,2 @@
-*.gif
-*.bmp
-*.xpm
+Makefile
+Makefile.in
