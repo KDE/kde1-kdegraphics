@@ -193,8 +193,8 @@ protected slots:
 private:
 
 	KMenuBar *menubar;
-	QPopupMenu *m_file;
-	QPopupMenu *m_recent;
+	QPopupMenu *m_file0, *m_file;
+	//	QPopupMenu *m_recent;
 	QPopupMenu *m_view;
 	QPopupMenu *m_go;
 	QPopupMenu *m_pagemarks;
@@ -263,6 +263,8 @@ private:
 	int current_pagemedia, default_pagemedia, document_media;
 	int current_orientation;
 	Bool changed;
+
+	int *fileidlist, nrecent, sepindex;
 	
 	 /// KFM client
     /**
