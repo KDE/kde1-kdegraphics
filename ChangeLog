@@ -1,5 +1,8 @@
 1998-11-13  Alex Zepeda  <garbanzo@hooked.net>
 
+	* Makefile.cvs (all): Use an updated Makefile.cvs from kdenetwork that
+	tests for the admin directory.
+
 	* configure.in.1: Remove comment about this being Alpha (quality)
 	software, and update version number (now it's at 1.1pre).  Also, now
 	it uses the kde-common copy of the autoconf stuff.
