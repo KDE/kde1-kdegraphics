@@ -19,7 +19,7 @@ lnk_DATA = kview.kdelnk
 
 EXTRA_DIST = $(lnk_DATA)
 
-#kview_LDADD = $(all_libraries) -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
+#kview_LDADD = -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = layout/liblayout.a \
