@@ -184,7 +184,7 @@ msgstr "En saanut tulostettua \"%s\"\n"
 
 #: kfax.cpp:1015
 msgid "Couldn't create %s\n"
-msgstr "En saanut luotua %s\n"
+msgstr "En saanut luotua: %s\n"
 
 #: kfax.cpp:1085
 msgid "Saving ..."
@@ -212,7 +212,7 @@ msgid ""
 "for an internet job to finish\n"
 "Please wait until has finished\n"
 msgstr ""
-"KFax odottaa Internet työn\n"
+"KFax odottaa Internet-työn\n"
 "valmistumista. Odota hetki.\n"
 
 #: kfax.cpp:1143 kfax.cpp:1207
@@ -335,7 +335,7 @@ msgstr "Skaalaa faksi sivukokoon"
 
 #: print.cpp:111
 msgid "Add Printer Margins (measured in cm):"
-msgstr "Lisää tulostimen mariginaalit (cm):"
+msgstr "Lisää tulostimen marginaalit (cm):"
 
 #: print.cpp:119
 msgid "Horizontal:"
@@ -358,5 +358,5 @@ msgid ""
 "You must enter a print command such as \"lpr\"\n"
 " if you wish to print to a printer."
 msgstr ""
-"Sinun on annettava tulostuskomento kuten \"lpr\"\n"
+"Sinun on annettava tulostuskomento, kuten \"lpr\"\n"
 " jos haluat tulostaa tulostimelle."

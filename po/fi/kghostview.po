@@ -454,7 +454,7 @@ msgid ""
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
 msgstr ""
-"Odottaa jo internet\n"
+"Odottaa jo internet-\n"
 "työn valmistumista. Odota kunnes se loppuu.\n"
 "tai keskeytä käynnissä oleva."
 
@@ -529,7 +529,7 @@ msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
-"Tiedostonimeä ei ole annettu joten\n"
+"Tiedostonimeä ei ole annettu, joten\n"
 "mitään ei voida tulostaa tiedostoon.\n"
 
 #: kghostview.cpp:1665
@@ -542,7 +542,7 @@ msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
-"Tulostus epäonnistui koska lista\n"
+"Tulostus epäonnistui, koska lista\n"
 "tulostettavista sivuista on tyhjä.\n"
 
 #: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
@@ -616,7 +616,7 @@ msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
-"Lue Qt:n dokumentaatioa\n"
+"Lue Qt:n dokumentaatiota\n"
 "komentorivioptioista.\n"
 
 #: main.cpp:30
@@ -750,9 +750,3 @@ msgstr "&Käytä"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Suurennus"
-
-#~ msgid "Print"
-#~ msgstr "Tulosta"
-
-#~ msgid "&Reload"
-#~ msgstr "&Uudelleenlataa"

@@ -25,7 +25,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "Muutokset fonttien generoinnissa ovat voimassa\n"
-"vasta kun olet käynnistänyt kdvi:n uudelleen!"
+"vasta, kun olet käynnistänyt kdvi:n uudelleen!"
 
 #: dviwin.cpp:233
 msgid ""
@@ -33,15 +33,15 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "Muutos fonttipolkuun tulee voimaan\n"
-"vasta kun olet käynnistänyt kdvi:n uudelleen!"
+"vasta, kun olet käynnistänyt kdvi:n uudelleen!"
 
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Muutos Metafont moodiin tulee voimaan\n"
-"vasta kun olet käynnistänyt kdvi:n uudelleen!"
+"Muutos Metafont-moodiin tulee voimaan\n"
+"vasta, kun olet käynnistänyt kdvi:n uudelleen!"
 
 #: dviwin.cpp:284
 msgid ""
@@ -49,7 +49,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "Muutos resoluutioon tulee voimaan\n"
-"vasta kun olet käynnistänyt kdvi:n uudelleen!"
+"vasta, kun olet käynnistänyt kdvi:n uudelleen!"
 
 #: dviwin.cpp:301
 msgid ""
@@ -57,7 +57,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "Muutos gammakorjaukseen tulee voimaan\n"
-"vasta kun olet käynnistänyt kdvi:n uudelleen!"
+"vasta, kun olet käynnistänyt kdvi:n uudelleen!"
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
@@ -65,7 +65,7 @@ msgstr "HEI"
 
 #: dviwin.cpp:425 dviwin.cpp:459
 msgid "What's this? DVI problem!\n"
-msgstr "Mikä tämä on? DVI ongelma!\n"
+msgstr "Mikä tämä on? DVI-ongelma!\n"
 
 #: kdvi.cpp:92
 msgid "No document"
@@ -169,11 +169,11 @@ msgstr "Näytä &tilarivi"
 
 #: kdvi.cpp:229
 msgid "Show Scro&llbars"
-msgstr "Näytä &liukupalkit"
+msgstr "Näytä &vierityspalkit"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr "DVI näyttäjä"
+msgstr "DVI-näyttäjä"
 
 #: kdvi.cpp:240
 msgid ""
@@ -219,7 +219,7 @@ msgstr "Siirry viimeiselle sivulle"
 
 #: kdvi.cpp:270
 msgid "Decrease magnification"
-msgstr "Suurenna suurennusta"
+msgstr "Pienennä suurennusta"
 
 #: kdvi.cpp:271
 msgid "Small text"
@@ -235,7 +235,7 @@ msgstr "Pienennä suurennusta"
 
 #: kdvi.cpp:298
 msgid "Scroll window and switch the page"
-msgstr "Skrollaa ikkunaa ja vaida sivua"
+msgstr "Vieritä ikkunaa ja vaida sivua"
 
 #: kdvi.cpp:307
 msgid "Select page and mark pages for printing"
@@ -331,7 +331,7 @@ msgstr "Näytä/piilota tilarivi"
 
 #: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Näytä/piilota liukupalkit"
+msgstr "Näytä/piilota vierityspalkit"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
@@ -383,7 +383,7 @@ msgstr "Puuttuvat PK-kirjasimet luodaan"
 
 #: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
-msgstr "Puuttuvat PK-kirjasimet kirjoitetaan 'missfont.log':n"
+msgstr "Puuttuvat PK-kirjasimet kirjataan 'missfont.log'-tiedostoon"
 
 #: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
@@ -415,7 +415,7 @@ msgstr "Työkalupalkki näkyvissä"
 
 #: kdvi.cpp:779
 msgid "No tool bar"
-msgstr "Ei työkalipalkkia"
+msgstr "Ei työkalupalkkia"
 
 #: kdvi.cpp:803
 msgid "No status bar"
@@ -427,11 +427,11 @@ msgstr "Tilarivi näkyvissä"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Liukupalkit näkyvissä"
+msgstr "Vierityspalkit näkyvissä"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
-msgstr "Ei liukupalkkeja"
+msgstr "Ei vierityspalkkeja"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -447,7 +447,7 @@ msgstr "Iso tekstinappi asetettu pienennyskertoimeen "
 
 #: kdvi.cpp:913
 msgid "Small text button set to shrink factor "
-msgstr "Pieni tekstinappi asetettu pienennysketoimeen "
+msgstr "Pieni tekstinappi asetettu pienennyskertoimeen "
 
 #: kdvi.cpp:937
 msgid "File reloaded"
@@ -503,7 +503,7 @@ msgstr "Sivulista"
 
 #: prefs.cpp:218
 msgid "Scroll Bars"
-msgstr "Liukupalkit"
+msgstr "Vierityspalkit"
 
 #: prefs.cpp:240
 msgid "Number of recent files"
@@ -535,7 +535,7 @@ msgstr "Pienennyskerroin suurelle tekstille"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"
-msgstr "Näytä postscript erikoisuudet"
+msgstr "Näytä postscript-erikoisuudet"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
@@ -672,21 +672,3 @@ msgstr "n-ylös"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Tulostusmetodi"
-
-#~ msgid "&Previous"
-#~ msgstr "&Edellinen"
-
-#~ msgid "&Next"
-#~ msgstr "&Seuraava"
-
-#~ msgid "Appearance"
-#~ msgstr "Ulkonäkö"
-
-#~ msgid "Fonts"
-#~ msgstr "Kirjasimet"
-
-#~ msgid "Print"
-#~ msgstr "Tulosta"
-
-#~ msgid "&Remove"
-#~ msgstr "&poista"

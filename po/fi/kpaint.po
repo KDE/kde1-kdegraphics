@@ -20,7 +20,7 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Julkaistu GPL:n alla katso LICENSE tiedostoa\n"
+"(c) Richard J. Moore 1997 Julkaistu GPL:n alla, katso LICENSE tiedostoa\n"
 "lisätietojen saamiseksi\n"
 
 #: app.cpp:46
@@ -102,8 +102,7 @@ msgstr "Tallentamattomat muutokset"
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-"Sinulla on tallentamattomia muutoksia, menetät ne jos suljet tämän ikkunan."
+msgstr "Et ole tallentanut muutoksia, menetät ne, jos suljet tämän ikkunan."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -151,7 +150,7 @@ msgstr "Avaa URL:ta..."
 
 #: kpaint.cpp:319
 msgid "Save to URL..."
-msgstr "Tallenna URL:n..."
+msgstr "Tallenna URL:iin..."
 
 #: kpaint.cpp:321
 msgid "New Window"
@@ -195,7 +194,7 @@ msgstr "Muuta kokoa..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
-msgstr "Editoi palettia..."
+msgstr "Muokkaa palettia..."
 
 #: kpaint.cpp:340
 msgid "Change Colour Depth..."
@@ -277,7 +276,7 @@ msgid ""
 "KPaint could not open the specified file."
 msgstr ""
 "Virhe: En saa avattua tiedostoa\n"
-"KPaint ei saanut avattua tiedostoa."
+"KPaint ei voinut avata tiedostoa."
 
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
@@ -306,7 +305,7 @@ msgstr "Työkalujen ominaisuudet"
 
 #: palette.cpp:100
 msgid "Edit Colour"
-msgstr "Editoi väriä"
+msgstr "Muokkaa väriä"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -403,9 +402,3 @@ msgstr "Viivan väri..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Monikulmio"
-
-#~ msgid "Continue"
-#~ msgstr "Jatka"
-
-#~ msgid "None"
-#~ msgstr "Ei mikään"
