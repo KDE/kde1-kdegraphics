@@ -1,5 +1,5 @@
 /*  
-    kdraw - a small graphics drawing program for the KDE
+    KDE Icon Editor - a small graphics drawing program for the KDE
 
     Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
 
@@ -37,11 +37,12 @@
 #include <kfilesimpleview.h>  
 
 
-class KDrawFileDlg : public KFileBaseDialog
+class KIconFileDlg : public KFileBaseDialog
 {
   Q_OBJECT
 public:
-  KDrawFileDlg(const char *dir, const char *filter = 0);
+  KIconFileDlg(const char *dir, const char *filter = 0);
+  ~KIconFileDlg();
 
   static QString getOpenFileName(const char *dir= 0, const char *filter= 0);
   static QString getSaveFileName(const char *dir= 0, const char *filter= 0);
@@ -49,6 +50,10 @@ public:
 protected:
   bool getShowFilter() { return false; }
   KFileInfoContents *initFileList( QWidget *parent);
+  QWidget *swallower();
+
+  QWidget *w, *p;
+  QLabel *preview;
 };
 
 #endif //__KDRAWFILEDLG_H__

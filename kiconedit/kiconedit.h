@@ -24,7 +24,7 @@
 #include <qdir.h>
 #include <qprinter.h>
 #include <kapp.h>
-#include <ktopwidget.h>
+#include <ktmainwindow.h>
 #include <kiconloader.h>
 #include <kmenubar.h>
 #include <kmsgbox.h>
@@ -116,7 +116,7 @@ class KDragSource;
 * @author Thomas Tanghus <tanghus@kde.org>
 * @version 0.4
 */
-class KIconEdit : public KTopLevelWidget
+class KIconEdit : public KTMainWindow
 {
     Q_OBJECT
 public:

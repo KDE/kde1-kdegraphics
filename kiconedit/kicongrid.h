@@ -72,11 +72,13 @@ public:
   void setShowRulers(bool mode);
   bool rulers() { return pprops->showrulers; }
   void setAcceptDrop(bool a);
+  const QRect viewRect();
 
 public slots:
   void sizeChange(int, int);
   void moving(int, int);
   void scalingChange(int, bool);
+  void paintGrid();
 
 protected:
   virtual void paintEvent(QPaintEvent*);
@@ -109,6 +111,7 @@ public:
         FilledCircle, Ellipse, FilledEllipse, Eraser, SelectRect, SelectCircle, Find };
   enum DrawAction { Mark, UnMark, Draw };
 
+  void setGrid(bool g) { KColorGrid::setGrid(g); emit needPainting(); }
   bool isModified() { return modified; };
   void setModified(bool m) { modified = m; }
   const QPixmap &pixmap();
@@ -153,6 +156,7 @@ signals:
   void newmessage(const char *);
   void clipboarddata(bool);
   void selecteddata(bool);
+  void needPainting();
 
 protected slots:
   void setColorSelection( uint );

@@ -18,6 +18,7 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include "kiconfiledlg.h"
 #include "debug.h"
 #include "kicon.h"
 
@@ -241,7 +242,7 @@ void KIcon::promptForFile(const QImage *img)
       i18n("We've got a KFM job running.\nPlease wait."), KMsgBox::STOP);
     return;    
   }
-  QString tmpname = KFileDialog::getOpenFileURL(_lastdir.data(), "*.xpm");
+  QString tmpname = KFilePreviewDialog::getOpenFileURL(_lastdir.data(), "*.xpm");
   if(tmpname.length() == 0)
     return;
   open(img, tmpname.data());
@@ -424,7 +425,7 @@ void KIcon::saveAs(const QImage *image)
       i18n("We've got a KFM job running.\nPlease wait."), KMsgBox::STOP);
     return;    
   }
-  QString tmpname = KFileDialog::getSaveFileURL(_lastdir.data(), "*.xpm");
+  QString tmpname = KIconFileDlg::getSaveFileName(_lastdir.data(), "*.xpm");
   if(tmpname.length() == 0)
     return;
   save(image, tmpname.data());

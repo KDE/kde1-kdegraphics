@@ -1,5 +1,5 @@
 /*  
-    kdraw - a small graphics drawing program for the KDE
+    KDE Icon Editor - a small graphics drawing program for the KDE
 
     Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
 
@@ -20,19 +20,34 @@
 */  
 
 #include "debug.h"
+#include <qlayout.h>
 #include "kiconfiledlg.h"
 
-KDrawFileDlg::KDrawFileDlg(const char *dir, const char *filter)
+KIconFileDlg::KIconFileDlg(const char *dir, const char *filter)
  : KFileBaseDialog(dir, filter, 0, 0, true, true)
 {
   initMetaObject();
+  w = new QWidget;
+  preview = new QLabel(w);
+  preview->setFixedSize(100, 100);
+
   init();
 }
 
-QString KDrawFileDlg::getOpenFileName(const char *dir, const char *filter)
+KIconFileDlg::~KIconFileDlg()
+{
+  delete w;
+}
+
+QWidget *KIconFileDlg::swallower()
+{
+  return w;
+}
+
+QString KIconFileDlg::getOpenFileName(const char *dir, const char *filter)
 {
     QString filename;
-    KDrawFileDlg *dlg = new KDrawFileDlg(dir, filter);
+    KIconFileDlg *dlg = new KIconFileDlg(dir, filter);
     
     dlg->setCaption(i18n("Open image"));
     
@@ -44,9 +59,9 @@ QString KDrawFileDlg::getOpenFileName(const char *dir, const char *filter)
     return filename;
 }
  
-QString KDrawFileDlg::getSaveFileName(const char *dir, const char *filter)
+QString KIconFileDlg::getSaveFileName(const char *dir, const char *filter)
 {
-    KDrawFileDlg *dlg = new KDrawFileDlg(dir, filter);
+    KIconFileDlg *dlg = new KIconFileDlg(dir, filter);
     
     dlg->setCaption(i18n("Save image As"));
     
@@ -60,7 +75,7 @@ QString KDrawFileDlg::getSaveFileName(const char *dir, const char *filter)
     return filename;
 }
 
-KFileInfoContents *KDrawFileDlg::initFileList( QWidget *parent )
+KFileInfoContents *KIconFileDlg::initFileList( QWidget *parent )
 {
 
     bool mixDirsAndFiles = 

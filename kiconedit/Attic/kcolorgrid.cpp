@@ -73,7 +73,7 @@ KColorGrid::KColorGrid(QWidget *parent, const char *name, int space)
   //debug("KColorGrid - constructor");
   initMetaObject();
   s = space;
-  ypos = xpos = rows = cols = totalwidth = totalheight = 0;
+  rows = cols = totalwidth = totalheight = 0;
   setCellSize(10);
   setGridState(Plain);
   setGrid(true);
@@ -91,7 +91,7 @@ void KColorGrid::show()
 */
 void KColorGrid::paintEvent(QPaintEvent *e)
 {
-  //debug("KColorGrid::paintEvent");
+  debug("KColorGrid::paintEvent");
 
   //updateScrollBars();
   //QWidget::paintEvent(e);
@@ -115,6 +115,8 @@ void KColorGrid::paintEvent(QPaintEvent *e)
   firstcol = (firstcol < 0) ? 0 : firstcol;
   lastrow = (lastrow >= rows) ? rows : lastrow;
   lastcol = (lastcol >= cols) ? cols : lastcol;
+  //debug("%d x %d  -  row: %d x %d", urect.x(), urect.y(), urect.width(), urect.height());
+  //debug("col: %d -> %d  -  row: %d -> %d", firstcol, lastcol, firstrow, lastrow);
 
 /*
   if(this->isA("KDrawGrid"))
@@ -127,7 +129,7 @@ void KColorGrid::paintEvent(QPaintEvent *e)
     //  debug("Updating row %d", i);
     for(int j = firstcol; j < lastcol; j++)
     {
-      matrix.translate( (j*cellsize)-xpos, (i*cellsize)-ypos );
+      matrix.translate( (j*cellsize), (i*cellsize) );
       p.setWorldMatrix( matrix );
       //p.setClipRect(j*cellsize, i*cellsize, cellsize, cellsize);
       paintCell(&p, i, j);
@@ -157,7 +159,6 @@ QSize KColorGrid::sizeHint() const
 
 int KColorGrid::getY( int y )
 {
-  y += ypos;
   if(y > (totalheight-1))
     y = totalheight;
   if(cellsize == 1)
@@ -167,7 +168,6 @@ int KColorGrid::getY( int y )
 
 int KColorGrid::getX( int x )
 {
-  x += xpos;
   if( x > totalwidth-1)
     x = totalwidth;
   if(cellsize == 1)
@@ -289,7 +289,7 @@ void KColorGrid::updateCell( int row, int col, bool erase )
   QWMatrix matrix;
   QPainter p;
   p.begin( this );
-  matrix.translate( (col*cellsize)-xpos, (row*cellsize)-ypos );
+  matrix.translate( (col*cellsize), (row*cellsize) );
   p.setWorldMatrix( matrix );
   paintCell(&p, row, col);
   p.end();

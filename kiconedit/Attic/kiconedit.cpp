@@ -26,7 +26,7 @@
 #include "main.h"
 
 KIconEdit::KIconEdit(const QImage image, const char *name)
- : KTopLevelWidget(name)
+ : KTMainWindow(name)
 {
   init();
   img = image;
@@ -36,7 +36,7 @@ KIconEdit::KIconEdit(const QImage image, const char *name)
 }
 
 KIconEdit::KIconEdit(const char *xpm, const char *name)
- : KTopLevelWidget(name)
+ : KTMainWindow(name)
 {
   init();
   icon->open(&img, xpm);

@@ -64,9 +64,9 @@ public:
   enum GridState { Plain, Shaded };
 
   void setSpacing(int space) { s = space; update(); }
-  void setGridState(GridState state) { gridstate = state; update(); }
+  void setGridState(GridState state) { gridstate = state;}
   GridState gridState() { return gridstate; }
-  void setGrid(bool state) { hasgrid = state; repaint(viewRect()); }
+  void setGrid(bool state) { hasgrid = state; }
   int spacing() { return s; }
   bool hasGrid() { return hasgrid; }
   uint numColors() { return numcolors.size(); }

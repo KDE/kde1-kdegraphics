@@ -73,6 +73,7 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
 
   connect(_grid, SIGNAL(scalingchanged(int, bool)), SLOT(scalingChange(int, bool)));
   connect(_grid, SIGNAL(sizechanged(int, int)), SLOT(sizeChange(int, int)));
+  connect(_grid, SIGNAL(needPainting()), SLOT(paintGrid()));
   connect( _grid, SIGNAL(xposchanged(int)), _hruler, SLOT(slotNewValue(int)) );
   connect( _grid, SIGNAL(yposchanged(int)), _vruler, SLOT(slotNewValue(int)) );
   connect(viewport, SIGNAL(contentsMoving(int, int)), SLOT(moving(int, int)));
@@ -80,6 +81,11 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
   setSizes();
   QResizeEvent e(size(), size());
   resizeEvent(&e);
+}
+
+void KGridView::paintGrid()
+{
+  _grid->update(viewRect());
 }
 
 void KGridView::setSizes()
@@ -166,7 +172,7 @@ void KGridView::setAcceptDrop(bool a)
   paintDropSite();
 }
 
-void KGridView::paintDropSite()
+const QRect KGridView::viewRect()
 {
   int x, y, cx, cy;
   if(viewport->horizontalScrollBar()->isVisible())
@@ -191,10 +197,15 @@ void KGridView::paintDropSite()
     cy = viewport->contentsHeight();
   }
 
+  return QRect(x, y, cx, cy);
+}
+
+void KGridView::paintDropSite()
+{
   QPainter p;
   p.begin( _grid );
   p.setRasterOp (NotROP);
-  p.drawRect(x, y, cx, cy );
+  p.drawRect(viewRect());
   p.end();
 }
 
@@ -291,10 +302,12 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
   //KColorGrid::paintCell(painter, row, col);
   //debug("KIconEditGrid::paintCell()");
   //bool tp = colorAt( row * numCols() + col ) == TRANSPARENT;
-  QBrush brush(colorAt( row * numCols() + col ));
+  //QBrush brush(colorAt( row * numCols() + col ));
+  int sel = row * numCols() + col;
   int s = cellSize();
+  uint c = colorAt(sel);
 
-  if(cellSize() == 1)
+  if(s == 1)
   {
     if((ispasting || isselecting) && isMarked(col, row))
     {
@@ -303,7 +316,7 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
     }
     else
     {
-      painter->setPen(colorAt(row * numCols() + col));
+      painter->setPen(c);
       painter->drawPoint(0, 0);
     }
   }
@@ -315,11 +328,11 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
       painter->drawLine(1, s, s, s);
       painter->drawLine(s, s, s, 1);
       //if(!tp)
-        painter->fillRect(1, 1, s-1, s-1, brush);
+        painter->fillRect(1, 1, s-1, s-1, (QBrush)c ); //brush);
       //qDrawPlainRect( painter, 0, 0, s, s, black, 1, &brush);
     }
     else //if(!tp)
-      painter->fillRect(0, 0, s, s, brush);
+      painter->fillRect(0, 0, s, s, (QBrush)c); //brush);
     if((ispasting || isselecting) && isMarked(col, row))
     {
       painter->drawWinFocusRect( 1, 1, s-1, s-1);
@@ -333,7 +346,7 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
     case Spray:
     case Eraser:
     case Freehand:
-      if ( row * numCols() + col == selected)
+      if ( sel == selected)
       {
         if(cellSize() > 1)
           painter->drawWinFocusRect( 1, 1, s-1, s-1 );
@@ -596,7 +609,7 @@ void KIconEditGrid::mouseReleaseEvent( QMouseEvent *e )
       QApplication::setOverrideCursor(waitCursor);
       drawFlood(col, row, colorAt(cell));
       QApplication::restoreOverrideCursor();
-      repaint(viewRect(), false);
+      //repaint(viewRect(), false);
       p = *img;
       break;
     }
@@ -640,6 +653,9 @@ void KIconEditGrid::loadBlank( int w, int h )
 void KIconEditGrid::load( QImage *image)
 {
   debug("KIconEditGrid::load");
+
+  setUpdatesEnabled(false);
+
   if(image != 0L)
   {
     *img = *fixTransparence(image);
@@ -678,10 +694,12 @@ void KIconEditGrid::load( QImage *image)
     kapp->processEvents(200);
   }
   updateColors();
-  emit changed(pixmap());
   emit sizechanged(numCols(), numRows());
   emit colorschanged(numColors(), data());
-  repaint(viewRect(), false);
+  emit changed(pixmap());
+  setUpdatesEnabled(true);
+  emit needPainting();
+  //repaint(viewRect(), false);
 }
 
 const QPixmap &KIconEditGrid::pixmap()
@@ -702,7 +720,10 @@ bool KIconEditGrid::zoomTo(int scale)
 {
   QApplication::setOverrideCursor(waitCursor);
   emit scalingchanged(cellSize(), false);
+  setUpdatesEnabled(false);
   setCellSize( scale );
+  setUpdatesEnabled(true);
+  emit needPainting();
   QApplication::restoreOverrideCursor();
   emit scalingchanged(cellSize(), true);
   if(scale == 1)
@@ -715,7 +736,10 @@ bool KIconEditGrid::zoom(Direction d)
   int f = (d == In) ? (cellSize()+1) : (cellSize()-1);
   QApplication::setOverrideCursor(waitCursor);
   emit scalingchanged(cellSize(), false);
+  setUpdatesEnabled(false);
   setCellSize( f );
+  setUpdatesEnabled(true);
+  emit needPainting();
   QApplication::restoreOverrideCursor();
 
   emit scalingchanged(cellSize(), true);
@@ -1007,7 +1031,7 @@ void KIconEditGrid::editPasteAsNew()
     *img = *tmp;
     load(img);
     modified = true;
-    repaint(viewRect(), false);
+    //repaint(viewRect(), false);
 
     p = *img;
     emit changed(QPixmap(p));
