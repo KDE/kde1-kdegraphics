@@ -401,9 +401,3 @@ msgstr "Sett linjefarge..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid "Continue"
-#~ msgstr "Fortsett"
-
-#~ msgid "None"
-#~ msgstr "Ingen"

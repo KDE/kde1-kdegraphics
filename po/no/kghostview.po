@@ -765,9 +765,3 @@ msgstr "&Bruk"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Forstørrelse"
-
-#~ msgid "Print"
-#~ msgstr "Skriv ut"
-
-#~ msgid "&Reload"
-#~ msgstr "&Vis på nytt"

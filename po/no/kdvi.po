@@ -670,21 +670,3 @@ msgstr "n-opp"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Utskriftsmetode"
-
-#~ msgid "&Previous"
-#~ msgstr "&Forrige"
-
-#~ msgid "&Next"
-#~ msgstr "&Neste"
-
-#~ msgid "Appearance"
-#~ msgstr "Utseende"
-
-#~ msgid "Fonts"
-#~ msgstr "Skrifttyper"
-
-#~ msgid "Print"
-#~ msgstr "Skriv ut"
-
-#~ msgid "&Remove"
-#~ msgstr "&Fjern"
