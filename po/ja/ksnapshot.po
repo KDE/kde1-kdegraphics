@@ -1,0 +1,102 @@
+# KTranslator Generated File
+
+# KTranslator Generated File
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1999-03-05 01:49+0100\n"
+"PO-Revision-Date: Thu Apr 22 1999 17:51:44+0200\n"
+"Last-Translator: Kimiyasu Tomiyama <tomy@truga.com>\n"
+"Language-Team: Japanese <kde-jp@albert.nikkeibp.co.jp>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"X-Generator: KTranslator v 0.4.0"
+
+#: ksnapshot.cpp:41
+msgid "snapshot"
+msgstr "snapshot"
+
+#: ksnapshot.cpp:95
+#, c-format
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: %s"
+msgstr ""
+"グラブボタンを押して、その後に\n"
+"グラブしたいウインドウをクリックして下さい\n"
+"\n"
+"KSnapshotの著作権はRichard Moore (rich@kde.org)\n"
+"にあり、LGPLの下で配布されています\n"
+"\n"
+"ヴァージョン: %s"
+
+#: ksnapshot.cpp:130
+msgid "Filename:"
+msgstr "ファイル名"
+
+#: ksnapshot.cpp:162
+msgid "Delay:"
+msgstr "遅延時間"
+
+#: ksnapshot.cpp:171
+msgid "seconds."
+msgstr "秒"
+
+#: ksnapshot.cpp:191
+msgid "Auto raise"
+msgstr "自動的に上になる"
+
+#: ksnapshot.cpp:192
+msgid "Hide KSnapshot window"
+msgstr "KSnapshotウィンドウを隠す"
+
+#: ksnapshot.cpp:194
+msgid "Only grab the window containing the cursor"
+msgstr "カーソルの指しているウィンドウだけをグラブする"
+
+#: ksnapshot.cpp:225
+msgid "Grab"
+msgstr "グラブ"
+
+#: ksnapshot.cpp:455
+msgid "Error: Unable to save image"
+msgstr "エラー: 画像をセーブできません"
+
+#: ksnapshot.cpp:456
+msgid "Dismiss"
+msgstr "閉じる"
+
+#: ksnapshot.cpp:460
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot は %s\n"
+"に画像をセーブできません"
+
+#: ksnapshot.cpp:470
+msgid "KSnapshot preview"
+msgstr "KSnapshotプレビュー"
