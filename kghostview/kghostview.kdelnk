@@ -1,6 +1,7 @@
 # KDE Config File 
 [KDE Desktop Entry]
 Name=PS Viewer
+Name[de]=PS-Betrachter
 Name[pl]=PS Viewer
 Name[fi]=PS Näyttäjä
 Name[hu]=PS nézõ
@@ -14,6 +15,7 @@ Icon=kghostview.xpm
 Type=Application
 DocPath=kghostview/index.html
 Comment=PostScript document viewer
+Comment[de]=Betrachter für PostScript-Dokumente
 Comment[pl]=Podgl±darka dokumentów PostScriptowych
 Comment[fi]=Postscript dokumentin näyttäjä
 Comment[hu]=PostScript dokumentum nézõ
