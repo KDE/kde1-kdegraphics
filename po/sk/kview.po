@@ -45,6 +45,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- Graphics viewer. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -108,7 +111,7 @@ msgstr "&Reset"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Vlastnosti..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -158,25 +161,23 @@ msgstr "Prevráti» &horizontálne"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "Plocha &vydlá¾di»"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "Na &plochu"
+msgstr "Plocha &max"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Max&pect"
+msgstr "Plocha Max&pect"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Ako spravím..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "È&o je ..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -289,33 +290,31 @@ msgstr "&Spusti» prem."
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "Nastavenie kView"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Aplikova»"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Pri spustení"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "&Zavrie» okno"
+msgstr "Zmeni» veµkos» okna"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Zmeni» veµkos» obrázku"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Nemeni» veµkos»"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "&Premietanie Zap/Vyp"
+msgstr "Premietanie"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -323,20 +322,8 @@ msgstr "Opakovanie"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Slide interval (sek)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
-
-#~ msgid "&Tile"
-#~ msgstr "Vytapetov&a»"
-
-#~ msgid "&Max"
-#~ msgstr "&Max"
-
-#~ msgid "Interval.."
-#~ msgstr "Interval.."
-
-#~ msgid "Time between slides (sec):"
-#~ msgstr "Èas medzi políèkami (sek):"
+msgstr "&Klávesy"
