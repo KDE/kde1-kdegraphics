@@ -43,7 +43,7 @@
 
 #define PAGELIST_WIDTH 75
 
-
+#include <unistd.h>
 #include <qmsgbox.h>
 
 #include <kmisc.h>
