@@ -541,8 +541,8 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
   else {
     KMsgBox::message(0, klocale->translate("KPaint: Unknown Format"),
 		     klocale->translate("Error: Unknown Format\n"
-		     "KPaint does not understand the format of the specified file"
-		     "or the file is corrupt."),
+		     "KPaint does not understand the format of the "
+		     "specified file\nor the file is corrupt."),
 		     KMsgBox::EXCLAMATION,
 		     klocale->translate("Continue"));
     result= false;
