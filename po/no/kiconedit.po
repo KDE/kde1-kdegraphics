@@ -591,7 +591,7 @@ msgstr ""
 "Fra denne knappen kan du dra ut en kopi av gjeldende ikon og droppe det på "
 "et vindu som har støtte for dropp, f eks en annen Ikonredigerer.\n"
 "\n"
-"(Merk: Dra kilde-funksjonen bruker QT XDND-protokollen som foreløpig ikke er "
+"(Merk: Dra kilde-funksjonen bruker QT XDND-protokollen som foreløbig ikke er "
 "standard i KDE)"
 
 #: kiconedit.cpp:880
