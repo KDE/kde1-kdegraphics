@@ -465,13 +465,13 @@ void TopLevel::setupToolBar(){
   connect(toolbar, SIGNAL( clicked( int ) ), this,
 						SLOT( toolbarClicked( int ) ) );
 
-  connect(toolbar, SIGNAL( moved( Position ) ), this,
-						SLOT( toolbarMoved(Position ) ) );
+  connect(toolbar, SIGNAL( moved( BarPosition ) ), this,
+					SLOT( toolbarMoved(BarPosition ) ) );
 											
 
 }
 
-void TopLevel::toolbarMoved(Position  ){
+void TopLevel::toolbarMoved(BarPosition  ){
 
   resizeView();
 

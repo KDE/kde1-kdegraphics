@@ -107,7 +107,7 @@
 #define ID_ZOOM_OUT 21
 #define ID_ZOOM_IN 20
 
-typedef KToolBar::BarPosition Position;
+typedef KToolBar::BarPosition BarPosition;
 
 class MyApp:public KApplication {
 
@@ -240,7 +240,7 @@ public slots:
     void FreeFax();
     void scrollHorz(int);
     void scrollVert(int);
-    void toolbarMoved(Position);
+    void toolbarMoved(BarPosition);
 
     void slotKFMFinished();
     void slotDropEvent( KDNDDropZone * _dropZone );
