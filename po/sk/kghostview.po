@@ -117,7 +117,7 @@ msgstr "Backing"
 
 #: interpreter.cpp:214
 msgid "&Pixmap"
-msgstr "Pixmapa"
+msgstr "&Pixmapa"
 
 #: interpreter.cpp:224
 msgid "&Backing store"
@@ -133,94 +133,93 @@ msgstr "gs"
 
 #: kaccel.cpp:166
 msgid "CTRL+O"
-msgstr ""
+msgstr "CTRL+O"
 
 #: kaccel.cpp:170
 msgid "CTRL+N"
-msgstr ""
+msgstr "CTRL+N"
 
 #: kaccel.cpp:174
 msgid "CTRL+W"
-msgstr ""
+msgstr "CTRL+W"
 
 #: kaccel.cpp:178
 msgid "CTRL+S"
-msgstr ""
+msgstr "CTRL+S"
 
 #: kaccel.cpp:181 kaccel.cpp:401 kghostview.cpp:347 kghostview.cpp:368
 #: kghostview.cpp:432 kghostview.cpp:1286
 msgid "Print"
-msgstr "Tlaè"
+msgstr "Tlaèi»"
 
 #: kaccel.cpp:182
 msgid "CTRL+P"
-msgstr ""
+msgstr "CTRL+P"
 
 #: kaccel.cpp:186
 msgid "CTRL+Q"
-msgstr ""
+msgstr "CTRL+Q"
 
 #: kaccel.cpp:190
 msgid "CTRL+X"
-msgstr ""
+msgstr "CTRL+X"
 
 #: kaccel.cpp:194
 msgid "CTRL+C"
-msgstr ""
+msgstr "CTRL+C"
 
 #: kaccel.cpp:198
 msgid "CTRL+V"
-msgstr ""
+msgstr "CTRL+V"
 
 #: kaccel.cpp:202
 msgid "CTRL+Z"
-msgstr ""
+msgstr "CTRL+Z"
 
 #: kaccel.cpp:206
 msgid "CTRL+F"
-msgstr ""
+msgstr "CTRL+F"
 
 #: kaccel.cpp:210
 msgid "CTRL+R"
-msgstr ""
+msgstr "CTRL=F"
 
 #: kaccel.cpp:213 kaccel.cpp:425
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: kaccel.cpp:214
 msgid "CTRL+Insert"
-msgstr ""
+msgstr "CTRL+Insert"
 
 #: kaccel.cpp:217 kaccel.cpp:428
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: kaccel.cpp:218
 msgid "CTRL+Home"
-msgstr ""
+msgstr "CTRL+Home"
 
 #: kaccel.cpp:221 kaccel.cpp:431
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: kaccel.cpp:222
 msgid "CTRL+End"
-msgstr ""
+msgstr "CTRL+End"
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
 #, fuzzy
 msgid "Prior"
-msgstr "Tlaè"
+msgstr "Prior"
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
-msgstr "Nasledujúca strana"
+msgstr "Ïal¹í"
 
 #: kaccel.cpp:234
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: kghostview.cpp:202
 msgid "Document information"
@@ -284,7 +283,7 @@ msgstr "&Otvori» ..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "Otvo&ri» nedávne..."
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -303,9 +302,8 @@ msgid "&View control ..."
 msgstr "&Nastavenie zobrazenia ..."
 
 #: kghostview.cpp:511
-#, fuzzy
 msgid "&Fit to page width"
-msgstr "&Choï na stranu ..."
+msgstr "Natesna» na ¹írku strany"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -553,7 +551,7 @@ msgstr ""
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "Chyba pri tlaèi"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -623,39 +621,35 @@ msgid "Sc.%d "
 msgstr "Odd.%d "
 
 #: kkeydialog.cpp:308
-#, fuzzy
 msgid "Current key"
-msgstr "Súèasná"
+msgstr "Súèasná klávesa"
 
 #: kkeydialog.cpp:319
-#, fuzzy
 msgid "&Action"
-msgstr "Oddiel"
+msgstr "&Akcia"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "®iadna klávesa"
 
 #: kkeydialog.cpp:386
-#, fuzzy
 msgid "&Default key"
-msgstr "©tandardné"
+msgstr "©tandar&dná klávesa"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "&Vlastná klávesa"
 
 #: main.cpp:25
 msgid "Usage: "
 msgstr "Pou¾itie: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
 msgstr ""
-" [meno súboru] <parametre>\n"
+" [meno súboru] [parametre]\n"
 "\n"
 
 #: main.cpp:28
@@ -663,12 +657,12 @@ msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
-"Nahliadni do dokumentácie ku Qt\n"
+"Nahliadnite do dokumentácie ku Qt a KDE\n"
 "pre parametre príkazového riadku\n"
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Chyba na príkazovej riadke"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -794,53 +788,3 @@ msgstr "Orientácia"
 #: viewcontrol.cpp:111
 msgid "&Apply"
 msgstr "&Aplikova»"
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr "&Stiahnu» okraje"
-
-#~ msgid "Printing error"
-#~ msgstr "Chyba pri tlaèi"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid "Command line error"
-#~ msgstr "Chyba príkazového riadku"
-
-#~ msgid ""
-#~ "The document named\n"
-#~ "%s\n"
-#~ "could not be opened.\n"
-#~ "No document has been loaded.\n"
-#~ "\n"
-#~ "Error: %s"
-#~ msgstr ""
-#~ "Nemô¾em otvori»\n"
-#~ "%s\n"
-#~ "Nebol naèítaný ¾iadny dokument.\n"
-#~ "\n"
-#~ "Chyba: %s"
-
-#~ msgid "Open file error"
-#~ msgstr "Chyba pri otváraní súboru"
