@@ -1,25 +1,39 @@
 /* XPM */
-static char *magick[] = {
-/* columns rows colors chars-per-pixel */
-"16 14 5 1",
-"  c #000000",
-". c #a0a0a4",
-"X c #c0c0c0",
-"o c #ffffff",
-"O c None",
-/* pixels */
-"OOOOO    OOOOOOO",
-"OOOO oooo OOOOOO",
-"OOO oooooo OOOOO",
-"OOO oooooo OOOOO",
-"OO  o oo o   OOO",
-"O ooo oo o oo OO",
-"O ooooooooooo OO",
-"OO ooooooooo OOO",
-"OOO ooooooo OOOO",
-"OOO ooooooo OOOO",
-"OOO ooooooo OOOO",
-"OO ooooooooo OOO",
-"O ooo ooo ooo OO",
-"OO    O   O  OOO"
-};
+/* Drawn  by Mark Donohoe for the K Desktop Environment */
+/* See http://www.kde.org */
+static char*kghostview[]={
+"16 16 17 1",
+"# c #000000",
+"d c #a0a0a4",
+"j c #dcdcdc",
+"k c #c05800",
+"c c #303030",
+"l c #ffa858",
+"m c #c0c0c0",
+"h c #303030",
+"n c #000000",
+"g c #a0a0a4",
+"a c #ffffff",
+"o c #000000",
+"e c #a0a0a4",
+"i c #dcdcdc",
+"f c #585858",
+"b c #c0c0c0",
+". c None",
+".###########....",
+"#aaaaaaaaaaa#...",
+"#aaaaaaaaaaa#...",
+"#abaab###baa#...",
+"#aaab#aaa#ba#...",
+"#aba#abbaa#a#...",
+"#aaa#aaaaa#a#...",
+"#abacdeaba#a#...",
+"#aa##fgff#h##...",
+"#a##fij###kl#...",
+"#a#fmag####kl#..",
+"#a#ggi####a#kl#.",
+"#a#nfg####aa#kl#",
+"#aao#####aaa##k#",
+"#aaaaaaaaaaa#.##",
+".###########...."};
+

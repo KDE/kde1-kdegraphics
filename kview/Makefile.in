@@ -8,6 +8,11 @@ kde_libraries = @kde_libraries@
 qt_libraries = @qt_libraries@
 top_builddir = ..
 LIBTOOL = @LIBTOOL@
+install = @INSTALL@
+INSTALL = $(install) -m 0755
+INSTALL_DATA = $(install) -m 0644
+INSTALL_DIR = $(install) -d -m 0755
+INSTALL_DIR_PRIVATE = $(install) -d -m 0700
 KDE_RPATH = @KDE_RPATH@
 exec_prefix = @exec_prefix@
 
@@ -44,6 +49,8 @@ prefix  = @prefix@
 install_root = @install_root@
 BINPATH = @kde_bindir@
 LNKPATH = @kde_appsdir@/Utilities
+ICONDIR = @kde_icondir@
+MINIDIR = @kde_minidir@
 
 # needs to be changed if you make srcdoc (requires DOC++)
 
@@ -97,11 +104,17 @@ install: kview
 	@INSTALL@ -m 755 kview $(BINPATH)
 	@INSTALL@ -d -m 755 $(LNKPATH)
 	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/KView.kdelnk
+	$(INSTALL_DIR) $(ICONDIR)
+	$(INSTALL_DATA) ./kview.xpm $(ICONDIR)
+	$(INSTALL_DIR) $(MINIDIR)
+	$(INSTALL_DATA) ./mini-kview.xpm $(MINIDIR)/kview.xpm
 	(cd doc && $(MAKE) install)
 
 uninstall:
 	rm -f $(BINPATH)/kview
 	rm -f $(LNKPATH)/KView.kdelnk
+	rm -f $(ICONDIR)/kview.xpm
+	rm -f $(MINIDIR)/kview.xpm
 	(cd doc && $(MAKE) uninstall)
 
 srcdoc:	

@@ -35,6 +35,7 @@ BINDIR = @kde_bindir@
 LNKDIR = @kde_appsdir@/Graphics
 ICONDIR = @kde_icondir@
 DOCSDIR = @kde_htmldir@/en
+MINIDIR = @kde_minidir@
 
 ########### File Formats ###########
 
@@ -79,11 +80,14 @@ install: all
 	$(INSTALL_DATA) ./Fractal.kdelnk $(LNKDIR)
 	$(INSTALL_DIR) $(ICONDIR)
 	$(INSTALL_DATA) ./kfract.xpm $(ICONDIR)
+	$(INSTALL_DIR) $(MINIDIR)
+	$(INSTALL_DATA) ./mini-kfract.xpm $(MINIDIR)/kfract.xpm
 
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	rm -rf $(DOCSDIR)/kfract
 	rm -f $(LNKDIR)/Fractal.kdelnk
 	rm -f $(ICONDIR)/kfract.xpm
+	rm -f $(MINIDIR)/kfract.xpm
 
 
