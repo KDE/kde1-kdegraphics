@@ -165,9 +165,16 @@ public:
 	
 	KKeyChooser( QDict<KKeyEntry> *aKeyDict, QWidget *parent = 0 );
 	~KKeyChooser();
+	
+	QDictIterator<KKeyEntry> *aIt;
+	QDictIterator<KKeyEntry> *aKeyIt;
+
+signals:
+	void keyChange();
 
 public slots:
 	void allDefault();
+	void listSync();
 
 protected slots:
 	void toChange(int index);
@@ -188,8 +195,6 @@ protected:
 	void fontChange( const QFont & ); 
 
 protected:
-	QDictIterator<KKeyEntry> *aIt;
-	QDictIterator<KKeyEntry> *aKeyIt;
 	QDict<int> *globalDict;
 	KKeyEntry *pEntry;
 	QString sEntryKey;

@@ -475,6 +475,7 @@ KKeyChooser::KKeyChooser( QDict<KKeyEntry> *aKeyDict, QWidget *parent )
 	wList->update();
 	
 	globalDict = new QDict<int> ( 37, false );
+	globalDict->setAutoDelete( true );
 	readGlobalKeys();
 	
 	topLayout->activate();
@@ -503,6 +504,12 @@ void KKeyChooser::updateAction( int index )
 
 void KKeyChooser::readGlobalKeys()
 {
+	debug("KKeyChooser::readGlobalKeys()");
+	
+	globalDict->clear();
+	
+	// QDict<int> *tmpDict = new QDict<int> ( 37, false );
+	
 	// Insert all global keys into globalDict
 	int *keyCode;
 	KConfig *pConfig = kapp->getConfig();
@@ -516,15 +523,37 @@ void KKeyChooser::readGlobalKeys()
 		++(*gIt);
 	}
 	
-	// Remove global keys which appear in the dictionary to be configured
+	
+	
+	// Only insert global keys which don't appear in the dictionary to be configured
 	aIt->toFirst();
 	while ( aIt->current() ) {
-		aIt->current()->aConfigKeyCode = aIt->current()->aCurrentKeyCode;
-		
 		if ( globalDict->find( aIt->currentKey() ) ) {
-			globalDict->remove( aIt->currentKey() );
+			
+			// Tried removing but it didn't work. Hence set them to zero
+			// instead
+			keyCode = new int;
+			*keyCode = 0;
+			if ( globalDict->remove( aIt->currentKey() ) )
+				debug("remove: %s", aIt->currentKey() );
+			//debug("%s, %d", aIt->currentKey(), *globalDict->find(
+			//aIt->currentKey() ));
+			
 		}
 		++ ( *aIt );
+	}
+	
+	globalDict->clear();
+	
+	debug("Global dict contents");
+	
+	QDictIterator<int> dIt( *globalDict );
+	
+	dIt.toFirst();
+	while ( dIt.current() ) {
+		debug("current %s:%d", dIt.currentKey(), *dIt.current());
+		
+		++dIt;
 	}
 }
 
@@ -690,7 +719,7 @@ void KKeyChooser::allDefault()
 {
 	// Change all configKeyCodes to default values
 	
-	int idx = wList->currentItem();
+	//int idx = wList->currentItem();
 
 	disconnect( wList, SIGNAL( highlighted( int ) ),
 		this, SLOT( updateAction( int ) ) );
@@ -718,11 +747,41 @@ void KKeyChooser::allDefault()
 	
 	connect( wList, SIGNAL( highlighted( int ) ), SLOT( updateAction( int ) ) );
 	wList->setAutoUpdate( true );
-	//wList->update();
-	wList->setCurrentItem( idx );
+	wList->update();
+	wList->setCurrentItem( 0 );
 }
 
-#define MAX_FCTN_LENGTH 15
+void KKeyChooser::listSync()
+{
+	disconnect( wList, SIGNAL( highlighted( int ) ),
+		this, SLOT( updateAction( int ) ) );
+	wList->setAutoUpdate(FALSE);
+	wList->clear();
+	
+	aIt->toFirst();
+	while ( aIt->current() ) {
+		
+		KSplitListItem *sli = new KSplitListItem(
+		 	item(aIt->current()->aCurrentKeyCode, aIt->currentKey())
+		);
+
+		connect( wList, SIGNAL( newWidth( int ) ),
+				 sli, SLOT( setWidth( int ) ) );
+				 
+		sli->setWidth( wList->width() );
+		
+		wList->insertItem( sli );
+		
+		++(*aIt);
+	}
+	
+	connect( wList, SIGNAL( highlighted( int ) ), SLOT( updateAction( int ) ) );
+	wList->setAutoUpdate( true );
+	wList->update();
+	wList->setCurrentItem( 0 );
+}
+
+#define MAX_FCTN_LENGTH 50
 
 const QString KKeyChooser::item( uint keyCode, const QString& entryKey )
 {
@@ -904,8 +963,8 @@ bool KKeyChooser::isKeyPresent()
 	
 	gIt.toFirst();
 	while ( gIt.current() ) {
-		//debug("current %s:%d code %d", gIt.currentKey(), *gIt.current(), pEntry->aConfigKeyCode);
-		if ( *gIt.current() == pEntry->aConfigKeyCode ) {
+		debug("current %s:%d code %d", gIt.currentKey(), *gIt.current(), pEntry->aConfigKeyCode);
+		if ( *gIt.current() == pEntry->aConfigKeyCode && *gIt.current() != 0 ) {
 			QString actionName( gIt.currentKey() );
 			actionName.stripWhiteSpace();
 
@@ -947,5 +1006,8 @@ bool KKeyChooser::isKeyPresent()
 		}
 		++(*aIt);
 	}
+	
+	emit keyChange();
+	
 	return FALSE;
 }   

@@ -16,7 +16,7 @@
 #include <qbttngrp.h>
 #include <kcontrol.h>
 
-
+#include "savescm.h"
 #include "kaccel.h"
 #include "kkeydialog.h"
 
@@ -52,6 +52,11 @@ protected slots:
 	void slotHelp();
 	void slotSetup2Color();
 	void resizeEvent( QResizeEvent * );
+	void slotPreviewScheme( int );
+	void slotAdd();
+	void slotSave();
+	void slotRemove();
+	void slotChanged();
 
 protected:
 	void getDeskNameList();
@@ -61,13 +66,19 @@ protected:
 	void setMonitor();
 	int  loadWallpaper( const char *filename, bool useContext = TRUE );
 	void retainResources();
+	void readSchemeNames( );
+	void readScheme( int index = 0 );
 
 protected:
 	enum { Tiled = 1, Centred, Scaled };
 	enum { OneColor = 1, TwoColor };
 	
-	
-
+	QListBox *sList;
+	QStrList *sFileList;
+	QDict<int> *globalDict;
+	QPushButton *saveBt;
+	QPushButton *addBt;
+	QPushButton *removeBt;
 	QListBox     *deskListBox;
 	QRadioButton *rbPattern;
 	QRadioButton *rbGradient;
@@ -88,6 +99,7 @@ protected:
 	int orMode;
 	int deskNum;
 	int maxDesks;
+	int nSysSchemes;
 
         uint pattern[8];
 

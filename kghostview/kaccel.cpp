@@ -543,10 +543,10 @@ uint stringToKey(const char * key )
 	int j, nb_toks = 0;
 	char sKey[200];
 	
+	if ( key == 0 ) { debug("stringToKey::Null key");return 0; }
+	if( strcmp( key, "" ) == -1 ) { debug("stringToKey::Empty key");return 0; }
+	
 	strncpy(sKey, (const char *)key, 200);
-	
-	if ( strcmp( sKey, "" ) == -1  ) return keyCode;
-	
 	next_tok = strtok(sKey,"+");
 	
 	if ( next_tok==NULL ) return 0;

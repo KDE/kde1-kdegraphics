@@ -7,16 +7,20 @@ INCLUDES= $(all_includes)
 
 bin_PROGRAMS = 	kcmkeys
 kcmkeys_SOURCES = main.cpp standard.cpp global.cpp \
- kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp
+ kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp savescm.cpp 
 noinst_HEADERS =  standard.h \
 kaccel.h \
-kkeydialog.h kckey.h kglobalaccel.h global.h 
+kkeydialog.h kckey.h kglobalaccel.h global.h savescm.h
 kcmkeys_LDADD = $(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
 kcmkeys_LDFLAGS = $(LDFLAGS) $(KDE_RPATH)
 
 BUILTSOURCES = standard.moc \
-kaccel.moc kkeydialog.moc kglobalaccel.moc global.moc 
+kaccel.moc kkeydialog.moc kglobalaccel.moc global.moc savescm.moc
 DISTCLEANFILES = standard.moc kaccel.moc kkeydialog.moc kglobalaccel.moc
+
+savescm.cpp:savescm.moc
+savescm.moc: savescm.h
+	$(MOC) savescm.h -o savescm.moc
 
 global.cpp:global.moc
 global.moc: global.h
