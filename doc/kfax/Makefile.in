@@ -1,6 +1,6 @@
 prefix = @prefix@
 
-FILES = index-1.html index-2.html index-3.html index-4.html index-5.html index-6.html index.html 
+FILES = index-1.html index-2.html index-3.html index-4.html index-5.html index-6.html index.html logotp3.gif
 
 DOCDIR = $(prefix)/share/doc/HTML/en/kfax
 INSTALL_DIR = @INSTALL@ -d -m 0755
