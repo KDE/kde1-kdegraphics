@@ -13,11 +13,12 @@
 #include <qtablevw.h>
 #include "kpopmenu.h"
 #include <qstrlist.h>
+#include <qlabel.h>
 
-class MarkListItem
+class MarkListTableItem
 {
-    public:
-        MarkListItem( const char *s ) : marked(0), selected(0)  { _text = s; }
+public:
+    MarkListTableItem( const char *s ) : marked(0), selected(0)  { _text = s; }
 	void	setMark( bool flag )	{ marked = flag; }
 	bool	mark()			{ return marked; }
 	void	setSelect( bool flag )	{ selected = flag; }
@@ -30,17 +31,18 @@ class MarkListItem
 	QString _text;
 }; 
 
-class MarkList: public QTableView
+class MarkListTable: public QTableView
 {
 	Q_OBJECT
 
 public:
-	MarkList( QWidget * parent = 0, const char * name = 0 );
-	~MarkList() { }
+	MarkListTable( QWidget * parent = 0, const char * name = 0 );
+	~MarkListTable() { }
 	QStrList *	markList();
 	void	insertItem ( const char *text, int index=-1);
 	void	setAutoUpdate ( bool enable );
 	void	clear();
+	int	rowHeight();
 	
 	QColor selectColor;
 	QColor selectTextColor;
@@ -56,7 +58,7 @@ public slots:
 
 signals:
 	void	selected( int index );
-	void	selected( const char * text );
+	// void	selected( const char * text );	// Dutta 16/3/98
 
 protected:
 	void	mousePressEvent ( QMouseEvent* );
@@ -73,7 +75,46 @@ private:
 	int	sel;
 	QPopupMenu* pup;
 	int	drag;
-	QList<MarkListItem> items;
+	QList<MarkListTableItem> items;
+};
+
+class MarkList: public QWidget
+{
+	Q_OBJECT
+	
+public:
+	MarkList( QWidget * parent = 0, const char * name = 0 );
+	~MarkList() { }
+	QStrList *	markList();
+	void	insertItem ( const char *text, int index=-1);
+	void	setAutoUpdate ( bool enable );
+	void	clear();
+	void 	setSelectColors( QColor bg, QColor fg );
+	
+	QColor selectColor;
+	QColor selectTextColor;
+
+public slots:
+	void	select(int index);
+	void	markSelected();
+	void	markAll();
+	void	markEven();
+	void	markOdd();
+	void	toggleMarks();
+	void	removeMarks();
+
+signals:
+	void	selected( int index );
+	
+protected:
+	void resizeEvent( QResizeEvent * );
+
+private:
+	QLabel *markLabel;
+	QLabel *pageLabel;
+	MarkListTable *listTable;
+	QPixmap flagPixmap();
+
 };
 
 #endif 

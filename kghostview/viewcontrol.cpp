@@ -95,6 +95,18 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	
 	grid->addWidget( vcLabel, 3, 1 );
 
+	magComboBox = new QComboBox( FALSE, vcGroupBox );
+	//magComboBox->setGeometry( 120, 80, 110, 25 );
+	magComboBox->setFixedHeight( magComboBox->sizeHint().height() );
+
+	grid->addWidget( magComboBox, 1, 2 );
+	
+	mediaComboBox = new QComboBox( FALSE, vcGroupBox );
+	//mediaComboBox->setGeometry( 120, 115, 110, 25 );
+	mediaComboBox->setFixedHeight( magComboBox->sizeHint().height() );
+	
+	grid->addWidget( mediaComboBox, 2, 2 );
+	
 	orientComboBox = new QComboBox( FALSE, vcGroupBox );
 	//orientComboBox->setGeometry( 120, 45, 110, 25 );
 	orientComboBox->insertItem(i18n("Portrait"));
@@ -102,23 +114,11 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	orientComboBox->insertItem(i18n("Seascape"));
 	orientComboBox->insertItem(i18n("Upside down"));
 	//orientComboBox->setFocus();
-	orientComboBox->setFixedHeight( orientComboBox->sizeHint().height() );
+	orientComboBox->setFixedHeight( magComboBox->sizeHint().height() );
 					
-	grid->addWidget( orientComboBox, 1, 2 );
-	
-	mediaComboBox = new QComboBox( FALSE, vcGroupBox );
-	//mediaComboBox->setGeometry( 120, 115, 110, 25 );
-	mediaComboBox->setFixedHeight( orientComboBox->sizeHint().height() );
-	
-	grid->addWidget( mediaComboBox, 2, 2 );
-	
-	magComboBox = new QComboBox( FALSE, vcGroupBox );
-	//magComboBox->setGeometry( 120, 80, 110, 25 );
-	magComboBox->setFixedHeight( orientComboBox->sizeHint().height() );
+	grid->addWidget( orientComboBox, 3, 2 );
 
-	grid->addWidget( magComboBox, 3, 2 );
-	
-	vcGroupBox->setMinimumHeight( 4*(mediaComboBox->sizeHint().height()+10) );
+	vcGroupBox->setMinimumHeight( 4*(magComboBox->sizeHint().height()+10) );
 	vcGroupBox->setMinimumWidth(
 		40 + labelWidth + orientComboBox->sizeHint().width() );
 	

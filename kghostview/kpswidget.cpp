@@ -374,7 +374,8 @@ void KPSWidget::layout()
     	
     	fullView->setGeometry(0, 0, fullWidth, fullHeight);
     	//fullView->resize(fullWidth, fullHeight);
-    	resize(width(), height());
+		resizeEvent(0); // Dutta 16/3/98
+    	// resize(width(), height()); // Dutta 16/3/98
     	repaint();
     	setup();
     	

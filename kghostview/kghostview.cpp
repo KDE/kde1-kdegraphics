@@ -16,6 +16,11 @@
 #define ID_START 6
 #define ID_END 7
 #define ID_READ 8
+#define ID_NEW 9
+#define ID_OPEN 10
+#define ID_RELOAD 11
+#define ID_ZOOM_IN 12
+#define ID_ZOOM_OUT 13
 
 #define ID_LOCATION 0
 #define ID_MAGSTEP 1
@@ -70,8 +75,8 @@ KGhostview::KGhostview( QWidget *, char *name )
 	: KTopLevelWidget( name )
 {   
     //printf("KGhostview::KGhostview\n");
-    
-    windowList.setAutoDelete( FALSE );
+  
+	windowList.append( this );
     
     // Initialise all the variables declared in this class.
     // I ususally forget to do a few resulting in nasty seg. faults !
@@ -123,11 +128,22 @@ KGhostview::KGhostview( QWidget *, char *name )
 	marklist = new MarkList( mainFrame );
 	CHECK_PTR( marklist );
 	
-	marklist->selectColor = kapp->selectColor;
-	marklist->selectTextColor = kapp->selectTextColor;
+	divider = new QFrame( mainFrame );
+	CHECK_PTR( divider );
 	
-	connect( marklist, SIGNAL(selected(const char *)),
-		SLOT(pageActivated(const char *)) );
+	divider->setFrameStyle( QFrame::Panel | QFrame::Raised );
+	divider->setLineWidth( 1 );
+	
+	//marklist->selectColor = kapp->selectColor;
+	//marklist->selectTextColor = kapp->selectTextColor;
+	
+	marklist->setSelectColors( kapp->selectColor, kapp->selectTextColor);
+	
+	//connect( marklist, SIGNAL(selected(const char *)), // Dutta 16/3/98
+	//	SLOT(pageActivated(const char *)) );
+	
+	connect( marklist, SIGNAL(selected( int )), 
+		SLOT(pageActivated( int )) ); // Dutta 16/3/98
 	
 	//QToolTip::add( marklist, "Select page and mark pages for printing" );
 	
@@ -243,14 +259,30 @@ KGhostview::KGhostview( QWidget *, char *name )
 	//	RESIZE AND DISPLAY
 	//
 
+	setMinimumSize( 250, 250 );
+	setName();
+	if( windowList.count() == 1 ) bindKeys();
+	updateMenuAccel();
+	
 	resize( options_width, options_height );
 	show();
+	
+	if (psfile) {
+		setup();
+		show_page( 0 );
+		marklist->select( 0 );
+	}
 }
 
-void KGhostview::pageActivated( const char * text)
+//void KGhostview::pageActivated( const char * text) // Dutta 16/3/98
+//{
+//	int pg = QString( text ).toInt();
+//	show_page(pg-1);
+//}
+
+void KGhostview::pageActivated( int pg ) // Dutta 16/3/98
 {
-	int pg = QString( text ).toInt();
-	show_page(pg-1);
+	show_page(pg);
 }
 
 void KGhostview::updateRects()
@@ -262,13 +294,17 @@ void KGhostview::updateRects()
 	//printf("KTopLevelWidget::updateRects() returned\n");
 
 	marklist->setGeometry( 0, 0,
-		PAGELIST_WIDTH,
+		PAGELIST_WIDTH-1,
+		mainFrame->height());
+		
+	divider->setGeometry( PAGELIST_WIDTH, 0, PAGELIST_WIDTH+3,
 		mainFrame->height());
 
 	if( marklist->isVisible() ) {
 		page->setGeometry( PAGELIST_WIDTH+3, 0,
 			mainFrame->width()-PAGELIST_WIDTH-3,
 			mainFrame->height() );
+		
 	} else {
 		page->setGeometry( 0, 0,
 			mainFrame->width(),
@@ -684,14 +720,33 @@ void KGhostview::createToolbar()
 	QPixmap pixmap;
 	toolbar = new KToolBar( this );
 	
+	pixmap = kapp->getIconLoader()->loadIcon( "filenew.xpm" );
+	toolbar->insertButton(pixmap, ID_NEW, TRUE, i18n("New window ..."));
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "fileopen.xpm" );
+	toolbar->insertButton(pixmap, ID_OPEN, TRUE, i18n("Open file ..."));
+	
+	toolbar->insertSeparator();
+	
 	pixmap = kapp->getIconLoader()->loadIcon( "fileprint.xpm" );
-	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document"));
+	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document ..."));
 
 	toolbar->insertSeparator();
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "viewmag+.xpm" );
+	toolbar->insertButton(pixmap, ID_ZOOM_IN, FALSE, i18n("Zoom in"));
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "viewmag-.xpm" );
+	toolbar->insertButton(pixmap, ID_ZOOM_OUT, FALSE, i18n("Zoom out"));
 	
 	pixmap = kapp->getIconLoader()->loadIcon( "viewzoom.xpm" );
 	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
 
+	toolbar->insertSeparator();
+	
+	pixmap = kapp->getIconLoader()->loadIcon( "reload.xpm" );
+	toolbar->insertButton(pixmap, ID_RELOAD, FALSE, i18n("Reload"));
+	
 	toolbar->insertSeparator();
 	
 	pixmap = kapp->getIconLoader()->loadIcon( "back.xpm" );
@@ -717,7 +772,7 @@ void KGhostview::createToolbar()
 	toolbar->insertSeparator();
 
 	pixmap = kapp->getIconLoader()->loadIcon( "flag.xpm" );
-	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Mark this page"));
+	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Toggle this page mark"));
 
 	// Register toolbar with KTopLevelWidget layout manager
 	
@@ -831,7 +886,7 @@ void KGhostview::slotDropEvent( KDNDDropZone * _dropZone )
 
 	    	KGhostview *kg = new KGhostview();
 	    	kg->show ();
-	    	windowList.append( kg );
+	    	//windowList.append( kg );
 
 	    	QString n = s;
 
@@ -1022,7 +1077,7 @@ void KGhostview::newWindow()
 	KGhostview *kg = new KGhostview ();
 	kg->resize(width(), height());
 	
-	windowList.append( kg );
+	//windowList.append( kg );
 
 	kg->setMinimumSize( 250, 250 );
 	//kg->setName();
@@ -1144,6 +1199,9 @@ void KGhostview::toolbarClicked( int item )
 	
 	//printf("toolbar callback\n");
 	switch ( item ) {
+		case ID_RELOAD:
+  			redisplay();
+  			break;
   		case ID_PREV:
   			prevPage();
   			break;
@@ -1153,8 +1211,20 @@ void KGhostview::toolbarClicked( int item )
   		case ID_PAGE:
   			goToPage();
   			break;
+		case ID_ZOOM_IN:
+  			zoomIn();
+  			break;
+		case ID_ZOOM_OUT:
+  			zoomOut();
+  			break;
   		case ID_ZOOM:
   			viewControl();
+  			break;
+		case ID_NEW:
+  			newWindow();
+  			break;
+		case ID_OPEN:
+  			openNewFile();
   			break;
   		case ID_PRINT:
   			print();
@@ -1469,12 +1539,14 @@ void KGhostview::optionsMenuActivated( int item )
 			if(hide_pagelist) {
 				hide_pagelist=False;
 				marklist->show();
-				resize( width(), height() );
+				//resize( width(), height() );
+				resizeEvent( 0 );
 				m_options->setItemChecked( item, TRUE );
 			} else {
 				hide_pagelist=True;
 				marklist->hide();
-				resize( width(), height() );
+				//resize( width(), height() );
+				resizeEvent( 0 );
 				m_options->setItemChecked( item, FALSE );
 			}
 			break;
@@ -2245,6 +2317,9 @@ Bool	KGhostview::setup()
 	if(current_page==-1) current_page=0;
 	
     toolbar->setItemEnabled(ID_ZOOM, TRUE);
+	toolbar->setItemEnabled(ID_ZOOM_IN, TRUE);
+	toolbar->setItemEnabled(ID_ZOOM_OUT, TRUE);
+	toolbar->setItemEnabled(ID_RELOAD, TRUE);
     toolbar->setItemEnabled(ID_PRINT, TRUE);
     toolbar->setItemEnabled(ID_MARK, TRUE);
     m_file->setItemEnabled(ID_PRINT, TRUE);

@@ -88,12 +88,20 @@ int main( int argc, char **argv )
 	
 	struct stat sbuf;
 	
-	KGhostview *kg = new KGhostview ();
-	CHECK_PTR( kg );
-	KGhostview::windowList.append( kg );
+	KGhostview::windowList.setAutoDelete( FALSE );
 	
 	if (argc > 2) Syntax(argv[0]);
-	if (argc == 2) {
+	
+	if ( a.isRestored() ) {
+		int n = 1;
+		while (KTopLevelWidget::canBeRestored(n)) {
+	    	KGhostview *kg = new KGhostview ();
+			CHECK_PTR( kg );
+		}
+    } else if (argc == 2) {
+	
+		KGhostview *kg = new KGhostview ();
+		CHECK_PTR( kg );
 	
 		kg->filename = argv[1];
 		if (strcmp(kg->filename, "-")) {
@@ -116,18 +124,9 @@ int main( int argc, char **argv )
 		} else {
 			printf( i18n("Didn't recognise file\n") );
 		}
-	}
-	
-	kg->setMinimumSize( 250, 250 );
-	kg->setName();
-	kg->bindKeys();
-	kg->updateMenuAccel();
-	kg->show();	
-	
-	if (kg->psfile) {
-		kg->setup();
-		kg->show_page( 0 );
-		kg->marklist->select( 0 );
+	} else {
+		KGhostview *kg = new KGhostview ();
+		CHECK_PTR( kg );
 	}
 	
 	return a.exec();

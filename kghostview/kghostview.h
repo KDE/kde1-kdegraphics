@@ -94,6 +94,7 @@ public:
 	
 	
 	QFrame *mainFrame;
+	QFrame *divider;
 	MarkList *marklist;
 	KPSWidget *page;
 	
@@ -128,7 +129,8 @@ public:
 	QString lastOpened[4];
 	
 public slots:
-	void pageActivated( const char * text);
+	//void pageActivated( const char * text); // Dutta 16/3/98
+	void pageActivated( int pg );	// Dutta 16/3/98
 	void applyViewChanges();
 	void scrollDown();
 	void scrollUp();

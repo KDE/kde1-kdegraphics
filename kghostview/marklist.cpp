@@ -22,7 +22,9 @@
 #include <kapp.h>
 #include <kpopmenu.h>
 
-MarkList::MarkList( QWidget * parent , const char * name )
+#define FLAG_WIDTH 20
+
+MarkListTable::MarkListTable( QWidget * parent , const char * name )
 	: QTableView( parent, name ), sel(-1), drag(-1), items()
 {
 	setFrameStyle( Panel | Sunken );
@@ -30,7 +32,7 @@ MarkList::MarkList( QWidget * parent , const char * name )
                          | Tbl_snapToVGrid | Tbl_clipCellPainting);
         setLineWidth( 1 );
         setCellHeight( fontMetrics().lineSpacing()+4 );
-   	setNumCols( 3 );
+   	setNumCols( 2 );
 //	setBackgroundColor( colorGroup().normal().light(120) );
 	pup = new QPopupMenu(0, "pup");
 	pup->insertItem( i18n("Mark current page"), this, SLOT(markSelected()) );
@@ -45,20 +47,20 @@ MarkList::MarkList( QWidget * parent , const char * name )
 	
 }
 
-void	MarkList::insertItem ( const char *text, int index)
+void	MarkListTable::insertItem ( const char *text, int index)
 {
-	MarkListItem *mli = new MarkListItem( text );
+	MarkListTableItem *mli = new MarkListTableItem( text );
 	items.insert( index, mli );
 	setNumRows( items.count() );
 }
 
-void	MarkList::setAutoUpdate ( bool enable)
+void	MarkListTable::setAutoUpdate ( bool enable)
 {
 	QTableView::setAutoUpdate( enable );
 	if (enable) update();
 }
 
-void	MarkList::clear()
+void	MarkListTable::clear()
 {
 	QColorGroup cg = QApplication::palette()->normal();
 	if( backgroundColor() != cg.base() )
@@ -68,18 +70,18 @@ void	MarkList::clear()
 	update();
 }
 
-int	MarkList::cellWidth( int col )
+int	MarkListTable::cellWidth( int col )
 {
 //	return col==0 ? 16 : fontMetrics().maxWidth()*6;
 	if( col==0 )
-		return 16;
-	else if ( col==1 )
-		return cellHeight();
+		return FLAG_WIDTH;
+	//else if ( col==1 )
+	//	return cellHeight();
 	else
-		return width()-cellHeight()-16-2*frameWidth();
+		return width()-FLAG_WIDTH-2*frameWidth();
 }
 
-void MarkList::paintCell( QPainter *p, int row, int col)
+void MarkListTable::paintCell( QPainter *p, int row, int col)
 {
 	QColorGroup cg = QApplication::palette()->normal();
 	
@@ -88,8 +90,10 @@ void MarkList::paintCell( QPainter *p, int row, int col)
 	
 		if ( items.at( row )->select() )
 			{
-				p->setBrush( selectColor );
-				p->setPen( selectColor );
+				//p->setBrush( selectColor );
+				//p->setPen( selectColor );
+				p->setBrush(cg.base());
+				p->setPen(cg.base());
 			}
 		else {
 			p->setBrush(cg.base());
@@ -102,7 +106,7 @@ void MarkList::paintCell( QPainter *p, int row, int col)
 		int xOffset=6; int yOffset=3;
 		
 		if ( items.at( row )->select() )
-			p->setPen( selectTextColor );
+			p->setPen( cg.text() ); //p->setPen( selectTextColor );
 		else
 			p->setPen( cg.text() );
 		p->drawLine( xOffset+4, yOffset, xOffset+4, yOffset+9 );
@@ -126,7 +130,7 @@ void MarkList::paintCell( QPainter *p, int row, int col)
 		}	
 	}
 
-	if ( col == 1 )
+	/*if ( col == 1 )
 	{
 		if ( items.at( row )->select() )
 		{
@@ -156,16 +160,16 @@ void MarkList::paintCell( QPainter *p, int row, int col)
 			
 		}
 
-		/*QFontMetrics fm = p->fontMetrics();
-		int yPos;   // vertical text position
-		if ( 10 < fm.height() )
-			yPos = fm.ascent() + fm.leading()/2;
-		else
-			yPos = 5 - fm.height()/2 + fm.ascent();
-		p->drawText( 4, yPos, items.at( row )->text() );*/
-	}
+		//QFontMetrics fm = p->fontMetrics();
+		//int yPos;   // vertical text position
+		//if ( 10 < fm.height() )
+		//	yPos = fm.ascent() + fm.leading()/2;
+		//else
+		//	yPos = 5 - fm.height()/2 + fm.ascent();
+		//p->drawText( 4, yPos, items.at( row )->text() );
+	}*/
 	
-	if ( col == 2 )
+	if ( col == 1 )
 	{
 		if ( items.at( row )->select() )
 			{
@@ -197,16 +201,16 @@ void MarkList::paintCell( QPainter *p, int row, int col)
 		else*/
 			yPos = cellHeight()-fm.leading()/2;
 			yPos = fm.ascent() + fm.leading()/2+1;
-		p->drawText( 2, yPos, items.at( row )->text() );
+		p->drawText( 4, yPos, items.at( row )->text() );
 	}
 }
 
-void MarkList::mousePressEvent ( QMouseEvent *e )
+void MarkListTable::mousePressEvent ( QMouseEvent *e )
 {
 	int i = findRow( e->pos().y() );
 	if ( i == -1 )
 		return;
-	MarkListItem *it = items.at( i );
+	MarkListTableItem *it = items.at( i );
 
 	if ( e->button() == LeftButton )
 		select( i );
@@ -220,7 +224,7 @@ void MarkList::mousePressEvent ( QMouseEvent *e )
 	}
 }
 
-void MarkList::mouseMoveEvent ( QMouseEvent *e )
+void MarkListTable::mouseMoveEvent ( QMouseEvent *e )
 {
 	if (e->state() != MidButton)
 		return;
@@ -235,70 +239,75 @@ void MarkList::mouseMoveEvent ( QMouseEvent *e )
 	} while ( i != drag );
 }
 
-void MarkList::select( int i )
+void MarkListTable::select( int i )
 {
 	if ( i < 0 || i >= (signed) items.count() || i == sel )
 		return;
 
-	MarkListItem *it = items.at( i );
+	MarkListTableItem *it = items.at( i );
 	if ( sel != -1 )
 	{
 		items.at( sel )->setSelect( FALSE );
 		updateCell( sel, 0 );
 		updateCell( sel, 1 );
-		updateCell( sel, 2 );
+		//updateCell( sel, 2 );
 	}
 	it->setSelect( TRUE );
 	sel = i;
 	updateCell( i, 0 );
 	updateCell( i, 1 );
-	updateCell( i, 2 );
+	//updateCell( i, 2 );
 	emit selected( i );
-	emit selected( it->text() );
+	//emit selected( it->text() ); // Dutta 16/3/98
 	if ( ( i<=0 || rowIsVisible( i-1 ) ) &&
 	     ( i>= (signed) items.count()-1 || rowIsVisible( i+1 ) ) )
 		return;
 	setTopCell( QMAX( 0, i - viewHeight()/cellHeight()/2 ) );
 }
 
-void MarkList::markSelected()
+void MarkListTable::markSelected()
 {
 	if ( sel == -1 )
 		return;
-	MarkListItem *it = items.at( sel );
+	MarkListTableItem *it = items.at( sel );
 	it->setMark( ! it->mark() );
 	updateCell( sel, 0 );
 }
 
-void MarkList::markAll()
+void MarkListTable::markAll()
 {
 	changeMarks( 1 );
 }
 
-void MarkList::markEven()
+void MarkListTable::markEven()
 {
 	changeMarks( 1, 2 );	
 }
 
-void MarkList::markOdd()
+void MarkListTable::markOdd()
 {
 	changeMarks( 1, 1 );
 }
 
 
-void MarkList::removeMarks()
+void MarkListTable::removeMarks()
 {
 	changeMarks( 0 );
 }
 
-void MarkList::toggleMarks()
+void MarkListTable::toggleMarks()
 {
 	changeMarks( 2 );
 }
 
-void MarkList::changeMarks( int how, int which  )
+int MarkListTable::rowHeight()
 {
-	MarkListItem *it;
+	return cellHeight();
+}
+
+void MarkListTable::changeMarks( int how, int which  )
+{
+	MarkListTableItem *it;
 	QString t;
 
 	setUpdatesEnabled( FALSE );
@@ -319,7 +328,7 @@ void MarkList::changeMarks( int how, int which  )
 	setUpdatesEnabled( TRUE );
 }
 
-QStrList *MarkList::markList()
+QStrList *MarkListTable::markList()
 {
 	QStrList *l = new QStrList;
 
@@ -327,4 +336,125 @@ QStrList *MarkList::markList()
 		if ( ( items.at( i ) )->mark() )
 			l->append( items.at( i )->text() );
 	return l;
+}
+
+//------------------------------------------------------------------
+
+MarkList::MarkList( QWidget * parent = 0, const char * name = 0 )
+	: QWidget( parent, name )
+{
+	listTable = new MarkListTable ( this );
+	markLabel = new QLabel ( this );
+	markLabel->setFrameStyle( QFrame::Panel | QFrame::Raised );
+	markLabel->setLineWidth( 1 );
+	markLabel->setMargin( 1 ); 
+	markLabel->setPixmap( flagPixmap() );
+	pageLabel = new QLabel ( this );
+	pageLabel->setFrameStyle( QFrame::Panel | QFrame::Raised );
+	pageLabel->setLineWidth( 1 );
+	pageLabel->setMargin( 1 ); 
+	pageLabel->setText( "Page" );
+	
+	selectColor = QColor( black );
+	selectTextColor = QColor( white );
+	
+	 
+	connect ( listTable, SIGNAL( selected( int ) ),
+		this, SLOT( select( int ) ) ); 
+	
+}
+
+void MarkList::setSelectColors( QColor bg, QColor fg ) 
+{
+	listTable->selectColor = bg;
+	listTable->selectTextColor = fg;
+}
+
+void MarkList::resizeEvent( QResizeEvent * )
+{
+	markLabel->setGeometry( 0,0, FLAG_WIDTH, listTable->rowHeight()+4 );
+	pageLabel->setGeometry( FLAG_WIDTH, 0,
+				width()-FLAG_WIDTH,  listTable->rowHeight()+4 );
+	listTable->setGeometry( 0, pageLabel->height(),
+				width(), height()-(pageLabel->height()) );
+	
+}
+
+void MarkList::insertItem ( const char *text, int index=-1)
+{
+	listTable->insertItem(text,index);
+}
+
+void MarkList::setAutoUpdate ( bool enable )
+{
+	listTable->setAutoUpdate( enable );
+}
+
+void MarkList::clear()
+{
+	listTable->clear();
+}
+
+void MarkList::select(int index)
+{
+	listTable->select( index );
+	emit selected( index );
+}
+
+void MarkList::markSelected()
+{
+	listTable->markSelected();
+}
+
+void MarkList::markAll()
+{
+	listTable->markAll();
+}
+
+void MarkList::markEven()
+{
+	listTable->markEven();
+}
+
+void MarkList::markOdd()
+{
+	listTable->markOdd();
+}
+
+void MarkList::toggleMarks()
+{
+	listTable->toggleMarks();
+}
+
+void MarkList::removeMarks()
+{
+	listTable->removeMarks();
+}
+
+QStrList* MarkList::markList()
+{
+	return listTable->markList();
+}
+
+QPixmap MarkList::flagPixmap() {
+	QColorGroup cg = QApplication::palette()->normal();
+	
+	QPixmap pm;
+	pm.resize(16,16);
+	pm.fill( cg.background() );
+		
+	int xOffset = 4;
+	int yOffset = 3;
+
+	QPainter p;
+	p.begin( &pm);
+	p.setPen( cg.text() );
+	p.drawLine( xOffset+4, yOffset, xOffset+4, yOffset+9 );
+	p.setPen( red );
+	p.drawLine( xOffset+3, yOffset+1, xOffset, yOffset+4 );
+	p.drawLine( xOffset+3, yOffset+1, xOffset+3, yOffset+4 );
+	p.drawLine( xOffset, yOffset+4, xOffset+3, yOffset+4 );
+	p.end();
+	
+	return pm;
 }
