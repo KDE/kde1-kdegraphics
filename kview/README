@@ -1,0 +1,98 @@
+
+kview 0.9
+---------
+
+Yet another tentative release of kview, the KDE image viewer.
+
+kview extends QImageIO with publicly available image-handler libraries. 
+
+To be more honest with my kview development, I've been using kview instead
+of xv whenever possible; this gives me a first-hand impression of what it
+needs and what it lacks.
+
+Do drop me a line if you get it running or not.  (taj@kde.org)
+
+HOW TO GET
+----------
+
+Source:
+
+ftp://ftp.ph.unimelb.edu.au/incoming/taj/kde/ will have the latest version 
+of kview and the graphics libraries it requires.
+
+Screenshot of kview at:
+
+http://www.ph.unimelb.edu.au/~ssk/kde/screen.gif
+
+INSTALLATION
+------------
+
+1. Edit the Makefile. Comment out any format declarations if you don't
+   have those libraries.
+
+2. Make sure the environment variables QTDIR and KDEDIR are set
+
+3. make dep; make
+
+4. make install
+
+Libraries Required
+------------------
+
+Format: GIF
+Library(version): giflib, compiled to shared lib.
+Where: http://www.ccil.org/~esr/home.html
+
+Format: JPEG, PNG
+Library: libgr (built and tested with 2.0.9-2.0.11)
+Where: sunsite
+
+WHAT'S BEEN ADDED SINCE 0.7
+---------------------------
+
+* Some redesign of the UI
+* Multiple windows
+* URL support via KFM
+* Drag and drop support (drop only)
+* Now a KApplication
+* Basic PNG support, very incomplete.
+	- no dithering yet, so it'll look awful on 8-bit displays
+	- transparent images may not work at all
+* DOC++ source documentation, for those who care. (v 3.0 or above of DOC++)
+* A poor excuse for a web page (spawns KDEHelp)
+* cleaned up the Makefile a bit
+
+How to add formats
+------------------
+
+0. Tell me you're working on the format to avoid duplicate work.
+1. Create an image handler conforming to QImageIO::defineIOHandler
+2. Add format header to formats.h
+3. Add format QImageIO definition in formats.cpp
+4. Add your source file and object file to the Makefile
+5. Send me your source file and header!
+
+
+TODO
+----
+
+* PNG is getting there. Targa and tiff are a possibility.
+* Print
+* Some sort of toolbar? I dont know... it might just be a waste of
+  desktop real estate.
+* There are still bugs, of course.
+* Tentative... save support?
+
+ACKNOWLEDGMENTS
+---------------
+
+1. kview uses Warwick Allison's QwViewport widget.
+2. The DND and KFM stuff was first written by Torben Weis.
+3. The Troll Tech folks wrote Qt, without which we would have still been
+   in the Dark Ages.
+4. Lots and lots of people sent reports and suggestions. Thank you.
+
+------------------------------------
+Sirtaj Kang, Sat March 15, 1996.
+ssk@physics.unimelb.edu.au, taj@kde.org
+

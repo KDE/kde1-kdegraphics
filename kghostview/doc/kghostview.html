@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>KGhostview</title>
+</head>
+<body>
+<h1>KGhostview</h1>
+
+This is Tim Theisen's Ghostview program ported to the K
+Desktop Environment. Ghostview is used to view PostScript
+documents on Unix X11 systems. It requires Alladin
+Ghostcript to actually perform rendering.
+
+<p>
+
+This version is for demonstration of a method for setting
+desktop wide resources in the KDE. It works in conjunction with
+Kdisplay-0.5.1.
+
+<h2>Setting fonts, colors and widget styles</h2>
+
+Kdisplay-0.5.1 can set the fonts, colors and widget styles for
+Kghostview-0.3.*. This
+version isn't really for users. It is still in development. There is nothing
+fancy about the communication method - no deamons etc. just XAtoms. What is
+being tested here is the possibility of changing fonts etc. in running
+programs.
+
+<p>
+
+The verdict ? It works OK but there are some problems with
+setPalette() and setStyle() often doesn't change the ComboBox style.
+
+<h2>Keyboard control</h2>
+
+Keybindings so far are
+<ul>
+<li><b>Prior</b> previous page
+
+<li><b>Next</b>  next page
+<li><b>Up arrow</b> scroll up
+<li><b>Left arrow</b> scroll left
+<li><b>Down arrow</b> scroll down
+<li><b>Right arrow</b> scroll right
+<li><b>+</b> zoom in
+<li><b>-</b> zoom out
+<li><b>Ctrl G</b> go to page
+<li><b>Ctrl Q</b> quit
+</ul>
+Of course, these will be configurable in future.
+
+<h2>Office 97 toolbar</h2>
+
+A new type of toolbar is appearing on commercial applications such as Office
+97 and Netscape. This toolbar uses "seamless icons" i.e. the raised borders
+of traditional buttons are not normally visible. I would like to see these in
+the KDE. They offer the best solution to organising many toolbars and
+menubars in an application. To demonstrate how they might work Kghostview
+has one for this release. ( Not all features implemented. ) 
+
+<h2>More help to follow</h2>
+
+</body>
+</html>
+

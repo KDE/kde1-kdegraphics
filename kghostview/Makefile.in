@@ -1,0 +1,77 @@
+#
+# Makefile for kghostview
+#
+
+.SUFFIXES: .cpp
+
+CXX	= @CXX@
+CC	= @CC@
+MOC	= @MOC@
+INCFL	= @all_includes@ -I. -I..
+CXXFLAGS += $(INCFL) -DHAVE_CONFIG_H
+CFLAGS = -O2 -Wall $(INCFL) -DHAVE_CONFIG_H
+LDFLAGS = @all_libraries@ -L. -lqt -lkdecore -lX11 -lXext -lm
+
+############# Install ##############
+
+INSTALL = @INSTALL@ -m 0755
+INSTALL_DATA = @INSTALL@ -m 0644
+INSTALL_DIR = @mkinstalldirs@
+
+prefix = @prefix@
+BINDIR = $(prefix)/bin
+LIBDIR = $(prefix)/lib
+PICSDIR = $(LIBDIR)/pics/toolbar
+DOCSDIR = $(prefix)/doc/HTML/kghostview
+
+DEFS = -DPICS_PATH=\"$(PICSDIR)/\" -DDOCS_PATH=\"$(DOCSDIR)/\"
+
+########## Implicit Rules ##########
+
+.SUFFIXES: .cpp .c
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $(DEFS) -c $<
+	
+.c.o:
+	$(CC) -c $(CFLAGS) $(DEFS) $<
+
+########## Files ##########
+
+SRCS = kpushbt.cpp print.cpp goto.cpp viewcontrol.cpp main.cpp kghostview.cpp kpswidget.cpp ps.c
+SRCMETA = kpushbt.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc
+HDRS = kpushbt.h print.h goto.h viewcontrol.h kghostview.h kpswidget.h ps.h
+OBJS = kpushbt.o print.o goto.o viewcontrol.o main.o kghostview.o kpswidget.o ps.o
+
+TARGET = kghostview
+
+########## Build Rules ##########
+
+all: $(TARGET)
+
+$(TARGET): $(SRCMETA) $(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LDFLAGS)
+
+install:
+	[ -d $(BINDIR) ] || $(INSTALL_DIR) $(BINDIR)
+	$(INSTALL) $(TARGET) $(BINDIR)
+	[ -d $(DOCSDIR) ] || $(INSTALL_DIR) $(DOCSDIR)
+	$(INSTALL_DATA) ./doc/* $(DOCSDIR)
+
+clean:
+	rm -f core *~ *.bak *.BAK $(SRCMETA) $(OBJS) $(TARGET)
+
+veryclean:
+	rm -f *~ *.bak *.BAK $(TARGET) $(SRCMETA) $(OBJS) core
+
+depend: $(SRCS)
+	@makedepend $(INCFLAGS) $(SRCS) 2> /dev/null
+
+########## Meta objects ##########
+
+%.moc: %.h
+	$(MOC) $< -o $@
+
+##################################
+# DO NOT DELETE
+

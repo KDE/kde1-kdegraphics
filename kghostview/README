@@ -1,0 +1,105 @@
+
+KGhostview 0.3.3 - Alpha release
+
+This is Tim Theisen's Ghostview program ported to the K
+Desktop Environment. Ghostview is used to view PostScript
+documents on Unix X11 systems. It requires Alladin
+Ghostcript to actually perform rendering. KGhostview also
+uses the Qt toolkit.
+
+This version is for demonstration of a method for setting
+desktop wide resources in KDE. It works in conjunction with
+Kdisplay-0.5.1.
+
+SETTING FONTS ETC.
+
+Get yourself Kdisplay-0.5.1 if you want to try out setting
+fonts and colors for Kghostview-0.3.3. This version isn't really
+for users. It is still in development. There is nothing fancy
+about the communication method - no daemons etc. just
+XAtoms. What is being tested here is the possibility of
+changing fonts etc. in running programs.
+
+The verdict ? It works OK but there are some problems with
+setPalette()  and setStyle() often doesn't change the
+ComboBox style.
+
+I don't feel confident enough to put this in libkde myself.
+I would be glad if one of the core programmers would try
+it out and adapt it for the library if they think it is up
+to the job.
+
+INSTALL
+
+1. Install ktoolpics-0.2
+
+2. Set QTDIR and KDEDIR environment variables
+	
+	Eg. I use bash shell and type
+	
+	QTDIR="/usr/lib/qt"; export QTDIR
+	KDEDIR="/usr/local/kde"; export KDEDIR
+	
+3. Have a quick look in the Makefile
+4. make
+5. make install
+
+If Ghostview works for you then so should KGhostview.
+However, all VMS support has been removed and it has only
+been tested on Linux. Printer support for SYSV, SVR4 and USG
+is missing from this release.
+
+CHNAGES V0.3.3
+- Repainting bug is hopefully fixed. It shouldn't eat resources when the
+	window is bigger than the page anymore. Please test.
+- Other bug fixes.
+- Kconfig introduced.
+
+CHANGES V0.3.1
+- Bug fixes
+- Changes to make compliant with kdisplay-0.5.1
+	i.e. desktop congfiguration groups have changed
+
+CHANGES V0.3
+- Works with Kdisplay-0.5 for setting color scheme, fonts
+		etc.
+- "Office 97" toolbar for evaluation
+- More sensible help
+- Some improvements to stability
+- Updated Makefile
+
+CHANGES V0.2
+
+- Dialogs - "Go to page", "Print", "View control"
+- Now a KApp
+- Standard Makefile
+- Fits the kde default look
+- Removed last few XtMalloc, XtFree
+- Removed Xmu stuff - Atoms not cached but who cares ?
+- X pixmaps instead of bitmaps for toolbar
+- Fixed high color problem
+- Can hide toolbar and status bar
+- Basic keyboard support
+
+		+ 		zoom in
+		- 		zoom out
+		Ctrl Q	quit
+		Ctrl G	go to
+		Arrow keys and page up, page down.
+		
+	Will use keyconfig eventually.
+
+TODO
+
+- Page marking
+- Info dialog
+- Use KConfig
+- PDF support
+- Handling of Ghostscript messages
+- Standardise kdvi and kghostview
+- Fix that nasty bug which which results in window events
+being eaten if the window is bigger than the page.
+
+5/4/97
+Mark Donohoe
+donohoe@kde.org

@@ -1,0 +1,14 @@
+FILES =  kview.html kview.gif
+
+DOCDIR = @prefix@/doc/HTML
+INSTALL_DIR = @mkinstalldirs@
+INSTALL_DATA = @INSTALL@ -m 644
+
+all:
+
+install:
+	$(INSTALL_DIR) $(DOCDIR)
+	@for i in $(FILES); do \
+	 echo "$(INSTALL_DATA) $$i $(DOCDIR)"; \
+	 $(INSTALL_DATA) "$$i" $(DOCDIR); \
+	done

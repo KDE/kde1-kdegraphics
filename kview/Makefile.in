@@ -1,0 +1,93 @@
+
+##
+## Makefile for the kView image viewer 
+## (internal development version 0.6).
+##
+## $Id$
+
+CXX = @CXX@
+MOC= @MOC@
+
+
+INCLUDE= -I@qt_includes@ -I@kde_includes@ -I@x_includes@ -I..
+LDFLAGS= -L@kde_libraries@ -L@qt_libraries@ -L@x_libraries@ -lqt -lkfm -lkdecore -lX11 -lXext -lgif -ljpeg @LIBSOCKET@
+CXXFLAGS += -DHAVE_CONFIG_H
+
+# Define if you have libpng.
+# Part of libgr
+LIBPNG= -DHAVE_LIBPNG
+LLIBPNG= -lpng -lz
+
+########
+#  Install locations
+#
+
+prefix  = @prefix@
+BINPATH = $(prefix)/bin/
+LNKPATH = $(prefix)/lib/applications/Productivity
+
+# needs to be changed if you make srcdoc (requires DOC++)
+
+# SRCDOCPATH = /home/ssk/web/kdesrc/kview
+
+###### No need to edit below this line #############3
+
+FORMATSRC= jpeg.cpp gif.cpp kpng.cpp
+FORMATOBJ= jpeg.o gif.o kpng.o
+
+######
+
+OBJS = main.o wview.o viewport.o formats.o QwViewport.o kerror.o $(FORMATOBJ)
+SOURCE = main.cpp wview.cpp viewport.cpp formats.cpp QwViewport.cpp \
+	 kerror.cpp $(FORMATSRC)
+SRCDOCFILES = wview.h viewport.h kerror.h
+
+all: kview
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(FORMATS) $(INCLUDE) -c -o $@ $<
+
+%.moc: %.h
+	$(MOC) $< -o $@
+
+kview: $(OBJS)
+	$(CXX) -o $@ $(OBJS) $(FORMATLIBS) $(LDFLAGS)
+
+main.o: main.cpp wview.moc
+wview.o: wview.cpp wview.moc viewport.h
+viewport.o: viewport.cpp viewport.moc
+kerror.o: kerror.cpp kerror.moc
+QwViewport.cpp: QwViewport.moc
+
+formats.o: formats.cpp
+jpeg.o: jpeg.cpp
+gif.o: gif.cpp
+kpng.o: kpng.cpp
+
+clean::
+	-rm -f kview $(OBJS) *.moc
+
+install: kview
+
+	@INSTALL@ -m 755 kview $(BINPATH)
+	@INSTALL@ -d -m 755 $(LNKPATH)
+	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/kview
+	(cd doc && make install)
+
+srcdoc:	
+	cd doc; doc++ -j -H -d $(SRCDOCPATH) ../wview.h ../viewport.h \
+	../kerror.h
+
+release:
+	cp *.cpp *.h Makefile kview-src/
+	tar zcvf kview-src.tar.gz kview-src
+
+dep:
+	makedepend $(INCLUDE) -I /usr/include/linux/ $(SOURCE) >& /dev/null
+
+backup:
+	(cd .. ; tar zcvf kview-project.tgz kview)
+	mv ../kview-project.tgz /mount/lan/PROJBAK 
+
+# DO NOT DELETE
+
