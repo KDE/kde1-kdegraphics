@@ -209,8 +209,9 @@ void KImageCanvas::maxpectToDesktop() const
 	double dw = (double)qApp->desktop()->width()/(double)image.width();
 	double d = ( dh < dw ? dh : dw );
 	
-	image.convertFromImage(image.convertToImage().smoothScale(int(d*image.width()),
-								  int (d*image.height())));
+	image.convertFromImage(image.convertToImage().smoothScale(
+		int(d*image.width()),
+		int (d*image.height())));
 
 	qApp->desktop()->setBackgroundPixmap( image );
 }
@@ -221,8 +222,9 @@ static void maxpect( QWidget *dest, QPixmap *image )
 	double dw = (double)dest->width()/(double)image->width();
 	double d = ( dh < dw ? dh : dw );
 	
-	image->convertFromImage(image->convertToImage().smoothScale(int(d*image->width()),
-								  int (d*image->height())));
+	image->convertFromImage(image->convertToImage().smoothScale(
+			int(d*image->width()),
+			int (d*image->height())));
 }
 
 void KImageCanvas::resizeEvent( QResizeEvent *ev )
@@ -331,7 +333,8 @@ void KImageCanvas::maxToWin()
 	
 	QPixmap image = *(_client->pixmap());
 
-	image.convertFromImage(image.convertToImage().smoothScale(width(),height()));
+	image.convertFromImage(image.convertToImage().smoothScale(
+			width(),height()));
 	_client->setImagePix( image );
 	
 	emit imageSizeChanged();
@@ -386,22 +389,23 @@ KVImageHolder::~KVImageHolder()
 
 void KVImageHolder::mousePressEvent( QMouseEvent *ev )
 {
-    if (ev->button() == RightButton) {
-	emit contextPress(ev->globalPos());
-	return;
+    if ( ev->button() == RightButton ) {
+	    emit contextPress( mapToGlobal( ev->pos() ) );
+	    return;
     }
-	if( pixmap() == 0 ) {
-		return;
-	}
 
-	if( _selected ) {
-		// remove old rubberband
-		eraseSelect();
-		_selected = false;
-	}
+    if( pixmap() == 0 ) {
+	    return;
+    }
 
-	_selection.setLeft( ev->x() );
-	_selection.setTop( ev->y() );
+    if( _selected ) {
+	    // remove old rubberband
+	    eraseSelect();
+	    _selected = false;
+    }
+
+    _selection.setLeft( ev->x() );
+    _selection.setTop( ev->y() );
 }
 
 void KVImageHolder::mouseMoveEvent( QMouseEvent *ev )
