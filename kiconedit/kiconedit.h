@@ -117,7 +117,8 @@ class KIconEdit : public KTopLevelWidget
 {
     Q_OBJECT
 public:
-  KIconEdit( const char *name = "kiconedit", const char *xpm = 0);
+  KIconEdit( const char *xpm = 0, const char *name = "kiconedit");
+  KIconEdit( const QImage image, const char *name = "kiconedit");
   ~KIconEdit();
 
   virtual QSize sizeHint();
@@ -131,6 +132,8 @@ public slots:
   void unsaved(bool flag);
 
 protected slots:
+  void addColors(uint, uint*);
+  void addColor(uint);
   void slotNewWin();
   void slotNewWin(const char *url = 0);
   void slotNew();
@@ -170,9 +173,11 @@ protected slots:
   void slotQDragEnterEvent( QDragEnterEvent* );
 
 protected:
+  void init();
   bool setupMenuBar();
   bool setupToolBar();
   bool setupDrawToolBar();
+  bool setupPaletteToolBar();
   bool setupStatusBar();
   bool setupWhatsThis();
   virtual void closeEvent(QCloseEvent*);
@@ -186,13 +191,17 @@ protected:
   KIconTemplateContainer *icontemplates;
 #endif
 
+  QLabel *syslabel, *customlabel;
+  Preview *preview;
+  KSysColors *syscolors;
+  KCustomColors *customcolors;;
+
   KMenuBar *menubar;
-  KToolBar *toolbar, *drawtoolbar;
+  KToolBar *toolbar, *drawtoolbar, *palettetoolbar;
   KStatusBar *statusbar;
   QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent, *select;
   KIconEditGrid *grid;
   KGridView *gridview;
-  KIconToolsView *toolsw;
   QWidget *mainview;
   QBoxLayout *l;
   QTimer *msgtimer;

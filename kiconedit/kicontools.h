@@ -48,40 +48,6 @@ private:
   int pw, ph;
 };
 
-class KIconToolsView : public QFrame
-{
-    Q_OBJECT
-public:
-  KIconToolsView( QWidget * parent = 0, const char * name = 0 );
-  ~KIconToolsView();
-
-  virtual QSize sizeHint();
-
-  KSysColors *getSysColors() { return syscolors; }
-  KCustomColors *getCustomColors() { return customcolors; }
-  Preview *getPreviewWidget() { return preview; }
-
-signals:
-  void newcolor(uint);
-
-protected slots:
-  void newColor(uint);
-
-public slots:
-  void addColors(uint, uint*);
-  void addColor(uint);
-  void setPreview( const QPixmap & );
-
-protected:
-  virtual void resizeEvent(QResizeEvent*);
-
-  QLabel *syslabel, *customlabel;
-  Preview *preview;
-  KSysColors *syscolors;
-  KCustomColors *customcolors;;
-};
-
-
 
 #endif //__KICONVIEW_H__
 

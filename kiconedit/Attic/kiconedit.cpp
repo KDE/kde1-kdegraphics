@@ -26,8 +26,25 @@
 #include "main.h"
 #include "pics/logo.xpm"
 
-KIconEdit::KIconEdit(const char *name, const char *xpm)
+KIconEdit::KIconEdit(const QImage image, const char *name)
  : KTopLevelWidget(name)
+{
+  init();
+  img = image;
+  img.detach();
+  grid->load(&img);
+  preview->setPixmap(grid->pixmap());
+}
+
+KIconEdit::KIconEdit(const char *xpm, const char *name)
+ : KTopLevelWidget(name)
+{
+  init();
+  icon->open(&img, xpm);
+  preview->setPixmap(grid->pixmap());
+}
+
+void KIconEdit::init()
 {
   initMetaObject();
   setCaption(kapp->getCaption());
@@ -63,11 +80,7 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   CHECK_PTR(mainview);
   debug("mainview created");
   l = new QHBoxLayout(mainview);
-  toolsw = new KIconToolsView(mainview);
-  CHECK_PTR(toolsw);
-  debug("Toolsview created");
 
-  //viewport = new QwViewport(mainview);
   viewport = new QScrollView(mainview);
   CHECK_PTR(viewport);
 
@@ -85,9 +98,8 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   {
     viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
   }
-  //viewport->setMouseTracking(true);
 
-  gridview = new KGridView(img, viewport->viewport()); //KIconEditView(this);
+  gridview = new KGridView(&img, viewport->viewport()); //KIconEditView(this);
   CHECK_PTR(gridview);
   gridview->setShowRulers(pprops->showrulers);
 
@@ -99,11 +111,8 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   debug("Grid->setGrid done");
   grid->setCellSize(pprops->gridscaling);
   debug("Grid->setCellSize done");
-  //toolsw->setPreview(grid->pixmap());
-  setMinimumHeight(toolsw->sizeHint().height());
 
   l->addWidget(viewport);
-  l->addWidget(toolsw);
   l->activate();
   debug("Layout activated");
 
@@ -130,6 +139,7 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   setupMenuBar();
   setupToolBar();
   setupDrawToolBar();
+  setupPaletteToolBar();
   setupWhatsThis();
 
   connect( icon, SIGNAL( saved()),
@@ -143,15 +153,17 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   connect(icon, SIGNAL(newmessage(const char *)),
            SLOT( slotUpdateStatusMessage(const char *)));
 
-  connect( toolsw, SIGNAL( newcolor(uint)),
+  connect( syscolors, SIGNAL( newcolor(uint)),
+     grid, SLOT(setColorSelection(uint)));
+  connect( customcolors, SIGNAL( newcolor(uint)),
      grid, SLOT(setColorSelection(uint)));
 
   connect( grid, SIGNAL( changed(const QPixmap &)),
-    toolsw, SLOT(setPreview(const QPixmap &)));
+    preview, SLOT(setPixmap(const QPixmap &)));
   connect( grid, SIGNAL( addingcolor(uint) ),
-    toolsw, SLOT(addColor(uint)));
+           SLOT(addColor(uint)));
   connect( grid, SIGNAL( colorschanged(uint, uint*) ),
-    toolsw, SLOT(addColors(uint, uint*)));
+           SLOT(addColors(uint, uint*)));
 
   connect(grid, SIGNAL(sizechanged(int, int)),
            SLOT( slotUpdateStatusSize(int, int)));
@@ -190,8 +202,6 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
 
   debug("Showing");
   show();
-  icon->open(&grid->image(), xpm);
-  toolsw->setPreview(grid->pixmap());
 }
 
 KIconEdit::~KIconEdit()
@@ -399,7 +409,7 @@ bool KIconEdit::setupMenuBar()
   file = new QPopupMenu;
   CHECK_PTR(file);
 
-  file->insertItem(Icon("newwin.xpm"), i18n("New &window"), ID_FILE_NEWWIN);
+  file->insertItem(Icon("newwin.xpm"), i18n("New &Window"), ID_FILE_NEWWIN);
   file->connectItem(ID_FILE_NEWWIN, this, SLOT(slotNewWin()));
 
   file->insertSeparator();
@@ -418,7 +428,7 @@ bool KIconEdit::setupMenuBar()
   id = file->insertItem(Icon("filefloppy.xpm"), i18n("&Save"), ID_FILE_SAVE);
   file->connectItem(ID_FILE_SAVE, this, SLOT(slotSave()));
 
-  file->insertItem(i18n("Save &as..."), ID_FILE_SAVEAS);
+  file->insertItem(i18n("S&ave as..."), ID_FILE_SAVEAS);
   file->connectItem(ID_FILE_SAVEAS, this, SLOT(slotSaveAs()));
 
   file->insertSeparator();
@@ -670,6 +680,7 @@ bool KIconEdit::setupDrawToolBar()
   drawtoolbar = new KToolBar(this);
   CHECK_PTR(drawtoolbar);
   addToolBar(drawtoolbar);
+  drawtoolbar->setFullWidth();
 
   drawtoolbar->insertButton(Icon("pointer.xpm"), ID_DRAW_FIND, TRUE, i18n("Find pixel"));
   drawtoolbar->setToggle(ID_DRAW_FIND, true);
@@ -707,6 +718,56 @@ bool KIconEdit::setupDrawToolBar()
   connect( drawtoolbar, SIGNAL(clicked(int)), SLOT(slotTools(int)));
 
   debug("setupDrawToolBar - done");
+  return true;
+}
+
+bool KIconEdit::setupPaletteToolBar()
+{
+  debug("setupPaletteToolBar");
+  Properties *pprops = props(this);
+
+  QWidget *w = new QWidget(this);
+  QBoxLayout *ml = new QVBoxLayout(w);
+  QLabel *l = new QLabel(i18n("System Colors"), w);
+  l->setFixedSize(l->sizeHint());
+  syscolors = new KSysColors(w);
+  syscolors->setFixedSize(syscolors->width(), syscolors->height());
+  ml->addWidget(l);
+  ml->addWidget(syscolors);
+  ml->activate();
+
+  int ow = w->sizeHint().width();
+  int iw = syscolors->width();
+
+  palettetoolbar = new KToolBar(this, 0, ow+8);
+  CHECK_PTR(palettetoolbar);
+  addToolBar(palettetoolbar);
+  palettetoolbar->enable(KToolBar::Show);
+  palettetoolbar->setBarPos(KToolBar::Right);
+
+  w->recreate(palettetoolbar, 0, QPoint(0, 0));
+
+  preview = new Preview(palettetoolbar);
+  preview->setFrameStyle(QFrame::Panel|QFrame::Sunken);
+  preview->setFixedSize(iw, 60);
+
+  palettetoolbar->insertWidget(0, iw, preview);
+  palettetoolbar->insertSeparator();
+  palettetoolbar->insertWidget(1, iw, w);
+  palettetoolbar->insertSeparator();
+
+  w = new QWidget(palettetoolbar);
+  ml = new QVBoxLayout(w);
+  l = new QLabel(i18n("Custom Colors"), w);
+  l->setFixedSize(l->sizeHint());
+  customcolors = new KCustomColors(w);
+  customcolors->setFixedSize(iw, customcolors->height());
+  ml->addWidget(l);
+  ml->addWidget(customcolors);
+  ml->activate();
+
+  palettetoolbar->insertWidget(1, iw, w);
+
   return true;
 }
 
@@ -755,14 +816,14 @@ bool KIconEdit::setupWhatsThis()
   what->add(statusbar, str.data());
 
   str = i18n("Preview\n\nThis is a 1:1 preview of the current icon");
-  what->add(toolsw->getPreviewWidget(), str.data());
+  what->add(preview, str.data());
 
   str = i18n("System colors\n\nHere you can select colors from the KDE Icon Palette.");
-  what->add(toolsw->getSysColors(), str.data());
+  what->add(syscolors, str.data());
 
   str = i18n("Custom colors\n\nHere you can build a palette of custom colors.\n"
              "Just double-click on a box to edit the color");
-  what->add(toolsw->getCustomColors(), str.data());
+  what->add(customcolors, str.data());
 
   // Create help for the main toolbar
 
@@ -789,7 +850,9 @@ bool KIconEdit::setupWhatsThis()
 
   str = i18n("Paste\n\nPaste the contents of the clipboard into the current icon.\n\n"
              "If the contents is larger than the current icon you can paste it"
-             " in a new window.");
+             " in a new window.\n\n"
+             "(Tip: Select \"Paste transparent pixels\" in the configuration dialog"
+             " if you also want to paste transparent)");
   what->add(toolbar->getButton(ID_EDIT_PASTE), str.data());
 
   str = i18n("Select\n\nSelect a section of the icon using the mouse.\n\n"

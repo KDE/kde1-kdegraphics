@@ -125,7 +125,7 @@ int main(int argc, char **argv)
     {
       for(uint i = 0; i < list.count(); i++)
       {
-        ki = new KIconEdit("kiconedit", list.at(i));
+        ki = new KIconEdit(list.at(i), "kiconedit");
         CHECK_PTR(ki);
       }
     }

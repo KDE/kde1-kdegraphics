@@ -51,7 +51,7 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   config->setGroup( "Appearance" );
 
   // restore geometry settings
-  QString geom = config->readEntry( "Geometry" );
+  QString geom = config->readEntry( "Geometry", "620x450" );
   if ( !geom.isEmpty() )
     sscanf( geom, "%dx%d", &pprops->winwidth, &pprops->winheight );
 

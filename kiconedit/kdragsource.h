@@ -3,7 +3,6 @@
 
 #include <qdragobject.h>
 #include <qlabel.h>
-#include <kurl.h>
 #include <qimage.h>
 #include <qstring.h>
 #include <qstrlist.h>
@@ -20,6 +19,7 @@ public:
 
     static bool canDecode( QDragMoveEvent* e );
     static bool decode( QDropEvent* e, QString& s );
+    static bool decode( QDropEvent* e, QStrList urls );
 };
 
 class KDragSource: public QLabel
@@ -34,12 +34,11 @@ public:
 signals:
   void getimage(QImage*);
   void gettext(QString);
-  void geturl(KURL);
+  void geturl(QStrList);
 
 protected:
   void mousePressEvent( QMouseEvent * );
   void mouseMoveEvent( QMouseEvent * );
-  KURL url;
   QString type;
   QString text;
   bool ok;

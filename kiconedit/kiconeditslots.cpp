@@ -23,6 +23,21 @@
 #include "kiconedit.h"
 #include "pics/logo.xpm"
 
+void KIconEdit::addColors(uint n, uint *c)
+{
+  //debug("KIconTools::addColors()");
+  customcolors->clear();
+  for(uint i = 0; i < n; i++)
+    addColor(c[i]);
+}
+
+void KIconEdit::addColor(uint color)
+{
+  //debug("KIconTools::addColor()");
+  if(!syscolors->contains(color))
+    customcolors->addColor(color);
+}
+
 void KIconEdit::slotNewWin()
 {
   slotNewWin((const char*)0);
@@ -31,7 +46,7 @@ void KIconEdit::slotNewWin()
 void KIconEdit::slotNewWin(const char *url)
 {
   debug("KIconEdit::openNewWin() - %s", url);
-  KIconEdit *w = new KIconEdit("kiconedit", url);
+  KIconEdit *w = new KIconEdit(url, "kiconedit");
   CHECK_PTR(w);
 }
 
