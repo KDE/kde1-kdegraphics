@@ -31,6 +31,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 #: kfax.cpp:402
 msgid "Help page"
@@ -138,19 +144,19 @@ msgstr "Ir para a página ..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "l: 00000 a: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Res: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Tipo: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "P:XXXofXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -257,17 +263,17 @@ msgstr "Você precisa abrir uma página de fax primeiro."
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "P.%d of %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "W: %d H: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Res: %s"
 
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
@@ -279,11 +285,11 @@ msgstr "Normal"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Tipo: Tiff "
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Tipo: Cru "
 
 #: kfax.cpp:2738
 msgid ""
