@@ -7,10 +7,6 @@
 //
 // $Id$
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include<stdio.h>
 #include<assert.h>
 
@@ -19,6 +15,12 @@
 #include"qcolor.h"
 #include"qpixmap.h"
 #include"jpeg.h"
+
+extern "C"
+{
+#include"jpeglib.h"
+}
+
 
 
 /////////////////////
@@ -31,6 +33,9 @@ void write_jpeg_jfif(QImageIO *)
     fprintf(stderr, "JPEG saving unimplemented.\n");
     return;
 }
+
+
+
 
 ///////////
 //
@@ -286,4 +291,3 @@ void qimageio_term_source(j_decompress_ptr)
 {
     return;
 }
-

@@ -3,15 +3,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
+#include <qstring.h>
+#include <qwmatrix.h>
 #include "ellipse.h"
+#include "../app.h"
+
+extern MyApp *kpaintApp;
 
 Ellipse::Ellipse() : Tool()
 {
   drawing= FALSE;
-
-  //  props= propertiesDialog::displayLineProperties
-  //    | displayFillProperties;
-  props= 3;
+  tooltip= "Ellipse";
+  props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
 void Ellipse::activating(void)
@@ -19,14 +22,12 @@ void Ellipse::activating(void)
 #ifdef KPDEBUG
   fprintf(stderr, "Ellipse::activating() hook called\n");
 #endif
-  p= canvas->pixmap();
   canvas->setCursor(crossCursor);
 }
 
 void Ellipse::mousePressEvent(QMouseEvent *e)
 {
   int x,y;
-
 
 #ifdef KPDEBUG
   fprintf(stderr, "Ellipse::mousePressEvent() handler called\n");
@@ -59,15 +60,9 @@ void Ellipse::mouseMoveEvent(QMouseEvent *e)
     x= (e->pos()).x();
     y= (e->pos()).y();
 
-    //#ifdef KPDEBUG
-    //    if (drawing)
-    //      fprintf(stderr, "Ellipse:: start (%d,%d) current (%d,%d) last (%d,%d)\n",
-    //	      startx, starty, x, y, lastx, lasty);
-    //#endif
-
     if ((lastx != x) || (lasty != y)) {
       if (drawing) {
-	paint.begin(p);
+	paint.begin(canvas->zoomedPixmap());
 	paint.setPen(*pen);
 	paint.setRasterOp(XorROP);
 
@@ -98,6 +93,7 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
 {
   int x,y;
   QPainter paint;
+  QWMatrix m;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Ellipse::mouseReleaseEvent() handler called\n");
@@ -108,11 +104,18 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
     y= (e->pos()).y();
 
     // Erase old ellipse
-    paint.begin(p);
+    paint.begin(canvas->zoomedPixmap());
     paint.setPen(*pen);
     paint.setRasterOp(XorROP);
-	if (abs(lastx-startx)*abs(lasty-starty) > 4) 
-	   paint.drawEllipse(startx, starty, lastx-startx, lasty-starty);
+    if (abs(lastx-startx)*abs(lasty-starty) > 4) 
+      paint.drawEllipse(startx, starty, lastx-startx, lasty-starty);
+
+    paint.end();
+
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    paint.begin(canvas->pixmap());
+    paint.setPen(*pen);
+    paint.setWorldMatrix(m);
     paint.setRasterOp(CopyROP);
     // Draw new ellipse
     if (abs(x-startx)*abs(y-starty) > 4) {
@@ -121,6 +124,7 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
     }
     paint.end();
     drawing= FALSE;
+    canvas->updateZoomed();
     canvas->repaint(0);
   }
   else {
@@ -128,3 +132,12 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
   }
 }
 
+QPixmap *Ellipse::pixmap()
+{
+  QString pixdir;
+
+  pixdir= kpaintApp->kdedir();
+  pixdir.append("/lib/pics/toolbar/");
+  pixdir.append("ellipse.xpm");
+  return new QPixmap(pixdir);
+}

@@ -12,8 +12,8 @@ public:
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);
   void activating(void);
+  QPixmap *pixmap(void);
 private:
-  QPixmap *p;
   int startx, starty;
   int lastx, lasty;
   bool drawing;

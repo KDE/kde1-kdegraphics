@@ -6,12 +6,19 @@
 #include <stdio.h>
 #include <qcursor.h>
 #include <qpainter.h>
+#include <qstring.h>
+#include <qwmatrix.h>
 #include "line.h"
+#include "../app.h"
+
+extern MyApp *kpaintApp;
+
 
 Line::Line() : Tool()
 {
   drawing= FALSE;
-  props= 1;
+  tooltip= "Line";
+  props= Tool::HasLineProperties;
 }
 
 void Line::activating(void)
@@ -20,7 +27,6 @@ void Line::activating(void)
   fprintf(stderr, "Line::activating() hook called\n");
 #endif
 
-  p= canvas->pixmap();
   canvas->setCursor(crossCursor);
 }
 
@@ -51,8 +57,8 @@ void Line::mousePressEvent(QMouseEvent *e)
     y= (e->pos()).y();
 
     // Erase old line
-    paint.begin(p);
-	paint.setPen(*pen);
+    paint.begin(canvas->zoomedPixmap());
+    paint.setPen(*pen);
     paint.setRasterOp(XorROP);
     paint.drawLine(startx, starty, lastx, lasty);
     paint.setRasterOp(CopyROP);
@@ -85,7 +91,7 @@ void Line::mouseMoveEvent(QMouseEvent *e)
 
     if ((lastx != x) || (lasty != y)) {
       if (drawing) {
-	paint.begin(p);
+	paint.begin(canvas->zoomedPixmap());
 	paint.setPen(*pen);
 	paint.setRasterOp(XorROP);
 
@@ -111,6 +117,7 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
 {
   int x,y;
   QPainter paint;
+  QWMatrix m;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Line::mouseReleaseEvent() handler called\n");
@@ -121,15 +128,24 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
     y= (e->pos()).y();
 
     // Erase old line
-    paint.begin(p);
-	paint.setPen(*pen);
+    paint.begin(canvas->zoomedPixmap());
+    paint.setPen(*pen);
     paint.setRasterOp(XorROP);
     paint.drawLine(startx, starty, lastx, lasty);
+
+    paint.end();
+
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    paint.begin(canvas->pixmap());
+    paint.setPen(*pen);
+    paint.setWorldMatrix(m);
+
     paint.setRasterOp(CopyROP);
     // Draw new line
     paint.drawLine(startx, starty, lastx, lasty);
     paint.end();
     drawing= FALSE;
+    canvas->updateZoomed();
     canvas->repaint(0);
   }
   else {
@@ -137,3 +153,12 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
   }
 }
 
+QPixmap *Line::pixmap(void)
+{
+  QString pixdir;
+
+  pixdir= kpaintApp->kdedir();
+  pixdir.append("/lib/pics/toolbar/");
+  pixdir.append("line.xpm");
+  return new QPixmap(pixdir);
+}

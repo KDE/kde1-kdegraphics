@@ -1,4 +1,10 @@
-Either use the included Linux (i486) binary or type:
+If installing into kdeapps tree:
+
+move your old kpaint src out of the way and extract this in it's place.
+Rerun configure and type make then make install.
+
+If install standalone:
+
 make
 make install
 

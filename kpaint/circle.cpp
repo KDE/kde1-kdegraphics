@@ -2,18 +2,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <qcursor.h>
+#include <qstring.h>
+#include <qpainter.h>
+#include <qwmatrix.h>
 #include "math.h"
 #include "circle.h"
-#include <qcursor.h>
-#include <qpainter.h>
+#include "../app.h"
+
+extern MyApp *kpaintApp;
 
 Circle::Circle() : Tool()
 {
   drawing= FALSE;
-
-  //  props= propertiesDialog::displayLineProperties
-  //    | displayFillProperties;
-  props= 3;
+  tooltip= "Circle";
+  props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
 void Circle::activating(void)
@@ -22,14 +25,12 @@ void Circle::activating(void)
   fprintf(stderr, "Circle::activating() hook called\n");
 #endif
 
-  p= canvas->pixmap();
   canvas->setCursor(crossCursor);
 }
 
 void Circle::mousePressEvent(QMouseEvent *e)
 {
   int x,y;
-  QPainter paint;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Circle::mousePressEvent() handler called\n");
@@ -63,15 +64,9 @@ void Circle::mouseMoveEvent(QMouseEvent *e)
     x= (e->pos()).x();
     y= (e->pos()).y();
 
-    //#ifdef KPDEBUG
-    //    if (drawing)
-    //      fprintf(stderr, "Circle:: start (%d,%d) current (%d,%d) last (%d,%d)\n",
-    //	      startx, starty, x, y, lastx, lasty);
-    //#endif
-
     if ((lastx != x) || (lasty != y)) {
       if (drawing) {
-	paint.begin(p);
+	paint.begin(canvas->zoomedPixmap());
 	paint.setPen(*pen);
 	paint.setRasterOp(XorROP);
 
@@ -112,6 +107,7 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
 {
   int x,y;
   QPainter paint;
+  QWMatrix m;
   int bbx, bby, r;
 
 #ifdef KPDEBUG
@@ -123,7 +119,7 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
     y= (e->pos()).y();
 
     // Erase old circle
-    paint.begin(p);
+    paint.begin(canvas->zoomedPixmap());
     paint.setPen(*pen);
     paint.setRasterOp(XorROP);
     // Erase old circle
@@ -139,7 +135,12 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
     if (r >= 2)
       paint.drawEllipse(bbx, bby, 2*r, 2*r);
 
+    paint.end();
 
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    paint.begin(canvas->pixmap());
+    paint.setWorldMatrix(m);
+    paint.setPen(*pen);
     paint.setRasterOp(CopyROP);
     // Draw new circle
     r= sqrt( (startx-x)*(startx-x)+(starty-y)*(starty-y) );
@@ -156,35 +157,18 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
 
     paint.end();
     drawing= FALSE;
+    canvas->updateZoomed();
     canvas->repaint(0);
   }
 }
 
+QPixmap *Circle::pixmap()
+{
+  QString pixdir;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  pixdir= kpaintApp->kdedir();
+  pixdir.append("/lib/pics/toolbar/");
+  pixdir.append("circle.xpm");
+  return new QPixmap(pixdir);
+}
 

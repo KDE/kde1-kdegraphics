@@ -4,17 +4,20 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <strings.h>
+#include <qpainter.h>
 #include "canvas.h"
 #include "tools/tool.h"
 
 #include "canvas.moc"
 
-Canvas::Canvas(const char *myname, int width, int height,
+Canvas::Canvas(int width, int height,
 	       QWidget *parent= 0, const char *name=0)
   : QWidget(parent)
 {
   currentTool= 0;
   s= INACTIVE;
+  matrix= new QWMatrix;
+  zoomed= NULL;
 
   // Create pixmap
   pix= new QPixmap(width, height);
@@ -22,35 +25,91 @@ Canvas::Canvas(const char *myname, int width, int height,
     fprintf(stderr, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
-  resize(width, height);
 
-  imageName= new QString(myname);
-  pix->fill(backgroundColor());
+  pix->fill(QColor("white"));
+
+  setZoom(100);
 
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
+  emit sizeChanged();
 }
 
-Canvas::Canvas(const char *file, QWidget *parent= 0, const char *name=0)
-  : QWidget(parent)
+Canvas::Canvas(const char *filename, QWidget *parent= 0, const char *name=0)
+  : QWidget(parent, name)
 {
   currentTool= 0;
   s= INACTIVE;
+  zoomFactor= 100;
+  matrix= new QWMatrix;
 
   // Create pixmap
-  pix= new QPixmap(file);
+  pix= new QPixmap(filename);
   if (!pix) {
     fprintf(stderr, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
 
-  imageName= new QString(file);
-  resize(pix->size());
+  currfilename= filename;
+
+  // Get the format
+  
+
+  resize(pix->width(), pix->height());
+  emit sizeChanged();
 
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
 }
 
+void Canvas::setZoom(int z)
+{
+  QPainter p;
+  int w, h;
+
+  zoomFactor= z;
+  matrix->reset();
+  matrix->scale((float) z/100, (float) z/100);
+
+  delete zoomed;
+
+  w= pix->width()* ((float) zoomFactor/100);
+  h= pix->height()*((float) zoomFactor/100);
+
+  zoomed= new QPixmap(w, h);
+  zoomed->fill(QColor("white"));
+
+  p.begin(zoomed);
+  p.setWorldMatrix(*matrix);
+  p.drawPixmap(0,0,*pix);
+  p.end();
+
+  if ((w != width()) || (h != height())) {
+    resize(w,h);
+    emit sizeChanged();
+  }
+  repaint(0);
+}
+
+void Canvas::updateZoomed(void)
+{
+  QPainter p;
+  int w, h;
+
+  zoomed->fill(QColor("white"));
+
+  p.begin(zoomed);
+  p.setWorldMatrix(*matrix);
+  p.drawPixmap(0,0,*pix);
+  p.end();
+
+  repaint(0);
+}
+
+int Canvas::zoom(void)
+{
+  return zoomFactor;
+}
 
 void Canvas::activate(Tool *t)
 {
@@ -71,17 +130,40 @@ QPixmap *Canvas::pixmap()
   return pix;
 }
 
-const char *Canvas::filename()
+QPixmap *Canvas::zoomedPixmap(void)
 {
-  const char *name= *imageName;
-  return name;
+  return zoomed;
+}
+
+void Canvas::setPixmap(QPixmap *px)
+{
+  QPainter p;
+  int w, h;
+
+  *pix= *px;
+
+  delete zoomed;
+
+  w= px->width()*zoomFactor/100;
+  h= px->height()*zoomFactor/100;
+
+  zoomed= new QPixmap(w, h);
+
+  p.begin(zoomed);
+  p.setWorldMatrix(*matrix);
+  p.drawPixmap(0,0,*pix);
+  p.end();
+
+  if ((w != width()) || (h != height())) {
+    resize(w,h);
+    emit sizeChanged();
+  }
+  repaint(0);
 }
 
 void Canvas::paintEvent(QPaintEvent *e)
 {
-  // Check size, do we have a scroll bar?
-
-  bitBlt(this, 0, 0, pix);
+  bitBlt(this, 0, 0, zoomed);
 }
 
 void Canvas::mousePressEvent(QMouseEvent *e)
@@ -110,6 +192,7 @@ void Canvas::mouseReleaseEvent(QMouseEvent *e)
   if (isActive())
     currentTool->mouseReleaseEvent(e);
 }
+
 bool Canvas::isActive()
 {
   if (s == ACTIVE)
@@ -118,20 +201,16 @@ bool Canvas::isActive()
     return false;
 }
 
-void Canvas::setFilename(const char *filename)
-{
-	delete imageName;
-    imageName= new QString(filename);
-}
-
-bool Canvas::load(const char *filename, char *format= 0)
+bool Canvas::load(const char *filename= 0, char *format= 0)
 {
   bool s;
-  s= pix->load(filename, format);
+  QPixmap p;
+
+  s= p.load(filename, format);
 
   if (s) {
-   setFilename(filename);
-   resize(pix->size());
+    currfilename= filename;
+    setPixmap(&p);
   }
 
   repaint(0);
@@ -139,28 +218,24 @@ bool Canvas::load(const char *filename, char *format= 0)
   return s;
 }
 
-bool Canvas::save(const char *file=0, char *format= 0)
+bool Canvas::save(const char *filename=0, char *format= 0)
 {
   bool s;
 
 #ifdef KPDEBUG
-    fprintf(stderr, "Canvas::save() file= %s, format= %s\n", file, format);
+  fprintf(stderr, "Canvas::save() file= %s, format= %s\n", filename, format);
 #endif	  
-  if (file == 0)
-    s= pix->save(filename(), format);
-  else {
-        s= pix->save(file, "BMP");
-    delete imageName;
-    imageName= new QString(file);
-  }
+
+  s= pix->save(filename, format);
+  currfilename= filename;
+
 #ifdef KPDEBUG
-    fprintf(stderr, "Canvas::save() returning %d\n", s);
+  fprintf(stderr, "Canvas::save() returning %d\n", s);
 #endif	  
 
   return s;
 }
 
-/*
 void Canvas::keyPressEvent(QKeyEvent *e)
 {
 #ifdef KPDEBUG
@@ -180,6 +255,16 @@ void Canvas::keyReleaseEvent(QKeyEvent *e)
     currentTool->keyReleaseEvent(e);
 }
 
-*/
+
+
+const char *Canvas::filename(void)
+{
+  return currfilename;
+}
+
+void Canvas::setFilename(char *name)
+{
+  currfilename= name;
+}
 
 

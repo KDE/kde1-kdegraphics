@@ -7,6 +7,7 @@
 #ifndef _SSK_QGIF_H
 #define _SSK_QGIF_H
 
-void read_gif_file(QImageIO *image);
+void read_gif_file(QImageIO *imageio);
+void write_gif_file(QImageIO *imageio);
 
 #endif

@@ -1,18 +1,32 @@
+This file lists known bugs in KPaint 0.2
+========================================
+
+Custom bitmap fills are broken, do not use.
+
+You still can't set the filetype (all of the info is there but it's not quite
+sorted out). 
+
+The lastWindowClosed() signal doesn't seem to be working, don't know why yet.
+
+
+
 This file lists known bugs in KPaint 0.1
 ========================================
 
 KPaint aborts with a bad window error when displaying modal dialogs a second
 time under kwm 0.4.4, this does not occur with fvwm95-2. I think this is a bug
-in kwm.
+in kwm. Fixed in kwm 0.4.6.
 
 Gets confused if right button is pressed whilst drawing, ie. with the left
 button pressed too. (This may be related to my XFree86 ChordMiddle setting)
 
 The tool properties dialog may show problems with qt-1.1 as it forgets to give
 a repaint event when show is called for a dialog. I've added a fix for now,
-but you should upgrade to Qt 1.2 when it is released. If you are using Qt 1.2
-beta 3 or greater you can add -DNEWQT to the compiler defines to remove the
-fix.
+but you should upgrade to Qt 1.2. If you are using Qt 1.2 you can add -DNEWQT
+to the compiler defines to remove the fix. Now requires Qt 1.2 for other things
+so I've removed the fix in 0.2.
 
-5 April 1997
+moorer@cs.man.ac.uk
+19 May 1997
+
 

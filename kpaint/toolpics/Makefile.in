@@ -1,0 +1,24 @@
+INSTALL_DATA = @INSTALL@ -m 0644
+INSTALL_DIR = @INSTALL@ -d -m 0755
+FILES = `find . -type f -name "*.xpm" -print`
+prefix = @prefix@
+destdir = $(prefix)/lib/pics/toolbar
+
+all:
+
+Makefile: Makefile.in
+	cd ../.. && CONFIG_FILES=kpaint/toolpics/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+clean:
+
+install:
+	$(INSTALL_DIR) $(destdir)
+	@for i in $(FILES); do \
+	 echo "$(INSTALL_DATA) $$i $(destdir)/$$i"; \
+	 $(INSTALL_DATA) "$$i" $(destdir)/$$i; \
+	done
+
+uninstall:
+	for i in $(FILES); do \
+	 rm -f $(destdir)/"$$i" ; \
+	done

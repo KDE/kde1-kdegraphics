@@ -1,26 +1,32 @@
 // $Id$
 
-#ifndef ELLIPSE_H
-#define ELLIPSE_H
+#ifndef SPRAYCAN_H
+#define SPRAYCAN_H
 
 #include <qpixmap.h>
 #include <qpainter.h>
+#include <qtimer.h>
 #include "tool.h"
 
-class Ellipse : public Tool
+class SprayCan : public Tool
 {
+  Q_OBJECT
 public:
-  Ellipse(void);
+  SprayCan(void);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);
   void activating(void);
   QPixmap *pixmap(void);
 private:
-  int startx, starty;
-  int lastx, lasty;
+  int density; // Dots per second (approx)
+  QTimer *timer;
+  int x, y;
+  int brushsize;
   bool drawing;
+private slots:
+  void drawDot();
 };
 
-#endif // ELLIPSE_H
 
+#endif // SPRAYCAN_H

@@ -11,15 +11,12 @@ INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 CXX	= 	@CXX@
-DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
-LDLIBS	=	-lkdeui -lkdecore -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
-METADIR	=	metas
+DEFS	=	-DHAVE_CONFIG_H
+LDLIBS	=	-lkptools -lkdeui -lkdecore -lgif -lqt -lXext -lm -lX11 -ljpeg
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
 INSTALL_DATA= @INSTALL@ -m 644
 INSTALL_BIN = @INSTALL@ -m 755
-# Uncomment this is you are using Qt 1.2 beta 3 or higher
-#DEFS+=	-DNEWQT
 
 #
 # End Configuration
@@ -33,16 +30,24 @@ OBJS=	main.o \
 	canvas.o \
 	kpaint.o \
 	manager.o \
+	formats.o \
+	infodialog.o \
+	palette.o \
+	palettedialog.o \
 	canvassize.o \
 	properties.o \
-	QwViewport.o \
-	gif.o jpeg.o
+	gif.o \
+	jpeg.o \
+	QwViewport.o
 
 METAS=	canvas.moc \
+	app.moc \
 	kpaint.moc \
 	manager.moc \
+	infodialog.moc \
 	properties.moc \
-	QwViewport.moc
+	palette.moc \
+	palettedialog.moc 
 
 .PHONY:	all clean kplib install uninstall
 
@@ -58,18 +63,23 @@ METAS=	canvas.moc \
 
 all:	kplib kpaint
 
+Makefile: Makefile.in
+	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
 install: all
 	$(INSTALL_DIR) $(prefix)/bin
 	$(INSTALL_DIR) $(prefix)/doc/HTML/kpaint
 	$(INSTALL_BIN) kpaint $(prefix)/bin
 	$(INSTALL_DATA) doc/HTML/kpaint.html $(prefix)/doc/HTML/kpaint
 	$(INSTALL_DIR) $(prefix)/apps/Applications
-	$(INSTALL_DATA) kpaint.kdelnk $(prefix)/apps/Applications 
+	$(INSTALL_DATA) Paint.kdelnk $(prefix)/apps/Applications 
+	(cd toolpics && $(MAKE) install)
 
 uninstall:
 	rm -f $(prefix)/bin/kpaint
 	rm -rf $(prefix)/doc/HTML/kpaint
-	rm -f $(prefix)/apps/Applications/kpaint.kdelnk
+	rm -f $(prefix)/apps/Applications/Paint.kdelnk
+	(cd toolpics && $(MAKE) uninstall)
 	
 kplib:
 	(cd tools; $(MAKE) all)
