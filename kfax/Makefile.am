@@ -26,7 +26,7 @@ pics_DATA = kfax.tif kfaxlogo.xpm
 icondir = $(kde_icondir)
 icon_DATA = kfax.xpm
 
-install-local-data: mini-kfax.xpm
+install-data-local: mini-kfax.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA)  mini-kfax.xpm $(kde_minidir)/kfax.xpm
 

@@ -26,7 +26,7 @@ bin_PROGRAMS = kpaint
 
 SUBDIRS = doc toolpics
 
-install-local-data: mini-kpaint.xpm
+install-data-local: mini-kpaint.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA) mini-kpaint.xpm $(kde_minidir)/kpaint.xpm
 
