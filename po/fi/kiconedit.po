@@ -20,14 +20,14 @@ msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Tapahtui virhe avattaessa kohdetiedostoa: %s"
 
 #: utils.cpp:72
-#, fuzzy, c-format
+#, c-format
 msgid "copyFile - There was an error reading source file: %s"
-msgstr "copyFile - Tapahtui virhe avattaessa lähdetiedostoa: %s"
+msgstr "copyFile - Tapahtui virhe luettaessa lähdetiedostoa: %s"
 
 #: utils.cpp:80
-#, fuzzy, c-format
+#, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
-msgstr "copyFile - Tapahtui virhe avattaessa kohdetiedostoa: %s"
+msgstr "copyFile - Tapahtui virhe kirjoitettaessa kohdetiedostoa: %s"
 
 #: utils.cpp:93
 #, c-format
@@ -749,37 +749,35 @@ msgstr "Virheellistä kuvatietoa leikepöydällä!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr ""
+msgstr "Kansiot:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"
-msgstr ""
+msgstr "Sisältö:"
 
 #: kicondetaillist.cpp:50
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: kicondetaillist.cpp:52
-#, fuzzy
 msgid "Size"
-msgstr "Koko:"
+msgstr "Koko"
 
 #: kicondetaillist.cpp:55
 msgid "Permissions"
-msgstr ""
+msgstr "Oikeudet"
 
 #: kicondetaillist.cpp:57
-#, fuzzy
 msgid "Date"
-msgstr "Liimaa"
+msgstr "Päiväys"
 
 #: kicondetaillist.cpp:60
 msgid "Owner"
-msgstr ""
+msgstr "Omistaja"
 
 #: kicondetaillist.cpp:62
 msgid "Group"
-msgstr ""
+msgstr "Ryhmä"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
@@ -802,6 +800,8 @@ msgid ""
 "\n"
 "seems to be malformed.\n"
 msgstr ""
+"\n"
+"on viallinen.\n"
 
 #: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
 #: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
@@ -829,6 +829,8 @@ msgid ""
 "\n"
 "doesn't exist or isn't readable.\n"
 msgstr ""
+"\n"
+"ei ole olemassa tai sitä ei voida lukea.\n"
 
 #: kicon.cpp:160
 msgid ""
@@ -865,6 +867,10 @@ msgid ""
 "*.gif|GIF files (*.gif)\n"
 "*jpg|JPEG files (*.jpg)\n"
 msgstr ""
+"*|Kaikki tiedostot (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF tiedostot (*.gif)\n"
+"*jpg|JPEG tiedostot (*.jpg)\n"
 
 #: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
@@ -944,7 +950,7 @@ msgstr "Luo uusi kuvake"
 
 #: debug.cpp:20
 msgid "Fatal!"
-msgstr ""
+msgstr "Tuhoisa!"
 
 #: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."

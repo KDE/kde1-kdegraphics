@@ -27,17 +27,17 @@ msgid "Net saving not yet implemented"
 msgstr "Verkkotalennusta ei ole vielä toteutettu"
 
 #: viewer.cpp:194
-#, fuzzy, c-format
+#, c-format
 msgid "%s: written"
-msgstr "kirjoittanut"
+msgstr "%s: kirjoitettut"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Anna suurennuskerroin (100 = 1x):"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Virheellinen suurennuskerroin"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -80,9 +80,8 @@ msgid "&Full Screen"
 msgstr "&Koko ruutu"
 
 #: viewer.cpp:343
-#, fuzzy
 msgid "&Zoom..."
-msgstr "&Suurennus"
+msgstr "&Suurenna..."
 
 #: viewer.cpp:344
 #, c-format
@@ -96,11 +95,11 @@ msgstr "Suurenna 10%"
 
 #: viewer.cpp:346
 msgid "&Double size"
-msgstr ""
+msgstr "&Tuplakoko"
 
 #: viewer.cpp:347
 msgid "&Half size"
-msgstr ""
+msgstr "&Puolikoko"
 
 #: viewer.cpp:349
 msgid "&Reset"
@@ -163,45 +162,40 @@ msgid "Couldn't get temporary transfer name."
 msgstr "En saanut väliaikaista siirtonimeä."
 
 #: viewer.cpp:486
-#, fuzzy
 msgid "Transfer error: "
-msgstr "&Muuta"
+msgstr "Siirtovirhe: "
 
 #: viewer.cpp:558
 msgid "Loading.."
 msgstr "Lataan.."
 
 #: colour.cpp:29
-#, fuzzy
 msgid "Brightening..."
-msgstr "Kirkastan.."
+msgstr "Kirkastan..."
 
 #: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Intensiteetti:Kirkasta"
 
 #: colour.cpp:63
-#, fuzzy
 msgid "Darkening..."
-msgstr "Tummennan.."
+msgstr "Tummennan..."
 
 #: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Intensiteetti:Tummenna"
 
 #: colour.cpp:114
-#, fuzzy
 msgid "Converting to Greyscale..."
-msgstr "Muunnan harmaasävyihin.."
+msgstr "Muunnan harmaasävyihin..."
 
 #: colour.cpp:143
 msgid "Greyscale"
 msgstr "Harmaasävy"
 
 #: colour.cpp:161
-#, fuzzy
 msgid "Smoothing..."
-msgstr "Pehmennys.."
+msgstr "Pehmennys..."
 
 #: colour.cpp:227
 msgid "Smooth"
@@ -209,15 +203,15 @@ msgstr "Pehmennä"
 
 #: colour.cpp:248
 msgid "Enter gamma value (0...1):"
-msgstr ""
+msgstr "Anna gamma-arvo (0...1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Gammakorjaan..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
-msgstr ""
+msgstr "Gammakorjattu..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
