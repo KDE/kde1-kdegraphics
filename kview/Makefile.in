@@ -26,7 +26,7 @@ LLIBPNG= -lpng -lz
 
 prefix  = @prefix@
 BINPATH = $(prefix)/bin/
-LNKPATH = $(prefix)/apps/Utilities
+LNKPATH = $(prefix)/share/applnk/Utilities
 
 # needs to be changed if you make srcdoc (requires DOC++)
 
