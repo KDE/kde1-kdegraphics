@@ -34,6 +34,8 @@ KAccel::KAccel( QWidget * parent, const char * name )
 {
 	aAvailableId = 1;
 	bEnabled = true;
+	bGlobal = false;
+	aGroup.sprintf("Keys");
 	pAccel = new QAccel( parent, name );
 }
 
@@ -134,6 +136,7 @@ bool KAccel::insertItem( const char * action, uint keyCode,
 	
 	pEntry->aDefaultKeyCode = keyCode;
 	pEntry->aCurrentKeyCode = keyCode;
+	pEntry->aConfigKeyCode = keyCode;
 	pEntry->bConfigurable = configurable;
 	pEntry->aAccelId = 0;
 	pEntry->receiver = 0;
@@ -145,8 +148,8 @@ bool KAccel::insertItem( const char * action, uint keyCode,
 bool KAccel::insertItem( const char * action, 
 					   const char * keyCode, bool configurable )
 {
-	uint iKeyCode = stringToKey(keyCode);
-	if ( iKeyCode==0 ) {
+	uint iKeyCode = stringToKey( keyCode );
+	if ( iKeyCode == -1 ) {
 		QString str;
 		str.sprintf(
 			"KAccel : cannot insert item with invalid key string %s", keyCode );
@@ -154,7 +157,7 @@ bool KAccel::insertItem( const char * action,
 		return FALSE;
 	}
 	
-	return insertItem(action, iKeyCode, configurable);
+	return insertItem( action, iKeyCode, configurable );
 }
 
 const char * KAccel::insertStdItem( int id )
@@ -263,16 +266,22 @@ QDict<KKeyEntry> KAccel::keyDict()
 
 void KAccel::readSettings()
 {
-	KConfig *pConfig = kapp->getConfig();
-	pConfig->setGroup( "Keys" );
+	QString s;
 
+	KConfig *pConfig = kapp->getConfig();
+	pConfig->setGroup( aGroup.data() );
+	
 	QDictIterator<KKeyEntry> aKeyIt( aKeyDict );
 	aKeyIt.toFirst();
 #define pE aKeyIt.current()
 	while ( pE ) {
-		pE->aConfigKeyCode =
-			stringToKey( pConfig->readEntry( aKeyIt.currentKey(),
-							keyToString( pE->aConfigKeyCode ) ) );
+		s = pConfig->readEntry( aKeyIt.currentKey() );
+		
+		if ( s.isNull() )
+			pE->aConfigKeyCode = pE->aDefaultKeyCode;
+		else
+			pE->aConfigKeyCode = stringToKey( s.data() );
+	
 		pE->aCurrentKeyCode = pE->aConfigKeyCode;
 		if ( pE->aAccelId && pE->aCurrentKeyCode ) {
 			pAccel->disconnectItem( pE->aAccelId, pE->receiver, 
@@ -333,13 +342,15 @@ void KAccel::setItemEnabled( const char * action, bool activate )
 
 bool KAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 {
+
+	debug("Disconenct and remove");
 	// Disconnect and remove all items in pAccel
 	QDictIterator<KKeyEntry> *aKeyIt = new QDictIterator<KKeyEntry>( aKeyDict );
 	aKeyIt->toFirst();
 #define pE aKeyIt->current()
 	while( pE ) {
 		QString s;
-		if ( pE->aAccelId ) {
+		if ( pE->aAccelId && pE->aCurrentKeyCode ) {
 			pAccel->disconnectItem( pE->aAccelId, pE->receiver, 
 												pE->member->data() );
 			pAccel->removeItem( pE->aAccelId );
@@ -348,8 +359,12 @@ bool KAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 	}
 #undef pE
 	
+	debug("Clear the dictionary");
+	
 	// Clear the dictionary
 	aKeyDict.clear();
+	
+	debug("Insert new items");
 	
 	// Insert the new items into the dictionary and reconnect if neccessary
 	// Note also swap config and current key codes !!!!!!
@@ -360,15 +375,18 @@ bool KAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 	while( pE ) {
 		pEntry = new KKeyEntry;
 		aKeyDict.insert( aKeyIt->currentKey(), pEntry );
-
 		pEntry->aDefaultKeyCode = pE->aDefaultKeyCode;
-		// Not we write config key code to current key code !!
+		// Note we write config key code to current key code !!
 		pEntry->aCurrentKeyCode = pE->aConfigKeyCode;
 		pEntry->aConfigKeyCode = pE->aConfigKeyCode;
 		pEntry->bConfigurable = pE->bConfigurable;
 		pEntry->aAccelId = pE->aAccelId;
 		pEntry->receiver = pE->receiver;
-		pEntry->member = new QString( pE->member->data() );
+		if( pE->member ) {
+			pEntry->member = new QString( pE->member->data() );
+		} else {
+			pEntry->member = 0;
+		}
 		
 		if ( pEntry->aAccelId && pEntry->aCurrentKeyCode ) {
 			pAccel->insertItem( pEntry->aCurrentKeyCode, pEntry->aAccelId );
@@ -446,17 +464,29 @@ const char * KAccel::stdAction( int id ) {
 	return action.data();
 }
 
+void KAccel::setConfig( const char *group, bool global )
+{
+	aGroup.sprintf( group );
+	bGlobal = global;
+}
+
 void KAccel::writeSettings()
 {
 	KConfig *pConfig = kapp->getConfig();
-	pConfig->setGroup( "Keys" );
+	pConfig->setGroup( aGroup.data() );
 
 	QDictIterator<KKeyEntry> aKeyIt( aKeyDict );
 	aKeyIt.toFirst();
 	while ( aKeyIt.current() ) {
-		if ( aKeyIt.current()->bConfigurable )
-			pConfig->writeEntry( aKeyIt.currentKey(),
-				keyToString( aKeyIt.current()->aCurrentKeyCode ) );
+		if ( aKeyIt.current()->bConfigurable ) {
+			if ( bGlobal )
+				pConfig->writeEntry( aKeyIt.currentKey(),
+					keyToString( aKeyIt.current()->aCurrentKeyCode ),
+					true, true );
+			else
+				pConfig->writeEntry( aKeyIt.currentKey(),
+					keyToString( aKeyIt.current()->aCurrentKeyCode ) );
+		}
 		++aKeyIt;
 	}
 }

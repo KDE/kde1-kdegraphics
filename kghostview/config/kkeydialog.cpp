@@ -669,7 +669,7 @@ void KKeyChooser::allDefault()
 	}
 }
 
-#define MAX_FCTN_LENGTH 15
+#define MAX_FCTN_LENGTH 30
 
 const QString KKeyChooser::item( uint keyCode, const QString& entryKey )
 {

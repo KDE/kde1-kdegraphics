@@ -232,6 +232,8 @@ class KAccel
 	 */
     void removeItem( const char * action );  
 	
+	void setConfig( const char *group, bool global );
+	
 	/** 
 	 * Enables the accelerator if activate is TRUE, or disables it if
 	 * activate is FALSE..
@@ -278,6 +280,8 @@ protected:
 	int aAvailableId;
 	QDict<KKeyEntry> aKeyDict;
 	bool bEnabled;
+	bool bGlobal;
+	QString aGroup;
 	
  
 };
