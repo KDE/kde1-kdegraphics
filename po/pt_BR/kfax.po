@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1999-01-06 01:47+0100\n"
 "PO-Revision-Date: 1998-03-23 00:00+0100\n"
 "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
@@ -227,7 +227,7 @@ msgstr "À Espera..."
 msgid "You need to open a fax page first."
 msgstr "Você precisa abrir uma página de fax primeiro."
 
-#: kfax.cpp:2748
+#: kfax.cpp:2739
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"

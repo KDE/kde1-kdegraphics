@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kfax\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1999-01-06 01:47+0100\n"
 "PO-Revision-Date: 1998-05-09 23:43+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -235,7 +235,7 @@ msgstr "Venter..."
 msgid "You need to open a fax page first."
 msgstr "Du må åpne en faksside først."
 
-#: kfax.cpp:2748
+#: kfax.cpp:2739
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1999-01-06 01:47+0100\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -224,7 +224,7 @@ msgstr "µÈ´ýÖÐ..."
 msgid "You need to open a fax page first."
 msgstr ""
 
-#: kfax.cpp:2748
+#: kfax.cpp:2739
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
