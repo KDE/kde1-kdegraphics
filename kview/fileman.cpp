@@ -143,6 +143,7 @@ void Fileman::initMenuBar()
   menubar->insertItem(i18n("&File"), file);
   menubar->insertItem(i18n("&Options"), options);
   //menubar->insertItem(i18n("&Cache"), cacheSize);
+  menubar->insertSeparator(-1);
   menubar->insertItem(i18n("&Help"), help);
   setMenu(menubar);
 }
@@ -537,7 +538,7 @@ void Fileman::updateCombobox()
     combobox->setCurrentItem(active-1);
   if(i==0) 
     {
-      combobox->insertItem("(none)",-1);
+      combobox->insertItem(i18n("(none)"),-1);
       combobox->setCurrentItem(0);
     }
 }
@@ -810,7 +811,7 @@ void Fileman::listboxClicked(int item)
 
 void Fileman::comboboxSelected(int item)
 {
-  if(strcmp(combobox->text(item),"(none)")==0)
+  if(strcmp(combobox->text(item),i18n("(none)"))==0)
     {
       imageWindow = 0L;
     }
