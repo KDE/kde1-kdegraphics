@@ -3,7 +3,7 @@
 
 INCLUDES=	$(all_includes)
 LDFLAGS	=	$(all_libraries) $(KDE_RPATH)
-LDADD	=	-lkfile -lkfm -lkdeui -lkdecore -lgif -lqt -lXext -lX11 $(LIBJPEG) -lm $(LIBSOCKET)
+LDADD	=	-lkfile -lkfm -lkdeui -lkdecore $(LIB_KIMGIO) -lgif -lqt -lXext -lX11 -lm $(LIBSOCKET)
 
 
 appsdir = $(kde_appsdir)/Graphics
@@ -14,7 +14,7 @@ icon_DATA = kpaint.xpm
 
 kpaint_SOURCES = main.cpp app.cpp canvas.cpp kpaint.cpp manager.cpp \
 	formats.cpp infodialog.cpp palette.cpp palettedialog.cpp \
-	formatdialog.cpp canvassize.cpp properties.cpp gif.cpp jpeg.cpp \
+	formatdialog.cpp canvassize.cpp properties.cpp gif.cpp \
 	QwViewport.cpp tool.cpp ellipse.cpp circle.cpp line.cpp \
 	spraycan.cpp rectangle.cpp pen.cpp areaselect.cpp depthdialog.cpp \
 	roundangle.cpp navwidget.cpp sidebar.cpp view.cpp colorbar.cpp \
@@ -22,7 +22,7 @@ kpaint_SOURCES = main.cpp app.cpp canvas.cpp kpaint.cpp manager.cpp \
 
 noinst_HEADERS = QwViewport.h areaselect.h canvas.h canvassize.h circle.h \
 	depthdialog.h ellipse.h formatdialog.h formats.h gif.h infodialog.h \
-	jpeg.h kpaint.h kundo.h line.h main.h manager.h navwidget.h palette.h \
+	kpaint.h kundo.h line.h main.h manager.h navwidget.h palette.h \
 	palettedialog.h pen.h properties.h rectangle.h roundangle.h sidebar.h \
 	spraycan.h tool.h version.h view.h colorbar.h mainview.h
 
