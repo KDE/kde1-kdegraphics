@@ -118,6 +118,7 @@ PrintSetup::PrintSetup( QWidget *parent, const char *name, QString pname,
 	resize( 300,0 );
 }
 
+
 void PrintSetup::setStrings() {
 	
 	printerName.sprintf( leName->text() );
@@ -135,9 +136,20 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name, int maxPages,
 	setFocusPolicy(QWidget::StrongFocus);
 	
 	pgMode = All;
+	/*
 	printerName.sprintf( "" ); // default printer will be chosen.
 	spoolerCommand.sprintf( "lpr" );
 	printerVariable.sprintf( "PRINTER" );
+	*/
+
+	KConfig *config = KApplication::getKApplication()->getConfig();
+	/* Read in the default options. */
+	config->setGroup( "Print" );
+	printerName=config->readEntry ("Name","");
+	spoolerCommand=config->readEntry ("Spool","lpr");
+	printerVariable=config->readEntry ("Variable","PRINTER");
+
+
 	pgMax = maxPages;
 	pgStart=0; pgEnd=0;
 	
@@ -273,8 +285,20 @@ void PrintDialog::setup()
 {
 	PrintSetup *ps = new PrintSetup( this, "print setup", printerName,
 		 spoolerCommand, printerVariable );
-	
+		
+		
+
 	if( ps->exec() ) {}
+
+	/* Set the default options. */
+	KConfig *config = KApplication::getKApplication()->getConfig();
+
+	config->setGroup( "Print" );
+	config->writeEntry ("Name", (const char *)printerName);
+	config->writeEntry ("Spool", (const char *)spoolerCommand);
+	config->writeEntry ("Variable", (const char*)printerVariable);
+
+
         delete ps;
 }
 

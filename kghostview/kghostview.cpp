@@ -1099,6 +1099,9 @@ void KGhostview::writeSettings()
 
 	config->writeEntry( "Toolbar position", s );
 
+
+
+
 	changed = FALSE;
 }
 
@@ -1286,7 +1289,10 @@ void KGhostview::print()
 	pd = new PrintDialog( this, "print dialog", doc->numpages, 
 								( marklist->markList()->count() > 0 ) );
 	pd->setCaption(i18n("Print"));
-	
+
+
+
+
 	if( pd->exec() ) {
 		printStart( pd->pgMode, pd->cbOrder->isChecked(),
 					pd->cbFile->isChecked(),
@@ -1295,6 +1301,7 @@ void KGhostview::print()
 					QString( pd->leStart->text() ).toInt(),
 					QString( pd->leEnd->text() ).toInt() );
 	}
+
 }
 
 
