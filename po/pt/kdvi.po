@@ -518,11 +518,11 @@ msgstr "Localização das Fontes PK"
 
 #: prefs.cpp:301
 msgid "Shrink factor for small text"
-msgstr "Factor de redução para texto pequeno"
+msgstr "Factor de redução texto pequeno"
 
 #: prefs.cpp:306
 msgid "Shrink factor for large text"
-msgstr "Factor de redução para texto grande"
+msgstr "Factor de redução texto grande"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"

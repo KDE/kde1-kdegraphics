@@ -64,7 +64,7 @@ msgstr "Título do documento :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr "Date de publicação :"
+msgstr "Data de publicação :"
 
 #: interpreter.cpp:42
 msgid "General"
