@@ -125,7 +125,7 @@ msgstr "Nova Imagem..."
 
 #: kpaint.cpp:314
 msgid "Save Image"
-msgstr "Gravar Imagem"
+msgstr "Salvar Imagem"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
