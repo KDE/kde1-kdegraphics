@@ -15,7 +15,8 @@
 #include <qmsgbox.h>
 #include <qlayout.h>
 #include "QwViewport.h"
-#include <kkeyconf.h>
+#include <kaccel.h>
+#include <kkeydialog.h>
 #include <ktopwidget.h>
 #include <ktoolbar.h>
 #include <kmsgbox.h>
@@ -54,6 +55,8 @@ KPaint::KPaint(const char *url) : KTopLevelWidget()
 
   w= 300;
   h= 200;
+
+  keys = new KAccel(this);
 
   View *view= new View(this, "view container");
   v= new QwViewport(view);
@@ -869,7 +872,7 @@ KDEBUG(KDEBUG_INFO, 3000, "editMask()\n");
 void KPaint::editOptions()
 {
 KDEBUG(KDEBUG_INFO, 3000, "editOptions()\n");
-    kKeys->configureKeys(this);
+    KKeyDialog::configureKeys(keys);
 }
   
 // Image

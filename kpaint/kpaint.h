@@ -7,6 +7,7 @@
 
 #include <qwidget.h>
 #include "QwViewport.h"
+#include <kaccel.h>
 #include <ktopwidget.h>
 #include <ktoolbar.h>
 #include <kmenubar.h>
@@ -137,6 +138,7 @@ private:
   KToolBar *commandsToolbar;
   KStatusBar *statusbar;
   KMenuBar *menu;
+  KAccel *keys;
 };
 
 #endif
