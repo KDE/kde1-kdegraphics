@@ -4,14 +4,14 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kview 1.0\n"
+"Project-Id-Version: KDE GRAPHICS/kview\n"
 "POT-Creation-Date: 1998-08-09 15:48+0200\n"
 "PO-Revision-Date: 1998-08-09 14:50+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=ISO_8859-1\n"
+"Content-Transfer-Encoding: ISO_8859-1\n"
 
 #: wview.cpp:81
 msgid "&Image"
