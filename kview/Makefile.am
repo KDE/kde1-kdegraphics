@@ -11,6 +11,7 @@ kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	viewer.cpp canvas.h kview.h \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
 	colour.h colour.cpp filtmenu.h filtmenu.cpp ilistdlg.h ilistdlg.cpp \
+	numdlg.h numdlg.cpp \
 	$(CORBA_SRC) $(BUILT_SOURCES)
 
 lnkdir = $(kde_appsdir)/Graphics

@@ -7,6 +7,8 @@
 
 #include<qcolor.h>
 
+#include"numdlg.h"
+
 #include"colour.h"
 #include"kapp.h"
 

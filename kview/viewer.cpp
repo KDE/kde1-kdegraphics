@@ -500,6 +500,12 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		url = file;
 	}
 
+	bool slide = _imageList->slideShowRunning();
+
+	if( slide ) {
+		_imageList->pauseSlideShow();
+	}
+
 	setStatus( i18n( "Loading.." ) );
 	_canvas->load( file );
 	setStatus( 0 );
@@ -525,6 +531,10 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		}
 		// reset matrix
 		_mat.reset();
+	}
+
+	if ( slide ) {
+		_imageList->continueSlideShow();
 	}
 }
 

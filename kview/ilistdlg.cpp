@@ -17,6 +17,7 @@
 #include<kapp.h>
 #include<drag.h>
 
+#include"numdlg.h"
 #include"typolayout.h"
 #include"ilistdlg.h"
 
@@ -27,6 +28,7 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 	_slideInterval( 5 ),
 	_slideButton ( 0 ),
 	_loop ( 0 ),
+	_paused( false ),
 
 	_list( new QStrList( true ) ), // deep copies
 	_listBox( 0 )
@@ -47,7 +49,7 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 		this, SLOT(select(int)) );
 
 	layout = layout->newSubLayout( 3, 0, 1, 1 );
-	layout->setGridSize( 1, 7 );
+	layout->setGridSize( 1, 8 );
 
 	// up btn
 	QPushButton *up = layout->newButton( i18n("Prev"), 0, 1, 1, 1 );
@@ -67,8 +69,13 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 		0, 5, 1, 1 );
 	connect( _slideButton, SIGNAL(clicked()), 
 			this, SLOT(toggleSlideShow()) );
+
+	QPushButton *interval= layout->newButton( i18n("Interval.."),
+		0, 6, 1, 1 );
+	connect( interval, SIGNAL(clicked()), 
+			this, SLOT(setInterval()) );
 	
-	_loop = layout->newCheckBox( i18n( "Loop" ), 0, 6, 1, 1 );
+	_loop = layout->newCheckBox( i18n( "Loop" ), 0, 7, 1, 1 );
 	_loop->setChecked( false );
 
 	// caption
@@ -303,4 +310,26 @@ void ImgListDlg::toggleSlideShow()
 		startSlideShow();
 
 	}
+}
+void ImgListDlg::pauseSlideShow()
+{
+	if ( slideShowRunning() ) {
+		_slideTimer->stop();
+		_paused = true;
+	}
+}
+
+void ImgListDlg::continueSlideShow()
+{
+	if ( _paused ) {
+		_slideTimer->start( _slideInterval * 1000 );
+		_paused = false;
+	}
+}
+
+void ImgListDlg::setInterval()
+{
+	KNumDialog dlg;
+	dlg.getNum( _slideInterval, 
+			i18n("Time between slides (sec):") );
 }

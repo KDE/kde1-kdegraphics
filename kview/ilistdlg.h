@@ -6,8 +6,8 @@
 #define SSK_ILISTDLG_H
 
 #include<qwidget.h>
+#include<qtimer.h>
 
-class QTimer;
 class QStrList;
 class QListBox;
 class QPushButton;
@@ -50,6 +50,11 @@ public slots:
 	void startSlideShow();
 	void stopSlideShow();
 	void toggleSlideShow();
+
+	void pauseSlideShow();
+	void continueSlideShow();
+	
+	bool slideShowRunning() const;
 	void setSlideInterval( int seconds );
 
 	void dropEvent( KDNDDropZone * );
@@ -64,6 +69,7 @@ private slots:
 	void select( int imageIndex );
 
 	void nextSlide();
+	void setInterval();
 
 private:
 	ImgListDlg& operator=( ImgListDlg& );
@@ -73,9 +79,15 @@ private:
 	int		_slideInterval;
 	QPushButton	*_slideButton;
 	QCheckBox	*_loop;
+	bool		_paused;
 	
 	QStrList	*_list;
 	QListBox	*_listBox;
 };
 
+inline bool ImgListDlg::slideShowRunning() const
+{
+	return ( _slideTimer && _slideTimer->isActive() );
+}
+	
 #endif // SSK_ILISTDLG_H
