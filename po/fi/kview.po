@@ -325,4 +325,3 @@ msgstr "Diojen viive (sek)"
 #: prefdlg.cpp:84
 msgid "&Keys"
 msgstr "&Näppäimet"
-

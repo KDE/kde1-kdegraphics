@@ -416,4 +416,3 @@ msgstr "Raakafaksin leveys:"
 #: options.cpp:212
 msgid "height:"
 msgstr "korkeus:"
-

@@ -686,4 +686,3 @@ msgstr "Os.%d/"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Suurennus"
-
