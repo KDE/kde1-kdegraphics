@@ -332,3 +332,22 @@ KImageFilter *GammaFilter::clone() const
 {
 	return new GammaFilter;
 }
+
+//
+// Shell filter
+//
+
+const char *ShellFilter::name() const
+{
+	return i18n( "External.." );
+}
+
+KImageFilter *ShellFilter::clone() const
+{
+	return new ShellFilter;
+}
+
+void ShellFilter::invoke( QImage )
+{
+	// TODO: stub
+}

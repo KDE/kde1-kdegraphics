@@ -116,4 +116,24 @@ public:
 	virtual KImageFilter *clone() const;
 };
 
+class ShellFilter : public KImageFilter
+{
+
+public:
+	/**
+	* ShellFilter Constructor
+	*/
+	ShellFilter() : KImageFilter() {}
+
+	/**
+	* ShellFilter Destructor
+	*/
+	virtual ~ShellFilter() {}
+
+	virtual void invoke( QImage before );
+        virtual const char *name() const;
+
+	virtual KImageFilter *clone() const;
+};
+
 #endif // SSK_COLOUR_H
