@@ -1,0 +1,370 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kfax 1.0\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"PO-Revision-Date: 1998-05-01 13:00+0001\n"
+"Last-Translator: Juraj Bednar <bednar@isternet.sk>\n"
+"Language-Team: Slovak <bednar@isternet.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-2\n"
+"Content-Transfer-Encoding: inline\n"
+
+#: about.cpp:39
+msgid "About KFax"
+msgstr "Informácie o aplikácii KFax"
+
+#: about.cpp:58
+msgid "Version "
+msgstr "Verzia "
+
+#: kfax.cpp:222 kfax.cpp:820
+msgid "Show &Tool Bar"
+msgstr "Ukáza» panel nás&trojov"
+
+#: kfax.cpp:224 kfax.cpp:813
+msgid "Hide &Tool Bar"
+msgstr "Skry» panel nás&trojov"
+
+#: kfax.cpp:227 kfax.cpp:793
+msgid "Show &Status Bar"
+msgstr "Ukáza» &stavový riadok"
+
+#: kfax.cpp:229 kfax.cpp:786
+msgid "Hide &Status Bar"
+msgstr "Skry» &stavový riadok"
+
+#: kfax.cpp:380
+msgid "&About..."
+msgstr "&Informácie..."
+
+#: kfax.cpp:381
+msgid "Help page"
+msgstr "Stránka pomocníka"
+
+#: kfax.cpp:382
+msgid "KFax &Help "
+msgstr "Pomocník &KFax"
+
+#: kfax.cpp:384
+msgid "&Open Fax..."
+msgstr "&Otvori» Fax..."
+
+#: kfax.cpp:385
+msgid "&Add Fax..."
+msgstr "Prid&a» Fax..."
+
+#: kfax.cpp:388
+msgid "Open &URL..."
+msgstr "Otvori» UR&L..."
+
+#: kfax.cpp:389
+msgid "Save to U&RL..."
+msgstr "Ulo¾i» na U&RL..."
+
+#: kfax.cpp:390
+msgid "&Close Fax"
+msgstr "&Zavrie» Fax"
+
+#: kfax.cpp:397
+msgid "&Next Page"
+msgstr "&Nasledujúca strana"
+
+#: kfax.cpp:398
+msgid "&Prev Page"
+msgstr "&Predchádzajúca strana"
+
+#: kfax.cpp:399
+msgid "&First Page"
+msgstr "P&rvá strana"
+
+#: kfax.cpp:400
+msgid "&Last Page"
+msgstr "Pos&ledná strana"
+
+#: kfax.cpp:402
+msgid "&Rotate Page"
+msgstr "Otoèi» str&anu"
+
+#: kfax.cpp:403
+msgid "&Mirror Page"
+msgstr "&Zrkadlo strany"
+
+#: kfax.cpp:404
+msgid "&Flip Page"
+msgstr "Pre&vráti» stranu"
+
+#: kfax.cpp:406
+msgid "Zoom &in"
+msgstr "Zväè¹&i»"
+
+#: kfax.cpp:407
+msgid "Zoom &out"
+msgstr "Z&men¹i»"
+
+#: kfax.cpp:412
+msgid "&Fax Options"
+msgstr "&Nastavi» Fax"
+
+#: kfax.cpp:414
+msgid "&Tool Bar"
+msgstr "Panel nás&trojov"
+
+#: kfax.cpp:415
+msgid "&Status Bar"
+msgstr "&Stavový riadok"
+
+#: kfax.cpp:442
+msgid "Go back"
+msgstr "Ís» spä»"
+
+#: kfax.cpp:445
+msgid "Go forward"
+msgstr "Ís» vpred"
+
+#: kfax.cpp:450
+msgid "Go to start"
+msgstr "Ís» na zaèiatok"
+
+#: kfax.cpp:453
+msgid "Go to end"
+msgstr "Ís» na koniec"
+
+#: kfax.cpp:459
+msgid "Zoom in"
+msgstr "Zväè¹i»"
+
+#: kfax.cpp:462
+msgid "Zoom out"
+msgstr "Zmen¹i»"
+
+#: kfax.cpp:467
+msgid "Print document"
+msgstr "Vytlaèi» dokument"
+
+#: kfax.cpp:476
+msgid "Go to page ..."
+msgstr "Ís» na stranu..."
+
+#: kfax.cpp:562
+msgid "Open Location:"
+msgstr "Otvori»:"
+
+#: kfax.cpp:578
+msgid "You need to open a Fax first"
+msgstr "Najprv treba otvori» Fax"
+
+#: kfax.cpp:584
+msgid "Save to Location:"
+msgstr "Ulo¾i» na:"
+
+#: kfax.cpp:625
+msgid "Select Facsimile to Open"
+msgstr "Zvoµte fax na otvorenie"
+
+#: kfax.cpp:662
+msgid "Select Facsimile to Add"
+msgstr "Zvoµte fax na pridanie"
+
+#: kfax.cpp:804
+msgid "Not yet implemented"
+msgstr "E¹te nie je implementované"
+
+#: kfax.cpp:854
+msgid "     There is no document active      "
+msgstr "     Nie je ¾iadny aktívny dokument   "
+
+#: kfax.cpp:988
+#, c-format
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Nesprávne rozmery strany:\n"
+"©írka %.2f Vý¹ka %.2f\n"
+
+#: kfax.cpp:1004
+#, c-format
+msgid "Can't print to \"%s\"\n"
+msgstr "Nemô¾em tlaèi» do \"%s\"\n"
+
+#: kfax.cpp:1015
+#, c-format
+msgid "Couldn't create %s\n"
+msgstr "Nemô¾em vytvori» %s\n"
+
+#: kfax.cpp:1085
+msgid "Saving ..."
+msgstr "Ukladám ..."
+
+#: kfax.cpp:1092
+msgid "Loading ..."
+msgstr "Na»ahujem ..."
+
+#: kfax.cpp:1119 kfax.cpp:1155
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"Chyba v 'copy file()'\n"
+"Nemô¾em ulo¾i» súbor!"
+
+#: kfax.cpp:1125
+msgid "Saved"
+msgstr "Ulo¾ené"
+
+#: kfax.cpp:1132 kfax.cpp:1194
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax u¾ èaká na dokonèenie\n"
+"práce s internetom.\n"
+"Prosím poèkajte, kým skonèí\n"
+
+#: kfax.cpp:1143 kfax.cpp:1207
+msgid "Could not communicate with KFM"
+msgstr "Nemô¾em komunikova» s KFM"
+
+#: kfax.cpp:1184
+#, c-format
+msgid "Loading '%s'"
+msgstr "Naèítavam '%s'"
+
+#: kfax.cpp:1201
+msgid "Calling KFM"
+msgstr "Volám KFM"
+
+#: kfax.cpp:1214
+msgid "Starting Job"
+msgstr "Spú¹»am úlohu"
+
+#: kfax.cpp:1217
+msgid "Connected"
+msgstr "Pripojený"
+
+#: kfax.cpp:1219
+msgid "Waiting..."
+msgstr "Èakám..."
+
+#: kfax.cpp:2070
+msgid "You need to open a fax page first."
+msgstr "Najprv treba otvori» faxovú stránku."
+
+#: kfax.cpp:2740
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Súbor s takýmto názvom u¾ existuje\n"
+"Chcete ho prepísa»?\n"
+"\n"
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "Nastavenie KFaxu"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Rozlí¹enie faxu:"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Akurát"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Zobrazenie:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Na ¹írku"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Hore nohami"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Opaène"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Formát raw dát:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "LS-Bit prvý"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Raw faxy sú:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "©írka Raw faxu:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "vý¹ka:"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "Tlaèový dialóg"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Tlaèi» ako Postskript na tlaè."
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Príkaz:"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Tlaèi» ako ps do súboru:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Listova»"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Veµkos»:"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Fax na celú stranu"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Prida» okraje tlaèiarne (v cm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Horizontálne:"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Vertikálne:"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Zvoµte názov súboru"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "Musíte napísa» meno súboru, ak chcete tlaèi» do súboru."
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"Musíte zada» tlaèový príkaz ako napr. \"lpr\"\n"
+" ak chcete tlaèi» na tlaèiareò."
