@@ -29,32 +29,32 @@ msgid ""
 msgstr ""
 
 #: goto.cpp:54
-#, fuzzy
+#
 msgid "&Section"
-msgstr "保存选项[&S]"
+msgstr "章节[&S]"
 
 #: goto.cpp:70
-#, fuzzy
+#
 msgid "&Page"
-msgstr "页"
+msgstr "页[&P]"
 
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2215
 #: kghostview.cpp:2227 kghostview.cpp:2232 kghostview.cpp:2515
 #, c-format
 msgid "of %d"
-msgstr ""
+msgstr "/ %d"
 
 #: info.cpp:45
 msgid "File name :"
-msgstr ""
+msgstr "文件名 :"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr ""
+msgstr "文章标题 :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr ""
+msgstr "出版日期 :"
 
 #: interpreter.cpp:42
 msgid "General"
@@ -62,20 +62,20 @@ msgstr "一般"
 
 #: interpreter.cpp:79
 msgid "&Interpreter name"
-msgstr ""
+msgstr "解释器名字[&I]"
 
 #: interpreter.cpp:87
-#, fuzzy
+#
 msgid "&Antialiasing"
-msgstr "打开平滑功能"
+msgstr "平滑[&A]"
 
 #: interpreter.cpp:97
 msgid "Platform &fonts"
-msgstr ""
+msgstr "平台字体[&F]"
 
 #: interpreter.cpp:107
 msgid "&Messages"
-msgstr ""
+msgstr "消息[&M]"
 
 #: interpreter.cpp:130
 msgid "Palette"
@@ -83,7 +83,7 @@ msgstr "调色板"
 
 #: interpreter.cpp:152
 msgid "Colo&r"
-msgstr ""
+msgstr "颜色[&R]"
 
 #: interpreter.cpp:161
 msgid "&Grayscale"
@@ -91,23 +91,23 @@ msgstr "灰度[&G]"
 
 #: interpreter.cpp:169
 msgid "Monochrom&e"
-msgstr ""
+msgstr "单色[&E]"
 
 #: interpreter.cpp:192
 msgid "Backing"
-msgstr ""
+msgstr "后退"
 
 #: interpreter.cpp:214
 msgid "&Pixmap"
-msgstr ""
+msgstr "位图[&P]"
 
 #: interpreter.cpp:224
 msgid "&Backing store"
-msgstr ""
+msgstr "告速缓存[&B]"
 
 #: interpreter.cpp:244 kkeydialog.cpp:230
 msgid "&Defaults"
-msgstr ""
+msgstr "缺省[&D]"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -115,19 +115,19 @@ msgstr "gs"
 
 #: kaccel.cpp:166
 msgid "CTRL+O"
-msgstr ""
+msgstr "CTRL+O"
 
 #: kaccel.cpp:170
 msgid "CTRL+N"
-msgstr ""
+msgstr "CTRL+N"
 
 #: kaccel.cpp:174
 msgid "CTRL+W"
-msgstr ""
+msgstr "CTRL+W"
 
 #: kaccel.cpp:178
 msgid "CTRL+S"
-msgstr ""
+msgstr "CTRL+S"
 
 #: kaccel.cpp:181 kaccel.cpp:401 kghostview.cpp:347 kghostview.cpp:368
 #: kghostview.cpp:432 kghostview.cpp:1286
@@ -136,77 +136,77 @@ msgstr "打印"
 
 #: kaccel.cpp:182
 msgid "CTRL+P"
-msgstr ""
+msgstr "CTRL+P"
 
 #: kaccel.cpp:186
 msgid "CTRL+Q"
-msgstr ""
+msgstr "CTRL+Q"
 
 #: kaccel.cpp:190
 msgid "CTRL+X"
-msgstr ""
+msgstr "CTRL+X"
 
 #: kaccel.cpp:194
 msgid "CTRL+C"
-msgstr ""
+msgstr "CTRL+C"
 
 #: kaccel.cpp:198
 msgid "CTRL+V"
-msgstr ""
+msgstr "CTRL+V"
 
 #: kaccel.cpp:202
 msgid "CTRL+Z"
-msgstr ""
+msgstr "CTRL+Z"
 
 #: kaccel.cpp:206
 msgid "CTRL+F"
-msgstr ""
+msgstr "CTRL+F"
 
 #: kaccel.cpp:210
 msgid "CTRL+R"
-msgstr ""
+msgstr "CTRL+R"
 
 #: kaccel.cpp:213 kaccel.cpp:425
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: kaccel.cpp:214
 msgid "CTRL+Insert"
-msgstr ""
+msgstr "CTRL+Insert"
 
 #: kaccel.cpp:217 kaccel.cpp:428
 msgid "Home"
-msgstr "回到起点"
+msgstr "Home"
 
 #: kaccel.cpp:218
-#, fuzzy
+#
 msgid "CTRL+Home"
-msgstr "回到起点"
+msgstr "CTRL+Home"
 
 #: kaccel.cpp:221 kaccel.cpp:431
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: kaccel.cpp:222
 msgid "CTRL+End"
-msgstr ""
+msgstr "CTRL+End"
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
+#
 msgid "Next"
-msgstr "下一页"
+msgstr "Next"
 
 #: kaccel.cpp:234
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: kghostview.cpp:202
 msgid "Document information"
-msgstr ""
+msgstr "文章信息"
 
 #: kghostview.cpp:216 kghostview.cpp:349 kghostview.cpp:370 kghostview.cpp:439
 msgid "View Control"
@@ -254,7 +254,7 @@ msgstr "重绘"
 
 #: kghostview.cpp:402 kghostview.cpp:404
 msgid "Not known"
-msgstr ""
+msgstr "未知"
 
 #: kghostview.cpp:415
 msgid "Configure interpreter"
@@ -266,7 +266,7 @@ msgstr "打开[&O] ..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "最近打开的[&R]"
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -285,9 +285,9 @@ msgid "&View control ..."
 msgstr "视图控制[&V] ..."
 
 #: kghostview.cpp:511
-#, fuzzy
+#
 msgid "&Fit to page width"
-msgstr "跳至页...[&G]"
+msgstr "调整宽度[&F]"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -391,27 +391,27 @@ msgstr "页标记[&P]"
 
 #: kghostview.cpp:654
 msgid "New window ..."
-msgstr ""
+msgstr "打开新窗口 ..."
 
 #: kghostview.cpp:657
-#, fuzzy
+#
 msgid "Open file ..."
-msgstr "打开[&O] ..."
+msgstr "打开文件 ..."
 
 #: kghostview.cpp:662
-#, fuzzy
+#
 msgid "Print document ..."
-msgstr "打印[&P] ..."
+msgstr "打印文章 ..."
 
 #: kghostview.cpp:667
-#, fuzzy
+#
 msgid "Zoom in"
-msgstr "放大[&I]"
+msgstr "放大"
 
 #: kghostview.cpp:670
-#, fuzzy
+#
 msgid "Zoom out"
-msgstr "缩小[&O]"
+msgstr "缩小"
 
 #: kghostview.cpp:673
 msgid "Change view ..."
@@ -419,11 +419,11 @@ msgstr "改变视图 ..."
 
 #: kghostview.cpp:683
 msgid "Go back"
-msgstr "往后"
+msgstr "向后"
 
 #: kghostview.cpp:686
 msgid "Go forward"
-msgstr "往前"
+msgstr "向前"
 
 #: kghostview.cpp:689
 msgid "Go to page ..."
@@ -439,12 +439,12 @@ msgstr "跳至最后"
 
 #: kghostview.cpp:700
 msgid "Read down the page"
-msgstr "此页往下读"
+msgstr "从此页往下读"
 
 #: kghostview.cpp:705
-#, fuzzy
+#
 msgid "Toggle this page mark"
-msgstr "切换页标记"
+msgstr "切换此页标记"
 
 #: kghostview.cpp:727
 msgid "Sc.100 of 100  P.100 of 100"
@@ -453,11 +453,11 @@ msgstr "章节: 100 of 100  页数:100 of 100"
 #: kghostview.cpp:728
 #, c-format
 msgid "100 %"
-msgstr ""
+msgstr "100 %"
 
 #: kghostview.cpp:729
 msgid "Upside Down"
-msgstr ""
+msgstr "上下颠倒"
 
 #: kghostview.cpp:754
 msgid "Malformed URL."
@@ -470,27 +470,30 @@ msgid ""
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
 msgstr ""
+"正在等待一个 internet\n"
+"任务完成.请等待它完成.也可以停\n"
+"止正在运行的任务."
 
 #: kghostview.cpp:775
 msgid "Could not start or find KFM."
 msgstr "无法运行或找不到 KFM."
 
 #: kghostview.cpp:1220 kghostview.cpp:2307 viewcontrol.cpp:67
-#, fuzzy
+#
 msgid "Portrait"
-msgstr "打印"
+msgstr "竖排格式"
 
 #: kghostview.cpp:1222 kghostview.cpp:2313 viewcontrol.cpp:68
 msgid "Landscape"
-msgstr ""
+msgstr "从右到左"
 
 #: kghostview.cpp:1224 kghostview.cpp:2311 viewcontrol.cpp:69
 msgid "Seascape"
-msgstr ""
+msgstr "从左到右"
 
 #: kghostview.cpp:1226 kghostview.cpp:2309 viewcontrol.cpp:70
 msgid "Upside down"
-msgstr ""
+msgstr "上下颠倒"
 
 #: kghostview.cpp:1264
 msgid "Go to ..."
@@ -530,10 +533,13 @@ msgid ""
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
+"版本 :\t0.6 alpha\n"
+"作者 : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "打印错误"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -542,39 +548,44 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
+"你可以选择打印所有页到文件. 这样会产生和\n"
+"当前打开的文章完全一致的文章 . 不需要把\n"
+"所有的页打印到新文件里 ."
 
 #: kghostview.cpp:1582
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
+"没有文件名 , 不能打印到文件.\n"
 
 #: kghostview.cpp:1640
 #, c-format
 msgid "Print failure : %s"
-msgstr ""
+msgstr "打印失败 : %s"
 
 #: kghostview.cpp:1676
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
+"打印失败 : 要打印的页列表是空的.\n"
 
 #: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
 #: kghostview.cpp:2509
 msgid "of 1    "
-msgstr ""
+msgstr " /1     "
 
 #: kghostview.cpp:2211 kghostview.cpp:2223 kghostview.cpp:2511
 #, c-format
 msgid "of %d    "
-msgstr ""
+msgstr "/ %d     "
 
 #: kghostview.cpp:2213 kghostview.cpp:2225 kghostview.cpp:2513
 #: kghostview.cpp:2520
 #, c-format
 msgid "of %d  "
-msgstr ""
+msgstr "/ %d   "
 
 #: kghostview.cpp:2485
 msgid "Sc.1 "
@@ -596,23 +607,23 @@ msgstr "章节.%d "
 
 #: kkeydialog.cpp:308
 msgid "Current key"
-msgstr ""
+msgstr "当前的键"
 
 #: kkeydialog.cpp:319
 msgid "&Action"
-msgstr ""
+msgstr "动作[&A]"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "没有键[&N]"
 
 #: kkeydialog.cpp:386
 msgid "&Default key"
-msgstr ""
+msgstr "缺省的键[&D]"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "自定义键[&C]"
 
 #: main.cpp:25
 msgid "Usage: "
@@ -620,19 +631,23 @@ msgstr "用法: "
 
 #: main.cpp:27
 msgid ""
-" [filename] [siwtches]\n"
+" [filename] [switches]\n"
 "\n"
 msgstr ""
+" [filename] [switches]\n"
+"\n"
 
 #: main.cpp:28
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
 msgstr ""
+"See KDE and Qt documentation for\n"
+"command line options.\n"
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Error on command line"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -664,32 +679,32 @@ msgstr "Ghostscipt 消息"
 
 #: messages.cpp:56
 msgid "&Clear"
-msgstr ""
+msgstr "清除[&C]"
 
 #: messages.cpp:59 viewcontrol.cpp:114
 msgid "&Dismiss"
-msgstr ""
+msgstr "取消[&D]"
 
 #: print.cpp:35
 msgid "Printer setup"
-msgstr ""
+msgstr "打印机设置"
 
 #: print.cpp:65
-#, fuzzy
+#
 msgid "&Printer name"
-msgstr "打印[&P] ..."
+msgstr "打印机名[&P] ..."
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr ""
+msgstr "脱机命令[&S]"
 
 #: print.cpp:89
 msgid "&Environment variable"
-msgstr ""
+msgstr "环境变量[&E]"
 
 #: print.cpp:148
 msgid "Print to file"
-msgstr ""
+msgstr "打印到文件"
 
 #: print.cpp:153
 msgid "Pages"
@@ -697,36 +712,36 @@ msgstr "页"
 
 #: print.cpp:179
 msgid "&All"
-msgstr ""
+msgstr "全部[&A]"
 
 #: print.cpp:188
 msgid "&Current"
-msgstr ""
+msgstr "当前[&C]"
 
 #: print.cpp:196
 msgid "&Marked"
-msgstr ""
+msgstr "标记的[&M]"
 
 #: print.cpp:205
 msgid "&Range"
-msgstr ""
+msgstr "范围[&R]"
 
 #: print.cpp:219
 msgid "to"
-msgstr ""
+msgstr "到"
 
 #: print.cpp:232
 msgid "Print document in re&verse order"
-msgstr ""
+msgstr "以反向顺序打印文章"
 
 #: print.cpp:249
-#, fuzzy
+#
 msgid "&Setup ..."
-msgstr "打开[&O] ..."
+msgstr "设置[&S] ..."
 
 #: print.cpp:289
 msgid "Range error"
-msgstr ""
+msgstr "范围错误"
 
 #: print.cpp:290
 msgid ""
@@ -737,24 +752,28 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
+"输入的打印页码范围不能正确解释.\n"
+"\n"
+"指定的范围必须在文章的这个部分之中.检查状态\n"
+"行中的信息.\n"
 
 #: viewcontrol.cpp:36
 msgid "Force changes to ..."
-msgstr ""
+msgstr "强制改变 ..."
 
 #: viewcontrol.cpp:78
 msgid "&magnification"
-msgstr ""
+msgstr "放大[&M]"
 
 #: viewcontrol.cpp:86
-#, fuzzy
+#
 msgid "m&edia"
-msgstr "重绘[&R]"
+msgstr "介质[&E]"
 
 #: viewcontrol.cpp:94
 msgid "&orientation"
-msgstr ""
+msgstr "方向[&O]"
 
 #: viewcontrol.cpp:111
 msgid "&Apply"
-msgstr ""
+msgstr "应用[&A]"

@@ -11,6 +11,8 @@ msgid ""
 "\n"
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
+"\n"
+"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 
 #: app.cpp:46
 msgid "Usage: "
@@ -28,36 +30,36 @@ msgstr "区域选择"
 msgid "Canvas Size"
 msgstr "画布大小"
 
+#
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "宽度"
+msgstr "宽度:"
 
+#
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "高度"
+msgstr "高度:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
 msgstr "圆形"
 
+#
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "图象宽度"
+msgstr "图象颜色深度:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (位图)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 色)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (真彩色)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -94,7 +96,7 @@ msgstr "未保存修改"
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
+msgstr "你所做的修改没有保存,如果关闭这个窗口,所做的修改将要丢失 ."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -124,8 +126,8 @@ msgstr "打开图象..."
 msgid "New Image..."
 msgstr "新图象..."
 
+#
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
 msgstr "保存图象..."
 
@@ -155,7 +157,7 @@ msgstr "关闭窗口"
 
 #: kpaint.cpp:324
 msgid "Exit"
-msgstr "结束"
+msgstr "退出"
 
 #: kpaint.cpp:327
 msgid "Copy Region"
@@ -163,7 +165,7 @@ msgstr "区域拷贝"
 
 #: kpaint.cpp:328
 msgid "Cut Region"
-msgstr "区域剪下"
+msgstr "区域剪切"
 
 #: kpaint.cpp:329
 msgid "Paste Region"
@@ -183,7 +185,7 @@ msgstr "信息..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "改变大小..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -219,15 +221,15 @@ msgstr "区域选择"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "圆角"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
-msgstr ""
+msgstr "显示工具--工具条"
 
 #: kpaint.cpp:358
 msgid "Show Commands Toolbar"
-msgstr ""
+msgstr "显示命令--工具条"
 
 #: kpaint.cpp:359
 msgid "Show Status Bar"
@@ -239,7 +241,7 @@ msgstr "保存选项"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -247,6 +249,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -276,15 +281,15 @@ msgstr "继续"
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: 未知的格式"
 
+#
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
-"错误: 不正确的 URL\n"
-"KPaint 无法解释指定的 URL, 请确认是否正确."
+"错误: 未知格式\n"
+"KPaint 不知道指定文件的格式或者文件已损坏."
 
 #: kpaint.cpp:745
 msgid "Open Location:"
@@ -398,10 +403,10 @@ msgstr "线段交点类型:"
 msgid "Set Line Colour..."
 msgstr "设定线段颜色..."
 
+#
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "矩形"
+msgstr "圆角"
 
 #~ msgid "Dismiss"
 #~ msgstr "取消"

@@ -25,10 +25,10 @@ msgid "Connected"
 msgstr "连接上"
 
 msgid "Go back"
-msgstr "往后"
+msgstr "向后"
 
 msgid "Go forward"
-msgstr "往前"
+msgstr "向前"
 
 msgid "Go to end"
 msgstr "跳至最后"
