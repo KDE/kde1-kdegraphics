@@ -21,6 +21,7 @@ class KPaint : public KTopLevelWidget
 
 public:
   KPaint(const char *url_= NULL);
+  ~KPaint();
 
   void setPixmap(QPixmap *);
 

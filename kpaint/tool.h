@@ -34,6 +34,9 @@ class Tool : public QObject
 {
   Q_OBJECT
 public:
+  // Page flags
+  enum {HasLineProperties = 1, HasFillProperties = 2, HasCustomProperties = 4};
+
   Tool(void);
   void activate(Canvas *c); // Make the tool active for canvas c
   void deactivate(void); // Make the tool inactive
@@ -42,11 +45,6 @@ public:
   void setBrush(QBrush *b);
   const char *tip(void) { return tooltip; };
   virtual QPixmap *pixmap(void);
-
-  // Page flags
-  const int HasLineProperties= 1;
-  const int HasFillProperties= 2;
-  const int HasCustomProperties= 4;
 
   // Used by the properties dialog
   int getPages(void);
