@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
-"POT-Creation-Date: 1999-01-10 01:46+0100\n"
+"POT-Creation-Date: 1999-03-05 01:49+0100\n"
 "PO-Revision-Date: 1998-12-26 14:20+0001\n"
 "Last-Translator: Juraj Bednar <bednar@isternet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ksnapshot.cpp:40
+#: ksnapshot.cpp:41
 msgid "snapshot"
 msgstr "snapshot"
 
-#: ksnapshot.cpp:94
+#: ksnapshot.cpp:95
 #, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
@@ -36,43 +36,43 @@ msgstr ""
 "\n"
 "Verzia: %s"
 
-#: ksnapshot.cpp:129
+#: ksnapshot.cpp:130
 msgid "Filename:"
 msgstr "Súbor:"
 
-#: ksnapshot.cpp:161
+#: ksnapshot.cpp:162
 msgid "Delay:"
 msgstr "Pauza:"
 
-#: ksnapshot.cpp:170
+#: ksnapshot.cpp:171
 msgid "seconds."
 msgstr "sekúnd."
 
-#: ksnapshot.cpp:190
+#: ksnapshot.cpp:191
 msgid "Auto raise"
 msgstr "Auto. zdvihnú»"
 
-#: ksnapshot.cpp:191
+#: ksnapshot.cpp:192
 msgid "Hide KSnapshot window"
 msgstr "Skry» okno KSnapshot"
 
-#: ksnapshot.cpp:193
+#: ksnapshot.cpp:194
 msgid "Only grab the window containing the cursor"
 msgstr "Zosníma» iba okno, v ktorom je kurzor"
 
-#: ksnapshot.cpp:224
+#: ksnapshot.cpp:225
 msgid "Grab"
 msgstr "Zosníma»"
 
-#: ksnapshot.cpp:454
+#: ksnapshot.cpp:455
 msgid "Error: Unable to save image"
 msgstr "Chyba: Nemô¾em ulo¾i» obrázok"
 
-#: ksnapshot.cpp:455
+#: ksnapshot.cpp:456
 msgid "Dismiss"
 msgstr "V poriadku"
 
-#: ksnapshot.cpp:459
+#: ksnapshot.cpp:460
 #, c-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -81,6 +81,6 @@ msgstr ""
 "KSnapshot nebol schopný ulo¾i» obrázok do\n"
 "%s."
 
-#: ksnapshot.cpp:469
+#: ksnapshot.cpp:470
 msgid "KSnapshot preview"
 msgstr "KSnapshot náhµad"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
-"POT-Creation-Date: 1999-01-10 01:46+0100\n"
+"POT-Creation-Date: 1999-03-05 01:49+0100\n"
 "PO-Revision-Date: 1998-12-28 01:24+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ksnapshot.cpp:40
+#: ksnapshot.cpp:41
 msgid "snapshot"
 msgstr "снимок"
 
-#: ksnapshot.cpp:94
+#: ksnapshot.cpp:95
 #, fuzzy, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
@@ -36,43 +36,43 @@ msgstr ""
 "\n"
 "Версия: "
 
-#: ksnapshot.cpp:129
+#: ksnapshot.cpp:130
 msgid "Filename:"
 msgstr "Имя файла:"
 
-#: ksnapshot.cpp:161
+#: ksnapshot.cpp:162
 msgid "Delay:"
 msgstr "Задержка:"
 
-#: ksnapshot.cpp:170
+#: ksnapshot.cpp:171
 msgid "seconds."
 msgstr "секунд."
 
-#: ksnapshot.cpp:190
+#: ksnapshot.cpp:191
 msgid "Auto raise"
 msgstr "Автоматически наверх"
 
-#: ksnapshot.cpp:191
+#: ksnapshot.cpp:192
 msgid "Hide KSnapshot window"
 msgstr "Скрыть окно KSnapshot"
 
-#: ksnapshot.cpp:193
+#: ksnapshot.cpp:194
 msgid "Only grab the window containing the cursor"
 msgstr "Снимать окно, содержащее курсор"
 
-#: ksnapshot.cpp:224
+#: ksnapshot.cpp:225
 msgid "Grab"
 msgstr "Снять"
 
-#: ksnapshot.cpp:454
+#: ksnapshot.cpp:455
 msgid "Error: Unable to save image"
 msgstr "Ошибка записи изображения"
 
-#: ksnapshot.cpp:455
+#: ksnapshot.cpp:456
 msgid "Dismiss"
 msgstr "Убрать"
 
-#: ksnapshot.cpp:459
+#: ksnapshot.cpp:460
 #, c-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -81,6 +81,6 @@ msgstr ""
 "KSnapshot не смог записать изображение\n"
 "%s."
 
-#: ksnapshot.cpp:469
+#: ksnapshot.cpp:470
 msgid "KSnapshot preview"
 msgstr "Предпросмотр KSnapshot"

@@ -3,18 +3,18 @@
 #
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1999-01-10 01:46+0100\n"
+"POT-Creation-Date: 1999-03-05 01:49+0100\n"
 "PO-Revision-Date: 1999-01-10 11:25+MET\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: de <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO 8859-1\n"
 
-#: ksnapshot.cpp:40
+#: ksnapshot.cpp:41
 msgid "snapshot"
 msgstr "Schnappschuß"
 
-#: ksnapshot.cpp:94
+#: ksnapshot.cpp:95
 #, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
@@ -33,43 +33,43 @@ msgstr ""
 "\n"
 "Version: %s"
 
-#: ksnapshot.cpp:129
+#: ksnapshot.cpp:130
 msgid "Filename:"
 msgstr "Dateiname:"
 
-#: ksnapshot.cpp:161
+#: ksnapshot.cpp:162
 msgid "Delay:"
 msgstr "Verzögerung:"
 
-#: ksnapshot.cpp:170
+#: ksnapshot.cpp:171
 msgid "seconds."
 msgstr "Sekunden:"
 
-#: ksnapshot.cpp:190
+#: ksnapshot.cpp:191
 msgid "Auto raise"
 msgstr "Fenster automatisch nach vorn"
 
-#: ksnapshot.cpp:191
+#: ksnapshot.cpp:192
 msgid "Hide KSnapshot window"
 msgstr "KSnapshot-Fenster verbergen"
 
-#: ksnapshot.cpp:193
+#: ksnapshot.cpp:194
 msgid "Only grab the window containing the cursor"
 msgstr "Nur Fenster aufnehmen, das den Cursor enthält"
 
-#: ksnapshot.cpp:224
+#: ksnapshot.cpp:225
 msgid "Grab"
 msgstr "Aufnehmen"
 
-#: ksnapshot.cpp:454
+#: ksnapshot.cpp:455
 msgid "Error: Unable to save image"
 msgstr "Fehler: Bild kann nicht gesichert werden"
 
-#: ksnapshot.cpp:455
+#: ksnapshot.cpp:456
 msgid "Dismiss"
 msgstr "Abbrechen"
 
-#: ksnapshot.cpp:459
+#: ksnapshot.cpp:460
 #, c-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -78,6 +78,6 @@ msgstr ""
 "KSnapshot konnte das Bild nicht sichern nach\n"
 "%s."
 
-#: ksnapshot.cpp:469
+#: ksnapshot.cpp:470
 msgid "KSnapshot preview"
 msgstr "KSnapshot Vorschau"

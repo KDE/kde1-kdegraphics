@@ -1,5 +1,4 @@
 # KTranslator Generated File
-
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -15,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso8859-1\n"
 "Content-Transfer-Encoding: 8 bit\n"
-"X-Generator: KTranslator v 0.4.0"
+"X-Generator: KTranslator v 0.4.0\n"
 
 #: utils.cpp:65
 #, c-format
@@ -481,8 +480,8 @@ msgstr ""
 "Ma vez brasoc'h an endalc'had-se eget an arlun, e c'hellit pegañ e-barzh\n"
 "ur prenestr nevez.\n"
 "\n"
-"(Tun : Diuzit \"Pegañ pikseloù treuzwelus\" er prenestr-kefluniañ ma fell"
-"deoc'h pegañ treuzwelus ivez)"
+"(Tun : Diuzit \"Pegañ pikseloù treuzwelus\" er prenestr-kefluniañ ma "
+"felldeoc'h pegañ treuzwelus ivez)"
 
 #: kiconedit.cpp:844
 msgid ""
@@ -532,7 +531,8 @@ msgstr ""
 "\n"
 "Pellaat eus ur c'hammad.\n"
 "\n"
-"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul raktermenet.)"
+"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul "
+"raktermenet.)"
 
 #: kiconedit.cpp:859
 msgid ""
@@ -546,7 +546,8 @@ msgstr ""
 "\n"
 "Tostaat eus ur c'hammad.\n"
 "\n"
-"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul raktermenet.)"
+"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul "
+"raktermenet.)"
 
 #: kiconedit.cpp:863
 msgid ""
@@ -590,7 +591,8 @@ msgid ""
 msgstr ""
 "Stlejañ an tarzh\n"
 "\n"
-"Diwar an nozelenn-mañ e c'hellit stlejañ un eilenn eus an arlun ha laoskel anezhi war\n"
+"Diwar an nozelenn-mañ e c'hellit stlejañ un eilenn eus an arlun ha laoskel "
+"anezhi war\n"
 "ur prenestr gouest d'he resevel, d.k. un aozer arlunioù all.\n"
 "\n"
 "(Evezhiadenn : amañ e reer gant komenad XDND eus QT, n'eo reolataet\n"
@@ -633,8 +635,8 @@ msgid ""
 "Draw a filled rectangle"
 msgstr ""
 "Hirgarezenn leun\n"
-"\n "
-"a dres un hirgarezenn leun"
+"\n"
+" a dres un hirgarezenn leun"
 
 #: kiconedit.cpp:892
 msgid ""
