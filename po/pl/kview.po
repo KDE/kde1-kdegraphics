@@ -99,13 +99,13 @@ msgid "&Zoom..."
 msgstr "&Powiêkszenie"
 
 #: viewer.cpp:434
-#, c-format
-msgid "Zoom &in o 10%"
+#, fuzzy, c-format
+msgid "Zoom &in 10%"
 msgstr "Po&wiêksz o 10%"
 
 #: viewer.cpp:436
-#, c-format
-msgid "Zoom &out o 10%"
+#, fuzzy, c-format
+msgid "Zoom &out 10%"
 msgstr "Po&mniejsz o 10%"
 
 #: viewer.cpp:438
