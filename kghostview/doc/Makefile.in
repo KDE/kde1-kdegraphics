@@ -1,12 +1,15 @@
 HELPFILES = kghostview.html kghostview-1.html kghostview-2.html \
 			kghostview-3.html kghostview-4.html kghostview-5.html \
-			kghostview-6.html next.gif prev.gif toc.gif
+			kghostview-6.html 
 
 DOCSDIR = @prefix@/doc/HTML/kghostview
 INSTALL_DIR = @INSTALL@ -d -m 0755
 INSTALL_DATA = @INSTALL@ -m 644
 
 all:
+
+Makefile: Makefile.in
+	cd .. && CONFIG_FILES=kghostview/doc/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 install:
 	$(INSTALL_DIR) $(DOCSDIR)
