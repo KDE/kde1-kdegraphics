@@ -232,6 +232,13 @@ msgid ""
 "see the online documentation\n"
 "for details."
 msgstr ""
+"KPaint, útgáfa %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint er gefið út undir GNU GPL\n"
+"notkunarskilmálunum. Sjá nánar í\n"
+"handbók."
 
 #: kpaint.cpp:508
 msgid "&Image"
