@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-05 01:46+0100\n"
+"POT-Creation-Date: 1998-11-07 02:04+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"

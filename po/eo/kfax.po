@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax 1.0\n"
-"POT-Creation-Date: 1998-11-05 01:46+0100\n"
+"POT-Creation-Date: 1998-11-07 02:04+0100\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"

@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-11-05 01:46+0100\n"
+"POT-Creation-Date: 1998-11-07 02:04+0100\n"
 "PO-Revision-Date: 1998-07-24 18:30+0200\n"
 "Last-Translator: Anders Bengtsson <d96-abe@nada.kth.se>\n"
 "MIME-Version: 1.0\n"
