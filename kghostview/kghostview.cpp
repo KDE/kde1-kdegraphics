@@ -568,7 +568,7 @@ void KGhostview::createMenubar()
 	m_options->insertItem(i18n("Show &page list"), ID_PAGELIST);
 	m_options->insertSeparator();
 	m_options->insertItem(i18n("Configure &interpreter ..."), ID_GHOSTSCRIPT);
-    m_options->insertItem(i18n("Configure &key bindings ..."), ID_CONFIGURE);
+    // m_options->insertItem(i18n("Configure &key bindings ..."), ID_CONFIGURE);
     m_options->insertSeparator();
     m_options->insertItem(i18n("&Save options"), ID_SAVE);
     
