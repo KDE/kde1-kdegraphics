@@ -202,7 +202,9 @@ msgstr ""
 "\n"
 "Höfundarréttur 1998, Thomas Tanghus\n"
 "tanghus@kde.org\n"
-"http://w1.1358.telia.com/~u135800018"
+"http://w1.1358.telia.com/~u135800018\n"
+"\n"
+"Þýðing: Bjarni <bre@mmedia.is>"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"

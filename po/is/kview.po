@@ -45,6 +45,9 @@ msgstr ""
 "KView -- Myndskoðari. %s\n"
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
+"\n"
+"Þýðing: Þórarinn Einarsson\n"
+"<thori@mindspring.com>\n"
 
 #: viewer.cpp:285
 msgid "About KView"

@@ -239,6 +239,9 @@ msgstr ""
 "KPaint er gefið út undir GNU GPL\n"
 "notkunarskilmálunum. Sjá nánar í\n"
 "handbók."
+"\n"
+"Þýðing: Þórarinn Einarsson\n"
+"<thori@mindspring.com>"
 
 #: kpaint.cpp:508
 msgid "&Image"

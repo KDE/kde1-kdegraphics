@@ -241,7 +241,10 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"eftir Markku Hihnala"
+"eftir Markku Hihnala\n"
+"\n"
+"Þýðing: Þórarinn R. Einarsson\n"
+"<thori@mindspring.com>"
 
 # kdvi.cpp:261
 #: kdvi.cpp:261

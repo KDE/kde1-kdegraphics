@@ -29,7 +29,9 @@ msgstr ""
 "Höfundarrétt KSnapshot á Richard Moore (rich@kde.org),\n"
 "en KSnapshot er dreift skv. LGPL skilmálunum\n"
 "\n"
-"Útgáfa: %s"
+"Útgáfa: %s\n"
+"\n"
+"Þýðing: Bjarni <bre@mmedia.is>"
 
 #: ksnapshot.cpp:130
 msgid "Filename:"

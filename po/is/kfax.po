@@ -46,7 +46,10 @@ msgstr ""
 "\n"
 "Copyright 1997-98\n"
 "Bernd Johannes Wuebben\n"
-"wuebben@kde.org"
+"wuebben@kde.org\n"
+"\n"
+"Þýðing: Þórarinn Einarsson\n"
+"<thori@mindspring.com>"
 
 # kfax.cpp:402
 #: kfax.cpp:402

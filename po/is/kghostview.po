@@ -716,7 +716,10 @@ msgstr ""
 "Inniheldur einnig forritstexta úr gv eftir Johanes Plass sem\n"
 "bætir þjöppun og PDF stuðning.\n"
 "\n"
-"Sjá slóðina http://www.thep.physic.uni-mainz.de/~plass/gv/n"
+"Sjá slóðina http://www.thep.physic.uni-mainz.de/~plass/gv/n\n"
+"\n"
+"Þýðing: Þórarinn Einarsson\n"
+"<thori@mindspring.com>"
 
 # kghostview.cpp:665
 # kghostview.cpp:676

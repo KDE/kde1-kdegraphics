@@ -56,7 +56,9 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"eftir Uwe Thiem"
+"eftir Uwe Thiem\n"
+"\n"
+"Þýðing: Logi <logir@hi.is>"
 
 #: kfract.C:99
 msgid "&Types"
