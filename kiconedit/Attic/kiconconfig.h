@@ -96,19 +96,24 @@ public:
   ~KBackgroundConfig();
 
 public slots:
+  void saveSettings();
   void selectColor();
   void selectPixmap();
 
 signals:
 
 protected slots:
-  void saveSettings();
+  void slotBackgroundMode(int);
 
 protected:
   Properties *pprops;
   QPushButton *btpix, *btcolor;
   QLabel *lb_ex;
   QButtonGroup *btngrp;
+  QPixmap pix;
+  QString pixpath;
+  QColor color;
+  QWidget::BackgroundMode bgmode;
 };
 
 

@@ -21,6 +21,7 @@
 #include <kcolordlg.h>
 #include "debug.h"
 #include "kiconconfig.h"
+#include "pics/logo.xpm"
 
 KTemplateEditDlg::KTemplateEditDlg(QWidget *parent) : QDialog(parent, 0, true)
 {
@@ -226,13 +227,24 @@ void KTemplateConfig::edit()
 KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
 {
   debug("KBackgroundConfig - constructor");
-  pprops = KIconEditProperties::getProperties(parent);
   initMetaObject();
+
+  lb_ex = 0L;
+
+  pprops = KIconEditProperties::getProperties(parent);
+  color = pprops->backgroundcolor;
+  pix.load(pprops->backgroundpixmap.data());
+  if(pix.isNull())
+  {
+    debug("BGPIX: %s not valid!", pprops->backgroundpixmap.data());
+    QPixmap pmlogo((const char**)logo);
+    pix = pmlogo;
+  }
 
   QGroupBox *grp1 = new QGroupBox(i18n("Color or pixmap"), this);
 
   btngrp = new QButtonGroup(grp1);
-  connect( btngrp, SIGNAL(clicked(int)), SLOT(buttonClicked(int)));
+  connect( btngrp, SIGNAL(clicked(int)), SLOT(slotBackgroundMode(int)));
   btngrp->setExclusive(true);
   btngrp->setFrameStyle(QFrame::NoFrame);
 
@@ -252,8 +264,8 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
 
   btngrp->setFixedSize(w+10, 15+(2*h));
 
-  btngrp->insert(rbc);
-  btngrp->insert(rbp);
+  btngrp->insert(rbc, 0);
+  btngrp->insert(rbp, 1);
 
   KButtonBox *bbox = new KButtonBox( grp1, KButtonBox::VERTICAL );
 
@@ -284,6 +296,19 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
   l1->addWidget(bbox, 0, AlignLeft);
   l2->addWidget(lb_ex);
 
+  if(pprops->backgroundmode == QWidget::FixedPixmap)
+  {
+    btngrp->setButton(1);
+    btcolor->setEnabled(false);
+    lb_ex->setBackgroundPixmap(pix);
+  }
+  else
+  {
+    btngrp->setButton(0);
+    btpix->setEnabled(false);
+    lb_ex->setBackgroundColor(color);
+  }
+
   ml->addWidget(grp1);
   ml->addWidget(grp2, 10);
   bbox->layout();
@@ -299,16 +324,42 @@ KBackgroundConfig::~KBackgroundConfig()
 
 }
 
+void KBackgroundConfig::slotBackgroundMode(int id)
+{
+  if(id == 0)
+  {
+    bgmode = QWidget::FixedColor;
+    btpix->setEnabled(false);
+    btcolor->setEnabled(true);
+    if(lb_ex)
+      lb_ex->setBackgroundColor(color);
+  }
+  else
+  {
+    bgmode = QWidget::FixedPixmap;
+    btpix->setEnabled(true);
+    btcolor->setEnabled(false);
+    if(lb_ex)
+      lb_ex->setBackgroundPixmap(pix);
+  }
+}
+
 void KBackgroundConfig::saveSettings()
 {
-
+  Properties *pprops = props(this);
+  pprops->backgroundmode = bgmode;
+  pprops->backgroundpixmap = pixpath;
+  pprops->backgroundcolor = color;
 }
 
 void KBackgroundConfig::selectColor()
 {
   QColor c;
   if(KColorDialog::getColor(c))
+  {
     lb_ex->setBackgroundColor(c);
+    color = c;
+  }
 }
 
 void KBackgroundConfig::selectPixmap()
@@ -318,7 +369,10 @@ void KBackgroundConfig::selectPixmap()
   {
     QPixmap p(path.data());
     if(!p.isNull())
+    {
       lb_ex->setBackgroundPixmap(p);
+      pixpath = path;
+    }
   }
 }
 
@@ -404,6 +458,7 @@ void KIconConfig::saveSettings()
   pprops->keys->setKeyDict(pprops->keydict);
   debug("KIconEditConfig::saveSettings - keys saved");
   temps->saveSettings();
+  backs->saveSettings();
   debug("KIconEditConfig::saveSettings - templates saved");
   accept();
 }

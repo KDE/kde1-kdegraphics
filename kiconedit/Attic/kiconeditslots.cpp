@@ -278,6 +278,7 @@ void KIconEdit::slotConfigure(int id)
         options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, false);
         ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(false);
         //toolbar->setButton(ID_OPTIONS_TOGGLE_GRID, false);
+        props(this)->showgrid = false;
         grid->setGrid(false);
       }
       else
@@ -285,6 +286,7 @@ void KIconEdit::slotConfigure(int id)
         options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, true);
         ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(true);
         //toolbar->setButton(ID_OPTIONS_TOGGLE_GRID, true);
+        props(this)->showgrid = false;
         grid->setGrid(true);
       }
       break;
@@ -423,6 +425,7 @@ void KIconEdit::slotUpdateStatusSize(int x, int y)
 
 void KIconEdit::slotUpdateStatusScaling(int s, bool show)
 {
+  props(this)->gridscaling = s;
   QString str;
   if(show)
   {
@@ -437,7 +440,7 @@ void KIconEdit::slotUpdateStatusScaling(int s, bool show)
 
   str.sprintf("1:%d", s);
   statusbar->changeItem( str.data(), 2);
-  viewport->updateScrollBars();
+  //viewport->updateScrollBars();
 }
 
 void KIconEdit::slotUpdateStatusColors(uint)

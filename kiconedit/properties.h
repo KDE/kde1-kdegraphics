@@ -30,9 +30,10 @@
 #include <kmenubar.h>
 #include "knew.h"
 
+class KIconEditProperties;
+
 #define props(x) KIconEditProperties::getProperties(x)
 
-enum BackgroundMode { PixMap, Color };
 
 struct Properties
 {
@@ -40,9 +41,9 @@ struct Properties
   QDict<KKeyEntry> keydict;
   QList<KIconTemplate> *tlist;
   QStrList *recentlist;
-  QString BackgroundPixmap;
-  QColor BackgroundColor;
-  BackgroundMode bgmode;
+  QString backgroundpixmap;
+  QColor backgroundcolor;
+  QWidget::BackgroundMode backgroundmode;
   bool maintoolbarstat;
   bool drawtoolbarstat;
   bool statusbarstat;
@@ -67,6 +68,7 @@ public:
   * deletes the list when there are no more instances.
   */
   static struct Properties *getProperties(QWidget*);
+  static void saveProperties(QWidget*);
 
 protected:
   static struct Properties *pprops;

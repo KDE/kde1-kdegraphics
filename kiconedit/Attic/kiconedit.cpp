@@ -46,8 +46,6 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   mainview = 0L;
   pprops->winwidth = pprops->winheight = 0;
 
-  readConfig();
-
   msgtimer = new QTimer(this);
   CHECK_PTR(msgtimer);
   connect( msgtimer, SIGNAL(timeout()), SLOT(slotClearStatusMessage()));
@@ -71,9 +69,21 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   viewport = new QScrollView(mainview);
   CHECK_PTR(viewport);
 
-  QPixmap pmlogo((const char**)logo);
-  viewport->viewport()->setBackgroundPixmap(pmlogo);
-  viewport->setMouseTracking(true);
+  if(pprops->backgroundmode == FixedPixmap)
+  {
+    QPixmap pix(pprops->backgroundpixmap.data());
+    if(pix.isNull())
+    {
+      QPixmap pmlogo((const char**)logo);
+      pix = pmlogo;
+    }
+    viewport->viewport()->setBackgroundPixmap(pix);
+  }
+  else
+  {
+    viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
+  }
+  //viewport->setMouseTracking(true);
   grid = new KIconEditGrid(viewport->viewport()); //viewport->viewport(), 0);
   CHECK_PTR(grid);
   viewport->addChild(grid);
@@ -293,65 +303,24 @@ void KIconEdit::readProperties(KConfig *config)
   //readGoingDownStatus(entry);
 }
 
-// this is always read
-void KIconEdit::readConfig()
-{
-  Properties *pprops = props(this);
-
-  KConfig *config = kapp->getConfig();
-  config->setGroup( "Files" );
-  int n = config->readListEntry("RecentOpen", *pprops->recentlist);
-  debug("Read %i recent files", n);
-
-  config->setGroup( "Appearance" );
-
-  // restore geometry settings
-  QString geom = config->readEntry( "Geometry" );
-  if ( !geom.isEmpty() )
-    sscanf( geom, "%dx%d", &pprops->winwidth, &pprops->winheight );
-
-  pprops->maintoolbarstat = config->readBoolEntry( "ShowMainToolBar", true );
-  pprops->drawtoolbarstat = config->readBoolEntry( "ShowDrawToolBar", true );
-  pprops->statusbarstat = config->readBoolEntry( "ShowStatusBar", true );
-
-  pprops->maintoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "MainToolBarPos", KToolBar::Top);
-  pprops->drawtoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "DrawToolBarPos", KToolBar::Left);
-  //statusbarpos = config->readNumEntry( "StatusBarPos", KStatusBar::Bottom);
-  pprops->menubarpos = (KMenuBar::menuPosition)config->readNumEntry( "MenuBarPos", KMenuBar::Top);
-
-  config->setGroup( "Grid" );
-  pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
-  pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
-  debug("readConfig done");
-}
-
 // this is for normal exits or request from "Options->Save options".
 void KIconEdit::writeConfig()
 {
   Properties *pprops = props(this);
-  KConfig *config = kapp->getConfig();
-  pprops->keys->writeSettings(config);
-  config->setGroup( "Files" );
-  debug("Writing %d recent files", pprops->recentlist->count());
-  config->writeEntry("RecentOpen", *pprops->recentlist);
+  
+  pprops->maintoolbarstat = toolbar->isVisible();
+  pprops->drawtoolbarstat = drawtoolbar->isVisible();
+  pprops->statusbarstat = statusbar->isVisible();
 
-  config->setGroup( "Appearance" );
+  pprops->maintoolbarpos = toolbar->barPos();
+  pprops->drawtoolbarpos = drawtoolbar->barPos();
+  pprops->menubarpos = menubar->menuBarPos();
 
-  QString geom;
-  geom.sprintf( "%dx%d", pprops->winwidth, pprops->winheight );
-  config->writeEntry( "Geometry", geom );
+  //pprops->showgrid = grid->hasGrid();
+  //pprops->gridscaling = grid->cellSize();
 
-  config->writeEntry("ShowMainToolBar", toolbar->isVisible());
-  config->writeEntry("ShowDrawToolBar", drawtoolbar->isVisible());
-  config->writeEntry("ShowStatusBar", statusbar->isVisible());
+  KIconEditProperties::saveProperties(this);
 
-  config->writeEntry("MainToolBarPos", (int)toolbar->barPos());
-  config->writeEntry("DrawToolBarPos", (int)drawtoolbar->barPos());
-  config->writeEntry("MenuBarPos", (int)menubar->menuBarPos());
-
-  config->setGroup( "Grid" );
-  config->writeEntry("ShowGrid", grid->hasGrid());
-  config->writeEntry("GridScaling", grid->cellSize());
 }
 
 QSize KIconEdit::sizeHint()

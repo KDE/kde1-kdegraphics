@@ -32,7 +32,7 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   if(pprops)
     return;
 
-  debug("KIconEditProperties: Creating templates");
+  debug("KIconEditProperties: reading properties");
 
   pprops = new struct Properties;
 
@@ -64,6 +64,13 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   //statusbarpos = config->readNumEntry( "StatusBarPos", KStatusBar::Bottom);
   pprops->menubarpos = (KMenuBar::menuPosition)config->readNumEntry( "MenuBarPos", KMenuBar::Top);
 
+  pprops->backgroundmode = (QWidget::BackgroundMode)config->readNumEntry( "BackgroundMode", QWidget::FixedPixmap);
+  debug("Reading bgmode: %d", (int)pprops->backgroundmode);
+  pprops->backgroundcolor = config->readColorEntry( "BackgroundColor", &gray);
+  pprops->backgroundpixmap = config->readEntry("BackgroundPixmap", "");
+
+  debug("BackgroundPixmap: %s", pprops->backgroundpixmap.data());
+
   config->setGroup( "Grid" );
   pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
   pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
@@ -89,4 +96,37 @@ struct Properties *KIconEditProperties::getProperties(QWidget *parent)
   return p.pprops;
 }
 
+void KIconEditProperties::saveProperties(QWidget *parent)
+{
+  KIconEditProperties p(parent);
+  pprops = p.pprops;
+  KConfig *config = kapp->getConfig();
 
+  pprops->keys->writeSettings(config);
+
+  config->setGroup( "Files" );
+  debug("Writing %d recent files", pprops->recentlist->count());
+  config->writeEntry("RecentOpen", *pprops->recentlist);
+
+  config->setGroup( "Appearance" );
+  QString geom;
+  geom.sprintf( "%dx%d", pprops->winwidth, pprops->winheight );
+  config->writeEntry( "Geometry", geom );
+
+  debug("Writing bgmode: %d", (int)pprops->backgroundmode);
+  config->writeEntry("BackgroundMode", pprops->backgroundmode);
+  config->writeEntry("BackgroundColor", pprops->backgroundcolor);
+  config->writeEntry("BackgroundPixmap", pprops->backgroundpixmap);
+
+  config->writeEntry("ShowMainToolBar", pprops->maintoolbarstat);
+  config->writeEntry("ShowDrawToolBar", pprops->drawtoolbarstat);
+  config->writeEntry("ShowStatusBar", pprops->statusbarstat);
+
+  config->writeEntry("MainToolBarPos", (int)pprops->maintoolbarpos);
+  config->writeEntry("DrawToolBarPos", (int)pprops->drawtoolbarpos);
+  config->writeEntry("MenuBarPos", (int)pprops->menubarpos);
+
+  config->setGroup( "Grid" );
+  config->writeEntry("ShowGrid", pprops->showgrid);
+  config->writeEntry("GridScaling", pprops->gridscaling);
+}

@@ -162,7 +162,6 @@ protected:
   KStatusBar *setupStatusBar();
   virtual void closeEvent(QCloseEvent*);
   virtual void resizeEvent(QResizeEvent*);
-  void readConfig();
   void writeConfig();
   void toggleTool(int id);
   void addRecent(const char *file);
@@ -176,17 +175,12 @@ private:
   KToolBar *toolbar, *drawtoolbar;
   KStatusBar *statusbar;
   QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent;
-  //bool maintoolbarstat, drawtoolbarstat, statusbarstat, showgrid;
-  //KToolBar::BarPosition maintoolbarpos, drawtoolbarpos;
-  //KMenuBar::menuPosition menubarpos;
-  //int winwidth, winheight, gridscaling;
   KIconEditGrid *grid;
   KIconToolsView *toolsw;
   QWidget *mainview;
   QBoxLayout *l;
   QTimer *msgtimer;
   QScrollView *viewport;
-  //QwViewport *viewport;
   KIcon *icon;
   KDNDDropZone *dropzone;
   KIconEditProperties *kiprops;
