@@ -3,7 +3,11 @@ msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-01-26 20:00+0000\n"
-"Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt\n"
+"MIME-Version:\n"
+"Content-Type:\n"
+"Content-Transfer-Encoding:\n"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
@@ -30,38 +34,32 @@ msgid "Image Depth:"
 msgstr "Cor da Imagem:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 Colour)"
+msgstr "1 (2 Cores)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 Colour)"
+msgstr "4 (16 Cores)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
-msgstr "8 (256 Colour)"
+msgstr "8 (256 Cores)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 Colour)"
+msgstr "15 (32k Cores)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 Colour)"
+msgstr "16 (64k Cores)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (True Colour)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (True Colour)"
+msgstr "32 (True Colour)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -89,7 +87,7 @@ msgstr "Altura da Imagem:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Fechar"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -223,15 +221,11 @@ msgstr "Pintor"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " versão "
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -289,7 +283,7 @@ msgstr "Lata de Spray"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -317,7 +311,7 @@ msgstr "Padrão de Enchimento"
 
 #: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -402,29 +396,3 @@ msgstr "Cor da Linha..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Redondangulo"
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
-#~ "Veja o ficheiro LICENSE para detalhes\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Utilização: "
-
-#~ msgid " [url | filename]\n"
-#~ msgstr "[url | nome de ficheiro]\n"
-
-#~ msgid "Exit"
-#~ msgstr "Sair"
-
-#~ msgid "Open Location:"
-#~ msgstr "Abrir Localização:"
-
-#~ msgid "Save to Location:"
-#~ msgstr "Gravar para Localização"
-
-#~ msgid "1 (Bitmap)"
-#~ msgstr "1 (Bitmap)"

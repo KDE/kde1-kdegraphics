@@ -4,6 +4,10 @@ msgstr ""
 "POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-05-06 12:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt\n"
+"MIME-Version:\n"
+"Content-Type:\n"
+"Content-Transfer-Encoding:\n"
 
 #: kfax.cpp:233 kfax.cpp:828
 msgid "Show &Tool Bar"
@@ -82,9 +86,8 @@ msgid "Zoom &out"
 msgstr "&Diminuir"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "Opções do &Fax"
+msgstr "Opções do &Fax..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -206,7 +209,7 @@ msgstr "A carregar '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Pronto"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -243,6 +246,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Impossível abrir:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -319,7 +324,7 @@ msgstr "Fina"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: options.cpp:81
 msgid "Display Options:"
@@ -356,21 +361,3 @@ msgstr "Largura do Fax:"
 #: options.cpp:142
 msgid "height:"
 msgstr "altura:"
-
-#~ msgid "About KFax"
-#~ msgstr "Acerca do KFax"
-
-#~ msgid "Version "
-#~ msgstr "Versão "
-
-#~ msgid "&About..."
-#~ msgstr "&Acerca..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "&Ajuda do KFax"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Seleccione Fax para Abrir"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Seleccione Fax para Adicionar"

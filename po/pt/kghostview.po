@@ -3,7 +3,11 @@ msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-11-17 10:48+0100\n"
 "PO-Revision-Date: 1998-01-26 22:00+0000\n"
-"Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt\n"
+"MIME-Version:\n"
+"Content-Type:\n"
+"Content-Transfer-Encoding:\n"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -30,9 +34,8 @@ msgid "Remove page marks"
 msgstr "Remover marcações de página"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "&Página"
+msgstr "Página"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -349,11 +352,11 @@ msgstr "Configurar interpretador"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Novo"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Novo"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -492,6 +495,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - the PostScript document viewer for\n"
+"the K Desktop Environment.\n"
+"\n"
+"Escrito por Mark Donohoe <donohoe@kde.org>,baseado no trabalho de Tim "
+"Theisen.\n"
+"\n"
+"Usa código do gv de Johanes Plass\n"
+"(suporte para ficheiros comprimidos e PDF).\n"
+"\n"
+"Veja http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -629,6 +642,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Coloque a variavel (como PRINTER ou LPDEST por exemplo) para o nome da "
+"impressora ser tomado em conta."
 
 #: kghostview.cpp:1661
 #, c-format
@@ -680,84 +695,3 @@ msgstr "Sc.%d "
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "A&mpliação"
-
-#~ msgid "&Defaults"
-#~ msgstr "Valores por &omissão"
-
-#~ msgid "CTRL+O"
-#~ msgstr "CTRL+O"
-
-#~ msgid "CTRL+N"
-#~ msgstr "CTRL+N"
-
-#~ msgid "CTRL+W"
-#~ msgstr "CTRL+W"
-
-#~ msgid "CTRL+S"
-#~ msgstr "CTRL+S"
-
-#~ msgid "CTRL+P"
-#~ msgstr "CTRL+P"
-
-#~ msgid "CTRL+Q"
-#~ msgstr "CTRL+Q"
-
-#~ msgid "CTRL+X"
-#~ msgstr "CTRL+X"
-
-#~ msgid "CTRL+C"
-#~ msgstr "CTRL+C"
-
-#~ msgid "CTRL+V"
-#~ msgstr "CTRL+V"
-
-#~ msgid "CTRL+Z"
-#~ msgstr "CTRL+Z"
-
-#~ msgid "CTRL+F"
-#~ msgstr "CTRL+F"
-
-#~ msgid "CTRL+R"
-#~ msgstr "CTRL+R"
-
-#~ msgid "Insert"
-#~ msgstr "Insert"
-
-#~ msgid "CTRL+Insert"
-#~ msgstr "CTRL+Insert"
-
-#~ msgid "CTRL+Home"
-#~ msgstr "CTRL+Home"
-
-#~ msgid "End"
-#~ msgstr "End"
-
-#~ msgid "CTRL+End"
-#~ msgstr "CTRL+End"
-
-#~ msgid "Prior"
-#~ msgstr "Anterior"
-
-#~ msgid "Next"
-#~ msgstr "Próxima"
-
-#~ msgid "F1"
-#~ msgstr "F1"
-
-#~ msgid "Zoom"
-#~ msgstr "Ampliação"
-
-#~ msgid "Current key"
-#~ msgstr "Tecla actual"
-
-#~ msgid "&Action"
-#~ msgstr "&Acção"
-
-#~ msgid "&No key"
-#~ msgstr "&Nenhuma tecla"
-
-#~ msgid "&Default key"
-#~ msgstr "Tecla por &omissão"
-
-#~ msgid "&Custom key"
-#~ msgstr "&Tecla definida"
