@@ -696,10 +696,5 @@ msgstr "Sk.%d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
+msgstr "&Forstørrelsesfaktor"
 
-#~ msgid "View Control"
-#~ msgstr "Fremvisningskontrol"
-
-#~ msgid "&Magnification"
-#~ msgstr "&Forstørrelse"
