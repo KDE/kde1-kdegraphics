@@ -1,0 +1,5 @@
+Thu Jul 24 20:44:33 1997  Bernd Johannes Wuebben  <wuebben@petit.cornell.edu>
+
+	* made the necessary changes so that kfax will compile with
+	  the new libs.
+
