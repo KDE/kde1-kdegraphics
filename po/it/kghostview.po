@@ -483,7 +483,7 @@ msgstr "Orizzontale"
 
 #: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
 msgid "Seascape"
-msgstr ""
+msgstr "Seascape"
 
 #: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
 msgid "Upside down"
