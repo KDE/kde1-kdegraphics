@@ -1,8 +1,10 @@
+# KTranslator Generated File
+
 # Hungarian messages for kdvi.
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Székely Krisztián <szekelyk@edasz.hu>, 1998.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi VERSION\n"
@@ -69,41 +71,41 @@ msgstr "Mi ez? DVI probléma!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "A fájl állapota megváltozott."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
+#
 msgid "File reloaded."
-msgstr "Fájl újratöltve"
+msgstr "Fájl újratöltve."
 
 #: kdvi.cpp:93
 msgid "No document"
 msgstr "Nincs dokumentum"
 
 #: kdvi.cpp:109
-#, fuzzy
+#
 msgid "Toggle Menubar"
-msgstr "Menüsáv"
+msgstr "Menüsor mutatása/rejtése"
 
 #: kdvi.cpp:111
-#, fuzzy
+#
 msgid "Mark page"
-msgstr "Mindent kijelöl"
+msgstr "Oldal kijelölése"
 
 #: kdvi.cpp:113
-#, fuzzy
+#
 msgid "Redraw"
 msgstr "Oldal újrarajzolása"
 
 #: kdvi.cpp:115
-#, fuzzy
+#
 msgid "Preferences ..."
-msgstr "&Beállítások ..."
+msgstr "Beállítások ..."
 
 #: kdvi.cpp:173
-#, fuzzy
+#
 msgid "&New"
-msgstr "&Következõ"
+msgstr "&Új"
 
 #: kdvi.cpp:174
 msgid "&Open ..."
@@ -199,10 +201,10 @@ msgstr "&Gördítõsávok"
 
 #: kdvi.cpp:239
 msgid "DVI Viewer"
-msgstr ""
+msgstr "DVI Nézõ"
 
 #: kdvi.cpp:241
-#, fuzzy
+#
 msgid ""
 "\n"
 "\n"
@@ -210,7 +212,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Marku Hihnala <mah@ee.oulu.fi>"
+"írta: Marku Hihnala"
 
 #: kdvi.cpp:261
 msgid "Open document ..."
@@ -470,16 +472,16 @@ msgstr " / "
 
 #: kdvi.cpp:905
 msgid "Large text button set to shrink factor "
-msgstr ""
+msgstr "Nagy szöveg gomb kicsinyítési tényezõje "
 
 #: kdvi.cpp:913
 msgid "Small text button set to shrink factor "
-msgstr ""
+msgstr "Kis szöveg gomb kicsinyítési tényezõje "
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Zsugorítás : xx"
+msgstr "Zsugorítás : %d"
 
 #: marklist.cpp:37
 msgid "Mark current"

@@ -1,9 +1,11 @@
 # KTranslator Generated File
+
+# KTranslator Generated File
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Marcell Lengyel <miketkf@yahoo.com>, 1999.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.8\n"
