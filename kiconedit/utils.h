@@ -34,10 +34,6 @@
 #include <kapp.h>
 #include <kfm.h>
 
-#ifdef HAVE_LIBJPEG
-#include <jpeg.h>
-#endif
-
 #define OPAQUE_MASK 0xff000000
 
 #ifdef TRANSPARENT
