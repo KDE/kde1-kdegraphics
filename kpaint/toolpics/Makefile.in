@@ -24,7 +24,20 @@ PICS=	circle.xpm \
 
 install:
 	$(INSTALL_DIR) $(prefix)/share/apps/kpaint/toolbar
-	$(INSTALL_DATA) $(PICS) $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) circle.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) line.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) pen.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) spraycan.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) ellipse.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) rectangle.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) editpaste.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) filenew.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) editcopy.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) fileopen.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) editcut.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) filefloppy.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) viewmag+.xpm $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) viewmag-.xpm $(prefix)/share/apps/kpaint/toolbar
 
 
 

@@ -25,7 +25,7 @@ INSTALL_DIR = $(install) -d -m 0755
 CXXFLAGS=	@CXXFLAGS@  -DHAVE_CONFIG_H -I..
 CFLAGS=		@CFLAGS@  -DHAVE_CONFIG_H -I..
 
-LDFLAGS	=	@LDFLAGS@ @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lm -lXext -lX11 ./libtiffax/libtif.a
+LDFLAGS	=	@LDFLAGS@ @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lm -lXext -lX11 ./libtiffax/libtif.a @LIBSOCKET@
 INCDIR	=	@all_includes@ -I./libtiffax
 CXX	=	@CXX@
 CC      =	@CC@
