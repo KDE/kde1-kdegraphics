@@ -1,5 +1,4 @@
 # $Id$
-
 ##
 ## Makefile for kpaint
 ##
@@ -11,12 +10,13 @@ prefix 	= 	@prefix@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
-INSTALL	=   	@INSTALL@
+INSTALL	=   	@INSTALL@ -m 644
 CXX	= 	@CXX@
 DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
 LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
 METADIR	=	metas
 
+INSTALL_DIR = @INSTALL@ -d -m 755 
 # Uncomment this is you are using Qt 1.2 beta 3 or higher
 #DEFS+=	-DNEWQT
 
@@ -66,10 +66,12 @@ objs/%.o:	%.cpp
 all:	kpaint
 
 install:
-	$(INSTALL) -d $(prefix)/bin
-	$(INSTALL) -d $(prefix)/doc/HTML/kpaint
+	$(INSTALL_DIR) $(prefix)/bin
+	$(INSTALL_DIR) $(prefix)/doc/HTML/kpaint
 	$(INSTALL) kpaint $(prefix)/bin
 	$(INSTALL) doc/HTML/kpaint.html $(prefix)/doc/HTML/kpaint
+	$(INSTALL_DIR) $(prefix)/apps/Applications
+	$(INSTALL) kpaint.kdelnk $(prefix)/apps/Applications 
 
 uninstall:
 	rm -f $(prefix)/bin/kpaint
