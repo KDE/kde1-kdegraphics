@@ -44,7 +44,6 @@ msgid "About KView"
 msgstr "Tietoja KView:tä"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Lista..."
 
@@ -81,13 +80,12 @@ msgid "&Images"
 msgstr "&Kuvat"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
-msgstr "Tallenna &nimellä.."
+msgstr "Tallenna &nimellä..."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "&Sulje ikkuna"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -95,7 +93,7 @@ msgstr "&Koko ruutu"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Crop"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -124,14 +122,12 @@ msgid "&Half size"
 msgstr "&Puolikoko"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "&Puolikoko"
+msgstr "&Täyskoko"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Maksimipect"
+msgstr "Maksimi&aspect"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
@@ -162,9 +158,8 @@ msgid "Max&pect"
 msgstr "Maksimipect"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
-msgstr "&Tietoja KView:tä"
+msgstr "&Tietoja KView:tä..."
 
 #: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
@@ -179,34 +174,31 @@ msgid "Transfer error: "
 msgstr "Siirtovirhe: "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
-msgstr "Lataan.."
+msgstr "Lataan..."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "En saanut ladattua tiedostoa %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Kirkastan..."
+msgstr "Tulostan..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Anna kirkastuskerroin (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Kirkastuskertoimen pitää olla positiivinen"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Muutan kirkkautta..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
 msgstr "Intensiteetti:Kirkasta"
 
@@ -227,27 +219,24 @@ msgid "Smooth"
 msgstr "Pehmennä"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
-msgstr "Anna gamma-arvo (0...1):"
+msgstr "Anna gamma-arvo ( >0 ):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Virheellinen gamma-arvo"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Gammakorjaan..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Gammakorjattu..."
+msgstr "IntentiseettiGammakorjaa..."
 
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Kestoaika.."
+msgstr "Ulkoinen.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -288,21 +277,3 @@ msgstr "Aloita kuva"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Aika kuvien välillä (sek):"
-
-#~ msgid "Fi&lter"
-#~ msgstr "&Suodatin"
-
-#~ msgid "&Open.."
-#~ msgstr "&Avaa.."
-
-#~ msgid "Darkening..."
-#~ msgstr "Tummennan..."
-
-#~ msgid "Intensity:Darken"
-#~ msgstr "Intensiteetti:Tummenna"
-
-#~ msgid "&Zoom in 50%"
-#~ msgstr "Pienennä 50%"
-
-#~ msgid "Zoo&m out 50%"
-#~ msgstr "Suurenna 50%"
