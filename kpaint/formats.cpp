@@ -1,5 +1,4 @@
 #include <kdebug.h>
-#include <kimgio.h>
 #include "formats.h"
 #include "gif.h"
 
