@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,10 @@ msgstr ""
 
 #: kiconedit.cpp:385
 msgid "New &Window"
+msgstr ""
+
+#: kiconedit.cpp:390
+msgid "&New..."
 msgstr ""
 
 #: kiconedit.cpp:396
@@ -97,10 +101,6 @@ msgstr ""
 
 #: kiconedit.cpp:466
 msgid "&GrayScale"
-msgstr ""
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
 msgstr ""
 
 #: kiconedit.cpp:471
@@ -561,27 +561,35 @@ msgstr ""
 msgid "Cleared"
 msgstr ""
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+msgid "Selected area cutted"
+msgstr ""
+
+#: kicongrid.cpp:845
+msgid "Selected area copied"
+msgstr ""
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
 msgstr ""
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
 msgstr ""
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr ""
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr ""
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -189,11 +189,11 @@ msgstr "以反向顺序打印文章"
 msgid "&Setup ..."
 msgstr "设置[&S] ..."
 
-#: print.cpp:289
+#: print.cpp:290
 msgid "Range error"
 msgstr "范围错误"
 
-#: print.cpp:290
+#: print.cpp:291
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -217,26 +217,26 @@ msgstr "章节[&S]"
 msgid "&Page"
 msgstr "页[&P]"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2225
-#: kghostview.cpp:2237 kghostview.cpp:2242 kghostview.cpp:2525
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2229
+#: kghostview.cpp:2241 kghostview.cpp:2246 kghostview.cpp:2529
 #, c-format
 msgid "of %d"
 msgstr "/ %d"
 
 #
-#: kghostview.cpp:1221 kghostview.cpp:2316 viewcontrol.cpp:64
+#: kghostview.cpp:1221 kghostview.cpp:2320 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "竖排格式"
 
-#: kghostview.cpp:1223 kghostview.cpp:2322 viewcontrol.cpp:65
+#: kghostview.cpp:1223 kghostview.cpp:2326 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "从右到左"
 
-#: kghostview.cpp:1225 kghostview.cpp:2320 viewcontrol.cpp:66
+#: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "从左到右"
 
-#: kghostview.cpp:1227 kghostview.cpp:2318 viewcontrol.cpp:67
+#: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "上下颠倒"
 
@@ -349,6 +349,10 @@ msgstr "配置解释器"
 
 #: kghostview.cpp:444
 msgid "New"
+msgstr ""
+
+#: kghostview.cpp:498
+msgid "&New"
 msgstr ""
 
 #: kghostview.cpp:500
@@ -603,7 +607,7 @@ msgstr ""
 "作者 : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1569 kghostview.cpp:1685
+#: kghostview.cpp:1569 kghostview.cpp:1689
 msgid "Error printing"
 msgstr "打印错误"
 
@@ -624,47 +628,53 @@ msgid ""
 "nothing could be printed to a file.\n"
 msgstr "没有文件名 , 不能打印到文件.\n"
 
-#: kghostview.cpp:1650
+#: kghostview.cpp:1633
+msgid ""
+"Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
+"to be taken into account."
+msgstr ""
+
+#: kghostview.cpp:1654
 #, c-format
 msgid "Print failure : %s"
 msgstr "打印失败 : %s"
 
-#: kghostview.cpp:1686
+#: kghostview.cpp:1690
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr "打印失败 : 要打印的页列表是空的.\n"
 
-#: kghostview.cpp:2219 kghostview.cpp:2231 kghostview.cpp:2496
-#: kghostview.cpp:2519
+#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2500
+#: kghostview.cpp:2523
 msgid "of 1    "
 msgstr " /1     "
 
-#: kghostview.cpp:2221 kghostview.cpp:2233 kghostview.cpp:2521
+#: kghostview.cpp:2225 kghostview.cpp:2237 kghostview.cpp:2525
 #, c-format
 msgid "of %d    "
 msgstr "/ %d     "
 
-#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2523
-#: kghostview.cpp:2530
+#: kghostview.cpp:2227 kghostview.cpp:2239 kghostview.cpp:2527
+#: kghostview.cpp:2534
 #, c-format
 msgid "of %d  "
 msgstr "/ %d   "
 
-#: kghostview.cpp:2495
+#: kghostview.cpp:2499
 msgid "Sc.1 "
 msgstr "章节.1 "
 
-#: kghostview.cpp:2498
+#: kghostview.cpp:2502
 msgid "P.1 "
 msgstr "页数.1 "
 
-#: kghostview.cpp:2500 kghostview.cpp:2513
+#: kghostview.cpp:2504 kghostview.cpp:2517
 #, c-format
 msgid "P.%d "
 msgstr "页数.%d "
 
-#: kghostview.cpp:2515
+#: kghostview.cpp:2519
 #, c-format
 msgid "Sc.%d "
 msgstr "章节.%d "

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Stjepan Zlodi <szlodi@public.srce.hr> \n"
 "Language-Team: Croatian\n"
@@ -86,6 +86,11 @@ msgstr "Obnovi stranicu"
 msgid "Preferences ..."
 msgstr "Odrednice ..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Slijedeæa"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Otvori ..."
@@ -117,6 +122,14 @@ msgstr "Pod&esi prema ¹irini stranice"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "O&bnovi stranicu"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Prethodna"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Slijedeæa"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -671,12 +684,6 @@ msgstr "n-gore"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Naèin ispisa"
-
-#~ msgid "&Previous"
-#~ msgstr "&Prethodna"
-
-#~ msgid "&Next"
-#~ msgstr "&Slijedeæa"
 
 #~ msgid "Appearance"
 #~ msgstr "Izgled"

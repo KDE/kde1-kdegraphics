@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-04-17 10:28:38+0100\n"
 "From: Thomas Tanghus <tanghus@tang1>\n"
@@ -40,6 +40,11 @@ msgstr "Marker alt"
 #, fuzzy
 msgid "New &Window"
 msgstr "Nyt &vindue"
+
+#: kiconedit.cpp:390
+#, fuzzy
+msgid "&New..."
+msgstr "&Ny..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -98,10 +103,6 @@ msgstr "Skift stør&relse"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "&Gråskaler"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr "&Map til KDE palette"
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -397,7 +398,8 @@ msgid ""
 msgstr ""
 "Udskriv\n"
 "\n"
-"Åbner en udskrivningsdialog hvor du kan vælge at udskrive det aktuelle ikon. (Virker ikke helt som forventet)"
+"Åbner en udskrivningsdialog hvor du kan vælge at udskrive det aktuelle ikon. "
+"(Virker ikke helt som forventet)"
 
 #: kiconedit.cpp:822
 msgid ""
@@ -443,10 +445,11 @@ msgstr ""
 "\n"
 "Indsæt indholdet af klippebordet i det aktuelle ikon.\n"
 "\n"
-"Hvis indholdet er større end det aktuelle ikon kan du vælge at indsætte det i et nyt vindue.\n"
+"Hvis indholdet er større end det aktuelle ikon kan du vælge at indsætte det "
+"i et nyt vindue.\n"
 "\n"
-"(Tip: Vælg \"Indsæt transparente\" i konfigurations dialogen hvis du "
-"også vil indsætte de transparente pixels)"
+"(Tip: Vælg \"Indsæt transparente\" i konfigurations dialogen hvis du også "
+"vil indsætte de transparente pixels)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -482,7 +485,8 @@ msgstr ""
 "Gråskalér\n"
 "\n"
 "Gråskalér det aktuelle ikon.\n"
-"(Advarsel: Resultatet vil formodentlig indeholde farver uden for ikonpaletten)"
+"(Advarsel: Resultatet vil formodentlig indeholde farver uden for "
+"ikonpaletten)"
 
 #: kiconedit.cpp:848
 msgid ""
@@ -659,14 +663,24 @@ msgstr "Alt markeret"
 msgid "Cleared"
 msgstr "Ryddet"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+msgid "Selected area cutted"
+msgstr "Markeret område klippet"
+
+#: kicongrid.cpp:845
+msgid "Selected area copied"
+msgstr "Markeret område kopieret"
+
+#: kicongrid.cpp:923
 #, fuzzy
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
-msgstr "Der opstod en fejl ved\nkopiering til klippebordet!\n"
+msgstr ""
+"Der opstod en fejl ved\n"
+"kopiering til klippebordet!\n"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -674,15 +688,15 @@ msgstr ""
 "Ikonet i klippebordet er større end det aktuelle ikon!\n"
 "Indsæt som nyt ikon?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Indsætter"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Færdigt med at indsætte"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Ugyldigt pixmap data i klippebordet!\n"
 
@@ -983,16 +997,15 @@ msgstr "Værktøjsbjælker"
 msgid "Icon grid"
 msgstr "Gitter"
 
+#~ msgid "&Map to KDE palette"
+#~ msgstr "&Map til KDE palette"
+
 #~ msgid "Warning"
 #~ msgstr "Advarsel"
 
 #, fuzzy
 #~ msgid "New &window"
 #~ msgstr "Nyt &vindue"
-
-#, fuzzy
-#~ msgid "&New..."
-#~ msgstr "&Ny..."
 
 #, fuzzy
 #~ msgid "&Open..."
@@ -1053,12 +1066,6 @@ msgstr "Gitter"
 
 #~ msgid "&Cancel"
 #~ msgstr "&Fortryd"
-
-#~ msgid "Selected area cutted"
-#~ msgstr "Markeret område klippet"
-
-#~ msgid "Selected area copied"
-#~ msgstr "Markeret område kopieret"
 
 #~ msgid "Enter new size"
 #~ msgstr "Skriv ny størrelse"

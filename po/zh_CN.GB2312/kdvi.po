@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -73,6 +73,11 @@ msgstr "重绘"
 msgid "Preferences ..."
 msgstr "设置..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "下一页[&P]"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "打开[&O] ..."
@@ -104,6 +109,14 @@ msgstr "调整到页宽"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "重绘页面"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "前一页[&P]"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "下一页[&P]"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -658,12 +671,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "打印方式"
-
-#~ msgid "&Previous"
-#~ msgstr "前一页[&P]"
-
-#~ msgid "&Next"
-#~ msgstr "下一页[&P]"
 
 #~ msgid "Appearance"
 #~ msgstr "外观"

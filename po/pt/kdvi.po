@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-01-28 15:30+0000\n"
 "Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
 
@@ -78,6 +78,10 @@ msgstr "Redesenhar"
 msgid "Preferences ..."
 msgstr "Preferências ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Abrir ..."
@@ -109,6 +113,15 @@ msgstr "&Largura da página"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Redesenhar página"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Página anterior"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"

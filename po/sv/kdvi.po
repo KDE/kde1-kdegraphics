@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-08-23 00:07+SET\n"
 "Last-Translator: Christer Gustavsson <f93-cgn@sm.luth.se>\n"
 "Language-Team: SWEDISH <LL@li.org>\n"
@@ -96,6 +96,10 @@ msgstr "Uppdatera"
 msgid "Preferences ..."
 msgstr "Inställningar ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 # kdvi.cpp:173
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -135,6 +139,16 @@ msgstr "Anpassa till sid&bredd"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "U&ppdatera sida"
+
+# kdvi.cpp:353 kdvi.cpp:404
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Föregående sida"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 # kdvi.cpp:204
 #: kdvi.cpp:207

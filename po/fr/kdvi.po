@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-01-28 23:52 CET\n"
 "Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"
@@ -86,6 +86,11 @@ msgstr "Redessiner"
 msgid "Preferences ..."
 msgstr "Préférences..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Suivante"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Ouvrir..."
@@ -117,6 +122,14 @@ msgstr "Ajuster à la &largeur de la page"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Redessiner la page"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Précédente"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Suivante"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -671,12 +684,6 @@ msgstr "Multipage"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Méthode d'impression"
-
-#~ msgid "&Previous"
-#~ msgstr "&Précédente"
-
-#~ msgid "&Next"
-#~ msgstr "&Suivante"
 
 #~ msgid "Appearance"
 #~ msgstr "Apparence"

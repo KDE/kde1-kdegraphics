@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,186 +18,210 @@ msgstr ""
 msgid "no image loaded"
 msgstr ""
 
-#: viewer.cpp:82 viewer.cpp:491
+#: viewer.cpp:82 viewer.cpp:519
 msgid "Ready"
 msgstr ""
 
-#: viewer.cpp:237
+#: viewer.cpp:180
+msgid "Net saving not yet implemented"
+msgstr ""
+
+#: viewer.cpp:189
+msgid "written"
+msgstr ""
+
+#: viewer.cpp:265
 msgid "About KView"
 msgstr ""
 
-#: viewer.cpp:245 viewer.cpp:262
+#: viewer.cpp:273 viewer.cpp:290
 msgid "&Zoom"
 msgstr ""
 
-#: viewer.cpp:246 viewer.cpp:263
+#: viewer.cpp:274 viewer.cpp:291
 msgid "&Transform"
 msgstr ""
 
-#: viewer.cpp:247 viewer.cpp:264
+#: viewer.cpp:275 viewer.cpp:292
 msgid "To &Desktop"
 msgstr ""
 
-#: viewer.cpp:249
+#: viewer.cpp:277
 msgid "Fi&lter"
 msgstr ""
 
-#: viewer.cpp:266
+#: viewer.cpp:294
 msgid "F&ilter"
 msgstr ""
 
-#: viewer.cpp:270
+#: viewer.cpp:298
 msgid "&Images"
 msgstr ""
 
-#: viewer.cpp:285
+#: viewer.cpp:313
 msgid "&Open.."
 msgstr ""
 
-#: viewer.cpp:286
+#: viewer.cpp:314
 msgid "&Save As.."
 msgstr ""
 
-#: viewer.cpp:292
+#: viewer.cpp:320
 msgid "&Full Screen"
 msgstr ""
 
-#: viewer.cpp:295
+#: viewer.cpp:323
 #, c-format
 msgid "Zoom &in 10%"
 msgstr ""
 
-#: viewer.cpp:296
+#: viewer.cpp:324
 #, c-format
 msgid "Zoom &out 10%"
 msgstr ""
 
-#: viewer.cpp:297
+#: viewer.cpp:325
 #, c-format
 msgid "&Zoom in 50%"
 msgstr ""
 
-#: viewer.cpp:298
+#: viewer.cpp:326
 #, c-format
 msgid "Zoo&m out 50%"
 msgstr ""
 
-#: viewer.cpp:300
+#: viewer.cpp:328
 msgid "&Reset"
 msgstr ""
 
-#: viewer.cpp:303
+#: viewer.cpp:331
 msgid "Rotate &clockwise"
 msgstr ""
 
-#: viewer.cpp:305
+#: viewer.cpp:333
 msgid "Rotate &anti-clockwise"
 msgstr ""
 
-#: viewer.cpp:308
+#: viewer.cpp:336
 msgid "Flip &vertical"
 msgstr ""
 
-#: viewer.cpp:310
+#: viewer.cpp:338
 msgid "Flip &horizontal"
 msgstr ""
 
-#: viewer.cpp:313
+#: viewer.cpp:341
 msgid "&Tile"
 msgstr ""
 
-#: viewer.cpp:314
+#: viewer.cpp:342
 msgid "&Max"
 msgstr ""
 
-#: viewer.cpp:315
+#: viewer.cpp:343
 msgid "Max&pect"
 msgstr ""
 
-#: viewer.cpp:318
+#: viewer.cpp:346
 msgid "&List.."
 msgstr ""
 
-#: viewer.cpp:325
+#: viewer.cpp:350
+msgid "&Previous"
+msgstr ""
+
+#: viewer.cpp:351
+msgid "&Next"
+msgstr ""
+
+#: viewer.cpp:353
 msgid "&Slideshow On/Off"
 msgstr ""
 
-#: viewer.cpp:330
+#: viewer.cpp:358
 msgid "&About KView.."
 msgstr ""
 
-#: viewer.cpp:377 viewer.cpp:384
+#: viewer.cpp:405 viewer.cpp:412
 msgid "Existing transfer not yet complete."
 msgstr ""
 
-#: viewer.cpp:398
+#: viewer.cpp:426
 msgid "Couldn't get temporary transfer name."
 msgstr ""
 
-#: viewer.cpp:503
+#: viewer.cpp:537
 msgid "Loading.."
 msgstr ""
 
-#: colour.cpp:23
+#: colour.cpp:25
 msgid "Brightening.."
 msgstr ""
 
-#: colour.cpp:37
+#: colour.cpp:39
 msgid "Intensity:Brighten"
 msgstr ""
 
-#: colour.cpp:53
+#: colour.cpp:55
 msgid "Darkening.."
 msgstr ""
 
-#: colour.cpp:66
+#: colour.cpp:68
 msgid "Intensity:Darken"
 msgstr ""
 
-#: colour.cpp:100
+#: colour.cpp:102
 msgid "Converting to Greyscale.."
 msgstr ""
 
-#: colour.cpp:129
+#: colour.cpp:131
 msgid "Greyscale"
 msgstr ""
 
-#: colour.cpp:143
+#: colour.cpp:145
 msgid "Smoothing.."
 msgstr ""
 
-#: colour.cpp:209
+#: colour.cpp:211
 msgid "Smooth"
 msgstr ""
 
-#: ilistdlg.cpp:53
+#: ilistdlg.cpp:55
 msgid "Prev"
 msgstr ""
 
-#: ilistdlg.cpp:57
+#: ilistdlg.cpp:59
 msgid "Shu&ffle"
 msgstr ""
 
-#: ilistdlg.cpp:62
+#: ilistdlg.cpp:64
 msgid "Next"
 msgstr ""
 
-#: ilistdlg.cpp:66
+#: ilistdlg.cpp:68
 msgid "Start slide"
 msgstr ""
 
-#: ilistdlg.cpp:71
+#: ilistdlg.cpp:73
+msgid "Interval.."
+msgstr ""
+
+#: ilistdlg.cpp:78
 msgid "Loop"
 msgstr ""
 
-#: ilistdlg.cpp:79
+#: ilistdlg.cpp:86
 msgid "Image List"
 msgstr ""
 
-#: ilistdlg.cpp:256
+#: ilistdlg.cpp:263
 msgid "Stop &slide"
 msgstr ""
 
-#: ilistdlg.cpp:264
+#: ilistdlg.cpp:271
 msgid "Start &slide"
+msgstr ""
+
+#: ilistdlg.cpp:334
+msgid "Time between slides (sec):"
 msgstr ""

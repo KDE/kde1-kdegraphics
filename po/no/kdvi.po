@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-03-17 HO:MI+ZONE\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -86,6 +86,10 @@ msgstr "Tegne på nytt"
 msgid "Preferences ..."
 msgstr "&Preferanser ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "Å&pne ..."
@@ -117,6 +121,15 @@ msgstr "Tilpass til side&bredden"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Tegne siden på nytt"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Forrige side"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi \n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-06-23 23:48+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -86,6 +86,11 @@ msgstr "Przerysuj stronê"
 msgid "Preferences ..."
 msgstr "W³a¶ciwo¶ci..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Nastêpna"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Otwórz..."
@@ -117,6 +122,14 @@ msgstr "Dopasuj do sze&roko¶ci strony"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "Przery&suj stronê"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Poprzednia"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Nastêpna"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -674,12 +687,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Metoda wydruku"
-
-#~ msgid "&Previous"
-#~ msgstr "&Poprzednia"
-
-#~ msgid "&Next"
-#~ msgstr "&Nastêpna"
 
 #~ msgid "Appearance"
 #~ msgstr "Wygl±d"

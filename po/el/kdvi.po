@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@eexi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,6 +90,11 @@ msgstr "Επανασχεδίαση σελίδας"
 msgid "Preferences ..."
 msgstr "Προτιμήσεις..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "Επόμενο"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "Άνοιγμα"
@@ -121,6 +126,14 @@ msgstr "Προσαρμογή μεγέθους στο πλάτος σελίδας"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "Επανασχεδίαση σελίδας"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "Προηγούμενο"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "Επόμενο"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -676,12 +689,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Μέθοδος εκτύπωσης"
-
-#~ msgid "&Previous"
-#~ msgstr "Προηγούμενο"
-
-#~ msgid "&Next"
-#~ msgstr "Επόμενο"
 
 #~ msgid "Appearance"
 #~ msgstr "Εμφάνιση"

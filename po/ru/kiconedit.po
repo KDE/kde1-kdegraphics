@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Date: 1998-07-31 11:38:54+0400\n"
 "From: Andy Pershin <apa@penza.com.ru>\n"
@@ -38,6 +38,11 @@ msgstr "Выбрать область"
 #, fuzzy
 msgid "New &Window"
 msgstr "Новое окно"
+
+#: kiconedit.cpp:390
+#, fuzzy
+msgid "&New..."
+msgstr "Новый"
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -96,10 +101,6 @@ msgstr ""
 
 #: kiconedit.cpp:466
 msgid "&GrayScale"
-msgstr ""
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
 msgstr ""
 
 #: kiconedit.cpp:471
@@ -581,29 +582,39 @@ msgstr ""
 msgid "Cleared"
 msgstr "Очистить"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+#, fuzzy
+msgid "Selected area cutted"
+msgstr "Выбрать область"
+
+#: kicongrid.cpp:845
+#, fuzzy
+msgid "Selected area copied"
+msgstr "Выбрать область"
+
+#: kicongrid.cpp:923
 #, fuzzy
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
 msgstr "Произошло копирование:\n"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
 msgstr ""
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 #, fuzzy
 msgid "Pasting"
 msgstr "Вставить"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr ""
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Неверные данные в кармане!\n"
 
@@ -903,10 +914,6 @@ msgstr ""
 #~ msgstr "Новое окно"
 
 #, fuzzy
-#~ msgid "&New..."
-#~ msgstr "Новый"
-
-#, fuzzy
 #~ msgid "&Open..."
 #~ msgstr "&Открыть"
 
@@ -960,14 +967,6 @@ msgstr ""
 
 #~ msgid "Error"
 #~ msgstr "Ошибка"
-
-#, fuzzy
-#~ msgid "Selected area cutted"
-#~ msgstr "Выбрать область"
-
-#, fuzzy
-#~ msgid "Selected area copied"
-#~ msgstr "Выбрать область"
 
 #~ msgid "&Quit"
 #~ msgstr "Выход"

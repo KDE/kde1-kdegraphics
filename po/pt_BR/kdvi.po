@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-03-23 00:00+0100\n"
 "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
@@ -78,6 +78,11 @@ msgstr "Redesenhar"
 msgid "Preferences ..."
 msgstr "Preferências ..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Seguinte"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Abrir ..."
@@ -109,6 +114,14 @@ msgstr "&Largura da página"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Redesenhar página"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Anterior"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Seguinte"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -663,12 +676,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impressão"
-
-#~ msgid "&Previous"
-#~ msgstr "&Anterior"
-
-#~ msgid "&Next"
-#~ msgstr "&Seguinte"
 
 #~ msgid "Appearance"
 #~ msgstr "Aparência"

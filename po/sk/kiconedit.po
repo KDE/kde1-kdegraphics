@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-09-26 15:30+0001\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -44,6 +44,10 @@ msgstr "Oznaèi» v¹etko"
 #, fuzzy
 msgid "New &Window"
 msgstr "Nové okno"
+
+#: kiconedit.cpp:390
+msgid "&New..."
+msgstr "&Nový..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -100,10 +104,6 @@ msgstr "&Zmeni» veµkos»"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "©e&dá ¹kála"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr "Na&mapova» do KDE palety"
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -700,7 +700,17 @@ msgstr "V¹etko oznaèené"
 msgid "Cleared"
 msgstr "Zmazané"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+#, fuzzy
+msgid "Selected area cutted"
+msgstr "Oznaèi» oblas»"
+
+#: kicongrid.cpp:845
+#, fuzzy
+msgid "Selected area copied"
+msgstr "Oznaèi» oblas»"
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -708,7 +718,7 @@ msgstr ""
 "Bolo kopírovanie:\n"
 "do schránky!"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -716,15 +726,15 @@ msgstr ""
 "Obrázok v schránke je väè¹í ako súèasný!\n"
 "Vlo¾i» ako nový obrázok?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Vkladám"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Vlo¾ené"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Chybné pixmap dáta v schránke!\n"
 
@@ -1003,14 +1013,14 @@ msgstr "&Pomôcky"
 msgid "Icon grid"
 msgstr "Mrie¾ka ikonky"
 
+#~ msgid "&Map to KDE palette"
+#~ msgstr "Na&mapova» do KDE palety"
+
 #~ msgid "Warning"
 #~ msgstr "Varovanie"
 
 #~ msgid "New &window"
 #~ msgstr "Nové o&kno"
-
-#~ msgid "&New..."
-#~ msgstr "&Nový..."
 
 #~ msgid "&Open..."
 #~ msgstr "&Otvori»..."

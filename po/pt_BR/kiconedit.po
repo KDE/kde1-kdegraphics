@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -43,6 +43,10 @@ msgstr "Selecionar &tudo"
 #: kiconedit.cpp:385
 msgid "New &Window"
 msgstr "&Nova Janela"
+
+#: kiconedit.cpp:390
+msgid "&New..."
+msgstr "&Novo..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -99,10 +103,6 @@ msgstr "&Alterar Tamanho"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "&Tons de Cinza"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr "&Mapear para a paleta do KDE"
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -396,8 +396,8 @@ msgid ""
 msgstr ""
 "Imprimir\n"
 "\n"
-"Abre uma janela que lhe permite imprimir o ícone corrente. (Não funciona"
-"exatamente como o esperado)"
+"Abre uma janela que lhe permite imprimir o ícone corrente. (Não "
+"funcionaexatamente como o esperado)"
 
 #: kiconedit.cpp:822
 msgid ""
@@ -443,11 +443,11 @@ msgstr ""
 "\n"
 "Colar o conteúdo da área de transferência para o ícone.\n"
 "\n"
-"Se o conteúdo é maior que o ícone atual você pode colá-lo para em uma "
-"nova janela.\n"
+"Se o conteúdo é maior que o ícone atual você pode colá-lo para em uma nova "
+"janela.\n"
 "\n"
-"(Nota: Selecione \"Colar pixels transparentes\" na janela de configuração"
-" se você também quer colar transparente)"
+"(Nota: Selecione \"Colar pixels transparentes\" na janela de configuração se "
+"você também quer colar transparente)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -498,8 +498,8 @@ msgstr ""
 "Reduzir a ampliação em um grau.\n"
 "\n"
 "(Dica: Mantenha o botão da lente pressionado por alguns segundos\n"
-"para ampliar à uma escala predefinida."
-"(: Hold the button down for a few seconds to zoom to a predefined scale"
+"para ampliar à uma escala predefinida.(: Hold the button down for a few "
+"seconds to zoom to a predefined scale"
 
 #: kiconedit.cpp:852
 msgid ""
@@ -559,11 +559,11 @@ msgstr ""
 "Arrastar fontes\n"
 "\n"
 "A partir deste botão você pode arrastar uma cópia do ícone corrente e "
-"soltá-lo numa janela habilitada a receber o ícone, como por exemplo "
-"outro Editor de Ícones.\n"
+"soltá-lo numa janela habilitada a receber o ícone, como por exemplo outro "
+"Editor de Ícones.\n"
 "\n"
-"(Nota: A fonte de arrasto usa o protocolo QT XDND que ainda não é padrão "
-"no KDE)"
+"(Nota: A fonte de arrasto usa o protocolo QT XDND que ainda não é padrão no "
+"KDE)"
 
 #: kiconedit.cpp:873
 msgid ""
@@ -688,8 +688,9 @@ msgstr ""
 "\n"
 "Apagar pixels. Configurar os pixels para serem transparentes\n"
 "\n"
-"(Dica: Se você quer desenhar transparente com uma ferramenta diferente," 
-"primeiro clique em \"Apagar\" e então na ferramenta que você quer usar)"
+"(Dica: Se você quer desenhar transparente com uma ferramenta "
+"diferente,primeiro clique em \"Apagar\" e então na ferramenta que você quer "
+"usar)"
 
 #: kicongrid.cpp:651
 msgid "There was an error loading a blank image.\n"
@@ -703,13 +704,21 @@ msgstr "Seleção total"
 msgid "Cleared"
 msgstr "Limpa"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+msgid "Selected area cutted"
+msgstr "Área selecionada cortada "
+
+#: kicongrid.cpp:845
+msgid "Selected area copied"
+msgstr "Área selecionada copiada"
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
 msgstr "Copiado para a área de troca"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -717,15 +726,15 @@ msgstr ""
 "A imagem na área de troca é maior que a imagem atual!\n"
 "Colar como uma nova imagem?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Colando"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Colagem concluída"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Dados inválidos na área de troca!\n"
 
@@ -1004,14 +1013,14 @@ msgstr "Barras de ferramentas"
 msgid "Icon grid"
 msgstr "Grade de Ícones"
 
+#~ msgid "&Map to KDE palette"
+#~ msgstr "&Mapear para a paleta do KDE"
+
 #~ msgid "Warning"
 #~ msgstr "Atenção"
 
 #~ msgid "New &window"
 #~ msgstr "&Nova janela"
-
-#~ msgid "&New..."
-#~ msgstr "&Novo..."
 
 #~ msgid "&Open..."
 #~ msgstr "&Abrir"
@@ -1072,9 +1081,3 @@ msgstr "Grade de Ícones"
 
 #~ msgid "&Cancel"
 #~ msgstr "&Cancelar"
-
-#~ msgid "Selected area cutted"
-#~ msgstr "Área selecionada cortada "
-
-#~ msgid "Selected area copied"
-#~ msgstr "Área selecionada copiada"

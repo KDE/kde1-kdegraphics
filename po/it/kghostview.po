@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,11 +203,11 @@ msgstr "Stampa documento in ordine in&verso"
 msgid "&Setup ..."
 msgstr "&Imposta ..."
 
-#: print.cpp:289
+#: print.cpp:290
 msgid "Range error"
 msgstr "Errore Intervallo"
 
-#: print.cpp:290
+#: print.cpp:291
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -231,25 +231,25 @@ msgstr "&Sezione"
 msgid "&Page"
 msgstr "&Pagina"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2225
-#: kghostview.cpp:2237 kghostview.cpp:2242 kghostview.cpp:2525
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2229
+#: kghostview.cpp:2241 kghostview.cpp:2246 kghostview.cpp:2529
 #, c-format
 msgid "of %d"
 msgstr "di %d"
 
-#: kghostview.cpp:1221 kghostview.cpp:2316 viewcontrol.cpp:64
+#: kghostview.cpp:1221 kghostview.cpp:2320 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Verticale"
 
-#: kghostview.cpp:1223 kghostview.cpp:2322 viewcontrol.cpp:65
+#: kghostview.cpp:1223 kghostview.cpp:2326 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Orizzontale"
 
-#: kghostview.cpp:1225 kghostview.cpp:2320 viewcontrol.cpp:66
+#: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "Seascape"
 
-#: kghostview.cpp:1227 kghostview.cpp:2318 viewcontrol.cpp:67
+#: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "Sottosopra"
 
@@ -355,6 +355,10 @@ msgstr "Configura l'interprete"
 
 #: kghostview.cpp:444
 msgid "New"
+msgstr ""
+
+#: kghostview.cpp:498
+msgid "&New"
 msgstr ""
 
 #: kghostview.cpp:500
@@ -602,7 +606,7 @@ msgstr ""
 "Autore : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1569 kghostview.cpp:1685
+#: kghostview.cpp:1569 kghostview.cpp:1689
 msgid "Error printing"
 msgstr "Errore di stampa"
 
@@ -626,12 +630,18 @@ msgstr ""
 "Non è stato dato alcun nome file\n"
 "quindi niente sarà stampato su un file.\n"
 
-#: kghostview.cpp:1650
+#: kghostview.cpp:1633
+msgid ""
+"Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
+"to be taken into account."
+msgstr ""
+
+#: kghostview.cpp:1654
 #, c-format
 msgid "Print failure : %s"
 msgstr "Fallimento stampa : %s"
 
-#: kghostview.cpp:1686
+#: kghostview.cpp:1690
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -639,36 +649,36 @@ msgstr ""
 "Stampa fallita  perché la lista delle pagine\n"
 "da stampare è vuota.\n"
 
-#: kghostview.cpp:2219 kghostview.cpp:2231 kghostview.cpp:2496
-#: kghostview.cpp:2519
+#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2500
+#: kghostview.cpp:2523
 msgid "of 1    "
 msgstr "di 1    "
 
-#: kghostview.cpp:2221 kghostview.cpp:2233 kghostview.cpp:2521
+#: kghostview.cpp:2225 kghostview.cpp:2237 kghostview.cpp:2525
 #, c-format
 msgid "of %d    "
 msgstr "di %d    "
 
-#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2523
-#: kghostview.cpp:2530
+#: kghostview.cpp:2227 kghostview.cpp:2239 kghostview.cpp:2527
+#: kghostview.cpp:2534
 #, c-format
 msgid "of %d  "
 msgstr "di %d  "
 
-#: kghostview.cpp:2495
+#: kghostview.cpp:2499
 msgid "Sc.1 "
 msgstr "Sc.1"
 
-#: kghostview.cpp:2498
+#: kghostview.cpp:2502
 msgid "P.1 "
 msgstr "P.1"
 
-#: kghostview.cpp:2500 kghostview.cpp:2513
+#: kghostview.cpp:2504 kghostview.cpp:2517
 #, c-format
 msgid "P.%d "
 msgstr "P.%d"
 
-#: kghostview.cpp:2515
+#: kghostview.cpp:2519
 #, c-format
 msgid "Sc.%d "
 msgstr "Sc.%d"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kiconedit\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-08-02 14:15+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -44,6 +44,10 @@ msgstr "Merk alle"
 #, fuzzy
 msgid "New &Window"
 msgstr "Nytt vindu"
+
+#: kiconedit.cpp:390
+msgid "&New..."
+msgstr "&Ny..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -100,10 +104,6 @@ msgstr "&Endre størresle"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "&Gråskala"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr "&Bind til KDE-palett"
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -701,7 +701,17 @@ msgstr "Alt valgt"
 msgid "Cleared"
 msgstr "Renset"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+#, fuzzy
+msgid "Selected area cutted"
+msgstr "Velg område"
+
+#: kicongrid.cpp:845
+#, fuzzy
+msgid "Selected area copied"
+msgstr "Velg område"
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -709,7 +719,7 @@ msgstr ""
 "Det var en kopiering:\n"
 "til utklippstavlen!"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -717,15 +727,15 @@ msgstr ""
 "Bildet i utklippstavlen er større enn gjeldende bilde!\n"
 "Lime inn som nytt bilde?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Limer inn"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Ferdig med innliming"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Ugyldig pixmap-data i utklippsbrett!\n"
 
@@ -1004,14 +1014,14 @@ msgstr "&Verktøy"
 msgid "Icon grid"
 msgstr "Ikon-grind"
 
+#~ msgid "&Map to KDE palette"
+#~ msgstr "&Bind til KDE-palett"
+
 #~ msgid "Warning"
 #~ msgstr "Varsel"
 
 #~ msgid "New &window"
 #~ msgstr "Nytt &vindu"
-
-#~ msgid "&New..."
-#~ msgstr "&Ny..."
 
 #~ msgid "&Open..."
 #~ msgstr "Å&pne..."

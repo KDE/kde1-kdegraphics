@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -86,6 +86,10 @@ msgstr "Prekresli»"
 msgid "Preferences ..."
 msgstr "&Nastavenie ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Otvori» ..."
@@ -117,6 +121,15 @@ msgstr "&Prispôsobi» ¹írke stránky"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "Prek&resli» stránku"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Predchádzajúca strana"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"

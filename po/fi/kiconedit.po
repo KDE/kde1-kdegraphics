@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KICONEDIT\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,6 +45,10 @@ msgstr "Valitse Kaikki"
 #, fuzzy
 msgid "New &Window"
 msgstr "Uusi ikkuna"
+
+#: kiconedit.cpp:390
+msgid "&New..."
+msgstr "&Uusi..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -101,10 +105,6 @@ msgstr "&Koko"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "&Harmaasävy"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr "&KDE värit"
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -701,7 +701,17 @@ msgstr ""
 msgid "Cleared"
 msgstr "Tyhjennetty"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+#, fuzzy
+msgid "Selected area cutted"
+msgstr "Valitse alue"
+
+#: kicongrid.cpp:845
+#, fuzzy
+msgid "Selected area copied"
+msgstr "Valitse alue"
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -709,7 +719,7 @@ msgstr ""
 "Tapahtui kopiointi:\n"
 "leikepöydälle!"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -717,15 +727,15 @@ msgstr ""
 "Leikepöydän kuma on suurempi kuin nykyinen kuva!\n"
 "Liitä uutena kuvana?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Liitän"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Liittäminen valmis"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Virheellistä kuvatietoa leikepöydällä!\n"
 
@@ -1004,14 +1014,14 @@ msgstr "&Työkalut"
 msgid "Icon grid"
 msgstr "Kuvakehila"
 
+#~ msgid "&Map to KDE palette"
+#~ msgstr "&KDE värit"
+
 #~ msgid "Warning"
 #~ msgstr "Varoitus"
 
 #~ msgid "New &window"
 #~ msgstr "Uusi &ikkuna"
-
-#~ msgid "&New..."
-#~ msgstr "&Uusi..."
 
 #~ msgid "&Open..."
 #~ msgstr "&Avaa..."

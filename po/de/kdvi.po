@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-01-05 20:15+0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -78,6 +78,11 @@ msgstr "Neuzeichnen"
 msgid "Preferences ..."
 msgstr "Einstellungen..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Nächste"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "Ö&ffnen..."
@@ -109,6 +114,14 @@ msgstr "Passend auf &Breite"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Neu zeichnen"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Vorherige"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Nächste"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -663,12 +676,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Druckmethode"
-
-#~ msgid "&Previous"
-#~ msgstr "&Vorherige"
-
-#~ msgid "&Next"
-#~ msgstr "&Nächste"
 
 #~ msgid "Appearance"
 #~ msgstr "Aussehen"

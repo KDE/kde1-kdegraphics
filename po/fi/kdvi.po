@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,6 +87,10 @@ msgstr "Uudelleenpiirrä"
 msgid "Preferences ..."
 msgstr "Asetukset ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Avaa ..."
@@ -118,6 +122,15 @@ msgstr "Mahduta sivu&leveyteen"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Päivitä"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Edellinen sivu"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-06-17 22:08+0200\n"
 "Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
 "First-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
@@ -79,6 +79,10 @@ msgstr "Repintar página"
 msgid "Preferences ..."
 msgstr "Preferencias ..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Abrir ..."
@@ -110,6 +114,15 @@ msgstr "Ajustar al ancho de página"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "Repintar página"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Página anterior"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Case Roole <cjr@xs4all.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,6 +87,11 @@ msgstr "Teken opnieuw"
 msgid "Preferences ..."
 msgstr "Voorkeuren ..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "Volgende"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Open ..."
@@ -118,6 +123,14 @@ msgstr "Vul bladzijde in de breedte"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "Teken bladzijde opnieuw"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "Vorige"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "Volgende"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -672,12 +685,6 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Afdruk methode"
-
-#~ msgid "&Previous"
-#~ msgstr "Vorige"
-
-#~ msgid "&Next"
-#~ msgstr "Volgende"
 
 #~ msgid "Appearance"
 #~ msgstr "Uiterlijk"

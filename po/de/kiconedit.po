@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-07-29 23:00+MET\n"
 "Last-Translator: Gregor Zumstein <zumstein@ssd.ethz.ch>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -42,6 +42,10 @@ msgstr "&Alles auswählen"
 #, fuzzy
 msgid "New &Window"
 msgstr "Neues Fenster"
+
+#: kiconedit.cpp:390
+msgid "&New..."
+msgstr "&Neu..."
 
 #: kiconedit.cpp:396
 msgid "Open recent"
@@ -98,10 +102,6 @@ msgstr "&Grösse ändern"
 #: kiconedit.cpp:466
 msgid "&GrayScale"
 msgstr "Grau&stufen"
-
-#: kiconedit.cpp:468
-msgid "&Map to KDE palette"
-msgstr ""
 
 #: kiconedit.cpp:471
 msgid "&Icon"
@@ -568,7 +568,15 @@ msgstr "Alles ausgewählt"
 msgid "Cleared"
 msgstr "Gelöscht"
 
-#: kicongrid.cpp:903
+#: kicongrid.cpp:842
+msgid "Selected area cutted"
+msgstr "Gewählten Bereich ausgeschnitten"
+
+#: kicongrid.cpp:845
+msgid "Selected area copied"
+msgstr "Gewählten Bereich kopiert"
+
+#: kicongrid.cpp:923
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -576,7 +584,7 @@ msgstr ""
 "Etwas wurde in die\n"
 "Zwischenablage kopiert"
 
-#: kicongrid.cpp:924
+#: kicongrid.cpp:944
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -584,15 +592,15 @@ msgstr ""
 "Das Bild in der Zwischenablage ist grösser als das aktuelle Bild!\n"
 "Als neues Bild einfügen?"
 
-#: kicongrid.cpp:937
+#: kicongrid.cpp:957
 msgid "Pasting"
 msgstr "Füge ein"
 
-#: kicongrid.cpp:969 kicongrid.cpp:996
+#: kicongrid.cpp:989 kicongrid.cpp:1016
 msgid "Done pasting"
 msgstr "Eingefügt!"
 
-#: kicongrid.cpp:974 kicongrid.cpp:1000
+#: kicongrid.cpp:994 kicongrid.cpp:1020
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Ungültige Bilddaten in der Zwischenablage!\n"
 
@@ -884,9 +892,6 @@ msgstr ""
 #~ msgid "New &window"
 #~ msgstr "&Neues Fenster"
 
-#~ msgid "&New..."
-#~ msgstr "&Neu..."
-
 #~ msgid "&Open..."
 #~ msgstr "Ö&ffnen"
 
@@ -946,9 +951,3 @@ msgstr ""
 
 #~ msgid "&Cancel"
 #~ msgstr "&Abbrechen"
-
-#~ msgid "Selected area cutted"
-#~ msgstr "Gewählten Bereich ausgeschnitten"
-
-#~ msgid "Selected area copied"
-#~ msgstr "Gewählten Bereich kopiert"

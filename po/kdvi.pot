@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,6 +77,10 @@ msgstr ""
 msgid "Preferences ..."
 msgstr ""
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr ""
@@ -107,6 +111,14 @@ msgstr ""
 
 #: kdvi.cpp:198
 msgid "&Redraw page"
+msgstr ""
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr ""
+
+#: kdvi.cpp:206
+msgid "&Next"
 msgstr ""
 
 #: kdvi.cpp:207

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi VERSION\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Székely Krisztián <szekelyk@edasz.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -91,6 +91,11 @@ msgstr "Oldal újrarajzolása"
 msgid "Preferences ..."
 msgstr "&Beállítások ..."
 
+#: kdvi.cpp:175
+#, fuzzy
+msgid "&New"
+msgstr "&Következõ"
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Megnyit ..."
@@ -122,6 +127,14 @@ msgstr "&Teljes szélesség"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Oldal újrarajzolás"
+
+#: kdvi.cpp:205
+msgid "&Previous"
+msgstr "&Elõzõ"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr "&Következõ"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -677,12 +690,6 @@ msgstr "n fel"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Nyomtatási módszer"
-
-#~ msgid "&Previous"
-#~ msgstr "&Elõzõ"
-
-#~ msgid "&Next"
-#~ msgstr "&Következõ"
 
 #~ msgid "Appearance"
 #~ msgstr "Megjelenés"
