@@ -2,17 +2,16 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-04-09 18:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 1997-11-08 23:50+0100\n"
+"PO-Revision-Date: 1998-03-15 20:00-0500\n"
+"Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
+"Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Transfer-Encoding: iso-8859-2\n"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -51,14 +50,12 @@ msgstr ""
 "675 Mass Ave, Cambridge, MA 02139, USA"
 
 #: goto.cpp:54
-#, fuzzy
 msgid "&Section"
-msgstr "Sekcija"
+msgstr "&Sekcija"
 
 #: goto.cpp:70
-#, fuzzy
 msgid "&Page"
-msgstr "Stranica"
+msgstr "St&ranica"
 
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2215
 #: kghostview.cpp:2227 kghostview.cpp:2232 kghostview.cpp:2515
@@ -67,79 +64,68 @@ msgid "of %d"
 msgstr "od %d"
 
 #: info.cpp:45
-#, fuzzy
 msgid "File name :"
-msgstr "Datoteka :"
+msgstr "Ime Datoteke :"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr ""
+msgstr "Ime Dokumenta :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr ""
+msgstr "Datum izdavanja :"
 
 #: interpreter.cpp:42
 msgid "General"
 msgstr "Opæenito"
 
 #: interpreter.cpp:79
-#, fuzzy
 msgid "&Interpreter name"
-msgstr "Naziv interpretera"
+msgstr "Naziv &interpretera"
 
 #: interpreter.cpp:87
-#, fuzzy
 msgid "&Antialiasing"
-msgstr "Zaglaðivanje"
+msgstr "&Zaglaðivanje"
 
 #: interpreter.cpp:97
-#, fuzzy
 msgid "Platform &fonts"
-msgstr "Fontovi platforme"
+msgstr "Pisma plat&forme"
 
 #: interpreter.cpp:107
-#, fuzzy
 msgid "&Messages"
-msgstr "Poruke"
+msgstr "Poru&ke"
 
 #: interpreter.cpp:130
 msgid "Palette"
 msgstr "Paleta"
 
 #: interpreter.cpp:152
-#, fuzzy
 msgid "Colo&r"
-msgstr "Boja"
+msgstr "&Boja"
 
 #: interpreter.cpp:161
-#, fuzzy
 msgid "&Grayscale"
-msgstr "Sivi tonovi"
+msgstr "Sivi &tonovi"
 
 #: interpreter.cpp:169
-#, fuzzy
 msgid "Monochrom&e"
-msgstr "Jednobojno"
+msgstr "J&ednobojno"
 
 #: interpreter.cpp:192
 msgid "Backing"
 msgstr "Backing"
 
 #: interpreter.cpp:214
-#, fuzzy
 msgid "&Pixmap"
-msgstr "Pixmap"
+msgstr "&Pixmap"
 
 #: interpreter.cpp:224
-#, fuzzy
 msgid "&Backing store"
-msgstr "Backing store"
+msgstr "&Backing store"
 
 #: interpreter.cpp:244 kkeydialog.cpp:230
-#, fuzzy
 msgid "&Defaults"
-msgstr "Uobièajeno"
+msgstr "&Uobièajeno"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -147,19 +133,19 @@ msgstr "gs"
 
 #: kaccel.cpp:166
 msgid "CTRL+O"
-msgstr ""
+msgstr "CTRL+O"
 
 #: kaccel.cpp:170
 msgid "CTRL+N"
-msgstr ""
+msgstr "CTRL+N"
 
 #: kaccel.cpp:174
 msgid "CTRL+W"
-msgstr ""
+msgstr "CTRL+W"
 
 #: kaccel.cpp:178
 msgid "CTRL+S"
-msgstr ""
+msgstr "CTRL+S"
 
 #: kaccel.cpp:181 kaccel.cpp:401 kghostview.cpp:347 kghostview.cpp:368
 #: kghostview.cpp:432 kghostview.cpp:1286
@@ -168,77 +154,75 @@ msgstr "Ispis"
 
 #: kaccel.cpp:182
 msgid "CTRL+P"
-msgstr ""
+msgstr "CTRL+P"
 
 #: kaccel.cpp:186
 msgid "CTRL+Q"
-msgstr ""
+msgstr "CTRL+Q"
 
 #: kaccel.cpp:190
 msgid "CTRL+X"
-msgstr ""
+msgstr "CTRL+X"
 
 #: kaccel.cpp:194
 msgid "CTRL+C"
-msgstr ""
+msgstr "CTRL+C"
 
 #: kaccel.cpp:198
 msgid "CTRL+V"
-msgstr ""
+msgstr "CTRL+V"
 
 #: kaccel.cpp:202
 msgid "CTRL+Z"
-msgstr ""
+msgstr "CTRL+Z"
 
 #: kaccel.cpp:206
 msgid "CTRL+F"
-msgstr ""
+msgstr "CTRL+F"
 
 #: kaccel.cpp:210
 msgid "CTRL+R"
-msgstr ""
+msgstr "CTRL+R"
 
 #: kaccel.cpp:213 kaccel.cpp:425
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: kaccel.cpp:214
 msgid "CTRL+Insert"
-msgstr ""
+msgstr "CTRL+Insert"
 
 #: kaccel.cpp:217 kaccel.cpp:428
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: kaccel.cpp:218
 msgid "CTRL+Home"
-msgstr ""
+msgstr "CTRL+Home"
 
 #: kaccel.cpp:221 kaccel.cpp:431
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: kaccel.cpp:222
 msgid "CTRL+End"
-msgstr ""
+msgstr "CTRL+End"
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
 msgid "Prior"
-msgstr ""
+msgstr "Prija¹nji"
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
-msgstr "Slijedeæa"
+msgstr "Slijedeæi"
 
 #: kaccel.cpp:234
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: kghostview.cpp:202
-#, fuzzy
 msgid "Document information"
-msgstr "Informacija"
+msgstr "Informacije o dokumentu"
 
 #: kghostview.cpp:216 kghostview.cpp:349 kghostview.cpp:370 kghostview.cpp:439
 msgid "View Control"
@@ -317,9 +301,8 @@ msgid "&View control ..."
 msgstr "&Kontrole pogleda ..."
 
 #: kghostview.cpp:511
-#, fuzzy
 msgid "&Fit to page width"
-msgstr "&Idi na ..."
+msgstr "Pod&esi prema ¹irini stranice"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -354,48 +337,42 @@ msgid "&Read down"
 msgstr "&Èitaj dolje"
 
 #: kghostview.cpp:536
-#, fuzzy
 msgid "Mark &current page"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi &trenutnu stranicu"
 
 #: kghostview.cpp:539
-#, fuzzy
 msgid "Mark &all pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi &sve stranice"
 
 #: kghostview.cpp:541
-#, fuzzy
 msgid "Mark &even pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi &parne stranice"
 
 #: kghostview.cpp:543
-#, fuzzy
 msgid "Mark &odd pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi &neparne stranice"
 
 #: kghostview.cpp:546
 msgid "&Toggle page marks"
-msgstr ""
+msgstr "&Uklj./isklj. oznake stranica"
 
 #: kghostview.cpp:549
 msgid "&Remove page marks"
-msgstr ""
+msgstr "U&kloni oznake stranica"
 
 #: kghostview.cpp:560
 msgid "Show &tool bar"
 msgstr "Poka¾i &Alate"
 
 #: kghostview.cpp:561
-#, fuzzy
 msgid "Show st&atus bar"
 msgstr "Poka¾i &status"
 
 #: kghostview.cpp:562
 msgid "Show &page list"
-msgstr ""
+msgstr "&Prika¾i listu stranica"
 
 #: kghostview.cpp:564
-#, fuzzy
 msgid "Configure &interpreter ..."
 msgstr "Pode&si interpreter ..."
 
@@ -404,9 +381,8 @@ msgid "Configure &key bindings ..."
 msgstr "Podesi &tipke ..."
 
 #: kghostview.cpp:567
-#, fuzzy
 msgid "&Save options"
-msgstr " &Spremi pode¹avanja"
+msgstr " &Spremi opcije"
 
 #: kghostview.cpp:574
 msgid "&About this application"
@@ -425,33 +401,28 @@ msgid "&Go"
 msgstr "&Idi"
 
 #: kghostview.cpp:586
-#, fuzzy
 msgid "&Pagemarks"
-msgstr "Stranice"
+msgstr "O&znake Stranica"
 
 #: kghostview.cpp:654
 msgid "New window ..."
-msgstr ""
+msgstr "Novi prozor ..."
 
 #: kghostview.cpp:657
-#, fuzzy
 msgid "Open file ..."
-msgstr "&Otvori ..."
+msgstr "Otvori datoteku ..."
 
 #: kghostview.cpp:662
-#, fuzzy
 msgid "Print document ..."
-msgstr "Ispi¹i dokument"
+msgstr "Ispi¹i dokument ..."
 
 #: kghostview.cpp:667
-#, fuzzy
 msgid "Zoom in"
-msgstr "U&veæaj"
+msgstr "Uveæaj"
 
 #: kghostview.cpp:670
-#, fuzzy
 msgid "Zoom out"
-msgstr "U&manji"
+msgstr "Umanji"
 
 #: kghostview.cpp:673
 msgid "Change view ..."
@@ -534,7 +505,6 @@ msgid "Upside down"
 msgstr "Naopaèke"
 
 #: kghostview.cpp:1264
-#, fuzzy
 msgid "Go to ..."
 msgstr "Idi na stranicu ..."
 
@@ -555,9 +525,8 @@ msgid "Hide Ghostscript messages"
 msgstr "Sakrij Ghostscript poruke"
 
 #: kghostview.cpp:1498
-#, fuzzy
 msgid "Version 0.6"
-msgstr "Verzija 0.5"
+msgstr "Inaèica 0.6"
 
 #: kghostview.cpp:1499
 msgid "Sorry, not ready yet"
@@ -568,19 +537,18 @@ msgid "About kghostview"
 msgstr "O programu kghostview"
 
 #: kghostview.cpp:1507
-#, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
-"Verzija :\t0.5 alpha\n"
+"Verzija :\t0.6 alpha\n"
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "Gre¹ka pri ispisu"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -596,10 +564,11 @@ msgid ""
 "nothing could be printed to a file.\n"
 msgstr ""
 
+
 #: kghostview.cpp:1640
-#, fuzzy, c-format
+#, c-format
 msgid "Print failure : %s"
-msgstr "Gre¹ka pri ispisu : lpr"
+msgstr "Gre¹ka pri ispisu : %s"
 
 #: kghostview.cpp:1676
 msgid ""
@@ -625,7 +594,7 @@ msgstr "od %d  "
 
 #: kghostview.cpp:2485
 msgid "Sc.1 "
-msgstr "Sc.1 "
+msgstr "Sek.1 "
 
 #: kghostview.cpp:2488
 msgid "P.1 "
@@ -634,156 +603,144 @@ msgstr "P.1. "
 #: kghostview.cpp:2490 kghostview.cpp:2503
 #, c-format
 msgid "P.%d "
-msgstr "P.%d "
+msgstr "Str.%d "
 
 #: kghostview.cpp:2505
 #, c-format
 msgid "Sc.%d "
-msgstr "Sc.%d "
+msgstr "Sek.%d "
 
 #: kkeydialog.cpp:308
 msgid "Current key"
-msgstr ""
+msgstr "Trenutni kljuè"
 
 #: kkeydialog.cpp:319
-#, fuzzy
 msgid "&Action"
-msgstr "Sekcija"
+msgstr "&Akcija"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "Be&z kljuèa"
 
 #: kkeydialog.cpp:386
-#, fuzzy
 msgid "&Default key"
-msgstr "Uobièajeno"
+msgstr "&Uobièajeni kljuè"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "&Birani kljuè"
 
 #: main.cpp:25
-#, fuzzy
 msgid "Usage: "
-msgstr "Upotreba: %s\n"
+msgstr "Uporaba: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr "[datoteka]\n"
+msgstr 
+"[datoteka] [switches]\n"
+"\n"
 
 #: main.cpp:28
-#, fuzzy
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr "Pogledajte dokumentaciju Qt za opcije u komandnoj liniji\n"
+msgstr 
+"Pogledajte dokumentaciju Qt za \n"
+"opcije na komandnoj liniji\n"
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Gre¹ka na komandoj liniji"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark current page"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi trenutnu stranicu"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark all pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi sve stranice"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Mark even pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi parne stranice"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Mark odd pages"
-msgstr "Oznaèi stranicu"
+msgstr "Oznaèi neparne stranice"
 
 #: marklist.cpp:42
 msgid "Toggle page marks"
-msgstr ""
+msgstr "Uklj./isklj. oznake stranica"
 
 #: marklist.cpp:43
 msgid "Remove page marks"
-msgstr ""
+msgstr "Ukloni oznake stranice"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
 msgstr "Ghostscript poruke"
 
 #: messages.cpp:56
-#, fuzzy
 msgid "&Clear"
-msgstr "Oèisti"
+msgstr "&Oèisti"
 
 #: messages.cpp:59 viewcontrol.cpp:114
 msgid "&Dismiss"
-msgstr ""
+msgstr "O&tka¾i"
 
 #: print.cpp:35
-#, fuzzy
 msgid "Printer setup"
-msgstr "Naziv pisaèa"
+msgstr "Postava pisaèa"
 
 #: print.cpp:65
-#, fuzzy
 msgid "&Printer name"
-msgstr "Naziv pisaèa"
+msgstr "Naziv &pisaèa"
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr ""
+msgstr "&Naredba posredniku"
 
 #: print.cpp:89
 msgid "&Environment variable"
-msgstr ""
+msgstr "&Okoli¹na (env) varijabla"
 
 #: print.cpp:148
-#, fuzzy
 msgid "Print to file"
-msgstr "Gre¹ka pri ispisu : lpr"
+msgstr "Ispi¹i u datoteku"
 
 #: print.cpp:153
 msgid "Pages"
 msgstr "Stranice"
 
 #: print.cpp:179
-#, fuzzy
 msgid "&All"
-msgstr "Sve"
+msgstr "&Sve"
 
 #: print.cpp:188
 msgid "&Current"
-msgstr ""
+msgstr "&Trenutna"
 
 #: print.cpp:196
 msgid "&Marked"
-msgstr ""
+msgstr "&Oznaèene"
 
 #: print.cpp:205
 msgid "&Range"
-msgstr ""
+msgstr "&Raspon"
 
 #: print.cpp:219
 msgid "to"
 msgstr ""
 
 #: print.cpp:232
-#, fuzzy
 msgid "Print document in re&verse order"
-msgstr "Ispi¹i dokument"
+msgstr "Ispi¹i dokument u obratnom redoslijedu"
 
 #: print.cpp:249
-#, fuzzy
 msgid "&Setup ..."
-msgstr "&Otvori ..."
+msgstr "&Podesi ..."
 
 #: print.cpp:289
 msgid "Range error"
@@ -800,112 +757,21 @@ msgid ""
 msgstr ""
 
 #: viewcontrol.cpp:36
-#, fuzzy
 msgid "Force changes to ..."
-msgstr "Izmjene silom"
+msgstr "Primjeni promjene na ..."
 
 #: viewcontrol.cpp:78
-#, fuzzy
 msgid "&magnification"
-msgstr "Uveæanje"
+msgstr "&uveæanje"
 
 #: viewcontrol.cpp:86
-#, fuzzy
 msgid "m&edia"
-msgstr "Medij"
+msgstr "m&edij"
 
 #: viewcontrol.cpp:94
-#, fuzzy
 msgid "&orientation"
-msgstr "Orjentacija"
+msgstr "&orijentacija"
 
 #: viewcontrol.cpp:111
 msgid "&Apply"
-msgstr ""
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr " &Rastegni"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid "Title :"
-#~ msgstr "Naslov :"
-
-#~ msgid "Date :"
-#~ msgstr "Datum :"
-
-#~ msgid "New"
-#~ msgstr "Novi"
-
-#~ msgid "&New"
-#~ msgstr "&Novi"
-
-#~ msgid "&Close"
-#~ msgstr "Za&tvori"
-
-#~ msgid "E&xit"
-#~ msgstr "&Zavr¹i"
-
-#~ msgid "&File"
-#~ msgstr "&Datoteka"
-
-#~ msgid "&View"
-#~ msgstr "&Gledaj"
-
-#~ msgid "&Options"
-#~ msgstr "&P&ode¹avanja"
-
-#~ msgid "&Help"
-#~ msgstr "&Pomoæ"
-
-#~ msgid "Sorry"
-#~ msgstr "®alim"
-
-#~ msgid "KGhostview: Version 0.5"
-#~ msgstr "KGhostview: Verzija 0.5"
-
-#~ msgid "Go to"
-#~ msgstr "Idi na"
-
-#~ msgid "Printer Name : "
-#~ msgstr "Naziv pisaèa : "
-
-#~ msgid ""
-#~ "The file\n"
-#~ "\"%s\"\n"
-#~ "could not be found."
-#~ msgstr ""
-#~ "Datoteka\n"
-#~ "\"%s\"\n"
-#~ "nije naðena."
-
-#~ msgid "Didn't recognise file\n"
-#~ msgstr "Nisam prepoznao datoteku\n"
-
-#~ msgid "Even"
-#~ msgstr "Parne"
-
-#~ msgid "Odd"
-#~ msgstr "Neparne"
+msgstr "&Primjeni"
