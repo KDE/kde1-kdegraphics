@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kghostview\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-03-31 22:12+0100\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -355,6 +355,10 @@ msgstr "Ikke kjent"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Konfigurer oversetter"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

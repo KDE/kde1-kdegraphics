@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 1.0\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -356,6 +356,10 @@ msgstr "Nekonata"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Konfigura¼-interpretilo"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

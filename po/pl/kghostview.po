@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-06-23 18:15+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -381,6 +381,10 @@ msgstr "NIeznany"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Konfiguruj interpreter"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

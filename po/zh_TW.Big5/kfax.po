@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-06-30 16:30+0000\n"
 "Last-Translator: Yu-Ting Kuo <beta2000@yahoo.com>\n"
 "Language-Team: BIG-5 Chinese <LL@li.org>\n"
@@ -255,6 +255,10 @@ msgstr "無法和 KFM 連絡"
 #, c-format
 msgid "Loading '%s'"
 msgstr "載入 '%s' 中"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 # kfax.cpp:1201
 #: kfax.cpp:1209

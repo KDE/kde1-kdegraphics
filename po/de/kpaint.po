@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-05-07 14:04 +0100\n"
 "Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -302,6 +302,10 @@ msgstr "Fülleigenschaften"
 msgid "Fill Pattern:"
 msgstr "Füllmuster"
 
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr "Keins"
+
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
 msgstr "Durchgezogen"
@@ -408,6 +412,3 @@ msgstr "Runde Ecken"
 
 #~ msgid "Continue"
 #~ msgstr "Fortsetzen"
-
-#~ msgid "None"
-#~ msgstr "Keins"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-03-23 00:00+0100\n"
 "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
 
@@ -295,6 +295,10 @@ msgstr "Propriedades de Preenchimento"
 msgid "Fill Pattern:"
 msgstr "Padrão de Preenchimento"
 
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr "Nenhum"
+
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
 msgstr "Sólido"
@@ -401,6 +405,3 @@ msgstr "Redondângulo"
 
 #~ msgid "Continue"
 #~ msgstr "Continuar"
-
-#~ msgid "None"
-#~ msgstr "Nenhum"

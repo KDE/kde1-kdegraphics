@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-06-23 09:00-0300\n"
 "Last-Translator: Elvis Pfützenreuter <epx@netville.com.br>\n"
 
@@ -347,6 +347,10 @@ msgstr "Desconhecido"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Configurar interpretador"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -210,6 +210,10 @@ msgstr "Ne mogu stupiti u kontakt s KFMom"
 #, c-format
 msgid "Loading '%s'"
 msgstr "Uèitavam '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -14,227 +14,329 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: wview.cpp:81
-msgid "&Image"
-msgstr "&Imagem"
+#: viewer.cpp:74
+msgid "no image loaded"
+msgstr ""
 
-#: wview.cpp:87
-msgid "&Open File.."
-msgstr "&Abrir Arquivo..."
+#: viewer.cpp:82 viewer.cpp:491
+msgid "Ready"
+msgstr ""
 
-#: wview.cpp:88
-msgid "Open &URL.."
-msgstr "Abril &URL..."
+#: viewer.cpp:237
+msgid "About KView"
+msgstr "Sobre KView"
 
-#: wview.cpp:95
+#: viewer.cpp:245 viewer.cpp:262
 msgid "&Zoom"
 msgstr "&Aproximar"
 
-#: wview.cpp:96
-msgid "&Rotate"
-msgstr "&Girar"
+#: viewer.cpp:246 viewer.cpp:263
+msgid "&Transform"
+msgstr ""
 
-#: wview.cpp:97
+#: viewer.cpp:247 viewer.cpp:264
 msgid "To &Desktop"
 msgstr "para a &Área de Trabalho"
 
-#: wview.cpp:99
-msgid "&Toggle Menu"
-msgstr "&Ativar o Menu"
-
-#: wview.cpp:100
-msgid "&Size Window"
-msgstr "Tamanho da &Janela"
-
-#: wview.cpp:102
-msgid "I&mage Info"
-msgstr "Informações da I&magem"
-
-#: wview.cpp:106
-msgid "&in"
-msgstr "&dentro"
-
-#: wview.cpp:107
-msgid "&out"
-msgstr "&fora"
-
-#: wview.cpp:111
-msgid "&Clockwise"
-msgstr "&Sentido horário"
-
-#: wview.cpp:113
-msgid "&Anti-clock"
-msgstr "&Anti-horário"
-
-#: viewport.cpp:51 wview.cpp:118
-msgid "Ti&le"
+#: viewer.cpp:249
+#, fuzzy
+msgid "Fi&lter"
 msgstr "Mosaico"
 
-#: wview.cpp:119
-msgid "&Max Size"
-msgstr "Tamanho &Máximo"
-
-#: wview.cpp:120
-msgid "M&axpect"
-msgstr "M&áximo"
-
-#: fileman.cpp:138 wview.cpp:126
-msgid "&Contents"
+#: viewer.cpp:266
+msgid "F&ilter"
 msgstr ""
 
-#: viewport.cpp:41
-msgid "Clockwise"
-msgstr "Sentido horário"
+#: viewer.cpp:270
+#, fuzzy
+msgid "&Images"
+msgstr "&Imagem"
 
-#: viewport.cpp:43
-msgid "Anti-clock"
-msgstr "Anti-horário"
+#: viewer.cpp:285
+#, fuzzy
+msgid "&Open.."
+msgstr "&Abrir Arquivo..."
 
-#: viewport.cpp:45
-msgid "Mirror X"
-msgstr "Espelho X"
+#: viewer.cpp:286
+msgid "&Save As.."
+msgstr ""
 
-#: viewport.cpp:47
-msgid "Mirror Y"
-msgstr "Espelho Y"
+#: viewer.cpp:292
+msgid "&Full Screen"
+msgstr ""
 
-#: viewport.cpp:52
-msgid "Max Size"
-msgstr "Tamanho Máximo"
+#: viewer.cpp:295
+#, c-format
+msgid "Zoom &in 10%"
+msgstr ""
 
-#: viewport.cpp:53
-msgid "Maxpect"
+#: viewer.cpp:296
+#, c-format
+msgid "Zoom &out 10%"
+msgstr ""
+
+#: viewer.cpp:297
+#, c-format
+msgid "&Zoom in 50%"
+msgstr ""
+
+#: viewer.cpp:298
+#, c-format
+msgid "Zoo&m out 50%"
+msgstr ""
+
+#: viewer.cpp:300
+msgid "&Reset"
+msgstr ""
+
+#: viewer.cpp:303
+#, fuzzy
+msgid "Rotate &clockwise"
+msgstr "&Sentido horário"
+
+#: viewer.cpp:305
+#, fuzzy
+msgid "Rotate &anti-clockwise"
+msgstr "&Anti-horário"
+
+#: viewer.cpp:308
+msgid "Flip &vertical"
+msgstr ""
+
+#: viewer.cpp:310
+msgid "Flip &horizontal"
+msgstr ""
+
+#: viewer.cpp:313
+#, fuzzy
+msgid "&Tile"
+msgstr "Mosaico"
+
+#: viewer.cpp:314
+#, fuzzy
+msgid "&Max"
+msgstr "Tamanho &Máximo"
+
+#: viewer.cpp:315
+#, fuzzy
+msgid "Max&pect"
 msgstr "Máximo"
 
-#: viewport.cpp:56
-msgid "Zoom"
-msgstr "Aproximar"
+#: viewer.cpp:318
+msgid "&List.."
+msgstr ""
 
-#: viewport.cpp:57
-msgid "Rotate"
-msgstr "Girar"
+#: viewer.cpp:325
+msgid "&Slideshow On/Off"
+msgstr ""
 
-#: viewport.cpp:58
-msgid "To Desktop"
-msgstr "Para a Área de Trabalho"
-
-#: viewport.cpp:59
-msgid "Fit window size to pixmap size"
-msgstr "Ajustar o tamanho da janela para o tamanho do mapa de pixels"
-
-#: viewport.cpp:61
-msgid "Fit pixmap size to window size"
-msgstr "Ajustar o mapa de pixels para o tamanho da janela"
-
-#: fileman.cpp:53
-msgid "KView Display Manager"
-msgstr "Gerente de Apresentação KView"
-
-#: fileman.cpp:101
-msgid "Open &URL..."
-msgstr "Abrir &URL..."
-
-#: fileman.cpp:124
-msgid "Image Caching"
-msgstr "Cache de imagem"
-
-#: fileman.cpp:132
-msgid "Cache Size"
-msgstr "Tamanho do cache"
-
-#: fileman.cpp:134
-msgid "Save Options"
-msgstr "Opções de Salvamento"
-
-#: fileman.cpp:139
-msgid "&About KView"
+#: viewer.cpp:330
+#, fuzzy
+msgid "&About KView.."
 msgstr "&Sobre KView"
 
-#: fileman.cpp:163
-msgid "New Window"
-msgstr "Nova Janela"
+#: viewer.cpp:377 viewer.cpp:384
+msgid "Existing transfer not yet complete."
+msgstr ""
 
-#: fileman.cpp:169
-msgid "open new file"
-msgstr "abrir um novo arquivo"
+#: viewer.cpp:398
+msgid "Couldn't get temporary transfer name."
+msgstr ""
 
-#: fileman.cpp:184
-#, c-format
-msgid "shrink -50%"
-msgstr "encolher -50%"
+#: viewer.cpp:503
+msgid "Loading.."
+msgstr ""
 
-#: fileman.cpp:190
-#, c-format
-msgid "magnify +50%"
-msgstr "aumentar +50%"
+#: colour.cpp:23
+msgid "Brightening.."
+msgstr ""
 
-#: fileman.cpp:196
-msgid "size Window"
-msgstr "tamanho da janela"
+#: colour.cpp:37
+msgid "Intensity:Brighten"
+msgstr ""
 
-#: fileman.cpp:203
-msgid "launch help"
-msgstr "inicia a ajuda"
+#: colour.cpp:53
+msgid "Darkening.."
+msgstr ""
 
-#: fileman.cpp:210
-msgid "first pic"
-msgstr "primeira imagem"
+#: colour.cpp:66
+msgid "Intensity:Darken"
+msgstr ""
 
-#: fileman.cpp:216
-msgid "last pic"
-msgstr "última imagem"
+#: colour.cpp:100
+msgid "Converting to Greyscale.."
+msgstr ""
 
-#: fileman.cpp:223
-msgid "prev pic"
-msgstr "imagem anterior"
+#: colour.cpp:129
+msgid "Greyscale"
+msgstr ""
 
-#: fileman.cpp:229
-msgid "next pic"
-msgstr "próxima imagem"
+#: colour.cpp:143
+msgid "Smoothing.."
+msgstr ""
 
-#: fileman.cpp:236
-msgid "start picture show"
-msgstr "iniciar show de imagens"
+#: colour.cpp:209
+msgid "Smooth"
+msgstr ""
 
-#: fileman.cpp:242
-msgid "random picture show"
-msgstr "show de imagens randômico"
+#: ilistdlg.cpp:53
+msgid "Prev"
+msgstr ""
 
-#: fileman.cpp:248
-msgid "stop picture show"
-msgstr "parar show de imagens"
+#: ilistdlg.cpp:57
+msgid "Shu&ffle"
+msgstr ""
 
-#: fileman.cpp:281
-msgid "slow"
-msgstr "devagar"
+#: ilistdlg.cpp:62
+msgid "Next"
+msgstr ""
 
-#: fileman.cpp:286
-msgid "fast"
-msgstr "rápido"
+#: ilistdlg.cpp:66
+msgid "Start slide"
+msgstr ""
 
-#: fileman.cpp:300
-msgid "Output Device"
-msgstr "Dispositivo de Saída"
+#: ilistdlg.cpp:71
+msgid "Loop"
+msgstr ""
 
-#: fileman.cpp:379
-#, c-format
-msgid " Files: %d"
-msgstr " Arquivos: %d"
+#: ilistdlg.cpp:79
+#, fuzzy
+msgid "Image List"
+msgstr "&Imagem"
 
-#: fileman.cpp:389
-#, c-format
-msgid " Format: %s Size: %dx%d"
-msgstr " Formato: %s Tamanho: %dx%d"
+#: ilistdlg.cpp:256
+msgid "Stop &slide"
+msgstr ""
 
-#: fileman.cpp:532
-#, c-format
-msgid "Window %d"
-msgstr "Janela %d"
+#: ilistdlg.cpp:264
+msgid "Start &slide"
+msgstr ""
 
-#: fileman.cpp:656
-msgid "(c) 1996 - 1998 by \n"
-msgstr "(c) 1996 - 1998 por \n"
+#~ msgid "Open &URL.."
+#~ msgstr "Abril &URL..."
 
-#: fileman.cpp:659
-msgid "About KView"
-msgstr "Sobre KView"
+#~ msgid "&Rotate"
+#~ msgstr "&Girar"
+
+#~ msgid "&Toggle Menu"
+#~ msgstr "&Ativar o Menu"
+
+#~ msgid "&Size Window"
+#~ msgstr "Tamanho da &Janela"
+
+#~ msgid "I&mage Info"
+#~ msgstr "Informações da I&magem"
+
+#~ msgid "&in"
+#~ msgstr "&dentro"
+
+#~ msgid "&out"
+#~ msgstr "&fora"
+
+#~ msgid "M&axpect"
+#~ msgstr "M&áximo"
+
+#~ msgid "Clockwise"
+#~ msgstr "Sentido horário"
+
+#~ msgid "Anti-clock"
+#~ msgstr "Anti-horário"
+
+#~ msgid "Mirror X"
+#~ msgstr "Espelho X"
+
+#~ msgid "Mirror Y"
+#~ msgstr "Espelho Y"
+
+#~ msgid "Max Size"
+#~ msgstr "Tamanho Máximo"
+
+#~ msgid "Zoom"
+#~ msgstr "Aproximar"
+
+#~ msgid "Rotate"
+#~ msgstr "Girar"
+
+#~ msgid "To Desktop"
+#~ msgstr "Para a Área de Trabalho"
+
+#~ msgid "Fit window size to pixmap size"
+#~ msgstr "Ajustar o tamanho da janela para o tamanho do mapa de pixels"
+
+#~ msgid "Fit pixmap size to window size"
+#~ msgstr "Ajustar o mapa de pixels para o tamanho da janela"
+
+#~ msgid "KView Display Manager"
+#~ msgstr "Gerente de Apresentação KView"
+
+#~ msgid "Open &URL..."
+#~ msgstr "Abrir &URL..."
+
+#~ msgid "Image Caching"
+#~ msgstr "Cache de imagem"
+
+#~ msgid "Cache Size"
+#~ msgstr "Tamanho do cache"
+
+#~ msgid "Save Options"
+#~ msgstr "Opções de Salvamento"
+
+#~ msgid "New Window"
+#~ msgstr "Nova Janela"
+
+#~ msgid "open new file"
+#~ msgstr "abrir um novo arquivo"
+
+#~ msgid "shrink -50%"
+#~ msgstr "encolher -50%"
+
+#~ msgid "magnify +50%"
+#~ msgstr "aumentar +50%"
+
+#~ msgid "size Window"
+#~ msgstr "tamanho da janela"
+
+#~ msgid "launch help"
+#~ msgstr "inicia a ajuda"
+
+#~ msgid "first pic"
+#~ msgstr "primeira imagem"
+
+#~ msgid "last pic"
+#~ msgstr "última imagem"
+
+#~ msgid "prev pic"
+#~ msgstr "imagem anterior"
+
+#~ msgid "next pic"
+#~ msgstr "próxima imagem"
+
+#~ msgid "start picture show"
+#~ msgstr "iniciar show de imagens"
+
+#~ msgid "random picture show"
+#~ msgstr "show de imagens randômico"
+
+#~ msgid "stop picture show"
+#~ msgstr "parar show de imagens"
+
+#~ msgid "slow"
+#~ msgstr "devagar"
+
+#~ msgid "fast"
+#~ msgstr "rápido"
+
+#~ msgid "Output Device"
+#~ msgstr "Dispositivo de Saída"
+
+#~ msgid " Files: %d"
+#~ msgstr " Arquivos: %d"
+
+#~ msgid " Format: %s Size: %dx%d"
+#~ msgstr " Formato: %s Tamanho: %dx%d"
+
+#~ msgid "Window %d"
+#~ msgstr "Janela %d"
+
+#~ msgid "(c) 1996 - 1998 by \n"
+#~ msgstr "(c) 1996 - 1998 por \n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -356,6 +356,10 @@ msgstr "Nepoznat"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Podesi interpreter"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

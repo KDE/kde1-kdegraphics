@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-08-19 01:14+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -301,6 +301,10 @@ msgstr "Свойства заливки"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Шаблон заливки:"
+
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr ""
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"

@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-07-24 18:30+0200\n"
 "Last-Translator: Anders Bengtsson <d96-abe@nada.kth.se>\n"
 "MIME-Version: 1.0\n"
@@ -205,6 +205,10 @@ msgstr "Lyckades inte kommunicera med KFM"
 #, c-format
 msgid "Loading '%s'"
 msgstr "Laddar '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-05-06 12:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 
@@ -202,6 +202,10 @@ msgstr "Não consegui comunicar com o KFM"
 #, c-format
 msgid "Loading '%s'"
 msgstr "A carregar '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-03-08 16:14:13-0500\n"
 "From: Bernd Johannes Wuebben,201 Lincoln Hall,,256-1036, "
@@ -205,6 +205,10 @@ msgstr "En saanut kommunikoitua KFM:n kanssa"
 #, c-format
 msgid "Loading '%s'"
 msgstr "Lataan '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

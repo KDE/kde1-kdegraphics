@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-05-06 15:36 +0100\n"
 "Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -351,6 +351,10 @@ msgstr "Unbekannt"
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Interpreter einstellen"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr ""
 
 #: kghostview.cpp:500
 msgid "&Open ..."

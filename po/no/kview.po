@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kview\n"
-"POT-Creation-Date: 1998-08-09 15:48+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-08-09 14:50+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -13,227 +13,332 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: wview.cpp:81
-msgid "&Image"
-msgstr "&Bilde"
+#: viewer.cpp:74
+msgid "no image loaded"
+msgstr ""
 
-#: wview.cpp:87
-msgid "&Open File.."
-msgstr "Å&pne fil..."
+#: viewer.cpp:82 viewer.cpp:491
+msgid "Ready"
+msgstr ""
 
-#: wview.cpp:88
-msgid "Open &URL.."
-msgstr "Åpne &URL..."
+#: viewer.cpp:237
+msgid "About KView"
+msgstr "Om KView"
 
-#: wview.cpp:95
+#: viewer.cpp:245 viewer.cpp:262
 msgid "&Zoom"
 msgstr "&Forstørr"
 
-#: wview.cpp:96
-msgid "&Rotate"
-msgstr "&Roter"
+#: viewer.cpp:246 viewer.cpp:263
+msgid "&Transform"
+msgstr ""
 
-#: wview.cpp:97
+#: viewer.cpp:247 viewer.cpp:264
 msgid "To &Desktop"
 msgstr "Til &skrivebord"
 
-#: wview.cpp:99
-msgid "&Toggle Menu"
-msgstr "&Av/på meny"
-
-#: wview.cpp:100
-msgid "&Size Window"
-msgstr "&Sett bildestørrelse"
-
-#: wview.cpp:102
-msgid "I&mage Info"
-msgstr "&Bildeinformasjon"
-
-#: wview.cpp:106
-msgid "&in"
-msgstr "&inn"
-
-#: wview.cpp:107
-msgid "&out"
-msgstr "&ut"
-
-#: wview.cpp:111
-msgid "&Clockwise"
-msgstr "&Klokkevis"
-
-#: wview.cpp:113
-msgid "&Anti-clock"
-msgstr "&Mot klokken"
-
-#: viewport.cpp:51 wview.cpp:118
-msgid "Ti&le"
+#: viewer.cpp:249
+#, fuzzy
+msgid "Fi&lter"
 msgstr "&Side ved side"
 
-#: wview.cpp:119
-msgid "&Max Size"
+#: viewer.cpp:266
+msgid "F&ilter"
+msgstr ""
+
+#: viewer.cpp:270
+#, fuzzy
+msgid "&Images"
+msgstr "&Bilde"
+
+#: viewer.cpp:285
+#, fuzzy
+msgid "&Open.."
+msgstr "Å&pne fil..."
+
+#: viewer.cpp:286
+msgid "&Save As.."
+msgstr ""
+
+#: viewer.cpp:292
+msgid "&Full Screen"
+msgstr ""
+
+#: viewer.cpp:295
+#, c-format
+msgid "Zoom &in 10%"
+msgstr ""
+
+#: viewer.cpp:296
+#, c-format
+msgid "Zoom &out 10%"
+msgstr ""
+
+#: viewer.cpp:297
+#, c-format
+msgid "&Zoom in 50%"
+msgstr ""
+
+#: viewer.cpp:298
+#, c-format
+msgid "Zoo&m out 50%"
+msgstr ""
+
+#: viewer.cpp:300
+msgid "&Reset"
+msgstr ""
+
+#: viewer.cpp:303
+#, fuzzy
+msgid "Rotate &clockwise"
+msgstr "&Klokkevis"
+
+#: viewer.cpp:305
+#, fuzzy
+msgid "Rotate &anti-clockwise"
+msgstr "&Mot klokken"
+
+#: viewer.cpp:308
+msgid "Flip &vertical"
+msgstr ""
+
+#: viewer.cpp:310
+msgid "Flip &horizontal"
+msgstr ""
+
+#: viewer.cpp:313
+#, fuzzy
+msgid "&Tile"
+msgstr "&Side ved side"
+
+#: viewer.cpp:314
+#, fuzzy
+msgid "&Max"
 msgstr "&Maks størrelse"
 
-#: wview.cpp:120
-msgid "M&axpect"
-msgstr "&Sidemaks"
-
-#: fileman.cpp:138 wview.cpp:126
-msgid "&Contents"
-msgstr "&Innhold"
-
-#: viewport.cpp:41
-msgid "Clockwise"
-msgstr "Klokkevis"
-
-#: viewport.cpp:43
-msgid "Anti-clock"
-msgstr "Mot klokken"
-
-#: viewport.cpp:45
-msgid "Mirror X"
-msgstr "Speil om X"
-
-#: viewport.cpp:47
-msgid "Mirror Y"
-msgstr "Speil om Y"
-
-#: viewport.cpp:52
-msgid "Max Size"
-msgstr "Maks størrelse"
-
-#: viewport.cpp:53
-msgid "Maxpect"
+#: viewer.cpp:315
+#, fuzzy
+msgid "Max&pect"
 msgstr "Sidemaks"
 
-#: viewport.cpp:56
-msgid "Zoom"
-msgstr "Forstørr"
+#: viewer.cpp:318
+msgid "&List.."
+msgstr ""
 
-#: viewport.cpp:57
-msgid "Rotate"
-msgstr "Roter"
+#: viewer.cpp:325
+msgid "&Slideshow On/Off"
+msgstr ""
 
-#: viewport.cpp:58
-msgid "To Desktop"
-msgstr "Til skrivebord"
-
-#: viewport.cpp:59
-msgid "Fit window size to pixmap size"
-msgstr "Tilpass vindustørrelse til pixmap-størrelse"
-
-#: viewport.cpp:61
-msgid "Fit pixmap size to window size"
-msgstr "Tilpass pixmap-størrelse til vindustørrelse"
-
-#: fileman.cpp:53
-msgid "KView Display Manager"
-msgstr "KView Skjermbehandler"
-
-#: fileman.cpp:101
-msgid "Open &URL..."
-msgstr "Åpne &URL..."
-
-#: fileman.cpp:124
-msgid "Image Caching"
-msgstr "Bildemellomlagring"
-
-#: fileman.cpp:132
-msgid "Cache Size"
-msgstr "Mellomlagerstørrelse"
-
-#: fileman.cpp:134
-msgid "Save Options"
-msgstr "Lagre valg"
-
-#: fileman.cpp:139
-msgid "&About KView"
+#: viewer.cpp:330
+#, fuzzy
+msgid "&About KView.."
 msgstr "&Om KView"
 
-#: fileman.cpp:163
-msgid "New Window"
-msgstr "Nytt vindu"
+#: viewer.cpp:377 viewer.cpp:384
+msgid "Existing transfer not yet complete."
+msgstr ""
 
-#: fileman.cpp:169
-msgid "open new file"
-msgstr "åpne ny fil"
+#: viewer.cpp:398
+msgid "Couldn't get temporary transfer name."
+msgstr ""
 
-#: fileman.cpp:184
-#, c-format
-msgid "shrink -50%"
-msgstr "forminsk -50%"
+#: viewer.cpp:503
+msgid "Loading.."
+msgstr ""
 
-#: fileman.cpp:190
-#, c-format
-msgid "magnify +50%"
-msgstr "forstørr +50%"
+#: colour.cpp:23
+msgid "Brightening.."
+msgstr ""
 
-#: fileman.cpp:196
-msgid "size Window"
-msgstr "sett vindusstørrelse"
+#: colour.cpp:37
+msgid "Intensity:Brighten"
+msgstr ""
 
-#: fileman.cpp:203
-msgid "launch help"
-msgstr "kjør hjelp"
+#: colour.cpp:53
+msgid "Darkening.."
+msgstr ""
 
-#: fileman.cpp:210
-msgid "first pic"
-msgstr "første bilde"
+#: colour.cpp:66
+msgid "Intensity:Darken"
+msgstr ""
 
-#: fileman.cpp:216
-msgid "last pic"
-msgstr "siste bilde"
+#: colour.cpp:100
+msgid "Converting to Greyscale.."
+msgstr ""
 
-#: fileman.cpp:223
-msgid "prev pic"
-msgstr "forrige bilde"
+#: colour.cpp:129
+msgid "Greyscale"
+msgstr ""
 
-#: fileman.cpp:229
-msgid "next pic"
-msgstr "neste bilde"
+#: colour.cpp:143
+msgid "Smoothing.."
+msgstr ""
 
-#: fileman.cpp:236
-msgid "start picture show"
-msgstr "start bildefremvisning"
+#: colour.cpp:209
+msgid "Smooth"
+msgstr ""
 
-#: fileman.cpp:242
-msgid "random picture show"
-msgstr "tilfeldig bildefremvisning"
+#: ilistdlg.cpp:53
+msgid "Prev"
+msgstr ""
 
-#: fileman.cpp:248
-msgid "stop picture show"
-msgstr "stopp bildefremvisning"
+#: ilistdlg.cpp:57
+msgid "Shu&ffle"
+msgstr ""
 
-#: fileman.cpp:281
-msgid "slow"
-msgstr "sakte"
+#: ilistdlg.cpp:62
+msgid "Next"
+msgstr ""
 
-#: fileman.cpp:286
-msgid "fast"
-msgstr "hurtig"
+#: ilistdlg.cpp:66
+msgid "Start slide"
+msgstr ""
 
-#: fileman.cpp:300
-msgid "Output Device"
-msgstr "Utenhet"
+#: ilistdlg.cpp:71
+msgid "Loop"
+msgstr ""
 
-#: fileman.cpp:379
-#, c-format
-msgid " Files: %d"
-msgstr " Filer: %d"
+#: ilistdlg.cpp:79
+#, fuzzy
+msgid "Image List"
+msgstr "&Bilde"
 
-#: fileman.cpp:389
-#, c-format
-msgid " Format: %s Size: %dx%d"
-msgstr " Format: %s Størrelse: %dx%d"
+#: ilistdlg.cpp:256
+msgid "Stop &slide"
+msgstr ""
 
-#: fileman.cpp:532
-#, c-format
-msgid "Window %d"
-msgstr "Vindu %d"
+#: ilistdlg.cpp:264
+msgid "Start &slide"
+msgstr ""
 
-#: fileman.cpp:656
-msgid "(c) 1996 - 1998 by \n"
-msgstr "(c) 1996 - 1998 av \n"
+#~ msgid "Open &URL.."
+#~ msgstr "Åpne &URL..."
 
-#: fileman.cpp:659
-msgid "About KView"
-msgstr "Om KView"
+#~ msgid "&Rotate"
+#~ msgstr "&Roter"
+
+#~ msgid "&Toggle Menu"
+#~ msgstr "&Av/på meny"
+
+#~ msgid "&Size Window"
+#~ msgstr "&Sett bildestørrelse"
+
+#~ msgid "I&mage Info"
+#~ msgstr "&Bildeinformasjon"
+
+#~ msgid "&in"
+#~ msgstr "&inn"
+
+#~ msgid "&out"
+#~ msgstr "&ut"
+
+#~ msgid "M&axpect"
+#~ msgstr "&Sidemaks"
+
+#~ msgid "&Contents"
+#~ msgstr "&Innhold"
+
+#~ msgid "Clockwise"
+#~ msgstr "Klokkevis"
+
+#~ msgid "Anti-clock"
+#~ msgstr "Mot klokken"
+
+#~ msgid "Mirror X"
+#~ msgstr "Speil om X"
+
+#~ msgid "Mirror Y"
+#~ msgstr "Speil om Y"
+
+#~ msgid "Max Size"
+#~ msgstr "Maks størrelse"
+
+#~ msgid "Zoom"
+#~ msgstr "Forstørr"
+
+#~ msgid "Rotate"
+#~ msgstr "Roter"
+
+#~ msgid "To Desktop"
+#~ msgstr "Til skrivebord"
+
+#~ msgid "Fit window size to pixmap size"
+#~ msgstr "Tilpass vindustørrelse til pixmap-størrelse"
+
+#~ msgid "Fit pixmap size to window size"
+#~ msgstr "Tilpass pixmap-størrelse til vindustørrelse"
+
+#~ msgid "KView Display Manager"
+#~ msgstr "KView Skjermbehandler"
+
+#~ msgid "Open &URL..."
+#~ msgstr "Åpne &URL..."
+
+#~ msgid "Image Caching"
+#~ msgstr "Bildemellomlagring"
+
+#~ msgid "Cache Size"
+#~ msgstr "Mellomlagerstørrelse"
+
+#~ msgid "Save Options"
+#~ msgstr "Lagre valg"
+
+#~ msgid "New Window"
+#~ msgstr "Nytt vindu"
+
+#~ msgid "open new file"
+#~ msgstr "åpne ny fil"
+
+#~ msgid "shrink -50%"
+#~ msgstr "forminsk -50%"
+
+#~ msgid "magnify +50%"
+#~ msgstr "forstørr +50%"
+
+#~ msgid "size Window"
+#~ msgstr "sett vindusstørrelse"
+
+#~ msgid "launch help"
+#~ msgstr "kjør hjelp"
+
+#~ msgid "first pic"
+#~ msgstr "første bilde"
+
+#~ msgid "last pic"
+#~ msgstr "siste bilde"
+
+#~ msgid "prev pic"
+#~ msgstr "forrige bilde"
+
+#~ msgid "next pic"
+#~ msgstr "neste bilde"
+
+#~ msgid "start picture show"
+#~ msgstr "start bildefremvisning"
+
+#~ msgid "random picture show"
+#~ msgstr "tilfeldig bildefremvisning"
+
+#~ msgid "stop picture show"
+#~ msgstr "stopp bildefremvisning"
+
+#~ msgid "slow"
+#~ msgstr "sakte"
+
+#~ msgid "fast"
+#~ msgstr "hurtig"
+
+#~ msgid "Output Device"
+#~ msgstr "Utenhet"
+
+#~ msgid " Files: %d"
+#~ msgstr " Filer: %d"
+
+#~ msgid " Format: %s Size: %dx%d"
+#~ msgstr " Format: %s Størrelse: %dx%d"
+
+#~ msgid "Window %d"
+#~ msgstr "Vindu %d"
+
+#~ msgid "(c) 1996 - 1998 by \n"
+#~ msgstr "(c) 1996 - 1998 av \n"

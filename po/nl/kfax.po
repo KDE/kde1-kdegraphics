@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KFax1.0\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-08-07 CET:GMT+1\n"
 "Last-Translator: Roel Vester <Roel.Vester@siemens.nl>\n"
 "Language-Team: Nederlands <LL@li.org>\n"
@@ -211,6 +211,10 @@ msgstr "Kan geen contact krijgen met KFM"
 #, c-format
 msgid "Loading '%s'"
 msgstr "Inlezen '%s'"
+
+#: kfax.cpp:1195
+msgid "Done"
+msgstr ""
 
 #: kfax.cpp:1209
 msgid "Calling KFM"

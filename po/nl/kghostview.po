@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -368,6 +368,10 @@ msgstr ""
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Vertaler instellen"
+
+#: kghostview.cpp:444
+msgid "New"
+msgstr "Nieuw"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -788,9 +792,6 @@ msgstr "Vergrooting"
 
 #~ msgid "Didn't recognise file\n"
 #~ msgstr "Bestandsformaat kon niet herkent worden\n"
-
-#~ msgid "New"
-#~ msgstr "Nieuw"
 
 #~ msgid "&New"
 #~ msgstr "&Nieuw"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,227 +14,190 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: wview.cpp:81
-msgid "&Image"
+#: viewer.cpp:74
+msgid "no image loaded"
 msgstr ""
 
-#: wview.cpp:87
-msgid "&Open File.."
+#: viewer.cpp:82 viewer.cpp:491
+msgid "Ready"
 msgstr ""
 
-#: wview.cpp:88
-msgid "Open &URL.."
+#: viewer.cpp:237
+msgid "About KView"
 msgstr ""
 
-#: wview.cpp:95
+#: viewer.cpp:245 viewer.cpp:262
 msgid "&Zoom"
 msgstr ""
 
-#: wview.cpp:96
-msgid "&Rotate"
+#: viewer.cpp:246 viewer.cpp:263
+msgid "&Transform"
 msgstr ""
 
-#: wview.cpp:97
+#: viewer.cpp:247 viewer.cpp:264
 msgid "To &Desktop"
 msgstr ""
 
-#: wview.cpp:99
-msgid "&Toggle Menu"
+#: viewer.cpp:249
+msgid "Fi&lter"
 msgstr ""
 
-#: wview.cpp:100
-msgid "&Size Window"
+#: viewer.cpp:266
+msgid "F&ilter"
 msgstr ""
 
-#: wview.cpp:102
-msgid "I&mage Info"
+#: viewer.cpp:270
+msgid "&Images"
 msgstr ""
 
-#: wview.cpp:106
-msgid "&in"
+#: viewer.cpp:285
+msgid "&Open.."
 msgstr ""
 
-#: wview.cpp:107
-msgid "&out"
+#: viewer.cpp:286
+msgid "&Save As.."
 msgstr ""
 
-#: wview.cpp:111
-msgid "&Clockwise"
+#: viewer.cpp:292
+msgid "&Full Screen"
 msgstr ""
 
-#: wview.cpp:113
-msgid "&Anti-clock"
-msgstr ""
-
-#: viewport.cpp:51 wview.cpp:118
-msgid "Ti&le"
-msgstr ""
-
-#: wview.cpp:119
-msgid "&Max Size"
-msgstr ""
-
-#: wview.cpp:120
-msgid "M&axpect"
-msgstr ""
-
-#: fileman.cpp:138 wview.cpp:126
-msgid "&Contents"
-msgstr ""
-
-#: viewport.cpp:41
-msgid "Clockwise"
-msgstr ""
-
-#: viewport.cpp:43
-msgid "Anti-clock"
-msgstr ""
-
-#: viewport.cpp:45
-msgid "Mirror X"
-msgstr ""
-
-#: viewport.cpp:47
-msgid "Mirror Y"
-msgstr ""
-
-#: viewport.cpp:52
-msgid "Max Size"
-msgstr ""
-
-#: viewport.cpp:53
-msgid "Maxpect"
-msgstr ""
-
-#: viewport.cpp:56
-msgid "Zoom"
-msgstr ""
-
-#: viewport.cpp:57
-msgid "Rotate"
-msgstr ""
-
-#: viewport.cpp:58
-msgid "To Desktop"
-msgstr ""
-
-#: viewport.cpp:59
-msgid "Fit window size to pixmap size"
-msgstr ""
-
-#: viewport.cpp:61
-msgid "Fit pixmap size to window size"
-msgstr ""
-
-#: fileman.cpp:53
-msgid "KView Display Manager"
-msgstr ""
-
-#: fileman.cpp:101
-msgid "Open &URL..."
-msgstr ""
-
-#: fileman.cpp:124
-msgid "Image Caching"
-msgstr ""
-
-#: fileman.cpp:132
-msgid "Cache Size"
-msgstr ""
-
-#: fileman.cpp:134
-msgid "Save Options"
-msgstr ""
-
-#: fileman.cpp:139
-msgid "&About KView"
-msgstr ""
-
-#: fileman.cpp:163
-msgid "New Window"
-msgstr ""
-
-#: fileman.cpp:169
-msgid "open new file"
-msgstr ""
-
-#: fileman.cpp:184
+#: viewer.cpp:295
 #, c-format
-msgid "shrink -50%"
+msgid "Zoom &in 10%"
 msgstr ""
 
-#: fileman.cpp:190
+#: viewer.cpp:296
 #, c-format
-msgid "magnify +50%"
+msgid "Zoom &out 10%"
 msgstr ""
 
-#: fileman.cpp:196
-msgid "size Window"
-msgstr ""
-
-#: fileman.cpp:203
-msgid "launch help"
-msgstr ""
-
-#: fileman.cpp:210
-msgid "first pic"
-msgstr ""
-
-#: fileman.cpp:216
-msgid "last pic"
-msgstr ""
-
-#: fileman.cpp:223
-msgid "prev pic"
-msgstr ""
-
-#: fileman.cpp:229
-msgid "next pic"
-msgstr ""
-
-#: fileman.cpp:236
-msgid "start picture show"
-msgstr ""
-
-#: fileman.cpp:242
-msgid "random picture show"
-msgstr ""
-
-#: fileman.cpp:248
-msgid "stop picture show"
-msgstr ""
-
-#: fileman.cpp:281
-msgid "slow"
-msgstr ""
-
-#: fileman.cpp:286
-msgid "fast"
-msgstr ""
-
-#: fileman.cpp:300
-msgid "Output Device"
-msgstr ""
-
-#: fileman.cpp:379
+#: viewer.cpp:297
 #, c-format
-msgid " Files: %d"
+msgid "&Zoom in 50%"
 msgstr ""
 
-#: fileman.cpp:389
+#: viewer.cpp:298
 #, c-format
-msgid " Format: %s Size: %dx%d"
+msgid "Zoo&m out 50%"
 msgstr ""
 
-#: fileman.cpp:532
-#, c-format
-msgid "Window %d"
+#: viewer.cpp:300
+msgid "&Reset"
 msgstr ""
 
-#: fileman.cpp:656
-msgid "(c) 1996 - 1998 by \n"
+#: viewer.cpp:303
+msgid "Rotate &clockwise"
 msgstr ""
 
-#: fileman.cpp:659
-msgid "About KView"
+#: viewer.cpp:305
+msgid "Rotate &anti-clockwise"
+msgstr ""
+
+#: viewer.cpp:308
+msgid "Flip &vertical"
+msgstr ""
+
+#: viewer.cpp:310
+msgid "Flip &horizontal"
+msgstr ""
+
+#: viewer.cpp:313
+msgid "&Tile"
+msgstr ""
+
+#: viewer.cpp:314
+msgid "&Max"
+msgstr ""
+
+#: viewer.cpp:315
+msgid "Max&pect"
+msgstr ""
+
+#: viewer.cpp:318
+msgid "&List.."
+msgstr ""
+
+#: viewer.cpp:325
+msgid "&Slideshow On/Off"
+msgstr ""
+
+#: viewer.cpp:330
+msgid "&About KView.."
+msgstr ""
+
+#: viewer.cpp:377 viewer.cpp:384
+msgid "Existing transfer not yet complete."
+msgstr ""
+
+#: viewer.cpp:398
+msgid "Couldn't get temporary transfer name."
+msgstr ""
+
+#: viewer.cpp:503
+msgid "Loading.."
+msgstr ""
+
+#: colour.cpp:23
+msgid "Brightening.."
+msgstr ""
+
+#: colour.cpp:37
+msgid "Intensity:Brighten"
+msgstr ""
+
+#: colour.cpp:53
+msgid "Darkening.."
+msgstr ""
+
+#: colour.cpp:66
+msgid "Intensity:Darken"
+msgstr ""
+
+#: colour.cpp:100
+msgid "Converting to Greyscale.."
+msgstr ""
+
+#: colour.cpp:129
+msgid "Greyscale"
+msgstr ""
+
+#: colour.cpp:143
+msgid "Smoothing.."
+msgstr ""
+
+#: colour.cpp:209
+msgid "Smooth"
+msgstr ""
+
+#: ilistdlg.cpp:53
+msgid "Prev"
+msgstr ""
+
+#: ilistdlg.cpp:57
+msgid "Shu&ffle"
+msgstr ""
+
+#: ilistdlg.cpp:62
+msgid "Next"
+msgstr ""
+
+#: ilistdlg.cpp:66
+msgid "Start slide"
+msgstr ""
+
+#: ilistdlg.cpp:71
+msgid "Loop"
+msgstr ""
+
+#: ilistdlg.cpp:79
+msgid "Image List"
+msgstr ""
+
+#: ilistdlg.cpp:256
+msgid "Stop &slide"
+msgstr ""
+
+#: ilistdlg.cpp:264
+msgid "Start &slide"
 msgstr ""

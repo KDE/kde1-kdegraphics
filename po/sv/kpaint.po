@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -307,6 +307,10 @@ msgstr "Fyllningsegenskaper"
 msgid "Fill Pattern:"
 msgstr "Fyllnadsmönster:"
 
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr "Ingen"
+
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
 msgstr "Solid"
@@ -415,9 +419,6 @@ msgstr "Rektangel"
 
 #~ msgid "Continue"
 #~ msgstr "Fortsätt"
-
-#~ msgid "None"
-#~ msgstr "Ingen"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: Ogiltlig URL"

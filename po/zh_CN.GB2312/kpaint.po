@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -298,6 +298,10 @@ msgstr "填充特性"
 msgid "Fill Pattern:"
 msgstr "填充花样"
 
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr "无"
+
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
 msgstr "实心"
@@ -406,9 +410,6 @@ msgstr "圆角"
 
 #~ msgid "Continue"
 #~ msgstr "继续"
-
-#~ msgid "None"
-#~ msgstr "无"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: 不正确的 URL"
