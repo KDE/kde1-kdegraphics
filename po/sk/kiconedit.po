@@ -201,6 +201,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"KDE Editor Ikoniek\n"
+"\n"
+"Grafický program na vytváranie ikoniek\n"
+"pou¾ívajúcich paletu ikon KDE\n"
+"\n"
+"Copyright 1998 by Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -712,11 +720,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "¹írka"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "vý¹ka"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
@@ -1095,9 +1103,3 @@ msgstr "&Panely nástrojov"
 #: kiconconfig.cpp:642
 msgid "Icon grid"
 msgstr "Mrie¾ka ikonky"
-
-#~ msgid "Open image"
-#~ msgstr "Otvori» obrázok"
-
-#~ msgid "Save image As"
-#~ msgstr "Ulo¾i» obrázok ako"

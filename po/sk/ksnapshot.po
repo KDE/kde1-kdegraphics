@@ -18,7 +18,6 @@ msgid "snapshot"
 msgstr "snapshot"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -34,7 +33,7 @@ msgstr ""
 "KSnapshot napísal Richard Moore (rich@kde.org)\n"
 "a je uvoµnené pod LGPL\n"
 "\n"
-"Verzia: "
+"Verzia: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
