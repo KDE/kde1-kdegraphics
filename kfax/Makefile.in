@@ -29,7 +29,7 @@ MOC	=	@MOC@
 HEADER = 	kfax.h faxexpand.h 
 
 
-SOURCES	=	kfax.cpp viewfax.c faxexpand.c faxinit.c faxinput.c fax2tiff.c fax2ps.c print.cpp options.cpp
+SOURCES	=	kfax.cpp viewfax.cpp faxexpand.cpp faxinit.cpp faxinput.cpp fax2tiff.c fax2ps.c print.cpp options.cpp
 
 
 OBJECTS	=	kfax.o viewfax.o faxexpand.o faxinit.o faxinput.o fax2tiff.o fax2ps.o print.o options.o

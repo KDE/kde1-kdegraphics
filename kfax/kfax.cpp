@@ -421,41 +421,41 @@ void TopLevel::setupToolBar(){
   toolbar = new KToolBar( this );
 
   pixmap.load(PIXDIR + "back.xpm");
-  toolbar->insertItem(pixmap, ID_PREV, TRUE, "Go back");
+  toolbar->insertButton(pixmap, ID_PREV, TRUE, "Go back");
   
   pixmap.load(PIXDIR + "forward.xpm");
-  toolbar->insertItem(pixmap, ID_NEXT, TRUE, "Go forward");
+  toolbar->insertButton(pixmap, ID_NEXT, TRUE, "Go forward");
   
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "start.xpm");
-  toolbar->insertItem(pixmap, ID_START, TRUE, "Go to start");
+  toolbar->insertButton(pixmap, ID_START, TRUE, "Go to start");
   
   pixmap.load(PIXDIR + "finish.xpm");
-  toolbar->insertItem(pixmap, ID_END, TRUE, "Go to end");
+  toolbar->insertButton(pixmap, ID_END, TRUE, "Go to end");
 
 
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "zoomin.xpm");
-  toolbar->insertItem(pixmap, ID_ZOOM_IN, TRUE, "Zoom in");
+  toolbar->insertButton(pixmap, ID_ZOOM_IN, TRUE, "Zoom in");
 
   pixmap.load(PIXDIR + "zoomout.xpm");
-  toolbar->insertItem(pixmap, ID_ZOOM_OUT, TRUE, "Zoom out");
+  toolbar->insertButton(pixmap, ID_ZOOM_OUT, TRUE, "Zoom out");
   
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "fileprint.xpm");
-  toolbar->insertItem(pixmap, ID_PRINT, TRUE, "Print document");
+  toolbar->insertButton(pixmap, ID_PRINT, TRUE, "Print document");
 
   /*  
   pixmap.load(PIXDIR + "tick.xpm");
-  toolbar->insertItem(pixmap, ID_MARK, TRUE, "Mark this page");
+  toolbar->insertButton(pixmap, ID_MARK, TRUE, "Mark this page");
   */
     toolbar->insertSeparator();
 
   pixmap.load(PIXDIR + "page.xpm");
-  toolbar->insertItem(pixmap, ID_PAGE, TRUE, "Go to page ...");
+  toolbar->insertButton(pixmap, ID_PAGE, TRUE, "Go to page ...");
   
 
   toolbar1 = addToolBar( toolbar );
@@ -1314,11 +1314,11 @@ void TopLevel::writeSettings(){
 
 	QString string;
 	string="";
-	if ( toolbar->Pos() == KToolBar::Left )
+	if ( toolbar->pos() == KToolBar::Left )
 		string.sprintf("Left");
-	else if ( toolbar->Pos() == KToolBar::Right )
+	else if ( toolbar->pos() == KToolBar::Right )
 		string.sprintf("Right");
-	else if ( toolbar->Pos() == KToolBar::Bottom )
+	else if ( toolbar->pos() == KToolBar::Bottom )
 		string.sprintf("Bottom");
 	else
 		string.sprintf("Top");
