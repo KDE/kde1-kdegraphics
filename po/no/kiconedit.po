@@ -618,6 +618,13 @@ msgid ""
 "(Note: The drag source uses the QT XDND protocol which is not yet standard "
 "in KDE)"
 msgstr ""
+"Dra kilde\n"
+"\n"
+"Fra denne knappen kan du dra ut en kopi av gjeldende ikon og droppe det "
+"på et vindu som har støtte for dropp, f eks en annen Ikonredigerer.\n"
+"\n"
+"(Merk: Dra kilde-funksjonen bruker QT XDND-protokollen som foreløpig "
+"ikke er standard i KDE)"
 
 #: kiconedit.cpp:831
 msgid ""
@@ -635,6 +642,9 @@ msgid ""
 "\n"
 "Fill adjoining pixels with the same color with the current color"
 msgstr ""
+"Flomfyll\n"
+"\n"
+"Fyll tilgrensede punkter med gjeldende farge"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -706,13 +716,15 @@ msgstr ""
 "\n"
 "Tegn en rett linje vertikalt, horisontalt eller i 45 grader"
 
-
 #: kiconedit.cpp:858
 msgid ""
 "Spray\n"
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
+"Sprei\n"
+"\n"
+"Tegn spredte punkter med gjeldende farge"
 
 #: kiconedit.cpp:861
 msgid ""
@@ -720,6 +732,9 @@ msgid ""
 "\n"
 "The color of the pixel clicked on will be the current drawcolor"
 msgstr ""
+"Finn\n"
+"\n"
+"Farge til punktet som blir klikket på blir gjeldende tegnefarge"
 
 #: kiconedit.cpp:864
 msgid ""
@@ -730,6 +745,12 @@ msgid ""
 "(Tip: If you want to draw transparent with a different tool then first click "
 "on \"Erase\" then on the tool you want to use)"
 msgstr ""
+"Slett\n"
+"\n"
+"Slett punkter. Sett punkter til å bli gjennomsiktige\n"
+"\n"
+"(Tips: Hvis du ønsker å tegne gjennomsiktig med et annet verktøy, klikk "
+"først på \"Slett\" og så på det verktøyet du ønsker å bruke)"
 
 #: kicongrid.cpp:579
 msgid "There was an error loading a blank image.\n"
@@ -1003,7 +1024,7 @@ msgstr "&Innebygget"
 
 #: kiconconfig.cpp:289
 msgid "Example"
-msgstr ""
+msgstr "Eksempel"
 
 #: kiconconfig.cpp:397
 msgid "Paste mode"
@@ -1035,7 +1056,7 @@ msgstr "Konfigurer ikon-mal"
 
 #: kiconconfig.cpp:509
 msgid "Appearance"
-msgstr ""
+msgstr "Forekomst"
 
 #: kiconconfig.cpp:514
 msgid "Configure background"
