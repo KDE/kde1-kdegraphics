@@ -18,6 +18,7 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include <kcolordlg.h>
 #include "debug.h"
 #include "kiconconfig.h"
 
@@ -116,7 +117,7 @@ KTemplateConfig::KTemplateConfig(QWidget *parent) : QWidget(parent)
   grp = new QGroupBox(i18n("Templates:"), this);
   templates = new KIconListBox(grp);
   connect( templates, SIGNAL(highlighted(int)), SLOT(checkSelection(int)));
-  ml = new QVBoxLayout(this, 10);
+  ml = new QVBoxLayout(this);
   ml->addWidget(grp);
   l = new  QVBoxLayout(grp, 15, AlignLeft);
   l->addWidget(templates);
@@ -222,30 +223,72 @@ void KTemplateConfig::edit()
   }
 }
 
-KBackgroundConfig::KBackgroundConfig(QWidget *parent)
+KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
 {
   debug("KBackgroundConfig - constructor");
   pprops = KIconEditProperties::getProperties(parent);
   initMetaObject();
 
-  QGroupBox *grp = new QGroupBox(i18n("Color or pixmap"), this);
+  QGroupBox *grp1 = new QGroupBox(i18n("Color or pixmap"), this);
 
-  btcolor = new KColorButton(grp);
+  btngrp = new QButtonGroup(grp1);
+  connect( btngrp, SIGNAL(clicked(int)), SLOT(buttonClicked(int)));
+  btngrp->setExclusive(true);
+  btngrp->setFrameStyle(QFrame::NoFrame);
+
+  int w = 0, h = 0;
+  QRadioButton *rbc = new QRadioButton(i18n("Colored background"), btngrp);
+  rbc->setFixedSize(rbc->sizeHint());
+  w = rbc->width();
+  h = rbc->height();
+
+  QRadioButton *rbp = new QRadioButton(i18n("Pixmap background"), btngrp);
+  rbp->setFixedSize(rbp->sizeHint());
+  if(w < rbp->width())
+    w = rbp->width();
+
+  rbc->move(5, 5);
+  rbp->move(5, 10+h);
+
+  btngrp->setFixedSize(w+10, 15+(2*h));
+
+  btngrp->insert(rbc);
+  btngrp->insert(rbp);
+
+  KButtonBox *bbox = new KButtonBox( grp1, KButtonBox::VERTICAL );
+
+  btcolor = bbox->addButton( i18n("&Color...") );
   btcolor->setFixedSize(btcolor->sizeHint());
-  connect(btcolor, SIGNAL( changed( const QColor &)),
-         SLOT( colorChanged( const QColor &)));
 
-  btbrowse = new QPushButton(i18n("Browse..."), grp);
-  btbrowse->setFixedSize(btbrowse->sizeHint());
-  connect(btbrowse, SIGNAL(clicked()), SLOT(selectPixmap()));
+  btpix = bbox->addButton( i18n("&Pixmap...") );
+  btpix->setFixedSize(btpix->sizeHint());
 
-  QBoxLayout *ml = new QVBoxLayout(this, 10);
-  ml->addWidget(grp);
-  QBoxLayout *l = new  QVBoxLayout(grp, 10, AlignLeft);
-  l->addWidget(btcolor);
-  l->addWidget(btbrowse);
+  bbox->setMaximumHeight(bbox->sizeHint().height());
 
-  l->activate();
+  connect(btcolor, SIGNAL(clicked()), SLOT(selectColor()));
+  connect(btpix, SIGNAL(clicked()), SLOT(selectPixmap()));
+
+
+  QGroupBox *grp2 = new QGroupBox(i18n("Example"), this);
+
+  lb_ex = new QLabel(grp2);
+  lb_ex->setMinimumHeight((btngrp->height()/2)*3);
+  lb_ex->setFrameStyle(QFrame::Panel|QFrame::Sunken);
+
+  QBoxLayout *ml = new QVBoxLayout(this);
+
+  QBoxLayout *l1 = new  QHBoxLayout(grp1, 20);
+  QBoxLayout *l2 = new  QVBoxLayout(grp2, 15);
+
+  l1->addWidget(btngrp, 0, AlignLeft);
+  l1->addWidget(bbox, 0, AlignLeft);
+  l2->addWidget(lb_ex);
+
+  ml->addWidget(grp1);
+  ml->addWidget(grp2, 10);
+  bbox->layout();
+  l1->activate();
+  l2->activate();
   ml->activate();
 
   debug("KBackgroundConfig - constructor done");
@@ -261,9 +304,11 @@ void KBackgroundConfig::saveSettings()
 
 }
 
-void KBackgroundConfig::colorChanged( const QColor &newcolor )
+void KBackgroundConfig::selectColor()
 {
-  setBackgroundColor(newcolor);
+  QColor c;
+  if(KColorDialog::getColor(c))
+    lb_ex->setBackgroundColor(c);
 }
 
 void KBackgroundConfig::selectPixmap()
@@ -273,7 +318,7 @@ void KBackgroundConfig::selectPixmap()
   {
     QPixmap p(path.data());
     if(!p.isNull())
-      setBackgroundPixmap(p);
+      lb_ex->setBackgroundPixmap(p);
   }
 }
 

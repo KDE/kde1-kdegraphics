@@ -28,6 +28,8 @@ KIconEditGrid::KIconEditGrid(QWidget *parent, const char *name)
 {
   initMetaObject();
 
+  selected = 0;
+
   //setBackgroundMode(NoBackground);
   //kdeColor(1);
 
@@ -384,6 +386,7 @@ void KIconEditGrid::mouseReleaseEvent( QMouseEvent *e )
         updateCell( prevSel/numCols(), prevSel%numCols(), FALSE );
         updateCell( row, col, FALSE );
       }
+
       break;
     }
     default:

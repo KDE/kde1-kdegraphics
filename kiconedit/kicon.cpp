@@ -314,6 +314,7 @@ void KIcon::saveBackup(const QImage *image, const char *filename)
 
 void KIcon::save(const QImage *image, const char *filename)
 {
+  debug("KIcon::save");
   if(kfm != 0L)
   {
     KMsgBox::message((QWidget*)parent(), i18n("Warning"),
@@ -321,7 +322,6 @@ void KIcon::save(const QImage *image, const char *filename)
     return;    
   }
 
-  debug("KIcon::save");
   if(filename == 0)
   {
     if(_url.isEmpty())
@@ -332,6 +332,7 @@ void KIcon::save(const QImage *image, const char *filename)
     else
       filename = _url.data();
   }
+
   QImage *img = (QImage*)image, *tmp;
   img->setAlphaBuffer(true);
   tmp = new QImage(img->convertDepth(8, ColorOnly|AvoidDither));
@@ -355,6 +356,20 @@ void KIcon::save(const QImage *image, const char *filename)
     KURL _turl(filename);
     if(_turl.isLocalFile())
     {
+/*
+      if(QFile::exists(filename))
+      {
+        QString msg = i18n("The file:\n");
+        msg += filename;
+        msg += i18n("\nallready exist. Overwrite it?");
+        if(!KMsgBox::yesNo((QWidget*)parent(), i18n("Information"), msg.data()) == 1)
+        {
+          removeFile(str.data());
+          delete tmp;
+          return;
+        }
+      }
+*/
       if(!copyFile(str, _turl.path()))
       {
         QString msg = i18n("There was an error creating a backup for:\n");

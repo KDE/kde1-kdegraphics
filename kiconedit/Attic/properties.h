@@ -26,13 +26,33 @@
 #include <qwidget.h>
 #include <qimage.h>
 #include <kaccel.h>
+#include <ktoolbar.h>
+#include <kmenubar.h>
 #include "knew.h"
+
+#define props(x) KIconEditProperties::getProperties(x)
+
+enum BackgroundMode { PixMap, Color };
 
 struct Properties
 {
   KAccel *keys;
   QDict<KKeyEntry> keydict;
   QList<KIconTemplate> *tlist;
+  QStrList *recentlist;
+  QString BackgroundPixmap;
+  QColor BackgroundColor;
+  BackgroundMode bgmode;
+  bool maintoolbarstat;
+  bool drawtoolbarstat;
+  bool statusbarstat;
+  bool showgrid;
+  KToolBar::BarPosition maintoolbarpos;
+  KToolBar::BarPosition drawtoolbarpos;
+  KMenuBar::menuPosition menubarpos;
+  int winwidth;
+  int winheight;
+  int gridscaling;
 };
 
 class KIconEditProperties : public QObject

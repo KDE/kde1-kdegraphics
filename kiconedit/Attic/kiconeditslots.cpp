@@ -232,8 +232,9 @@ void KIconEdit::slotSelectAll()
 void KIconEdit::slotOpenRecent(int id)
 {
   debug("Opening recent file: %d", id);
-  debug("Recent: %s", recentlist->at((uint)id));
-  icon->open(&grid->image(), recentlist->at(id));
+  Properties *pprops = props(this);
+  debug("Recent: %s", pprops->recentlist->at((uint)id));
+  icon->open(&grid->image(), pprops->recentlist->at(id));
 }
 
 void KIconEdit::slotDropEvent( KDNDDropZone * _dropZone )

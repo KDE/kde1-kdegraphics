@@ -37,17 +37,14 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
 
   kiprops = new KIconEditProperties(this);
   CHECK_PTR(kiprops);
+  Properties *pprops = props(this);
 
   menubar = 0L;
   toolbar = 0L;
   drawtoolbar = 0L;
   statusbar = 0L;
   mainview = 0L;
-  winwidth = winheight = 0;
-
-  recentlist = new QStrList(true);
-  CHECK_PTR(recentlist);
-  recentlist->setAutoDelete(true);
+  pprops->winwidth = pprops->winheight = 0;
 
   readConfig();
 
@@ -77,13 +74,13 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   QPixmap pmlogo((const char**)logo);
   viewport->viewport()->setBackgroundPixmap(pmlogo);
   viewport->setMouseTracking(true);
-  grid = new KIconEditGrid; //viewport->viewport(), 0);
+  grid = new KIconEditGrid(viewport->viewport()); //viewport->viewport(), 0);
   CHECK_PTR(grid);
   viewport->addChild(grid);
   debug("Grid created");
-  grid->setGrid(showgrid);
+  grid->setGrid(pprops->showgrid);
   debug("Grid->setGrid done");
-  grid->setCellSize(gridscaling);
+  grid->setCellSize(pprops->gridscaling);
   debug("Grid->setCellSize done");
   //toolsw->setPreview(grid->pixmap());
   setMinimumHeight(toolsw->sizeHint().height());
@@ -158,8 +155,8 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   setView(mainview);
   viewport->show();
 
-  if((winwidth > 0) && (winheight > 0))
-    resize( winwidth, winheight );
+  if((pprops->winwidth > 0) && (pprops->winheight > 0))
+    resize( pprops->winwidth, pprops->winheight );
 
   debug("Showing");
   show();
@@ -187,8 +184,6 @@ KIconEdit::~KIconEdit()
       delete newicon;
     newicon = 0L; 
 */
-    if(recentlist)
-      delete recentlist;
     if(toolbar)
       delete toolbar;
     toolbar = 0L; 
@@ -259,11 +254,11 @@ void KIconEdit::resizeEvent( QResizeEvent * )
 {
   // save size of the application window
   //debug("KIconEdit::resizeEvent()");
-  winwidth = geometry().width();
-  winheight = geometry().height();
+  props(this)->winwidth = geometry().width();
+  props(this)->winheight = geometry().height();
 
   updateRects();
-  viewport->updateScrollBars();
+  //viewport->updateScrollBars();
 }
 
 void KIconEdit::unsaved(bool flag)
@@ -294,15 +289,18 @@ void KIconEdit::readProperties(KConfig *config)
   QString entry = config->readEntry("Name", ""); // no default
   if (entry.isEmpty())
     return;
+#warning Need to fix session management opening
   //readGoingDownStatus(entry);
 }
 
 // this is always read
 void KIconEdit::readConfig()
 {
+  Properties *pprops = props(this);
+
   KConfig *config = kapp->getConfig();
   config->setGroup( "Files" );
-  int n = config->readListEntry("RecentOpen", *recentlist);
+  int n = config->readListEntry("RecentOpen", *pprops->recentlist);
   debug("Read %i recent files", n);
 
   config->setGroup( "Appearance" );
@@ -310,35 +308,37 @@ void KIconEdit::readConfig()
   // restore geometry settings
   QString geom = config->readEntry( "Geometry" );
   if ( !geom.isEmpty() )
-    sscanf( geom, "%dx%d", &winwidth, &winheight );
+    sscanf( geom, "%dx%d", &pprops->winwidth, &pprops->winheight );
 
-  maintoolbarstat = config->readBoolEntry( "ShowMainToolBar", true );
-  drawtoolbarstat = config->readBoolEntry( "ShowDrawToolBar", true );
-  statusbarstat = config->readBoolEntry( "ShowStatusBar", true );
+  pprops->maintoolbarstat = config->readBoolEntry( "ShowMainToolBar", true );
+  pprops->drawtoolbarstat = config->readBoolEntry( "ShowDrawToolBar", true );
+  pprops->statusbarstat = config->readBoolEntry( "ShowStatusBar", true );
 
-  maintoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "MainToolBarPos", KToolBar::Top);
-  drawtoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "DrawToolBarPos", KToolBar::Left);
+  pprops->maintoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "MainToolBarPos", KToolBar::Top);
+  pprops->drawtoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "DrawToolBarPos", KToolBar::Left);
   //statusbarpos = config->readNumEntry( "StatusBarPos", KStatusBar::Bottom);
-  menubarpos = (KMenuBar::menuPosition)config->readNumEntry( "MenuBarPos", KMenuBar::Top);
+  pprops->menubarpos = (KMenuBar::menuPosition)config->readNumEntry( "MenuBarPos", KMenuBar::Top);
 
   config->setGroup( "Grid" );
-  showgrid = config->readBoolEntry( "ShowGrid", true );
-  gridscaling = config->readNumEntry( "GridScaling", 10 );
+  pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
+  pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
   debug("readConfig done");
 }
 
 // this is for normal exits or request from "Options->Save options".
 void KIconEdit::writeConfig()
 {
+  Properties *pprops = props(this);
   KConfig *config = kapp->getConfig();
-  KIconEditProperties::getProperties(this)->keys->writeSettings(config);
+  pprops->keys->writeSettings(config);
   config->setGroup( "Files" );
-  config->writeEntry("RecentOpen", *recentlist);
+  debug("Writing %d recent files", pprops->recentlist->count());
+  config->writeEntry("RecentOpen", *pprops->recentlist);
 
   config->setGroup( "Appearance" );
 
   QString geom;
-  geom.sprintf( "%dx%d", winwidth, winheight );
+  geom.sprintf( "%dx%d", pprops->winwidth, pprops->winheight );
   config->writeEntry( "Geometry", geom );
 
   config->writeEntry("ShowMainToolBar", toolbar->isVisible());
@@ -372,9 +372,10 @@ KMenuBar *KIconEdit::setupMenuBar()
     setMenu(menubar);
   }
 
-  keys = KIconEditProperties::getProperties(this)->keys; // = new KAccel( this ); 
+  Properties *pprops = props(this);
+
+  KAccel *keys = pprops->keys; // = new KAccel( this ); 
   CHECK_PTR(keys);
-  debug("setupMenuBar - pprops ok");
 
   keys->connectItem( KAccel::New, this, SLOT(slotNew()) );
   keys->connectItem( KAccel::Save , this, SLOT(slotSave()) );
@@ -395,8 +396,8 @@ KMenuBar *KIconEdit::setupMenuBar()
   recent = new QPopupMenu;
   CHECK_PTR(recent);
   connect( recent, SIGNAL(activated(int)), SLOT(slotOpenRecent(int)));
-  for(uint i = 0; i < recentlist->count(); i++)
-    recent->insertItem(recentlist->at(i));
+  for(uint i = 0; i < pprops->recentlist->count(); i++)
+    recent->insertItem(pprops->recentlist->at(i));
 
   int id;
 
@@ -494,16 +495,16 @@ KMenuBar *KIconEdit::setupMenuBar()
   id = options->insertItem(i18n("&Configure"), ID_OPTIONS_CONFIGURE);
   options->insertSeparator();
   options->insertItem(i18n("Toggle &Grid"), ID_OPTIONS_TOGGLE_GRID);
-  if(showgrid)
+  if(pprops->showgrid)
     options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, true);
   options->insertItem(i18n("Toggle &toolbar"), ID_OPTIONS_TOGGLE_TOOL1);
-  if(maintoolbarstat)
+  if(pprops->maintoolbarstat)
     options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL1, true);
   options->insertItem(i18n("Toggle &drawing tools"), ID_OPTIONS_TOGGLE_TOOL2);
-  if(drawtoolbarstat)
+  if(pprops->drawtoolbarstat)
     options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL2, true);
   options->insertItem(i18n("Toggle &statusbar"), ID_OPTIONS_TOGGLE_STATS);
-  if(statusbarstat)
+  if(pprops->statusbarstat)
     options->setItemChecked(ID_OPTIONS_TOGGLE_STATS, true);
   options->insertSeparator();
   options->insertItem(Icon("filefloppy.xpm"), i18n("&Save options"), ID_OPTIONS_SAVE);
@@ -514,7 +515,7 @@ KMenuBar *KIconEdit::setupMenuBar()
   help = kapp->getHelpMenu(true,ABOUTSTR);
   menubar->insertItem(i18n("&Help"), help);
 
-  menubar->setMenuBarPos(menubarpos);
+  menubar->setMenuBarPos(pprops->menubarpos);
   menubar->show();
   //connect( menubar, SIGNAL(activated(int)), SLOT(slotActions(int)));
 
@@ -524,6 +525,7 @@ KMenuBar *KIconEdit::setupMenuBar()
 
 KToolBar *KIconEdit::setupToolBar()
 {
+  Properties *pprops = props(this);
   debug("setupToolBar");
   toolbar = new KToolBar(this);
   CHECK_PTR(toolbar);
@@ -565,15 +567,15 @@ KToolBar *KIconEdit::setupToolBar()
   toolbar->insertButton(Icon("grid.xpm"),ID_OPTIONS_TOGGLE_GRID, TRUE, 
 			  i18n("Toggle grid"));
   toolbar->setToggle(ID_OPTIONS_TOGGLE_GRID, true);
-  if(showgrid)
+  if(pprops->showgrid)
     ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(true);
 
   toolbar->insertButton(Icon("newwin.xpm"),ID_FILE_NEWWIN,
          SIGNAL(clicked()), this, SLOT(slotNewWin()), TRUE, i18n("New Window"));
   toolbar->alignItemRight( ID_FILE_NEWWIN, true);
     
-  toolbar->setBarPos(maintoolbarpos);
-  if(maintoolbarstat)
+  toolbar->setBarPos(pprops->maintoolbarpos);
+  if(pprops->maintoolbarstat)
     toolbar->enable(KToolBar::Show);
   else
     toolbar->enable(KToolBar::Hide);
@@ -589,6 +591,7 @@ KToolBar *KIconEdit::setupToolBar()
 KToolBar *KIconEdit::setupDrawToolBar()
 {
   debug("setupDrawToolBar");
+  Properties *pprops = props(this);
   drawtoolbar = new KToolBar(this);
   CHECK_PTR(drawtoolbar);
   addToolBar(drawtoolbar);
@@ -621,8 +624,8 @@ KToolBar *KIconEdit::setupDrawToolBar()
   drawtoolbar->insertButton(Icon("eraser.xpm"),ID_DRAW_ERASE, TRUE, i18n("Erase"));
   drawtoolbar->setToggle(ID_DRAW_ERASE, true);
     
-  drawtoolbar->setBarPos(drawtoolbarpos);
-  if(drawtoolbarstat)
+  drawtoolbar->setBarPos(pprops->drawtoolbarpos);
+  if(pprops->drawtoolbarstat)
     drawtoolbar->enable(KToolBar::Show);
   else
     drawtoolbar->enable(KToolBar::Hide);
@@ -635,6 +638,7 @@ KToolBar *KIconEdit::setupDrawToolBar()
 
 KStatusBar *KIconEdit::setupStatusBar()
 {
+  Properties *pprops = props(this);
   statusbar = new KStatusBar(this);
   CHECK_PTR(statusbar);
   setStatusBar(statusbar);
@@ -644,7 +648,7 @@ KStatusBar *KIconEdit::setupStatusBar()
   statusbar->insertItem("Colors:       ", 3);
   statusbar->insertItem("", 4);
 
-  if(statusbarstat)
+  if(pprops->statusbarstat)
     statusbar->enable(KStatusBar::Show);
   else
     statusbar->enable(KStatusBar::Hide);
@@ -654,23 +658,24 @@ KStatusBar *KIconEdit::setupStatusBar()
 
 void KIconEdit::addRecent(const char *filename)
 {
+  Properties *pprops = props(this);
   //debug("addRecent - checking %s", filename);
-  if(filename && strlen(filename) == 0 || recentlist->contains(filename))
+  if(filename && strlen(filename) == 0 || pprops->recentlist->contains(filename))
     return;
   //debug("addRecent - adding %s", filename);
 
-  if( recentlist->count() < 5)
-    recentlist->insert(0,filename);
+  if( pprops->recentlist->count() < 5)
+    pprops->recentlist->insert(0,filename);
   else
   {
-    recentlist->remove(4);
-    recentlist->insert(0,filename);
+    pprops->recentlist->remove(4);
+    pprops->recentlist->insert(0,filename);
   }
 
   recent->clear();
 
-  for ( int i = 0 ;i < (int)recentlist->count(); i++)
-    recent->insertItem(recentlist->at(i));
+  for ( int i = 0 ;i < (int)pprops->recentlist->count(); i++)
+    recent->insertItem(pprops->recentlist->at(i));
 
   file->setItemEnabled(ID_FILE_RECENT, true);
   //debug("addRecent - done");

@@ -96,7 +96,7 @@ public:
   ~KBackgroundConfig();
 
 public slots:
-  void colorChanged( const QColor &newcolor );
+  void selectColor();
   void selectPixmap();
 
 signals:
@@ -106,8 +106,9 @@ protected slots:
 
 protected:
   Properties *pprops;
-  KColorButton *btcolor;
-  QPushButton *btbrowse;
+  QPushButton *btpix, *btcolor;
+  QLabel *lb_ex;
+  QButtonGroup *btngrp;
 };
 
 

@@ -176,21 +176,19 @@ private:
   KToolBar *toolbar, *drawtoolbar;
   KStatusBar *statusbar;
   QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent;
-  bool maintoolbarstat, drawtoolbarstat, statusbarstat, showgrid;
-  KToolBar::BarPosition maintoolbarpos, drawtoolbarpos;
-  KMenuBar::menuPosition menubarpos;
-  int winwidth, winheight, gridscaling;
+  //bool maintoolbarstat, drawtoolbarstat, statusbarstat, showgrid;
+  //KToolBar::BarPosition maintoolbarpos, drawtoolbarpos;
+  //KMenuBar::menuPosition menubarpos;
+  //int winwidth, winheight, gridscaling;
   KIconEditGrid *grid;
   KIconToolsView *toolsw;
   QWidget *mainview;
   QBoxLayout *l;
   QTimer *msgtimer;
-  QStrList *recentlist;
   QScrollView *viewport;
   //QwViewport *viewport;
   KIcon *icon;
   KDNDDropZone *dropzone;
-  KAccel *keys;
   KIconEditProperties *kiprops;
 };
 

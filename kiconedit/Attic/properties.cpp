@@ -1,5 +1,5 @@
 /*
-    KDE Draw - a small graphics drawing program for the KDE
+    KDE Icon Editor - a small graphics drawing program for the KDE
     Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
 
     This program is free software; you can redistribute it and/or
@@ -35,12 +35,38 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   debug("KIconEditProperties: Creating templates");
 
   pprops = new struct Properties;
+
+  pprops->recentlist = new QStrList(true);
+  CHECK_PTR(pprops->recentlist);
+  pprops->recentlist->setAutoDelete(true);
+
   pprops->keys = new KAccel(parent);
 
-/*
-  KConfig *k = kapp->getConfig();
-  k->setGroup("Templates");
-*/
+  KConfig *config = kapp->getConfig();
+
+  config->setGroup( "Files" );
+  int n = config->readListEntry("RecentOpen", *pprops->recentlist);
+  debug("Read %i recent files", n);
+
+  config->setGroup( "Appearance" );
+
+  // restore geometry settings
+  QString geom = config->readEntry( "Geometry" );
+  if ( !geom.isEmpty() )
+    sscanf( geom, "%dx%d", &pprops->winwidth, &pprops->winheight );
+
+  pprops->maintoolbarstat = config->readBoolEntry( "ShowMainToolBar", true );
+  pprops->drawtoolbarstat = config->readBoolEntry( "ShowDrawToolBar", true );
+  pprops->statusbarstat = config->readBoolEntry( "ShowStatusBar", true );
+
+  pprops->maintoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "MainToolBarPos", KToolBar::Top);
+  pprops->drawtoolbarpos = (KToolBar::BarPosition)config->readNumEntry( "DrawToolBarPos", KToolBar::Left);
+  //statusbarpos = config->readNumEntry( "StatusBarPos", KStatusBar::Bottom);
+  pprops->menubarpos = (KMenuBar::menuPosition)config->readNumEntry( "MenuBarPos", KMenuBar::Top);
+
+  config->setGroup( "Grid" );
+  pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
+  pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
 }
 
 KIconEditProperties::~KIconEditProperties()
@@ -50,6 +76,8 @@ KIconEditProperties::~KIconEditProperties()
   if(instances == 0)
   {
     debug("KIconEditProperties: Deleting properties");
+    if(pprops->recentlist)
+      delete pprops->recentlist;
     delete pprops;
     debug("KIconEditProperties: Deleted properties");
   }
