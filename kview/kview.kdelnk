@@ -17,6 +17,7 @@ Comment[fi]=KDE Kuvanäyttäjä
 Comment[sk]=Prehliadaè obrázkových súborov
 Comment[pt]=Visualizador de Imagens
 Comment[pt_BR]=Visualizador de Imagens
+Comment[ro]=Program de vizualizat imagini în diverse formate
 MimeType=image/gif;image/x-xpm;image/x-xbm;image/jpeg;
 Name=Image Viewer
 Name[fr]=Visualiseur d'images
@@ -27,4 +28,4 @@ Name[fi]=Kuvannäyttäjä
 Name[sk]=Prehliadaè obrázkov
 Name[pt]=Visualizador de Imagens
 Name[pt_BR]=Visualizador de Imagens
-
+Name[ro]=Vizualizor de imagini

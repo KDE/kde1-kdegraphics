@@ -34,7 +34,7 @@ libtif_a_SOURCES  = 	\
 	tif_write.c \
 	tif_zip.c 
 
-DISTCLEANFILES = ./.deps/* ./.deps/.P
+DISTCLEANFILES = ./.deps/* ./.deps/.P mkg3states
 
 #
 # The finite state machine tables used by the G3/G4 decoders
