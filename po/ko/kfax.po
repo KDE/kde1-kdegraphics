@@ -172,7 +172,7 @@ msgstr "\"%s\"에 인쇄할 수 없음\n"
 #: kfax.cpp:1023
 #, c-format
 msgid "Couldn't create %s\n"
-msgstr "%s 만들 수 없음"
+msgstr "%s 만들 수 없음\n"
 
 #: kfax.cpp:1093
 msgid "Saving ..."
