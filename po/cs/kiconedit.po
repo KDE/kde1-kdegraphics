@@ -5,30 +5,40 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-10-24 23:21 CEST\n"
+"POT-Creation-Date: 1998-10-26 11:00+0100\n"
+"PO-Revision-Date: 1998-10-28 19:46 CET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: utils.cpp:57
+#: utils.cpp:65
 #, c-format
 msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Nastala chyba pøi otevírání cílového souboru: %s"
 
 #: utils.cpp:72
 #, c-format
+msgid "copyFile - There was an error reading source file: %s"
+msgstr "copyFile - Nastala chyba pøi ètení zdrojového souboru: %s"
+
+#: utils.cpp:80
+#, c-format
+msgid "copyFile - There was an error writing to destination file: %s"
+msgstr "copyFile - Nastala chyba pøi zapisování cílového souboru: %s"
+
+#: utils.cpp:93
+#, c-format
 msgid "copyFile - There was an error opening source file: %s"
 msgstr "copyFile - Nastala chyba pøi otevírání zdrojového souboru: %s"
 
-#: utils.cpp:84
+#: utils.cpp:105
 #, c-format
 msgid "removeFile - There was an error removing the file: %s"
 msgstr "removeFile - Nastala chyba pøi mazaní souboru: %s"
 
-#: kiconedit.cpp:233 kiconeditslots.cpp:60 kiconeditslots.cpp:119
+#: kiconedit.cpp:238 kiconeditslots.cpp:62 kiconeditslots.cpp:121
 msgid ""
 "The current file has been modified.\n"
 "Do you want to save it?"
@@ -36,247 +46,235 @@ msgstr ""
 "Souèasný soubor byl zmìnený.\n"
 "Pøejete si jej ulo¾it?"
 
-#: kiconedit.cpp:367
+#: kiconedit.cpp:372
 msgid "Select All"
 msgstr "Vybrat v¹e"
 
-#: kiconedit.cpp:385
+#: kiconedit.cpp:390
 msgid "New &Window"
 msgstr "Nové &okno"
 
-#: kiconedit.cpp:390
-msgid "&New..."
-msgstr "&Nový..."
-
-#: kiconedit.cpp:396
+#: kiconedit.cpp:401
 msgid "Open recent"
 msgstr "Otevøít nedávný"
 
-#: kiconedit.cpp:417
+#: kiconedit.cpp:422
 msgid "&Exit"
 msgstr "Uko&nèit"
 
-#: kiconedit.cpp:425
+#: kiconedit.cpp:430
 msgid "Cu&t"
 msgstr "Vys&tøihnout"
 
-#: kiconedit.cpp:434
+#: kiconedit.cpp:439
 msgid "Paste as &new"
 msgstr "Vlo¾it jako &nový"
 
-#: kiconedit.cpp:437
+#: kiconedit.cpp:442
 msgid "Clea&r"
 msgstr "Smaz&at"
 
-#: kiconedit.cpp:441
+#: kiconedit.cpp:446
 msgid "Select &all"
 msgstr "Vybrat &v¹e"
 
-#: kiconedit.cpp:448
+#: kiconedit.cpp:453
 msgid "1:1"
 msgstr "1:1"
 
-#: kiconedit.cpp:449
+#: kiconedit.cpp:454
 msgid "1:5"
 msgstr "1:5"
 
-#: kiconedit.cpp:450
+#: kiconedit.cpp:455
 msgid "1:10"
 msgstr "1:10"
 
-#: kiconedit.cpp:455
+#: kiconedit.cpp:460
 msgid "Zoom &in"
 msgstr "Zvìt¹&it"
 
-#: kiconedit.cpp:456
+#: kiconedit.cpp:461
 msgid "Zoom &out"
 msgstr "Zme&n¹it"
 
-#: kiconedit.cpp:457
+#: kiconedit.cpp:462
 msgid "Zoom factor"
 msgstr "Faktor zvìt¹ení"
 
-#: kiconedit.cpp:464
+#: kiconedit.cpp:469
 msgid "&Resize"
 msgstr "&Zmìnit velikost"
 
-#: kiconedit.cpp:466
+#: kiconedit.cpp:471
 msgid "&GrayScale"
 msgstr "O&dstíny ¹edi"
 
-#: kiconedit.cpp:471
+#: kiconedit.cpp:476
 msgid "&Icon"
 msgstr "&Ikona"
 
-#: kiconedit.cpp:475
+#: kiconedit.cpp:480
 msgid "Freehand"
 msgstr "Volná ruka"
 
-#: kiconedit.cpp:476
+#: kiconedit.cpp:481
 msgid "Rectangle"
 msgstr "Pravoúhelník"
 
-#: kiconedit.cpp:477
+#: kiconedit.cpp:482
 msgid "Filled rectangle"
 msgstr "Vyplnìný pravoúhelník"
 
-#: kiconedit.cpp:478
+#: kiconedit.cpp:483
 msgid "Circle"
 msgstr "Kru¾nice"
 
-#: kiconedit.cpp:479
+#: kiconedit.cpp:484
 msgid "Filled circle"
 msgstr "Vyplnìná kru¾nice"
 
-#: kiconedit.cpp:480
+#: kiconedit.cpp:485
 msgid "Ellipse"
 msgstr "Elipsa"
 
-#: kiconedit.cpp:481
+#: kiconedit.cpp:486
 msgid "Filled ellipse"
 msgstr "Vyplnìná elipsa"
 
-#: kiconedit.cpp:482 kiconedit.cpp:680
+#: kiconedit.cpp:487 kiconedit.cpp:685
 msgid "Spray"
 msgstr "Sprej"
 
-#: kiconedit.cpp:483 kiconedit.cpp:682
+#: kiconedit.cpp:488 kiconedit.cpp:687
 msgid "Flood fill"
 msgstr "Výplò"
 
-#: kiconedit.cpp:484
+#: kiconedit.cpp:489
 msgid "Line"
 msgstr "Èára"
 
-#: kiconedit.cpp:485
+#: kiconedit.cpp:490
 msgid "Eraser (Transparent)"
 msgstr "Guma (Transparentní)"
 
-#: kiconedit.cpp:488
+#: kiconedit.cpp:493
 msgid "&Tools"
 msgstr "&Nástroje"
 
-#: kiconedit.cpp:492
+#: kiconedit.cpp:497
 msgid "&Configure"
 msgstr "&Nastavení"
 
-#: kiconedit.cpp:494
+#: kiconedit.cpp:499
 msgid "Toggle &Grid"
 msgstr "Zobrazovat/nezob&razovat møí¾ku"
 
-#: kiconedit.cpp:497
+#: kiconedit.cpp:502
 msgid "Toggle &toolbar"
 msgstr "Zobrazovat/nezobrazovat li¹tu nás&trojù"
 
-#: kiconedit.cpp:500
+#: kiconedit.cpp:505
 msgid "Toggle &drawing tools"
 msgstr "Zobrazovat/nezobrazovat &kreslící nástroje"
 
-#: kiconedit.cpp:503
+#: kiconedit.cpp:508
 msgid "Toggle &statusbar"
 msgstr "Zobrazovat/nezobrazat stavový øádek"
 
-#: kiconedit.cpp:507
+#: kiconedit.cpp:512
 msgid "&Save options"
 msgstr "&Ulo¾it nastavení"
 
-#: kiconedit.cpp:563
+#: kiconedit.cpp:568
 msgid "What is ...?"
 msgstr "Co je ...?"
 
-#: kiconedit.cpp:572
+#: kiconedit.cpp:577
 msgid "Drag source"
 msgstr "Pøetáhnout zdroj"
 
-#: kiconedit.cpp:577
+#: kiconedit.cpp:582
 msgid "New File"
 msgstr "Nový soubor"
 
-#: kiconedit.cpp:581
+#: kiconedit.cpp:586
 msgid "Save the file"
 msgstr "Ulo¾it soubor"
 
-#: kiconedit.cpp:584
+#: kiconedit.cpp:589
 msgid "Print icon"
 msgstr "Vytisknout ikonu"
 
-#: kiconedit.cpp:599
+#: kiconedit.cpp:604
 msgid "Select area"
 msgstr "Vybrat oblast"
 
-#: kiconedit.cpp:605
+#: kiconedit.cpp:610
 msgid "Resize"
 msgstr "Zmìnit velikost"
 
-#: kiconedit.cpp:608
+#: kiconedit.cpp:613
 msgid "GrayScale"
 msgstr "Odstíny ¹edi"
 
-#: kiconedit.cpp:615
+#: kiconedit.cpp:620
 msgid "Zoom out"
 msgstr "Zmen¹it"
 
-#: kiconedit.cpp:618
+#: kiconedit.cpp:623
 msgid "Zoom in"
 msgstr "Zvìt¹it"
 
-#: kiconedit.cpp:622
+#: kiconedit.cpp:627
 msgid "Toggle grid"
 msgstr "Pøepnout møí¾ku"
 
-#: kiconedit.cpp:633
+#: kiconedit.cpp:638
 msgid "New Window"
 msgstr "Nové okno"
 
-#: kiconedit.cpp:661
+#: kiconedit.cpp:666
 msgid "Find pixel"
 msgstr "Najít bod"
 
-#: kiconedit.cpp:663
+#: kiconedit.cpp:668
 msgid "Draw freehand"
 msgstr "Kreslit volnou rukou"
 
-#: kiconedit.cpp:666
+#: kiconedit.cpp:671
 msgid "Draw line"
 msgstr "Kreslit èáru"
 
-#: kiconedit.cpp:668
+#: kiconedit.cpp:673
 msgid "Draw rectangle"
 msgstr "Kreslit pravoúhelník"
 
-#: kiconedit.cpp:670
+#: kiconedit.cpp:675
 msgid "Draw filled rectangle"
 msgstr "Kreslit vyplnìný pravoúhelník"
 
-#: kiconedit.cpp:672
+#: kiconedit.cpp:677
 msgid "Draw circle"
 msgstr "Kreslit kru¾nici"
 
-#: kiconedit.cpp:674
+#: kiconedit.cpp:679
 msgid "Draw filled circle"
 msgstr "Kreslit vyplnìnou kru¾nici"
 
-#: kiconedit.cpp:676
+#: kiconedit.cpp:681
 msgid "Draw ellipse"
 msgstr "Kreslit elipsu"
 
-#: kiconedit.cpp:678
+#: kiconedit.cpp:683
 msgid "Draw filled ellipse"
 msgstr "Kreslit vyplnenou elipsu"
 
-#: kiconedit.cpp:685
+#: kiconedit.cpp:690
 msgid "Erase"
 msgstr "Smazat"
 
-#: kiconedit.cpp:708
-msgid "System Colors"
-msgstr "Systémové barvy"
-
-#: kiconedit.cpp:738
-msgid "Custom Colors"
-msgstr "Vlastní barvy"
-
-#: kiconedit.cpp:779
+#: kiconedit.cpp:784
 msgid ""
 "Icon draw grid\n"
 "\n"
@@ -287,9 +285,11 @@ msgid ""
 msgstr ""
 "Møí¾ka kreslení ikon\n"
 "\n"
-"Møí¾ka kreslení ikon je oblast, kde mù¾ete kreslit ikonky. Mù¾ete si ji zvìt¹ovat a zmen¹ovat lupou na li¹tì nástrojù. (Tip: Pøid¾te tlaèítko zvìt¹ení na pár sekund a dostanete se na pøeddefinovanou velikost.)"
+"Møí¾ka kreslení ikon je oblast, kde mù¾ete kreslit ikonky. Mù¾ete si ji "
+"zvìt¹ovat a zmen¹ovat lupou na li¹tì nástrojù. (Tip: Pøid¾te tlaèítko "
+"zvìt¹ení na pár sekund a dostanete se na pøeddefinovanou velikost.)"
 
-#: kiconedit.cpp:784
+#: kiconedit.cpp:789
 msgid ""
 "Rulers\n"
 "\n"
@@ -299,7 +299,7 @@ msgstr ""
 "\n"
 "Toto je vizuální reprezentace aktuální pozice kurzoru"
 
-#: kiconedit.cpp:788
+#: kiconedit.cpp:793
 msgid ""
 "Statusbar\n"
 "\n"
@@ -314,7 +314,8 @@ msgid ""
 msgstr ""
 "Stavový øádek\n"
 "\n"
-"Stavový øádek vám poskytuje informace o stavu aktuální ikonky. Má následující polo¾ky :\n"
+"Stavový øádek vám poskytuje informace o stavu aktuální ikonky. Má "
+"následující polo¾ky :\n"
 "\n"
 "\t- Pozice kurzoru\n"
 "\t- Velikost\n"
@@ -322,7 +323,7 @@ msgstr ""
 "\t- Poèet barev\n"
 "\t- Zprávy aplikace"
 
-#: kiconedit.cpp:797
+#: kiconedit.cpp:802
 msgid ""
 "Preview\n"
 "\n"
@@ -332,7 +333,7 @@ msgstr ""
 "\n"
 "Toto je náhled aktuální ikony ve skuteèné velikosti"
 
-#: kiconedit.cpp:800
+#: kiconedit.cpp:805
 msgid ""
 "System colors\n"
 "\n"
@@ -342,7 +343,7 @@ msgstr ""
 "\n"
 "Zde je mo¾né zvolit barvy z palety barev pro ikony KDE."
 
-#: kiconedit.cpp:803
+#: kiconedit.cpp:808
 msgid ""
 "Custom colors\n"
 "\n"
@@ -354,7 +355,7 @@ msgstr ""
 "Zde mù¾ete vytvoøit paletu vlastních barev.\n"
 "Staèí dvojklik na ètvereèek, aby jste upravili barvu"
 
-#: kiconedit.cpp:809
+#: kiconedit.cpp:814
 msgid ""
 "New\n"
 "\n"
@@ -364,7 +365,7 @@ msgstr ""
 "\n"
 "Vytvoøí novou ikonu buï ze ¹ablony nebo specifikovaním velikosti"
 
-#: kiconedit.cpp:812
+#: kiconedit.cpp:817
 msgid ""
 "Open\n"
 "\n"
@@ -374,7 +375,7 @@ msgstr ""
 "\n"
 "Otevøe existující ikonu"
 
-#: kiconedit.cpp:815
+#: kiconedit.cpp:820
 msgid ""
 "Save\n"
 "\n"
@@ -384,7 +385,7 @@ msgstr ""
 "\n"
 "Ulo¾í aktuální ikonu"
 
-#: kiconedit.cpp:818
+#: kiconedit.cpp:823
 msgid ""
 "Print\n"
 "\n"
@@ -393,9 +394,10 @@ msgid ""
 msgstr ""
 "Tisk\n"
 "\n"
-"Otevøe dialog, kterým mù¾ete vytisknout aktuální ikonu. (Nefunguje tak, jak by se èekalo)"
+"Otevøe dialog, kterým mù¾ete vytisknout aktuální ikonu. (Nefunguje tak, jak "
+"by se èekalo)"
 
-#: kiconedit.cpp:822
+#: kiconedit.cpp:827
 msgid ""
 "Cut\n"
 "\n"
@@ -409,7 +411,7 @@ msgstr ""
 "\n"
 "(Tip: Mù¾ete provádìt jak pravoúhelníkové tak kruhové oznaèení)"
 
-#: kiconedit.cpp:826
+#: kiconedit.cpp:831
 msgid ""
 "Copy\n"
 "\n"
@@ -423,7 +425,7 @@ msgstr ""
 "\n"
 "(Tip: Mù¾ete provádìt jak pravoúhelníkové tak kruhové oznaèení)"
 
-#: kiconedit.cpp:830
+#: kiconedit.cpp:835
 msgid ""
 "Paste\n"
 "\n"
@@ -439,9 +441,11 @@ msgstr ""
 "\n"
 "Vlo¾í obsah schránky do aktuální ikony.\n"
 "\n"
-"P pøípadì, ¾e je obsah vìt¹í ne¾ aktuální ikona, mù¾ete ji vlo¾it do nového okna. (Tip: Zvotte \"Vlo¾it transparentní body\" v konfiguraèním dialogu, v pøípadì, ¾e chcete té¾ vkládat transparentnì)"
+"P pøípadì, ¾e je obsah vìt¹í ne¾ aktuální ikona, mù¾ete ji vlo¾it do nového "
+"okna. (Tip: Zvotte \"Vlo¾it transparentní body\" v konfiguraèním dialogu, v "
+"pøípadì, ¾e chcete té¾ vkládat transparentnì)"
 
-#: kiconedit.cpp:837
+#: kiconedit.cpp:842
 msgid ""
 "Select\n"
 "\n"
@@ -455,7 +459,7 @@ msgstr ""
 "\n"
 "(Tip: Mù¾ete provádìt jak pravoúhelníkové tak kruhové oznaèení)"
 
-#: kiconedit.cpp:841
+#: kiconedit.cpp:846
 msgid ""
 "Resize\n"
 "\n"
@@ -465,7 +469,7 @@ msgstr ""
 "\n"
 "Zmìní velikost ikony, ale sna¾í se zachovat obsah"
 
-#: kiconedit.cpp:844
+#: kiconedit.cpp:849
 msgid ""
 "Gray scale\n"
 "\n"
@@ -474,9 +478,10 @@ msgid ""
 msgstr ""
 "Odstíny ¹edi\n"
 "\n"
-"Pøemapuje souèasnou ikonu do odstínù ¹edi. (Varovaní: Výsledek bude pravdìpodobnì obsahovat barvy, které se nevyskytují v paletì barev)."
+"Pøemapuje souèasnou ikonu do odstínù ¹edi. (Varovaní: Výsledek bude "
+"pravdìpodobnì obsahovat barvy, které se nevyskytují v paletì barev)."
 
-#: kiconedit.cpp:848
+#: kiconedit.cpp:853
 msgid ""
 "Zoom out\n"
 "\n"
@@ -488,9 +493,10 @@ msgstr ""
 "\n"
 "Zmen¹í aktuální ikonu.\n"
 "\n"
-"(Tip: Kdy¾ podr¾íte tlaèítko stisknuté trochu déle, zmìní se stupnice na pøeddefinovanou hodnotu)"
+"(Tip: Kdy¾ podr¾íte tlaèítko stisknuté trochu déle, zmìní se stupnice na "
+"pøeddefinovanou hodnotu)"
 
-#: kiconedit.cpp:852
+#: kiconedit.cpp:857
 msgid ""
 "Zoom in\n"
 "\n"
@@ -502,9 +508,10 @@ msgstr ""
 "\n"
 "Zvìt¹í aktuální ikonu.\n"
 "\n"
-"(Tip: Kdy¾ podr¾íte tlaèítko stisknuté trochu déle, zmìní se stupnice na pøeddefinovanou hodnotu)"
+"(Tip: Kdy¾ podr¾íte tlaèítko stisknuté trochu déle, zmìní se stupnice na "
+"pøeddefinovanou hodnotu)"
 
-#: kiconedit.cpp:856
+#: kiconedit.cpp:861
 msgid ""
 "Toggle grid\n"
 "\n"
@@ -514,7 +521,7 @@ msgstr ""
 "\n"
 "Vypne nebo zapne møí¾ku v editoru ikon"
 
-#: kiconedit.cpp:859
+#: kiconedit.cpp:864
 msgid ""
 "New window\n"
 "\n"
@@ -524,7 +531,7 @@ msgstr ""
 "\n"
 "Otevøe nové okno editoru ikon."
 
-#: kiconedit.cpp:862
+#: kiconedit.cpp:867
 msgid ""
 "Whats is...?\n"
 "\n"
@@ -534,7 +541,7 @@ msgstr ""
 "\n"
 "Vzhledem k tomu, ¾e ètete tyto øádky, jste na to pøi¹li ;-))"
 
-#: kiconedit.cpp:865
+#: kiconedit.cpp:870
 msgid ""
 "Drag source\n"
 "\n"
@@ -546,11 +553,12 @@ msgid ""
 msgstr ""
 "Pøetáhnout zdroj\n"
 "\n"
-"Z tohoto tlaèítka mù¾ete presunout kopii souèasné ikony a pustit ji na okénko, které podporuje drag&drop, napø. dal¹í Editor Ikon.\n"
+"Z tohoto tlaèítka mù¾ete presunout kopii souèasné ikony a pustit ji na "
+"okénko, které podporuje drag&drop, napø. dal¹í Editor Ikon.\n"
 "\n"
 "(Pozor: Je tu pou¾itý QT XDND protokol, který je¹te není v KDE standardní)"
 
-#: kiconedit.cpp:873
+#: kiconedit.cpp:878
 msgid ""
 "Free hand\n"
 "\n"
@@ -560,7 +568,7 @@ msgstr ""
 "\n"
 "Kreslí nelineární èáry"
 
-#: kiconedit.cpp:876
+#: kiconedit.cpp:881
 msgid ""
 "Flood fill\n"
 "\n"
@@ -570,7 +578,7 @@ msgstr ""
 "\n"
 "Vyplní body se stejnou barvou aktuální barvou"
 
-#: kiconedit.cpp:879
+#: kiconedit.cpp:884
 msgid ""
 "Rectangle\n"
 "\n"
@@ -580,7 +588,7 @@ msgstr ""
 "\n"
 "Nakreslí pravoúhelník"
 
-#: kiconedit.cpp:882
+#: kiconedit.cpp:887
 msgid ""
 "Filled rectangle\n"
 "\n"
@@ -590,7 +598,7 @@ msgstr ""
 "\n"
 "Nakreslí vyplnìný pravoúhelník"
 
-#: kiconedit.cpp:885
+#: kiconedit.cpp:890
 msgid ""
 "Circle\n"
 "\n"
@@ -600,7 +608,7 @@ msgstr ""
 "\n"
 "Nakreslí kru¾nici"
 
-#: kiconedit.cpp:888
+#: kiconedit.cpp:893
 msgid ""
 "Filled circle\n"
 "\n"
@@ -610,7 +618,7 @@ msgstr ""
 "\n"
 "Nakreslí vyplnìnou kru¾nici"
 
-#: kiconedit.cpp:891
+#: kiconedit.cpp:896
 msgid ""
 "Ellipse\n"
 "\n"
@@ -620,7 +628,7 @@ msgstr ""
 "\n"
 "Nakreslí elipsu"
 
-#: kiconedit.cpp:894
+#: kiconedit.cpp:899
 msgid ""
 "Filled ellipse\n"
 "\n"
@@ -630,7 +638,7 @@ msgstr ""
 "\n"
 "Nakreslí vyplnìnou elipsu"
 
-#: kiconedit.cpp:897
+#: kiconedit.cpp:902
 msgid ""
 "Line\n"
 "\n"
@@ -640,7 +648,7 @@ msgstr ""
 "\n"
 "Nakreslí rovnou èáru vertikálnì, horizontálnì nebo pod 45 stupòovým úhlem"
 
-#: kiconedit.cpp:900
+#: kiconedit.cpp:905
 msgid ""
 "Spray\n"
 "\n"
@@ -650,7 +658,7 @@ msgstr ""
 "\n"
 "Vybarví náhodnì nìkteré body stejnou barvou"
 
-#: kiconedit.cpp:903
+#: kiconedit.cpp:908
 msgid ""
 "Find\n"
 "\n"
@@ -660,7 +668,7 @@ msgstr ""
 "\n"
 "Barva bodu, na který se klikne bude barvou kreslení"
 
-#: kiconedit.cpp:906
+#: kiconedit.cpp:911
 msgid ""
 "Erase\n"
 "\n"
@@ -673,29 +681,30 @@ msgstr ""
 "\n"
 "Sma¾e body. Nastaví body na transparentní barvu\n"
 "\n"
-"(Tip: Chcete-li kreslit transparentní barvou s jiným nástrojem, kliknìte nejprve na \"Mazání\" a potom na nástroj, který chcete pou¾ít)"
+"(Tip: Chcete-li kreslit transparentní barvou s jiným nástrojem, kliknìte "
+"nejprve na \"Mazání\" a potom na nástroj, který chcete pou¾ít)"
 
-#: kicongrid.cpp:651
+#: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
 msgstr "Nastala chyba pøi naèítání prázdneho obrázku.\n"
 
-#: kicongrid.cpp:789
+#: kicongrid.cpp:830
 msgid "All selected"
 msgstr "V¹e oznaèené"
 
-#: kicongrid.cpp:800
+#: kicongrid.cpp:841
 msgid "Cleared"
 msgstr "Smazané"
 
-#: kicongrid.cpp:842
+#: kicongrid.cpp:883
 msgid "Selected area cutted"
 msgstr "Oznaèená oblast vystøihnuta"
 
-#: kicongrid.cpp:845
+#: kicongrid.cpp:886
 msgid "Selected area copied"
 msgstr "Oznaèená oblast zkopírována"
 
-#: kicongrid.cpp:923
+#: kicongrid.cpp:964
 msgid ""
 "There was an copying:\n"
 "to the clipboard!"
@@ -703,7 +712,7 @@ msgstr ""
 "Bylo provedeno kopírování:\n"
 "do schránky!"
 
-#: kicongrid.cpp:944
+#: kicongrid.cpp:985
 msgid ""
 "The clipboard image is larger than the current image!\n"
 "Paste as new image?"
@@ -711,31 +720,23 @@ msgstr ""
 "Obrázek ve schránce je vìt¹í ne¾ souèasný obrázek!\n"
 "Vlo¾it jako nový obrázek?"
 
-#: kicongrid.cpp:957
+#: kicongrid.cpp:998
 msgid "Pasting"
 msgstr "Vkládám"
 
-#: kicongrid.cpp:989 kicongrid.cpp:1016
+#: kicongrid.cpp:1030 kicongrid.cpp:1057
 msgid "Done pasting"
 msgstr "Vlo¾eno"
 
-#: kicongrid.cpp:994 kicongrid.cpp:1020
+#: kicongrid.cpp:1035 kicongrid.cpp:1061
 msgid "Invalid pixmap data in clipboard!\n"
 msgstr "Chybné data pixmapy ve schránce!\n"
 
-#: kiconfiledlg.cpp:37
-msgid "Open image"
-msgstr "Otevøít obrázek"
-
-#: kiconfiledlg.cpp:51
-msgid "Save image As"
-msgstr "Ulo¾it obrázek jako"
-
-#: kicon.cpp:47
+#: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
 msgstr "Nastala chyba pøi mazání doèasného zálo¾ního souboru:\n"
 
-#: kicon.cpp:73 kicon.cpp:241 kicon.cpp:321 kicon.cpp:424
+#: kicon.cpp:74 kicon.cpp:258 kicon.cpp:342 kicon.cpp:445
 msgid ""
 "We've got a KFM job running.\n"
 "Please wait."
@@ -743,30 +744,44 @@ msgstr ""
 "U¾ be¾í úloha v KFM.\n"
 "Prosím èekejte."
 
-#: kicon.cpp:96
+#: kicon.cpp:97
 msgid "The URL:\n"
 msgstr "URL:\n"
 
-#: kicon.cpp:99 kicon.cpp:145 kicon.cpp:168 kicon.cpp:180 kicon.cpp:193
-#: kicon.cpp:206 kicon.cpp:217 kicon.cpp:378 kicon.cpp:411
+#: kicon.cpp:99
+msgid ""
+"\n"
+"seems to be malformed.\n"
+msgstr "\nmá asi chybný formát.\n"
+
+#: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
+#: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
 msgid "ERROR"
 msgstr "CHYBA"
 
-#: kicon.cpp:115
+#: kicon.cpp:116
 msgid "The KDE Icon Editor has found a recover file for:\n"
 msgstr "Editor ikon KDE na¹el zálo¾ní soubor pro:\n"
 
-#: kicon.cpp:117 kicon.cpp:264
+#: kicon.cpp:118 kicon.cpp:285
 msgid ""
 "\n"
 "Do you want to open this?"
-msgstr "\nChcete toto otevøít?"
+msgstr ""
+"\n"
+"Chcete toto otevøít?"
 
-#: kicon.cpp:142
+#: kicon.cpp:143
 msgid "The file:\n"
 msgstr "Soubor:\n"
 
-#: kicon.cpp:159
+#: kicon.cpp:145
+msgid ""
+"\n"
+"doesn't exist or isn't readable.\n"
+msgstr "\nneexistuje nebo nelze pøeèíst.\n"
+
+#: kicon.cpp:160
 msgid ""
 "The Icon Editor is already downloading a non-local file.\n"
 "Please wait.\n"
@@ -774,49 +789,57 @@ msgstr ""
 "Editor ikon ji¾ pøená¹í vzdálený soubor.\n"
 "Prosím èekejte.\n"
 
-#: kicon.cpp:169
+#: kicon.cpp:170
 msgid "Couldn't initiate KFM!"
 msgstr "Není mo¾né inicializovat KFM!"
 
-#: kicon.cpp:177
+#: kicon.cpp:178
 msgid "There was a KFM error creating a backup for:\n"
 msgstr "Nastala chyba KFM pøi vytváøení zálohy pro:\n"
 
-#: kicon.cpp:190 kicon.cpp:375
+#: kicon.cpp:191 kicon.cpp:396
 msgid "There was an error creating a backup for:\n"
 msgstr "Nastala chyba pøi vytváøení zálohy pro:\n"
 
-#: kicon.cpp:203
+#: kicon.cpp:204
 msgid "KIcon: There was a error locking:\n"
 msgstr "KIcon: Chyba pøi uzamykání:\n"
 
-#: kicon.cpp:214 kicon.cpp:270
+#: kicon.cpp:215 kicon.cpp:291
 msgid "KIcon: There was a QT error loading:\n"
 msgstr "KIcon: Nastala chyba QT pøi nahrávání:\n"
 
-#: kicon.cpp:262
+#: kicon.cpp:261
+msgid ""
+"*|All files (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF files (*.gif)\n"
+"*jpg|JPEG files (*.jpg)\n"
+msgstr ""
+"*|V¹echny soubory (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF soubory (*.gif)\n"
+"*jpg|JPEG soubory (*.jpg)\n"
+
+#: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
 msgstr "Editor ikon KDE na¹el opravný soubor\n"
 
-#: kicon.cpp:263
+#: kicon.cpp:284
 msgid "file for an unsaved icon."
 msgstr "pro neulo¾enou ikonu."
 
-#: kicon.cpp:388
+#: kicon.cpp:409
 msgid "Couldn't initiate KFM"
 msgstr "Není mo¾né inicializovat KFM"
 
-#: kicon.cpp:401
+#: kicon.cpp:422
 msgid "Done saving"
 msgstr "Ulo¾eno"
 
-#: kicon.cpp:408
+#: kicon.cpp:429
 msgid "There was an error saving:\n"
 msgstr "Nastala chyba pøi ukladání:\n"
-
-#: kresize.cpp:29
-msgid "Size:"
-msgstr "Velikost:"
 
 #: kresize.cpp:64
 msgid "Select size:"
@@ -870,11 +893,15 @@ msgstr "Vybrat typ ikony"
 msgid "Create new icon"
 msgstr "Vytvoøit novou ikonu"
 
-#: kiconeditslots.cpp:394
+#: debug.cpp:20
+msgid "Fatal!"
+msgstr "Fatální!"
+
+#: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."
 msgstr "Lituji - funkce není implementována."
 
-#: kiconeditslots.cpp:462 kiconeditslots.cpp:469
+#: kiconeditslots.cpp:471 kiconeditslots.cpp:478
 #, c-format
 msgid "Colors: %u"
 msgstr "Barvy: %u"
@@ -995,3 +1022,20 @@ msgstr "&Panely nástrojù"
 msgid "Icon grid"
 msgstr "Møí¾ka ikony"
 
+#~ msgid "&New..."
+#~ msgstr "&Nový..."
+
+#~ msgid "System Colors"
+#~ msgstr "Systémové barvy"
+
+#~ msgid "Custom Colors"
+#~ msgstr "Vlastní barvy"
+
+#~ msgid "Open image"
+#~ msgstr "Otevøít obrázek"
+
+#~ msgid "Save image As"
+#~ msgstr "Ulo¾it obrázek jako"
+
+#~ msgid "Size:"
+#~ msgstr "Velikost:"

@@ -5,211 +5,232 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
-"POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-10-24 23:40 CEST\n"
+"POT-Creation-Date: 1998-10-26 11:00+0100\n"
+"PO-Revision-Date: 1998-10-28 19:41 CET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:80
 msgid "no image loaded"
 msgstr "nebyl naèten ¾ádný soubor"
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:88 viewer.cpp:589
 msgid "Ready"
 msgstr "Pøipravený"
 
-#: viewer.cpp:186
+#: viewer.cpp:207
 msgid "Net saving not yet implemented"
 msgstr "Sí»ové ukladaní není implementováno"
 
-#: viewer.cpp:194
+#: viewer.cpp:215
 #, c-format
 msgid "%s: written"
 msgstr "%s: zapsaný"
 
-#: viewer.cpp:232
+#: viewer.cpp:253
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Zadejte faktor zvìt¹ení (100 = 1x):"
 
-#: viewer.cpp:236
+#: viewer.cpp:257
 msgid "Illegal zoom factor"
 msgstr "Nedovolený faktor zmìny velikosti"
 
-#: viewer.cpp:285
+#: viewer.cpp:306
 msgid "About KView"
 msgstr "Informace o KView"
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:315 viewer.cpp:333
 msgid "&Zoom"
 msgstr "&Zvìt¹it"
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:316 viewer.cpp:334
 msgid "&Transform"
 msgstr "&Transformovat"
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:317 viewer.cpp:335
 msgid "To &Desktop"
 msgstr "Na &plochu"
 
-#: viewer.cpp:297
+#: viewer.cpp:319
 msgid "Fi&lter"
 msgstr "Fi&ltr"
 
-#: viewer.cpp:314
+#: viewer.cpp:337
 msgid "F&ilter"
 msgstr "F&iltr"
 
-#: viewer.cpp:318
+#: viewer.cpp:341
 msgid "&Images"
 msgstr "O&brázky"
 
-#: viewer.cpp:333
-msgid "&Open.."
-msgstr "&Otevøít.."
-
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:360
+msgid "&Save As..."
 msgstr "&Ulo¾it jako.."
 
-#: viewer.cpp:340
+#: viewer.cpp:368
 msgid "&Full Screen"
 msgstr "&Celá obrazovka"
 
-#: viewer.cpp:343
+#: viewer.cpp:371
+msgid "&Crop"
+msgstr "&Oøíznout"
+
+#: viewer.cpp:374
+msgid "&Reset"
+msgstr "&Obnovit"
+
+#: viewer.cpp:379
 msgid "&Zoom..."
 msgstr "&Zvìt¹it..."
 
-#: viewer.cpp:344
+#: viewer.cpp:381
+#, c-format
 msgid "Zoom &in 10%"
 msgstr "Zvìt¹it &o 10%"
 
-#: viewer.cpp:345
+#: viewer.cpp:383
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Zmen¹&it o 10%"
 
-#: viewer.cpp:346
+#: viewer.cpp:385
 msgid "&Double size"
 msgstr "&Dvojnásobná velikost"
 
-#: viewer.cpp:347
+#: viewer.cpp:387
 msgid "&Half size"
 msgstr "&Polovièní velikost"
 
-#: viewer.cpp:349
-msgid "&Reset"
-msgstr "&Obnovit"
+#: viewer.cpp:389
+msgid "&Max size"
+msgstr "&Maximální velikost"
 
-#: viewer.cpp:352
+#: viewer.cpp:391
+msgid "Max/&aspect"
+msgstr "Max/a&spect"
+
+#: viewer.cpp:396
 msgid "Rotate &clockwise"
 msgstr "Rotovat ve &smìru hod. ruèièek"
 
-#: viewer.cpp:354
+#: viewer.cpp:398
 msgid "Rotate &anti-clockwise"
 msgstr "Rotovat prot&i smìru hod. ruèièek"
 
-#: viewer.cpp:357
+#: viewer.cpp:400
 msgid "Flip &vertical"
 msgstr "Pøevrátit &vertikálnì"
 
-#: viewer.cpp:359
+#: viewer.cpp:402
 msgid "Flip &horizontal"
 msgstr "Pøevrátit &horizontálnì"
 
-#: viewer.cpp:362
+#: viewer.cpp:407
 msgid "&Tile"
 msgstr "Vytapetov&at"
 
-#: viewer.cpp:363
+#: viewer.cpp:408
 msgid "&Max"
 msgstr "&Max"
 
-#: viewer.cpp:364
+#: viewer.cpp:409
 msgid "Max&pect"
 msgstr "Max&pect"
 
-#: viewer.cpp:367
-msgid "&List.."
-msgstr "&Seznam.."
+#: viewer.cpp:412
+msgid "&List..."
+msgstr "&Seznam..."
 
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr "&Pøedchádzejíci"
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr "&Následující"
-
-#: viewer.cpp:374
+#: viewer.cpp:421
 msgid "&Slideshow On/Off"
 msgstr "&Promítání Zapnout/Vypnout"
 
-#: viewer.cpp:379
-msgid "&About KView.."
-msgstr "&Informace o KView"
+#: viewer.cpp:426
+msgid "&About KView..."
+msgstr "&Informace o aplikaci KView"
 
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:473 viewer.cpp:480
 msgid "Existing transfer not yet complete."
 msgstr "Existující pøenos je¹tì není úplný."
 
-#: viewer.cpp:447
+#: viewer.cpp:494
 msgid "Couldn't get temporary transfer name."
 msgstr "Není mo¾né získat doèasné jméno pøenosu."
 
-#: viewer.cpp:486
+#: viewer.cpp:533
 msgid "Transfer error: "
 msgstr "Chyba pøenosu: "
 
-#: viewer.cpp:558
-msgid "Loading.."
-msgstr "Nahrávám.."
+#: viewer.cpp:607
+msgid "Loading..."
+msgstr "Nahrávám..."
 
-#: colour.cpp:29
+#: viewer.cpp:809
+msgid "Printing..."
+msgstr "Tisknu..."
+
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
+msgstr "Vlo¾te faktor zesvìtlení (%):"
+
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
+msgstr "Faktor zesvìtlení musí být kladný"
+
+#: colour.cpp:44
 msgid "Brightening..."
 msgstr "Zesvìtluji..."
 
-#: colour.cpp:43
+#: colour.cpp:58
 msgid "Intensity:Brighten"
 msgstr "Intenzita:Zesvìtlit"
 
-#: colour.cpp:63
+#: colour.cpp:78
 msgid "Darkening..."
 msgstr "Ztmavuji..."
 
-#: colour.cpp:76
+#: colour.cpp:91
 msgid "Intensity:Darken"
 msgstr "Intenzita:Ztmavit"
 
-#: colour.cpp:114
+#: colour.cpp:132
 msgid "Converting to Greyscale..."
 msgstr "Konvertuji do odstínù ¹edi..."
 
-#: colour.cpp:143
+#: colour.cpp:161
 msgid "Greyscale"
 msgstr "Odstíny ¹edi"
 
-#: colour.cpp:161
+#: colour.cpp:179
 msgid "Smoothing..."
 msgstr "Vyhlazuji..."
 
-#: colour.cpp:227
+#: colour.cpp:245
 msgid "Smooth"
 msgstr "Vyhladit"
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
-msgstr "Zadajte hodnotu gamma (0...1):"
+#: colour.cpp:266
+msgid "Enter gamma value ( >0 ):"
+msgstr "Zadajte hodnotu gamma ( >0 ):"
 
-#: colour.cpp:254
+#: colour.cpp:269
+msgid "Bad Gamma value"
+msgstr "Chybna hodnota Gamma"
+
+#: colour.cpp:275
 msgid "Gamma-correcting..."
 msgstr "Koriguji gamma faktor..."
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
-msgstr "Gamma korekce"
+#: colour.cpp:328
+msgid "Intensity:Gamma Correct..."
+msgstr "Intenzita:Gamma korekce"
+
+#: colour.cpp:342
+msgid "External.."
+msgstr "Externí.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -251,3 +272,11 @@ msgstr "&Spustit promítání"
 msgid "Time between slides (sec):"
 msgstr "Èas mezi políèky (sek):"
 
+#~ msgid "&Open.."
+#~ msgstr "&Otevøít.."
+
+#~ msgid "&Previous"
+#~ msgstr "&Pøedchádzejíci"
+
+#~ msgid "&Next"
+#~ msgstr "&Následující"
