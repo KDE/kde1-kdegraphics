@@ -94,16 +94,19 @@ extern  Cursor MoveCursor;
 extern  Cursor LRCursor;
 extern  Cursor UDCursor;
 
-extern have_no_fax;
+extern bool have_no_fax;
 extern Display* qtdisplay ;
 extern Window  qtwin;
 extern Window Win;
-extern qwindow_width;
-extern qwindow_height;
+extern int qwindow_width;
+extern int qwindow_height;
 
 extern void setstatusbarmem(int);
 extern void setfaxtitle(char*);
-extern "C" kfaxerror(char*, char*);
+extern "C"
+{
+  static void kfaxerror(char*, char*);
+}
 
 struct pagenode *firstpage, *lastpage, *thispage, *helppage, *auxpage;
 struct pagenode defaultpage;
