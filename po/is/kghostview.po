@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-11-04 10:50-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -63,7 +63,8 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
-"\nÞetta forrit er frítt.  Þú mátt dreifa því og/eða breyta skv.\n"
+"\n"
+"Þetta forrit er frítt.  Þú mátt dreifa því og/eða breyta skv.\n"
 "skilmálum GNU höfundaréttarleyfisins (General Public License)\n"
 "eins og það er gefið út af Samtökum um Fríann Hugbúnað (FSF).\n"
 "Þér er frjálst að nota útgáfu 2 eða síðar af þessu leyfi.\n"
@@ -205,11 +206,11 @@ msgstr "Prenta skjal í ö&fugri röð"
 msgid "&Setup ..."
 msgstr "&Uppsetning..."
 
-#: print.cpp:289
+#: print.cpp:290
 msgid "Range error"
 msgstr "Síðuspanvilla"
 
-#: print.cpp:290
+#: print.cpp:291
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -233,25 +234,25 @@ msgstr "&Grein"
 msgid "&Page"
 msgstr "&Bls"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2225
-#: kghostview.cpp:2237 kghostview.cpp:2242 kghostview.cpp:2525
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2229
+#: kghostview.cpp:2241 kghostview.cpp:2246 kghostview.cpp:2529
 #, c-format
 msgid "of %d"
 msgstr "af %d"
 
-#: kghostview.cpp:1221 kghostview.cpp:2316 viewcontrol.cpp:64
+#: kghostview.cpp:1221 kghostview.cpp:2320 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Skammsnið"
 
-#: kghostview.cpp:1223 kghostview.cpp:2322 viewcontrol.cpp:65
+#: kghostview.cpp:1223 kghostview.cpp:2326 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Langsnið"
 
-#: kghostview.cpp:1225 kghostview.cpp:2320 viewcontrol.cpp:66
+#: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "Sjósnið"
 
-#: kghostview.cpp:1227 kghostview.cpp:2318 viewcontrol.cpp:67
+#: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "Á hvolfi"
 
@@ -276,8 +277,9 @@ msgid "Usage: "
 msgstr "Notkun: "
 
 #: main.cpp:27
+#, fuzzy
 msgid ""
-" [filename] [switches]\n"
+" [filename] [siwtches]\n"
 "\n"
 msgstr ""
 " [skráarnafn] [rofar]\n"
@@ -357,6 +359,11 @@ msgstr "Stilla þýðanda"
 
 #: kghostview.cpp:444
 msgid "New"
+msgstr "Nýtt"
+
+#: kghostview.cpp:498
+#, fuzzy
+msgid "&New"
 msgstr "Nýtt"
 
 #: kghostview.cpp:500
@@ -614,7 +621,7 @@ msgstr ""
 "Höf.  : Mark Donohoe\n"
 "Póstur: donohoe@kde.org"
 
-#: kghostview.cpp:1569 kghostview.cpp:1685
+#: kghostview.cpp:1569 kghostview.cpp:1689
 msgid "Error printing"
 msgstr "Villa í prentun"
 
@@ -638,12 +645,18 @@ msgstr ""
 "Þú gafst ekki upp neitt nafn fyrir\n"
 "þetta skjal þannig að ekkert var prentað.\n"
 
-#: kghostview.cpp:1650
+#: kghostview.cpp:1633
+msgid ""
+"Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
+"to be taken into account."
+msgstr ""
+
+#: kghostview.cpp:1654
 #, c-format
 msgid "Print failure : %s"
 msgstr "Prentvilla : %s"
 
-#: kghostview.cpp:1686
+#: kghostview.cpp:1690
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -651,36 +664,36 @@ msgstr ""
 "Prentun brást vegna þess að engar\n"
 "blaðsíður voru valdar til prentunar.\n"
 
-#: kghostview.cpp:2219 kghostview.cpp:2231 kghostview.cpp:2496
-#: kghostview.cpp:2519
+#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2500
+#: kghostview.cpp:2523
 msgid "of 1    "
 msgstr "af 1    "
 
-#: kghostview.cpp:2221 kghostview.cpp:2233 kghostview.cpp:2521
+#: kghostview.cpp:2225 kghostview.cpp:2237 kghostview.cpp:2525
 #, c-format
 msgid "of %d    "
 msgstr "af %d    "
 
-#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2523
-#: kghostview.cpp:2530
+#: kghostview.cpp:2227 kghostview.cpp:2239 kghostview.cpp:2527
+#: kghostview.cpp:2534
 #, c-format
 msgid "of %d  "
 msgstr "af %d  "
 
-#: kghostview.cpp:2495
+#: kghostview.cpp:2499
 msgid "Sc.1 "
 msgstr "Nr. 1"
 
-#: kghostview.cpp:2498
+#: kghostview.cpp:2502
 msgid "P.1 "
 msgstr "Bls. 1"
 
-#: kghostview.cpp:2500 kghostview.cpp:2513
+#: kghostview.cpp:2504 kghostview.cpp:2517
 #, c-format
 msgid "P.%d "
 msgstr "Bls.%d "
 
-#: kghostview.cpp:2515
+#: kghostview.cpp:2519
 #, c-format
 msgid "Sc.%d "
 msgstr "Nr. %d"

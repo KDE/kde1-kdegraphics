@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-1-04 10:45-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -91,7 +91,8 @@ msgid "Zoom &out"
 msgstr "Renna &frá"
 
 #: kfax.cpp:433
-msgid "&Fax Options"
+#, fuzzy
+msgid "&Fax Options..."
 msgstr "&Fax stillingar"
 
 #: kfax.cpp:435
@@ -203,7 +204,6 @@ msgstr ""
 "á netinu klári sitt starf.\n"
 "Hinkraðu við á meðan\n"
 
-
 #: kfax.cpp:1151 kfax.cpp:1215
 msgid "Could not communicate with KFM"
 msgstr "Samskipti við skráarstjórann (KFM) eru í ólagi"
@@ -245,6 +245,13 @@ msgid ""
 msgstr ""
 "Þessi skrá er til nú þegar.\n"
 "Viltu skrifa yfir hana?\n"
+
+#: faxinput.cpp:111
+#, c-format
+msgid ""
+"Unable to open:\n"
+"%s\n"
+msgstr ""
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-11-04 10:38-0500\n"
 "Last-Translator: Thorarinn R. Einarsson <thori@mindspring.com>\n"
 "Language-Team: Icelandic <kde-isl@mmedia.is>\n"
@@ -87,6 +87,10 @@ msgstr "Endurteikna"
 msgid "Preferences ..."
 msgstr "Stillingar..."
 
+#: kdvi.cpp:175
+msgid "&New"
+msgstr ""
+
 #: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Opna..."
@@ -118,6 +122,15 @@ msgstr "&Fylla á breidd"
 #: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Endurteikna síðu"
+
+#: kdvi.cpp:205
+#, fuzzy
+msgid "&Previous"
+msgstr "Fyrri síðu"
+
+#: kdvi.cpp:206
+msgid "&Next"
+msgstr ""
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -386,7 +399,8 @@ msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "PK-letur sem vantar verða skráð í 'missfont.log'"
 
 #: kdvi.cpp:732
-msgid "Postscript specials are rendered"
+#, fuzzy
+msgid "Postcsript specials are rendered"
 msgstr "Postscript víðteiknað"
 
 #: kdvi.cpp:733

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
-"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"POT-Creation-Date: 1998-10-16 15:20+0200\n"
 "PO-Revision-Date: 1998-11-04 10:55-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -14,190 +14,255 @@ msgstr ""
 "Content-Type: text/plain; charset=iso8859-1\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:74
+#: viewer.cpp:77
 msgid "no image loaded"
 msgstr "engin mynd hlaðin"
 
-#: viewer.cpp:82 viewer.cpp:491
+#: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
 msgstr "Tilbúin"
 
-#: viewer.cpp:237
+#: viewer.cpp:186
+msgid "Net saving not yet implemented"
+msgstr ""
+
+#: viewer.cpp:194
+#, c-format
+msgid "%s: written"
+msgstr ""
+
+#: viewer.cpp:232
+msgid "Enter Zoom factor (100 = 1x):"
+msgstr ""
+
+#: viewer.cpp:236
+msgid "Illegal zoom factor"
+msgstr ""
+
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "Um KView"
 
-#: viewer.cpp:245 viewer.cpp:262
+#: viewer.cpp:293 viewer.cpp:310
 msgid "&Zoom"
 msgstr "&Renna að/frá"
 
-#: viewer.cpp:246 viewer.cpp:263
+#: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
 msgstr "&Umbreyta"
 
-#: viewer.cpp:247 viewer.cpp:264
+#: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
 msgstr "Yfir á skjá&borð"
 
-#: viewer.cpp:249
+#: viewer.cpp:297
 msgid "Fi&lter"
 msgstr "Sí&a"
 
-#: viewer.cpp:266
+#: viewer.cpp:314
 msgid "F&ilter"
 msgstr "&Sía"
 
-#: viewer.cpp:270
+#: viewer.cpp:318
 msgid "&Images"
 msgstr "&Myndir"
 
-#: viewer.cpp:285
+#: viewer.cpp:333
 msgid "&Open.."
 msgstr "&Opna.."
 
-#: viewer.cpp:286
+#: viewer.cpp:334
 msgid "&Save As.."
 msgstr "&Vista sem.."
 
-#: viewer.cpp:292
+#: viewer.cpp:340
 msgid "&Full Screen"
 msgstr "Útvíða &sýn"
 
-#: viewer.cpp:295
+#: viewer.cpp:343
+#, fuzzy
+msgid "&Zoom..."
+msgstr "&Renna að/frá"
+
+#: viewer.cpp:344
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "Renna &að 10%"
 
-#: viewer.cpp:296
+#: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Renna &frá 10%"
 
-#: viewer.cpp:297
-#, c-format
-msgid "&Zoom in 50%"
-msgstr "&Renna að 50%"
+#: viewer.cpp:346
+msgid "&Double size"
+msgstr ""
 
-#: viewer.cpp:298
-#, c-format
-msgid "Zoo&m out 50%"
-msgstr "Re&nna frá 50%"
+#: viewer.cpp:347
+msgid "&Half size"
+msgstr ""
 
-#: viewer.cpp:300
+#: viewer.cpp:349
 msgid "&Reset"
 msgstr "&Endurheimta"
 
-#: viewer.cpp:303
+#: viewer.cpp:352
 msgid "Rotate &clockwise"
 msgstr "Snúa ré&ttsælis"
 
-#: viewer.cpp:305
+#: viewer.cpp:354
 msgid "Rotate &anti-clockwise"
 msgstr "Snúa r&angsælis"
 
-#: viewer.cpp:308
+#: viewer.cpp:357
 msgid "Flip &vertical"
 msgstr "Snúa á hvol&f"
 
-#: viewer.cpp:310
+#: viewer.cpp:359
 msgid "Flip &horizontal"
 msgstr "Snúa á hli&ð"
 
-#: viewer.cpp:313
+#: viewer.cpp:362
 msgid "&Tile"
 msgstr "&Flísaleggja"
 
-#: viewer.cpp:314
+#: viewer.cpp:363
 msgid "&Max"
 msgstr "&Hámark"
 
-#: viewer.cpp:315
+#: viewer.cpp:364
 msgid "Max&pect"
 msgstr "Max&pect"
 
-#: viewer.cpp:318
+#: viewer.cpp:367
 msgid "&List.."
 msgstr "&Fá lista.."
 
-#: viewer.cpp:325
+#: viewer.cpp:371
+#, fuzzy
+msgid "&Previous"
+msgstr "Fyrri"
+
+#: viewer.cpp:372
+#, fuzzy
+msgid "&Next"
+msgstr "Næsta"
+
+#: viewer.cpp:374
 msgid "&Slideshow On/Off"
 msgstr "&Skyggnusýning af/á"
 
-#: viewer.cpp:330
+#: viewer.cpp:379
 msgid "&About KView.."
 msgstr "&Um KView.."
 
-#: viewer.cpp:377 viewer.cpp:384
+#: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
 msgstr "Færslan er ekki búin"
 
-#: viewer.cpp:398
+#: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
 msgstr "Vantar nafn."
 
-#: viewer.cpp:503
+#: viewer.cpp:486
+#, fuzzy
+msgid "Transfer error: "
+msgstr "&Umbreyta"
+
+#: viewer.cpp:558
 msgid "Loading.."
 msgstr "Sæki.."
 
-#: colour.cpp:23
-msgid "Brightening.."
+#: colour.cpp:29
+#, fuzzy
+msgid "Brightening..."
 msgstr "Birta.."
 
-#: colour.cpp:37
+#: colour.cpp:43
 msgid "Intensity:Brighten"
 msgstr "Styrkleiki:Birta"
 
-#: colour.cpp:53
-msgid "Darkening.."
+#: colour.cpp:63
+#, fuzzy
+msgid "Darkening..."
 msgstr "Dekki.."
 
-#: colour.cpp:66
+#: colour.cpp:76
 msgid "Intensity:Darken"
 msgstr "Styrkleiki:Dekkja"
 
-#: colour.cpp:100
-msgid "Converting to Greyscale.."
+#: colour.cpp:114
+#, fuzzy
+msgid "Converting to Greyscale..."
 msgstr "Breyti í grátóna.."
 
-#: colour.cpp:129
+#: colour.cpp:143
 msgid "Greyscale"
 msgstr "Grátónar"
 
-#: colour.cpp:143
-msgid "Smoothing.."
+#: colour.cpp:161
+#, fuzzy
+msgid "Smoothing..."
 msgstr "Mýki.."
 
-#: colour.cpp:209
+#: colour.cpp:227
 msgid "Smooth"
 msgstr "Mýkja"
 
-#: ilistdlg.cpp:53
+#: colour.cpp:248
+msgid "Enter gamma value (0...1):"
+msgstr ""
+
+#: colour.cpp:254
+msgid "Gamma-correcting..."
+msgstr ""
+
+#: colour.cpp:305
+msgid "Gamma Correct..."
+msgstr ""
+
+#: ilistdlg.cpp:57
 msgid "Prev"
 msgstr "Fyrri"
 
-#: ilistdlg.cpp:57
+#: ilistdlg.cpp:61
 msgid "Shu&ffle"
 msgstr "Sto&kka"
 
-#: ilistdlg.cpp:62
+#: ilistdlg.cpp:66
 msgid "Next"
 msgstr "Næsta"
 
-#: ilistdlg.cpp:66
+#: ilistdlg.cpp:70
 msgid "Start slide"
 msgstr "Byrja á glæru"
 
-#: ilistdlg.cpp:71
+#: ilistdlg.cpp:75
+msgid "Interval.."
+msgstr ""
+
+#: ilistdlg.cpp:80
 msgid "Loop"
 msgstr "Í hring"
 
-#: ilistdlg.cpp:79
+#: ilistdlg.cpp:94
 msgid "Image List"
 msgstr "Myndalisti"
 
-#: ilistdlg.cpp:256
+#: ilistdlg.cpp:268
 msgid "Stop &slide"
 msgstr "Stöðva glæru"
 
-#: ilistdlg.cpp:264
+#: ilistdlg.cpp:276
 msgid "Start &slide"
 msgstr "Byrja á &glæru"
+
+#: ilistdlg.cpp:339
+msgid "Time between slides (sec):"
+msgstr ""
+
+#~ msgid "&Zoom in 50%"
+#~ msgstr "&Renna að 50%"
+
+#~ msgid "Zoo&m out 50%"
+#~ msgstr "Re&nna frá 50%"
