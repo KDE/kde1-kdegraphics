@@ -224,15 +224,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " verzia "
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -290,7 +286,7 @@ msgstr "Sprej"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: manager.cpp:81
 msgid "Area Select"
