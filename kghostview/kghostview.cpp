@@ -53,7 +53,7 @@
 
 #include <kapp.h>
 #include <kiconloader.h>
-
+#include <kfiledialog.h>
 #include <kmsgbox.h>
 
 #include <klocale.h>
@@ -63,6 +63,7 @@ extern "C" {
 }
 
 #include "kkeydialog.h"
+#include "zoom.h"
 
 #include "kghostview.moc"
 #include "marklist.moc"
@@ -82,11 +83,6 @@ KGhostview::KGhostview( QWidget *, char *name )
     // I ususally forget to do a few resulting in nasty seg. faults !
     
     kfm = 0L;
-	
-	ga = new KGlobalAccel();
-	ga->insertItem( "Wag the dog", "CTRL+SHIFT+W");
-	ga->connectItem( "Wag the dog", this, SLOT( openNewFile() ) );
-	ga->readSettings();
 	
 	isNetFile = false;
     
@@ -214,7 +210,7 @@ KGhostview::KGhostview( QWidget *, char *name )
 	//
 	
 	vc = new ViewControl( 0 , "view control" );
-	vc->setCaption(i18n("View Control"));
+	vc->setCaption(i18n("Page Setup"));
 	connect(vc, SIGNAL( applyChanges() ), this, SLOT( applyViewChanges() ));
 	
 	// Build the combo box menu for magnification steps.
@@ -499,6 +495,9 @@ void KGhostview::createMenubar()
 	m_file->insertItem( i18n("Open &recent"),	m_recent );
 	closeID =
     m_file->insertItem( i18n("&Close"), this, SLOT( closeWindow() ) );
+	m_file->insertSeparator();
+	redisplayID =
+	m_file->insertItem( i18n("&Reload"), this, SLOT( redisplay() ) );
     m_file->insertSeparator();
 	pgsetupID =
 	m_file->insertItem( i18n("Page Set&up ..."), this, SLOT( viewControl() ) );
@@ -515,12 +514,10 @@ void KGhostview::createMenubar()
 	zoomOutID =
 	m_view->insertItem( i18n("Zoom &out"), this, SLOT( zoomOut() ) );
 	viewControlID =
-	m_view->insertItem( i18n("&Zoom ..."), this, SLOT( viewControl() ) );
+	m_view->insertItem( i18n("&Zoom ..."), this, SLOT( zoom() ) );
 	m_view->insertSeparator();
 	//shrinkWrapID = 
 	//m_view->insertItem( i18n("&Fit to page width"), this, SLOT( shrinkWrap() ) );
-	redisplayID =
-	m_view->insertItem( i18n("&Redisplay"), this, SLOT( redisplay() ) );
 	infoID =
 	m_view->insertItem( i18n("&Info ..."), this, SLOT( info() ) );
 
@@ -666,6 +663,9 @@ void KGhostview::createToolbar()
 	pixmap = kapp->getIconLoader()->loadIcon( "fileopen.xpm" );
 	toolbar->insertButton(pixmap, ID_OPEN, TRUE, i18n("Open file ..."));
 	
+	pixmap = kapp->getIconLoader()->loadIcon( "reload.xpm" );
+	toolbar->insertButton(pixmap, ID_RELOAD, FALSE, i18n("Reload"));
+	
 	toolbar->insertSeparator();
 	
 	pixmap = kapp->getIconLoader()->loadIcon( "fileprint.xpm" );
@@ -678,15 +678,7 @@ void KGhostview::createToolbar()
 	
 	pixmap = kapp->getIconLoader()->loadIcon( "viewmag-.xpm" );
 	toolbar->insertButton(pixmap, ID_ZOOM_OUT, FALSE, i18n("Zoom out"));
-	
-	pixmap = kapp->getIconLoader()->loadIcon( "viewzoom.xpm" );
-	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
 
-	toolbar->insertSeparator();
-	
-	pixmap = kapp->getIconLoader()->loadIcon( "reload.xpm" );
-	toolbar->insertButton(pixmap, ID_RELOAD, FALSE, i18n("Reload"));
-	
 	toolbar->insertSeparator();
 	
 	pixmap = kapp->getIconLoader()->loadIcon( "back.xpm" );
@@ -983,15 +975,15 @@ void KGhostview::setName()
 	QString s( kapp->getCaption() );
 	
 	if( psfile ) {	
-		s += " - ";
+		s.prepend(" - ");
 		if ( isNetFile ) {
 			int cutoff = netFile.findRev( "/", netFile.length() );
 			if ( cutoff != -1 ) 
-				s += netFile.right( netFile.length() - 1 - cutoff );
+				s.prepend(netFile.right( netFile.length() - 1 - cutoff ));
 			else
-				s += netFile;
+				s.prepend(netFile);
 		} else
-			s += QFileInfo( filename ).fileName();
+			s.prepend(QFileInfo( filename ).fileName());
 	}
 	QWidget::setCaption( s );
 }
@@ -1134,9 +1126,6 @@ void KGhostview::toolbarClicked( int item )
 		case ID_ZOOM_OUT:
   			zoomOut();
   			break;
-  		case ID_ZOOM:
-  			viewControl();
-  			break;
 		case ID_NEW:
   			newWindow();
   			break;
@@ -1261,6 +1250,7 @@ void KGhostview::applyViewChanges()
     if (layout_changed) {
 		page->layout();
 		show_page(current_page);
+		shrinkWrap();
 	}
 }
 
@@ -1337,6 +1327,29 @@ void KGhostview::zoomOut()
 	}
 }
 
+void KGhostview::zoom()
+{
+	char temp_text[20];
+	
+	int magfac = (int)(100*page->xdpi/default_xdpi);
+	
+	Zoom z( &magfac );
+	z.setCaption( i18n( "Zoom" ) );
+	if( z.exec() ) {
+		page->disableInterpreter();
+		changed = True;
+		page->xdpi= default_xdpi*magfac/100.0;
+		page->ydpi= default_ydpi*magfac/100.0;
+		page->layout();
+		page->resize(page->width(), page->height());
+		page->repaint();
+		sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
+		statusbar->changeItem( temp_text, ID_MAGSTEP );
+		show_page(current_page);
+		shrinkWrap();
+	}
+}
+
 void KGhostview::nextPage()
 {
     //printf("KGhostview::nextPage\n");
@@ -1401,11 +1414,13 @@ void KGhostview::openNewFile()
 {
     //printf("KGhostview::openNewFile\n");
 	
-	QString dir;
-	if ( filename )
-		dir = QFileInfo( filename ).dirPath();	
+	QString d;
+	if ( filename && psfile )
+		d.sprintf( QFileInfo( filename ).dirPath() );
+	else
+		d.sprintf( QDir::currentDirPath() );
 	
-	QString s = QFileDialog::getOpenFileName( dir, "*.*ps*", this);
+	QString s = KFileDialog::getOpenFileName( d.data(), "*.ps *.eps *.pdf");
 	if ( s.isNull() )
 		return;
     
@@ -1420,7 +1435,7 @@ void KGhostview::optionsMenuActivated( int item )
     //printf("item= %d\n", item);
 
 	switch (item){
-  		case ID_ANTIALIAS:
+  		/*case ID_ANTIALIAS:
   			if(page->intConfig->antialias) {
   				page->intConfig->antialias = FALSE;
   				m_options->changeItem(i18n("Turn antialiasing on"), item);
@@ -1441,7 +1456,7 @@ void KGhostview::optionsMenuActivated( int item )
   				m_options->changeItem(i18n("Hide Ghostscript messages"), item);
   				page->intConfig->show_messages = TRUE;
   			}
-			break;
+			break;*/
 			
 		case ID_TOOLBAR:
 			if(hide_toolbar) {
@@ -1462,13 +1477,15 @@ void KGhostview::optionsMenuActivated( int item )
 				hide_pagelist=False;
 				marklist->show();
 				//resize( width(), height() );
-				resizeEvent( 0 );
+				//resizeEvent( 0 );
+				shrinkWrap();
 				m_options->setItemChecked( item, TRUE );
 			} else {
 				hide_pagelist=True;
 				marklist->hide();
 				//resize( width(), height() );
-				resizeEvent( 0 );
+				//resizeEvent( 0 );
+				shrinkWrap();
 				m_options->setItemChecked( item, FALSE );
 			}
 			break;
@@ -2271,7 +2288,6 @@ if (filename_uncP) {
 	
 	if(current_page==-1) current_page=0;
 	
-    toolbar->setItemEnabled(ID_ZOOM, TRUE);
 	toolbar->setItemEnabled(ID_ZOOM_IN, TRUE);
 	toolbar->setItemEnabled(ID_ZOOM_OUT, TRUE);
 	toolbar->setItemEnabled(ID_RELOAD, TRUE);
@@ -2407,6 +2423,7 @@ void KGhostview::new_file( int number )
     if (layout_changed) {
     	//printf("Layout should change -- call KPS method\n");
     	page->layout();
+		shrinkWrap();
     }
 
 }
@@ -2567,6 +2584,7 @@ void KGhostview::set_magstep(int i)
 		sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
 		statusbar->changeItem( temp_text, ID_MAGSTEP );
 		show_page(current_page);
+		shrinkWrap();
     }
 }
 

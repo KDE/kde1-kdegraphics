@@ -9,7 +9,6 @@
 #include "copyright.h"
 #include "marklist.h"
 #include "kaccel.h"
-#include "kglobalaccel.h"
 #include <ktopwidget.h>
 
 #include <stdlib.h>
@@ -68,8 +67,6 @@ public:
 	// Tells us what kind of job kghostview is waiting for.
     
 	KAccel *keys;
-	
-	KGlobalAccel *ga;
 	
 	enum action { GET, PUT };
 	void openNetFile( const char *_url );
@@ -164,6 +161,7 @@ public slots:
 	void openNewFile();
 	void zoomIn();
 	void zoomOut();
+	void zoom();
 	void optionsMenuActivated( int item );
 	void toolbarClicked( int item );
 	void markPage();

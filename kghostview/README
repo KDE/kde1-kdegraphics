@@ -37,6 +37,14 @@ TODO
 - Finalise kdvi and kghostview standard
 - Generally clean code
 
+CHANGES V0.7.1
+
+- Uses automoc
+- Uses kfile
+- Split view control dialog into a page setup and zoom dialog
+- Automatically resizes window after change to document view
+- Changed toolbar
+
 CHANGES V0.7
 
 - Patch from Jake Hamy <jehamby@lightside.com> which incorporates code from

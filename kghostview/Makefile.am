@@ -8,70 +8,14 @@ SUBDIRS = doc
 bin_PROGRAMS = 	kghostview
 kghostview_SOURCES = marklist.cpp copyright.cpp interpreter.cpp messages.cpp \
 info.cpp print.cpp goto.cpp viewcontrol.cpp main.cpp kghostview.cpp \
-kpswidget.cpp ps.c kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp
+kpswidget.cpp ps.c kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp zoom.cpp
+kghostview_METASOURCES = USE_AUTOMOC
 noinst_HEADERS =  marklist.h copyright.h interpreter.h messages.h info.h \
 print.h goto.h viewcontrol.h kghostview.h kpswidget.h ps.h kaccel.h \
-kkeydialog.h kckey.h kglobalaccel.h
-kghostview_LDADD = $(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
+kkeydialog.h kckey.h kglobalaccel.h zoom.h
+kghostview_LDADD = $(all_libraries) -lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
 kghostview_LDFLAGS = $(LDFLAGS) $(KDE_RPATH)
-
-BUILTSOURCES = marklist.moc copyright.moc interpreter.moc messages.moc \
-info.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc \
-kaccel.moc kkeydialog.moc kglobalaccel.moc
-DISTCLEANFILES = marklist.moc copyright.moc interpreter.moc messages.moc \
-info.moc print.moc goto.moc viewcontrol.moc kghostview.moc kpswidget.moc
-
-kglobalaccel.cpp:kglobalaccel.moc
-kglobalaccel.moc: kglobalaccel.h
-	$(MOC) kglobalaccel.h -o kglobalaccel.moc
-
-kkeydialog.cpp:kkeydialog.moc
-kkeydialog.moc: kkeydialog.h
-	$(MOC) kkeydialog.h -o kkeydialog.moc
-
-kaccel.cpp:kaccel.moc
-kaccel.moc: kaccel.h
-	$(MOC) kaccel.h -o kaccel.moc
-
-marklist.cpp:marklist.moc
-marklist.moc: marklist.h
-	$(MOC) marklist.h -o marklist.moc
-	
-copyright.cpp:copyright.moc
-copyright.moc: copyright.h
-	$(MOC) copyright.h -o copyright.moc
-	
-interpreter.cpp:interpreter.moc
-interpreter.moc: interpreter.h
-	$(MOC) interpreter.h -o interpreter.moc
-	
-messages.cpp:messages.moc
-messages.moc: messages.h
-	$(MOC) messages.h -o messages.moc
-	
-info.cpp:info.moc
-info.moc: info.h
-	$(MOC) info.h -o info.moc
-	
-print.cpp:print.moc
-print.moc: print.h
-	$(MOC) print.h -o print.moc
-	
-goto.cpp:goto.moc
-goto.moc: goto.h
-	$(MOC) goto.h -o goto.moc
-	
-viewcontrol.cpp:viewcontrol.moc
-viewcontrol.moc: viewcontrol.h
-	$(MOC) viewcontrol.h -o viewcontrol.moc
-	
-kghostview.cpp:kghostview.moc
-kghostview.moc: kghostview.h
-	$(MOC) kghostview.h -o kghostview.moc
-	
-kpswidget.cpp:kpswidget.moc
-kpswidget.moc: kpswidget.h
-	$(MOC) kpswidget.h -o kpswidget.moc
+DISTCLEANFILES = $(kghostview_METASOURCES)
 
 install-data-local: 
 	$(mkinstalldirs) $(APPSDIR)

@@ -12,7 +12,6 @@
 #include <qstring.h>
 #include <qscrbar.h>
 #include <qframe.h>
-#include <qfiledlg.h>
 #include <qpaintd.h>
 #include <qbitmap.h>
 #include <qpushbt.h>
