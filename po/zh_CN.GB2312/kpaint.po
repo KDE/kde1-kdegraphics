@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-11-18 13:52+0100\n"
+"POT-Creation-Date: 1999-01-11 01:50+0100\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -95,7 +95,7 @@ msgstr "图象高度"
 msgid "Dismiss"
 msgstr "取消"
 
-#: kpaint.cpp:76 kpaint.cpp:751
+#: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
 msgstr "untitled.gif"
 
@@ -221,35 +221,32 @@ msgstr "显示状态行"
 msgid "Save Options"
 msgstr "保存选项"
 
-#: kpaint.cpp:494
-msgid "KPaint"
-msgstr "KPaint"
-
 #: kpaint.cpp:495
-msgid " version "
+#, c-format
+msgid ""
+"KPaint version %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint is released under the\n"
+"GNU Public License agreement,\n"
+"see the online documentation\n"
+"for details."
 msgstr ""
 
-#: kpaint.cpp:496
-#, fuzzy
-msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
-
-#: kpaint.cpp:505
+#: kpaint.cpp:508
 msgid "&Image"
 msgstr "图像[&I]"
 
-#: kpaint.cpp:506
+#: kpaint.cpp:509
 msgid "&Tool"
 msgstr "工具[&T]"
 
-#: kpaint.cpp:681
+#: kpaint.cpp:684
 msgid "KPaint: Could not open file"
 msgstr "KPaint: 无法打开文件"
 
-#: kpaint.cpp:682
+#: kpaint.cpp:685
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -257,12 +254,12 @@ msgstr ""
 "错误: 无法打开文件\n"
 "KPaint  无法打开指定的文件."
 
-#: kpaint.cpp:690
+#: kpaint.cpp:693
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: 未知的格式"
 
 #
-#: kpaint.cpp:691
+#: kpaint.cpp:694
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -407,6 +404,16 @@ msgstr "设定线段颜色..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "圆角"
+
+#~ msgid "KPaint"
+#~ msgstr "KPaint"
+
+#, fuzzy
+#~ msgid "(c) "
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "(c) "
 
 #~ msgid ""
 #~ "\n"

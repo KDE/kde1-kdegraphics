@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-18 13:52+0100\n"
+"POT-Creation-Date: 1999-01-11 01:50+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -93,7 +93,7 @@ msgstr "Vý¹ka obrázku:"
 msgid "Dismiss"
 msgstr "Zru¹i»"
 
-#: kpaint.cpp:76 kpaint.cpp:751
+#: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
 msgstr "bez_mena.gif"
 
@@ -218,31 +218,32 @@ msgstr "Zobrazova» stavovú li¹tu"
 msgid "Save Options"
 msgstr "Ulo¾i» nastavenie"
 
-#: kpaint.cpp:494
-msgid "KPaint"
-msgstr "KPaint"
-
 #: kpaint.cpp:495
-msgid " version "
-msgstr " verzia "
+#, c-format
+msgid ""
+"KPaint version %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint is released under the\n"
+"GNU Public License agreement,\n"
+"see the online documentation\n"
+"for details."
+msgstr ""
 
-#: kpaint.cpp:496
-msgid "(c) "
-msgstr "(c) "
-
-#: kpaint.cpp:505
+#: kpaint.cpp:508
 msgid "&Image"
 msgstr "&Obrázok"
 
-#: kpaint.cpp:506
+#: kpaint.cpp:509
 msgid "&Tool"
 msgstr "&Nástroj"
 
-#: kpaint.cpp:681
+#: kpaint.cpp:684
 msgid "KPaint: Could not open file"
 msgstr "KPaint: nemô¾em otvori» súbor"
 
-#: kpaint.cpp:682
+#: kpaint.cpp:685
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -250,11 +251,11 @@ msgstr ""
 "Chyba: nemô¾em otvori» súbor\n"
 "KPaint nemohol otvori» ¹pecifikovaný súbor."
 
-#: kpaint.cpp:690
+#: kpaint.cpp:693
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Neznámy formát"
 
-#: kpaint.cpp:691
+#: kpaint.cpp:694
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -399,6 +400,15 @@ msgstr "Farba èiary"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Zaoblený obdå¾nik"
+
+#~ msgid "KPaint"
+#~ msgstr "KPaint"
+
+#~ msgid " version "
+#~ msgstr " verzia "
+
+#~ msgid "(c) "
+#~ msgstr "(c) "
 
 #~ msgid ""
 #~ "\n"

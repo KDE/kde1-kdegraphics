@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-18 13:52+0100\n"
+"POT-Creation-Date: 1999-01-11 01:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@Ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgstr "Altezza Immagine:"
 msgid "Dismiss"
 msgstr "Annulla"
 
-#: kpaint.cpp:76 kpaint.cpp:751
+#: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
 msgstr "senza_titolo.gif"
 
@@ -225,31 +225,32 @@ msgstr "Mostra Barra di Stato"
 msgid "Save Options"
 msgstr "Salva Opzioni"
 
-#: kpaint.cpp:494
-msgid "KPaint"
-msgstr "Kpaint"
-
 #: kpaint.cpp:495
-msgid " version "
-msgstr " versione "
+#, c-format
+msgid ""
+"KPaint version %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint is released under the\n"
+"GNU Public License agreement,\n"
+"see the online documentation\n"
+"for details."
+msgstr ""
 
-#: kpaint.cpp:496
-msgid "(c) "
-msgstr "(c) "
-
-#: kpaint.cpp:505
+#: kpaint.cpp:508
 msgid "&Image"
 msgstr "&Immagine"
 
-#: kpaint.cpp:506
+#: kpaint.cpp:509
 msgid "&Tool"
 msgstr "&Strumento"
 
-#: kpaint.cpp:681
+#: kpaint.cpp:684
 msgid "KPaint: Could not open file"
 msgstr "KPaint: Impossibile aprire il file"
 
-#: kpaint.cpp:682
+#: kpaint.cpp:685
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -257,11 +258,11 @@ msgstr ""
 "Errore: Impossibile aprire fileKPaint non ha potuto aprire il file "
 "specificato "
 
-#: kpaint.cpp:690
+#: kpaint.cpp:693
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Formato Sconosciuto"
 
-#: kpaint.cpp:691
+#: kpaint.cpp:694
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -406,6 +407,15 @@ msgstr "Imposta Colore Linea..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Angolo"
+
+#~ msgid "KPaint"
+#~ msgstr "Kpaint"
+
+#~ msgid " version "
+#~ msgstr " versione "
+
+#~ msgid "(c) "
+#~ msgstr "(c) "
 
 #~ msgid ""
 #~ "\n"

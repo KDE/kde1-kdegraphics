@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-18 13:52+0100\n"
+"POT-Creation-Date: 1999-01-11 01:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@exi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,7 +96,7 @@ msgstr "Ύψος εικόνας"
 msgid "Dismiss"
 msgstr "Ξουτ!"
 
-#: kpaint.cpp:76 kpaint.cpp:751
+#: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
 msgstr "ανώνυμο.gif"
 
@@ -224,31 +224,32 @@ msgstr "Εμφάνιση γραμμής κατάστασης"
 msgid "Save Options"
 msgstr "Αποθήκευση επιλογών"
 
-#: kpaint.cpp:494
-msgid "KPaint"
-msgstr ""
-
 #: kpaint.cpp:495
-msgid " version "
+#, c-format
+msgid ""
+"KPaint version %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint is released under the\n"
+"GNU Public License agreement,\n"
+"see the online documentation\n"
+"for details."
 msgstr ""
 
-#: kpaint.cpp:496
-msgid "(c) "
-msgstr ""
-
-#: kpaint.cpp:505
+#: kpaint.cpp:508
 msgid "&Image"
 msgstr "Εικόνα"
 
-#: kpaint.cpp:506
+#: kpaint.cpp:509
 msgid "&Tool"
 msgstr "Εργαλείο"
 
-#: kpaint.cpp:681
+#: kpaint.cpp:684
 msgid "KPaint: Could not open file"
 msgstr "KPaint: Δεν μπορώ να ανοίξω το αρχείο"
 
-#: kpaint.cpp:682
+#: kpaint.cpp:685
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -256,11 +257,11 @@ msgstr ""
 "Σφάλμα: Δεν μπορώ να ανοίξω το αρχείο\n"
 "Το KPaint δεν μπορεί να ανοίξει το συγκεκριμένο αρχείο."
 
-#: kpaint.cpp:690
+#: kpaint.cpp:693
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: ’γνωστος τύπος αρχείου"
 
-#: kpaint.cpp:691
+#: kpaint.cpp:694
 #, fuzzy
 msgid ""
 "Error: Unknown Format\n"

@@ -78,7 +78,9 @@ msgstr "Ignorar"
 msgid ""
 "KSnapshot was unable to save the image to\n"
 "%s."
-msgstr "O KSnapshot não foi capaz de salvar a imagem para\n%s."
+msgstr ""
+"O KSnapshot não foi capaz de salvar a imagem para\n"
+"%s."
 
 #: ksnapshot.cpp:469
 msgid "KSnapshot preview"

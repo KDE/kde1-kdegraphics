@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-18 13:52+0100\n"
+"POT-Creation-Date: 1999-01-11 01:50+0100\n"
 "PO-Revision-Date: 1998-04-21 03:23:+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr "影像高度:"
 msgid "Dismiss"
 msgstr "解散"
 
-#: kpaint.cpp:76 kpaint.cpp:751
+#: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
 msgstr "未命名.gif"
 
@@ -224,31 +224,32 @@ msgstr "顯示狀態列"
 msgid "Save Options"
 msgstr "儲存選項"
 
-#: kpaint.cpp:494
-msgid "KPaint"
-msgstr ""
-
 #: kpaint.cpp:495
-msgid " version "
+#, c-format
+msgid ""
+"KPaint version %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint is released under the\n"
+"GNU Public License agreement,\n"
+"see the online documentation\n"
+"for details."
 msgstr ""
 
-#: kpaint.cpp:496
-msgid "(c) "
-msgstr ""
-
-#: kpaint.cpp:505
+#: kpaint.cpp:508
 msgid "&Image"
 msgstr "影像[&I]"
 
-#: kpaint.cpp:506
+#: kpaint.cpp:509
 msgid "&Tool"
 msgstr "工具[&T]"
 
-#: kpaint.cpp:681
+#: kpaint.cpp:684
 msgid "KPaint: Could not open file"
 msgstr "KPaint: 無法開啟檔案"
 
-#: kpaint.cpp:682
+#: kpaint.cpp:685
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -256,11 +257,11 @@ msgstr ""
 "錯誤: 無法開啟檔案\n"
 "KPaint  無法開啟指定的檔案."
 
-#: kpaint.cpp:690
+#: kpaint.cpp:693
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: 未知的格式"
 
-#: kpaint.cpp:691
+#: kpaint.cpp:694
 #, fuzzy
 msgid ""
 "Error: Unknown Format\n"
