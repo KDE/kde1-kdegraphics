@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-11-17 10:48+0100\n"
-"PO-Revision-Date: 1998-08-19 00:46+0600\n"
+"PO-Revision-Date: 1998-12-29 00:46+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,8 @@ msgstr "Удалить отметки страниц"
 
 #
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "С&траница"
+msgstr "Страница"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -303,7 +302,7 @@ msgid ""
 "command line options.\n"
 msgstr ""
 "Смотрите документацию по Qt и KDE для\n"
-"опций коммандной строки.\n"
+"ключей коммандной строки.\n"
 
 #: main.cpp:30
 msgid "Error on command line"
@@ -373,11 +372,11 @@ msgstr "Настроить интерпретатор"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Новый"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "Новый"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -482,7 +481,7 @@ msgstr "Натроить клавиатуру ..."
 
 #: kghostview.cpp:580
 msgid "&Save options"
-msgstr "&Сохранить опции"
+msgstr "&Сохранить настройки"
 
 #: kghostview.cpp:587
 msgid "&About this application"
@@ -498,7 +497,7 @@ msgstr "&Copyright"
 
 #: kghostview.cpp:598
 msgid "&Go"
-msgstr "Идти"
+msgstr "Перейти"
 
 #: kghostview.cpp:599
 msgid "&Pagemarks"
@@ -517,6 +516,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - просмотрщик PostScript документов для\n"
+"KDE.\n"
+"\n"
+"Написан Марком Донохое <donohoe@kde.org>, основан на\n"
+"работе Тима Тэйсена.\n"
+"\n"
+"Включает код из gv Йоханеса Пласа. Это позволило добавить\n"
+"поддержку сжатия и PDF файлов.\n"
+"\n"
+"http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -654,6 +663,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Настройте переменную окружения (к примеру, PRINTER или LPDEST) для того, чтобы"
+" учитывалось имя принтера."
 
 #: kghostview.cpp:1661
 #, c-format

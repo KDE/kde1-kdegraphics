@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1998-11-16 01:58+0100\n"
-"PO-Revision-Date: 1998-08-19 01:24+0600\n"
+"PO-Revision-Date: 1998-12-28 01:24+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "Следующая страница"
 
 #: kfax.cpp:419
 msgid "&Prev Page"
-msgstr "Пред. страница"
+msgstr "Предыдущая страница"
 
 #: kfax.cpp:420
 msgid "&First Page"
@@ -90,7 +90,6 @@ msgid "Zoom &out"
 msgstr "Уменьшить"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
 msgstr "Опции факса"
 
@@ -214,7 +213,7 @@ msgstr "Загружаю '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Сделано"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -252,6 +251,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Ошибка открытия:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -327,7 +328,7 @@ msgstr "Четко"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Нормальный"
 
 #: options.cpp:81
 msgid "Display Options:"
@@ -335,7 +336,7 @@ msgstr "Опции просмотра:"
 
 #: options.cpp:85
 msgid "Landscape"
-msgstr ""
+msgstr "Альбом"
 
 #: options.cpp:89
 msgid "Upside Down"

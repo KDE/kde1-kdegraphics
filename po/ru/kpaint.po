@@ -2,12 +2,11 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Denis Pershin <dyp@inetlab.com>, 1998.
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-11-18 13:52+0100\n"
-"PO-Revision-Date: 1998-08-19 01:14+0600\n"
+"PO-Revision-Date: 1998-12-29 01:14+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,38 +38,32 @@ msgid "Image Depth:"
 msgstr "Глубина изображения:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 цветов)"
+msgstr "1 (2 цвета)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 цветов)"
+msgstr "4 (16 цветов)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 цветов)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 цветов)"
+msgstr "15 (32768 цветов)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 цветов)"
+msgstr "16 (65536 цветов)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (Полноцвет)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (Полноцвет)"
+msgstr "32 (Полноцвет)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -98,7 +91,7 @@ msgstr "Высота изображения"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Убрать"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -233,11 +226,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " версии "
 
 #: kpaint.cpp:496
 msgid "(c) "
-msgstr ""
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -295,7 +288,7 @@ msgstr "Пульверизатор"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -323,7 +316,7 @@ msgstr "Шаблон заливки:"
 
 #: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
-msgstr ""
+msgstr "Нет"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
