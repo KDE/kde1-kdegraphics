@@ -12,7 +12,7 @@ LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
-LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
+LDLIBS	=	-lkdeui -lkdecore -lkptools -lgif -lqt -lXext -lm -lX11 -ljpeg
 METADIR	=	metas
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
@@ -28,7 +28,7 @@ INSTALL_BIN = @INSTALL@ -m 755
 CXXFLAGS=	@CXXFLAGS@ $(DEFS) $(INCDIRS)
 LDFLAGS=	@LDFLAGS@ $(LIBDIR)
 
-OBJ=	main.o \
+OBJS=	main.o \
 	app.o \
 	canvas.o \
 	kpaint.o \
@@ -44,23 +44,21 @@ METAS=	canvas.moc \
 	properties.moc \
 	QwViewport.moc
 
-OBJS= $(addprefix objs/,$(OBJ))
-
-.PHONY:	all clean tools install uninstall
+.PHONY:	all clean kplib install uninstall
 
 #
 # Implicit rules
 #
 
-objs/%.o:	%.cpp
+%.o:	%.cpp
 	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
 %.moc:	%.h
-	$(MOC) -o $(METADIR)/$@ $<
+	$(MOC) -o $@ $<
 
-all:	kpaint
+all:	kplib kpaint
 
-install:
+install: all
 	$(INSTALL_DIR) $(prefix)/bin
 	$(INSTALL_DIR) $(prefix)/doc/HTML/kpaint
 	$(INSTALL_BIN) kpaint $(prefix)/bin
@@ -71,16 +69,17 @@ install:
 uninstall:
 	rm -f $(prefix)/bin/kpaint
 	rm -rf $(prefix)/doc/HTML/kpaint
+	rm -f $(prefix)/apps/Applications/kpaint.kdelnk
+	
+kplib:
+	(cd tools; $(MAKE) all)
 
-tools:
-	$(MAKE) -C tools all
-
-kpaint:	tools $(METAS) $(OBJS)
+kpaint: $(METAS) $(OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS)
 
 clean:
 	$(MAKE) -C tools clean
-	-rm -f $(OBJS) $(METADIR)/*.moc kpaint tools/libkptools.a
+	-rm -f $(OBJS) *.moc kpaint tools/libkptools.a
 
 realclean:  clean
 	$(MAKE) -C tools realclean

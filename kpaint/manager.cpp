@@ -103,5 +103,5 @@ void Manager::showPropertiesDialog(void)
 }
 
 
-#include "metas/manager.moc"
+#include "manager.moc"
 

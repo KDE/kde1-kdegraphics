@@ -184,4 +184,4 @@ void KPaint::handleCommand(int i)
   }
 }
 
-#include "metas/kpaint.moc"
+#include "kpaint.moc"

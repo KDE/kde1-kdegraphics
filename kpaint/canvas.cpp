@@ -7,7 +7,7 @@
 #include "canvas.h"
 #include "tools/tool.h"
 
-#include "metas/canvas.moc"
+#include "canvas.moc"
 
 Canvas::Canvas(const char *myname, int width, int height,
 	       QWidget *parent= 0, const char *name=0)

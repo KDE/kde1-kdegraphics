@@ -197,4 +197,4 @@ void linePropertiesWidget::setLineColour(void)
    lineColour= mycol;
 }
 
-#include "metas/properties.moc"
+#include "properties.moc"
