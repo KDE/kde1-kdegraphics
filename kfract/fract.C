@@ -69,7 +69,7 @@ int Fract::calcPoint( int x, int y )
   a += x;
   b += y;
 
-  fprintf( stderr, "Fract::calcPoint() is an abstract method. You MUST\n
+  fprintf( stderr, "Fract::calcPoint() is an abstract method. You MUST\n\
 re-write it!\n");
 
   return 0;

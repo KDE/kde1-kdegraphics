@@ -23,6 +23,7 @@
     */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include <qapp.h>
 #include <qimage.h>
@@ -42,7 +43,7 @@
 
 
 DrawView::DrawView( QWidget *parent ) :
-    QWindow::QWindow( parent )
+    QWindow( parent )
   {
   setBackgroundColor( black );
   w = parent;
@@ -55,7 +56,7 @@ DrawView::DrawView( QWidget *parent ) :
   drawbuffer = NULL;
   my_map = NULL;
   reset();
-  draw_runs = draw_stop = false;
+  draw_runs = draw_stop = FALSE;
   }
 
 
@@ -80,8 +81,8 @@ void DrawView::reset()
   param_2 = 0.0;
   zoom_in = 0.5;
   zoom_out = 2.0;
-  draw_runs = draw_stop = false;
-  draw_force = true;
+  draw_runs = draw_stop = FALSE;
+  draw_force = TRUE;
   if ( my_map != NULL )
     {
     delete my_map;
@@ -118,8 +119,8 @@ void DrawView::resetOnChange()
   point_1.setY( 0 );
   point_2.setX( 0 );
   point_2.setX( 0 );
-  draw_runs = draw_stop = false;
-  draw_force = true;
+  draw_runs = draw_stop = FALSE;
+  draw_force = TRUE;
   drawbuffer->fill( black );
   points_drawn = 0;
   center_x = fract->defaultCenterX();
@@ -225,12 +226,12 @@ void DrawView::paintEvent( QPaintEvent * )
 
 void DrawView::drawCheck()
   {
-  draw_force = true;
+  draw_force = TRUE;
   if ( draw_runs )  
     {
-    if ( draw_stop == false )
+    if ( draw_stop == FALSE )
       {
-      draw_stop = true;
+      draw_stop = TRUE;
       }
     }
   else
@@ -246,8 +247,8 @@ void DrawView::draw()
   int x, y;
   int *map_pointer;
 
-  draw_runs = true;
-  draw_force = false;
+  draw_runs = TRUE;
+  draw_force = FALSE;
   points_drawn = 0;
   x_max = width();
   y_max = height();
@@ -261,7 +262,7 @@ void DrawView::draw()
       {
       if ( draw_stop )
         {
-        draw_runs = draw_stop = false;
+        draw_runs = draw_stop = FALSE;
         update();
         return;
         }
@@ -269,10 +270,10 @@ void DrawView::draw()
       points_drawn++;
       }
     bitBlt( this, 0, y, drawbuffer, 0, y, 
-                  x_max, 1, CopyROP, false );
+                  x_max, 1, CopyROP, FALSE );
     qApp->processEvents();
     }
-  draw_runs = draw_stop = false;
+  draw_runs = draw_stop = FALSE;
   }
 
 
@@ -281,7 +282,7 @@ void DrawView::drawMap()
   bitBlt( this, 0, KFRACT_SIZE_DIFF_TOP, 
           drawbuffer, 0, KFRACT_SIZE_DIFF_TOP, 
           width(), height() - KFRACT_SIZE_DIFF_TOP,
-          CopyROP, false);
+          CopyROP, FALSE);
        
   }
 
@@ -370,7 +371,7 @@ void DrawView::mouseReleaseEvent( QMouseEvent *e )
              bitBlt( this, my_left, my_top,
                      drawbuffer, my_left, my_top, my_right - my_left + 1,
                                                   my_bottom - my_top + 1,
-                     CopyROP, false );
+                     CopyROP, FALSE );
              }
            }
          my_button = NoButton;
@@ -401,7 +402,7 @@ void DrawView::mouseMoveEvent( QMouseEvent *e )
     y1 = QMIN( point_1.y(), point_2.y() );
     y2 = QMAX( point_1.y(), point_2.y() );
     bitBlt( this, x1, y1, drawbuffer, x1, y1, x2 - x1 + 1, y2 - y1 +1,
-            CopyROP, false );
+            CopyROP, FALSE );
     paint->setPen( white );
     paint->drawLine( point_1.x(), point_1.y(), current_x, point_1.y() );
     paint->drawLine( point_1.x(), current_y, current_x, current_y );
@@ -800,7 +801,7 @@ void DrawView::setNewColorScheme( ColorScheme scheme )
 
 void DrawView::stop()
   {
-  draw_stop = true;
+  draw_stop = TRUE;
   }
 
 
@@ -857,7 +858,7 @@ void DrawView::savePic()
     bitBlt( buffer, 0, 0, 
             drawbuffer, 0, KFRACT_SIZE_DIFF_TOP,
             old_size_x, old_size_y,
-            CopyROP, false );
+            CopyROP, FALSE );
     buffer->save( filename, "BMP" );
     delete buffer;
     }
@@ -921,7 +922,7 @@ void DrawView::loadParam( char *name )
       fract_ratio = my_width / width();
       drawbuffer->fill( black );
       points_drawn = 0;
-      draw_force = true;
+      draw_force = TRUE;
       update();
       }
     }
