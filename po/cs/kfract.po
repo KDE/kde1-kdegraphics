@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfract\n"
 "POT-Creation-Date: 1998-11-16 01:58+0100\n"
-"PO-Revision-Date: 1999-02-04 10:10+01:00\n"
+"PO-Revision-Date: 1999-02-23 10:18+01:00\n"
 "Last-Translator: Miroslav Flídr <fldir@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +113,7 @@ msgstr "1000 - 100000"
 
 #: kfractdlgs.C:144
 msgid "Bailout"
-msgstr ""
+msgstr "Bailout"
 
 #: kfractdlgs.C:161
 msgid "Center of picture: Real part"
