@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kpaint\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
+"Language-Team: czech <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: app.cpp:27 app.cpp:44 kpaint.cpp:204
+msgid "Close Window"
+msgstr "Uzavøi okno"
+
+#: app.cpp:28 app.cpp:43 kpaint.cpp:203
+msgid "New Window"
+msgstr "Nové okno"
+
+#: app.cpp:29 app.cpp:45 kpaint.cpp:156
+msgid "Open File"
+msgstr "Otevøít soubor"
+
+#: app.cpp:30 app.cpp:46 kpaint.cpp:158
+msgid "Save File"
+msgstr "Ulo¾it soubor"
+
+#: app.cpp:31 app.cpp:47
+msgid "Save File As"
+msgstr "Ulo¾ dokument jako"
+
+#: app.cpp:33 kpaint.cpp:227
+msgid "Pen"
+msgstr "Pero"
+
+#: app.cpp:34 kpaint.cpp:228
+msgid "Line"
+msgstr "Èára"
+
+#: app.cpp:35 kpaint.cpp:229
+msgid "Rectangle"
+msgstr "Obdélník"
+
+#: app.cpp:36 kpaint.cpp:230
+msgid "Ellipse"
+msgstr "Elipsa"
+
+#: app.cpp:37 kpaint.cpp:231
+msgid "Circle"
+msgstr "Kruh"
+
+#: app.cpp:38 kpaint.cpp:232
+msgid "Spray Can"
+msgstr "Sprej"
+
+#: app.cpp:59
+msgid "This was a QString"
+msgstr "Toto byl QString"
+
+#: app.cpp:68
+msgid "\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+msgstr ""
+
+#: app.cpp:69
+msgid "Usage: "
+msgstr "Pou¾ití:"
+
+#: app.cpp:71
+msgid " [url | filename]\n"
+msgstr ""
+
+#: canvassize.cpp:11
+msgid "Width"
+msgstr "©íøka"
+
+#: canvassize.cpp:12
+msgid "Height"
+msgstr "Vý¹ka"
+
+#: formatdialog.cpp:20
+msgid "File Format:"
+msgstr "Datový formát:"
+
+#: infodialog.cpp:23
+msgid "Colour Depth:"
+msgstr "Barevná hloubka:"
+
+#: infodialog.cpp:38
+msgid "Colours Used:"
+msgstr "Pou¾ito barev:"
+
+#: infodialog.cpp:65
+msgid "Image Width:"
+msgstr "©íøka obrázku:"
+
+#: infodialog.cpp:81
+msgid "Image Height:"
+msgstr "Vý¹ka obrázku:"
+
+#: infodialog.cpp:93 palettedialog.cpp:13
+msgid "Dismiss"
+msgstr "Zavøít"
+
+#: kpaint.cpp:50 kpaint.cpp:520
+msgid "untitled.gif"
+msgstr "neznamy.gif"
+
+#: kpaint.cpp:154
+msgid "New Canvas"
+msgstr "Nová kreslící plocha"
+
+#: kpaint.cpp:161
+msgid "Cut"
+msgstr "Vyjmout"
+
+#: kpaint.cpp:163
+msgid "Copy"
+msgstr "Kopírovat"
+
+#: kpaint.cpp:165
+msgid "Paste"
+msgstr "Vlo¾it"
+
+#: kpaint.cpp:168 kpaint.cpp:214
+msgid "Zoom In"
+msgstr "Zvìt¹it"
+
+#: kpaint.cpp:170 kpaint.cpp:215
+msgid "Zoom Out"
+msgstr "Zmen¹it"
+
+#: kpaint.cpp:194
+msgid "New Image..."
+msgstr "Nový obrázek..."
+
+#: kpaint.cpp:195
+msgid "Open Image..."
+msgstr "Otevøít obrazek..."
+
+#: kpaint.cpp:196
+msgid "Save Image..."
+msgstr "Ulo¾it obrazek..."
+
+#: kpaint.cpp:197
+msgid "Save Image As..."
+msgstr "Ulo¾it obrazek jako..."
+
+#: kpaint.cpp:198
+msgid "Image Format..."
+msgstr "Formát obrázku"
+
+#: kpaint.cpp:200
+msgid "Open from URL..."
+msgstr "Otevøi z URL..."
+
+#: kpaint.cpp:201
+msgid "Save to URL..."
+msgstr "Ulo¾ na URL..."
+
+#: kpaint.cpp:209
+msgid "Copy Region"
+msgstr "Kopírovat oblast"
+
+#: kpaint.cpp:210
+msgid "Cut Region"
+msgstr "Vyjmout oblast"
+
+#: kpaint.cpp:211
+msgid "Paste Region"
+msgstr "Vlo¾it oblast"
+
+#: kpaint.cpp:212
+msgid "Paste As Image"
+msgstr "Vlo¾it jako obrázek"
+
+#: kpaint.cpp:216
+msgid "Mask..."
+msgstr "Maska"
+
+#: kpaint.cpp:217
+msgid "Options..."
+msgstr "Mo¾nosti..."
+
+#: kpaint.cpp:220
+msgid "Information..."
+msgstr "Informace..."
+
+#: kpaint.cpp:221
+msgid "Edit Palette..."
+msgstr "Upravit paletu..."
+
+#: kpaint.cpp:222
+msgid "Change Colour Depth..."
+msgstr "Zmìnit barevnou hloubku..."
+
+#: kpaint.cpp:225
+msgid "Tool Properties..."
+msgstr "Vlastnosti nástrojù..."
+
+#: kpaint.cpp:237
+msgid "Index"
+msgstr "Index"
+
+#: kpaint.cpp:238
+msgid "About KPaint"
+msgstr "Informace o KPaintu"
+
+#: kpaint.cpp:241
+msgid "&File"
+msgstr "&Soubor"
+
+#: kpaint.cpp:242
+msgid "&Edit"
+msgstr "Úp&ravy"
+
+#: kpaint.cpp:243
+msgid "&Image"
+msgstr "&Obrázek"
+
+#: kpaint.cpp:244
+msgid "&Tool"
+msgstr "&Nástroj"
+
+#: kpaint.cpp:246
+msgid "&Help"
+msgstr "&Nápovìda"
+
+#: kpaint.cpp:281
+msgid "KPaint: Could not open file"
+msgstr "KPaint: nemohu otevøít soubor"
+
+#: kpaint.cpp:282
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Chyba: nemohu otevøít soubor\n"
+"KPaint nemohl otevøít specifikovaný soubor."
+
+#: kpaint.cpp:285 kpaint.cpp:295 kpaint.cpp:320 kpaint.cpp:337 kpaint.cpp:348
+#: kpaint.cpp:406 kpaint.cpp:437 kpaint.cpp:454 kpaint.cpp:465
+msgid "Continue"
+msgstr "Pokraèovat"
+
+#: kpaint.cpp:290
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Neznámý formát"
+
+#: kpaint.cpp:291
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified fileor the file is corrupt."
+msgstr ""
+"Chyba: Neznámý formát\n"
+"KPAint nerozumí formátu specifikovaného souboru ne soubor je naru¹ený."
+
+#: kpaint.cpp:316 kpaint.cpp:433
+msgid "KPaint: Malformed URL"
+msgstr "KPaint: chybný formát URL"
+
+#: kpaint.cpp:317 kpaint.cpp:434
+msgid ""
+"Error: Malformed URL\n"
+"KPaint does not understand the specifed URL, check it's correct."
+msgstr ""
+"Chyba: chybný formát URL\n"
+"KPaint nerozumí specifikovanému URL, zkontrolujte zda-li je správné."
+
+#: kpaint.cpp:334 kpaint.cpp:451
+msgid "Sorry"
+msgstr "Sorry"
+
+#: kpaint.cpp:335 kpaint.cpp:452
+msgid ""
+"KPaint is already accessing a remote file, you must\n"
+"cancel the current remote job or wait for it to complete."
+msgstr ""
+"KPaint právì pøistupuje ke vzdálenému souboru, musíte tuto èinnost\n"
+"pøeru¹it nebo poèkat na její dokonèení."
+
+#: kpaint.cpp:346
+msgid "KPaint: Could not find KFM"
+msgstr "KFM: Není mo¾né spustit nebo nalézt KFM"
+
+#: kpaint.cpp:347 kpaint.cpp:464
+msgid "Error: KPaint could not find a running KFM or start one itself."
+msgstr "Chyba: KPaint nemù¾e nalézt bì¾ící KFM nebo si ho sám spustit."
+
+#: kpaint.cpp:402
+msgid "KPaint: Network Load Failed"
+msgstr "KPaint: Nahrávání po síti selhalo"
+
+#: kpaint.cpp:403
+msgid ""
+"Error: Netword Load Failed\n"
+"Something went wrong :-("
+msgstr "Chyba: Nahrávání po síti selhalo"
+
+#: kpaint.cpp:463
+msgid "KPaint: Could not start KFM"
+msgstr "KPaint: Není mo¾né spustit nebo nalézt KFM"
+
+#: kpaint.cpp:492
+msgid "Canvas Size"
+msgstr "Velikost kreslící plochy"
+
+#: kpaint.cpp:680
+msgid "Open Location:"
+msgstr "Otevøi místo:"
+
+#: kpaint.cpp:716
+msgid "Save to Location:"
+msgstr "Ulo¾ na místo:"
+
+#: manager.cpp:60
+msgid "Tool Properties"
+msgstr "Vlastnosti nástroje"
+
+#: palette.cpp:101
+msgid "Edit Colour"
+msgstr "Upravit barvu"
+
+#: properties.cpp:19
+msgid "Line Properties"
+msgstr "Vlastnosti èáry"
+
+#: properties.cpp:21
+msgid "Fill Properties"
+msgstr "Vlastnosti vyplòování"
+
+#: properties.cpp:67
+msgid "Fill Pattern:"
+msgstr "Vzor pro vyplòování:"
+
+#: properties.cpp:73 properties.cpp:239
+msgid "None"
+msgstr "Nic"
+
+#: properties.cpp:74 properties.cpp:234
+msgid "Solid"
+msgstr "Plná"
+
+#: properties.cpp:75
+msgid "Vertical Lines"
+msgstr "Vertikální èáry"
+
+#: properties.cpp:76
+msgid "Horizontal Lines"
+msgstr "Horizontální èáry"
+
+#: properties.cpp:77
+msgid "Grid"
+msgstr "Møí¾ka"
+
+#: properties.cpp:78
+msgid "Diagonal Lines //"
+msgstr "Siagonální èáry //"
+
+#: properties.cpp:79
+msgid "Diagonal Lines \\"
+msgstr "Diagonální èáru \\"
+
+#: properties.cpp:80
+msgid "Diagonal Grid"
+msgstr "Diagonální møí¾ka"
+
+#: properties.cpp:90
+msgid "Custom"
+msgstr ""
+
+#: properties.cpp:93
+msgid "Pattern Filename:"
+msgstr "Název souboru vrorku:"
+
+#: properties.cpp:100
+msgid "Browse..."
+msgstr "Listuj..."
+
+#: properties.cpp:103
+msgid "Set Fill Colour..."
+msgstr "Nastav barvu pro vyplòování..."
+
+#: properties.cpp:229
+msgid "Line Style:"
+msgstr "Styl èáry:"
+
+#: properties.cpp:235
+msgid "Dashed"
+msgstr "Pøeru¹ovaná"
+
+#: properties.cpp:236
+msgid "Dotted"
+msgstr "Teèkovaná"
+
+#: properties.cpp:237
+msgid "Dash Dot"
+msgstr ""
+
+#: properties.cpp:238
+msgid "Dash Dot Dot"
+msgstr ""
+
+#: properties.cpp:243
+msgid "Line Width:"
+msgstr "©íøka èáry:"
+
+#: properties.cpp:253
+msgid "End style:"
+msgstr "Styl zakonèení:"
+
+#: properties.cpp:258 properties.cpp:271
+msgid "Not Yet"
+msgstr "Je¹tì ne"
+
+#: properties.cpp:265
+msgid "Join style:"
+msgstr "Nastav barvu èáry..."

@@ -2,17 +2,15 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: kghostview\n"
+"PO-Revision-Date: 1997-10-18 17:52 MET DST\n"
+"Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
+"Language-Team: czech <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: ENCODING\n"
-
 
 #: copyright.cpp:17
 msgid "Copyright"
@@ -289,10 +287,6 @@ msgstr "Zobrazuj nás&trojovou li¹tu"
 msgid "Show &status bar"
 msgstr "Zobrazuj &statusbar"
 
-#: kghostview.cpp:530
-msgid "Show &page list"
-msgstr "Zobrazuj seznam stránek"
- 
 #: kghostview.cpp:463
 msgid "Configure &key bindings ..."
 msgstr "Nastav &klávesové akcelerátory ..."
@@ -448,7 +442,7 @@ msgstr "Nezobrazuj hlá¹ení Ghostscriptu"
 
 #: kghostview.cpp:1321
 #, fuzzy
-msgid "Version 0.6"
+msgid "Version 0.5"
 msgstr "Verze 0.6"
 
 #: kghostview.cpp:1322
@@ -460,8 +454,9 @@ msgid "About kghostview"
 msgstr "Informace o kghostview"
 
 #: kghostview.cpp:1330
+#, fuzzy
 msgid ""
-"Version :\t0.6 alpha\n"
+"Version :\t0.5 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
@@ -603,7 +598,6 @@ msgstr "Orientace"
 msgid "Media"
 msgstr "Medium"
 
-#: viewcontrol.cpp:61
-msgid "Apply"
-msgstr "Pøevzít"
-  
+#: ???
+msgid "Show &page list"
+msgstr "Zobrazuj seznam stránek"
