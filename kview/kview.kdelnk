@@ -2,7 +2,8 @@
 [KDE Desktop Entry]
 Type=Application
 Exec=kview %u
-Icon=image.xpm
+Icon=kview.xpm
+MiniIcon=kview.xpm
 TerminalOptions=
 Path=
 Terminal=0
