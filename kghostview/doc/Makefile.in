@@ -1,6 +1,6 @@
 HELPFILES = kghostview.html kghostview-1.html kghostview-2.html \
 			kghostview-3.html kghostview-4.html kghostview-5.html \
-			kghostview-6.html 
+			kghostview-6.html
 
 DOCSDIR = @prefix@/doc/HTML/kghostview
 INSTALL_DIR = @INSTALL@ -d -m 0755
