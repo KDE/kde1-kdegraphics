@@ -119,7 +119,7 @@ void KIconEditProperties::saveProperties(QWidget *parent)
   config->writeEntry( "Geometry", geom );
 
   debug("Writing bgmode: %d", (int)pprops->backgroundmode);
-  config->writeEntry("BackgroundMode", pprops->backgroundmode);
+  config->writeEntry("BackgroundMode", (int)pprops->backgroundmode);
   config->writeEntry("BackgroundColor", pprops->backgroundcolor);
   config->writeEntry("BackgroundPixmap", pprops->backgroundpixmap);
 

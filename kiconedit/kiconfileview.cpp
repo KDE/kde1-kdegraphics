@@ -1,140 +1,45 @@
 // -*- c++ -*-
-/* This file is part of the KDE libraries
-    Copyright (C) 1997 Stephan Kulow <coolo@kde.org>
+/*  
+    KDE Icon Editor - a small graphics drawing program for the KDE
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
+    Copyright (C) 1998 Thomas Tanghus (tanghus@kde.org)
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public
     License as published by the Free Software Foundation; either
     version 2 of the License, or (at your option) any later version.
 
-    This library is distributed in the hope that it will be useful,
+    This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
+    General Public License for more details.
 
     You should have received a copy of the GNU Library General Public License
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
     Boston, MA 02111-1307, USA.
-*/
+*/  
 
 #include <kdir.h>
 #include <qpixmap.h>
-#include <qimage.h>
-#include <qimageio.h>
+//#include <qimage.h>
+//#include <qimageio.h>
 #include "kiconfileview.h"
 #include "qkeycode.h"
 #include <qpainter.h>
 #include <kapp.h>
 #include "debug.h"
-#include "xview.h"
+//#include "xview.h"
 
 #define PIX_HEIGHT 60
 #define PIX_WIDTH 100
 
-QPixmap *KIconFileView::pix_folder = 0;
-QPixmap *KIconFileView::pix_lfolder = 0;
-QPixmap *KIconFileView::pix_file = 0;
-QPixmap *KIconFileView::pix_lfile = 0;
-
-bool checkXVFile(const KFileInfo *i, const char *filepath, QPixmap *pixmap)
-{
-   if( !pixmap->load( filepath ))
-     return false;
-
-   QString path = filepath;
-   int index = path.find( i->fileName() );
-   path.insert(index,".xvpics/");
-
-   QFileInfo fi(path.data());
-
-   QDir d(fi.dirPath());
-
-   if(!d.exists())
-   {
-     if(!d.mkdir(d.path()))
-     {
-       if(!scalePixmap(pixmap))
-         return false;
-       return true;
-     }
-   }
-
-   if(!fi.exists())
-   {
-     write_xv_file(path.data(), *pixmap);
-
-     // Cannot use QPixmap::save as it complaines about file allready open :-(
-     //if(!pixmap->save(path.data(), "XV"))
-       //debug("Error saving XV thumbnail %s", path.data());
-   }
-
-   if(fi.exists())
-   {
-     if( !pixmap->load( path.data(), "XV" ))
-     {
-       debug("Error loading XV thumbnail %s", path.data());
-       return false;
-     }
-   }
-   else
-   {
-     if(!scalePixmap(pixmap))
-       return false;
-   }
-
-   return true;
-}
-
-bool scalePixmap(QPixmap *pixmap)
-{
-  int w, h;
-    
-  if ( pixmap->width() > pixmap->height() )
-  {
-    if ( pixmap->width() < 80 )
-      w =pixmap->width();
-    else
-      w = 80;
-
-    h = (int)( (float)pixmap->height() * ( (float)w / (float)pixmap->width() ) );
-  }
-  else
-  {
-    if ( pixmap->height() < 60 )
-      h = pixmap->height();
-    else
-      h = 60;
-
-    w = (int)( (float)pixmap->width() * ( (float)h / (float)pixmap->height() ) );
-  }
-    
-  QWMatrix matrix;
-  matrix.scale( (float)w/pixmap->width(), (float)h/pixmap->height() );
-  *pixmap = pixmap->xForm( matrix );   
-
-  if(pixmap->isNull())
-    return false;
-  return true;
-}
 
 KIconFileView::KIconFileView(bool s, QDir::SortSpec sorting,
                                  QWidget *parent, const char *name)
     : QTableView(parent, name), KFileInfoContents(s,sorting)
 {
   //debug("KIconFileView - constructor");
-/*
-  QImageIO::defineIOHandler( "XV", "^P7 332", 0, read_xv_file, 0L );
-*/
-  if(!pix_folder) 
-    pix_folder = new QPixmap(KApplication::kde_icondir() + "/folder.xpm"); 
-  if(!pix_lfolder) 
-    pix_lfolder = new QPixmap(KApplication::kde_icondir() + "/lockedfolder.xpm"); 
-  if(!pix_file) 
-    pix_file = new QPixmap(KApplication::kde_icondir() + "/unknown.xpm"); 
-  if(!pix_lfile) 
-    pix_lfile = new QPixmap(KApplication::kde_icondir() + "/locked.xpm"); 
-
   width_max = 100;
   width_length = 0;
     
@@ -159,6 +64,7 @@ KIconFileView::KIconFileView(bool s, QDir::SortSpec sorting,
 
 KIconFileView::~KIconFileView()
 {
+  debug("KIconFileView - destructor");
 }
 
 void KIconFileView::setAutoUpdate(bool f)
@@ -407,7 +313,7 @@ bool KIconFileView::insertItem(const KFileInfo *i, int index)
 	}
       }
       else
-	pixmaps.insert(index, pix_lfile);
+	pixmaps.insert(index, new QPixmap(*pix_lfile));
     }
     
     int curCol = index / rowsVisible;

@@ -24,12 +24,7 @@
 #include "kiconfileview.h"
 #include <qkeycode.h>
 #include <kapp.h>
-#include "xview.h"
-
-QPixmap *KIconDetailList::pix_folder = 0;
-QPixmap *KIconDetailList::pix_lfolder = 0;
-QPixmap *KIconDetailList::pix_file = 0;
-QPixmap *KIconDetailList::pix_lfile = 0;
+//#include "xview.h"
 
 KListViewItem::KListViewItem( QListView * parent,
 		   const char *a, const char *b,
@@ -47,45 +42,36 @@ KIconDetailList::KIconDetailList(bool s, QDir::SortSpec sorting,
 {
   pixwidth = 0;
 
-  if(!pix_folder) 
-    pix_folder = new QPixmap(KApplication::kde_icondir() + "/folder.xpm"); 
-  if(!pix_lfolder) 
-    pix_lfolder = new QPixmap(KApplication::kde_icondir() + "/lockedfolder.xpm"); 
-  if(!pix_file) 
-    pix_file = new QPixmap(KApplication::kde_icondir() + "/unknown.xpm"); 
-  if(!pix_lfile) 
-    pix_lfile = new QPixmap(KApplication::kde_icondir() + "/locked.xpm"); 
+  QWidget::setFocusPolicy(QWidget::StrongFocus);
 
-    QWidget::setFocusPolicy(QWidget::StrongFocus);
-
-    addColumn("Pix", pixwidth);
-    setColumnWidthMode(0, Manual);
-    QFontMetrics fm = fontMetrics();
-    QString text = i18n("Name");
-    addColumn(text, QMAX(fm.width(text + "_"), 150));
-    text = i18n("Size");
-    addColumn(text, QMAX(fm.width(text + "_"), 50));
-    setColumnAlignment(2, AlignRight);
-    text = i18n("Permissions");
-    addColumn(text, QMAX(fm.width(text + "_"), 80));
-    text = i18n("Date");
-    int _width = QMAX(fm.width(text + "_"), 50);
-    addColumn(text, QMAX(_width, fm.width(KFileInfo::dateTime(0) + "_")));
-    text = i18n("Owner");
-    addColumn(text, QMAX(fm.width(text + "_"), 70));
-    text = i18n("Group");
-    addColumn(text, QMAX(fm.width(text + "_"), 70));
+  addColumn("Pix", pixwidth);
+  setColumnWidthMode(0, Manual);
+  QFontMetrics fm = fontMetrics();
+  QString text = i18n("Name");
+  addColumn(text, QMAX(fm.width(text + "_"), 150));
+  text = i18n("Size");
+  addColumn(text, QMAX(fm.width(text + "_"), 50));
+  setColumnAlignment(2, AlignRight);
+  text = i18n("Permissions");
+  addColumn(text, QMAX(fm.width(text + "_"), 80));
+  text = i18n("Date");
+  int _width = QMAX(fm.width(text + "_"), 50);
+  addColumn(text, QMAX(_width, fm.width(KFileInfo::dateTime(0) + "_")));
+  text = i18n("Owner");
+  addColumn(text, QMAX(fm.width(text + "_"), 70));
+  text = i18n("Group");
+  addColumn(text, QMAX(fm.width(text + "_"), 70));
     
-    setAllColumnsShowFocus(true);
+  setAllColumnsShowFocus(true);
 
-    //setSortMode(Switching);
-    QListView::setSorting(1);
+  //setSortMode(Switching);
+  QListView::setSorting(1);
     
-    connect(this,SIGNAL(currentChanged(QListViewItem*)), SLOT(highlighted(QListViewItem*)));
-    connect(this, SIGNAL(selectionChanged(QListViewItem*)), SLOT(selected(QListViewItem*)));
-    connect(this, SIGNAL(doubleClicked(QListViewItem*)), SLOT(openItem(QListViewItem*)));
+  connect(this,SIGNAL(currentChanged(QListViewItem*)), SLOT(highlighted(QListViewItem*)));
+  connect(this, SIGNAL(selectionChanged(QListViewItem*)), SLOT(selected(QListViewItem*)));
+  connect(this, SIGNAL(doubleClicked(QListViewItem*)), SLOT(openItem(QListViewItem*)));
 
-    //connect(this, SIGNAL(headerClicked(int)), SLOT(reorderFiles(int)));
+  //connect(this, SIGNAL(headerClicked(int)), SLOT(reorderFiles(int)));
 }
 /*
 void KIconDetailList::repaint(bool)
@@ -171,18 +157,7 @@ void KIconDetailList::focusInEvent ( QFocusEvent *)
 
 KIconDetailList::~KIconDetailList()
 {
-  if(pix_folder) 
-    delete pix_folder; 
-  pix_folder = 0;
-  if(pix_lfolder) 
-    delete pix_lfolder; 
-  pix_lfolder = 0;
-  if(pix_file) 
-    delete pix_file; 
-  pix_file = 0;
-  if(pix_lfile) 
-    delete pix_lfile; 
-  pix_lfile = 0;
+debug("KIconDetailList - destructor");
 }
 
 void KIconDetailList::setAutoUpdate(bool f)

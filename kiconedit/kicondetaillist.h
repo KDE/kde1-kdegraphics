@@ -27,6 +27,7 @@
 #include <kfileinfo.h>
 #include <kdir.h>
 #include <qdict.h>
+#include "kiconfilebase.h"
 
 class KListViewItem : public QListViewItem
 {
@@ -41,7 +42,7 @@ public:
 };
 
 
-class KIconDetailList : protected QListView, public KFileInfoContents {
+class KIconDetailList : protected QListView, public KFileInfoContents, public KIconFileBase {
     Q_OBJECT
     
 public:
@@ -70,11 +71,6 @@ protected:
     virtual bool insertItem(const KFileInfo *i, int index);
     virtual void keyPressEvent( QKeyEvent *e);
     virtual void focusInEvent ( QFocusEvent *e );
-
-    static QPixmap *pix_folder;
-    static QPixmap *pix_lfolder;
-    static QPixmap *pix_file;
-    static QPixmap *pix_lfile;
 
     int pixwidth;
 
