@@ -2,17 +2,17 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-01-05 22:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1998-01-28 22:55 CET\n"
+"Last-Translator: Joerg Mertin <joerg@pc50.zrz.TU-Berlin.DE>\n"
+"Last-Translator: Bertrand Leconte <B.Leconte@mail.dotcom.fr>\n"
+"Language-Team: Français\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; \n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: app.cpp:40
 msgid ""
@@ -20,11 +20,12 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+"(c) Richard J. Moore 1997 Distribué sous la GPL. \n"
+"Regarder le fichier LICENSE pour plus de détails\n"
 
 #: app.cpp:41
 msgid "Usage: "
-msgstr "Utilisation: "
+msgstr "Utilisation : "
 
 #: app.cpp:43
 msgid " [url | filename]\n"
@@ -32,7 +33,7 @@ msgstr " [url | fichier]\n"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
-msgstr ""
+msgstr "Sélection d'une zone"
 
 #: canvassize.cpp:12
 msgid "Width"
@@ -52,23 +53,23 @@ msgstr "Ellipse"
 
 #: formatdialog.cpp:21
 msgid "File Format:"
-msgstr "Format du fichier:"
+msgstr "Format du fichier :"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
-msgstr "Nombre de couleurs:"
+msgstr "Nombre de couleurs :"
 
 #: infodialog.cpp:39
 msgid "Colours Used:"
-msgstr "Couleurs utilisées"
+msgstr "Couleurs utilisées :"
 
 #: infodialog.cpp:66
 msgid "Image Width:"
-msgstr "Largeur de l'image"
+msgstr "Largeur de l'image :"
 
 #: infodialog.cpp:82
 msgid "Image Height:"
-msgstr "Hauteur de l'image"
+msgstr "Hauteur de l'image :"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
@@ -80,7 +81,7 @@ msgstr "sansnom.gif"
 
 #: kpaint.cpp:113
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Modifications non-enregistrées"
 
 #: kpaint.cpp:161
 msgid "New Canvas"
@@ -92,15 +93,15 @@ msgstr "Ouvrir fichier"
 
 #: kpaint.cpp:167
 msgid "Save File"
-msgstr "Sauver"
+msgstr "Enregistrer"
 
 #: kpaint.cpp:181 kpaint.cpp:228
 msgid "Zoom In"
-msgstr "Zoomer"
+msgstr "Zoom avant"
 
 #: kpaint.cpp:184 kpaint.cpp:229
 msgid "Zoom Out"
-msgstr "Dézoomer"
+msgstr "Zoom arrière"
 
 #: kpaint.cpp:208
 msgid "Open Image..."
@@ -112,11 +113,11 @@ msgstr "Nouvelle image..."
 
 #: kpaint.cpp:210
 msgid "Save Image..."
-msgstr "Sauver l'image..."
+msgstr "Enregistrer image..."
 
 #: kpaint.cpp:211
 msgid "Save Image As..."
-msgstr "Sauver l'image sous..."
+msgstr "Enregistrer image sous..."
 
 #: kpaint.cpp:212
 msgid "Image Format..."
@@ -128,7 +129,7 @@ msgstr "Ouvrir avec l'URL..."
 
 #: kpaint.cpp:215
 msgid "Save to URL..."
-msgstr "Sauver à l'URL..."
+msgstr "Enregistrer à l'URL..."
 
 #: kpaint.cpp:217
 msgid "New Window"
@@ -136,12 +137,11 @@ msgstr "Nouvelle fenêtre"
 
 #: kpaint.cpp:218
 msgid "Close Window"
-msgstr "Fermer"
+msgstr "Fermer fenêtre"
 
 #: kpaint.cpp:220
-#, fuzzy
 msgid "Exit"
-msgstr "&Editer"
+msgstr "Quitter"
 
 #: kpaint.cpp:223
 msgid "Copy Region"
@@ -153,7 +153,7 @@ msgstr "Couper la région"
 
 #: kpaint.cpp:225
 msgid "Paste Region"
-msgstr "Coller la region"
+msgstr "Coller la région"
 
 #: kpaint.cpp:226
 msgid "Paste As Image"
@@ -169,11 +169,11 @@ msgstr "Informations..."
 
 #: kpaint.cpp:234
 msgid "Edit Palette..."
-msgstr "Editer la palette..."
+msgstr "Modifier la palette..."
 
 #: kpaint.cpp:235
 msgid "Change Colour Depth..."
-msgstr "Changer le nombre de couleurs"
+msgstr "Changer le nombre de couleurs..."
 
 #: kpaint.cpp:238
 msgid "Tool Properties..."
@@ -197,28 +197,27 @@ msgstr "Bombe"
 
 #: kpaint.cpp:246
 msgid "Area Select"
-msgstr ""
+msgstr "Sélectionner une zone"
 
 #: kpaint.cpp:251
 msgid "Show Toolbar"
-msgstr ""
+msgstr "Afficher la barre d'outils"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Afficher la barre d'état"
 
 #: kpaint.cpp:253
-#, fuzzy
 msgid "Save Options"
-msgstr "Options..."
+msgstr "Enregistrer les options"
 
 #: kpaint.cpp:257
 msgid "Release Notes"
-msgstr ""
+msgstr "Release Notes"
 
 #: kpaint.cpp:258
 msgid "About..."
-msgstr "Au sujet de KPaint"
+msgstr "A propos de KPaint"
 
 #: kpaint.cpp:263
 msgid "&Image"
@@ -237,8 +236,8 @@ msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
 msgstr ""
-"Error: impossible d'ouvrir le fichier\n"
-"Impossible d'ouvrir le fichier spécifié."
+"Erreur: impossible d'ouvrir le fichier\n"
+"KPaint n'a pas pu ouvrir le fichier spécifié."
 
 #: kpaint.cpp:411 kpaint.cpp:421 kpaint.cpp:444 kpaint.cpp:459 kpaint.cpp:470
 #: kpaint.cpp:525 kpaint.cpp:556 kpaint.cpp:571 kpaint.cpp:582
@@ -275,8 +274,8 @@ msgid ""
 "KPaint is already accessing a remote file, you must\n"
 "cancel the current remote job or wait for it to complete."
 msgstr ""
-"KPaint accède déjà à un fichier sur un autre système. Annulez l'éxécution\n"
-"actuelle ou attendez que celle ci finisse."
+"KPaint accède déjà à un fichier sur un autre système. Annulez l'exécution\n"
+"actuelle ou attendez que celle-ci finisse."
 
 #: kpaint.cpp:468
 msgid "KPaint: Could not find KFM"
@@ -308,11 +307,11 @@ msgstr "Taille de la feuille"
 
 #: kpaint.cpp:776
 msgid "Open Location:"
-msgstr "Ouvrir URL:"
+msgstr "Ouvrir URL :"
 
 #: kpaint.cpp:808
 msgid "Save to Location:"
-msgstr "Sauver à l'URL:"
+msgstr "Enregistrer à l'URL :"
 
 #: manager.cpp:61
 msgid "Tool Properties"
@@ -328,15 +327,15 @@ msgstr "Propriétés des lignes"
 
 #: properties.cpp:22
 msgid "Fill Properties"
-msgstr "Propriétés de Remplissage"
+msgstr "Propriétés de remplissage"
 
 #: properties.cpp:68
 msgid "Fill Pattern:"
-msgstr "Motif de Remplissage:"
+msgstr "Motif de remplissage :"
 
 #: properties.cpp:74 properties.cpp:240
 msgid "None"
-msgstr "Vide"
+msgstr "Aucun"
 
 #: properties.cpp:75 properties.cpp:235
 msgid "Solid"
@@ -356,11 +355,11 @@ msgstr "Grille"
 
 #: properties.cpp:79
 msgid "Diagonal Lines //"
-msgstr "Ligne diagonale //"
+msgstr "Lignes diagonales //"
 
 #: properties.cpp:80
 msgid "Diagonal Lines \\"
-msgstr "Ligne diagonale \\"
+msgstr "Lignes diagonales \\ "
 
 #: properties.cpp:81
 msgid "Diagonal Grid"
@@ -372,15 +371,15 @@ msgstr "Personnalisé"
 
 #: properties.cpp:94
 msgid "Pattern Filename:"
-msgstr "Nom de fichier du schéma:"
+msgstr "Nom de fichier du schéma :"
 
 #: properties.cpp:104
 msgid "Set Fill Colour..."
-msgstr "Définir la couleur de remplissage"
+msgstr "Définir la couleur de remplissage..."
 
 #: properties.cpp:230
 msgid "Line Style:"
-msgstr "Style de ligne:"
+msgstr "Style de ligne :"
 
 #: properties.cpp:236
 msgid "Dashed"
@@ -400,11 +399,11 @@ msgstr "Tiret Point Point"
 
 #: properties.cpp:244
 msgid "Line Width:"
-msgstr "Largeur des lignes:"
+msgstr "Largeur des lignes :"
 
 #: properties.cpp:254
 msgid "End style:"
-msgstr "Style de fin:"
+msgstr "Style de terminaison :"
 
 #: properties.cpp:259 properties.cpp:272
 msgid "Not Yet"
@@ -412,38 +411,8 @@ msgstr "Pas encore"
 
 #: properties.cpp:266
 msgid "Join style:"
-msgstr "Join style:"
+msgstr "Style de connexion :"
 
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Définir la couleur des lignes..."
-
-#~ msgid "Save File As"
-#~ msgstr "Sauver sous"
-
-#~ msgid "This was a QString"
-#~ msgstr "Ceci etait un QString"
-
-#~ msgid "Cut"
-#~ msgstr "Couper"
-
-#~ msgid "Copy"
-#~ msgstr "Copier"
-
-#~ msgid "Paste"
-#~ msgstr "Insérer"
-
-#~ msgid "Index"
-#~ msgstr "Index"
-
-#~ msgid "&File"
-#~ msgstr "&Fichier"
-
-#~ msgid "&Help"
-#~ msgstr "&Aide"
-
-#~ msgid "Sorry"
-#~ msgstr "Désolé"
-
-#~ msgid "Browse..."
-#~ msgstr "Parcourir..."

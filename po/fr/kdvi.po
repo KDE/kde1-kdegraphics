@@ -2,17 +2,17 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-01-05 22:04+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1998-01-28 23:52 CET\n"
+"Last-Translator: Sebastien Tanguy <sebastien.tanguy@wanadoo.fr>\n"
+"Last-Translator: Bertrand Leconte <B.Leconte@mail.dotcom.fr>\n"
+"Language-Team: Français\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; \n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:515
@@ -24,38 +24,40 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans la génération des policesne sera valable qu'après avoir "
-"redémarré kdvi !"
+"Le changement dans la génération des polices\n"
+"ne sera valable qu'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:233
 msgid ""
 "The change in font path will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement du chemin des polices ne sera valablequ'après avoir redémarré "
-"kdvi !"
+"Le changement du chemin des polices ne sera valable"
+"qu'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:247
 msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans le mode Metafont nesera valable qu'après avoir redémarré "
-"kdvi !"
+"Le changement dans le mode Metafont ne"
+"sera valable qu'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:284
 msgid ""
 "The change in resolution will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement de résolution ne sera valablequ'après avoir redémarré kdvi !"
+"Le changement de résolution ne sera valable"
+"qu'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:301
 msgid ""
 "The change in gamma will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Le changement dans les gamma ne sera valablequ'après avoir redémarré kdvi !"
+"Le changement dans les gamma ne sera valable"
+"qu'après avoir redémarré kdvi !"
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
@@ -83,11 +85,11 @@ msgstr "Im&primer ..."
 
 #: kdvi.cpp:189
 msgid "Zoom &in"
-msgstr "Zoom &in"
+msgstr "Zoom &avant"
 
 #: kdvi.cpp:190
 msgid "Zoom &out"
-msgstr "Zoom &out"
+msgstr "Zoom a&rrière"
 
 #: kdvi.cpp:191
 msgid "&Fit to page"
@@ -103,11 +105,11 @@ msgstr "&Redessiner la page"
 
 #: kdvi.cpp:201
 msgid "&Previous"
-msgstr "&Précédent"
+msgstr "&Précédente"
 
 #: kdvi.cpp:202
 msgid "&Next"
-msgstr "&Suivant"
+msgstr "&Suivante"
 
 #: kdvi.cpp:203
 msgid "&First"
@@ -119,7 +121,7 @@ msgstr "&Dernière"
 
 #: kdvi.cpp:205
 msgid "&Go to ..."
-msgstr "&Aller à ..."
+msgstr "&Aller à..."
 
 #: kdvi.cpp:208
 msgid "&Page"
@@ -127,11 +129,11 @@ msgstr "&Page"
 
 #: kdvi.cpp:213
 msgid "&Preferences ..."
-msgstr "&Préférences ..."
+msgstr "&Préférences..."
 
 #: kdvi.cpp:214
 msgid "&Keys ..."
-msgstr "&Clavier"
+msgstr "Configurer le &clavier"
 
 #: kdvi.cpp:216
 msgid "Make PK-&fonts"
@@ -143,11 +145,11 @@ msgstr "Montrer PS"
 
 #: kdvi.cpp:220
 msgid "Show &Menubar"
-msgstr "Afficher la barre de &Menu"
+msgstr "Afficher la barre de &menu"
 
 #: kdvi.cpp:222
 msgid "Show &Buttons"
-msgstr "Afficher les &Bouttons"
+msgstr "Afficher la barre d'&outils"
 
 #: kdvi.cpp:224
 msgid "Show Page Lis&t"
@@ -155,7 +157,7 @@ msgstr "Afficher la lis&te des pages"
 
 #: kdvi.cpp:226
 msgid "Show &Statusbar"
-msgstr "Aficher la barre de &status"
+msgstr "Afficher la barre d'&état"
 
 #: kdvi.cpp:228
 msgid "Show Scro&llbars"
@@ -171,7 +173,7 @@ msgstr "&A propos de Qt"
 
 #: kdvi.cpp:261
 msgid "Open document ..."
-msgstr "Ouvrir document ..."
+msgstr "Ouvrir document..."
 
 #: kdvi.cpp:262
 msgid "Reload document"
@@ -179,7 +181,7 @@ msgstr "Recharger document"
 
 #: kdvi.cpp:263
 msgid "Print ..."
-msgstr "Imprimer ..."
+msgstr "Imprimer..."
 
 #: kdvi.cpp:265
 msgid "Go to first page"
@@ -211,7 +213,7 @@ msgstr "Petit texte"
 
 #: kdvi.cpp:273
 msgid "Large text"
-msgstr "Texte large"
+msgstr "Grand texte"
 
 #: kdvi.cpp:274
 msgid "Increase magnification"
@@ -219,11 +221,11 @@ msgstr "Augmenter le grossissement"
 
 #: kdvi.cpp:299
 msgid "Scroll window and switch the page"
-msgstr "faire défiler la page et passer à la suivante"
+msgstr "Faire défiler la page et passer à la suivante"
 
 #: kdvi.cpp:308
 msgid "Select page and mark pages for printing"
-msgstr "Sélectionner une page et marquer les pages à impimer"
+msgstr "Sélectionner une page et marquer les pages à imprimer"
 
 #: kdvi.cpp:323
 msgid "X:0000, Y:0000 "
@@ -247,15 +249,15 @@ msgstr "Ouvrir fichier"
 
 #: kdvi.cpp:346 kdvi.cpp:398
 msgid "Print dialog"
-msgstr "Configuration impression"
+msgstr "Configurer l'impression"
 
 #: kdvi.cpp:348 kdvi.cpp:400
 msgid "Zoom in"
-msgstr "Zoom in"
+msgstr "Zoom avant"
 
 #: kdvi.cpp:349 kdvi.cpp:401
 msgid "Zoom out"
-msgstr "Zoom out"
+msgstr "Zoom arrière"
 
 #: kdvi.cpp:350 kdvi.cpp:402
 msgid "Fit window"
@@ -295,7 +297,7 @@ msgstr "Configurer le clavier"
 
 #: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle show PS"
-msgstr "Bascule Affichage PS"
+msgstr "Bascule affichage PS"
 
 #: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle menu bar"
@@ -311,15 +313,15 @@ msgstr "Bascule liste des pages"
 
 #: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle status bar"
-msgstr "Bascule barre de status"
+msgstr "Bascule barre d'état"
 
 #: kdvi.cpp:364 kdvi.cpp:415
 msgid "Toggle scroll bars"
-msgstr "Bascule barre de défilement"
+msgstr "Bascule les barres de défilement"
 
 #: kdvi.cpp:467
 msgid "File open dialog is open"
-msgstr "Dialogue Ouvrir fichier est ouvert"
+msgstr "Dialogue \"Ouvrir fichier\" est ouvert"
 
 #: kdvi.cpp:516
 msgid "Can't read file:\n"
@@ -327,7 +329,7 @@ msgstr "Impossible de lire le fichier:\n"
 
 #: kdvi.cpp:522
 msgid "Opening "
-msgstr "Ouverture"
+msgstr "Ouverture en cours"
 
 #: kdvi.cpp:547
 msgid "Opened "
@@ -387,11 +389,11 @@ msgstr "Barre de menu affichée"
 
 #: kdvi.cpp:766
 msgid "No button bar"
-msgstr "Pas de barre de boutons"
+msgstr "Pas de barre d'outils"
 
 #: kdvi.cpp:766
 msgid "Button bar is shown"
-msgstr "Barre de boutons affichée"
+msgstr "Barre d'outils affichée"
 
 #: kdvi.cpp:780
 msgid "Tool bar is shown"
@@ -403,15 +405,15 @@ msgstr "Pas de barre d'outils"
 
 #: kdvi.cpp:804
 msgid "No status bar"
-msgstr "Pas de barre de status"
+msgstr "Pas de barre d'état"
 
 #: kdvi.cpp:804
 msgid "Status bar is shown"
-msgstr "Barre de status affichée"
+msgstr "Barre d'état affichée"
 
 #: kdvi.cpp:818
 msgid "Scroll bars are shown"
-msgstr "Barres de défilement affichée"
+msgstr "Barres de défilement affichées"
 
 #: kdvi.cpp:818
 msgid "No scroll bars"
@@ -441,7 +443,7 @@ msgstr ""
 
 #: kdvi.cpp:874
 msgid "Page: "
-msgstr "Page: "
+msgstr "Page : "
 
 #: kdvi.cpp:874
 msgid " / "
@@ -449,11 +451,11 @@ msgstr " / "
 
 #: kdvi.cpp:905
 msgid "Large text button set to shrink factor "
-msgstr "Boutton large texte réglé pour facteur de réduction "
+msgstr "Boutton \"grand texte\" réglé pour facteur de réduction "
 
 #: kdvi.cpp:913
 msgid "Small text button set to shrink factor "
-msgstr "Boutton petit texte réglé pour facteur de réduction "
+msgstr "Boutton \"petit texte\" réglé pour facteur de réduction "
 
 #: kdvi.cpp:937
 msgid "File reloaded"
@@ -497,11 +499,11 @@ msgstr "Barre de menu"
 
 #: prefs.cpp:215
 msgid "Button Bar"
-msgstr "Barre de boutons"
+msgstr "Barre d'outils"
 
 #: prefs.cpp:216
 msgid "Status Bar"
-msgstr "Barre de status"
+msgstr "Barre d'état"
 
 #: prefs.cpp:217
 msgid "Page List"
@@ -537,15 +539,15 @@ msgstr "Chemin polices PK"
 
 #: prefs.cpp:301
 msgid "Shrink factor for small text"
-msgstr "Facteur de réduction pour le petit texte"
+msgstr "Facteur de réduction pour le bouton \"petit texte\""
 
 #: prefs.cpp:306
 msgid "Shrink factor for large text"
-msgstr "Facteur de réduction pour le grand texte"
+msgstr "Facteur de réduction pour le bouton \"grand texte\""
 
 #: prefs.cpp:319
 msgid "Fonts"
-msgstr "polices"
+msgstr "Polices"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"
@@ -553,11 +555,11 @@ msgstr "Afficher le postscript"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
-msgstr ""
+msgstr "Postcript antialiased"
 
 #: prefs.cpp:345
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 #: prefs.cpp:358
 msgid "Rendering"
@@ -573,7 +575,7 @@ msgstr "Imprimer"
 
 #: print.cpp:63
 msgid "Print "
-msgstr "Imprimer"
+msgstr "Imprimer "
 
 #: print.cpp:122
 msgid "Cannot open dvi file!"
@@ -597,15 +599,15 @@ msgstr "Imprimante par défaut"
 
 #: printData.cpp:32
 msgid "&File Name:"
-msgstr "Nom &Fichier:"
+msgstr "Nom &Fichier :"
 
 #: printData.cpp:59
 msgid "&All"
-msgstr "&Tous"
+msgstr "&Toutes"
 
 #: printData.cpp:66
 msgid "&Current"
-msgstr "&Courant"
+msgstr "&Courante"
 
 #: printData.cpp:72
 msgid "&Marked"
@@ -617,7 +619,7 @@ msgstr "&Intervalle"
 
 #: printData.cpp:99
 msgid "Re&verse"
-msgstr "In&verse"
+msgstr "In&versée"
 
 #: printData.cpp:108
 msgid "1 page on sheet"
@@ -633,7 +635,7 @@ msgstr "4 pages par feuilles"
 
 #: printData.cpp:116
 msgid "Fill rows"
-msgstr "remplir les rangs"
+msgstr "Remplir les lignes"
 
 #: printData.cpp:117
 msgid "Fill columns"
@@ -657,7 +659,7 @@ msgstr "Imprimer sur"
 
 #: printSetup.cpp:24
 msgid "Print Setup"
-msgstr "Options d'impressions"
+msgstr "Options d'impression"
 
 #: printSetupData.cpp:43
 msgid "Printers"
@@ -673,7 +675,7 @@ msgstr "Utiliser ps&nup"
 
 #: printSetupData.cpp:72
 msgid "Use &mpage"
-msgstr "utiliser &mpage"
+msgstr "Utiliser &mpage"
 
 #: printSetupData.cpp:92
 msgid "&Add"
@@ -685,12 +687,13 @@ msgstr "Enleve&r"
 
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
-msgstr "Commande de &spool"
+msgstr "Commande d'&impression :"
 
 #: printSetupData.cpp:128
 msgid "n-up"
-msgstr "n-up"
+msgstr "Multipage"
 
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Méthode d'impression"
+
