@@ -241,7 +241,7 @@ void WView::loadURL()
 
 void WView::aboutBox()
 {
-	QMessageBox::message("About kview", "kview 0.9: Sirtaj Kang"
+	QMessageBox::message("About kview", "kview 0.10: Sirtaj Kang"
 			" 1996.", "Ok"); 
 }
 

@@ -1,6 +1,6 @@
 
-kview 0.9
----------
+kview 0.10
+----------
 
 Yet another tentative release of kview, the KDE image viewer.
 
@@ -46,6 +46,12 @@ Where: http://www.ccil.org/~esr/home.html
 Format: JPEG, PNG
 Library: libgr (built and tested with 2.0.9-2.0.11)
 Where: sunsite
+
+SINCE 0.9
+---------
+
+Fixed resize and Makefile bugs
+
 
 WHAT'S BEEN ADDED SINCE 0.7
 ---------------------------

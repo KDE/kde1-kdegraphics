@@ -27,7 +27,8 @@ private:
 		QPixmap *image;
 		QWMatrix matrix;
 		int	oldContext;
-	
+
+		void fitToPixmap();
 public:
 	///
 	WViewPort(const char *imagefile=0, QWidget *parent=0, 
@@ -55,7 +56,7 @@ signals:
 	///
 	void resized();
 	//@}
-	
+
 protected:
 
 	///

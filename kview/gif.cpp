@@ -16,12 +16,6 @@
 // * Buffers entire image in mem before moving to QImage
 // * Skipped IODevice completely. How to get around this?
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-#ifdef HAVE_LIBGIF // without it doesn't make sense
-
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -140,19 +134,11 @@ void read_gif_file(QImageIO * imageio)
 		PrintGifError();
 		return;
 	    }
-		if ( ExtCode == 249 )	// Graphic Control Ext
-		{
-			// extract tranparent pixel stuff
-		}
 	    while (Extension != NULL) {
 		if (DGifGetExtensionNext(GifFile, &Extension) == GIF_ERROR) {
 		    PrintGifError();
 		    return;
 		}
-			if ( ExtCode == 249 )	// Graphic Control Ext
-			{
-				// extract tranparent pixel stuff
-			}
 	    }
 	    break;
 	case TERMINATE_RECORD_TYPE:
@@ -192,5 +178,3 @@ void read_gif_file(QImageIO * imageio)
 	PrintGifError();
 
 }				/*read_gif_file */
-
-#endif

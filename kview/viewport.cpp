@@ -62,8 +62,7 @@ bool WViewPort::load(const char *filename)
 
 		matrix.reset();
 
-		emit resized();
-	
+		fitToPixmap();	
 	} else
 		ret = 1;
 
@@ -87,7 +86,7 @@ void WViewPort::scale(float x, float y)
 
 	QApplication::restoreOverrideCursor();
 	
-	emit resized();
+	fitToPixmap();
 }
 
 
@@ -100,5 +99,11 @@ void WViewPort::rotate( float angle )
 
 	QApplication::restoreOverrideCursor();
 
+	fitToPixmap();
+}
+
+void WViewPort::fitToPixmap()
+{
+	resize( pixmap()->width(), pixmap()->height() );
 	emit resized();
 }

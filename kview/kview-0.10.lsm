@@ -1,7 +1,7 @@
 Begin3
 Title:          kview
-Version:        0.9
-Entered-Date:	Sat, 15 March 1997
+Version:        0.10
+Entered-Date:	Sat, 23 April 1997
 Description:    Qt-based image viewer, part of the KDE project.
 Keywords:       X11 Qt gif jpeg bmp png image viewer KDE
 Author:         Sirtaj Singh Kang (ssk@physics.unimelb.edu.au)
