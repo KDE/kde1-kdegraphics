@@ -1,8 +1,6 @@
 # KTranslator Generated File
-
-#mostly translated by Piotr Roszatycki <dexter@fnet.pl>
-#latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
-
+# mostly translated by Piotr Roszatycki <dexter@fnet.pl>
+# latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
@@ -40,9 +38,9 @@ msgstr ""
 "\n"
 "Program jest udostepniany z nadziej±, ¿e oka¿e siê u¿yteczny\n"
 "ale BEZ JAKIEJKOLWIEK GWARANCJI; nawet bez wynikaj±cej gwarancji\n"
-"¿e bêdzie SPRZEDAWALNY lub bêdzie DOPASOWANY DO JAKIEGOKOLWIEK KONKRETNEGO CELU.\n"
-"Wiêcej szczegó³ów w GNU General Public License."
-"\n"
+"¿e bêdzie SPRZEDAWALNY lub bêdzie DOPASOWANY DO JAKIEGOKOLWIEK KONKRETNEGO "
+"CELU.\n"
+"Wiêcej szczegó³ów w GNU General Public License.\n"
 "Powiniene¶ by³ otrzymaæ kopie GNU General Public License\n"
 "razem z tym programem. Je¶li nie to napisz do Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
@@ -646,8 +644,7 @@ msgstr "U¿ycie:"
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr ""
-"[nazwa_pliku][prze³±czniki]\n"
+msgstr "[nazwa_pliku][prze³±czniki]\n"
 
 #: main.cpp:28
 #, fuzzy

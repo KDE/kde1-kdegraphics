@@ -1,8 +1,6 @@
 # KTranslator Generated File
-
-#mostly translated by Piotr Roszatycki <dexter@fnet.pl>
-#latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
-
+# mostly translated by Piotr Roszatycki <dexter@fnet.pl>
+# latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
