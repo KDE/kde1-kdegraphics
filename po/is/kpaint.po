@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-15 01:52+0100\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-11-04 10:00-0500\n"
 "Last-Translator: Thorarinn R. Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"

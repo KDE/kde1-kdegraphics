@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-11-15 01:52+0100\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-09-26 15:30+0001\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"

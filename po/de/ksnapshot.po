@@ -3,7 +3,7 @@
 #
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-11-14 01:52+0100\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-11-15 11:40+0100\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: de <LL@li.org>\n"

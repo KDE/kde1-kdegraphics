@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-11-13 20:15+0100\n"
-"Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 "Last-Translator:Thomas Diehl <th_diehl@csi.com>\n"
+"Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:516
