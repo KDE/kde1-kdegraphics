@@ -368,7 +368,7 @@ msgstr "Nome de Ficheiro do Padrão:"
 
 #: properties.cpp:104
 msgid "Set Fill Colour..."
-msgstr "Especificar Cor de Enchimento..."
+msgstr "Cor de Preenchimento..."
 
 #: properties.cpp:230
 msgid "Line Style:"
@@ -392,7 +392,7 @@ msgstr "Traço Ponto Ponto"
 
 #: properties.cpp:244
 msgid "Line Width:"
-msgstr "Espessura de Linha:"
+msgstr "Espessura:"
 
 #: properties.cpp:254
 msgid "End style:"
@@ -408,4 +408,4 @@ msgstr "Estilo de junção:"
 
 #: properties.cpp:278
 msgid "Set Line Colour..."
-msgstr "Especificar Cor de Linha..."
+msgstr "Cor da Linha..."
