@@ -74,6 +74,11 @@ install: kview
 	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/kview
 	(cd doc && $(MAKE) install)
 
+uninstall:
+	rm -f $(BINPATH)/kview
+	rm -f $(LNKPATH)/kview.kdelnk
+	(cd doc && $(MAKE) uninstall)
+
 srcdoc:	
 	cd doc; doc++ -j -H -d $(SRCDOCPATH) ../wview.h ../viewport.h \
 	../kerror.h

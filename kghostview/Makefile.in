@@ -32,7 +32,7 @@ DEFS = -DPICS_PATH=\"$(PICSDIR)/\" -DDOCS_PATH=\"$(DOCSDIR)/\"
 
 .cpp.o:
 	$(CXX) $(CXXFLAGS) $(DEFS) -c $<
-	
+
 .c.o:
 	$(CC) -c $(CFLAGS) $(DEFS) $<
 
@@ -57,6 +57,10 @@ install:
 	$(INSTALL) $(TARGET) $(BINDIR)
 	[ -d $(DOCSDIR) ] || $(INSTALL_DIR) $(DOCSDIR)
 	$(INSTALL_DATA) ./doc/kghostview.html $(DOCSDIR)
+
+uninstall:
+	rm -f $(BINDIR)/$(TARGET)
+	rm -f $(DOCSDIR)/kghostview.html
 
 clean:
 	rm -f core *~ *.bak *.BAK $(SRCMETA) $(OBJS) $(TARGET)

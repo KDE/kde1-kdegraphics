@@ -12,3 +12,8 @@ install:
 	 echo "$(INSTALL_DATA) $$i $(DOCDIR)"; \
 	 $(INSTALL_DATA) "$$i" $(DOCDIR); \
 	done
+
+uninstall:
+	for i in $(FILES); do \
+	 rm -f $(FILES)/$$i ; \
+	done
