@@ -18,6 +18,16 @@
 ##   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 ##
 
+## IMPORTANT NOTE:
+## Please do not modify this file unless you expect your modifications to be
+## carried into every other module in the repository. If you decide that you
+## really want to modify it, contact coolo@kde.org mentioning that you have
+## and that the modified file should be committed to every module.
+##
+## Single-module modifications are best placed in configure.in for kdelibs
+## and kdebase and configure.in.1 for the rest. 
+
+
 ## ------------------------------------------------------------------------
 ## Find a file (or one of more files in a list of dirs)
 ## ------------------------------------------------------------------------
@@ -137,8 +147,14 @@ if test -n "$kde_libraries"; then
 fi
 
 if test -n "$qt_libraries"; then
-  KDE_TEST_RPATH="$KDE_TEST_RPATH -rpath $qt_libraries $KDE_EXTRA_RPATH"
+  KDE_TEST_RPATH="$KDE_TEST_RPATH -rpath $qt_libraries"
 fi
+
+if test -n "$x_libraries"; then
+  KDE_TEST_RPATH="$KDE_TEST_RPATH -rpath $x_libraries"
+fi
+
+KDE_TEST_RPATH="$KDE_TEST_RPATH $KDE_EXTRA_RPATH"
 
 ac_compile='${CXX-g++} -c $CXXFLAGS $all_includes $CPPFLAGS conftest.$ac_ext'
 if AC_TRY_EVAL(ac_compile); then
@@ -924,32 +940,6 @@ else
 fi
 ])
 
-AC_DEFUN(AC_FIND_TIFF,
-   [AC_MSG_CHECKING([for libtiff])
-AC_CACHE_VAL(ac_cv_lib_tiff,
-[ac_save_LIBS="$LIBS"
-LIBS="$all_libraries -ltiff -lX11 $LIBSOCKET"
-AC_TRY_LINK(dnl
-[
-#include<tiff.h>
-],
-            [return (TIFFOpen( "", "r") == 0); ],
-            eval "ac_cv_lib_tiff=-ltiff",
-            eval "ac_cv_lib_tiff=no")
-LIBS="$ac_save_LIBS"
-])dnl
-if eval "test ! \"`echo $ac_cv_lib_tiff`\" = no"; then
-  AC_DEFINE_UNQUOTED(HAVE_LIBTIFF)
-  LIBTIFF="$ac_cv_lib_tiff"
-  AC_SUBST(LIBTIFF)
-  AC_MSG_RESULT($ac_cv_lib_tiff)
-else
-  AC_MSG_RESULT(no)
-  LIBTIFF=""
-  AC_SUBST(LIBTIFF)
-fi
-])
-
 AC_DEFUN(AC_FIND_JPEG,
    [AC_MSG_CHECKING([for jpeglib])
 AC_CACHE_VAL(ac_cv_lib_jpeg,
@@ -1347,14 +1337,14 @@ AC_DEFUN(AM_KDE_WITH_NLS,
          [test -n "`$ac_dir/$ac_word --version 2>&1 | grep 'GNU gettext'`"], msgfmt)
       AC_PATH_PROG(GMSGFMT, gmsgfmt, $MSGFMT)
 
-      if test -z "`$MSGFMT 2>&1 | grep 'GNU gettext'`"; then
+      if test -z "`$MSGFMT --version 2>&1 | grep 'GNU gettext'`"; then
         AC_MSG_RESULT([found msgfmt program is not GNU msgfmt; ignore it])
         msgfmt=":"
       fi
+      AC_SUBST(MSGFMT)
 
       AM_PATH_PROG_WITH_TEST_KDE(XGETTEXT, xgettext,
 	[test -z "`$ac_dir/$ac_word -h 2>&1 | grep '(HELP)'`"], :)
-      AC_SUBST(MSGFMT)
 
       dnl Test whether we really found GNU xgettext.
       if test "$XGETTEXT" != ":"; then
@@ -1983,7 +1973,7 @@ fi
 
 AC_DEFUN(KDE_CHECK_LIBPTHREAD,
 [
-AC_CHECK_LIB(pthread, main, [LIBPTHREAD="-lpthread"], LIBPTHREAD= )
+AC_CHECK_LIB(pthread, pthread_create, [LIBPTHREAD="-lpthread"], LIBPTHREAD= )
 AC_SUBST(LIBPTHREAD)
 ])
 
@@ -2142,7 +2132,8 @@ AC_DEFUN(KDE_CHECK_STL,
 ])
 
 AC_DEFUN(AC_FIND_QIMGIO,
-   [AC_MSG_CHECKING([for qimgio])
+   [AC_REQUIRE([AC_FIND_JPEG])
+AC_MSG_CHECKING([for qimgio])
 AC_CACHE_VAL(ac_cv_lib_qimgio,
 [ac_save_LIBS="$LIBS"
 LIBS="$all_libraries -lqimgio -lpng -lz -lqt $LIBJPEG -lX11 $LIBSOCKET"
