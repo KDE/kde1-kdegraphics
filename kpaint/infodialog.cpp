@@ -20,7 +20,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   tmpQLabel = new QLabel( this, "Label_3" );
   tmpQLabel->setGeometry( 30, 10, 100, 30 );
-  tmpQLabel->setText( "Colour Depth:" );
+  tmpQLabel->setText( klocale->translate( "Colour Depth:" ) );
   tmpQLabel->setAlignment( 289 );
   tmpQLabel->setMargin( -1 );
 
@@ -62,7 +62,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   tmpQLabel = new QLabel( this, "Label_9" );
   tmpQLabel->setGeometry( 30, 120, 100, 30 );
-  tmpQLabel->setText( "Image Width:" );
+  tmpQLabel->setText( klocale->translate( "Image Width:" ) );
   tmpQLabel->setAlignment( 289 );
   tmpQLabel->setMargin( -1 );
 
@@ -78,7 +78,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   tmpQLabel = new QLabel( this, "Label_11" );
   tmpQLabel->setGeometry( 30, 160, 100, 30 );
-  tmpQLabel->setText( ("Image Height:") );
+  tmpQLabel->setText( klocale->translate("Image Height:") );
   tmpQLabel->setAlignment( 289 );
   tmpQLabel->setMargin( -1 );
 
@@ -90,7 +90,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
   height->setAlignment(289);
   height->setMargin(-1);
 
-  okButton= new QPushButton(("Dismiss"), this);
+  okButton= new QPushButton(klocale->translate("Dismiss"), this);
 
   okButton->move(200, 200);
   resize( 360, 250 );

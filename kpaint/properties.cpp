@@ -20,8 +20,8 @@ propertiesDialog::propertiesDialog(int pages,
   fillProps= new fillPropertiesWidget(this);
   addTab(fillProps, klocale->translate("Fill Properties"));
 
-  setCancelButton();
-  setApplyButton();
+  setCancelButton( klocale->translate( "Cancel" ) );
+  setApplyButton( klocale->translate( "Apply" ));
   setPages(pages);
 
 }
