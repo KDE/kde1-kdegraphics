@@ -26,6 +26,11 @@ INSTALL_DIR = @INSTALL@ -d -m 755
 INSTALL_DATA= @INSTALL@ -m 644
 INSTALL_BIN = @INSTALL@ -m 755
 
+install_root = @install_root@
+kde_bindir = @kde_bindir@
+appsdir = @kde_appsdir@/Graphics
+kde_icondir = @kde_icondir@
+kde_minidir = @kde_minidir@
 #
 # End Configuration
 #
@@ -87,22 +92,23 @@ METAS=	canvas.moc \
 all:	kpaint
 
 install: all
-	$(INSTALL_DIR) $(prefix)/bin
-	$(INSTALL_BIN) kpaint $(prefix)/bin
-	$(INSTALL_DIR) $(prefix)/share/icons
+	$(INSTALL_DIR) $(kde_bindir)
+	$(INSTALL_BIN) kpaint $(kde_bindir)
+	$(INSTALL_DIR) $(kde_icondir)
 	(cd doc ; $(MAKE) install)
 	(cd toolpics ; $(MAKE) install)
-	$(INSTALL_DIR) $(prefix)/share/applnk/Graphics
-	$(INSTALL_DATA) Paint.kdelnk $(prefix)/share/applnk/Graphics 
-	$(INSTALL_DATA) kpaint.xpm $(prefix)/share/icons
-	$(INSTALL_DATA) mini-kpaint.xpm $(prefix)/share/icons/mini/kpaint.xpm
+	$(INSTALL_DIR) $(appsdir)
+	$(INSTALL_DATA) Paint.kdelnk $(appsdir)
+	$(INSTALL_DATA) kpaint.xpm $(kde_icondir)
+	$(INSTALL_DATA) mini-kpaint.xpm $(kde_minidir)/kpaint.xpm
 
 uninstall:
-	-rm -f $(prefix)/bin/kpaint
-	-rm -rf $(prefix)/share/doc/HTML/kpaint
-	-rm -f $(prefix)/share/applnk/Graphics/Paint.kdelnk
-	-rm -f $(prefix)/share/icons/kpaint.xpm
-	-rm -f $(prefix)/share/icons/mini/kpaint.xpm
+	-rm -f $(kde_bindir)/kpaint
+	(cd doc && $(MAKE) uninstall)
+	(cd toolpics && $(MAKE) uninstall)
+	-rm -f $(appsdir)/Paint.kdelnk
+	-rm -f $(kde_icondir)/kpaint.xpm
+	-rm -f $(kde_minidir)/kpaint.xpm
 
 Makefile:	Makefile.in
 	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status

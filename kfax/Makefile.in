@@ -5,6 +5,7 @@ qt_libraries = @qt_libraries@
 top_builddir = ..
 LIBTOOL = @LIBTOOL@
 KDE_RPATH = @KDE_RPATH@
+install_root = @install_root@
 
 prefix  = @prefix@
 exec_prefix = @exec_prefix@
@@ -103,6 +104,8 @@ uninstall:
 	rm -f $(APPSDIR)/KFax.kdelnk
 	rm -f $(ICONDIR)/kfax.xpm
 	rm -f $(MINIDIR)/kfax.xpm
+	rm -f $(PICSDIR)/kfax.tif
+	rm -f $(PICSDIR)/kfaxlogo.xpm
 
 ####### Explicit dependencies
 

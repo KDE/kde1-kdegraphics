@@ -40,8 +40,9 @@ LLIBPNG= -lpng -lz
 #
 
 prefix  = @prefix@
-BINPATH = $(prefix)/bin/
-LNKPATH = $(prefix)/share/applnk/Utilities
+install_root = @install_root@
+BINPATH = @kde_bindir@
+LNKPATH = @kde_appsdir@/Utilities
 
 # needs to be changed if you make srcdoc (requires DOC++)
 
@@ -59,12 +60,14 @@ SOURCE = main.cpp wview.cpp viewport.cpp formats.cpp QwViewport.cpp \
 	 kerror.cpp fileman.cpp confighandler.cpp  $(FORMATSRC)
 SRCDOCFILES = wview.h viewport.h kerror.h
 
+.SUFFIXES: .moc
+
 all: kview
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(LINEEDIT) $(FORMATS) $(INCLUDE) -c -o $@ $<
 
-%.moc: %.h
+.h.moc:
 	$(MOC) $< -o $@
 
 kview: $(OBJS)
@@ -97,7 +100,7 @@ install: kview
 
 uninstall:
 	rm -f $(BINPATH)/kview
-	rm -f $(LNKPATH)/kview.kdelnk
+	rm -f $(LNKPATH)/KView.kdelnk
 	(cd doc && $(MAKE) uninstall)
 
 srcdoc:	

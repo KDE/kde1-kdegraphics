@@ -29,6 +29,7 @@ INSTALL_DIR = $(install) -d -m 0755
 INSTALL_DIR_PRIVATE = $(install) -d -m 0700
 
 prefix = @prefix@
+install_root = @install_root@
 exec_prefix = @exec_prefix@
 BINDIR = @kde_bindir@
 LNKDIR = @kde_appsdir@/Graphics
@@ -83,6 +84,6 @@ uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	rm -rf $(DOCSDIR)/kfract
 	rm -f $(LNKDIR)/Fractal.kdelnk
-	rm -f $(ICONDIR)/kfract
+	rm -f $(ICONDIR)/kfract.xpm
 
 
