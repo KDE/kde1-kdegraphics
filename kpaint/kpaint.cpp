@@ -31,6 +31,7 @@
 #include <unistd.h>
 #include <time.h>
 
+
 extern MyApp *kpaintApp;
 extern FormatManager *formatMngr;
 extern int openwins;
@@ -362,10 +363,18 @@ void KPaint::initMenus()
   options->insertItem( klocale->translate("Show Status Bar"), ID_SHOWSTATUSBAR);
   options->insertItem( klocale->translate("Save Options"), ID_SAVEOPTIONS);
 
+/*
   QPopupMenu *help = new QPopupMenu;
   help->insertItem( klocale->translate("Contents"), ID_HELPCONTENTS);
   help->insertItem( klocale->translate("Release Notes"), ID_RELEASENOTES);
   help->insertItem( klocale->translate("About..."), ID_ABOUT);
+*/
+  QPopupMenu *help = kapp->getHelpMenu(true, QString(i18n("Paint"))
+                                         + " " + APPVERSTR
+                                         + i18n("\n\nby ") + APPAUTHOR 
+                                         + "(" 
+                                         + APPAUTHOREMAIL 
+                                         + ")" );  
 
   menu = new KMenuBar( this );
   menu->insertItem( klocale->translate("&File"), file );
@@ -388,6 +397,7 @@ void KPaint::initMenus()
 
 void KPaint::handleCommand(int command)
 {
+
   switch (command) {
   case ID_NEW:
     fileNew();
@@ -476,17 +486,20 @@ void KPaint::handleCommand(int command)
     writeOptions();
     break;
 
+/*
   // Help
   case ID_ABOUT:
     helpAbout();
     break;
+
   case ID_HELPCONTENTS:
     helpContents();
     break;
   case ID_RELEASENOTES:
     helpIndex();
     break;
-  }
+*/ 
+ }
 }
 
 bool KPaint::loadLocal(const char *filename_, const char *url_)
@@ -1073,10 +1086,13 @@ KDEBUG(KDEBUG_INFO, 3000, "helpAbout()\n");
   QString aMessageHeader( klocale->translate( "About" ) );
   aMessageHeader + APPNAME;
 
-  QMessageBox::message(aMessageHeader,
-		       APPVERSTR "\n" APPAUTHOR "\n" APPAUTHOREMAIL);
+  QMessageBox::about( NULL, kapp->getCaption(), "KPaint" ); 
+
+//  QMessageBox::message(aMessageHeader,
+//		       APPVERSTR "\n" APPAUTHOR "\n" APPAUTHOREMAIL);
 }
 
+/*
 void KPaint::helpContents()
 {
    QString filename(APPNAME "/" APPNAME ".html" );
@@ -1093,6 +1109,6 @@ KDEBUG(KDEBUG_INFO, 3000, "helpIndex()\n");
 
    kpaintApp->invokeHTMLHelp(filename, topic);
 }
-
+*/
 
 #include "kpaint.moc"

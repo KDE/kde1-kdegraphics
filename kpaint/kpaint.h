@@ -150,7 +150,7 @@ private:
 #define ID_OPTIONS 110
 #define ID_EXIT 111
 #define ID_HELPCONTENTS 112
-#define ID_ABOUT 113
+#define ID_ABOUT 113 
 #define ID_OPENURL 114
 #define ID_SAVEURL 115
 #define ID_SHOWTOOLBAR 116

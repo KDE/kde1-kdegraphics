@@ -99,7 +99,7 @@ install: all
 	(cd doc ; $(MAKE) install)
 	(cd toolpics ; $(MAKE) install)
 	$(INSTALL_DIR) $(appsdir)
-	$(INSTALL_DATA) Paint.kdelnk $(appsdir)
+	$(INSTALL_DATA) kpaint.kdelnk $(appsdir)
 	$(INSTALL_DATA) kpaint.xpm $(kde_icondir)
 	$(INSTALL_DATA) mini-kpaint.xpm $(kde_minidir)/kpaint.xpm
 
@@ -107,7 +107,7 @@ uninstall:
 	-rm -f $(kde_bindir)/kpaint
 	(cd doc && $(MAKE) uninstall)
 	(cd toolpics && $(MAKE) uninstall)
-	-rm -f $(appsdir)/Paint.kdelnk
+	-rm -f $(appsdir)/kpaint.kdelnk
 	-rm -f $(kde_icondir)/kpaint.xpm
 	-rm -f $(kde_minidir)/kpaint.xpm
 
