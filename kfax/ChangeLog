@@ -1,3 +1,8 @@
+Sun May  3 16:48:13 1998  Bernd Johannes Wuebben  <wuebben@math.cornell.edu>
+
+	* fixed print dialog 
+	  adjusted layout for i18n
+
 Sun Oct  5 22:17:09 1997  Bernd Johannes Wuebben  <wuebben@petit.cornell.edu>
 
 	* added support for printing all fax formats at all printer page

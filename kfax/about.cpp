@@ -57,7 +57,7 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
   QString s;
   s = i18n("Version ");
   s += KFAXVERSION \
-  "\nCopyright (C) 1997\nBernd Johannes Wuebben\n"\
+  "\nCopyright (C) 1997,98\nBernd Johannes Wuebben\n"\
   "wuebben@kde.org\n\n";
 
   l = new QLabel(s.data(), this);

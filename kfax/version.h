@@ -1,1 +1,1 @@
-#define KFAXVERSION "1.0"
+#define KFAXVERSION "1.1"

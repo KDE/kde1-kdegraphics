@@ -75,12 +75,12 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
 
 
   selectfile = new QPushButton (i18n("Browse"),this);
-  selectfile->setGeometry(25,140,60,BUTTONHEIGHT);
+  selectfile->setGeometry(25,140,100,BUTTONHEIGHT);
   selectfile->setEnabled(FALSE);
-
+  connect(selectfile,SIGNAL(clicked()),this,SLOT(choosefile()));
 
   filename = new QLineEdit(bg,"command");
-  filename->setGeometry(85,130,255,25);
+  filename->setGeometry(125,130,215,25);
   filename->setEnabled(FALSE);  
 
   pagesizelabel = new QLabel (i18n("Page Size:"),bg);
@@ -88,7 +88,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   pagesizelabel->setEnabled(TRUE);
 
   papercombo = new QComboBox(bg,"pagesizecombo");
-  papercombo->setGeometry(85,175,220,25);
+  papercombo->setGeometry(125,175,220,25);
   papercombo->insertItem(US_LETTER);
   papercombo->insertItem(US_LEGAL);
   papercombo->insertItem(US_EXECUTIVE);
@@ -117,7 +117,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
 
   xmarginlabel = new QLabel(this);
   xmarginlabel->setText(i18n("Horizontal:"));
-  xmarginlabel->setGeometry(45,285,70,25);
+  xmarginlabel->setGeometry(25,285,105,25);
   xmarginlabel->setEnabled(FALSE);
 
   xmarginedit = new QLineEdit(this);
@@ -126,11 +126,11 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
 
   ymarginlabel = new QLabel(this);
   ymarginlabel->setText(i18n("Vertical:"));
-  ymarginlabel->setGeometry(185,285,50,25);
+  ymarginlabel->setGeometry(185,285,100,25);
   ymarginlabel->setEnabled(FALSE);
 
   ymarginedit = new QLineEdit(this);
-  ymarginedit->setGeometry(245,285,50,25);
+  ymarginedit->setGeometry(295,285,50,25);
   ymarginedit->setEnabled(FALSE);
 
   bg->setGeometry(10,10,380,320);
