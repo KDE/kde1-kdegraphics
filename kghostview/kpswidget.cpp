@@ -1,3 +1,5 @@
+
+#include <qdrawutl.h>
 #include <kmisc.h>
 #include "kpswidget.h"
 #include "kpswidget.moc"
@@ -12,6 +14,26 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	CHECK_PTR( fullView );
 	gs_window = fullView->winId();
 	gs_display = fullView->x11Display();
+	
+	topFrame = new QFrame ( this );
+	CHECK_PTR( topFrame );
+	topFrame->setFrameStyle( QFrame::HLine | QFrame::Raised );
+	topFrame->setLineWidth(1);
+	
+	leftFrame = new QFrame ( this );
+	CHECK_PTR( leftFrame );
+	leftFrame->setFrameStyle( QFrame::VLine | QFrame::Raised );
+	leftFrame->setLineWidth(1);
+	
+	rightFrame = new QFrame ( this );
+	CHECK_PTR( rightFrame );
+	rightFrame->setFrameStyle( QFrame::VLine | QFrame::Sunken );
+	rightFrame->setLineWidth(1);
+	
+	bottomFrame = new QFrame ( this );
+	CHECK_PTR( bottomFrame );
+	bottomFrame->setFrameStyle( QFrame::HLine | QFrame::Sunken );
+	bottomFrame->setLineWidth(1);
 	
 	horScrollBar = new QScrollBar( QScrollBar::Horizontal, this );
 	CHECK_PTR( horScrollBar );
@@ -30,12 +52,17 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	//
 	
 	messages = new MessagesDialog( 0, "messages" );
-	show_messages = FALSE;
+	
+	//
+	//	INTERPRETER CONFIG DIALOG
+	//
+	
+	intConfig = new InterpreterDialog( 0, "intConfig" );
 
 	// Initialise class variables
 	// I usually forget a few important ones resulting in nasty seg. faults.
 
-	busy=FALSE;
+	background_pixmap = None;
 	llx = 0;
 	lly = 0;
 	urx = 0;
@@ -81,6 +108,9 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 KPSWidget::~KPSWidget()
 {
 	stopInterpreter();
+	
+	if ( background_pixmap != None )
+		XFreePixmap( gs_display, background_pixmap );
 }
 
 //*********************************************************************************
@@ -204,6 +234,10 @@ Bool KPSWidget::sendPS( FILE *fp, long begin, unsigned int len, Bool close )
 //
 //*********************************************************************************
 
+void KPSWidget::paintEvent(QPaintEvent *)
+{
+}
+
 
 void KPSWidget::resizeEvent(QResizeEvent *)
 {
@@ -211,8 +245,10 @@ void KPSWidget::resizeEvent(QResizeEvent *)
 	
 	//printf("fullview width = %d height=%d \n", fullView->width(),
 	//fullView->height() );
-
- if( width() > fullView->width() &&  height() > fullView->height() ) {
+	
+	int frame_width, frame_height;
+	
+	if( width() > fullView->width() &&  height() > fullView->height() ) {
 		horScrollBar->hide();
 		vertScrollBar->hide();
 		clip_x= (int)( width()- fullView->width() )/2;
@@ -278,6 +314,26 @@ void KPSWidget::resizeEvent(QResizeEvent *)
 	} else
 		patch->hide();
 	
+	if( clip_width == fullView->width() ) {
+		frame_width = width();
+		frame_height = height();
+	} else {
+		frame_width = clip_width;
+		frame_height = clip_height;
+	}
+	
+	topFrame->setGeometry(0, 0,
+		frame_width, 1);
+		
+	leftFrame->setGeometry(0, 0,
+		1, frame_height);
+		
+	rightFrame->setGeometry(frame_width-1, 0,
+		1, frame_height);
+		
+	bottomFrame->setGeometry(0, frame_height-1,
+		frame_width, 1);
+	
 	movePage(); 
 }
 
@@ -304,6 +360,21 @@ void KPSWidget::layout()
  *	SLOTS
  *
  **********************************************************************************/
+
+bool KPSWidget::readDown()
+{
+	int new_value;
+	
+	if( vertScrollBar->value() == vertScrollBar->maxValue() )
+		return False;
+	
+	new_value = vertScrollBar->value()+height()-50;
+	if(new_value > vertScrollBar->maxValue())
+		new_value = vertScrollBar->maxValue();
+	
+	vertScrollBar->setValue( new_value );
+	return True;
+}
 
 void KPSWidget::scrollRight()
 {
@@ -359,6 +430,7 @@ void KPSWidget::movePage()
 	fullView->setGeometry(-scroll_x_offset+clip_x, 
 		-scroll_y_offset+clip_y, fullView->width(),
 		fullView->height());
+	repaint();
 }
 	
 	
@@ -391,25 +463,28 @@ Bool KPSWidget::computeSize()
 	switch (orientation) {
 	case 1: //PORTRAIT
 		orient_angle=0;
-		newWidth = (int) ((urx - llx) / 75.0 * xdpi + 0.5);
-	    newHeight = (int) ((ury - lly) / 75.0 * ydpi + 0.5);
+		newWidth = (int) ((urx - llx) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((ury - lly) / 72.0 * ydpi + 0.5);
 	    break;
 	case 2: //UPSIDEDOWN
 		orient_angle=180;
-	    newWidth = (int) ((urx - llx) / 75.0 * xdpi + 0.5);
-	    newHeight = (int) ((ury - lly) / 75.0 * ydpi + 0.5);
+	    newWidth = (int) ((urx - llx) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((ury - lly) / 72.0 * ydpi + 0.5);
 	    break;
 	case 3: //LANDSCAPE
 		orient_angle=90;
-		newWidth = (int) ((ury - lly) / 75.0 * xdpi + 0.5);
-	    newHeight = (int) ((urx - llx) / 75.0 * ydpi + 0.5);
+		newWidth = (int) ((ury - lly) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((urx - llx) / 72.0 * ydpi + 0.5);
 	    break;
 	case 4: //SEASCAPE
 		orient_angle=270;
-	    newWidth = (int) ((ury - lly) / 75.0 * xdpi + 0.5);
-	    newHeight = (int) ((urx - llx) / 75.0 * ydpi + 0.5);
+	    newWidth = (int) ((ury - lly) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((urx - llx) / 72.0 * ydpi + 0.5);
 	    break;
 	}
+	
+	//printf("x offset %d, width %d, y offset %d, height %d\n", llx, urx, lly,
+	//ury);
 	
 	//printf(" newWidth = %d, new Height = %d\n", newWidth, newHeight );
 	
@@ -422,15 +497,79 @@ Bool KPSWidget::computeSize()
 	return change;
 }
 
+static Bool alloc_error;
+static XErrorHandler oldhandler;
+
+static int catch_alloc (Display *dpy, XErrorEvent *err)
+{
+    if (err->error_code == BadAlloc) {
+	alloc_error = True;
+    }
+    if (alloc_error) return 0;
+    return oldhandler(dpy, err);
+}
+
 void KPSWidget::setup()
 {
 	//printf("KPSWidget::setup\n");
 
+	Pixmap bpixmap = None;
+
+	// NO stop interpreter ?
+	
+	stopInterpreter();
+	
+	// NO test of actual change ?
+	
+	if (background_pixmap != None) {
+	    XFreePixmap(gs_display, background_pixmap);
+	    background_pixmap = None;
+	    XSetWindowBackgroundPixmap(gs_display, gs_window, None);
+	}
+	
+	if( intConfig->backingOpt == PIX_BACKING ) {
+		if (background_pixmap == None) {
+
+	    	XSync(gs_display, False); 
+	    	oldhandler = XSetErrorHandler(catch_alloc);
+	    	alloc_error = False;
+	    	bpixmap = XCreatePixmap(gs_display, gs_window,
+				    	fullView->width(), fullView->height(),
+				    	DefaultDepth( gs_display, DefaultScreen( gs_display) ) );
+	    	XSync(gs_display, False); 
+	    	if (alloc_error) {
+	    		printf("BadAlloc\n");
+			//XtCallCallbackList(w, gvw->ghostview.message_callback,
+			//		   "BadAlloc");
+			if (bpixmap != None) {
+		    	XFreePixmap(gs_display, bpixmap);
+		    	XSync(gs_display, False); 
+		    	bpixmap = None;
+			}
+	    	}
+	    	oldhandler = XSetErrorHandler(oldhandler);
+	    	if (bpixmap != None) {
+				background_pixmap = bpixmap;
+				XSetWindowBackgroundPixmap(gs_display, gs_window,
+						   background_pixmap);
+	    	}
+		} else {
+	    	bpixmap = background_pixmap;
+		}
+	}
+
+
 	XSetWindowAttributes xswa;
 	
-	xswa.backing_store = Always;
-	XChangeWindowAttributes(gs_display, gs_window,
-				CWBackingStore, &xswa);
+	if (bpixmap != None) {
+		xswa.backing_store = NotUseful;
+		XChangeWindowAttributes(gs_display, gs_window,
+					CWBackingStore, &xswa);
+    } else {
+		xswa.backing_store = Always;
+		XChangeWindowAttributes(gs_display, gs_window,
+					CWBackingStore, &xswa);
+    }
 
 	ghostview = (Atom) XInternAtom(gs_display, "GHOSTVIEW", False);
 	gs_colors = (Atom) XInternAtom(gs_display, "GHOSTVIEW_COLORS", False);
@@ -438,7 +577,8 @@ void KPSWidget::setup()
 	gs_page = (Atom) XInternAtom(gs_display, "PAGE", False);
 	done = (Atom) XInternAtom(gs_display, "DONE", False);
 	
-	sprintf(buf, "0 %d %d %d %d %d %g %g %d %d %d %d",
+	sprintf(buf, "%ld %d %d %d %d %d %g %g %d %d %d %d",
+	    background_pixmap,
 	    orient_angle,
 	    llx, lly,
 	    urx, ury,
@@ -453,9 +593,13 @@ void KPSWidget::setup()
 		XA_STRING, 8, PropModeReplace,
 		(unsigned char *)buf, strlen(buf));
 
-	sprintf(buf, "%s %d %d", "Color",
-		(int)BlackPixel(gs_display, DefaultScreen(gs_display)),
-		(int)WhitePixel(gs_display, DefaultScreen(gs_display)) );
+	sprintf(buf, "%s %d %d",
+		intConfig->paletteOpt == MONO_PALETTE ? "Monochrome" :
+	    intConfig->paletteOpt == GRAY_PALETTE  ? "Grayscale" :
+	    intConfig->paletteOpt == COLOR_PALETTE	   ? "Color" : "?",
+		(int) BlackPixel(gs_display, DefaultScreen(gs_display)),
+		(int) WhitePixel(gs_display, DefaultScreen(gs_display)) );
+	
 	//printf("%s\n", buf);
 	
 	XChangeProperty(gs_display, gs_window,
@@ -469,19 +613,40 @@ void KPSWidget::setup()
 void KPSWidget::startInterpreter()
 {
 	//printf("KPSWidget::startInterpreter\n");
+	
+	GC gc;
+	XGCValues values;
+	
+	values.foreground = WhitePixel(gs_display, DefaultScreen( gs_display) );
+	values.background = BlackPixel(gs_display, DefaultScreen( gs_display) );
+	
+	gc = XCreateGC ( gs_display,
+					RootWindow( gs_display, DefaultScreen( gs_display ) ),
+					( GCForeground | GCBackground ), &values );
 
 	stopInterpreter();
+	
+	if ( background_pixmap != None ) {
+		XFillRectangle( gs_display, background_pixmap,
+		       gc /* DefaultGC( gs_display, DefaultScreen( gs_display ) ) */,
+		       0, 0, fullView->width(), fullView->height() );
+    }
+    
+    fullView->erase();
 	
 	if (disable_start) return;
 	
 	gs_arg=0;
 	gs_call[gs_arg++] = "gs";
-	if(antialias) {
+	if( intConfig->antialias ) {
 		gs_call[gs_arg++] = "-sDEVICE=x11alpha";
-		gs_call[gs_arg++] = "-dNOPLATFONTS";
 	} else {
 		gs_call[gs_arg++] = "-sDEVICE=x11";
 	}
+	
+	if( !intConfig->platform_fonts )
+		gs_call[gs_arg++] = "-dNOPLATFONTS";
+	
 	gs_call[gs_arg++] = "-dNOPAUSE";
 	gs_call[gs_arg++] = "-dQUIET";
 	gs_call[gs_arg++] = "-dSAFER";
@@ -593,7 +758,8 @@ void KPSWidget::stopInterpreter()
 
 	if (interpreter_pid >= 0) {
 		::kill(interpreter_pid, SIGTERM);
-		::wait(0);
+		//printf("Wait for kill\n");
+		//::wait(0);
 		interpreter_pid = -1;
 		//printf("Killing gs process\n");
 	}
@@ -604,7 +770,7 @@ void KPSWidget::stopInterpreter()
 		interpreter_input = -1;
 		if (interpreter_input_id != None) {
 			sn_input->~QSocketNotifier();
-			//printf("Destroy socket notifier\n");
+			//printf("Destroy input socket notifier\n");
 			interpreter_input_id = None;
 		}
 		while (ps_input) {
@@ -612,6 +778,7 @@ void KPSWidget::stopInterpreter()
 			ps_input = ps_old->next;
 			if (ps_old->close) fclose(ps_old->fp);
 			free((char *)ps_old);
+			//printf("Close and ps pipe\n");
 		}
 	}
     
@@ -623,11 +790,13 @@ void KPSWidget::stopInterpreter()
 		::close(interpreter_output);
 		interpreter_output = -1;
 		sn_output->~QSocketNotifier();
+		//printf("Destroy output socket notifier\n");
 	}
 	if (interpreter_error >= 0) {
 		::close(interpreter_error);
 		interpreter_error = -1;
 		sn_error->~QSocketNotifier();
+		//printf("Destroy error socket notifier\n");
 	}
     
 }
@@ -682,7 +851,7 @@ void KPSWidget::gs_output( int source )
     
     if (bytes > 0) {
 		buf[bytes] = '\0';
-		if( show_messages ) {
+		if( intConfig->show_messages ) {
 			messages->show();
 			messages->cancel->setFocus();
 			messages->messageBox->append( buf );

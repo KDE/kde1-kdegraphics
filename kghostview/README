@@ -3,7 +3,7 @@
 Mark Donohoe
 Please direct any bug reports to me (donohoe@kde.org).
 
-KGHOSTVIEW 0.4 - Alpha release
+KGHOSTVIEW 0.5 - Alpha release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -30,10 +30,21 @@ is missing from this release.
 
 TODO
 
-- Drag and drop
-- Last few UI features
+- Page list
 - PDF support
 - Standardise kdvi and kghostview
+
+CHANGES V0.5
+
+- Network transparent drag and drop
+- Fixed bug which caused page to be made smaller than it should
+- Fixed printing freeze bug
+- Pixmap backing as standard (as opposed to using backing store)
+- Copyright dialog
+- New flag pixmap
+- Configure interpreter dialog
+- New way of framing content area
+- Updated help
 
 CHANGES V0.4
 

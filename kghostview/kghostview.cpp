@@ -31,7 +31,6 @@
 #define ID_FILE_D 8
 #define ID_FILE_QUIT 9
 
-
 #include <kmisc.h>
 #include "kghostview.h"
 
@@ -50,7 +49,7 @@ int toolbar1;
 
 QList <KGhostview> KGhostview::windowList;
 
-KGhostview::KGhostview( QWidget *parent, char *name )
+KGhostview::KGhostview( QWidget *, char *name )
 	: KTopLevelWidget( name )
 {   
     //printf("KGhostview::KGhostview\n");
@@ -59,6 +58,8 @@ KGhostview::KGhostview( QWidget *parent, char *name )
     
     // Initialise all the variables declared in this class.
     // I ususally forget to do a few resulting in nasty seg. faults !
+    
+    kfm = 0L;
     
     oldfilename.sprintf("");
 	filename.sprintf("");
@@ -116,7 +117,7 @@ KGhostview::KGhostview( QWidget *parent, char *name )
     
     // Register page widget with KTopLevelWidget
     
-    setView( page );
+    setView( page, FALSE );
     
     //printf("Done pswidget - Create statusbar\n");
     
@@ -171,28 +172,27 @@ KGhostview::KGhostview( QWidget *parent, char *name )
 	//
 	
 	readSettings();
-	
-	if ( page->antialias )
-    	m_options->changeItem( "Turn antialiasing off", ID_ANTIALIAS );
-    else
-    	m_options->changeItem( "Turn antialiasing on", ID_ANTIALIAS );
     	
     if ( hide_toolbar )	
-    	m_options->changeItem( "Show tool bar", ID_TOOLBAR );
+    	m_options->setItemChecked( ID_TOOLBAR, FALSE );
     else
-    	m_options->changeItem( "Hide tool bar", ID_TOOLBAR );
+    	m_options->setItemChecked( ID_TOOLBAR, TRUE );
     	
     if ( hide_statusbar )
-    	m_options->changeItem( "Show status bar", ID_STATUSBAR );
+    	m_options->setItemChecked(  ID_STATUSBAR, FALSE );
     else
-    	m_options->changeItem( "Hide status bar", ID_STATUSBAR );
-    	
-    if ( page->show_messages )
-    	m_options->changeItem( "Hide Ghostscript messages", ID_MESSAGES );
-    else
-    	m_options->changeItem( "Show Ghostscript messages", ID_MESSAGES );
+    	m_options->setItemChecked( ID_STATUSBAR, TRUE );
     	
     changeFileRecord();
+	
+	
+	//
+	// Make drop zone.
+	//
+	
+	KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
+	connect( dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
+		this, SLOT( slotDropEvent( KDNDDropZone *) ) );
 	
 	//
 	//	RESIZE AND DISPLAY
@@ -316,6 +316,12 @@ void KGhostview::bindKeys()
 								
 }
 
+void KGhostview::copyright()
+{
+	CopyrightDialog *cd = new CopyrightDialog( 0, "copyright" );
+	cd->exec();
+}
+
 void KGhostview::info()
 {
 	infoDialog->fileLabel->setText(filename);
@@ -334,7 +340,13 @@ void KGhostview::info()
 }
 
 void KGhostview::configureGhostscript()
-{}
+{
+	page->intConfig->setCaption("Configure interpreter");
+	page->intConfig->init();
+	
+	if( page->intConfig->exec() ) {
+	}
+}
 
 void KGhostview::configureKeybindings()
 {
@@ -385,18 +397,18 @@ void KGhostview::createMenubar()
 {
  	m_file = new QPopupMenu;
     CHECK_PTR( m_file );
-    m_file->insertItem( "New", ID_NEW_WINDOW );
-    m_file->insertItem( "Open ...", ID_OPEN_FILE);
-    m_file->insertItem( "Close", ID_CLOSE_WINDOW);
+    m_file->insertItem( "&New", ID_NEW_WINDOW );
+    m_file->insertItem( "&Open ...", ID_OPEN_FILE);
+    m_file->insertItem( "&Close", ID_CLOSE_WINDOW);
     m_file->insertSeparator();
-    m_file->insertItem( "Print ...", ID_PRINT );
+    m_file->insertItem( "&Print ...", ID_PRINT );
     m_file->insertSeparator();
-    m_file->insertItem( "1.", ID_FILE_A );
-    m_file->insertItem( "2.", ID_FILE_B );
-    m_file->insertItem( "3.", ID_FILE_C );
-    m_file->insertItem( "4.", ID_FILE_D );
+    m_file->insertItem( "&1.", ID_FILE_A );
+    m_file->insertItem( "&2.", ID_FILE_B );
+    m_file->insertItem( "&3.", ID_FILE_C );
+    m_file->insertItem( "&4.", ID_FILE_D );
     m_file->insertSeparator();
-    m_file->insertItem( "Quit", ID_FILE_QUIT );
+    m_file->insertItem( "E&xit", ID_FILE_QUIT );
     
     connect( m_file, SIGNAL( activated( int ) ), this, 
     	SLOT( fileMenuActivated( int ) ) );
@@ -404,34 +416,34 @@ void KGhostview::createMenubar()
 	m_view = new QPopupMenu;
     CHECK_PTR( m_view );
     zoomInID =
-	m_view->insertItem( "Zoom in", this, SLOT( zoomIn()) );
+	m_view->insertItem( "Zoom &in", this, SLOT( zoomIn()) );
 	zoomOutID =
-	m_view->insertItem( "Zoom out", this, SLOT( zoomOut() ) );
+	m_view->insertItem( "Zoom &out", this, SLOT( zoomOut() ) );
 	viewControlID =
-	m_view->insertItem( "View control ...", this, SLOT( viewControl() ) );
+	m_view->insertItem( "&View control ...", this, SLOT( viewControl() ) );
 	m_view->insertSeparator();
 	shrinkWrapID = 
-	m_view->insertItem( "Shrink wrap", this, SLOT( shrinkWrap() ) );
+	m_view->insertItem( "&Shrink wrap", this, SLOT( shrinkWrap() ) );
 	redisplayID =
-	m_view->insertItem( "Redisplay", this, SLOT( redisplay() ) );
+	m_view->insertItem( "&Redisplay", this, SLOT( redisplay() ) );
 	infoID =
-	m_view->insertItem( "Info ...", this, SLOT( info() ) );
+	m_view->insertItem( "&Info ...", this, SLOT( info() ) );
 
     m_go = new QPopupMenu;
     CHECK_PTR( m_go );
     nextID =
-    m_go->insertItem( "Next page", this, SLOT( nextPage() ) );
+    m_go->insertItem( "&Next page", this, SLOT( nextPage() ) );
     prevID =
-    m_go->insertItem( "Previous Page", this, SLOT( prevPage() ) );
+    m_go->insertItem( "&Previous Page", this, SLOT( prevPage() ) );
     goToPageID =
-    m_go->insertItem( "Go to page ...", this, SLOT( goToPage() ) );
+    m_go->insertItem( "&Go to page ...", this, SLOT( goToPage() ) );
     m_go->insertSeparator();
     goToStartID =
-    m_go->insertItem( "Go to start", this, SLOT( goToStart() ) );
+    m_go->insertItem( "Go to &start", this, SLOT( goToStart() ) );
     goToEndID =
-    m_go->insertItem( "Go to end", this, SLOT( goToEnd() ) );
+    m_go->insertItem( "Go to &end", this, SLOT( goToEnd() ) );
     readDownID =
-    m_go->insertItem( "Read down", this, SLOT( dummy() ) );
+    m_go->insertItem( "&Read down", this, SLOT( dummy() ) );
     
   
     m_options = new QPopupMenu;
@@ -440,23 +452,25 @@ void KGhostview::createMenubar()
     // I make the options menu here but don't set the entries until
     // I've read the config file.
     
-    m_options->insertItem("", ID_ANTIALIAS);
-    m_options->insertItem( "Show Ghostscript messages", ID_MESSAGES );
-    m_options->insertItem("", ID_TOOLBAR);
-    m_options->insertItem("", ID_STATUSBAR);
-    m_options->insertItem("Configure key bindings ...", ID_CONFIGURE);
-    m_options->insertItem("Configure Ghostscript ...", ID_GHOSTSCRIPT);
+	m_options->setCheckable( TRUE );
+	m_options->insertItem("&Configure interpreter ...", ID_GHOSTSCRIPT);
+	m_options->insertSeparator();
+    m_options->insertItem("Show &tool bar", ID_TOOLBAR);
+    m_options->insertItem("Show &status bar", ID_STATUSBAR);
+    m_options->insertItem("Configure &key bindings ...", ID_CONFIGURE);
     m_options->insertSeparator();
-    m_options->insertItem("Save Options", ID_SAVE);
+    m_options->insertItem("&Save Options", ID_SAVE);
     
     connect( m_options, SIGNAL( activated(int) ),
     			SLOT( optionsMenuActivated(int) ) );
     
     m_help = new QPopupMenu;
     CHECK_PTR( m_help );
-	m_help->insertItem( "About kghostview", this, SLOT( about() ) );
+	m_help->insertItem( "&About this application", this, SLOT( about() ) );
 	helpID = 
-	m_help->insertItem( "Help for kghostview", this, SLOT( help() ) );
+	m_help->insertItem( "&Help for this application", this, SLOT( help() ) );
+	m_help->insertSeparator();
+	m_help->insertItem( "&Copyright", this, SLOT( copyright() ) );
 	
     menubar = new KMenuBar( this );
     CHECK_PTR( menubar );
@@ -469,8 +483,6 @@ void KGhostview::createMenubar()
     menubar->insertItem( "&Help", m_help);
 	
 	m_file->setItemEnabled(ID_PRINT, FALSE);
-	//m_file->setItemEnabled(ID_NEW_WINDOW, FALSE);
-	//m_file->setItemEnabled(ID_CLOSE_WINDOW, FALSE);
 	m_go->setItemEnabled(nextID, FALSE);
 	m_go->setItemEnabled(prevID, FALSE);
 	m_go->setItemEnabled(goToPageID, FALSE);
@@ -569,7 +581,7 @@ void KGhostview::createToolbar()
 	pixmap.load(PIXDIR + "fileprint.xpm");
 	toolbar->insertItem(pixmap, ID_PRINT, FALSE, "Print document");
 
-	pixmap.load(PIXDIR + "tick.xpm");
+	pixmap.load(PIXDIR + "flag.xpm");
 	toolbar->insertItem(pixmap, ID_MARK, FALSE, "Mark this page");
 
 	toolbar->insertSeparator();
@@ -626,6 +638,90 @@ void KGhostview::createStatusbar()
     //printf("done\n");
 }
 
+void KGhostview::openNetFile( const char *_url )
+{
+
+	QString string;
+	netFile = _url;
+	netFile.detach();
+	KURL u( netFile.data() );
+
+	if ( u.isMalformed() ) {
+		KMsgBox::message (0, "Sorry", "Malformed URL.");
+		return;
+	}
+
+	// Just a usual file ?
+	if ( strcmp( u.protocol(), "file" ) == 0 ) {
+		open_file( u.path() );
+		return;
+	}
+
+	if ( kfm != 0L ) {
+		KMsgBox::message (0,"Sorry", 
+				  "Already waiting\n"\
+				  "for an internet job to finish.\n"\
+				  "Please wait until has finished.\n"\
+				  "Alternatively stop the running one.");
+		return;
+	}
+
+	kfm = new KFM;
+	if ( !kfm->isOK() ) {
+		KMsgBox::message (0,"Sorry", "Could not start or find KFM.");
+		delete kfm;
+		kfm = 0L;
+		return;
+	}
+
+	tmpFile.sprintf( "file:/tmp/kghostview%i", time( 0L ) );
+	connect( kfm, SIGNAL( finished() ), this, SLOT( slotKFMFinished() ) );
+	kfm->copy( netFile.data(), tmpFile.data() );
+	kfmAction = KGhostview::GET;
+	openMode = 0;
+}
+
+void KGhostview::slotKFMFinished()
+{
+	if ( kfmAction == KGhostview::GET ) {
+		KURL u( tmpFile.data() );
+		open_file( u.path() );
+		
+		// Clean up
+		unlink( tmpFile.data() );
+		delete kfm;
+		kfm = 0L;
+	}
+}
+
+void KGhostview::slotDropEvent( KDNDDropZone * _dropZone )
+{
+    QStrList & list = _dropZone->getURLList();
+    
+    char *s;
+
+    for ( s = list.first(); s != 0L; s = list.next() )
+    {
+		// Load the first file in this window
+		if ( s == list.getFirst() ) {
+	    	QString n = s;
+
+			openNetFile( n.data() );
+
+		} else {
+
+	    	KGhostview *kg = new KGhostview();
+	    	kg->show ();
+	    	windowList.append( kg );
+
+	    	QString n = s;
+
+			kg->openNetFile( n.data() );
+
+		}
+    }
+}
+
 
 void KGhostview::readSettings()
 {
@@ -639,15 +735,29 @@ void KGhostview::readSettings()
 	
 	str = config->readEntry( "Antialiasing" );
 	if ( !str.isNull() && str.find( "on" ) == 0 )
-		page->antialias = TRUE;
+		page->intConfig->antialias = TRUE;
 	else
-		page->antialias = FALSE;
+		page->intConfig->antialias = FALSE;
+		
+	str = config->readEntry( "Palette" );
+	if ( !str.isNull() && str.find( "mono" ) == 0 )
+		page->intConfig->paletteOpt = MONO_PALETTE;
+	else if ( !str.isNull() && str.find( "gray" ) == 0 )
+		page->intConfig->paletteOpt = GRAY_PALETTE;
+	else
+		page->intConfig->paletteOpt = COLOR_PALETTE;
+		
+	str = config->readEntry( "Backing" );
+	if ( !str.isNull() && str.find( "store" ) == 0 )
+		page->intConfig->backingOpt = STORE_BACKING;
+	else
+		page->intConfig->backingOpt = PIX_BACKING;
 		
 	str = config->readEntry( "Messages" );
 	if ( !str.isNull() && str.find( "on" ) == 0 )
-		page->show_messages = TRUE;
+		page->intConfig->show_messages = TRUE;
 	else
-		page->show_messages = FALSE;
+		page->intConfig->show_messages = FALSE;
 	
 	str = config->readEntry( "Statusbar" );
 	if ( !str.isNull() && str.find( "off" ) == 0 ) {
@@ -737,7 +847,7 @@ void KGhostview::shrinkWrap()
 	
 	if ( !psfile ) return;
 	
-	new_width=page->fullView->width()+(x()+width()-view_right)+(view_left-x())+6;
+	new_width=page->fullView->width()+(x()+width()-view_right)+(view_left-x())+2;
 	if( page->vertScrollBar->isVisible() )
 		new_width+=page->vertScrollBar->width();
 		
@@ -763,20 +873,28 @@ void KGhostview::newWindow()
 	windowList.append( kg );
 
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( "KGhostview: Version 0.4" );
+	kg->setCaption( "KGhostview: Version 0.5" );
 	kg->bindKeys();
 	kg->updateMenuAccel();
 }
 
-void KGhostview::closeWindow()
+void KGhostview::closeEvent( QCloseEvent * )
 {
+	//printf("%d windows\n", windowList.count());
+	
 	if ( windowList.count() > 1 ) {
-		close( TRUE );
+		windowList.remove( this );
+    	delete this;
 		for ( KGhostview *kg = windowList.first(); kg!=NULL;
 				kg = windowList.next() )
 			kg->page->disableInterpreter();
 	} else
 		qApp->quit();
+}
+
+void KGhostview::closeWindow()
+{
+	close();
 }
 
 void KGhostview::redisplay()
@@ -816,10 +934,26 @@ void KGhostview::writeSettings()
 	config->writeEntry( "Width", s );
 	s.setNum( height() );
 	config->writeEntry( "Height", s );
-	config->writeEntry( "Antialiasing", page->antialias ? "on" : "off" );
+	config->writeEntry( "Antialiasing", page->intConfig->antialias ? "on" : "off" );
+	config->writeEntry( "Platform fonts", page->intConfig->platform_fonts ? "on" : "off" );
 	config->writeEntry( "Statusbar", hide_statusbar ? "off" : "on" );
 	config->writeEntry( "Toolbar", hide_toolbar ? "off" : "on" );
-	config->writeEntry( "Messages", page->show_messages ? "on" : "off" );
+	config->writeEntry( "Messages", page->intConfig->show_messages ? "on" : "off" );
+	
+	if( page->intConfig->paletteOpt == COLOR_PALETTE )
+		s.sprintf("color");
+	else if( page->intConfig->paletteOpt == GRAY_PALETTE )
+		s.sprintf("grayscale");
+	else
+		s.sprintf("monochrome");
+	config->writeEntry( "Palette", s );
+	
+	if( page->intConfig->backingOpt == PIX_BACKING )
+		s.sprintf("pixmap");
+	else
+		s.sprintf("store");
+	config->writeEntry( "Backing", s );
+	
 	s.setNum( magstep );
 	config->writeEntry( "Magstep", s );
 	s.setNum( orientation );
@@ -873,8 +1007,15 @@ void KGhostview::toolbarClicked( int item )
   			goToEnd();
   			break;
   		case ID_READ:
+  			readDown();
   			break;
   	}
+}
+
+void KGhostview::readDown()
+{
+	if( !page->readDown() )
+		nextPage();
 }
 
 void KGhostview::scrollUp()
@@ -1108,12 +1249,12 @@ void KGhostview::optionsMenuActivated( int item )
 
 	switch (item){
   		case ID_ANTIALIAS:
-  			if(page->antialias) {
-  				page->antialias = FALSE;
+  			if(page->intConfig->antialias) {
+  				page->intConfig->antialias = FALSE;
   				m_options->changeItem("Turn antialiasing on", item);
   			} else {
   				m_options->changeItem("Turn antialiasing off", item);
-  				page->antialias = TRUE;
+  				page->intConfig->antialias = TRUE;
   			}
 			page->disableInterpreter();
 			if( psfile )
@@ -1121,12 +1262,12 @@ void KGhostview::optionsMenuActivated( int item )
 			break;
 
 		case ID_MESSAGES:
-			if(page->show_messages) {
-  				page->show_messages = FALSE;
+			if(page->intConfig->show_messages) {
+  				page->intConfig->show_messages = FALSE;
   				m_options->changeItem("Show Ghostscript messages", item);
   			} else {
   				m_options->changeItem("Hide Ghostscript messages", item);
-  				page->show_messages = TRUE;
+  				page->intConfig->show_messages = TRUE;
   			}
 			break;
 			
@@ -1135,12 +1276,12 @@ void KGhostview::optionsMenuActivated( int item )
 				hide_toolbar=False;
 				enableToolBar( KToolBar::Toggle, toolbar1 );
 				//resize( width(), height() );
-				m_options->changeItem("Hide tool bar", item);
+				m_options->setItemChecked( item, TRUE );
 			} else {
 				hide_toolbar=True;
 				enableToolBar( KToolBar::Toggle, toolbar1 );
 				//resize( width(), height() );
-				m_options->changeItem("Show tool bar", item);
+				m_options->setItemChecked( item, FALSE );
 			}
 			break;
 			
@@ -1149,12 +1290,12 @@ void KGhostview::optionsMenuActivated( int item )
 				hide_statusbar=False;
 				enableStatusBar( KStatusBar::Toggle );
 				//resize( width(), height() );
-				m_options->changeItem("Hide status bar", item);
+				m_options->setItemChecked( item, TRUE );
 			} else {
 				hide_statusbar=True;
 				enableStatusBar( KStatusBar::Toggle );
 				//resize( width(), height() );
-				m_options->changeItem("Show status bar", item);
+				m_options->setItemChecked( item, FALSE );
 			}
 			break;
 			
@@ -1174,7 +1315,7 @@ void KGhostview::optionsMenuActivated( int item )
 
 void KGhostview::dummy()
 {
-	 KMsgBox::message(0, "Version 0.4", 
+	 KMsgBox::message(0, "Version 0.5", 
                              "Sorry, not ready yet" );
 
 
@@ -1183,7 +1324,7 @@ void KGhostview::dummy()
 void KGhostview::about()
 {
 	 KMsgBox::message(0, "About kghostview", 
-                             "Version :	0.4 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org" );
+                             "Version :	0.5 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org" );
 
 
 }
@@ -1249,18 +1390,21 @@ void KGhostview::printStart()
 //
 //*********************************************************************************
 
+
 QString KGhostview::print_file(QString name, Bool whole_mode)
 {
     //printf("KGhostview::print_file\n");
 
     FILE *printer;
     SIGVAL (*oldsig)(int);
-    int bytes;
+    int bytes=0;
     char buf[BUFSIZ];
     Bool failed;
     QString ret_val;
 
-// For SYSV, SVR4, USG printer variable=LPDEST, print command=lp
+	page->disableInterpreter();
+
+	// For SYSV, SVR4, USG printer variable=LPDEST, print command=lp
 
     if (name.data() != '\0') {
 		setenv("PRINTER", name, True); // print variable
@@ -1268,26 +1412,38 @@ QString KGhostview::print_file(QString name, Bool whole_mode)
     
     oldsig = signal(SIGPIPE, SIG_IGN);
     printer = popen("lpr", "w");	// print command
-    
+   
     if (toc_text && !whole_mode) {
 		pscopydoc(printer);
+		
+		//printf("Done pscopydoc\n");
+		
     } else {
-		FILE *psfile = fopen(filename, "r");
+		FILE *tmpfile = ::fopen(filename, "r");
+		
+		//printf("Opening file\n");
 	
-		while ( (bytes = read(fileno(psfile), buf, BUFSIZ)) )
-	   		bytes = write(fileno(printer), buf, bytes);
-		fclose(psfile);
+		while ( (bytes = ::read( ::fileno(tmpfile), buf, BUFSIZ)) ) {
+			//printf("bytes written= %d\n", bytes);
+	   		bytes = ::write( ::fileno(printer), buf, bytes);
+	   		//printf("bytes written= %d\n", bytes);
+	   	}
+		::fclose(tmpfile);
+		
+		//printf("closed tmpfile\n");
     }
-
-    failed = pclose(printer) != 0;
-
+	
+    failed = (pclose(printer) != 0);
+	
     if (failed) {
 		sprintf(buf, "Print failure : lpr"); // print error, command
 		ret_val = QString(buf);
     } else {
 		ret_val = NULL;
     }
-
+	
+	signal(SIGPIPE, oldsig);
+	
     return(ret_val);
 }
 
@@ -1635,6 +1791,8 @@ Bool KGhostview::set_new_pagemedia( int number )
 	//printf("new width = %d, current width = %d\n", new_urx, current_urx);
 	//printf("new h = %d, current h = %d\n", new_ury, current_ury);
 	
+	//printf("new x offset %d : new y offset %d\n", new_llx, new_lly);
+	
     /* If bounding box changed, setup for new size. */
     if ((new_llx != current_llx) || (new_lly != current_lly) ||
 	(new_urx != current_urx) || (new_ury != current_ury)) {
@@ -1887,6 +2045,7 @@ Bool	KGhostview::setup()
 		toolbar->setItemEnabled(ID_PAGE, TRUE);
 		toolbar->setItemEnabled(ID_START, TRUE);
 		toolbar->setItemEnabled(ID_END, TRUE);
+		toolbar->setItemEnabled(ID_READ, TRUE);
 	}
 	m_view->setItemEnabled(viewControlID, TRUE);
 	m_view->setItemEnabled(zoomInID, TRUE);
@@ -1917,19 +2076,19 @@ void KGhostview::changeFileRecord()
 {
 	QString s;
 	
-	s.sprintf("1. ");
+	s.sprintf("&1. ");
 	s+=lastOpened[0];
 	m_file->changeItem(s, ID_FILE_A);
 	
-	s.sprintf("2. ");
+	s.sprintf("&2. ");
 	s+=lastOpened[1];
 	m_file->changeItem(s, ID_FILE_B);
 	
-	s.sprintf("3. ");
+	s.sprintf("&3. ");
 	s+=lastOpened[2];
 	m_file->changeItem(s, ID_FILE_C);
 	
-	s.sprintf("4. ");
+	s.sprintf("&4. ");
 	s+=lastOpened[3];
 	m_file->changeItem(s, ID_FILE_D);
 }

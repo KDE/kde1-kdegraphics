@@ -6,7 +6,8 @@
 #include "viewcontrol.h"
 #include "goto.h"
 #include "print.h"
-#include "ktopwidget.h"
+#include "copyright.h"
+#include <ktopwidget.h>
 
 #include <stdlib.h>
 #include <math.h>
@@ -27,6 +28,10 @@
 #include <qbttngrp.h>
 #include <qgrpbox.h>
 #include <qaccel.h>
+
+#include <kfm.h>
+#include <kapp.h>
+#include <kurl.h>
 
 #define TOOLBAR_HEIGHT 26
 #define TOOLBAR_X_OFFSET 10
@@ -56,6 +61,10 @@ class KGhostview : public KTopLevelWidget
 public:
 	KGhostview( QWidget *parent=0, char *name=0 );
 	~KGhostview();
+
+	/// Tells us what kind of job kedit is waiting for.
+    enum action { GET, PUT };
+     void openNetFile( const char *_url );
 
 	static QList <KGhostview> windowList;
 
@@ -127,6 +136,7 @@ public slots:
 	void goToPage();
 	void goToStart();
 	void goToEnd();
+	void readDown();
 	void print();
 	void openNewFile();
 	void zoomIn();
@@ -140,10 +150,15 @@ public slots:
 	void newWindow();
 	void closeWindow();
 	void info();
+	void copyright();
 	void configureGhostscript();
+	
+	void slotDropEvent( KDNDDropZone * _dropZone );
+	void slotKFMFinished();
      
 protected:
 	void paletteChange( const QPalette & );
+	void closeEvent( QCloseEvent * );
    
 	
 private:
@@ -210,6 +225,38 @@ private:
 	int current_pagemedia, default_pagemedia, document_media;
 	int current_orientation;
 	Bool changed;
+	
+	 /// KFM client
+    /**
+      Only one KFM connection should be opened at once. Otherwise kedit could get
+      confused. If this is 0L, you may create a new connection to kfm.
+      */
+    KFM * kfm;
+    
+    /// Temporary file for internet purposes
+    /**
+      If KEdit is waiting for some internet task to finish, this is the
+      file that is involved. Mention that it is a complete URL like
+      "file:/tmp/mist.txt".
+      */
+    QString tmpFile;
+
+    /// If we load a file from the net this is the corresponding URL
+    QString netFile;
+    
+    /// Tells us what kfm is right now doing for us
+    /**
+      If this is for example GET, then KFM loads a file from the net
+      to the local file system.
+      */
+    action kfmAction;
+    
+    /// The open mode for a net file
+    /**
+      If KEdit is waiting for an internet file, this is the mode in which
+      it should open the file.
+      */
+    int openMode;
 };
 
 #endif // KGHOSTVIEW_H

@@ -12,12 +12,15 @@
 
 <title>The KGhostview Handbook
 <author>Mark Donohoe, <tt/donohoe@kde.org/
-<date>v1.0, 22 May 1997
+<date>v1.1, 9 June 1997
 
 <!-- Table of contents -->
 <toc>
 
 <!-- Begin the document -->
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
 
 
 <sect>Introduction
@@ -38,13 +41,20 @@ reading documents online.
 
 <p>
 
-If the document does not begin with &dquot ! &num PS-Adobe- &dquot , it does not claim conformance
-to the document structuring convention. When these documents are encountered,
-the functionality of KGhostview is limited to giving you scrollbars and a
-next page capability. Because there is no table of contents, skipping around
-the document and marking pages is impossible.
+If a document does not begin with the characters &dquot! &num PS-Adobe-&dquot, it does not claim conformance to the Adobe document structuring
+convention. In this case the functionality of KGhostview is limited - because
+there is no table of contents, skipping around the document and marking pages
+is not possible.
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
 
 <sect>Tutorial
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
 
 <sect>Onscreen Fundamentals
 
@@ -52,16 +62,14 @@ the document and marking pages is impossible.
 
 <p>
 
-This section on onscreen fundamentals describes what you see in the main
-KGhostview window. The tools and text fields that help you to navigate a
-document may be hidden in order to give more space on the screen to the
-content area. 
-
+In this section is desribed what you see in the main KGhostview window.
 The next section describes a window's graphical elements. The subsequent section
 goes into more detail on button actions.
 
 You can open multiple KGhostview windows to view multiple documents. The
-window titlebar shows you the name of the document in that window.
+window titlebar shows you the name of the document in that window.  The
+tools and text fields that help you to navigate a document may be hidden in
+order to give more space on the screen to the content area. 
 
 <sect1>Window Summary
 
@@ -137,6 +145,10 @@ window titlebar shows you the name of the document in that window.
 	of the document in chunks.
 	
 </descrip>
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
 
 <sect>Primary menu items
 
@@ -235,23 +247,16 @@ window titlebar shows you the name of the document in that window.
 <sect1>Options
 <p>
 <descrip>
-	<tag/Turn antialias off (on)/
+	<tag/Configure interpreter ... /
 	
-	Antialiasing is a rendering technique that improves the appearance of
-	material to be viewed on low resolution devices like computer monitors.
-	Only recent versions of Ghostscript can do antialiasing. It is memory
-	intensive and if little memory is available the results are poor. 
+	Lets you choose a few options about how the Ghostscript driver should
+	work.
 
-	<tag/Hide (Show) Ghostscript messages/
-	
-	Error messages or general output messages from Ghostscript can be
-	displayed by KGhostview. Select your preference here.
-
-	<tag/Hide (Show) toolbar/
+	<tag/Show tool bar/
 	
 	Toggle the toolbar on and off.
 	
-	<tag/Hide (Show) statusbar/
+	<tag/Show status bar/
 	
 	Toggle the statusbar on and off.
 	
@@ -259,11 +264,6 @@ window titlebar shows you the name of the document in that window.
 	
 	Lets you choose your own key bindings for the actions that KGhostview can
 	perform.
-
-	<tag/Configure drivers ... /
-	
-	Lets you choose a few options about how the Ghostscript driver should
-	work.
 
 	<tag/Save Options/
 	
@@ -283,8 +283,16 @@ window titlebar shows you the name of the document in that window.
 	<tag/Help for kghostview/
 	
 	Starts the KDE online help and loads in this handbook.
+	
+	<tag/Copyright/
+	
+	Displays copyright information for KGhostview.
 
 </descrip>
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
 
 <sect>Dialog Boxes
 <p>
@@ -349,12 +357,76 @@ display.
 
 Allows you to change the keys that are bound to KGhostview actions.
 
-<sect1>Configure Ghostscript
+<sect1>Configure interpreter
+<p>
 
-<sect1>Gostscript messages
+The Configure interpreter dialog is comprised of three sections:
+
+<enum>
+<item>The <bf>General</bf> section.
+<item>The <bf>Palette</bf> options.
+<item>The <bf>Backing</bf> style.
+</enum>
+
+<sect2>General
+
+<p>
+
+One may edit the interpreter name which is by default set to gs suitable for
+most systems. One may also check any combination of three options.
+
+<p>
+
+Set <em>Antialiasing</em> for smoothly rendered text. Performing antialiasing
+is memory intensive and slower than a straightforward rendering of fonts. If
+short of memory or time you may wish to turn this option off. Early versions
+of Ghostscript could not perform antialiasing.
+
+<p>
+
+Check <em>Platform fonts</em> if you wish to use your native window system
+fonts rather than the fonts that come with your PostScript interpreter.
+Recent versions of Ghostscript come with good quality fonts.
+
+<p>
+
+Turn <em>Messages</em> on if you want to be informed of any output or error
+messages generated by your PostScript interpreter.
+
+<sect2>Palette
+<p>
+
+You may choose the palette to be used to render your PostScript document. The
+options are
+
+<itemize>
+<item>Color
+<item>Grayscale
+<item>Monochrome
+</itemize>
+
+<sect2>Backing
+<p>
+
+You have the choice of two methods to maintain the contents of a page in the
+viewer once it has been rendered by your PostScript interpreter. These are
+
+<itemize>
+<item>Pixmap
+<item>Backing store
+</itemize>
+
+One method may be faster on your X server than the other. Also, some X servers do
+not offer a backing store.
+
+<sect1>Ghostscript messages
 <p>
 
 Displays error or general output messages from Ghostscript.
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
 
 <sect>Questions and answers
 <p>

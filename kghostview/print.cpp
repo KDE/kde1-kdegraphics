@@ -14,8 +14,8 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	QFrame* tmpQFrame;
 	tmpQFrame = new QFrame( this );
 	tmpQFrame->setGeometry( 5, 5, 250, 100 );
-	tmpQFrame->setFrameStyle( 35 );
-	tmpQFrame->setLineWidth( 2 );
+	tmpQFrame->setFrameStyle( QFrame::Box | QFrame::Sunken );
+	tmpQFrame->setLineWidth( 1 );
 
 	QLabel* tmpQLabel;
 	tmpQLabel = new QLabel( this );

@@ -19,6 +19,7 @@
 #include <ctype.h>
 
 #include "messages.h"
+#include "interpreter.h"
 
 #define SCROLLBAR_SIZE 16
 
@@ -94,6 +95,7 @@ public:
 	Window 		gs_window;
 	Bool 		busy;
 	Window 		mwin;
+	Pixmap background_pixmap;
 	
 	
 	Bool sendPS(FILE *fp, long begin,unsigned int len,Bool close);
@@ -108,14 +110,21 @@ public:
 	QScrollBar *vertScrollBar;
 	QScrollBar *horScrollBar;
 	QWidget *patch;
+	QFrame *pageFrame;
+	QFrame *topFrame;
+	QFrame *leftFrame;
+	QFrame *rightFrame;
+	QFrame *bottomFrame;
 	
 	MessagesDialog *messages;
+	InterpreterDialog *intConfig;
 	
 	void scrollLeft();
 	void scrollRight();
 	void scrollUp();
 	void scrollDown();
 	void scrollTop();
+	bool readDown();
 	
 	void movePage();
 	
@@ -139,6 +148,7 @@ public slots:
   
 protected:
 	void resizeEvent(QResizeEvent *);
+	void paintEvent(QPaintEvent *);
 	
 	void setup();
 	void startInterpreter();

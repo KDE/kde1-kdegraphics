@@ -14,8 +14,8 @@ GoTo::GoTo( QWidget *parent, const char *name )
 	QFrame* tmpQFrame;
 	tmpQFrame = new QFrame( this );
 	tmpQFrame->setGeometry( 5, 5, 250, 100 );
-	tmpQFrame->setFrameStyle( 35 );
-	tmpQFrame->setLineWidth( 2 );
+	tmpQFrame->setFrameStyle( QFrame::Box | QFrame::Sunken );
+	tmpQFrame->setLineWidth( 1 );
 
 	QLabel* tmpQLabel;
 	tmpQLabel = new QLabel( this );
@@ -113,8 +113,6 @@ void GoTo::pageChange()
 	int new_page;
 	QString temp = pageLine->text();
 	new_page=atoi(temp.data());
-	
-	printf("page %d\n", new_page);
 	
 	if(new_page<1 || new_page>pages_in_part[part]) {
 		temp.sprintf( "%d", page+1);

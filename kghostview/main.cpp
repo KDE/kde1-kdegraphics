@@ -95,7 +95,7 @@ int main( int argc, char **argv )
 	}
 	
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( "KGhostview: Version 0.4" );
+	kg->setCaption( "KGhostview: Version 0.5" );
 	kg->bindKeys();
 	kg->updateMenuAccel();
 	kg->show();	

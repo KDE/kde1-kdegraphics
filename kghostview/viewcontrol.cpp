@@ -12,15 +12,9 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
 	
-	QFrame* vcFrame;
-	vcFrame = new QFrame( this );
-	vcFrame->setGeometry( 5, 5, 250, 165 );
-	vcFrame->setFrameStyle( 35 );
-	vcFrame->setLineWidth( 2 );
-	
 	QGroupBox* vcGroupBox;
 	vcGroupBox = new QGroupBox(  this );
-	vcGroupBox->setGeometry( 15, 15, 230, 145 );
+	vcGroupBox->setGeometry( 5, 10, 250, 150 );
 	vcGroupBox->setFrameStyle( 49 );
 	vcGroupBox->setTitle( "Force changes" );
 	vcGroupBox->setAlignment( 1 );
@@ -59,22 +53,22 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 
 	QPushButton* ok;
 	ok = new QPushButton( this );
-	ok->setGeometry( 120, 180, 60, 30 );
+	ok->setGeometry( 120, 170, 60, 30 );
 	ok->setText( "Apply" );
 	ok->setAutoDefault(TRUE);
 	connect( ok, SIGNAL(clicked()), SLOT(okClicked()) );
 
 	QPushButton* apply;
 	apply = new QPushButton( this );
-	apply->setGeometry( 190, 180, 60, 30 );
+	apply->setGeometry( 190, 170, 60, 30 );
 	apply->setText( "Cancel" );
 	apply->setAutoDefault(TRUE);
 	connect( apply, SIGNAL(clicked()), SLOT(reject()) );
 
 
-	resize( 260, 215 );
-	setMaximumSize( 260, 215 );
-	setMinimumSize( 260, 215 );
+	resize( 260, 205 );
+	setMaximumSize( 260, 205 );
+	setMinimumSize( 260, 205 );
 }
 
 void ViewControl::okClicked()
