@@ -1,8 +1,8 @@
-HELPFILES = kghostview.html kghostview-1.html kghostview-2.html \
-			kghostview-3.html kghostview-4.html kghostview-5.html \
-			kghostview-6.html
+HELPFILES = index.html index-1.html index-2.html \
+			index-3.html index-4.html index-5.html \
+			index-6.html
 
-DOCSDIR = @prefix@/share/doc/HTML/kghostview
+DOCSDIR = @prefix@/share/doc/HTML/en/kghostview
 INSTALL_DIR = @INSTALL@ -d -m 0755
 INSTALL_DATA = @INSTALL@ -m 644
 

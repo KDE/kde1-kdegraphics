@@ -28,7 +28,7 @@ BINDIR = $(prefix)/bin
 SHAREDIR = $(prefix)/share
 LNKDIR = $(SHAREDIR)/applnk/Graphics
 ICONDIR = $(SHAREDIR)/icons
-DOCSDIR = $(SHAREDIR)/doc/HTML
+DOCSDIR = $(SHAREDIR)/doc/HTML/en
 
 ########### File Formats ###########
 
@@ -67,7 +67,7 @@ install: all
 	$(INSTALL_DIR) $(BINDIR)
 	$(INSTALL) $(TARGET) $(BINDIR)
 	$(INSTALL_DIR) $(DOCSDIR)/kfract
-	$(INSTALL_DATA) ./kfract.html $(DOCSDIR)/kfract
+	$(INSTALL_DATA) ./index.html $(DOCSDIR)/kfract
 	$(INSTALL_DATA) ./kfract.gif $(DOCSDIR)/kfract
 	$(INSTALL_DIR) $(LNKDIR)
 	$(INSTALL_DATA) ./Fractal.kdelnk $(LNKDIR)

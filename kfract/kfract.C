@@ -295,7 +295,7 @@ void KFract::aboutFract()
 
 void KFract::helpFract()
   {
-  kapp->invokeHTMLHelp( "kfract/kfract.html", NULL );
+  kapp->invokeHTMLHelp( "", NULL );
   }
 
 

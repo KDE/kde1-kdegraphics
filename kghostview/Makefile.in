@@ -24,7 +24,7 @@ LIBDIR = $(prefix)/lib
 SHAREDIR=$(prefix)/share
 ICONDIR = $(SHAREDIR)/icons
 TOOLPICSDIR = $(SHAREDIR)/apps/kghostview
-DOCSDIR = $(SHAREDIR)/doc/HTML/kghostview
+DOCSDIR = $(SHAREDIR)/doc/HTML/en/kghostview
 KDELNKDIR = $(SHAREDIR)/applnk/Graphics
 
 

@@ -12,8 +12,8 @@ DOCS=	kpaint.html \
 .PHONY:	install
 
 install:
-	$(INSTALL_DIR) $(prefix)/share/doc/HTML/kpaint
-	$(INSTALL_DATA) $(DOCS) $(prefix)/share/doc/HTML/kpaint
+	$(INSTALL_DIR) $(prefix)/share/doc/HTML/en/kpaint
+	$(INSTALL_DATA) $(DOCS) $(prefix)/share/doc/HTML/en/kpaint
 
 
 

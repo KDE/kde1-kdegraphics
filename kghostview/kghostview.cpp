@@ -1127,7 +1127,10 @@ void KGhostview::scrollRight()
 
 void KGhostview::help()
 {
-	if ( fork() == 0 )
+    // Torben
+    kapp->invokeHTMLHelp( "", "" );
+    
+    /* if ( fork() == 0 )
 	{
 		QString path = "";
 		char* kdedir = getenv("KDEDIR");
@@ -1140,7 +1143,7 @@ void KGhostview::help()
 		
 		execlp( "kdehelp", "kdehelp", path.data(), 0 );
 		exit( 1 );
-	}
+	} */
 }
 
 
