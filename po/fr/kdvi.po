@@ -7,12 +7,13 @@ msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
 "PO-Revision-Date: 1998-12-04 22:41 CET\n"
-"Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
-"Last-Translator: Francois-Xavier DURANCEAU <Francois-Xavier.Duranceau@loria.fr>\n"
+"Last-Translator: Francois-Xavier DURANCEAU "
+"<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; \n"
 "Content-Transfer-Encoding: 8bit\n"
+"Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:516
@@ -684,4 +685,3 @@ msgstr "Multipage"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Méthode d'impression"
-

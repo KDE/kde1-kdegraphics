@@ -72,7 +72,8 @@ msgid "&Open.."
 msgstr "&Ouvrir.."
 
 #: viewer.cpp:334
-msgid "&Save As..."
+#, fuzzy
+msgid "&Save As.."
 msgstr "Enregistrer &sous..."
 
 #: viewer.cpp:340
@@ -134,7 +135,8 @@ msgid "Max&pect"
 msgstr ""
 
 #: viewer.cpp:367
-msgid "&List..."
+#, fuzzy
+msgid "&List.."
 msgstr "&Liste..."
 
 #: viewer.cpp:371
@@ -202,7 +204,8 @@ msgid "Smooth"
 msgstr "Lissage"
 
 #: colour.cpp:248
-msgid "Enter gamma value ( >0 ):"
+#, fuzzy
+msgid "Enter gamma value (0...1):"
 msgstr "Entrer la valeur gamma ( >0 ) :"
 
 #: colour.cpp:254
