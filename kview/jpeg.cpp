@@ -159,6 +159,7 @@ void read_jpeg_jfif(QImageIO * iio)
     iio->setImage(image);
     iio->setStatus(0);
 
+    delete [] buffer[0];
 }
 
 
