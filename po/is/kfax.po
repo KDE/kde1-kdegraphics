@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-11-08 02:03+0100\n"
+"POT-Creation-Date: 1998-11-09 01:58+0100\n"
 "PO-Revision-Date: 1998-1-04 10:45-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"

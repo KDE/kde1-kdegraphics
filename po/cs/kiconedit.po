@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-11-08 02:03+0100\n"
+"POT-Creation-Date: 1998-11-09 01:58+0100\n"
 "PO-Revision-Date: 1998-11-03 14:57+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
