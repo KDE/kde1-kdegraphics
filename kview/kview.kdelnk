@@ -1,0 +1,12 @@
+[KDE Desktop Entry]
+Type=Application
+Exec=kview %f
+Icon=image.xpm
+TerminalOptions=
+Path=
+Terminal=0
+BinaryPattern=kview;
+Comment=KDE Image Viewer
+[Binding]
+Protocols=file;http;ftp;
+Extensions=Images;
