@@ -1154,7 +1154,7 @@ void TopLevel::saveNetFile( const char * _url)
 	return;
     }
     
-    tmpFile.sprintf( _PATH_TMP"kfax%i", time( 0L ) );
+    tmpFile.sprintf( _PATH_TMP"/kfax%i", time( 0L ) );
 
     res = copyfile(tmpFile.data(),thispage->pathname );
     if (res==0) {

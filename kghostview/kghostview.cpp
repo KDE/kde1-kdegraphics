@@ -784,7 +784,7 @@ void KGhostview::openNetFile( const char *_url )
 		return;
 	}
 
-	tmpFile.sprintf( "file:"_PATH_TMP"kghostview%i", time( 0L ) );
+	tmpFile.sprintf( "file:"_PATH_TMP"/kghostview%i", time( 0L ) );
 	connect( kfm, SIGNAL( finished() ), this, SLOT( slotKFMFinished() ) );
 	kfm->copy( netFile.data(), tmpFile.data() );
 	kfmAction = KGhostview::GET;
@@ -2124,7 +2124,7 @@ char *filename_dscP = 0;
 char *filename_uncP = 0;
 const char *cmd_scan_pdf = "gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit";
 const char *cmd_uncompress = "gzip -d -c %s > %s";
-doc = psscan(&psfile, filename, _PATH_TMP"kghostview", &filename_dscP,
+doc = psscan(&psfile, filename, _PATH_TMP"/kghostview", &filename_dscP,
    cmd_scan_pdf, &filename_uncP, cmd_uncompress);
 
 // UNIX won't delete these files until the last reference is closed,
