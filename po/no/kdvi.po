@@ -68,12 +68,11 @@ msgstr "Hva er dette? DVI-problem!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Filstatus endret."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
-msgstr "Fil gjenninnlastet"
+msgstr "Fil gjenninnlastet."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -470,9 +469,9 @@ msgid "Small text button set to shrink factor "
 msgstr "Liten tekstknapp satt for å krympe faktoren"
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Krymp: xx"
+msgstr "Krymp: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"
