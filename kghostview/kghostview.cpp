@@ -2580,7 +2580,7 @@ void KGhostview::new_file( int number )
     if (layout_changed)
       {
 	//printf("Layout should change -- call KPS method\n");
-	page->KPSLayout( True );
+	page->KPSLayout( False );
 	shrinkWrap();
       }
 
@@ -2624,7 +2624,7 @@ void KGhostview::show_page(int number)
     
     if (new_orient || new_media)
 	{
-		page->KPSLayout( True );
+		page->KPSLayout( False );
 	};
     
     if (toc_text) {
@@ -2737,7 +2737,7 @@ void KGhostview::set_magstep(int i)
   magstep = i;
   if (set_new_magstep())
     {
-      page->KPSLayout( True );
+      page->KPSLayout( False );
       //page->resize(page->width(), page->height());
       //page->repaint();
       sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
