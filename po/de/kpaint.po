@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-05-07 18:22+0200\n"
-"PO-Revision-Date: 1998-05-06 15:40 +0100\n"
+"PO-Revision-Date: 1998-05-07 14:04 +0100\n"
 "Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,14 +36,12 @@ msgid "Canvas Size"
 msgstr "Größe der Zeichenfläche"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Breite"
+msgstr "Breite:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Höhe"
+msgstr "Höhe:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -101,6 +99,7 @@ msgstr "Ungespeicherte Änderungen"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Es gibt ungespeicherte Änderungen, die verloren gehen, falls Sie jetzt das Fenster schließen."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -131,7 +130,6 @@ msgid "New Image..."
 msgstr "Neues Bild..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
 msgstr "Bild speichern..."
 
@@ -189,7 +187,7 @@ msgstr "Information..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Größe ändern..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -225,7 +223,7 @@ msgstr "Bereichsauswahl"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Runde Ecken"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -245,7 +243,7 @@ msgstr "Einstellungen speichern"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -253,6 +251,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -405,53 +406,5 @@ msgid "Set Line Colour..."
 msgstr "Linienfarbe setzen..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Rechteck"
-
-#~ msgid "Dismiss"
-#~ msgstr "Schließen"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Fehlerhafte URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Fehler: Fehlerhafte URL\n"
-#~ "KPaint versteht die angegebene URL nicht, bitte überprüfen."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint greift bereits auf eine entfernte Datei zu,\n"
-#~ "Sie müssen entweder den aktuellen entfernten Job abbrechen oder warten, \n"
-#~ "bis er beendet ist."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Konnte KFM nicht finden"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr ""
-#~ "Fehler: KPaint konnte keine laufenden KFM finden oder selber einen starten"
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Laden vom Netzwerk schlug fehl"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Fehler: Laden vom Netzwerk schlug fehl.\n"
-#~ "Irgendwas ist schiefgegangen :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Konnte KFM nicht starten"
-
-#~ msgid "Release Notes"
-#~ msgstr "Hinweise zu dieser Version"
-
-#~ msgid "About..."
-#~ msgstr "Über..."
+msgstr "Runde Ecken"

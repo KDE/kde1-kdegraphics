@@ -209,7 +209,6 @@ msgid "CTRL+End"
 msgstr "CTRL+End"
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
-#, fuzzy
 msgid "Prior"
 msgstr "Prior"
 
