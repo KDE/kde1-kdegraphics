@@ -7,6 +7,7 @@
 //#include <qslider.h>
 #include "fileman.h"
 #include "wview.h"
+#include "confighandler.h"
 
 #include <qimage.h>
 #include <stdio.h>
@@ -18,8 +19,16 @@ KApplication *theApp;
 
 int main(int argc, char **argv)
 {
-  int i;
+  int i=0;
+
   theApp = new KApplication (argc, argv, "kview");
+  
+  //KVConfigHandler::setConfigEntry("General","Cache",3);
+  //i=(int)KVConfigHandler::getConfigEntry("General","Cache");
+  
+  //printf("%d\n",i);
+
+  KVConfigHandler::readConfigEntries();
   
   if ( qApp->argc() > 1 )
     {
@@ -45,5 +54,7 @@ int main(int argc, char **argv)
   Fileman *man = new Fileman(0L,0L);
   man->show();
   man->firstClicked();
-  return theApp->exec();
+  int retval = theApp->exec();
+  // KVConfigHandler::writeConfigEntries();
+  return retval;
 }

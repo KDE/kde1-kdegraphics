@@ -49,18 +49,17 @@ class Fileman : public KTopLevelWidget
     Q_OBJECT;
 public:
   Fileman( const char *name=0, WView * myparent=0 );
-  ~Fileman();
+ Fileman();
   static QString shortenFilename(QString);
   static void appendFileList(QString);
 
   //static QStrList fileList;
   
 public slots:
-  void listboxClicked(int);
-  void comboboxSelected(int); 
-  void sliderChanged(int);
-  void updateListbox(int);
-  void updateCombobox();
+
+  // menubar action
+  void aboutKview();
+  void saveOptions();
 
   // toolbar1 action
   void slotNew();
@@ -80,11 +79,18 @@ public slots:
   void startShow();
   void randomShow();
   void stopShow();
+
+
   
   void slotLineEdit();
   void closeWindow();
-  void aboutKview();
-  
+
+  void listboxClicked(int);
+  void comboboxSelected(int); 
+  void sliderChanged(int);
+  void updateListbox(int);
+  void updateCombobox();
+
   /// Drag and Drop - called when drop event occurs
   void slotDropEvent( KDNDDropZone * _dropZone );
 
@@ -112,7 +118,7 @@ private:
   KToolBar    *ktoolbar1,*ktoolbar2;
   int         iktoolbar1,iktoolbar2;
   KMenuBar    *menubar;
-  QPopupMenu  *file,*help;
+  QPopupMenu  *file,*options, *help;
   
   
   bool    showrunning;
@@ -120,6 +126,8 @@ private:
   int     timerDelay;
   int     timerID;
   WView   *imageWindow;
+
+  QString lastPath;
 
   //keep track of all child display windows
   //no function, for future use already

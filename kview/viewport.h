@@ -31,9 +31,6 @@ private:
 	QWMatrix matrix;
 	int	oldContext;
 	QPopupMenu *lb_popup;
-	
-	static QPixmapCache pixcache;
-
 	void fitToPixmap();
 
 public:

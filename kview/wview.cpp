@@ -435,7 +435,7 @@ bool WView::load(const char *file){
 			
 	}
 	else
-		loadNetFile(file);
+		loadSuccess=loadNetFile(file);
 	return loadSuccess;
 }
 
@@ -444,6 +444,7 @@ bool WView::loadNetFile(const char *file) {
 
 	if ( url.isMalformed() ) {
 		emit kviewError( KViewError::badURL );
+		if (!loaded) sendCloseSignal();
 		return FALSE;
         }
 

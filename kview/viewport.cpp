@@ -16,6 +16,7 @@
 
 #include "viewport.h"
 #include "viewport.moc"
+#include "confighandler.h"
 
 WViewPort::WViewPort(const char *file=0, QWidget *parent=0, 
 		const char *name=0, WFlags f = 0)
@@ -60,8 +61,7 @@ WViewPort::WViewPort(const char *file=0, QWidget *parent=0,
 	lb_popup->insertItem("Fit pixmap size to window size", this,
 			     SLOT(fitPixmapToWindow()));
 
-	pixcache.clear();
-	pixcache.setCacheLimit(1024);
+	QPixmapCache::setCacheLimit( KVConfigHandler::cacheSize );
 
 	image = new QPixmap();
 	imagefile="";
@@ -69,6 +69,82 @@ WViewPort::WViewPort(const char *file=0, QWidget *parent=0,
 	load(file);
 }
 
+
+bool WViewPort::load(const char *filename)
+{
+	bool ret=0;
+	QString save=imagefile;
+	QPixmap *copyimage;
+
+	if(filename){
+	
+		// Save image file name	
+
+		imagefile= filename;
+
+		// Try internal types, fail if not found.
+		QApplication::setOverrideCursor(waitCursor);
+
+		hide();
+		
+		if(oldContext)
+			QColor::destroyAllocContext( oldContext );
+
+		oldContext = QColor::enterAllocContext();
+		
+		copyimage = 0L;
+
+		//query if the image "filename" is in cache 
+		copyimage = QPixmapCache::find(filename);
+		
+		if (copyimage==0L)
+		  { //image not cached 
+		    
+		    ret=image->load(filename);
+		    setPixmap(*image);
+		    if (ret==TRUE)
+		      {
+			// picture load was succesful.
+			// let's put it in cache.
+
+			// make a duplicate of image, because 
+			// QPixmapCache doesn't allocate memory,
+			// and put the duplicate in the cache.
+			copyimage = new QPixmap; 
+			*copyimage = *image;    
+			QPixmapCache::insert(filename,copyimage);
+			// Rem. On cache removal, the allocated 
+			// memory is freed by QPixmapCache
+		      }
+		  }
+		else
+		  { //image cached 
+
+		    *image = *copyimage; //no pionter copy, copy contructor!
+		    setPixmap(*image);
+		    ret = TRUE;
+		  }
+
+		QColor::leaveAllocContext();
+		show();
+		QApplication::restoreOverrideCursor();
+
+
+		matrix.reset();
+
+		fitToPixmap();	
+	} else
+		ret = 1;
+
+	if(!ret)
+		imagefile = save;
+
+	
+	return ret;
+}
+
+
+/*
 bool WViewPort::load(const char *filename)
 {
 	bool ret=0;
@@ -89,28 +165,9 @@ bool WViewPort::load(const char *filename)
 			QColor::destroyAllocContext( oldContext );
 
 		oldContext = QColor::enterAllocContext();
-		
-		//ret = pixcache.find(filename);
-		//printf("%s %d\n",filename, (image==NULL)?0:1);
-		ret = FALSE;
-		if (ret==FALSE)
-		  {
-		    //printf("load forced\n");
-		    ret=image->load(filename);
-		    //if (ret==TRUE)
-		    //  pixcache.insert(filename,image);
-		  }
-		else
-		  {
-		    //ret=image->load(filename);
-		    //if (ret==TRUE)
-		    //  pixcache.insert(filename,image);
-		    //image = pixcache.find(filename);
-		    //image = newimage;
-		    //ret = TRUE;
-		  }
-		if (ret=TRUE)
-		  setPixmap(*image);
+
+		ret=image->load(filename);
+		setPixmap(*image);
 
 		QColor::leaveAllocContext();
 		show();
@@ -126,10 +183,9 @@ bool WViewPort::load(const char *filename)
 	if(!ret)
 		imagefile = save;
 
-	
 	return ret;
 }
-
+*/
 void WViewPort::mousePressEvent(QMouseEvent *e)
 {
   static QPoint tmp_point;

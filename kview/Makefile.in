@@ -39,9 +39,9 @@ FORMATOBJ= jpeg.o gif.o kpng.o eps.o netpbm.o
 
 ######
 
-OBJS = main.o wview.o viewport.o formats.o QwViewport.o kerror.o fileman.o $(FORMATOBJ)
+OBJS = main.o wview.o viewport.o formats.o QwViewport.o kerror.o fileman.o confighandler.o $(FORMATOBJ)
 SOURCE = main.cpp wview.cpp viewport.cpp formats.cpp QwViewport.cpp \
-	 kerror.cpp fileman.cpp $(FORMATSRC)
+	 kerror.cpp fileman.cpp confighandler.cpp  $(FORMATSRC)
 SRCDOCFILES = wview.h viewport.h kerror.h
 
 all: kview
@@ -66,6 +66,7 @@ formats.o: formats.cpp
 jpeg.o: jpeg.cpp
 gif.o: gif.cpp
 kpng.o: kpng.cpp
+confighandler.o: confighandler.h confighandler.cpp
 
 Makefile: Makefile.in
 	cd .. && CONFIG_FILES=kview/$@ CONFIG_HEADERS= $(SHELL) ./config.status

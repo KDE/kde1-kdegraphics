@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <qpixmap.h>
+#include <qfiledlg.h>
 
 #include <kurl.h>
 
@@ -18,6 +19,7 @@
 
 #include "version.h"
 #include "toolpics.h"
+#include "confighandler.h"
 
 // global (shared) variables
 QStrList fileList;
@@ -56,14 +58,18 @@ Fileman::Fileman(const char *name, WView *)
   updateListbox(3);
   
   // show display manager
-  resize(260,350);
+  int sizeX = KVConfigHandler::frameSizeX;
+  int sizeY = KVConfigHandler::frameSizeY;
+
+  resize(sizeX,sizeY);
   show();
-  resize(260,350);
+  resize(sizeX,sizeY);
 
   // other stuff
   showrunning = FALSE;
   fileList.setAutoDelete( TRUE );
-  timerDelay = 5*100;
+  timerDelay = KVConfigHandler::delay;
+  lastPath = 0;
 
   // DnD support 
   KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
@@ -80,6 +86,9 @@ void Fileman::initMenuBar()
   file->insertItem("Open URL...",  this, SLOT(slotOpenUrl()));
   file->insertItem("Quit",         this, SLOT(closeWindow()));
 
+  //options = new QPopupMenu();
+  //options->insertItem("Save Options", this, SLOT(saveOptions()));
+
   help = new QPopupMenu ();
   help->insertItem("About KView",  this, SLOT(aboutKview()));
   help->insertItem("Help on KView",this, SLOT(invokeHelp()));
@@ -87,6 +96,7 @@ void Fileman::initMenuBar()
   
   menubar = new KMenuBar(this,"menubar");
   menubar->insertItem("File", file);
+  //menubar->insertItem("Options", options);
   menubar->insertItem("Help", help);
   setMenu(menubar);
 }
@@ -192,9 +202,8 @@ void Fileman::initToolBar()
 			"stop picture show");
 
   //add the toolbars to the top level widget
-  //default positions
-  ktoolbar1->setBarPos( KToolBar::Top );
-  ktoolbar2->setBarPos( KToolBar::Top );
+  ktoolbar1->setBarPos( KVConfigHandler::toolbar1pos );
+  ktoolbar2->setBarPos( KVConfigHandler::toolbar2pos );
 
   //the order of the 4 folowing lines is decisioning
   iktoolbar1 = addToolBar(ktoolbar1);
@@ -230,10 +239,14 @@ void Fileman::initMainWidget()
   textFast->setFont( QFont("times",10));
   textFast->setText("fast");
 
-  
-  slider = new QSlider(50,10,5,10,QSlider::Horizontal, mainwidget);
+  slider = new QSlider(10,50,
+		       5,(KVConfigHandler::delay)/100,
+		       QSlider::Horizontal, mainwidget);
   slider->setRange(10,50);
   slider->setSteps(5,10);
+  QSlider::TickSetting sset;
+  sset = (QSlider::TickSetting) 1;
+  slider->setTickmarks(sset);
   connect(slider,SIGNAL(valueChanged(int)),this,SLOT(sliderChanged(int)));
 
   textOutput = new QLabel( mainwidget, "OutputDevice");
@@ -532,18 +545,43 @@ void Fileman::slotNew()
 
 void Fileman::slotOpen()
 {
+  /*
   if (imageWindow==0L) createWView();
   imageWindow->loadImage();
   if (!imageWindow==0L) imageWindow->show();
   checkValidButtons();
+  */
+  QString filename(QFileDialog::getOpenFileName(lastPath, 0,0, 
+						"kview: Open...") );
+	
+  if( filename.isEmpty() )
+    return;
+  if (imageWindow==0L) createWView();
+  imageWindow->loadLocal(filename.data());
+  if (!imageWindow==0L) imageWindow->show();
+  
 }
 
 void Fileman::slotOpenUrl()
 {
+  DlgLocation *locDlg = new DlgLocation("Enter URL to image", "");
+  locDlg->setCaption("kview: enter URL..");	
+  locDlg->show();	
+  
+  QString result = locDlg->getText();
+  
+  result.detach();
+  
+  delete locDlg;
+  
+  if(result.isEmpty())
+    return;
+  
   if (imageWindow==0L) createWView();
-  imageWindow->loadURL();
+  imageWindow->loadNetFile(result.data());
   if (!imageWindow==0L) imageWindow->show();
   checkValidButtons();
+        
 }
 
 
@@ -570,10 +608,19 @@ void Fileman::aboutKview()
   QString text;
   text.sprintf("kview %d.%d.%d \n",VERSIONNR,SUBVERSIONNR,PATCHLEVEL);
   text += "(c) 1996, 1997 by \n";
-  text += "Sirtaj Singh Kang  <taj@kde.org>\n";
-  text += "Martin Hartig  <hartig@mathematik.uni-kl.de>";
+  text += "Sirtaj Singh Kang,  <taj@kde.org>\n";
+  text += "Martin Hartig,  <hartig@mathematik.uni-kl.de>";
   QMessageBox::message("About kview", text.data(),
 			"Ok"); 
+}
+
+void Fileman::saveOptions()
+{
+  KVConfigHandler::toolbar2pos = ktoolbar2->barPos();
+  KVConfigHandler::frameSizeX  = width();
+  KVConfigHandler::frameSizeY  = height();
+  KVConfigHandler::delay       = timerDelay;
+  KVConfigHandler::writeConfigEntries();
 }
 
 
@@ -698,7 +745,8 @@ void Fileman::randomShow()
   showrandom  = TRUE;
   checkValidButtons();
   timerID = startTimer(timerDelay);
-  srand((unsigned) time((long *)0));
+  //srand((unsigned) time((long *)0));
+  srand((unsigned) time((time_t *)0));
 }
 
 void Fileman::stopShow()
@@ -763,10 +811,8 @@ void Fileman::closeEvent(QCloseEvent *)
 
 void Fileman::closeWindow()
 {
-  //if(manCount > 1)
-  //  delete this;
-  //else
-    theApp->quit();
+  saveOptions();
+  theApp->quit();
 }
 
 

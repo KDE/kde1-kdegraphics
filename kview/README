@@ -1,5 +1,5 @@
 
-kview 0.11.2
+kview 0.11.3
 ------------
 
 Yet another tentative release of kview, the KDE image viewer.
@@ -79,6 +79,10 @@ CHANGES
 -------
 
 Since 0.11.0 (Martin Hartig)
+
+0.11.3:
+* reads/writes some config data
+* picture cache (size to be edit manually in kviewrc, default 1 MB)
 
 0.11.2:
 * new image filters by Dirk Schoenberg
