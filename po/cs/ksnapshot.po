@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1998-12-18 11:31+01:00\n"
+"PO-Revision-Date: 1999-01-16 10:32+01:00\n"
 "Last-Translator: Martin ©pirk <spirk@kla.pvt.cz>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgid "snapshot"
 msgstr "snímek"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -28,13 +28,13 @@ msgid ""
 "\n"
 "Version: %s"
 msgstr ""
-"Stisknìte tlaèítko `Start' a pak\n"
+"Stisknìte tlaèítko `Sejmout' a pak\n"
 "kliknìte na okno které chcete sejmout.\n"
 "\n"
 "Autorem programu je Richard Moore (rich@kde.org)\n"
 "a progam je distribuován pod licencí LGPL\n"
 "\n"
-"Verze: "
+"Verze: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
@@ -62,7 +62,7 @@ msgstr "Sejmout pouze okno obsahující kurzor"
 
 #: ksnapshot.cpp:224
 msgid "Grab"
-msgstr "Start"
+msgstr "Sejmout"
 
 #: ksnapshot.cpp:454
 msgid "Error: Unable to save image"

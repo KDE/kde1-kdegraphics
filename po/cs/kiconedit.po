@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1998-11-03 14:57+01:00\n"
+"PO-Revision-Date: 1999-01-16 10:35+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -201,6 +201,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"KDE Icon Editor\n"
+"\n"
+"Program urèený k vytváøení ikon\n"
+"vyu¾ívající paletu barev KDE\n"
+"\n"
+"Copyright 1998 by Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -710,11 +718,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "¹íøka"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "vý¹ka"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
