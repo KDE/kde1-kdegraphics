@@ -289,8 +289,7 @@ msgstr "KPaint: 網路讀取失敗"
 msgid ""
 "Error: Netword Load Failed\n"
 "Something went wrong :-("
-msgstr ""
-"錯誤: 網路讀取失敗"
+msgstr "錯誤: 網路讀取失敗"
 
 #: kpaint.cpp:580
 msgid "KPaint: Could not start KFM"

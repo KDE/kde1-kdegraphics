@@ -246,8 +246,8 @@ msgid ""
 "corrupt."
 msgstr ""
 "Erro: Formato Desconhecido\n"
-"KPaint não reconhece o formato do ficheiro especificado ou o ficheiro "
-"está corrompido."
+"KPaint não reconhece o formato do ficheiro especificado ou o ficheiro está "
+"corrompido."
 
 #: kpaint.cpp:440 kpaint.cpp:552
 msgid "KPaint: Malformed URL"

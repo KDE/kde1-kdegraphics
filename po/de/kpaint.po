@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-02-13 12:34+0100\n"
+"POT-Creation-Date: 1998-01-05 22:01+0100\n"
 "PO-Revision-Date: 1998-01-05 21:05 +0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -34,27 +34,11 @@ msgstr "Breite"
 msgid "Height"
 msgstr "Höhe"
 
-#: circle.cpp:20 kpaint.cpp:353
+#: circle.cpp:20 kpaint.cpp:244
 msgid "Circle"
 msgstr "Kreis"
 
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Farbtiefe:"
-
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (Bitmap)"
-
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr "8 (256 Farben)"
-
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr "24 (Echtfarben)"
-
-#: ellipse.cpp:18 kpaint.cpp:352
+#: ellipse.cpp:18 kpaint.cpp:243
 msgid "Ellipse"
 msgstr "Ellipse"
 
@@ -82,167 +66,164 @@ msgstr "Bildhöhe:"
 msgid "Dismiss"
 msgstr "Schließen"
 
-#: kpaint.cpp:43 kpaint.cpp:745
+#: kpaint.cpp:42 kpaint.cpp:633
 msgid "untitled.gif"
 msgstr "unbenannt.gif"
 
-#: kpaint.cpp:116
+#: kpaint.cpp:113
 msgid "Unsaved Changes"
 msgstr "Ungespeicherte Änderungen"
 
-#: kpaint.cpp:163
+#: kpaint.cpp:161
 msgid "New Canvas"
 msgstr "Neue Zeichenfläche"
 
-#: kpaint.cpp:166
+#: kpaint.cpp:164
 msgid "Open File"
 msgstr "Datei öffnen"
 
-#: kpaint.cpp:169
+#: kpaint.cpp:167
 msgid "Save File"
 msgstr "Datei speichern"
 
-#: kpaint.cpp:183 kpaint.cpp:337
+#: kpaint.cpp:181 kpaint.cpp:228
 msgid "Zoom In"
 msgstr "Vergrößern"
 
-#: kpaint.cpp:186 kpaint.cpp:338
+#: kpaint.cpp:184 kpaint.cpp:229
 msgid "Zoom Out"
 msgstr "Verkleinern"
 
-#: kpaint.cpp:317
+#: kpaint.cpp:208
 msgid "Open Image..."
 msgstr "Bild öffnen..."
 
-#: kpaint.cpp:318
+#: kpaint.cpp:209
 msgid "New Image..."
 msgstr "Neues Bild..."
 
-#: kpaint.cpp:319
+#: kpaint.cpp:210
 msgid "Save Image..."
 msgstr "Bild speichern..."
 
-#: kpaint.cpp:320
+#: kpaint.cpp:211
 msgid "Save Image As..."
 msgstr "Bild speichern als..."
 
-#: kpaint.cpp:321
+#: kpaint.cpp:212
 msgid "Image Format..."
 msgstr "Bildformat..."
 
-#: kpaint.cpp:323
+#: kpaint.cpp:214
 msgid "Open from URL..."
 msgstr "Aus einem URL öffnen..."
 
-#: kpaint.cpp:324
+#: kpaint.cpp:215
 msgid "Save to URL..."
 msgstr "In einen URL speichern..."
 
-#: kpaint.cpp:326
+#: kpaint.cpp:217
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: kpaint.cpp:327
+#: kpaint.cpp:218
 msgid "Close Window"
 msgstr "Fenster schließen"
 
-#: kpaint.cpp:329
+#: kpaint.cpp:220
 msgid "Exit"
 msgstr "Ende"
 
-#: kpaint.cpp:332
+#: kpaint.cpp:223
 msgid "Copy Region"
 msgstr "Region kopieren"
 
-#: kpaint.cpp:333
+#: kpaint.cpp:224
 msgid "Cut Region"
 msgstr "Region ausschneiden"
 
-#: kpaint.cpp:334
+#: kpaint.cpp:225
 msgid "Paste Region"
 msgstr "Region einfügen"
 
-#: kpaint.cpp:335
+#: kpaint.cpp:226
 msgid "Paste As Image"
 msgstr "Als Bild einfügen"
 
-#: kpaint.cpp:339
+#: kpaint.cpp:230
 msgid "Mask..."
 msgstr "Maskieren..."
 
-#: kpaint.cpp:342
+#: kpaint.cpp:233
 msgid "Information..."
 msgstr "Information..."
 
-#: kpaint.cpp:343
+#: kpaint.cpp:234
 msgid "Edit Palette..."
 msgstr "Palette bearbeiten..."
 
-#: kpaint.cpp:344
+#: kpaint.cpp:235
 msgid "Change Colour Depth..."
 msgstr "Farbtiefe ändern..."
 
-#: kpaint.cpp:347
+#: kpaint.cpp:238
 msgid "Tool Properties..."
 msgstr "Werkzeugeigenschaften..."
 
-#: kpaint.cpp:349 pen.cpp:19
+#: kpaint.cpp:240 pen.cpp:19
 msgid "Pen"
 msgstr "Stift"
 
-#: kpaint.cpp:350 line.cpp:22
+#: kpaint.cpp:241 line.cpp:22
 msgid "Line"
 msgstr "Linie"
 
-#: kpaint.cpp:351 rectangle.cpp:19
+#: kpaint.cpp:242 rectangle.cpp:19
 msgid "Rectangle"
 msgstr "Rechteck"
 
-#: kpaint.cpp:354 spraycan.cpp:22
+#: kpaint.cpp:245 spraycan.cpp:22
 msgid "Spray Can"
 msgstr "Sprühdose"
 
-#: kpaint.cpp:355
+#: kpaint.cpp:246
 msgid "Area Select"
 msgstr "Bereichsauswahl"
 
-#: kpaint.cpp:360
-msgid "Show Tools Toolbar"
+#: kpaint.cpp:251
+#, fuzzy
+msgid "Show Toolbar"
 msgstr "Werkzeugleiste an"
 
-#: kpaint.cpp:361
-msgid "Show Commands Toolbar"
-msgstr "Befehlsleiste an"
-
-#: kpaint.cpp:362
+#: kpaint.cpp:252
 msgid "Show Status Bar"
 msgstr "Statusleiste an"
 
-#: kpaint.cpp:363
+#: kpaint.cpp:253
 msgid "Save Options"
 msgstr "Einstellungen speichern"
 
-#: kpaint.cpp:367
+#: kpaint.cpp:257
 msgid "Release Notes"
 msgstr "Hinweise zu dieser Version"
 
-#: kpaint.cpp:368
+#: kpaint.cpp:258
 msgid "About..."
 msgstr "Über..."
 
-#: kpaint.cpp:373
+#: kpaint.cpp:263
 msgid "&Image"
 msgstr "B&ild"
 
-#: kpaint.cpp:374
+#: kpaint.cpp:264
 msgid "&Tool"
 msgstr "&Werkzeuge"
 
-#: kpaint.cpp:520
+#: kpaint.cpp:407
 msgid "KPaint: Could not open file"
 msgstr "KPaint: Konnte Datei nicht öffnen"
 
-#: kpaint.cpp:521
+#: kpaint.cpp:408
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -250,16 +231,16 @@ msgstr ""
 "Fehler: Konnte Datei nicht öffnen\n"
 "KPaint konnte die angegebene Datei nicht öffnen."
 
-#: kpaint.cpp:524 kpaint.cpp:534 kpaint.cpp:557 kpaint.cpp:572 kpaint.cpp:583
-#: kpaint.cpp:638 kpaint.cpp:669 kpaint.cpp:684 kpaint.cpp:695
+#: kpaint.cpp:411 kpaint.cpp:421 kpaint.cpp:444 kpaint.cpp:459 kpaint.cpp:470
+#: kpaint.cpp:525 kpaint.cpp:556 kpaint.cpp:571 kpaint.cpp:582
 msgid "Continue"
 msgstr "Fortsetzen"
 
-#: kpaint.cpp:529
+#: kpaint.cpp:416
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Unbekanntes Format"
 
-#: kpaint.cpp:530
+#: kpaint.cpp:417
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified fileor the file is "
@@ -269,11 +250,11 @@ msgstr ""
 "KPaint versteht das Format der angegebenen Datei nicht, oder die Datei ist "
 "beschädigt."
 
-#: kpaint.cpp:553 kpaint.cpp:665
+#: kpaint.cpp:440 kpaint.cpp:552
 msgid "KPaint: Malformed URL"
 msgstr "KPaint: Fehlerhafte URL"
 
-#: kpaint.cpp:554 kpaint.cpp:666
+#: kpaint.cpp:441 kpaint.cpp:553
 msgid ""
 "Error: Malformed URL\n"
 "KPaint does not understand the specifed URL, check it's correct."
@@ -281,7 +262,7 @@ msgstr ""
 "Fehler: Fehlerhafte URL\n"
 "KPaint versteht die angegebene URL nicht, bitte überprüfen."
 
-#: kpaint.cpp:570 kpaint.cpp:682
+#: kpaint.cpp:457 kpaint.cpp:569
 msgid ""
 "KPaint is already accessing a remote file, you must\n"
 "cancel the current remote job or wait for it to complete."
@@ -290,20 +271,20 @@ msgstr ""
 "Sie müssen entweder den aktuellen entfernten Job abbrechen oder warten, \n"
 "bis er beendet ist."
 
-#: kpaint.cpp:581
+#: kpaint.cpp:468
 msgid "KPaint: Could not find KFM"
 msgstr "KPaint: Konnte KFM nicht finden"
 
-#: kpaint.cpp:582 kpaint.cpp:694
+#: kpaint.cpp:469 kpaint.cpp:581
 msgid "Error: KPaint could not find a running KFM or start one itself."
 msgstr ""
 "Fehler: KPaint konnte keine laufenden KFM finden oder selber einen starten"
 
-#: kpaint.cpp:634
+#: kpaint.cpp:521
 msgid "KPaint: Network Load Failed"
 msgstr "KPaint: Laden vom Netzwerk schlug fehl"
 
-#: kpaint.cpp:635
+#: kpaint.cpp:522
 msgid ""
 "Error: Netword Load Failed\n"
 "Something went wrong :-("
@@ -311,19 +292,19 @@ msgstr ""
 "Fehler: Laden vom Netzwerk schlug fehl.\n"
 "Irgendwas ist schiefgegangen :-("
 
-#: kpaint.cpp:693
+#: kpaint.cpp:580
 msgid "KPaint: Could not start KFM"
 msgstr "KPaint: Konnte KFM nicht starten"
 
-#: kpaint.cpp:721
+#: kpaint.cpp:609
 msgid "Canvas Size"
 msgstr "Größe der Zeichenfläche"
 
-#: kpaint.cpp:887
+#: kpaint.cpp:776
 msgid "Open Location:"
 msgstr "URL öffnen:"
 
-#: kpaint.cpp:919
+#: kpaint.cpp:808
 msgid "Save to Location:"
 msgstr "In URL speichern:"
 
@@ -430,3 +411,18 @@ msgstr "Verbindungsstil:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Linienfarbe setzen..."
+
+#~ msgid "Image Depth:"
+#~ msgstr "Farbtiefe:"
+
+#~ msgid "1 (Bitmap)"
+#~ msgstr "1 (Bitmap)"
+
+#~ msgid "8 (256 Colour)"
+#~ msgstr "8 (256 Farben)"
+
+#~ msgid "24 (True Colour)"
+#~ msgstr "24 (Echtfarben)"
+
+#~ msgid "Show Commands Toolbar"
+#~ msgstr "Befehlsleiste an"

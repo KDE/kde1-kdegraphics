@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi VERSION\n"
-"POT-Creation-Date: 1998-01-23 22:04+0100\n"
+"POT-Creation-Date: 1998-03-05 17:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Székely Krisztián <szekelyk@edasz.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:515
+#: kdvi.cpp:514
 msgid "Notice"
 msgstr "Jegyzet"
 
@@ -67,379 +67,384 @@ msgstr "HÉ"
 msgid "What's this? DVI problem!\n"
 msgstr "Mi ez? DVI probléma!\n"
 
-#: kdvi.cpp:91
+#: kdvi.cpp:92
 msgid "No document"
 msgstr "Nincs dokumentum"
 
-#: kdvi.cpp:172
+#: kdvi.cpp:108
+#, fuzzy
+msgid "Toggle Menubar"
+msgstr "Menüsáv"
+
+#: kdvi.cpp:110
+#, fuzzy
+msgid "Mark page"
+msgstr "Mindent kijelöl"
+
+#: kdvi.cpp:112
+#, fuzzy
+msgid "Redraw"
+msgstr "Oldal újrarajzolása"
+
+#: kdvi.cpp:114
+#, fuzzy
+msgid "Preferences ..."
+msgstr "&Beállítások ..."
+
+#: kdvi.cpp:173
 msgid "&Open ..."
 msgstr "&Megnyit ..."
 
-#: kdvi.cpp:179
+#: kdvi.cpp:180
 msgid "Open &recent"
 msgstr "&Elõzõek megnyitása"
 
-#: kdvi.cpp:181
+#: kdvi.cpp:182
 msgid "&Print ..."
 msgstr "&Nyomtat ..."
 
-#: kdvi.cpp:189
+#: kdvi.cpp:190
 msgid "Zoom &in"
 msgstr "N&agyít"
 
-#: kdvi.cpp:190
+#: kdvi.cpp:191
 msgid "Zoom &out"
 msgstr "&Kicsinyít"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:192
 msgid "&Fit to page"
 msgstr "&Teljes lap"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:193
 msgid "Fit to page &width"
 msgstr "&Teljes szélesség"
 
-#: kdvi.cpp:194
+#: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Oldal újrarajzolás"
 
-#: kdvi.cpp:201
+#: kdvi.cpp:202
 msgid "&Previous"
 msgstr "&Elõzõ"
 
-#: kdvi.cpp:202
+#: kdvi.cpp:203
 msgid "&Next"
 msgstr "&Következõ"
 
-#: kdvi.cpp:203
+#: kdvi.cpp:204
 msgid "&First"
 msgstr "E&lsõ"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:205
 msgid "&Last"
 msgstr "&Utolsó"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:206
 msgid "&Go to ..."
 msgstr "&Menj a ..."
 
-#: kdvi.cpp:208
+#: kdvi.cpp:209
 msgid "&Page"
 msgstr "&Oldal"
 
-#: kdvi.cpp:213
+#: kdvi.cpp:214
 msgid "&Preferences ..."
 msgstr "&Beállítások ..."
 
-#: kdvi.cpp:214
+#: kdvi.cpp:215
 msgid "&Keys ..."
 msgstr "&Billentyûk ..."
 
-#: kdvi.cpp:216
+#: kdvi.cpp:217
 msgid "Make PK-&fonts"
 msgstr "PK fontok készítése"
 
-#: kdvi.cpp:218
+#: kdvi.cpp:219
 msgid "Show PS"
 msgstr "PS megjelenítése"
 
-#: kdvi.cpp:220
+#: kdvi.cpp:221
 msgid "Show &Menubar"
 msgstr "&Menüsáv"
 
-#: kdvi.cpp:222
+#: kdvi.cpp:223
 msgid "Show &Buttons"
 msgstr "&Gombsáv"
 
-#: kdvi.cpp:224
+#: kdvi.cpp:225
 msgid "Show Page Lis&t"
 msgstr "&Oldallista"
 
-#: kdvi.cpp:226
+#: kdvi.cpp:227
 msgid "Show &Statusbar"
 msgstr "&Állapotsor"
 
-#: kdvi.cpp:228
+#: kdvi.cpp:229
 msgid "Show Scro&llbars"
 msgstr "&Gördítõsávok"
 
-#: kdvi.cpp:239
-msgid "&Contents"
-msgstr "&Tartalom"
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr ""
 
-#: kdvi.cpp:242
-msgid "About &Qt"
-msgstr "&Qt névjegy"
+#: kdvi.cpp:240
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"Marku Hihnala <mah@ee.oulu.fi>"
 
-#: kdvi.cpp:261
+#: kdvi.cpp:260
 msgid "Open document ..."
 msgstr "Megnyitás ..."
 
-#: kdvi.cpp:262
+#: kdvi.cpp:261
 msgid "Reload document"
 msgstr "Újra betölt"
 
-#: kdvi.cpp:263
+#: kdvi.cpp:262
 msgid "Print ..."
 msgstr "Nyomtatás ..."
 
-#: kdvi.cpp:265
+#: kdvi.cpp:264
 msgid "Go to first page"
 msgstr "Elsõ oldalra"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:265
 msgid "Go to previous page"
 msgstr "Elõzõ oldalra"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:266
 msgid "Go down then top of next page"
 msgstr "Következõ oldal tetejére"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:267
 msgid "Go to next page"
 msgstr "Következõ oldalra"
 
-#: kdvi.cpp:269
+#: kdvi.cpp:268
 msgid "Go to last page"
 msgstr "Utolsó oldalra"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:270
 msgid "Decrease magnification"
 msgstr "Kicsinyítés"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:271
 msgid "Small text"
 msgstr "Kis szöveg"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:272
 msgid "Large text"
 msgstr "Nagy szöveg"
 
-#: kdvi.cpp:274
+#: kdvi.cpp:273
 msgid "Increase magnification"
 msgstr "Nagyítás"
 
-#: kdvi.cpp:299
+#: kdvi.cpp:298
 msgid "Scroll window and switch the page"
 msgstr "Görgesd az ablakot és válts lapot"
 
-#: kdvi.cpp:308
+#: kdvi.cpp:307
 msgid "Select page and mark pages for printing"
 msgstr "Lap választás és nyomtatásra kijelölés"
 
-#: kdvi.cpp:323
+#: kdvi.cpp:322
 msgid "X:0000, Y:0000 "
 msgstr "X:0000, Y:0000 "
 
-#: kdvi.cpp:325
+#: kdvi.cpp:324
 msgid "Shrink: xx"
 msgstr "Zsugorítás : xx"
 
-#: kdvi.cpp:327
+#: kdvi.cpp:326
 msgid "Page: xxxx / xxxx"
 msgstr "Oldal: xxxx / xxxx"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:343 kdvi.cpp:395
 msgid "New window"
 msgstr "Új ablak"
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:344 kdvi.cpp:396
 msgid "Open file"
 msgstr "Megnyit"
 
-#: kdvi.cpp:346 kdvi.cpp:398
+#: kdvi.cpp:345 kdvi.cpp:397
 msgid "Print dialog"
 msgstr "Nyomtatás dialógus"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:347 kdvi.cpp:399
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:348 kdvi.cpp:400
 msgid "Zoom out"
 msgstr "Kicsinyítés"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:349 kdvi.cpp:401
 msgid "Fit window"
 msgstr "Teljes ablakba"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:350 kdvi.cpp:402
 msgid "Fit width"
 msgstr "Teljes szélesség"
 
-#: kdvi.cpp:352 kdvi.cpp:404
+#: kdvi.cpp:351 kdvi.cpp:403
 msgid "Redraw page"
 msgstr "Oldal újrarajzolása"
 
-#: kdvi.cpp:353 kdvi.cpp:406
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Next page"
 msgstr "Következõ oldal"
 
-#: kdvi.cpp:354 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:404
 msgid "Previous page"
 msgstr "Elõzõ oldal"
 
-#: kdvi.cpp:355 kdvi.cpp:408
+#: kdvi.cpp:354 kdvi.cpp:407
 msgid "Last page"
 msgstr "Utolsó oldal"
 
-#: kdvi.cpp:356 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:406
 msgid "First page"
 msgstr "Elsõ oldal"
 
-#: kdvi.cpp:357 kdvi.cpp:409
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "Goto page"
 msgstr "Menj az oldalra"
 
-#: kdvi.cpp:358
+#: kdvi.cpp:357
 msgid "Configure keys"
 msgstr "Billentyû beállítás"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
 msgstr "PS mejelenítés"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
 msgstr "Menüsáv"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
 msgstr "Gombsáv"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
 msgstr "Oldallista"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
 msgstr "Állapotsor"
 
-#: kdvi.cpp:364 kdvi.cpp:415
+#: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
 msgstr "Gördítõsávok"
 
-#: kdvi.cpp:467
+#: kdvi.cpp:466
 msgid "File open dialog is open"
 msgstr "Fájl dialógus nyitva"
 
-#: kdvi.cpp:516
+#: kdvi.cpp:515
 msgid "Can't read file:\n"
 msgstr "Nem olvasható a file:\n"
 
-#: kdvi.cpp:522
+#: kdvi.cpp:521
 msgid "Opening "
 msgstr "Nyitás"
 
-#: kdvi.cpp:547
+#: kdvi.cpp:546
 msgid "Opened "
 msgstr "Nyitva "
 
-#: kdvi.cpp:557
+#: kdvi.cpp:556
 msgid "Print dialog is open"
 msgstr "Nyomtatás dialógus nyitva"
 
-#: kdvi.cpp:572
+#: kdvi.cpp:571
 msgid "View size fits page"
 msgstr "Teljes lap nézet"
 
-#: kdvi.cpp:581
+#: kdvi.cpp:580
 msgid "View width fits page"
 msgstr "Teljes szélesség nézet"
 
-#: kdvi.cpp:673
+#: kdvi.cpp:672
 msgid "Preferences applied"
 msgstr "Beállítások alkalmazva"
 
-#: kdvi.cpp:677
+#: kdvi.cpp:676
 msgid " Page "
 msgstr " Oldal "
 
-#: kdvi.cpp:679
+#: kdvi.cpp:678
 msgid "Go to page"
 msgstr "Ugorj az oldalra"
 
-#: kdvi.cpp:693
+#: kdvi.cpp:692
 msgid "Go to"
 msgstr "Ugorj"
 
-#: kdvi.cpp:714
+#: kdvi.cpp:713
 msgid "Missing PK-fonts will be generated"
 msgstr "A hiányzó PK-fontok generálódnak"
 
-#: kdvi.cpp:715
+#: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "A hiányzó PK-fontok a missfont.log-ba íródnak"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
 msgstr "Postscript specialitások rajzolása"
 
-#: kdvi.cpp:732
+#: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
 msgstr "Postscript specialitások nem rajzolódnak"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "No menu bar"
 msgstr "Nincs menüsáv"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "Menu bar is shown"
 msgstr "Menüsáv látható"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "No button bar"
 msgstr "Nincs gombsáv"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "Button bar is shown"
 msgstr "Gombsáv látható"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "Tool bar is shown"
 msgstr "Eszközsáv látható"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "No tool bar"
 msgstr "Nincs eszközsáv"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "No status bar"
 msgstr "Nincs állapotsor"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "Status bar is shown"
 msgstr "Állapotsor látható"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "Scroll bars are shown"
 msgstr "Gördítõsávok láthatók"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "No scroll bars"
 msgstr "Nincsenek gördítõsávok"
-
-#: kdvi.cpp:835
-msgid "About Kdvi"
-msgstr "Kdvi névjegy"
-
-#: kdvi.cpp:836
-msgid ""
-"kdvi - TeX DVI viewer\n"
-"Version "
-msgstr ""
-"kdvi - TeX DVI nézõ\n"
-"Verzió"
-
-#: kdvi.cpp:838
-msgid ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
-msgstr ""
-"\n"
-"\n"
-"Marku Hihnala <mah@ee.oulu.fi>" 
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -696,3 +701,19 @@ msgstr "n fel"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Nyomtatási módszer"
+
+#~ msgid "&Contents"
+#~ msgstr "&Tartalom"
+
+#~ msgid "About &Qt"
+#~ msgstr "&Qt névjegy"
+
+#~ msgid "About Kdvi"
+#~ msgstr "Kdvi névjegy"
+
+#~ msgid ""
+#~ "kdvi - TeX DVI viewer\n"
+#~ "Version "
+#~ msgstr ""
+#~ "kdvi - TeX DVI nézõ\n"
+#~ "Verzió"

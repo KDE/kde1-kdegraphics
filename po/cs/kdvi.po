@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-01-05 22:04+0100\n"
+"POT-Creation-Date: 1998-03-05 17:23+0100\n"
 "PO-Revision-Date: 1998-01-22 08:58 MET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:515
+#: kdvi.cpp:514
 msgid "Notice"
 msgstr "Poznámka"
 
@@ -66,379 +66,384 @@ msgstr "HEJ"
 msgid "What's this? DVI problem!\n"
 msgstr "Co to je? Problém DVI!\n"
 
-#: kdvi.cpp:91
+#: kdvi.cpp:92
 msgid "No document"
 msgstr "®ádný dokument"
 
-#: kdvi.cpp:172
+#: kdvi.cpp:108
+#, fuzzy
+msgid "Toggle Menubar"
+msgstr "Zapnout/vypnout zobrazeni menu"
+
+#: kdvi.cpp:110
+#, fuzzy
+msgid "Mark page"
+msgstr "Oznaèit v¹echny"
+
+#: kdvi.cpp:112
+#, fuzzy
+msgid "Redraw"
+msgstr "Pøekreslit stranu"
+
+#: kdvi.cpp:114
+#, fuzzy
+msgid "Preferences ..."
+msgstr "&Preference ..."
+
+#: kdvi.cpp:173
 msgid "&Open ..."
 msgstr "&Otevøít ..."
 
-#: kdvi.cpp:179
+#: kdvi.cpp:180
 msgid "Open &recent"
 msgstr "Ote&vøít nedávný"
 
-#: kdvi.cpp:181
+#: kdvi.cpp:182
 msgid "&Print ..."
 msgstr "&Tisknout ..."
 
-#: kdvi.cpp:189
+#: kdvi.cpp:190
 msgid "Zoom &in"
 msgstr "Z&vìt¹it"
 
-#: kdvi.cpp:190
+#: kdvi.cpp:191
 msgid "Zoom &out"
 msgstr "Z&men¹it"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:192
 msgid "&Fit to page"
 msgstr "Pøizpùsobit &stránce"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:193
 msgid "Fit to page &width"
 msgstr "&Pøizpùsobit k ¹íøce stránky"
 
-#: kdvi.cpp:194
+#: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Pøek&reslit stránku"
 
-#: kdvi.cpp:201
+#: kdvi.cpp:202
 msgid "&Previous"
 msgstr "&Pøedchozí"
 
-#: kdvi.cpp:202
+#: kdvi.cpp:203
 msgid "&Next"
 msgstr "&Následující"
 
-#: kdvi.cpp:203
+#: kdvi.cpp:204
 msgid "&First"
 msgstr "P&rvní"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:205
 msgid "&Last"
 msgstr "Po&slední"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:206
 msgid "&Go to ..."
 msgstr "&Jdi na stranu..."
 
-#: kdvi.cpp:208
+#: kdvi.cpp:209
 msgid "&Page"
 msgstr "&Strana"
 
-#: kdvi.cpp:213
+#: kdvi.cpp:214
 msgid "&Preferences ..."
 msgstr "&Preference ..."
 
-#: kdvi.cpp:214
+#: kdvi.cpp:215
 msgid "&Keys ..."
 msgstr "&Klávesy  ..."
 
-#: kdvi.cpp:216
+#: kdvi.cpp:217
 msgid "Make PK-&fonts"
 msgstr "Vytvoøit PK &fonty"
 
-#: kdvi.cpp:218
+#: kdvi.cpp:219
 msgid "Show PS"
 msgstr "Zobrazovat PostScript"
 
-#: kdvi.cpp:220
+#: kdvi.cpp:221
 msgid "Show &Menubar"
 msgstr "Zobrazovat &menu"
 
-#: kdvi.cpp:222
+#: kdvi.cpp:223
 msgid "Show &Buttons"
 msgstr "Zobrazovat &nástrojovou li¹tu"
 
-#: kdvi.cpp:224
+#: kdvi.cpp:225
 msgid "Show Page Lis&t"
 msgstr "Zobrazovat seznam s&tránek"
 
-#: kdvi.cpp:226
+#: kdvi.cpp:227
 msgid "Show &Statusbar"
 msgstr "Zobrazovat &informaèní li¹tu"
 
-#: kdvi.cpp:228
+#: kdvi.cpp:229
 msgid "Show Scro&llbars"
 msgstr "Zobrazovat posunovací &li¹ty"
 
-#: kdvi.cpp:239
-msgid "&Contents"
-msgstr "&Obsah"
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr ""
 
-#: kdvi.cpp:242
-msgid "About &Qt"
-msgstr "Informace o &Qt"
+#: kdvi.cpp:240
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
 
-#: kdvi.cpp:261
+#: kdvi.cpp:260
 msgid "Open document ..."
 msgstr "Otevøít dokument ..."
 
-#: kdvi.cpp:262
+#: kdvi.cpp:261
 msgid "Reload document"
 msgstr "Naèíst dokument znovu"
 
-#: kdvi.cpp:263
+#: kdvi.cpp:262
 msgid "Print ..."
 msgstr "Tisknout ..."
 
-#: kdvi.cpp:265
+#: kdvi.cpp:264
 msgid "Go to first page"
 msgstr "Jít na první stranu"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:265
 msgid "Go to previous page"
 msgstr "Jít na následující stranu"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:266
 msgid "Go down then top of next page"
 msgstr "Jít dolù na vrchol následující strany"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:267
 msgid "Go to next page"
 msgstr "Jít na následující stranu"
 
-#: kdvi.cpp:269
+#: kdvi.cpp:268
 msgid "Go to last page"
 msgstr "Jít na poslední stranu"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:270
 msgid "Decrease magnification"
 msgstr "Sní¾ít zvìt¹ení"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:271
 msgid "Small text"
 msgstr "Malý text"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:272
 msgid "Large text"
 msgstr "Velký text"
 
-#: kdvi.cpp:274
+#: kdvi.cpp:273
 msgid "Increase magnification"
 msgstr "Zvý¹it zvìt¹ení"
 
-#: kdvi.cpp:299
+#: kdvi.cpp:298
 msgid "Scroll window and switch the page"
 msgstr "Posunování v  oknì a pøepínání stran"
 
-#: kdvi.cpp:308
+#: kdvi.cpp:307
 msgid "Select page and mark pages for printing"
 msgstr "Vybìr strany  a oznaèení stran pro tisk"
 
-#: kdvi.cpp:323
+#: kdvi.cpp:322
 msgid "X:0000, Y:0000 "
 msgstr "X:0000, Y:0000 "
 
-#: kdvi.cpp:325
+#: kdvi.cpp:324
 msgid "Shrink: xx"
 msgstr "Zmen¹ení: xx"
 
-#: kdvi.cpp:327
+#: kdvi.cpp:326
 msgid "Page: xxxx / xxxx"
 msgstr "Strana: xxxx / xxxx"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:343 kdvi.cpp:395
 msgid "New window"
 msgstr "Nové okno..."
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:344 kdvi.cpp:396
 msgid "Open file"
 msgstr "Otevøít soubor"
 
-#: kdvi.cpp:346 kdvi.cpp:398
+#: kdvi.cpp:345 kdvi.cpp:397
 msgid "Print dialog"
 msgstr "Tiskový dialog"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:347 kdvi.cpp:399
 msgid "Zoom in"
 msgstr "Zvìt¹it"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:348 kdvi.cpp:400
 msgid "Zoom out"
 msgstr "Zmen¹it"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:349 kdvi.cpp:401
 msgid "Fit window"
 msgstr "Pøizpùsobit okno"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:350 kdvi.cpp:402
 msgid "Fit width"
 msgstr "Pøizpùsobit ¹íøku"
 
-#: kdvi.cpp:352 kdvi.cpp:404
+#: kdvi.cpp:351 kdvi.cpp:403
 msgid "Redraw page"
 msgstr "Pøekreslit stranu"
 
-#: kdvi.cpp:353 kdvi.cpp:406
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Next page"
 msgstr "Následující strana"
 
-#: kdvi.cpp:354 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:404
 msgid "Previous page"
 msgstr "Pøedcházející strana"
 
-#: kdvi.cpp:355 kdvi.cpp:408
+#: kdvi.cpp:354 kdvi.cpp:407
 msgid "Last page"
 msgstr "Poslední strana"
 
-#: kdvi.cpp:356 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:406
 msgid "First page"
 msgstr "První strana"
 
-#: kdvi.cpp:357 kdvi.cpp:409
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "Goto page"
 msgstr "Jdi na stranu"
 
-#: kdvi.cpp:358
+#: kdvi.cpp:357
 msgid "Configure keys"
 msgstr "Konfigurace kláves"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
 msgstr "Zapnout/vypnoutzobrazení Postscriptu"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
 msgstr "Zapnout/vypnout zobrazeni menu"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
 msgstr "Zapnout/vypnout zobrazení nástrojové li¹ty"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
 msgstr "Zapnout/vypnout zobrazení seznamu stránek"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
 msgstr "Zapnout/vypnout zobrazení informaèní li¹ty"
 
-#: kdvi.cpp:364 kdvi.cpp:415
+#: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
 msgstr "Zapnout/vypnout zobrazení posunovacích li¹t"
 
-#: kdvi.cpp:467
+#: kdvi.cpp:466
 msgid "File open dialog is open"
 msgstr "Otevøen dialog pro otevírání souborù"
 
-#: kdvi.cpp:516
+#: kdvi.cpp:515
 msgid "Can't read file:\n"
 msgstr "Není mo¾né èíst soubor:\n"
 
-#: kdvi.cpp:522
+#: kdvi.cpp:521
 msgid "Opening "
 msgstr "Otevírán "
 
-#: kdvi.cpp:547
+#: kdvi.cpp:546
 msgid "Opened "
 msgstr "Otevøen "
 
-#: kdvi.cpp:557
+#: kdvi.cpp:556
 msgid "Print dialog is open"
 msgstr "Tiskový dialog je otevøen"
 
-#: kdvi.cpp:572
+#: kdvi.cpp:571
 msgid "View size fits page"
 msgstr "Velikost pohledu je pøizpùsobena stránce"
 
-#: kdvi.cpp:581
+#: kdvi.cpp:580
 msgid "View width fits page"
 msgstr "©íøka pohledu je pøizpùsobena stránce"
 
-#: kdvi.cpp:673
+#: kdvi.cpp:672
 msgid "Preferences applied"
 msgstr "Preference aplikovány"
 
-#: kdvi.cpp:677
+#: kdvi.cpp:676
 msgid " Page "
 msgstr " Strana "
 
-#: kdvi.cpp:679
+#: kdvi.cpp:678
 msgid "Go to page"
 msgstr "Jdi na stranu"
 
-#: kdvi.cpp:693
+#: kdvi.cpp:692
 msgid "Go to"
 msgstr "Jdi na"
 
-#: kdvi.cpp:714
+#: kdvi.cpp:713
 msgid "Missing PK-fonts will be generated"
 msgstr "Chybìjíci PK fonty budou vytvoøeny"
 
-#: kdvi.cpp:715
+#: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "Chybìjící PK fonty budou zaznamenány do 'missfont.log'"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
 msgstr "Postscript specials jsou zobrazeny"
 
-#: kdvi.cpp:732
+#: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
 msgstr "Postcript specials nejsou zobrazeny"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "No menu bar"
 msgstr "®ádné menu"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "Menu bar is shown"
 msgstr "Menu je zobrazeno"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "No button bar"
 msgstr "®ádná nástrojová li¹ta"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "Button bar is shown"
 msgstr "Nástrojová li¹ta je zobrazena"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "Tool bar is shown"
 msgstr "Nástrojová li¹ta je zobrazena"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "No tool bar"
 msgstr "®ádná nástrojová li¹ta"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "No status bar"
 msgstr "®ádná informaèní li¹ta"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "Status bar is shown"
 msgstr "Informaèní li¹ta je zobrazena"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "Scroll bars are shown"
 msgstr "Posunovací li¹ty jsou zobrazeny"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "No scroll bars"
 msgstr "®ádné posunovací li¹ty"
-
-#: kdvi.cpp:835
-msgid "About Kdvi"
-msgstr "Informace o Kdvi"
-
-#: kdvi.cpp:836
-msgid ""
-"kdvi - TeX DVI viewer\n"
-"Version "
-msgstr ""
-"kdvi - TeX DVI prohlí¾eè\n"
-"Verze "
-
-#: kdvi.cpp:838
-msgid ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
-msgstr ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -695,3 +700,19 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Zpùsob tisku"
+
+#~ msgid "&Contents"
+#~ msgstr "&Obsah"
+
+#~ msgid "About &Qt"
+#~ msgstr "Informace o &Qt"
+
+#~ msgid "About Kdvi"
+#~ msgstr "Informace o Kdvi"
+
+#~ msgid ""
+#~ "kdvi - TeX DVI viewer\n"
+#~ "Version "
+#~ msgstr ""
+#~ "kdvi - TeX DVI prohlí¾eè\n"
+#~ "Verze "
