@@ -1,7 +1,5 @@
 SUBDIRS = kimgio layout doc
 bin_PROGRAMS= kview
-LIBJPEG=@LIBJPEG@
-LIBTIFF=@LIBTIFF@
 
 #CORBA_SRC = kmicoapp.h kmicoapp.cpp
 CORBA_SRC=
