@@ -36,6 +36,14 @@
 #include <kfiledialog.h>
 #include <kstdaccel.h>
 
+#ifdef HAVE_PATHS_H
+#include <paths.h>
+#endif
+
+#ifndef _PATH_TMP
+#define _PATH_TMP "/tmp/"
+#endif
+
 TopLevel *toplevel;
 QFrame *faxqtwin;
 
@@ -1147,7 +1155,7 @@ void TopLevel::saveNetFile( const char * _url)
 	return;
     }
     
-    tmpFile.sprintf( "/tmp/kfax%i", time( 0L ) );
+    tmpFile.sprintf( _PATH_TMP"kfax%i", time( 0L ) );
 
     res = copyfile(tmpFile.data(),thispage->pathname );
     if (res==0) {
