@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-01-05 22:04+0100\n"
+"POT-Creation-Date: 1998-03-05 17:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@eexi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:515
+#: kdvi.cpp:514
 msgid "Notice"
 msgstr "Επισήμανση"
 
@@ -66,379 +66,384 @@ msgstr "Επ!"
 msgid "What's this? DVI problem!\n"
 msgstr "Τι είναι αυτό; Πρόβλημα στο DVI!\n"
 
-#: kdvi.cpp:91
+#: kdvi.cpp:92
 msgid "No document"
 msgstr "Χωρίς αρχείο"
 
-#: kdvi.cpp:172
+#: kdvi.cpp:108
+#, fuzzy
+msgid "Toggle Menubar"
+msgstr "Εμφάνιση/απόκρυψη γραμμής μενού"
+
+#: kdvi.cpp:110
+#, fuzzy
+msgid "Mark page"
+msgstr "Σημείωση όλων"
+
+#: kdvi.cpp:112
+#, fuzzy
+msgid "Redraw"
+msgstr "Επανασχεδίαση σελίδας"
+
+#: kdvi.cpp:114
+#, fuzzy
+msgid "Preferences ..."
+msgstr "Προτιμήσεις..."
+
+#: kdvi.cpp:173
 msgid "&Open ..."
 msgstr "’νοιγμα"
 
-#: kdvi.cpp:179
+#: kdvi.cpp:180
 msgid "Open &recent"
 msgstr "’νοιγμα πρόσφατου"
 
-#: kdvi.cpp:181
+#: kdvi.cpp:182
 msgid "&Print ..."
 msgstr "Εκτύπωση"
 
-#: kdvi.cpp:189
+#: kdvi.cpp:190
 msgid "Zoom &in"
 msgstr "Μεγένθυση"
 
-#: kdvi.cpp:190
+#: kdvi.cpp:191
 msgid "Zoom &out"
 msgstr "Σμίκρυνση"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:192
 msgid "&Fit to page"
 msgstr "Προσαρμογή μεγέθους στη σελίδα"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:193
 msgid "Fit to page &width"
 msgstr "Προσαρμογή μεγέθους στο πλάτος σελίδας"
 
-#: kdvi.cpp:194
+#: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Επανασχεδίαση σελίδας"
 
-#: kdvi.cpp:201
+#: kdvi.cpp:202
 msgid "&Previous"
 msgstr "Προηγούμενο"
 
-#: kdvi.cpp:202
+#: kdvi.cpp:203
 msgid "&Next"
 msgstr "Επόμενο"
 
-#: kdvi.cpp:203
+#: kdvi.cpp:204
 msgid "&First"
 msgstr "Πρώτο"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:205
 msgid "&Last"
 msgstr "Τελευταίο"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:206
 msgid "&Go to ..."
 msgstr "Μεταφορά στο..."
 
-#: kdvi.cpp:208
+#: kdvi.cpp:209
 msgid "&Page"
 msgstr "Σελίδα"
 
-#: kdvi.cpp:213
+#: kdvi.cpp:214
 msgid "&Preferences ..."
 msgstr "Προτιμήσεις..."
 
-#: kdvi.cpp:214
+#: kdvi.cpp:215
 msgid "&Keys ..."
 msgstr "Πλήκτρα ..."
 
-#: kdvi.cpp:216
+#: kdvi.cpp:217
 msgid "Make PK-&fonts"
 msgstr "Δημιουργία γραμματοσειρών PK"
 
-#: kdvi.cpp:218
+#: kdvi.cpp:219
 msgid "Show PS"
 msgstr "Εμφάνιση PS"
 
-#: kdvi.cpp:220
+#: kdvi.cpp:221
 msgid "Show &Menubar"
 msgstr "Εμφάνιση γραμμής μενού"
 
-#: kdvi.cpp:222
+#: kdvi.cpp:223
 msgid "Show &Buttons"
 msgstr "Εμφάνιση πλήκτρων"
 
-#: kdvi.cpp:224
+#: kdvi.cpp:225
 msgid "Show Page Lis&t"
 msgstr "Εμφάνιση καταλόγου σελίδων"
 
-#: kdvi.cpp:226
+#: kdvi.cpp:227
 msgid "Show &Statusbar"
 msgstr "Εμφάνιση γραμμής κατάστασης"
 
-#: kdvi.cpp:228
+#: kdvi.cpp:229
 msgid "Show Scro&llbars"
 msgstr "Εμφάνιση γραμμών κύλισης"
 
-#: kdvi.cpp:239
-msgid "&Contents"
-msgstr "Περιεχόμενα"
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr ""
 
-#: kdvi.cpp:242
-msgid "About &Qt"
-msgstr "Για το Qt"
+#: kdvi.cpp:240
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
 
-#: kdvi.cpp:261
+#: kdvi.cpp:260
 msgid "Open document ..."
 msgstr "’νοιγμα εγγράφου"
 
-#: kdvi.cpp:262
+#: kdvi.cpp:261
 msgid "Reload document"
 msgstr "Επαναφόρτωση εγγράφου"
 
-#: kdvi.cpp:263
+#: kdvi.cpp:262
 msgid "Print ..."
 msgstr "Εκτύπωση ..."
 
-#: kdvi.cpp:265
+#: kdvi.cpp:264
 msgid "Go to first page"
 msgstr "Μετακίνηση στην πρώτη σελίδα"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:265
 msgid "Go to previous page"
 msgstr "Μετακίνηση στην προηγούμενη σελίδα"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:266
 msgid "Go down then top of next page"
 msgstr "Μετακίνηση κάτω και μετά στην αρχή της επόμενης σελίδας"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:267
 msgid "Go to next page"
 msgstr "Μετακίνηση στην επόμενη σελίδα"
 
-#: kdvi.cpp:269
+#: kdvi.cpp:268
 msgid "Go to last page"
 msgstr "Μετακίνηση στην τελευταία σελίδα"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:270
 msgid "Decrease magnification"
 msgstr "Ελάττωση μεγένθυσης"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:271
 msgid "Small text"
 msgstr "Μικρό κείμενο"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:272
 msgid "Large text"
 msgstr "Μεγάλο κείμενο"
 
-#: kdvi.cpp:274
+#: kdvi.cpp:273
 msgid "Increase magnification"
 msgstr "Αύξηση μεγένθυσης"
 
-#: kdvi.cpp:299
+#: kdvi.cpp:298
 msgid "Scroll window and switch the page"
 msgstr "Κύλιση παραθύρου και αλλαγή της σελίδας"
 
-#: kdvi.cpp:308
+#: kdvi.cpp:307
 msgid "Select page and mark pages for printing"
 msgstr "Επιλογή σελίδας και σημείωση σελίδων προς εκτύπωση"
 
-#: kdvi.cpp:323
+#: kdvi.cpp:322
 msgid "X:0000, Y:0000 "
 msgstr "X:0000, Y:0000 "
 
-#: kdvi.cpp:325
+#: kdvi.cpp:324
 msgid "Shrink: xx"
 msgstr "Συρίκνωση: xx"
 
-#: kdvi.cpp:327
+#: kdvi.cpp:326
 msgid "Page: xxxx / xxxx"
 msgstr "Σελίδα: xxxx / xxxx"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:343 kdvi.cpp:395
 msgid "New window"
 msgstr "Νέο παράθυρο"
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:344 kdvi.cpp:396
 msgid "Open file"
 msgstr "’νοιγμα αρχείου"
 
-#: kdvi.cpp:346 kdvi.cpp:398
+#: kdvi.cpp:345 kdvi.cpp:397
 msgid "Print dialog"
 msgstr "Διάλογος εκτύπωσης"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:347 kdvi.cpp:399
 msgid "Zoom in"
 msgstr "Μεγένθυση"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:348 kdvi.cpp:400
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:349 kdvi.cpp:401
 msgid "Fit window"
 msgstr "Προσαρμογή στο παράθυρο"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:350 kdvi.cpp:402
 msgid "Fit width"
 msgstr "Προσαρμογή στο πλάτος"
 
-#: kdvi.cpp:352 kdvi.cpp:404
+#: kdvi.cpp:351 kdvi.cpp:403
 msgid "Redraw page"
 msgstr "Επανασχεδίαση σελίδας"
 
-#: kdvi.cpp:353 kdvi.cpp:406
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Next page"
 msgstr "Επόμενη σελίδα"
 
-#: kdvi.cpp:354 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:404
 msgid "Previous page"
 msgstr "Προηγούμενη σελίδα"
 
-#: kdvi.cpp:355 kdvi.cpp:408
+#: kdvi.cpp:354 kdvi.cpp:407
 msgid "Last page"
 msgstr "Τελευταία σελίδα"
 
-#: kdvi.cpp:356 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:406
 msgid "First page"
 msgstr "Πρώτη σελίδα"
 
-#: kdvi.cpp:357 kdvi.cpp:409
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "Goto page"
 msgstr "Μετακίνηση στη σελίδα"
 
-#: kdvi.cpp:358
+#: kdvi.cpp:357
 msgid "Configure keys"
 msgstr "Προσαρμογή πλήκτρων"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
 msgstr "Εμφάνιση/απόκρυψη PS"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
 msgstr "Εμφάνιση/απόκρυψη γραμμής μενού"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
 msgstr "Εμφάνιση/απόκρυψη γραμμής πλήκτρων"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
 msgstr "Εμφάνιση/απόκρυψη καταλόγου σελίδων"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
 msgstr "Εμφάνιση/απόκρυψη γραμμής κατάστασης"
 
-#: kdvi.cpp:364 kdvi.cpp:415
+#: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
 msgstr "Εμφάνιση/απόκρυψη γραμμών κύλισης"
 
-#: kdvi.cpp:467
+#: kdvi.cpp:466
 msgid "File open dialog is open"
 msgstr "Ο διάλογος για άνοιγμα αρχείου είναι ανοιχτός"
 
-#: kdvi.cpp:516
+#: kdvi.cpp:515
 msgid "Can't read file:\n"
 msgstr "Δεν μπορώ να διαβάσω το αρχείο:\n"
 
-#: kdvi.cpp:522
+#: kdvi.cpp:521
 msgid "Opening "
 msgstr "’νοιγμα "
 
-#: kdvi.cpp:547
+#: kdvi.cpp:546
 msgid "Opened "
 msgstr "Ανοίχτηκε "
 
-#: kdvi.cpp:557
+#: kdvi.cpp:556
 msgid "Print dialog is open"
 msgstr "Ο διάλογος εκτύπωσης είναι ανοιχτός"
 
-#: kdvi.cpp:572
+#: kdvi.cpp:571
 msgid "View size fits page"
 msgstr "Το μέγεθος προβολής προσαρμόζεται στη σελίδα"
 
-#: kdvi.cpp:581
+#: kdvi.cpp:580
 msgid "View width fits page"
 msgstr "Το μέγεθος προβολής προσαρμόζεται στο πλάτος της σελίδας"
 
-#: kdvi.cpp:673
+#: kdvi.cpp:672
 msgid "Preferences applied"
 msgstr "Οι προτιμήσεις εφαρμόστηκαν"
 
-#: kdvi.cpp:677
+#: kdvi.cpp:676
 msgid " Page "
 msgstr " Σελίδα "
 
-#: kdvi.cpp:679
+#: kdvi.cpp:678
 msgid "Go to page"
 msgstr "Μετακίνηση στη σελίδα"
 
-#: kdvi.cpp:693
+#: kdvi.cpp:692
 msgid "Go to"
 msgstr "Μετακίνηση "
 
-#: kdvi.cpp:714
+#: kdvi.cpp:713
 msgid "Missing PK-fonts will be generated"
 msgstr "Οι απούσες γραμματοσειρές PK θα δημιουργηθούν"
 
-#: kdvi.cpp:715
+#: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "Οι απούσες γραμματοσειρές PK θα καταχωρηθούν στο 'missfont.log'"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
 msgstr ""
 
-#: kdvi.cpp:732
+#: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
 msgstr ""
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "No menu bar"
 msgstr "Γραμμή μενού κρυμμένη"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "Menu bar is shown"
 msgstr "Γραμμή μενού εμφανίζεται"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "No button bar"
 msgstr "Γραμμή πλήκτρων κρυμμένη"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "Button bar is shown"
 msgstr "Γραμμή πλήκτρων εμφανίζεται"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "Tool bar is shown"
 msgstr "Γραμμή εργαλείων εμφανίζεται"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "No tool bar"
 msgstr "Γραμμή εργαλείων κρυμμένη"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "No status bar"
 msgstr "Γραμμή κατάστασης κρυμμένη"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "Status bar is shown"
 msgstr "Γραμμή κατάστασης εμφανίζεται"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "Scroll bars are shown"
 msgstr "Γραμμές κύλισης εμφανίζονται"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "No scroll bars"
 msgstr "Γραμμές κύλισης κρυμμένες"
-
-#: kdvi.cpp:835
-msgid "About Kdvi"
-msgstr "Για το Kdvi"
-
-#: kdvi.cpp:836
-msgid ""
-"kdvi - TeX DVI viewer\n"
-"Version "
-msgstr ""
-"kdvi - TeX DVI viewer\n"
-"Έκδοση "
-
-#: kdvi.cpp:838
-msgid ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
-msgstr ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -695,3 +700,19 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Μέθοδος εκτύπωσης"
+
+#~ msgid "&Contents"
+#~ msgstr "Περιεχόμενα"
+
+#~ msgid "About &Qt"
+#~ msgstr "Για το Qt"
+
+#~ msgid "About Kdvi"
+#~ msgstr "Για το Kdvi"
+
+#~ msgid ""
+#~ "kdvi - TeX DVI viewer\n"
+#~ "Version "
+#~ msgstr ""
+#~ "kdvi - TeX DVI viewer\n"
+#~ "Έκδοση "

@@ -19,7 +19,8 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Διανέμεται υπό GPL δείτε LICENSE για λεπτομέρειες.\n"
+"(c) Richard J. Moore 1997 Διανέμεται υπό GPL δείτε LICENSE για "
+"λεπτομέρειες.\n"
 
 #: app.cpp:41
 msgid "Usage: "
@@ -253,8 +254,8 @@ msgid ""
 "corrupt."
 msgstr ""
 "Σφάλμα: ’γνωστος τύπος αρχείου\n"
-"Το KPaint δεν αναγνωρίζει τον τύπο του συγκεκριμένου αρχείου ή το "
-"αρχείο είναι κατεστραμμένο."
+"Το KPaint δεν αναγνωρίζει τον τύπο του συγκεκριμένου αρχείου ή το αρχείο "
+"είναι κατεστραμμένο."
 
 #: kpaint.cpp:440 kpaint.cpp:552
 msgid "KPaint: Malformed URL"

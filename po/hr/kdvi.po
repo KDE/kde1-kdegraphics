@@ -5,16 +5,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1997-11-08 23:50+0100\n"
+"POT-Creation-Date: 1998-03-05 17:23+0100\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Stjepan Zlodi <szlodi@public.srce.hr> \n"
 "Language-Team: Croatian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: iso-8859-2\n"  
+"Content-Transfer-Encoding: iso-8859-2\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:515
+#: kdvi.cpp:514
 msgid "Notice"
 msgstr "Napomena"
 
@@ -50,7 +50,6 @@ msgstr ""
 "Promjena razluèivosti biti æe uèinkovita\n"
 "tek nakon ¹to opet pokrenete kdvi!"
 
-
 #: dviwin.cpp:301
 msgid ""
 "The change in gamma will be effective\n"
@@ -67,380 +66,384 @@ msgstr "HEJ"
 msgid "What's this? DVI problem!\n"
 msgstr "©to je to? DVI problem!\n"
 
-#: kdvi.cpp:91
+#: kdvi.cpp:92
 msgid "No document"
 msgstr "Nema dokumenta"
 
-#: kdvi.cpp:172
+#: kdvi.cpp:108
+#, fuzzy
+msgid "Toggle Menubar"
+msgstr "Prekidaè trake izbornika"
+
+#: kdvi.cpp:110
+#, fuzzy
+msgid "Mark page"
+msgstr "Obilje¾i sve"
+
+#: kdvi.cpp:112
+#, fuzzy
+msgid "Redraw"
+msgstr "Obnovi stranicu"
+
+#: kdvi.cpp:114
+#, fuzzy
+msgid "Preferences ..."
+msgstr "&Odrednice ..."
+
+#: kdvi.cpp:173
 msgid "&Open ..."
 msgstr "&Otvori ..."
 
-#: kdvi.cpp:179
+#: kdvi.cpp:180
 msgid "Open &recent"
 msgstr "Otvori &skora¹nji"
 
-#: kdvi.cpp:181
+#: kdvi.cpp:182
 msgid "&Print ..."
 msgstr "&Ispi¹i ..."
 
-#: kdvi.cpp:189
+#: kdvi.cpp:190
 msgid "Zoom &in"
 msgstr "&Poveæaj"
 
-#: kdvi.cpp:190
+#: kdvi.cpp:191
 msgid "Zoom &out"
 msgstr "&Umanji"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:192
 msgid "&Fit to page"
 msgstr "Po&desi prema stranici"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:193
 msgid "Fit to page &width"
 msgstr "Pod&esi prema ¹irini stranice"
 
-#: kdvi.cpp:194
+#: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "O&bnovi stranicu"
 
-#: kdvi.cpp:201
+#: kdvi.cpp:202
 msgid "&Previous"
 msgstr "&Prethodna"
 
-#: kdvi.cpp:202
+#: kdvi.cpp:203
 msgid "&Next"
 msgstr "&Slijedeæa"
 
-#: kdvi.cpp:203
+#: kdvi.cpp:204
 msgid "&First"
 msgstr "Pr&va"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:205
 msgid "&Last"
 msgstr "&Zadnja"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:206
 msgid "&Go to ..."
 msgstr "&Idi na ..."
 
-#: kdvi.cpp:208
+#: kdvi.cpp:209
 msgid "&Page"
 msgstr "&Stranica"
 
-#: kdvi.cpp:213
+#: kdvi.cpp:214
 msgid "&Preferences ..."
 msgstr "&Odrednice ..."
 
-#: kdvi.cpp:214
+#: kdvi.cpp:215
 msgid "&Keys ..."
 msgstr "&Tipke ..."
 
-#: kdvi.cpp:216
+#: kdvi.cpp:217
 msgid "Make PK-&fonts"
 msgstr "Napravi PK-&pisma"
 
-#: kdvi.cpp:218
+#: kdvi.cpp:219
 msgid "Show PS"
 msgstr "Prika¾i PS"
 
-#: kdvi.cpp:220
+#: kdvi.cpp:221
 msgid "Show &Menubar"
 msgstr "Prika¾i traku &izbornika"
 
-#: kdvi.cpp:222
+#: kdvi.cpp:223
 msgid "Show &Buttons"
 msgstr "Prika¾i &gumbe"
 
-#: kdvi.cpp:224
+#: kdvi.cpp:225
 msgid "Show Page Lis&t"
 msgstr "Prika¾i pop&is stranica"
 
-#: kdvi.cpp:226
+#: kdvi.cpp:227
 msgid "Show &Statusbar"
 msgstr "Prika¾i traku s&tanja"
 
-#: kdvi.cpp:228
+#: kdvi.cpp:229
 msgid "Show Scro&llbars"
 msgstr "Prika¾i trake za &pomicanje"
 
-#: kdvi.cpp:239
-msgid "&Contents"
-msgstr "&Sadr¾aj"
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr ""
 
-#: kdvi.cpp:242
-msgid "About &Qt"
-msgstr "O &Qt-u"
+#: kdvi.cpp:240
+#, fuzzy
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
 
-#: kdvi.cpp:261
+#: kdvi.cpp:260
 msgid "Open document ..."
 msgstr "Otvori dokument ..."
 
-#: kdvi.cpp:262
+#: kdvi.cpp:261
 msgid "Reload document"
 msgstr "Obnovi dokument"
 
-#: kdvi.cpp:263
+#: kdvi.cpp:262
 msgid "Print ..."
 msgstr "Ispi¹i ..."
 
-#: kdvi.cpp:265
+#: kdvi.cpp:264
 msgid "Go to first page"
 msgstr "Idi na prvu stranicu"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:265
 msgid "Go to previous page"
 msgstr "Idi na prethodnu stranicu"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:266
 msgid "Go down then top of next page"
 msgstr "Idi dolje pa na vrh slijedeæe stranice"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:267
 msgid "Go to next page"
 msgstr "Idi na slijedeæu stranicu"
 
-#: kdvi.cpp:269
+#: kdvi.cpp:268
 msgid "Go to last page"
 msgstr "Idi na zadnju stranicu"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:270
 msgid "Decrease magnification"
 msgstr "Smanji poveæanje"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:271
 msgid "Small text"
 msgstr "Mali tekst"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:272
 msgid "Large text"
 msgstr "Veliki tekst"
 
-#: kdvi.cpp:274
+#: kdvi.cpp:273
 msgid "Increase magnification"
 msgstr "Uveæaj poveæalo"
 
-#: kdvi.cpp:299
+#: kdvi.cpp:298
 msgid "Scroll window and switch the page"
 msgstr "Odmotaj prozor i promijeni stranicu"
 
-#: kdvi.cpp:308
+#: kdvi.cpp:307
 msgid "Select page and mark pages for printing"
 msgstr "Izaberi stranicu i obilje¾i stranice za ispis"
 
-#: kdvi.cpp:323
+#: kdvi.cpp:322
 msgid "X:0000, Y:0000 "
 msgstr ""
 
-#: kdvi.cpp:325
+#: kdvi.cpp:324
 msgid "Shrink: xx"
 msgstr "Smanji: xx"
 
-#: kdvi.cpp:327
+#: kdvi.cpp:326
 msgid "Page: xxxx / xxxx"
 msgstr "Stranica: xxxx / xxxx"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:343 kdvi.cpp:395
 msgid "New window"
 msgstr "Novi prozor"
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:344 kdvi.cpp:396
 msgid "Open file"
 msgstr "Otvori datoteku"
 
-#: kdvi.cpp:346 kdvi.cpp:398
+#: kdvi.cpp:345 kdvi.cpp:397
 msgid "Print dialog"
 msgstr "Dijalog za ispis"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:347 kdvi.cpp:399
 msgid "Zoom in"
 msgstr "Uveæaj"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:348 kdvi.cpp:400
 msgid "Zoom out"
 msgstr "Umanji"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:349 kdvi.cpp:401
 msgid "Fit window"
 msgstr "Podesi prozor"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:350 kdvi.cpp:402
 msgid "Fit width"
 msgstr "Podesi ¹irinu"
 
-#: kdvi.cpp:352 kdvi.cpp:404
+#: kdvi.cpp:351 kdvi.cpp:403
 msgid "Redraw page"
 msgstr "Obnovi stranicu"
 
-#: kdvi.cpp:353 kdvi.cpp:406
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Next page"
 msgstr "Slijedeæa stranica"
 
-#: kdvi.cpp:354 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:404
 msgid "Previous page"
 msgstr "Prethodna stranica"
 
-#: kdvi.cpp:355 kdvi.cpp:408
+#: kdvi.cpp:354 kdvi.cpp:407
 msgid "Last page"
 msgstr "Zadnja stranica"
 
-#: kdvi.cpp:356 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:406
 msgid "First page"
 msgstr "Prva stranica"
 
-#: kdvi.cpp:357 kdvi.cpp:409
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "Goto page"
 msgstr "Idi na stranicu"
 
-#: kdvi.cpp:358
+#: kdvi.cpp:357
 msgid "Configure keys"
 msgstr "Postavke tipaka"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
 msgstr "Prekidaè prikaza PS"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
 msgstr "Prekidaè trake izbornika"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
 msgstr "Prekidaè trake s gumbima"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
 msgstr "Prekidaè liste stranica"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
 msgstr "Prekidaè trake stanja"
 
-#: kdvi.cpp:364 kdvi.cpp:415
+#: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
 msgstr "Prekidaè traka za odmotavanje"
 
-#: kdvi.cpp:467
+#: kdvi.cpp:466
 msgid "File open dialog is open"
 msgstr "Dijalog za odabir datoteka je otvoren"
 
-#: kdvi.cpp:516
+#: kdvi.cpp:515
 msgid "Can't read file:\n"
 msgstr "Ne mogu proèitati datoteku:\n"
 
-#: kdvi.cpp:522
+#: kdvi.cpp:521
 msgid "Opening "
 msgstr "Otvaram"
 
-#: kdvi.cpp:547
+#: kdvi.cpp:546
 msgid "Opened "
 msgstr "Otvorena"
 
-#: kdvi.cpp:557
+#: kdvi.cpp:556
 msgid "Print dialog is open"
 msgstr "Dijalog za ispis je otvoren"
 
-#: kdvi.cpp:572
+#: kdvi.cpp:571
 msgid "View size fits page"
 msgstr "Velièina pogleda odgovara stranici"
 
-#: kdvi.cpp:581
+#: kdvi.cpp:580
 msgid "View width fits page"
 msgstr "©irina pogleda odgovara stranici"
 
-#: kdvi.cpp:673
+#: kdvi.cpp:672
 msgid "Preferences applied"
 msgstr "Odrednice prihvaæene"
 
-#: kdvi.cpp:677
+#: kdvi.cpp:676
 msgid " Page "
 msgstr " Stranica "
 
-#: kdvi.cpp:679
+#: kdvi.cpp:678
 msgid "Go to page"
 msgstr "Idi na stranicu"
 
-#: kdvi.cpp:693
+#: kdvi.cpp:692
 msgid "Go to"
 msgstr "Idi na"
 
-#: kdvi.cpp:714
+#: kdvi.cpp:713
 msgid "Missing PK-fonts will be generated"
 msgstr "Nedostajuæa PK-pisma æe biti naèinjena"
 
-#: kdvi.cpp:715
+#: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "Nedostajuæa PK-pisam æe biti zapisana u 'missfont.log'"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
 msgstr "Postscript kodovi se izraðuju"
 
-#: kdvi.cpp:732
+#: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
 msgstr "Postscript kodovi nisu naèinjeni"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "No menu bar"
 msgstr "Bez trake izbornika"
 
-#: kdvi.cpp:748
+#: kdvi.cpp:747
 msgid "Menu bar is shown"
 msgstr "Traka izbornika se prikazuje"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "No button bar"
 msgstr "Bez trake s gumbima"
 
-#: kdvi.cpp:766
+#: kdvi.cpp:765
 msgid "Button bar is shown"
 msgstr "Traka s gumbima se prikazuje"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "Tool bar is shown"
 msgstr "Traka s alatima se prikazuje"
 
-#: kdvi.cpp:780
+#: kdvi.cpp:779
 msgid "No tool bar"
 msgstr "Bez trake s alatima"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "No status bar"
 msgstr "Bez trake stanja"
 
-#: kdvi.cpp:804
+#: kdvi.cpp:803
 msgid "Status bar is shown"
 msgstr "Traka stanja se prikazuje"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "Scroll bars are shown"
 msgstr "Trake za odmotavanje se prikazuju"
 
-#: kdvi.cpp:818
+#: kdvi.cpp:817
 msgid "No scroll bars"
 msgstr "Bez traka za odmotavanje"
-
-#: kdvi.cpp:835
-msgid "About Kdvi"
-msgstr "O Kdvi-u"
-
-#: kdvi.cpp:836
-msgid ""
-"kdvi - TeX DVI viewer\n"
-"Version "
-msgstr ""
-"kdvi - TeX DVI preglednik\n"
-"Inaèica "
-
-#: kdvi.cpp:838
-msgid ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
-msgstr ""
-"\n"
-"\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
-
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -697,3 +700,19 @@ msgstr "n-gore"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Naèin ispisa"
+
+#~ msgid "&Contents"
+#~ msgstr "&Sadr¾aj"
+
+#~ msgid "About &Qt"
+#~ msgstr "O &Qt-u"
+
+#~ msgid "About Kdvi"
+#~ msgstr "O Kdvi-u"
+
+#~ msgid ""
+#~ "kdvi - TeX DVI viewer\n"
+#~ "Version "
+#~ msgstr ""
+#~ "kdvi - TeX DVI preglednik\n"
+#~ "Inaèica "

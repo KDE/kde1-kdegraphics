@@ -19,7 +19,8 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Uvolnìno podle GPL. Pro detaily nahlédnìte do souboru LICENSE.\n"
+"(c) Richard J. Moore 1997 Uvolnìno podle GPL. Pro detaily nahlédnìte do "
+"souboru LICENSE.\n"
 
 #: app.cpp:41
 msgid "Usage: "

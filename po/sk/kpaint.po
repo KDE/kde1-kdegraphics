@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-03-05 12:11+0100\n"
+"POT-Creation-Date: 1998-01-05 22:01+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -19,8 +19,8 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 uvoµnené pod GPL, pozrite LICENCIU pre podrobnosti\n"
-
+"(c) Richard J. Moore 1997 uvoµnené pod GPL, pozrite LICENCIU pre "
+"podrobnosti\n"
 
 #: app.cpp:41
 msgid "Usage: "
