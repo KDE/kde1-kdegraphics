@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Case Roole <cjr@xs4all.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,14 +118,6 @@ msgstr "Vul bladzijde in de breedte"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Teken bladzijde opnieuw"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "Vorige"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "Volgende"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -517,10 +509,6 @@ msgstr "Schuifbalken"
 msgid "Number of recent files"
 msgstr "Aantal recente bestanden"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Uiterlijk"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Breng ontbrekende lettertypen voort"
@@ -545,10 +533,6 @@ msgstr "Krimp factor voor kleine tekst"
 msgid "Shrink factor for large text"
 msgstr "Krimp factor voor grote tekst"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Lettertypen"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Toon postscript specials"
@@ -568,10 +552,6 @@ msgstr "Voortbrengen"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papier"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Druk af"
 
 #: print.cpp:63
 msgid "Print "
@@ -681,10 +661,6 @@ msgstr "Gebruik mpage"
 msgid "&Add"
 msgstr "Voeg toe"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "Verwijder"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Spooler opdracht:"
@@ -696,3 +672,21 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Afdruk methode"
+
+#~ msgid "&Previous"
+#~ msgstr "Vorige"
+
+#~ msgid "&Next"
+#~ msgstr "Volgende"
+
+#~ msgid "Appearance"
+#~ msgstr "Uiterlijk"
+
+#~ msgid "Fonts"
+#~ msgstr "Lettertypen"
+
+#~ msgid "Print"
+#~ msgstr "Druk af"
+
+#~ msgid "&Remove"
+#~ msgstr "Verwijder"

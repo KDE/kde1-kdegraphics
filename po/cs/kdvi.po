@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-12 16:41 MET\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -117,14 +117,6 @@ msgstr "&Pøizpùsobit k ¹íøce stránky"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Pøek&reslit stránku"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Pøedchozí"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Následující"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -516,10 +508,6 @@ msgstr "Posouvací li¹ty"
 msgid "Number of recent files"
 msgstr "Poèet nedávných souborù"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Vzhled"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Vytvoøit chybìjící fonty"
@@ -544,10 +532,6 @@ msgstr "Zmen¹ovací faktor pro malý text"
 msgid "Shrink factor for large text"
 msgstr "Zmen¹ovací faktor pro velký text"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Fonty"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Zobrazovat postscript specials"
@@ -567,10 +551,6 @@ msgstr "Zobrazení"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papír"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Tisknout"
 
 #: print.cpp:63
 msgid "Print "
@@ -680,10 +660,6 @@ msgstr "Pou¾ívat &mpage"
 msgid "&Add"
 msgstr "Pøid&at"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "Odst&ranit"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Pøíkaz &spooleru:"
@@ -695,3 +671,21 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Zpùsob tisku"
+
+#~ msgid "&Previous"
+#~ msgstr "&Pøedchozí"
+
+#~ msgid "&Next"
+#~ msgstr "&Následující"
+
+#~ msgid "Appearance"
+#~ msgstr "Vzhled"
+
+#~ msgid "Fonts"
+#~ msgstr "Fonty"
+
+#~ msgid "Print"
+#~ msgstr "Tisknout"
+
+#~ msgid "&Remove"
+#~ msgstr "Odst&ranit"

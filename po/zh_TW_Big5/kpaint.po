@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-04-21 03:23:+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -277,10 +277,6 @@ msgstr ""
 "錯誤: 無法開啟檔案\n"
 "KPaint  無法開啟指定的檔案."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "繼續"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: 未知的格式"
@@ -322,10 +318,6 @@ msgstr "填充內容"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "填充花樣"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "無"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -411,6 +403,12 @@ msgstr "設定線段顏色..."
 #, fuzzy
 msgid "Roundangle"
 msgstr "矩形"
+
+#~ msgid "Continue"
+#~ msgstr "繼續"
+
+#~ msgid "None"
+#~ msgstr "無"
 
 #~ msgid "Dismiss"
 #~ msgstr "解散"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,14 +107,6 @@ msgstr ""
 
 #: kdvi.cpp:195
 msgid "&Redraw page"
-msgstr ""
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr ""
-
-#: kdvi.cpp:203
-msgid "&Next"
 msgstr ""
 
 #: kdvi.cpp:204
@@ -504,10 +496,6 @@ msgstr ""
 msgid "Number of recent files"
 msgstr ""
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr ""
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr ""
@@ -532,10 +520,6 @@ msgstr ""
 msgid "Shrink factor for large text"
 msgstr ""
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr ""
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr ""
@@ -554,10 +538,6 @@ msgstr ""
 
 #: prefs.cpp:388
 msgid "Paper"
-msgstr ""
-
-#: print.cpp:44
-msgid "Print"
 msgstr ""
 
 #: print.cpp:63
@@ -666,10 +646,6 @@ msgstr ""
 
 #: printSetupData.cpp:92
 msgid "&Add"
-msgstr ""
-
-#: printSetupData.cpp:99
-msgid "&Remove"
 msgstr ""
 
 #: printSetupData.cpp:120

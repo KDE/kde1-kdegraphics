@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-04-13 17:48+0100\n"
 "Last-Translator: Svein Olav Aasen <svein.aasen@caa.no / soaasen@online.no\n"
 "Language-Team: no <LL@li.org>\n"
@@ -277,10 +277,6 @@ msgstr ""
 "Feil: Kunne ikke åpne fil\n"
 "KPaint kunne ikke åpne den angitte fil."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Fortsett"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Ukjent format"
@@ -321,10 +317,6 @@ msgstr "Fyll inn egenskaper"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Fyll inn mønster"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Ingen"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -409,3 +401,9 @@ msgstr "Sett linjefarge..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
+
+#~ msgid "Continue"
+#~ msgstr "Fortsett"
+
+#~ msgid "None"
+#~ msgstr "Ingen"

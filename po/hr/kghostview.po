@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -148,10 +148,6 @@ msgstr "CTRL+W"
 msgid "CTRL+S"
 msgstr "CTRL+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Ispis"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "CTRL+P"
@@ -283,10 +279,6 @@ msgstr "&Otvori ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Otvori &skora¹nji"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr ""
 
 #: kghostview.cpp:503
 msgid "Page Set&up ..."
@@ -772,3 +764,6 @@ msgstr "&Primjeni"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Uveæanje"
+
+#~ msgid "Print"
+#~ msgstr "Ispis"

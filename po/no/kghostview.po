@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-31 22:12+0100\n"
 "Last-Translator: Svein Olav Aasen <svein.aasen@caa.no / soaasen@online.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -148,10 +148,6 @@ msgstr "CTRL+W"
 msgid "CTRL+S"
 msgstr "CTRL+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Skriv ut"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "CTRL+P"
@@ -283,10 +279,6 @@ msgstr "&Åpne ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Åpne &nylig"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr "&Vis på nytt"
 
 #: kghostview.cpp:503
 msgid "Page Set&up ..."
@@ -773,3 +765,9 @@ msgstr "&Bruk"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Forstørrelse"
+
+#~ msgid "Print"
+#~ msgstr "Skriv ut"
+
+#~ msgid "&Reload"
+#~ msgstr "&Vis på nytt"

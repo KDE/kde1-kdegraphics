@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,14 +118,6 @@ msgstr "Mahduta sivu&leveyteen"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Päivitä"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Edellinen"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Seuraava"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -517,10 +509,6 @@ msgstr "Liukupalkit"
 msgid "Number of recent files"
 msgstr "Viimeisten tiedostojen määrä"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Ulkonäkö"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Luo puuttuvat kirjasimet"
@@ -545,10 +533,6 @@ msgstr "Pienennyskerroin pienelle tekstille"
 msgid "Shrink factor for large text"
 msgstr "Pienennyskerroin suurelle tekstille"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Kirjasimet"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Näytä postscript erikoisuudet"
@@ -568,10 +552,6 @@ msgstr "Piirto"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Paperi"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Tulosta"
 
 #: print.cpp:63
 msgid "Print "
@@ -681,10 +661,6 @@ msgstr "Käytä &mpagea"
 msgid "&Add"
 msgstr "&Lisää"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&poista"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "&Jonottajan komento:"
@@ -696,3 +672,21 @@ msgstr "n-ylös"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Tulostusmetodi"
+
+#~ msgid "&Previous"
+#~ msgstr "&Edellinen"
+
+#~ msgid "&Next"
+#~ msgstr "&Seuraava"
+
+#~ msgid "Appearance"
+#~ msgstr "Ulkonäkö"
+
+#~ msgid "Fonts"
+#~ msgstr "Kirjasimet"
+
+#~ msgid "Print"
+#~ msgstr "Tulosta"
+
+#~ msgid "&Remove"
+#~ msgstr "&poista"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-01-26 22:00+0000\n"
 "Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
 
@@ -138,10 +138,6 @@ msgstr "CTRL+W"
 msgid "CTRL+S"
 msgstr "CTRL+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Imprimir"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "CTRL+P"
@@ -273,10 +269,6 @@ msgstr "&Abrir..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Abrir &recente"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr "&Recarregar"
 
 #: kghostview.cpp:503
 msgid "Page Set&up ..."
@@ -763,6 +755,12 @@ msgstr "&Aplicar"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "A&mpliação"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "&Reload"
+#~ msgstr "&Recarregar"
 
 #~ msgid "Home"
 #~ msgstr "Home"

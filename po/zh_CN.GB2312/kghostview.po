@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -128,10 +128,6 @@ msgstr "CTRL+W"
 #: kaccel.cpp:181
 msgid "CTRL+S"
 msgstr "CTRL+S"
-
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "打印"
 
 #: kaccel.cpp:185
 msgid "CTRL+P"
@@ -267,10 +263,6 @@ msgstr "打开[&O] ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "最近打开的[&R]"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr ""
 
 #
 #: kghostview.cpp:503
@@ -767,6 +759,9 @@ msgstr "应用[&A]"
 #, fuzzy
 msgid "&Magnification"
 msgstr "放大[&M]"
+
+#~ msgid "Print"
+#~ msgstr "打印"
 
 #~ msgid "Home"
 #~ msgstr "Home"

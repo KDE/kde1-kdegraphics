@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -270,10 +270,6 @@ msgid ""
 "KPaint could not open the specified file."
 msgstr ""
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr ""
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr ""
@@ -311,10 +307,6 @@ msgstr ""
 
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
-msgstr ""
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
 msgstr ""
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@exi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -280,10 +280,6 @@ msgstr ""
 "Σφάλμα: Δεν μπορώ να ανοίξω το αρχείο\n"
 "Το KPaint δεν μπορεί να ανοίξει το συγκεκριμένο αρχείο."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Συνέχεια"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: ’γνωστος τύπος αρχείου"
@@ -326,10 +322,6 @@ msgstr "Ιδιότητες γεμίσματος"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Σχήμα γεμίσματος:"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Κανένα"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -415,6 +407,12 @@ msgstr "Χρώμα γραμμής"
 #, fuzzy
 msgid "Roundangle"
 msgstr "Παραλληλόγραμμο"
+
+#~ msgid "Continue"
+#~ msgstr "Συνέχεια"
+
+#~ msgid "None"
+#~ msgstr "Κανένα"
 
 #~ msgid "Dismiss"
 #~ msgstr "Ξουτ!"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatow <theodore@eexi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,10 +161,6 @@ msgstr ""
 msgid "CTRL+S"
 msgstr ""
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Εκτύπωση"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr ""
@@ -297,10 +293,6 @@ msgstr "’νοιγμα"
 
 #: kghostview.cpp:495
 msgid "Open &recent"
-msgstr ""
-
-#: kghostview.cpp:500
-msgid "&Reload"
 msgstr ""
 
 #: kghostview.cpp:503
@@ -799,6 +791,9 @@ msgstr ""
 #, fuzzy
 msgid "&Magnification"
 msgstr "Μεγένθυση"
+
+#~ msgid "Print"
+#~ msgstr "Εκτύπωση"
 
 #~ msgid "&View control ..."
 #~ msgstr "Παρουσίαση ελέγχου"

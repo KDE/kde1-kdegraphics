@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-01-09 00:47+0100\n"
 "Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -275,10 +275,6 @@ msgstr ""
 "B³±d: Nie mo¿na otworzyæ pliku\n"
 "KPaint nie mo¿e otworzyæ wybranego pliku."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Dalej"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Nieznany format"
@@ -320,10 +316,6 @@ msgstr "W³a¶ciwo¶ci &wype³nienia"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Wzorzec:"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Brak"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -409,6 +401,12 @@ msgstr "Kolor &linii..."
 #, fuzzy
 msgid "Roundangle"
 msgstr "Prostok±t"
+
+#~ msgid "Continue"
+#~ msgstr "Dalej"
+
+#~ msgid "None"
+#~ msgstr "Brak"
 
 #~ msgid "Dismiss"
 #~ msgstr "Wycofaj"

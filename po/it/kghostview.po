@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,10 +149,6 @@ msgstr "Ctrl+W"
 msgid "CTRL+S"
 msgstr "Ctrl+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Stampa"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "Ctrl+P"
@@ -285,10 +281,6 @@ msgstr "&Apri ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Apri &recenti"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr ""
 
 #: kghostview.cpp:503
 #, fuzzy
@@ -782,6 +774,9 @@ msgstr "&Applica"
 #, fuzzy
 msgid "&Magnification"
 msgstr "&ingrandimento"
+
+#~ msgid "Print"
+#~ msgstr "Stampa"
 
 #~ msgid "Home"
 #~ msgstr "Inizio linea"

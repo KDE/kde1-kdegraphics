@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@Ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,10 +283,6 @@ msgstr ""
 "Errore: Impossibile aprire fileKPaint non ha potuto aprire il file "
 "specificato "
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Continua"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: Formato Sconosciuto"
@@ -328,10 +324,6 @@ msgstr "Caratteristiche Riempimento"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Motivo Riempimento:"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Nessuna"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -417,6 +409,12 @@ msgstr "Imposta Colore Linea..."
 #, fuzzy
 msgid "Roundangle"
 msgstr "Rettangolo"
+
+#~ msgid "Continue"
+#~ msgstr "Continua"
+
+#~ msgid "None"
+#~ msgstr "Nessuna"
 
 #~ msgid "Dismiss"
 #~ msgstr "Cancella"

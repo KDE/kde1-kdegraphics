@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -117,14 +117,6 @@ msgstr "&Prispôsobi» ¹írke stránky"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Prek&resli» stránku"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Predchádzajúca"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Nasledujúca"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -516,10 +508,6 @@ msgstr "Posúvacie li¹ty"
 msgid "Number of recent files"
 msgstr "Poèet nedávnych súborov"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Vzhµad"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Vytvori» chýbajúce fonty"
@@ -544,10 +532,6 @@ msgstr "Zmen¹ovací faktor pre malý text"
 msgid "Shrink factor for large text"
 msgstr "Zmen¹ovací faktor pre veµký text"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Fonty"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Zobrazova» postscript specials"
@@ -567,10 +551,6 @@ msgstr "Zobrazenie"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papier"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Tlaèi»"
 
 #: print.cpp:63
 msgid "Print "
@@ -680,10 +660,6 @@ msgstr "&mpage"
 msgid "&Add"
 msgstr "Prid&a»"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "Odst&ráni»"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Príkaz &spooleru:"
@@ -695,3 +671,21 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Spôsob tlaèe"
+
+#~ msgid "&Previous"
+#~ msgstr "&Predchádzajúca"
+
+#~ msgid "&Next"
+#~ msgstr "&Nasledujúca"
+
+#~ msgid "Appearance"
+#~ msgstr "Vzhµad"
+
+#~ msgid "Fonts"
+#~ msgstr "Fonty"
+
+#~ msgid "Print"
+#~ msgstr "Tlaèi»"
+
+#~ msgid "&Remove"
+#~ msgstr "Odst&ráni»"

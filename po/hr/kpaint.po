@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-04-29 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -277,10 +277,6 @@ msgstr ""
 "Gre¹ka: Ne mogu otvoriti datoteku\n"
 "KPaint nije mogao otvoriti tra¾enu datoteku."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Nastavi"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: nepoznata vrsta zapisa"
@@ -322,10 +318,6 @@ msgstr "Pode¹avanja ispunjenja"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Uzorak ispunjenja"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Ni¹ta"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -410,3 +402,9 @@ msgstr "Postavi boju crte..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Zaobljeni èetverokut"
+
+#~ msgid "Continue"
+#~ msgstr "Nastavi"
+
+#~ msgid "None"
+#~ msgstr "Ni¹ta"

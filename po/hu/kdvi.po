@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Székely Krisztián <szekelyk@edasz.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -122,14 +122,6 @@ msgstr "&Teljes szélesség"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Oldal újrarajzolás"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Elõzõ"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Következõ"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -522,10 +514,6 @@ msgstr "Gördítõ sávok"
 msgid "Number of recent files"
 msgstr "Elõzõ fájlok száma"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Megjelenés"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Hiányzó fontok létrehozása"
@@ -550,10 +538,6 @@ msgstr "Kis szöveg kicsinyítési tényezõ"
 msgid "Shrink factor for large text"
 msgstr "Nagy szöveg kicsinyítési tényezõ"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Fontok"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Postscript specialitások megjelenítése"
@@ -573,10 +557,6 @@ msgstr "Rajzolás"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papír"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Nyomtat"
 
 #: print.cpp:63
 msgid "Print "
@@ -686,10 +666,6 @@ msgstr "&Mpage használata"
 msgid "&Add"
 msgstr "&Hozzáad"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Töröl"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "&Spooler parancs:"
@@ -701,6 +677,24 @@ msgstr "n fel"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Nyomtatási módszer"
+
+#~ msgid "&Previous"
+#~ msgstr "&Elõzõ"
+
+#~ msgid "&Next"
+#~ msgstr "&Következõ"
+
+#~ msgid "Appearance"
+#~ msgstr "Megjelenés"
+
+#~ msgid "Fonts"
+#~ msgstr "Fontok"
+
+#~ msgid "Print"
+#~ msgstr "Nyomtat"
+
+#~ msgid "&Remove"
+#~ msgstr "&Töröl"
 
 #~ msgid "&Contents"
 #~ msgstr "&Tartalom"

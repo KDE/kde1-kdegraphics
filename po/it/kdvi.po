@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,14 +118,6 @@ msgstr "Adatta alla &larghezza pagina"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Aggiorna pagina"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Precedente"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Successiva"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -517,10 +509,6 @@ msgstr "Scrollbars"
 msgid "Number of recent files"
 msgstr "Numero di file recenti"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Aspetto"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Genera fonts mancanti"
@@ -545,10 +533,6 @@ msgstr "Adatta per testo piccolo"
 msgid "Shrink factor for large text"
 msgstr "Adatta per testo grande"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Caratteri"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Mostra opzioni speciali postscript"
@@ -568,10 +552,6 @@ msgstr "Rendering"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Carta"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Stampa"
 
 #: print.cpp:63
 msgid "Print "
@@ -681,10 +661,6 @@ msgstr "Usa &mpage"
 msgid "&Add"
 msgstr "&Aggiungi"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Rimuovi"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Comando di &spool:"
@@ -696,6 +672,24 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Metodo di stampa"
+
+#~ msgid "&Previous"
+#~ msgstr "&Precedente"
+
+#~ msgid "&Next"
+#~ msgstr "&Successiva"
+
+#~ msgid "Appearance"
+#~ msgstr "Aspetto"
+
+#~ msgid "Fonts"
+#~ msgstr "Caratteri"
+
+#~ msgid "Print"
+#~ msgstr "Stampa"
+
+#~ msgid "&Remove"
+#~ msgstr "&Rimuovi"
 
 #~ msgid "&Contents"
 #~ msgstr "&Contenuti"

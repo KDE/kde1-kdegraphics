@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-04-21 02:55+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -145,10 +145,6 @@ msgstr ""
 msgid "CTRL+S"
 msgstr ""
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "列印"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr ""
@@ -281,10 +277,6 @@ msgstr "開啟[&O] ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "最近開啟文件[&R]"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr ""
 
 #: kghostview.cpp:503
 #, fuzzy
@@ -783,6 +775,9 @@ msgstr "套用[&A]"
 #, fuzzy
 msgid "&Magnification"
 msgstr "倍率[&M]"
+
+#~ msgid "Print"
+#~ msgstr "列印"
 
 #~ msgid "&View control ..."
 #~ msgstr "顯示控制[&V] ..."

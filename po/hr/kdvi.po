@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Stjepan Zlodi <szlodi@public.srce.hr> \n"
 "Language-Team: Croatian\n"
@@ -117,14 +117,6 @@ msgstr "Pod&esi prema ¹irini stranice"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "O&bnovi stranicu"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Prethodna"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Slijedeæa"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -516,10 +508,6 @@ msgstr "Trake za odmotavanje"
 msgid "Number of recent files"
 msgstr "Broj skora¹njih datoteka"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Izgled"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Napravi pisma koja nedostaju"
@@ -544,10 +532,6 @@ msgstr "Faktor smanjenja za mali tekst"
 msgid "Shrink factor for large text"
 msgstr "Faktor smanjenja za veliki tekst"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Pisma"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Poka¾i postscript kodove"
@@ -567,10 +551,6 @@ msgstr "Izrada"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papir"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Ispis"
 
 #: print.cpp:63
 msgid "Print "
@@ -680,10 +660,6 @@ msgstr "Koristi &mpage"
 msgid "&Add"
 msgstr "&Dodaj"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Makni"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "&Naredba posredniku:"
@@ -695,3 +671,21 @@ msgstr "n-gore"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Naèin ispisa"
+
+#~ msgid "&Previous"
+#~ msgstr "&Prethodna"
+
+#~ msgid "&Next"
+#~ msgstr "&Slijedeæa"
+
+#~ msgid "Appearance"
+#~ msgstr "Izgled"
+
+#~ msgid "Fonts"
+#~ msgstr "Pisma"
+
+#~ msgid "Print"
+#~ msgstr "Ispis"
+
+#~ msgid "&Remove"
+#~ msgstr "&Makni"

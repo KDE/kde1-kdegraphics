@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdehelp 0.5.2\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1997-09-21 19:39+MET\n"
 "Last-Translator: Nagy Balazs <julian7@kva.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -281,10 +281,6 @@ msgstr ""
 "Hiba: nem lehet megnyitni a file-t\n"
 "A KPaint nem tudja megnyitni a kiválasztott file-t."
 
-#: kpaint.cpp:537 kpaint.cpp:547
-msgid "Continue"
-msgstr "Tovább"
-
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: ismeretlen formátum"
@@ -327,10 +323,6 @@ msgstr "Kitöltési tulajdonságok"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Kitöltési minta:"
-
-#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
-msgid "None"
-msgstr "Nincs"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -416,6 +408,12 @@ msgstr "Vonalszín beállítása..."
 #, fuzzy
 msgid "Roundangle"
 msgstr "Téglalap"
+
+#~ msgid "Continue"
+#~ msgstr "Tovább"
+
+#~ msgid "None"
+#~ msgstr "Nincs"
 
 #~ msgid "Dismiss"
 #~ msgstr "Mégsem"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi \n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-01-22 23:13+0100\n"
 "Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
@@ -114,14 +114,6 @@ msgstr "Dopasuj do sze&roko¶ci strony"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "Przery&suj stronê"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Poprzedni"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Nastêpny"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -516,10 +508,6 @@ msgstr "Paski przewijania"
 msgid "Number of recent files"
 msgstr "Liczba powi±zanych stron"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Wygl±d"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Generuj brakuj±ce czcionki"
@@ -544,10 +532,6 @@ msgstr "Wspó³czynnik powiêkszenia dla ma³ego tekstu"
 msgid "Shrink factor for large text"
 msgstr "Wspó³czynnik powiêkszenia dla du¿ego tekstu"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Czcionki"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Poka¿ specjalne dane postscript"
@@ -567,10 +551,6 @@ msgstr "Renderowanie"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papier"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Drukuj"
 
 #: print.cpp:63
 msgid "Print "
@@ -680,10 +660,6 @@ msgstr "U¿yj &mpage"
 msgid "&Add"
 msgstr "&Dodaj"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Usuñ"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Polecenie &spoolera:"
@@ -695,6 +671,24 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Metoda wydruku"
+
+#~ msgid "&Previous"
+#~ msgstr "&Poprzedni"
+
+#~ msgid "&Next"
+#~ msgstr "&Nastêpny"
+
+#~ msgid "Appearance"
+#~ msgstr "Wygl±d"
+
+#~ msgid "Fonts"
+#~ msgstr "Czcionki"
+
+#~ msgid "Print"
+#~ msgstr "Drukuj"
+
+#~ msgid "&Remove"
+#~ msgstr "&Usuñ"
 
 #~ msgid "&Contents"
 #~ msgstr "Pomo&c"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-17 HO:MI+ZONE\n"
 "Last-Translator: Svein Olav Aasen <svein.aasen@caa.no / soaasen@online.no>\n"
 "Language-Team: no<LL@li.org>\n"
@@ -116,14 +116,6 @@ msgstr "Tilpass til side&bredden"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Tegne siden på nytt"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Forrige"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Neste"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -515,10 +507,6 @@ msgstr "Rullefelt"
 msgid "Number of recent files"
 msgstr "Antall nylige filer"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Utseende"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Generer manglende skrifttyper"
@@ -543,10 +531,6 @@ msgstr "Krympefaktoren for liten tekst"
 msgid "Shrink factor for large text"
 msgstr "Krympefaktoren for stor tekst"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Skrifttyper"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Vis postscript-spesialer"
@@ -566,10 +550,6 @@ msgstr "Rendering"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papir"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Skriv ut"
 
 #: print.cpp:63
 msgid "Print "
@@ -679,10 +659,6 @@ msgstr "Bruk &mpage"
 msgid "&Add"
 msgstr "&Legg til"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Fjern"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "&Spooler-kommando:"
@@ -694,3 +670,21 @@ msgstr "n-opp"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Utskriftsmetode"
+
+#~ msgid "&Previous"
+#~ msgstr "&Forrige"
+
+#~ msgid "&Next"
+#~ msgstr "&Neste"
+
+#~ msgid "Appearance"
+#~ msgstr "Utseende"
+
+#~ msgid "Fonts"
+#~ msgstr "Skrifttyper"
+
+#~ msgid "Print"
+#~ msgstr "Skriv ut"
+
+#~ msgid "&Remove"
+#~ msgstr "&Fjern"

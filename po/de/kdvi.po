@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-01-05 20:15+0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -109,14 +109,6 @@ msgstr "Passend auf &Breite"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Neu zeichnen"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Vorherige"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Nächste"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -508,10 +500,6 @@ msgstr "Scrollleisten"
 msgid "Number of recent files"
 msgstr "Anzahl zu merkender Dateien"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Aussehen"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Generiere fehlende Schriften"
@@ -536,10 +524,6 @@ msgstr "Vergrößerungsfaktor für kleinen Text"
 msgid "Shrink factor for large text"
 msgstr "Vergrößerungsfaktor für großen Text"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Schriften"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Zeige Postscript-Spezialitäten"
@@ -559,10 +543,6 @@ msgstr "Zeichne"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papier"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Drucken"
 
 #: print.cpp:63
 msgid "Print "
@@ -672,10 +652,6 @@ msgstr "Benutze &mpage"
 msgid "&Add"
 msgstr "&Hinzufügen"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Entfernen"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "&Druckbefehl:"
@@ -687,6 +663,24 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Druckmethode"
+
+#~ msgid "&Previous"
+#~ msgstr "&Vorherige"
+
+#~ msgid "&Next"
+#~ msgstr "&Nächste"
+
+#~ msgid "Appearance"
+#~ msgstr "Aussehen"
+
+#~ msgid "Fonts"
+#~ msgstr "Schriften"
+
+#~ msgid "Print"
+#~ msgstr "Drucken"
+
+#~ msgid "&Remove"
+#~ msgstr "&Entfernen"
 
 #~ msgid "&Contents"
 #~ msgstr "&Inhalt"

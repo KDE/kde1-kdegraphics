@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-01-28 15:30+0000\n"
 "Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
 
@@ -109,14 +109,6 @@ msgstr "&Largura da página"
 #: kdvi.cpp:195
 msgid "&Redraw page"
 msgstr "&Redesenhar página"
-
-#: kdvi.cpp:202
-msgid "&Previous"
-msgstr "&Anterior"
-
-#: kdvi.cpp:203
-msgid "&Next"
-msgstr "&Próximo"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -508,10 +500,6 @@ msgstr "Barras de Scroll"
 msgid "Number of recent files"
 msgstr "Número de ficheiros recentes"
 
-#: prefs.cpp:252
-msgid "Appearance"
-msgstr "Aparência"
-
 #: prefs.cpp:261
 msgid "Generate missing fonts"
 msgstr "Gerar fontes em falta"
@@ -536,10 +524,6 @@ msgstr "Factor de redução para texto pequeno"
 msgid "Shrink factor for large text"
 msgstr "Factor de redução para texto grande"
 
-#: prefs.cpp:319
-msgid "Fonts"
-msgstr "Fontes"
-
 #: prefs.cpp:326
 msgid "Show postscript specials"
 msgstr "Mostrar especiais do postscript"
@@ -559,10 +543,6 @@ msgstr "Visualização"
 #: prefs.cpp:388
 msgid "Paper"
 msgstr "Papel"
-
-#: print.cpp:44
-msgid "Print"
-msgstr "Imprimir"
 
 #: print.cpp:63
 msgid "Print "
@@ -672,10 +652,6 @@ msgstr "Utilizar &mpage"
 msgid "&Add"
 msgstr "&Adicionar"
 
-#: printSetupData.cpp:99
-msgid "&Remove"
-msgstr "&Remover"
-
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
 msgstr "Comando para a &spooler:"
@@ -687,3 +663,21 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impressão"
+
+#~ msgid "&Previous"
+#~ msgstr "&Anterior"
+
+#~ msgid "&Next"
+#~ msgstr "&Próximo"
+
+#~ msgid "Appearance"
+#~ msgstr "Aparência"
+
+#~ msgid "Fonts"
+#~ msgstr "Fontes"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "&Remove"
+#~ msgstr "&Remover"

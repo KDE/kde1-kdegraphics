@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-05-06 15:36 +0100\n"
 "Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -144,10 +144,6 @@ msgstr "Strg+W"
 msgid "CTRL+S"
 msgstr "Strg+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Drucken"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "Strg+P"
@@ -279,10 +275,6 @@ msgstr "&Öffnen ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Öffne &bisherige"
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr "&Neu laden"
 
 #: kghostview.cpp:503
 msgid "Page Set&up ..."
@@ -769,6 +761,12 @@ msgstr "&Übernehmen"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Vergrößerung"
+
+#~ msgid "Print"
+#~ msgstr "Drucken"
+
+#~ msgid "&Reload"
+#~ msgstr "&Neu laden"
 
 #~ msgid "Home"
 #~ msgstr "Pos1"

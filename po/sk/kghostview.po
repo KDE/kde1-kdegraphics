@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-05-30 17:41+0200\n"
+"POT-Creation-Date: 1998-06-16 14:19+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -147,10 +147,6 @@ msgstr "CTRL+W"
 msgid "CTRL+S"
 msgstr "CTRL+S"
 
-#: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
-msgid "Print"
-msgstr "Tlaèi»"
-
 #: kaccel.cpp:185
 msgid "CTRL+P"
 msgstr "CTRL+P"
@@ -282,10 +278,6 @@ msgstr "&Otvori» ..."
 #: kghostview.cpp:495
 msgid "Open &recent"
 msgstr "Otvo&ri» nedávne..."
-
-#: kghostview.cpp:500
-msgid "&Reload"
-msgstr "&Znovu naèíta»"
 
 #: kghostview.cpp:503
 msgid "Page Set&up ..."
@@ -770,3 +762,9 @@ msgstr "&Aplikova»"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Zväè¹enie"
+
+#~ msgid "Print"
+#~ msgstr "Tlaèi»"
+
+#~ msgid "&Reload"
+#~ msgstr "&Znovu naèíta»"
