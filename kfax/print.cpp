@@ -140,7 +140,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   cancel_button->setGeometry( 3*XOFFSET +100, 340, 80, BUTTONHEIGHT );
   connect( cancel_button, SIGNAL( clicked() ), SLOT( cancel() ) );
 
-  ok_button = new QPushButton( i18n("Ok"), this );
+  ok_button = new QPushButton( i18n("OK"), this );
   ok_button->setGeometry( 3*XOFFSET, 340, 80, BUTTONHEIGHT );
   connect( ok_button, SIGNAL( clicked() ), SLOT( ready() ) );	
 

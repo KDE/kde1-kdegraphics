@@ -50,7 +50,7 @@ KTemplateEditDlg::KTemplateEditDlg(QWidget *parent) : QDialog(parent, 0, true)
 
   KButtonBox *bbox = new KButtonBox( this );
 	
-  ok = bbox->addButton( i18n("&Ok") );
+  ok = bbox->addButton( i18n("&OK") );
   connect( ok, SIGNAL(clicked()), SLOT(accept()) );
   ok->setEnabled(false);
 	

@@ -42,7 +42,7 @@ canvasSizeDialog::canvasSizeDialog(QWidget *parent, const char *name)
   QHBoxLayout *buttonLayout= new QHBoxLayout();
   topLevelLayout->addLayout(buttonLayout);
 
-  okButton= new QPushButton(klocale->translate("Ok"), this);
+  okButton= new QPushButton(klocale->translate("OK"), this);
   cancelButton= new QPushButton(klocale->translate("Cancel"), this);
   okButton->setFixedHeight(okButton->sizeHint().height());
   cancelButton->setFixedHeight(cancelButton->sizeHint().height());

@@ -1103,7 +1103,7 @@ void TopLevel::saveNetFile( const char * _url)
     KURL u( netFile.data() );
     if ( u.isMalformed() )
     {
-	QMessageBox::warning(this,"KFax", i18n("Malformed URL"), i18n("Ok"),0);
+	QMessageBox::warning(this,"KFax", i18n("Malformed URL"), i18n("OK"),0);
 	return;
     }
     
@@ -1117,7 +1117,7 @@ void TopLevel::saveNetFile( const char * _url)
 	res = copyfile(u.path(),thispage->pathname);
 	if (res==0) {
 	  QMessageBox::warning(this, "KFax", i18n("Failure in 'copy file()'\n"\
-				"Couldn't save file!"),i18n( "Ok"),0);
+				"Couldn't save file!"),i18n( "OK"),0);
 	  return;
 	} 
 
@@ -1132,7 +1132,7 @@ void TopLevel::saveNetFile( const char * _url)
 			      i18n("KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
 			      "Please wait until has finished\n"), 
-			      i18n("Ok"),0);
+			      i18n("OK"),0);
 	return;
     }
 
@@ -1141,7 +1141,7 @@ void TopLevel::saveNetFile( const char * _url)
     {
 	QMessageBox::warning(this,"KFax", 
 			     i18n("Could not communicate with KFM"),
-			     i18n("Ok"),0);
+			     i18n("OK"),0);
 	delete kfm;
 	kfm = 0L;
 	return;
@@ -1154,7 +1154,7 @@ void TopLevel::saveNetFile( const char * _url)
       QMessageBox::warning(this,"KFax", 
 			   i18n("Failure in 'copy file()'\n"\
 			    "Couldn't save file!"), 
-			   i18n("Ok"),0);
+			   i18n("OK"),0);
       return;
     } 
 
@@ -1173,7 +1173,7 @@ void TopLevel::openNetFile( const char * _url)
   KURL u( netFile.data() );
   if ( u.isMalformed() )
     {
-	QMessageBox::warning(this, "KFax", i18n("Malformed URL"), i18n("Ok"),0);
+	QMessageBox::warning(this, "KFax", i18n("Malformed URL"), i18n("OK"),0);
 	return;
     }
 
@@ -1194,7 +1194,7 @@ void TopLevel::openNetFile( const char * _url)
 			      i18n("KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
 			      "Please wait until has finished\n"), 
-			      i18n("Ok"),0);
+			      i18n("OK"),0);
 	return;
     }
 
@@ -1205,7 +1205,7 @@ void TopLevel::openNetFile( const char * _url)
     {
 	QMessageBox::warning(this, "KFax", 
 			     i18n("Could not communicate with KFM"), 
-			     i18n("Ok"),0);
+			     i18n("OK"),0);
 	delete kfm;
 	kfm = 0L;
 	return;

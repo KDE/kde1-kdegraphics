@@ -27,7 +27,7 @@ formatDialog::formatDialog(const char *format, QWidget* parent, const char* name
   fileformat->insertStrList(formatMngr->formats());
   fileformat->setCurrentItem(formatMngr->formats()->find(format));
 
-  okButton= new QPushButton(klocale->translate("Ok"), this);
+  okButton= new QPushButton(klocale->translate("OK"), this);
   cancelButton= new QPushButton(klocale->translate("Cancel"), this);
 
   okButton->move(20, 50);

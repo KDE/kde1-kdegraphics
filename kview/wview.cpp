@@ -529,7 +529,7 @@ void WView::imageInfo()
                 + "x" + num.setNum(image->height()) + " " +
                 imageFormat;
 
-        QMessageBox::message("Image Info", Info, "Ok");
+        QMessageBox::message("Image Info", Info, "OK");
 }
 
 void WView::redrawCaption()

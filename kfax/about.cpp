@@ -64,7 +64,7 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
   l->setGeometry(145,100, 250, 200);
   l->setAlignment(WordBreak|ExpandTabs);
 
-  QPushButton *b_ok = new QPushButton(i18n("Ok"), this);
+  QPushButton *b_ok = new QPushButton(i18n("OK"), this);
   b_ok->setGeometry(width()/2-40, height() - 48, 80, 32);
   /*  b_ok->setDefault(TRUE);*/
   b_ok->setAutoDefault(TRUE);

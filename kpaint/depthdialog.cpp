@@ -32,7 +32,7 @@ depthDialog::depthDialog(Canvas *c, QWidget* parent, const char* name)
   else if (c->pixmap()->depth() == 24)
     depthBox->setCurrentItem(3);
 
-  okButton= new QPushButton(klocale->translate("Ok"), this);
+  okButton= new QPushButton(klocale->translate("OK"), this);
   cancelButton= new QPushButton(klocale->translate("Cancel"), this);
 
   okButton->move(20, 50);

@@ -155,7 +155,7 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   cancel_button->setGeometry( 3*XOFFSET +100, 240, 80, BUTTONHEIGHT );
   connect( cancel_button, SIGNAL( clicked() ), SLOT( reject() ) );
 
-  ok_button = new QPushButton( i18n("Ok"), this );
+  ok_button = new QPushButton( i18n("OK"), this );
   ok_button->setGeometry( 3*XOFFSET, 240, 80, BUTTONHEIGHT );
   connect( ok_button, SIGNAL( clicked() ), SLOT( ready() ) );	
 

@@ -657,7 +657,7 @@ void Fileman::aboutKview()
   text += "Sirtaj Singh Kang,  <taj@kde.org>\n";
   text += "Martin Hartig,  <martinhartig@yahoo.com>";
   QMessageBox::message(i18n("About KView"), text.data(),
-			i18n("Ok")); 
+			i18n("OK")); 
 }
 
 void Fileman::saveOptions()

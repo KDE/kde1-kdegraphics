@@ -47,7 +47,7 @@ KResize::KResize(QWidget *parent, const char *name, bool m, const QSize s )
   {
     connect(x_line, SIGNAL(returnPressed()), SLOT(slotReturnPressed()));
     connect(y_line, SIGNAL(returnPressed()), SLOT(slotReturnPressed()));
-    ok = new QPushButton(i18n("&Ok"), this);
+    ok = new QPushButton(i18n("&OK"), this);
     connect(ok, SIGNAL(clicked()), SLOT(accept()));
     ok->setFixedSize(ok->sizeHint());
     ok->setEnabled(false);
