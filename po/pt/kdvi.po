@@ -63,24 +63,20 @@ msgid "No document"
 msgstr "Sem documento"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
-msgstr "Mostrar/esconder barra de menus"
+msgstr "Mostrar/esconder Barra de Menu"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Marcar todas"
+msgstr "Marcar página"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
-msgstr "Redesenhar página"
+msgstr "Redesenhar"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
-msgstr "&Preferências"
+msgstr "Preferências ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
@@ -176,10 +172,9 @@ msgstr "Mostrar Barra de &Arrasto"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "Visualizador de DVIs"
 
 #: kdvi.cpp:240
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -187,7 +182,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
+"Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
