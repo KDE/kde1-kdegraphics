@@ -16,7 +16,7 @@ msgstr ""
 
 #: copyright.cpp:28
 msgid "Copyright"
-msgstr "Licenca""
+msgstr "Licenca"
 
 #: copyright.cpp:42
 msgid ""
@@ -301,7 +301,7 @@ msgstr "&Pomosh za ovaa aplikacija"
 
 #: kghostview.cpp:577
 msgid "&Copyright"
-msgstr "&Licenca""
+msgstr "&Licenca"
 
 #: kghostview.cpp:584
 msgid "&Go"
@@ -374,7 +374,7 @@ msgstr ""
 "Veke cekam\n"
 "na interapt za da go zavrshi procesot.\n"
 "Ve molime prichekajte.\n"
-"Vo sprotivno zaprete go procesot sto odi.\n"
+"Vo sprotivno zaprete go procesot sto odi."
 
 #: kghostview.cpp:782
 msgid "Could not start or find KFM."
@@ -508,7 +508,7 @@ msgstr "[ime na dokument]\n"
 
 #: main.cpp:29
 msgid "See Qt documentation for command line options\n"
-msgstr "Pogledaj vo Qt dokumentacijata za command line opcii\n""
+msgstr "Pogledaj vo Qt dokumentacijata za command line opcii\n"
 
 #: main.cpp:111
 #, c-format

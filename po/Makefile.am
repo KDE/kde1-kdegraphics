@@ -1,5 +1,5 @@
 
-SUBDIRS = cs de nl ru sv it hu pl es pt fr hr fi zh_TW_Big5 sk el no zh_GB2312
+SUBDIRS = cs de nl ru sv it hu pl es pt fr hr fi zh_TW_Big5 sk el no zh_GB2312 mk
 
 APPS = kdvi kpaint kghostview
 
