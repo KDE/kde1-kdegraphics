@@ -13,6 +13,9 @@ Tool::Tool()
   tooltip= 0;
 }
 
+Tool::~Tool() {
+}
+
 int Tool::getPages(void)
 {
   return props;

@@ -3,7 +3,7 @@
 #include <kapp.h>
 #include "palettedialog.h"
 
-paletteDialog::paletteDialog(QPixmap *p, QWidget *parent= 0, const char *name= 0)
+paletteDialog::paletteDialog(QPixmap *p, QWidget *parent, const char *name)
   : QDialog(parent, name, TRUE)
 {
   QPushButton *dismiss;

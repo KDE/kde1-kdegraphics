@@ -11,7 +11,7 @@
 #include "properties.h"
 
 propertiesDialog::propertiesDialog(int pages,
-				   QWidget *parent= 0, const char *name= 0)
+				   QWidget *parent, const char *name)
   : QTabDialog(parent, name)
 {
   // Create the pages

@@ -10,6 +10,7 @@
 **
 *****************************************************************************/
 
+#include "../config.h"
 #include <qwidget.h>
 #include <qscrbar.h>
 #include <qobjcoll.h>
@@ -268,7 +269,7 @@ before attaching it. ??do what if it resizes??
  Move such that (x,y) is visible and with at least the given
  pixel margins (if possible, otherwise, centered).
 */
-void QwViewport::ensureVisible(int x, int y, int xmargin=50, int ymargin=50)
+void QwViewport::ensureVisible(int x, int y, int xmargin, int ymargin)
 {
 	// Algorithm taken from my WAX++ original
 
@@ -331,7 +332,7 @@ void QwViewport::centerOn(int x, int y)
    0.5 = Ensure (x,y) is in middle 50% of visible area.
    1.0 = CenterOn(x,y).
 */
-void QwViewport::centralize(int x, int y, float xmargin=0.5, float ymargin=0.5)
+void QwViewport::centralize(int x, int y, float xmargin, float ymargin)
 {
 	int pw=portHole()->width();
 	int ph=portHole()->height();

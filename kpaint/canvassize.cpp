@@ -5,7 +5,7 @@
 #include <klocale.h>
 #include <kapp.h>
 
-canvasSizeDialog::canvasSizeDialog(QWidget *parent= 0, const char *name= 0)
+canvasSizeDialog::canvasSizeDialog(QWidget *parent, const char *name)
  : QDialog (parent, name, TRUE)
 {
    widthLabel= new QLabel(klocale->translate("Width"), this);

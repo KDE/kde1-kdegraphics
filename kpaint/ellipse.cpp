@@ -13,9 +13,9 @@ extern MyApp *kpaintApp;
 
 Ellipse::Ellipse() : Tool()
 {
-  drawing= FALSE;
-  tooltip= klocale->translate("Ellipse");
-  props= Tool::HasLineProperties | Tool::HasFillProperties;
+  drawing = FALSE;
+  tooltip.setStr(klocale->translate("Ellipse"));
+  props = Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
 void Ellipse::activating(void)

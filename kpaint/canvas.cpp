@@ -12,7 +12,7 @@
 #include "tools/tool.h"
 
 Canvas::Canvas(int width, int height,
-	       QWidget *parent= 0, const char *name=0)
+	       QWidget *parent, const char *name)
   : QWidget(parent, name)
 {
   currentTool= 0;
@@ -36,7 +36,7 @@ Canvas::Canvas(int width, int height,
   emit sizeChanged();
 }
 
-Canvas::Canvas(const char *filename, QWidget *parent= 0, const char *name=0)
+Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
   : QWidget(parent, name)
 {
   currentTool= 0;
@@ -201,7 +201,7 @@ bool Canvas::isActive()
     return false;
 }
 
-bool Canvas::load(const char *filename= 0, const char *format= 0)
+bool Canvas::load(const char *filename, const char *format)
 {
   bool s;
   QPixmap p;
@@ -224,7 +224,7 @@ bool Canvas::load(const char *filename= 0, const char *format= 0)
   return s;
 }
 
-bool Canvas::save(const char *filename=0, const char *format= 0)
+bool Canvas::save(const char *filename, const char *format)
 {
   bool s;
 

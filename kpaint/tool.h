@@ -30,22 +30,23 @@ class Tool : public QObject
 {
   Q_OBJECT
 public:
-  Tool(void);
-  void activate(Canvas *c); // Make the tool active for canvas c
-  void deactivate(void); // Make the tool inactive
-  bool isActive(void);
-  void setPen(QPen *p);
-  void setBrush(QBrush *b);
-  const char *tip(void) { return tooltip; };
-  virtual QPixmap *pixmap(void);
 
   // Page flags
-  const int HasLineProperties= 1;
-  const int HasFillProperties= 2;
-  const int HasCustomProperties= 4;
+  enum {HasLineProperties = 1, HasFillProperties = 2, HasCustomProperties = 4};
+
+  Tool();
+  virtual ~Tool();
+  
+  void activate(Canvas *c); // Make the tool active for canvas c
+  void deactivate(); // Make the tool inactive
+  bool isActive();
+  void setPen(QPen *p);
+  void setBrush(QBrush *b);
+  const char *tip() { return tooltip; };
+  virtual QPixmap *pixmap();
 
   // Used by the properties dialog
-  int getPages(void);
+  int getPages();
   QWidget *getCustomPage(QWidget *) { return NULL; };
 
   // Event handlers (handle events on canvas)
@@ -63,7 +64,7 @@ private:
 
 protected:
   QPixmap *pix;
-  char *tooltip;
+  QString tooltip;
   Canvas *canvas; // Current canvas if active
   virtual void activating(void) {}; // Called by activate()
   virtual void deactivating(void) {}; // Called by deactivate()

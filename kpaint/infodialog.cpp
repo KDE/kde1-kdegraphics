@@ -12,7 +12,7 @@
 
 extern FormatManager *formatMngr;
 
-imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name= 0)
+imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent, const char* name)
   : QDialog(parent, name, TRUE)
 {
   QPushButton *okButton;

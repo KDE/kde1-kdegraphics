@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "palette.h"
 
-paletteWidget::paletteWidget(QPixmap *p, QWidget *parent= 0, const char *name= 0)
+paletteWidget::paletteWidget(QPixmap *p, QWidget *parent, const char *name)
   : QTableView(parent, name)
 {
   img= NULL;
@@ -17,7 +17,7 @@ paletteWidget::paletteWidget(QPixmap *p, QWidget *parent= 0, const char *name= 0
   setCellHeight(15);
 }
 
-paletteWidget::paletteWidget(QWidget *parent= 0, const char *name= 0)
+paletteWidget::paletteWidget(QWidget *parent, const char *name)
   : QTableView(parent, name)
 {
   setTableFlags( Tbl_autoScrollBars | Tbl_cutCells | Tbl_snapToGrid );

@@ -386,7 +386,7 @@ void KPaint::handleCommand(int command)
   }
 }
 
-bool KPaint::loadLocal(const char *filename_, const char *url_= NULL)
+bool KPaint::loadLocal(const char *filename_, const char *url_)
 {
   QString size;
   const char *fmt;
@@ -439,7 +439,7 @@ bool KPaint::loadLocal(const char *filename_, const char *url_= NULL)
 }
 
 // Initiates fetch of remote file
-bool KPaint::loadRemote(const char *url_= NULL)
+bool KPaint::loadRemote(const char *url_)
 {
   KURL u(url_);
 
@@ -554,7 +554,7 @@ void KPaint::KFMputFinished()
   kfm= NULL;
 }
 
-bool KPaint::saveLocal(const char *filename_, const char *url_= NULL)
+bool KPaint::saveLocal(const char *filename_, const char *url_)
 {
   filename= filename_;
   url= url_;
