@@ -6,30 +6,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-04 01:46+0100\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
-
-#: app.cpp:45
-msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr ""
-"\n"
-"(C) Richard J. Moore 1997, uitgebracht onder de GPL,\n"
-"lees het bestand LICENSE voor meer informatie\n"
-
-#: app.cpp:46
-msgid "Usage: "
-msgstr "Gebruik: "
-
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr "[url | bestandsnaam]\n"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -166,11 +149,12 @@ msgstr "Instellingen..."
 msgid "KPaint"
 msgstr "Info"
 
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
 #: kpaint.cpp:496
-msgid ""
-"\n"
-"\n"
-"(c) "
+msgid "(c) "
 msgstr ""
 
 #: kpaint.cpp:505
@@ -207,39 +191,43 @@ msgstr ""
 "Fehler: Onbekend formaat\n"
 "KPaint begrijpt het formaat van dit bestand niet of het bestand is beschadigd"
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "Ellips"
 
-#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "Cirkel"
 
-#: manager.cpp:68 pen.cpp:17
+#: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Pen"
 
-#: manager.cpp:70 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rechthoek"
-
-#: line.cpp:19 manager.cpp:72
+#: line.cpp:19 manager.cpp:71
 msgid "Line"
 msgstr "Lijn"
 
-#: manager.cpp:74 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spuitbus"
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rechthoek"
 
-#: manager.cpp:76
-msgid "Area Select"
-msgstr ""
-
-#: manager.cpp:81
+#: manager.cpp:75
 msgid "Round Angle"
 msgstr ""
 
-#: manager.cpp:85
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spuitbus"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr ""
+
+#: manager.cpp:88
 msgid "Tool Properties"
 msgstr "Gereedschapinstellingen"
 
@@ -422,6 +410,20 @@ msgstr ""
 #, fuzzy
 msgid "Roundangle"
 msgstr "Rechthoek"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(C) Richard J. Moore 1997, uitgebracht onder de GPL,\n"
+#~ "lees het bestand LICENSE voor meer informatie\n"
+
+#~ msgid "Usage: "
+#~ msgstr "Gebruik: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr "[url | bestandsnaam]\n"
 
 #, fuzzy
 #~ msgid "Exit"

@@ -4,30 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
-"POT-Creation-Date: 1998-11-04 01:46+0100\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-06-24 00:06+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
-
-#: app.cpp:45
-msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr ""
-"\n"
-"(c) Richard J. Moore 1997 Udostêpnione na licencji GPL, szczegó³y zobacz w "
-"LICENSE\n"
-"\n"
-"Polskie t³umaczenie (C) 1998 Piotr Roszatycki <dexter@fnet.com.pl>\n"
-"oraz Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
-
-#: app.cpp:46
-msgid "Usage: "
-msgstr "U¿ycie: "
-
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr " [url | nazwa]\n"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -162,11 +142,13 @@ msgstr "Zachowaj opcje"
 msgid "KPaint"
 msgstr "KPaint"
 
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
 #: kpaint.cpp:496
-msgid ""
-"\n"
-"\n"
-"(c) "
+#, fuzzy
+msgid "(c) "
 msgstr ""
 "\n"
 "\n"
@@ -206,39 +188,43 @@ msgstr ""
 "B³±d: Nieznany format\n"
 "KPaint nie rozpozna³ formatu lub plik jest uszkodzony."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "Elipsa"
 
-#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "Okr±g"
 
-#: manager.cpp:68 pen.cpp:17
+#: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Piórko"
 
-#: manager.cpp:70 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Prostok±t"
-
-#: line.cpp:19 manager.cpp:72
+#: line.cpp:19 manager.cpp:71
 msgid "Line"
 msgstr "Linia"
 
-#: manager.cpp:74 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spray"
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Prostok±t"
 
-#: manager.cpp:76
-msgid "Area Select"
-msgstr "Zaznacz obszar"
-
-#: manager.cpp:81
+#: manager.cpp:75
 msgid "Round Angle"
 msgstr "Prostok±t o zaokr±glonych rogach"
 
-#: manager.cpp:85
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spray"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr "Zaznacz obszar"
+
+#: manager.cpp:88
 msgid "Tool Properties"
 msgstr "W³a¶ciwo¶ci narzêdzi"
 
@@ -427,6 +413,23 @@ msgstr "24 (True Colour)"
 #, fuzzy
 msgid "Roundangle"
 msgstr "Prostok±t"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Udostêpnione na licencji GPL, szczegó³y zobacz w "
+#~ "LICENSE\n"
+#~ "\n"
+#~ "Polskie t³umaczenie (C) 1998 Piotr Roszatycki <dexter@fnet.com.pl>\n"
+#~ "oraz Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
+
+#~ msgid "Usage: "
+#~ msgstr "U¿ycie: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr " [url | nazwa]\n"
 
 #~ msgid "Exit"
 #~ msgstr "Wy&j¶cie"

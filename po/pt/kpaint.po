@@ -1,26 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-04 01:46+0100\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-01-26 20:00+0000\n"
 "Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
-
-#: app.cpp:45
-msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr ""
-"\n"
-"(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
-"Veja o ficheiro LICENSE para detalhes\n"
-
-#: app.cpp:46
-msgid "Usage: "
-msgstr "Utilização: "
-
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr "[url | nome de ficheiro]\n"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -152,11 +135,13 @@ msgstr "Opções de Gravação"
 msgid "KPaint"
 msgstr "Pintor"
 
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
 #: kpaint.cpp:496
-msgid ""
-"\n"
-"\n"
-"(c) "
+#, fuzzy
+msgid "(c) "
 msgstr ""
 "\n"
 "\n"
@@ -196,39 +181,43 @@ msgstr ""
 "KPaint não reconhece o formato do ficheiro especificado\n"
 "ou o ficheiro está corrompido."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "Elipse"
 
-#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "Circulo"
 
-#: manager.cpp:68 pen.cpp:17
+#: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Caneta"
 
-#: manager.cpp:70 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rectangulo"
-
-#: line.cpp:19 manager.cpp:72
+#: line.cpp:19 manager.cpp:71
 msgid "Line"
 msgstr "Linha"
 
-#: manager.cpp:74 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Lata de Spray"
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rectangulo"
 
-#: manager.cpp:76
-msgid "Area Select"
-msgstr "Seleccionar Área"
-
-#: manager.cpp:81
+#: manager.cpp:75
 msgid "Round Angle"
 msgstr "Angulo Redondo"
 
-#: manager.cpp:85
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Lata de Spray"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr "Seleccionar Área"
+
+#: manager.cpp:88
 msgid "Tool Properties"
 msgstr "Propriedades da Ferramenta"
 
@@ -413,6 +402,20 @@ msgstr "24 (True Colour)"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Redondangulo"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Disponibilizado através da GPL.\n"
+#~ "Veja o ficheiro LICENSE para detalhes\n"
+
+#~ msgid "Usage: "
+#~ msgstr "Utilização: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr "[url | nome de ficheiro]\n"
 
 #~ msgid "Exit"
 #~ msgstr "Sair"

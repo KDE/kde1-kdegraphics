@@ -1,26 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-11-04 01:46+0100\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
-
-#: app.cpp:45
-msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-
-#: app.cpp:46
-msgid "Usage: "
-msgstr "用法: "
-
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr " [url | filename]\n"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -152,11 +136,13 @@ msgstr "保存选项"
 msgid "KPaint"
 msgstr "KPaint"
 
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
 #: kpaint.cpp:496
-msgid ""
-"\n"
-"\n"
-"(c) "
+#, fuzzy
+msgid "(c) "
 msgstr ""
 "\n"
 "\n"
@@ -196,39 +182,43 @@ msgstr ""
 "错误: 未知格式\n"
 "KPaint 不知道指定文件的格式或者文件已损坏."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "椭圆"
 
-#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "圆形"
 
-#: manager.cpp:68 pen.cpp:17
+#: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "画笔"
 
-#: manager.cpp:70 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "矩形"
-
-#: line.cpp:19 manager.cpp:72
+#: line.cpp:19 manager.cpp:71
 msgid "Line"
 msgstr "线段"
 
-#: manager.cpp:74 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "喷嘴"
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "矩形"
 
-#: manager.cpp:76
-msgid "Area Select"
-msgstr "区域选择"
-
-#: manager.cpp:81
+#: manager.cpp:75
 msgid "Round Angle"
 msgstr "圆角"
 
-#: manager.cpp:85
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "喷嘴"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr "区域选择"
+
+#: manager.cpp:88
 msgid "Tool Properties"
 msgstr "工具特性"
 
@@ -417,6 +407,19 @@ msgstr "24 (真彩色)"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "圆角"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+
+#~ msgid "Usage: "
+#~ msgstr "用法: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr " [url | filename]\n"
 
 #~ msgid "Exit"
 #~ msgstr "退出"

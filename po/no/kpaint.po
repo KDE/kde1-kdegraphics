@@ -5,29 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kpaint\n"
-"POT-Creation-Date: 1998-11-04 01:46+0100\n"
+"POT-Creation-Date: 1998-11-05 01:46+0100\n"
 "PO-Revision-Date: 1998-04-13 17:48+0100\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: app.cpp:45
-msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-msgstr ""
-"\n"
-"(c) Richard J. Moore 1997 Utgitt under GPL, se LICENSE for detaljer\n"
-
-#: app.cpp:46
-msgid "Usage: "
-msgstr "Bruk: "
-
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr " [url | filnavn]\n"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -159,11 +143,13 @@ msgstr "Lagre valg"
 msgid "KPaint"
 msgstr "KPaint"
 
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
 #: kpaint.cpp:496
-msgid ""
-"\n"
-"\n"
-"(c) "
+#, fuzzy
+msgid "(c) "
 msgstr ""
 "\n"
 "\n"
@@ -202,39 +188,43 @@ msgstr ""
 "Feil: Ukjent format\n"
 "KPaint forstår ikke formatet til den angitte fil eller filen er ødelagt."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:64
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "Ellipse"
 
-#: circle.cpp:18 circle.cpp:25 manager.cpp:66
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "Sirkel"
 
-#: manager.cpp:68 pen.cpp:17
+#: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Penn"
 
-#: manager.cpp:70 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rektangel"
-
-#: line.cpp:19 manager.cpp:72
+#: line.cpp:19 manager.cpp:71
 msgid "Line"
 msgstr "Linje"
 
-#: manager.cpp:74 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spraykanne"
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rektangel"
 
-#: manager.cpp:76
-msgid "Area Select"
-msgstr "Områdevalg"
-
-#: manager.cpp:81
+#: manager.cpp:75
 msgid "Round Angle"
 msgstr "Avrunnet firkant"
 
-#: manager.cpp:85
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spraykanne"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr "Områdevalg"
+
+#: manager.cpp:88
 msgid "Tool Properties"
 msgstr "Verktøyegenskaper"
 
@@ -413,3 +403,16 @@ msgstr "32 (sannhetsfarger)"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Utgitt under GPL, se LICENSE for detaljer\n"
+
+#~ msgid "Usage: "
+#~ msgstr "Bruk: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr " [url | filnavn]\n"
