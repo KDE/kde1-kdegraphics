@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-11-15 01:52+0100\n"
-"PO-Revision-Date: 1998-05-06 15:36 +0100\n"
-"Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
+"POT-Creation-Date: 1998-11-12 01:50+0100\n"
+"PO-Revision-Date: 1998-11-13 15:36 +0100\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: iso-8859-1\n"
 "Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
+"Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 
 #: marklist.cpp:38
 msgid "Mark current page"
@@ -88,7 +88,7 @@ msgstr "&Kantenglättung"
 
 #: interpreter.cpp:97
 msgid "Platform &fonts"
-msgstr "Zeichensätze"
+msgstr "&Schriftarten"
 
 #: interpreter.cpp:107
 msgid "&Messages"
@@ -140,7 +140,7 @@ msgstr "&Schließen"
 
 #: info.cpp:45
 msgid "File name :"
-msgstr "Dateiname :"
+msgstr "Dateiname:"
 
 #: info.cpp:53
 msgid "Document title :"
@@ -148,7 +148,7 @@ msgstr "Dokument-Titel:"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr "Veröffentlichungsdatum:"
+msgstr "Publikationsdatum:"
 
 #: print.cpp:35
 msgid "Printer setup"
@@ -216,11 +216,11 @@ msgid ""
 "Check the status bar for this information.\n"
 msgstr ""
 "Der eingegebene Druckbereich\n"
-"wurde nicht verstanden.\n"
+"ist unverständlich.\n"
 "\n"
 "Der angegebene Bereich muß im Seitenbereich\n"
 "für diesen Teil des Dokuments liegen.\n"
-"Überprüfen Sie die Statusleiste nach dieser Information.\n"
+"Überprüfen Sie die Statusleiste aufgrund dieser Information.\n"
 
 #: goto.cpp:54
 msgid "&Section"
@@ -246,11 +246,11 @@ msgstr "Querformat"
 
 #: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
 msgid "Seascape"
-msgstr "umgekehrt Quer"
+msgstr "Umgekehrt Quer"
 
 #: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
 msgid "Upside down"
-msgstr "umgekehrt Hoch"
+msgstr "Umgekehrt Hoch"
 
 #: viewcontrol.cpp:75
 msgid "magnification"
@@ -326,11 +326,11 @@ msgstr "Vorherige Seite"
 
 #: kghostview.cpp:366
 msgid "Scroll Up"
-msgstr "Hochblättern"
+msgstr "Nach oben blättern"
 
 #: kghostview.cpp:367
 msgid "Scroll Down"
-msgstr "Runterblättern"
+msgstr "Nach unten blättern"
 
 #: kghostview.cpp:368
 msgid "Scroll Left"
@@ -342,7 +342,7 @@ msgstr "Nach rechts verschieben"
 
 #: kghostview.cpp:370 kghostview.cpp:450
 msgid "Redisplay"
-msgstr "Aktualisieren"
+msgstr "Neu zeichnen"
 
 #: kghostview.cpp:413 kghostview.cpp:415
 msgid "Not known"
@@ -354,11 +354,11 @@ msgstr "Interpreter einstellen"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Neu"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Neu"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -538,7 +538,7 @@ msgstr "Vorwärts"
 
 #: kghostview.cpp:695
 msgid "Go to page ..."
-msgstr "Gehe zu Seite..."
+msgstr "Gehe zu Seite ..."
 
 #: kghostview.cpp:700
 msgid "Go to start"
@@ -626,29 +626,31 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
-"Sie möchten alle Seiten in eine Datei drucken.\n"
-"Das würde ein zum gegenwärtig geladenen\n"
-"Dokument identisches Dokument erzeugen.\n"
-"Es gibt keinen Grund alle Seiten in eine neue Datei zu drucken."
+"Sie versuchen alle Seiten in eine Datei drucken.\n"
+"Das würde ein Dokument erzeugen, das identisch wäre\n"
+"mit dem, das Sie gerade geladen haben.\n"
+"Es ist nicht nötig, alle Seiten in eine neue Datei zu drucken."
 
 #: kghostview.cpp:1592
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
-"Es wurde kein Dateiname angegeben,\n"
-"also konnte nichts in eine Datei gedruckt werden.\n"
+"Es wurde kein Dateiname angegeben, daher\n"
+"konnte nichts in eine Datei gedruckt werden.\n"
 
 #: kghostview.cpp:1633
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Setze Umgebungsvariable (z.B. auf PRINTER oder LPDEST) für den Druckernamen, "
+"der berücksichtigt werden soll."
 
 #: kghostview.cpp:1654
 #, c-format
 msgid "Print failure : %s"
-msgstr "Druckfehler : %s"
+msgstr "Druck fehlgeschlagen: %s"
 
 #: kghostview.cpp:1690
 msgid ""
@@ -695,120 +697,3 @@ msgstr "Sk.%d "
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Vergrößerung"
-
-#~ msgid "&Defaults"
-#~ msgstr "&Voreinstellungen"
-
-#~ msgid "CTRL+O"
-#~ msgstr "Strg+0"
-
-#~ msgid "CTRL+N"
-#~ msgstr "Strg+N"
-
-#~ msgid "CTRL+W"
-#~ msgstr "Strg+W"
-
-#~ msgid "CTRL+S"
-#~ msgstr "Strg+S"
-
-#~ msgid "CTRL+P"
-#~ msgstr "Strg+P"
-
-#~ msgid "CTRL+Q"
-#~ msgstr "Strg+Q"
-
-#~ msgid "CTRL+X"
-#~ msgstr "Strg+X"
-
-#~ msgid "CTRL+C"
-#~ msgstr "Strg+C"
-
-#~ msgid "CTRL+V"
-#~ msgstr "Strg+V"
-
-#~ msgid "CTRL+Z"
-#~ msgstr "Strg+Z"
-
-#~ msgid "CTRL+F"
-#~ msgstr "Strg+F"
-
-#~ msgid "CTRL+R"
-#~ msgstr "Strg+R"
-
-#~ msgid "Insert"
-#~ msgstr "Einfügen"
-
-#~ msgid "CTRL+Insert"
-#~ msgstr "Strg+Einfügen"
-
-#~ msgid "CTRL+Home"
-#~ msgstr "Strg+Pos1"
-
-#~ msgid "End"
-#~ msgstr "Ende"
-
-#~ msgid "CTRL+End"
-#~ msgstr "Strg+Ende"
-
-#~ msgid "Prior"
-#~ msgstr "Bild hoch"
-
-#~ msgid "Next"
-#~ msgstr "Bild runter"
-
-#~ msgid "F1"
-#~ msgstr "F1"
-
-#~ msgid "Zoom"
-#~ msgstr "Vergrößern"
-
-#~ msgid "Current key"
-#~ msgstr "Derzeitige Taste"
-
-#~ msgid "&Action"
-#~ msgstr "&Aktion"
-
-#~ msgid "&No key"
-#~ msgstr "&Keine Taste"
-
-#~ msgid "&Default key"
-#~ msgstr "&Standardtaste"
-
-#~ msgid "&Custom key"
-#~ msgstr "&Eigene Taste"
-
-#~ msgid "Print"
-#~ msgstr "Drucken"
-
-#~ msgid "&Reload"
-#~ msgstr "&Neu laden"
-
-#~ msgid "Home"
-#~ msgstr "Pos1"
-
-#~ msgid "&View control ..."
-#~ msgstr "An&zeige ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Passend auf Seitenbreite"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Aktualisieren"
-
-#~ msgid "Change view ..."
-#~ msgstr "Ansicht ändern..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Kantenglättung an"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Kantenglättung aus"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Zeige Ghostview-Meldungen"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Unterdrücke Ghostview-Meldungen"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Erzwinge Änderungen an... "

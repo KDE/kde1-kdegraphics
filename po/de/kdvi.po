@@ -2,8 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-01-05 20:15+0100\n"
-"Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
+"PO-Revision-Date: 1998-11-13 20:15+0100\n"
+"Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
+"Last-Translator:Thomas Diehl <th_diehl@csi.com>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:516
@@ -79,9 +80,8 @@ msgid "Preferences ..."
 msgstr "Einstellungen..."
 
 #: kdvi.cpp:175
-#, fuzzy
 msgid "&New"
-msgstr "&N‰chste"
+msgstr "&Neu"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -339,7 +339,7 @@ msgstr "Scrolleisten an/aus"
 
 #: kdvi.cpp:468
 msgid "File open dialog is open"
-msgstr "Datei ÷ffnen-Dialog offen"
+msgstr "Datei-÷ffnen-Dialog offen"
 
 #: kdvi.cpp:517
 msgid "Can't read file:\n"
@@ -363,7 +363,7 @@ msgstr "Ansichtsgrˆﬂe paﬂt auf Seite"
 
 #: kdvi.cpp:582
 msgid "View width fits page"
-msgstr "Ansichtsgrˆﬂe paﬂt auf Breite"
+msgstr "Ansichtsbreite paﬂt auf Seite"
 
 #: kdvi.cpp:674
 msgid "Preferences applied"
@@ -676,31 +676,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Druckmethode"
-
-#~ msgid "Appearance"
-#~ msgstr "Aussehen"
-
-#~ msgid "Fonts"
-#~ msgstr "Schriften"
-
-#~ msgid "Print"
-#~ msgstr "Drucken"
-
-#~ msgid "&Remove"
-#~ msgstr "&Entfernen"
-
-#~ msgid "&Contents"
-#~ msgstr "&Inhalt"
-
-#~ msgid "About &Qt"
-#~ msgstr "‹ber &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "‹ber kdvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - Tex DVI Betrachter\n"
-#~ "Version "
