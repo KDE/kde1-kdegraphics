@@ -1,45 +1,43 @@
-# KTranslator Generated File
-# SOME DESCRIPTIVE TITLE.
+# Breton translation of KDE
 # Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Romuald Texier <texierr@worldnet.fr>, 1998
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit-1.1\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: Thu Feb 11 1999 19:00:43+0200\n"
+"PO-Revision-Date: 1999-03-31 06:58+0200\n"
 "Last-Translator: Romuald Texier <texierr@worldnet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso8859-1\n"
 "Content-Transfer-Encoding: 8 bit\n"
-"X-Generator: KTranslator v 0.4.0\n"
 
 #: utils.cpp:65
 #, c-format
 msgid "copyFile - There was an error opening destination file: %s"
-msgstr "copyFile - ur fazi zo bet en ur zigeriñ ar restr dehaezadur : %s"
+msgstr "copyFile - Ur fazi zo bet en ur zigeriñ ar restr dehaezadur : %s"
 
 #: utils.cpp:72
 #, c-format
 msgid "copyFile - There was an error reading source file: %s"
-msgstr "copyFile - ur fazi zo bet en ur lenn ar rest orin : %s"
+msgstr "copyFile - Ur fazi zo bet en ul lenn ar rest orin : %s"
 
 #: utils.cpp:80
 #, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
-msgstr "copyFile - ur fazi zo bet en ur skrivañ er restr dehaezadur : %s"
+msgstr "copyFile - Ur fazi zo bet en ur skrivañ er restr dehaezadur : %s"
 
 #: utils.cpp:93
 #, c-format
 msgid "copyFile - There was an error opening source file: %s"
-msgstr "copyFile - ur fazi zo bet en ur zigeriñ ar rest orin : %s"
+msgstr "copyFile - Ur fazi zo bet en ur zigeriñ ar rest orin : %s"
 
 #: utils.cpp:105
 #, c-format
 msgid "removeFile - There was an error removing the file: %s"
-msgstr "removeFile - ur fazi zo bet en ur zilemel ar restr : %s"
+msgstr "removeFile - Ur fazi zo bet en ur zilemel ar restr : %s"
 
 #: kiconedit.cpp:239 kiconeditslots.cpp:62 kiconeditslots.cpp:121
 msgid ""
@@ -79,11 +77,11 @@ msgstr "Pegañ evel &nevez"
 
 #: kiconedit.cpp:443
 msgid "Clea&r"
-msgstr "Ska&rzhañ"
+msgstr "Ka&rzhañ"
 
 #: kiconedit.cpp:447
 msgid "Select &all"
-msgstr "Dilenn pep tr&a"
+msgstr "Diuz pep tr&a"
 
 #: kiconedit.cpp:454
 msgid "1:1"
@@ -443,9 +441,9 @@ msgid ""
 msgstr ""
 "Troc'hañ\n"
 "\n"
-"a droc'h an diuzadur graet a-ziwar an arlun\n"
+"Troc'hañ an diuzadur-red a-ziwar an arlun\n"
 "\n"
-"(Tun : tu zo deoc'h dilenn tachennoù kelc'hiek pe hirgarezennek)"
+"(Tun : tu zo deoc'h diuz tachennoù kelc'hiek pe hirgarezennek)"
 
 #: kiconedit.cpp:833
 msgid ""
@@ -457,9 +455,9 @@ msgid ""
 msgstr ""
 "Eilañ\n"
 "\n"
-"a eil an dilennadur graet diouzh an arlun\n"
+"Eilañ an diuzadur-red diwar an arlun\n"
 "\n"
-"(Tun : tu zo deoc'h dilenn tachennoù kelc'hiek pe hirgarezennek)"
+"(Tun : tu zo deoc'h diuz tachennoù kelc'hiek pe hirgarezennek)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -475,13 +473,13 @@ msgid ""
 msgstr ""
 "Pegañ\n"
 "\n"
-"a beg endalc'had ar golver e-barzh an arlun.\n"
+"Pegañ endalc'had ar golver e-barzh an arlun.\n"
 "\n"
 "Ma vez brasoc'h an endalc'had-se eget an arlun, e c'hellit pegañ e-barzh\n"
 "ur prenestr nevez.\n"
 "\n"
-"(Tun : Diuzit \"Pegañ pikseloù treuzwelus\" er prenestr-kefluniañ ma "
-"felldeoc'h pegañ treuzwelus ivez)"
+"(Tun : Diuzit \"Pegañ pikseloù treuzwelus\" er prenestr-kefluniañ ma fell"
+"deoc'h pegañ treuzwelus ivez)"
 
 #: kiconedit.cpp:844
 msgid ""
@@ -491,11 +489,11 @@ msgid ""
 "\n"
 "(Tip: You can make both rectangular and circular selections)"
 msgstr ""
-"Dilenn\n"
+"Diuz\n"
 "\n"
-"a ziuz ul lodenn eus an arlun gant al logodenn.\n"
+"Diuz ul lodenn eus an arlun gant al logodenn.\n"
 "\n"
-"(Tun : tu zo deoc'h dilenn tachennoù kelc'hiek pe hirgarezennek)"
+"(Tun : tu zo deoc'h diuz tachennoù kelc'hiek pe hirgarezennek)"
 
 #: kiconedit.cpp:848
 msgid ""
@@ -531,8 +529,7 @@ msgstr ""
 "\n"
 "Pellaat eus ur c'hammad.\n"
 "\n"
-"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul "
-"raktermenet.)"
+"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul raktermenet.)"
 
 #: kiconedit.cpp:859
 msgid ""
@@ -546,8 +543,7 @@ msgstr ""
 "\n"
 "Tostaat eus ur c'hammad.\n"
 "\n"
-"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul "
-"raktermenet.)"
+"(Tun : gwaskit an nozelenn e-pad ur mare evit zoomiñ betek ur skeul raktermenet.)"
 
 #: kiconedit.cpp:863
 msgid ""
@@ -591,8 +587,7 @@ msgid ""
 msgstr ""
 "Stlejañ an tarzh\n"
 "\n"
-"Diwar an nozelenn-mañ e c'hellit stlejañ un eilenn eus an arlun ha laoskel "
-"anezhi war\n"
+"Diwar an nozelenn-mañ e c'hellit stlejañ un eilenn eus an arlun ha laoskel anezhi war\n"
 "ur prenestr gouest d'he resevel, d.k. un aozer arlunioù all.\n"
 "\n"
 "(Evezhiadenn : amañ e reer gant komenad XDND eus QT, n'eo reolataet\n"
@@ -635,8 +630,8 @@ msgid ""
 "Draw a filled rectangle"
 msgstr ""
 "Hirgarezenn leun\n"
-"\n"
-" a dres un hirgarezenn leun"
+"\n "
+"a dres un hirgarezenn leun"
 
 #: kiconedit.cpp:892
 msgid ""
@@ -975,7 +970,7 @@ msgstr "Patromoù :"
 
 #: knew.cpp:252
 msgid "Select icontype"
-msgstr "Dilennit ar seurt arlun"
+msgstr "Diuzit ar seurt arlun"
 
 #: knew.cpp:263
 msgid "Create new icon"
