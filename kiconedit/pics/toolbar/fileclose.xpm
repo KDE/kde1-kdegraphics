@@ -3,7 +3,7 @@ static char*fileclose[]={
 "22 22 6 1",
 ". c None",
 "d c #808080",
-"c c #c3c3c3",
+"c c #c0c0c0",
 "# c #000000",
 "a c #dcdcdc",
 "b c #ffffff",
