@@ -9,8 +9,8 @@ CXX = @CXX@
 MOC= @MOC@
 
 
-INCLUDE= @all_includes@ -I.. -I../kfm/libkfm
-LDFLAGS= @all_libraries@ -lkfm -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ -L../kfm/libkfm
+INCLUDE= @all_includes@ -I.. 
+LDFLAGS= @all_libraries@ -lkfm -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
 CXXFLAGS += -DHAVE_CONFIG_H
 
 # Define if you have libpng.
