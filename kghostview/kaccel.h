@@ -40,7 +40,7 @@ uint stringToKey( const char * sKey );
  * Returns a string corresponding to the key code keyCode, which is empty if
  * keyCode is not recognized or zero.
  */
-const QString keyToString( uint keyCode );
+const QString keyToString( uint keyCode, bool no_i18_n = false );
 
 struct KKeyEntry {
 	uint aCurrentKeyCode, aDefaultKeyCode, aConfigKeyCode;
@@ -49,6 +49,7 @@ struct KKeyEntry {
 	int aAccelId;
 	const QObject *receiver;
 	QString *member;
+	QString *descr;	
 };
 
 /** 
@@ -83,15 +84,17 @@ struct KKeyEntry {
  *
  * It is possible for a user to choose to have no key associated with an action.
  *
+ * The translated first argument for insertItem is only used in the
+ * configuration dialog. 
+ *
  * KAccel *a = new KAccel( myWindow );
- * a->insertItem( i18n("Scroll up"), "Up" );
- * a->connectItem( i18n("Scroll up"), myWindow, SLOT( srollUp() ) );
+ * a->insertItem( i18n("Scroll up"), "Scroll Up", "Up" );
+ * a->connectItem( "Scroll up", myWindow, SLOT( scrollUp() ) );
  * a->insertStdItem( KAccel::Print );
  * a->connectItem( a->stdAction( KAccel::Print ), myWindow, SLOT( printDoc() ) );
  * 
  * a->readSettings();
- *
- */
+ * */
 class KAccel 
 { 
  public:
@@ -177,7 +180,7 @@ class KAccel
 	 * removed..
 	 * 	 
 	 */
-	bool insertItem( const char * action, uint defaultKeyCode,
+	bool insertItem( const char* descr, const char * action, uint defaultKeyCode,
 				 bool configurable = TRUE );
 	
 	 /** 
@@ -199,7 +202,7 @@ class KAccel
 	 * removed..
 	 * 	 
 	 */
-	bool insertItem( const char * action, const char * defaultKeyCode,
+	bool insertItem( const char* descr, const char * action, const char * defaultKeyCode,
 				 bool configurable = TRUE );
 				 
 	/** 

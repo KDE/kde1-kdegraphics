@@ -123,7 +123,7 @@ const char * KAccel::findKey( int key ) const
 	return 0;	
 }
 
-bool KAccel::insertItem( const char * action, uint keyCode,
+bool KAccel::insertItem( const char* descr, const char * action, uint keyCode,
 					   bool configurable )
 {
 	KKeyEntry *pEntry = aKeyDict[ action ];
@@ -141,11 +141,12 @@ bool KAccel::insertItem( const char * action, uint keyCode,
 	pEntry->aAccelId = 0;
 	pEntry->receiver = 0;
 	pEntry->member = 0;
+	pEntry->descr = new QString(descr);
 	
 	return TRUE;
 }
 
-bool KAccel::insertItem( const char * action, 
+bool KAccel::insertItem( const char* descr, const char * action, 
 					   const char * keyCode, bool configurable )
 {
 	uint iKeyCode = stringToKey( keyCode );
@@ -157,7 +158,7 @@ bool KAccel::insertItem( const char * action,
 		return FALSE;
 	}
 	
-	return insertItem( action, iKeyCode, configurable );
+	return insertItem( descr, action, iKeyCode, configurable );
 }
 
 const char * KAccel::insertStdItem( StdAccel id )
@@ -240,7 +241,7 @@ const char * KAccel::insertStdItem( StdAccel id )
 			return 0;
 			break;
 	}
-	insertItem( action.data(), key.data(), false );
+	insertItem( action.data(), action.data(), key.data(), false );
 	return action.data();
 }
 
@@ -495,11 +496,11 @@ void KAccel::writeSettings()
 		if ( aKeyIt.current()->bConfigurable ) {
 			if ( bGlobal )
 				pConfig->writeEntry( aKeyIt.currentKey(),
-					keyToString( aKeyIt.current()->aCurrentKeyCode ),
+					keyToString( aKeyIt.current()->aCurrentKeyCode , true),
 					true, true );
 			 else
 				pConfig->writeEntry( aKeyIt.currentKey(),
-					keyToString( aKeyIt.current()->aCurrentKeyCode ) );
+					keyToString( aKeyIt.current()->aCurrentKeyCode ) , true);
 		}
 		++aKeyIt;
 	}
@@ -508,7 +509,7 @@ void KAccel::writeSettings()
 
 /*****************************************************************************/
 
-const QString keyToString( uint keyCode )
+const QString keyToString( uint keyCode, bool no_i18_n )
 {
 	QString res;
 	
@@ -516,13 +517,24 @@ const QString keyToString( uint keyCode )
 		res.sprintf( "" );
 		return res;
 	}
-	
-	if ( keyCode & SHIFT )
-		res = "SHIFT+";
-	if ( keyCode & CTRL )
-		res += "CTRL+";
-	if ( keyCode & ALT )
-		res += "ALT+";
+	if (no_i18_n){
+	  if ( keyCode & SHIFT )
+	    res = ("SHIFT"); 
+	  if ( keyCode & CTRL )
+	    res +=("CTRL"); 
+	  if ( keyCode & ALT )
+	    res +=("ALT");
+	}
+	else {
+	  if ( keyCode & SHIFT )
+	    res = i18n("SHIFT"); 
+	  if ( keyCode & CTRL )
+	    res += i18n("CTRL"); 
+	  if ( keyCode & ALT )
+	    res += i18n("ALT");
+	}
+	if (!res.isEmpty())
+	  res += "+";
 	
 	uint kCode = keyCode & ~(SHIFT | CTRL | ALT);
 
@@ -543,6 +555,7 @@ uint stringToKey(const char * key )
 	int j, nb_toks = 0;
 	char sKey[200];
 	
+	//printf("string to key %s\n", key);
 	if ( key == 0 ) { debug("stringToKey::Null key");return 0; }
 	if( strcmp( key, "" ) == -1 ) { debug("stringToKey::Empty key");return 0; }
 	
@@ -563,11 +576,23 @@ uint stringToKey(const char * key )
 	bool  keyFound = FALSE;
 	for (int i=0; i<nb_toks; i++) {
 		if ( strcmp(toks[i], "SHIFT")==0 )
-			keyCode |= SHIFT;
+		  keyCode |= SHIFT;
 		else if ( strcmp(toks[i], "CTRL")==0 )
-		    keyCode |= CTRL;
-	    else if ( strcmp(toks[i], "ALT")==0 )
-		    keyCode |= ALT;
+		  keyCode |= CTRL;
+		else if ( strcmp(toks[i], "ALT")==0 )
+		  keyCode |= ALT;
+		else if ( strcmp(toks[i], "Umschalt")==0 )
+		  keyCode |= SHIFT;
+		else if ( strcmp(toks[i], "Strg")==0 )
+		  keyCode |= CTRL;
+		else if ( strcmp(toks[i], "Alt")==0 )
+		  keyCode |= ALT;
+		else if ( strcmp(toks[i], i18n("SHIFT"))==0 )
+		  keyCode |= SHIFT;
+		else if ( strcmp(toks[i], i18n("CTRL"))==0 )
+		  keyCode |= CTRL;
+		else if ( strcmp(toks[i], i18n("ALT"))==0 )
+		  keyCode |= ALT;
 	    else {
 			/* key already found ? */
 			if ( keyFound ) return 0;

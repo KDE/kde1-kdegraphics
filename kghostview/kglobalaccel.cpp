@@ -195,7 +195,7 @@ bool KGlobalAccel::grabKey( uint keysym, uint mod ) {
 	return true;
 }
 
-bool KGlobalAccel::insertItem( const char * action, uint keyCode,
+bool KGlobalAccel::insertItem(  const char* descr, const char * action, uint keyCode,
 					   bool configurable )
 {
 	KKeyEntry *pEntry = aKeyDict[ action ];
@@ -213,11 +213,12 @@ bool KGlobalAccel::insertItem( const char * action, uint keyCode,
 	pEntry->aAccelId = 0;
 	pEntry->receiver = 0;
 	pEntry->member = 0;
+	pEntry->descr = new QString(descr);
 
 	return TRUE;
 }
 
-bool KGlobalAccel::insertItem( const char * action, 
+bool KGlobalAccel::insertItem( const char* descr, const char * action, 
 					   const char * keyCode, bool configurable )
 {
 	uint iKeyCode = stringToKey( keyCode );
@@ -229,7 +230,7 @@ bool KGlobalAccel::insertItem( const char * action,
 		return FALSE;
 	}
 	
-	return insertItem(action, iKeyCode, configurable);
+	return insertItem(descr, action, iKeyCode, configurable);
 }
 
 bool KGlobalAccel::isEnabled()
@@ -480,11 +481,11 @@ void KGlobalAccel::writeSettings()
 		if ( aKeyIt.current()->bConfigurable )
 			if ( bGlobal )
 				pConfig->writeEntry( aKeyIt.currentKey(),
-					keyToString( aKeyIt.current()->aCurrentKeyCode ),
+					keyToString( aKeyIt.current()->aCurrentKeyCode, true ),
 					true, true );
 			 else
 				pConfig->writeEntry( aKeyIt.currentKey(),
-					keyToString( aKeyIt.current()->aCurrentKeyCode ) );
+					keyToString( aKeyIt.current()->aCurrentKeyCode, true ) );
 		++aKeyIt;
 	}
 }
@@ -568,7 +569,7 @@ uint keyToXSym( uint keyCode )
 	char sKey[200];
 
 	uint keysym = 0;
-	QString s = keyToString( keyCode );
+	QString s = keyToString( keyCode, true );
 	s= s.lower();
 	
 	strncpy(sKey, (const char *)s.data(), 200);

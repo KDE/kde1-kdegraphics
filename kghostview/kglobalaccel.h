@@ -62,6 +62,10 @@ uint keyToXSym( uint keyCode );
  *
  * It is possible for a user to choose to have no key associated with an action.
  *
+ *
+ * The translated first argument for insertItem is only used in the
+ * configuration dialog. 
+ *
  * MyApp::x11EventFilter( XEvent *ev ) {
  * if ( myObject->ga->x11EventFilter( ev ) ) 
  *		return true;
@@ -70,8 +74,8 @@ uint keyToXSym( uint keyCode );
  * ...
  *
  * ga = new KGlobalAccel();
- * ga->insertItem( i18n("Monitor settings"), "CTRL+SHIFT+M" );
- * ga->connectItem( i18n("Monitor settings"), myObject, SLOT( popupMenu() ) );
+ * ga->insertItem( i18n("Monitor settings"), "Monitor settings", "CTRL+SHIFT+M" );
+ * ga->connectItem( "Monitor settings", myObject, SLOT( popupMenu() ) );
  *
  * ga->readSettings();
  *
@@ -170,7 +174,7 @@ class KGlobalAccel : public QObject
 	 * removed..
 	 * 	 
 	 */
-	bool insertItem( const char * action, uint defaultKeyCode,
+	bool insertItem( const char* descr, const char * action, uint defaultKeyCode,
 				 bool configurable = TRUE );
 	
 	 /** 
@@ -192,7 +196,7 @@ class KGlobalAccel : public QObject
 	 * removed..
 	 * 	 
 	 */
-	bool insertItem( const char * action, const char * defaultKeyCode,
+	bool insertItem( const char* descr, const char * action, const char * defaultKeyCode,
 				 bool configurable = TRUE );
 	
 	bool isEnabled();

@@ -333,7 +333,7 @@ KKeyChooser::KKeyChooser( QDict<KKeyEntry> *aKeyDict, QWidget *parent )
 		aIt->current()->aConfigKeyCode = aIt->current()->aCurrentKeyCode;
 		
 		KSplitListItem *sli = new KSplitListItem(
-		 	item( aIt->current()->aConfigKeyCode, aIt->currentKey() )
+		 	item( aIt->current()->aConfigKeyCode, aIt->current()->descr->data() )
 		);
 		
 		connect( wList, SIGNAL( newWidth( int ) ),
@@ -658,7 +658,7 @@ void KKeyChooser::noKey()
 	/* update the list and the change area */
 	
 	KSplitListItem *sli = new KSplitListItem(
-		 item(pEntry->aConfigKeyCode, sEntryKey)
+		 item(pEntry->aConfigKeyCode, pEntry->descr->data())
 	);
 		
 	//connect( wList, SIGNAL( newWidth( int ) ),
@@ -680,7 +680,7 @@ void KKeyChooser::defaultKey()
 	/* update the list and the change area */
 	
 	KSplitListItem *sli = new KSplitListItem(
-		 item(pEntry->aConfigKeyCode, sEntryKey)
+		 item(pEntry->aConfigKeyCode, pEntry->descr->data())
 	);
 		
 	//connect( wList, SIGNAL( newWidth( int ) ),
@@ -709,7 +709,8 @@ void KKeyChooser::allDefault()
 			aIt->current()->aConfigKeyCode = aIt->current()->aDefaultKeyCode;
 		
 		KSplitListItem *sli = new KSplitListItem(
-		 	item(aIt->current()->aConfigKeyCode, aIt->currentKey())
+		 	item(aIt->current()->aConfigKeyCode, 
+			     aIt->current()->descr->data())
 		);
 
 		connect( wList, SIGNAL( newWidth( int ) ),
@@ -753,7 +754,7 @@ void KKeyChooser::shiftClicked()
 			pEntry->aConfigKeyCode &= ~SHIFT;
 			
 		KSplitListItem *sli = new KSplitListItem(
-		 	item(pEntry->aConfigKeyCode, sEntryKey)
+		 	item(pEntry->aConfigKeyCode, pEntry->descr->data())
 		);
 		
 		connect( wList, SIGNAL( newWidth( int ) ),
@@ -779,7 +780,7 @@ void KKeyChooser::ctrlClicked()
 			pEntry->aConfigKeyCode &= ~CTRL;
 			
 		KSplitListItem *sli = new KSplitListItem(
-		 	item(pEntry->aConfigKeyCode, sEntryKey)
+		 	item(pEntry->aConfigKeyCode, pEntry->descr->data())
 		);
 		
 		connect( wList, SIGNAL( newWidth( int ) ),
@@ -805,7 +806,7 @@ void KKeyChooser::altClicked()
 			pEntry->aConfigKeyCode &= ~ALT;
 			
 		KSplitListItem *sli = new KSplitListItem(
-		 	item(pEntry->aConfigKeyCode, sEntryKey)
+		 	item(pEntry->aConfigKeyCode, pEntry->descr->data())
 		);
 		
 		connect( wList, SIGNAL( newWidth( int ) ),
@@ -877,7 +878,7 @@ void KKeyChooser::setKey( uint kCode)
 	}
 	
 	KSplitListItem *sli = new KSplitListItem(
-	 	item(pEntry->aConfigKeyCode, sEntryKey)
+	 	item(pEntry->aConfigKeyCode, pEntry->descr->data())
 	);
 		
 	connect( wList, SIGNAL( newWidth( int ) ),

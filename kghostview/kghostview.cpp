@@ -349,18 +349,18 @@ void KGhostview::bindKeys()
 	//keys->insertItem(i18n("Close"), "CTRL+W");
 	//keys->insertItem(i18n("Print"), "CTRL+P");
 	//keys->insertItem(i18n("Help"), "F1");
-	keys->insertItem(i18n("View Control"), "CTRL+L");
-	keys->insertItem(i18n("Go To Page"), "CTRL+G");
-	keys->insertItem(i18n("Zoom In"), "Plus");     
-	keys->insertItem(i18n("Zoom Out"), "Minus"); 
-	keys->insertItem(i18n("Next Page"), "Next");
-	keys->insertItem(i18n("Prev Page"), "Prior");
-	keys->insertItem(i18n("Scroll Up"), "Up");
-	keys->insertItem(i18n("Scroll Down"), "Down");
-	keys->insertItem(i18n("Scroll Left"), "Left");
-	keys->insertItem(i18n("Scroll Right"), "Right");
-	keys->insertItem(i18n("Redisplay"), "CTRL+R");
-	keys->insertItem(i18n("Information"), "CTRL+I");
+	keys->insertItem(i18n("View Control"), "View Control", "CTRL+L");
+	keys->insertItem(i18n("Go To Page"), "Go To Page", "CTRL+G");
+	keys->insertItem(i18n("Zoom In"), "Zoom In","Plus");     
+	keys->insertItem(i18n("Zoom Out"), "Zoom Out","Minus"); 
+	keys->insertItem(i18n("Next Page"),"Next Page" ,"Next");
+	keys->insertItem(i18n("Prev Page"),"Prev Page" ,"Prior");
+	keys->insertItem(i18n("Scroll Up"),"Scroll Up" ,"Up");
+	keys->insertItem(i18n("Scroll Down"),"Scroll Down" ,"Down");
+	keys->insertItem(i18n("Scroll Left"),"Scroll Left" ,"Left");
+	keys->insertItem(i18n("Scroll Right"), "Scroll Right","Right");
+	keys->insertItem(i18n("Redisplay"), "Redisplay","CTRL+R");
+	keys->insertItem(i18n("Information"), "Information","CTRL+I");
 	
 	//keys->readSettings();
 	
@@ -370,18 +370,18 @@ void KGhostview::bindKeys()
 	keys->connectItem( keys->stdAction( KAccel::Close ), this, SLOT( closeWindow() ) );
 	keys->connectItem( keys->stdAction( KAccel::Print ), this, SLOT( print() ) );
 	keys->connectItem( keys->stdAction( KAccel::Help ), this, SLOT( help() ) );
-	keys->connectItem( i18n("View Control"), this, SLOT( viewControl() ) );
-	keys->connectItem( i18n("Go To Page"), this, SLOT( goToPage() ) );
-	keys->connectItem( i18n("Zoom In"), this, SLOT( zoomIn() ) );
-	keys->connectItem( i18n("Zoom Out"), this, SLOT( zoomOut() ) );
-	keys->connectItem( i18n("Next Page"), this, SLOT( nextPage() ) );
-	keys->connectItem( i18n("Prev Page"), this, SLOT( prevPage() ) );
-	keys->connectItem( i18n("Scroll Up"), this, SLOT( scrollUp() ) );
-	keys->connectItem( i18n("Scroll Down"), this, SLOT( scrollDown() ) );
-	keys->connectItem( i18n("Scroll Left"), this, SLOT( scrollLeft() ) );
-	keys->connectItem( i18n("Scroll Right"), this, SLOT( scrollRight() ) );
-	keys->connectItem( i18n("Redisplay"), this, SLOT( redisplay() ) );
-	keys->connectItem( i18n("Information"), this, SLOT( info() ) );
+	keys->connectItem( "View Control", this, SLOT( viewControl() ) );
+	keys->connectItem( "Go To Page", this, SLOT( goToPage() ) );
+	keys->connectItem( "Zoom In", this, SLOT( zoomIn() ) );
+	keys->connectItem( "Zoom Out", this, SLOT( zoomOut() ) );
+	keys->connectItem( "Next Page", this, SLOT( nextPage() ) );
+	keys->connectItem( "Prev Page", this, SLOT( prevPage() ) );
+	keys->connectItem( "Scroll Up", this, SLOT( scrollUp() ) );
+	keys->connectItem( "Scroll Down", this, SLOT( scrollDown() ) );
+	keys->connectItem( "Scroll Left", this, SLOT( scrollLeft() ) );
+	keys->connectItem( "Scroll Right", this, SLOT( scrollRight() ) );
+	keys->connectItem( "Redisplay", this, SLOT( redisplay() ) );
+	keys->connectItem( "Information", this, SLOT( info() ) );
 	
 	keys->readSettings();
 }
