@@ -31,14 +31,12 @@ msgid "Canvas Size"
 msgstr "Tamanho da Tela"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Largura"
+msgstr "Largura:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Altura"
+msgstr "Altura:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -96,6 +94,7 @@ msgstr "Alterações Não Gravadas"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Tem modificações não gravadas, vai perde-las se fechar esta janela agora."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -126,9 +125,8 @@ msgid "New Image..."
 msgstr "Nova Imagem..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Gravar Imagem..."
+msgstr "Gravar Imagem"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
@@ -184,11 +182,11 @@ msgstr "Informação..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Mudar tamanho..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
-msgstr "Editar Paleta"
+msgstr "Editar Paleta..."
 
 #: kpaint.cpp:340
 msgid "Change Colour Depth..."
@@ -220,7 +218,7 @@ msgstr "Seleccionar Área"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Angulo Redondo"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -240,7 +238,7 @@ msgstr "Opções de Gravação"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "Pintor"
 
 #: kpaint.cpp:371
 msgid ""
@@ -248,6 +246,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -400,46 +401,5 @@ msgid "Set Line Colour..."
 msgstr "Cor da Linha..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Rectangulo"
-
-#~ msgid "Dismiss"
-#~ msgstr "Mandar Embora"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: URL Inválido"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Erro: URL Inválido\n"
-#~ "KPaint não compreende o URL especificado, verifique se está correcto."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint já está a aceder a um ficheiro remoto, necessita\n"
-#~ "de cancelar o trabalho remoto actual ou esperar que termine."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Não foi possivel encontrar o KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr ""
-#~ "Erro: KPaint não conseguiu encontrar um KFM a ser executado ou iniciar um."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Carregamento pela Rede Falhado"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Erro: Carregamento pela Rede Falhado\n"
-#~ "Algo ocorreu mal :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Não consegui iniciar o KFM"
+msgstr "Redondangulo"

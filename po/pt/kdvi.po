@@ -458,7 +458,7 @@ msgstr "Marcar actuar"
 
 #: marklist.cpp:39
 msgid "Unmark current"
-msgstr "Demarcar actual"
+msgstr "Desmarcar"
 
 #: marklist.cpp:40
 msgid "Mark all"
@@ -586,7 +586,7 @@ msgstr "Selecção de páginas inválida!"
 
 #: print.cpp:320 printSetup.cpp:74
 msgid "Default Printer"
-msgstr "Impressora por Defeito"
+msgstr "Impressora por Omissão"
 
 #: printData.cpp:32
 msgid "&File Name:"
