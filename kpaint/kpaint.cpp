@@ -1,16 +1,10 @@
 // $Id$
 
-#define USE_KFILEDLG
-
 #include <kdebug.h>
 #include <string.h>
 #include <qwidget.h>
 
-#ifdef USE_KFILEDLG
 #include <kfiledialog.h>
-#else
-#include <qfiledlg.h>
-#endif
 
 #include <qmsgbox.h>
 #include <qlayout.h>
@@ -641,7 +635,7 @@ void KPaint::fileNew()
   QString proto;
   canvasSizeDialog sz(0, "canvassizedlg");
 
-  KDEBUG(KDEBUG_INFO, 3000, "File New\n");
+  kdebug(KDEBUG_INFO, 3000, "File New");
 
   if (sz.exec()) {
     w= sz.getWidth();
@@ -667,14 +661,10 @@ void KPaint::fileOpen()
 {
   QString name;
 
-  KDEBUG(KDEBUG_INFO, 3000, "fileOpen()\n");
+  kdebug(KDEBUG_INFO, 3000, "fileOpen()");
 
-#ifdef USE_KFILEDLG
   name=KFileDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
-  //  name=KFilePreviewDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
-#else
-  name=QFileDialog::getOpenFileName(0, "*", this);
-#endif
+  //name=KFilePreviewDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
   if (!name.isNull()) {
     loadRemote(name);
   }
@@ -698,19 +688,13 @@ void KPaint::fileSaveAs()
   QString newfilename;
   QString proto;
 
-  KDEBUG(KDEBUG_INFO, 3000, "fileSaveAsCommand");
+  kdebug(KDEBUG_INFO, 3000, "fileSaveAsCommand");
 
-#ifdef USE_KFILEDLG
   newfilename= KFileDialog::getSaveFileURL(0,
 					   formatMngr->glob(format),
 					   this);
-#else
-  newfilename= QFileDialog::getSaveFileName(0,
-  					    formatMngr->glob(format),
-  					    this);
-#endif
   if (!newfilename.isNull()) {
-    KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());  
+    kdebug(KDEBUG_INFO, 3000, ": %s", newfilename.data());
     if (!url.isEmpty()) {
       KURL u(url);
 
@@ -718,7 +702,7 @@ void KPaint::fileSaveAs()
 	proto= u.protocol();
 
 	if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'", filename.data());
+          kdebug(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'", filename.data());
 	  unlink(filename);
 	}
       }
@@ -738,10 +722,10 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'", filename.data())
 void KPaint::fileFormat()
 {
   formatDialog dlg(format);
-KDEBUG1(KDEBUG_INFO, 3000, "fileFormat() %s", (const char *) format);
+     kdebug(KDEBUG_INFO, 3000, "fileFormat() %s", (const char *) format);
     if (dlg.exec()) {
-KDEBUG1(KDEBUG_INFO, 3000, "Set format to %s", dlg.fileformat->text(dlg.fileformat->currentItem()));
-      
+      kdebug(KDEBUG_INFO, 3000, "Set format to %s", dlg.fileformat->text(dlg.fileformat->currentItem()));
+
       format= dlg.fileformat->text(dlg.fileformat->currentItem());
       int i = filename.findRev('.');
       if (i > 0)
@@ -756,7 +740,7 @@ void KPaint::fileExit()
 {
   QString proto;
 
-KDEBUG(KDEBUG_INFO, 3000, "fileExit()\n");
+  kdebug(KDEBUG_INFO, 3000, "fileExit()");
 
   if (exit()) {
     myapp->exit(0);
@@ -765,7 +749,7 @@ KDEBUG(KDEBUG_INFO, 3000, "fileExit()\n");
 
 void KPaint::newWindow()
 {
-KDEBUG(KDEBUG_INFO, 3000, "newWindow()\n");
+   kdebug(KDEBUG_INFO, 3000, "newWindow()");
    KPaint *kp;
    
    kp= new KPaint();
@@ -774,7 +758,7 @@ KDEBUG(KDEBUG_INFO, 3000, "newWindow()\n");
 
 void KPaint::closeWindow()
 {
-  KDEBUG(KDEBUG_INFO, 3000, "closeWindow()\n");
+  kdebug(KDEBUG_INFO, 3000, "closeWindow()");
   if (exit())
     close();
 }
@@ -783,45 +767,28 @@ void KPaint::fileOpenURL()
 {
   QString proto;
 
-  KDEBUG(KDEBUG_INFO, 3000, "fileOpenURL()\n");
+  kdebug(KDEBUG_INFO, 3000, "fileOpenURL()");
 
-#ifdef USE_KFILEDLG
   QString n= KFileDialog::getOpenFileURL(0,
 					 formatMngr->allImagesGlob(),
 					 this);
   if (!n.isNull()) {
-#else
-  // Get the URL to open
-  DlgLocation l( i18n("Open Location:"), url, this );
-
-  if ( l.exec() ) {
-    QString n = l.getText();
-#endif
     // If the request was sent ok
     if (loadRemote(n)) {
       // Lock this window
-KDEBUG(KDEBUG_INFO, 3000, "Lock the window!\n");
+      kdebug(KDEBUG_INFO, 3000, "Lock the window!");
     }
   }
 }
 
 void KPaint::fileSaveAsURL()
 {
-KDEBUG1(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s\n", (const char *) url);
+  kdebug(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s", (const char *) url);
 
-#ifdef USE_KFILEDLG
   QString n= KFileDialog::getSaveFileURL(0,
 					 formatMngr->glob(format),
 					 this);
   if (!n.isNull()) {
-#else
-  // Get the URL to save to
-  DlgLocation l( i18n("Save to Location:"), url, this );
-
-  if ( l.exec() ) {
-    QString n = l.getText();
-#endif
-
     saveRemote(n);
   }
 }
@@ -829,24 +796,24 @@ KDEBUG1(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s\n", (const char *) url);
 // Edit
 void KPaint::editCopy()
 {
-  KDEBUG(KDEBUG_INFO, 3000, "editCopy()\n");
+  kdebug(KDEBUG_INFO, 3000, "editCopy()");
   myapp->clipboard_= c->selectionData();
 }
 
 void KPaint::editCut()
 {
-  KDEBUG(KDEBUG_INFO, 3000, "editCut()\n");
+  kdebug(KDEBUG_INFO, 3000, "editCut()");
   myapp->clipboard_= c->selectionData();
 }
 
 void KPaint::editPaste()
 {
-KDEBUG(KDEBUG_INFO, 3000, "editPaste()\n");
+  kdebug(KDEBUG_INFO, 3000, "editPaste()");
 }
 
 void KPaint::editPasteImage()
 {
-  KDEBUG(KDEBUG_INFO, 3000, "editPasteImage()\n");
+  kdebug(KDEBUG_INFO, 3000, "editPasteImage()");
   KPaint *kp;
   QPixmap *p;
 
@@ -861,7 +828,7 @@ void KPaint::editPasteImage()
 
 void KPaint::editZoomIn()
 {
-KDEBUG(KDEBUG_INFO, 3000, "editZoomIn()\n");
+  kdebug(KDEBUG_INFO, 3000, "editZoomIn()");
   if (zoom >= 100) {
     zoom += 100;
     if (zoom > 1000)
@@ -887,7 +854,7 @@ KDEBUG(KDEBUG_INFO, 3000, "editZoomIn()\n");
 
 void KPaint::editZoomOut()
 {
-KDEBUG(KDEBUG_INFO, 3000, "editZoomOut()\n");
+  kdebug(KDEBUG_INFO, 3000, "editZoomOut()");
   if (zoom > 100) {
     zoom -= 100;
   }
@@ -913,12 +880,12 @@ KDEBUG(KDEBUG_INFO, 3000, "editZoomOut()\n");
 
 void KPaint::editMask()
 {
-KDEBUG(KDEBUG_INFO, 3000, "editMask()\n");
+    kdebug(KDEBUG_INFO, 3000, "editMask()");
 }
 
 void KPaint::editOptions()
 {
-KDEBUG(KDEBUG_INFO, 3000, "editOptions()\n");
+    kdebug(KDEBUG_INFO, 3000, "editOptions()");
 /* obsolet (jha)
     KKeyDialog::configureKeys(keys); */
 }
@@ -927,13 +894,13 @@ KDEBUG(KDEBUG_INFO, 3000, "editOptions()\n");
 void KPaint::imageInfo()
 {
   imageInfoDialog info(c, 0, "Image Information");
-KDEBUG(KDEBUG_INFO, 3000, "imageInfo()\n");
+  kdebug(KDEBUG_INFO, 3000, "imageInfo()");
   info.exec();
 }
 
 void KPaint::imageResize()
 {
-  KDEBUG(KDEBUG_INFO, 3000, "imageResize()\n");
+  kdebug(KDEBUG_INFO, 3000, "imageResize()");
   canvasSizeDialog sz(this);
   if (sz.exec()) {
     int w= sz.getWidth();
@@ -945,7 +912,7 @@ void KPaint::imageResize()
 
 void KPaint::imageEditPalette()
 {
-KDEBUG(KDEBUG_INFO, 3000, "imageEditPalette()\n");
+    kdebug(KDEBUG_INFO, 3000, "imageEditPalette()");
     paletteDialog pal(c->pixmap());
 
     if (pal.exec()) {
@@ -960,53 +927,53 @@ void KPaint::imageChangeDepth()
   KStatusBar *sb = statusBar();
   depthDialog d(c);
 
-  KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
+  kdebug(KDEBUG_INFO, 3000, "imageChangeDepth()");
   if (d.exec()) {
     switch (d.depthBox->currentItem()) {
     case ID_COLOR_1:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 1\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 1");
       c->setDepth(1);
       depthstr.sprintf(" %d bpp", 1);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     case ID_COLOR_4:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 4\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 4");
       c->setDepth(4);
       depthstr.sprintf(" %d bpp", 4);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     case ID_COLOR_8:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 8\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 8");
       c->setDepth(8);
       depthstr.sprintf(" %d bpp", 8);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= true;
       break;
     case ID_COLOR_15:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 15\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 15");
       c->setDepth(15);
       depthstr.sprintf(" %d bpp", 15);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     case ID_COLOR_16:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 16\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 16");
       c->setDepth(16);
       depthstr.sprintf(" %d bpp", 16);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     case ID_COLOR_24:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 24\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 24");
       c->setDepth(24);
       depthstr.sprintf(" %d bpp", 24);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     case ID_COLOR_32:
-      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 32\n");
+      kdebug(KDEBUG_INFO, 3000, "setDepth to 32");
       c->setDepth(32);
       depthstr.sprintf("%d bpp", 32);
       sb->changeItem(depthstr, ID_COLOR_DEPTH);
@@ -1023,7 +990,7 @@ void KPaint::imageChangeDepth()
 // Tool
 void KPaint::setTool(int t)
 {
-KDEBUG1(KDEBUG_INFO, 3000, "setTool(%d)\n", t);
+  kdebug(KDEBUG_INFO, 3000, "setTool(%d)", t);
   if (t >= 0)
     man->setCurrentTool(t);
   else 
@@ -1032,7 +999,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "setTool(%d)\n", t);
 
 void KPaint::toolProperties()
 {
-KDEBUG(KDEBUG_INFO, 3000, "toolProperties()\n");
+  kdebug(KDEBUG_INFO, 3000, "toolProperties()");
   man->showPropertiesDialog();
 }
 
@@ -1040,7 +1007,7 @@ KDEBUG(KDEBUG_INFO, 3000, "toolProperties()\n");
 // Help
 void KPaint::helpAbout()
 {
-KDEBUG(KDEBUG_INFO, 3000, "helpAbout()\n");
+  kdebug(KDEBUG_INFO, 3000, "helpAbout()");
   QString aMessageHeader( i18n( "About" ) );
   aMessageHeader + APPNAME;
 
@@ -1055,7 +1022,7 @@ void KPaint::helpContents()
 {
    QString filename(APPNAME "/" APPNAME ".html" );
    QString topic;
-KDEBUG(KDEBUG_INFO, 3000, "helpContents()\n");
+   kdebug(KDEBUG_INFO, 3000, "helpContents()");
    myapp->invokeHTMLHelp(filename, topic);
 }
 
@@ -1063,7 +1030,7 @@ void KPaint::helpIndex()
 {
    QString filename(APPNAME "/" APPNAME ".html" );
    QString topic;
-KDEBUG(KDEBUG_INFO, 3000, "helpIndex()\n");
+   kdebug(KDEBUG_INFO, 3000, "helpIndex()");
 
    myapp->invokeHTMLHelp(filename, topic);
 }
