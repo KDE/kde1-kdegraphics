@@ -755,39 +755,3 @@ msgstr "&Aplicar"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "A&mpliação"
-
-#~ msgid "Print"
-#~ msgstr "Imprimir"
-
-#~ msgid "&Reload"
-#~ msgstr "&Recarregar"
-
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Ver controle ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Largura da página"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Remostrar"
-
-#~ msgid "Change view ..."
-#~ msgstr "Mudar visão ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Ligar antialiasing"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Desligar antialiasing"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Mostrar mensagens do Ghostscript"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Esconder mensagens do Ghostscript"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Forçar mudanças a ..."

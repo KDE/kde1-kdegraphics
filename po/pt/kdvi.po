@@ -663,21 +663,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impressão"
-
-#~ msgid "&Previous"
-#~ msgstr "&Anterior"
-
-#~ msgid "&Next"
-#~ msgstr "&Próximo"
-
-#~ msgid "Appearance"
-#~ msgstr "Aparência"
-
-#~ msgid "Fonts"
-#~ msgstr "Fontes"
-
-#~ msgid "Print"
-#~ msgstr "Imprimir"
-
-#~ msgid "&Remove"
-#~ msgstr "&Remover"
