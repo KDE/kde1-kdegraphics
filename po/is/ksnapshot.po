@@ -13,6 +13,7 @@ msgid "snapshot"
 msgstr "skjámynd"
 
 #: ksnapshot.cpp:94
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
