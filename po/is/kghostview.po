@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-17 10:48+0100\n"
 "PO-Revision-Date: 1998-11-04 10:50-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -170,47 +170,47 @@ msgstr "&Skipun f. prentröð"
 msgid "&Environment variable"
 msgstr "&Umhverfisbreyta"
 
-#: print.cpp:148
+#: print.cpp:160
 msgid "Print to file"
 msgstr "Prenta í skrá"
 
-#: print.cpp:153
+#: print.cpp:165
 msgid "Pages"
 msgstr "Blaðsíður"
 
-#: print.cpp:179
+#: print.cpp:191
 msgid "&All"
 msgstr "&Allar"
 
-#: print.cpp:188
+#: print.cpp:200
 msgid "&Current"
 msgstr "&Þessa"
 
-#: print.cpp:196
+#: print.cpp:208
 msgid "&Marked"
 msgstr "&Merktar"
 
-#: print.cpp:205
+#: print.cpp:217
 msgid "&Range"
 msgstr "&Span"
 
-#: print.cpp:219
+#: print.cpp:231
 msgid "to"
 msgstr "til"
 
-#: print.cpp:232
+#: print.cpp:244
 msgid "Print document in re&verse order"
 msgstr "Prenta skjal í ö&fugri röð"
 
-#: print.cpp:249
+#: print.cpp:261
 msgid "&Setup ..."
 msgstr "&Uppsetning..."
 
-#: print.cpp:290
+#: print.cpp:314
 msgid "Range error"
 msgstr "Síðuspanvilla"
 
-#: print.cpp:291
+#: print.cpp:315
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -234,25 +234,25 @@ msgstr "&Grein"
 msgid "&Page"
 msgstr "&Bls"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2229
-#: kghostview.cpp:2241 kghostview.cpp:2246 kghostview.cpp:2529
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
+#: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
 #, c-format
 msgid "of %d"
 msgstr "af %d"
 
-#: kghostview.cpp:1221 kghostview.cpp:2320 viewcontrol.cpp:64
+#: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Skammsnið"
 
-#: kghostview.cpp:1223 kghostview.cpp:2326 viewcontrol.cpp:65
+#: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Langsnið"
 
-#: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
+#: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "Sjósnið"
 
-#: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
+#: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "Á hvolfi"
 
@@ -595,23 +595,23 @@ msgstr ""
 msgid "Could not start or find KFM."
 msgstr "Gat ekki keyrt eða fundið KFM"
 
-#: kghostview.cpp:1266
+#: kghostview.cpp:1269
 msgid "Go to ..."
 msgstr "Fara á..."
 
-#: kghostview.cpp:1508
+#: kghostview.cpp:1515
 msgid "Version 0.6"
 msgstr "Útgáfa 0.6"
 
-#: kghostview.cpp:1509
+#: kghostview.cpp:1516
 msgid "Sorry, not ready yet"
 msgstr "Afsakið, ekki tilbúin enn"
 
-#: kghostview.cpp:1516
+#: kghostview.cpp:1523
 msgid "About kghostview"
 msgstr "Um kghostview"
 
-#: kghostview.cpp:1517
+#: kghostview.cpp:1524
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -621,11 +621,11 @@ msgstr ""
 "Höf.  : Mark Donohoe\n"
 "Póstur: donohoe@kde.org"
 
-#: kghostview.cpp:1569 kghostview.cpp:1689
+#: kghostview.cpp:1576 kghostview.cpp:1696
 msgid "Error printing"
 msgstr "Villa í prentun"
 
-#: kghostview.cpp:1579
+#: kghostview.cpp:1586
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
@@ -637,7 +637,7 @@ msgstr ""
 "og það sem þú ert að vinna í núna.\n"
 "Þú þarft ekki að prenta þessar síður út í nýja skrá."
 
-#: kghostview.cpp:1592
+#: kghostview.cpp:1599
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
@@ -645,18 +645,18 @@ msgstr ""
 "Þú gafst ekki upp neitt nafn fyrir\n"
 "þetta skjal þannig að ekkert var prentað.\n"
 
-#: kghostview.cpp:1633
+#: kghostview.cpp:1640
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
 
-#: kghostview.cpp:1654
+#: kghostview.cpp:1661
 #, c-format
 msgid "Print failure : %s"
 msgstr "Prentvilla : %s"
 
-#: kghostview.cpp:1690
+#: kghostview.cpp:1697
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -664,36 +664,36 @@ msgstr ""
 "Prentun brást vegna þess að engar\n"
 "blaðsíður voru valdar til prentunar.\n"
 
-#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2500
-#: kghostview.cpp:2523
+#: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
+#: kghostview.cpp:2530
 msgid "of 1    "
 msgstr "af 1    "
 
-#: kghostview.cpp:2225 kghostview.cpp:2237 kghostview.cpp:2525
+#: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
 #, c-format
 msgid "of %d    "
 msgstr "af %d    "
 
-#: kghostview.cpp:2227 kghostview.cpp:2239 kghostview.cpp:2527
-#: kghostview.cpp:2534
+#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
+#: kghostview.cpp:2541
 #, c-format
 msgid "of %d  "
 msgstr "af %d  "
 
-#: kghostview.cpp:2499
+#: kghostview.cpp:2506
 msgid "Sc.1 "
 msgstr "Nr. 1"
 
-#: kghostview.cpp:2502
+#: kghostview.cpp:2509
 msgid "P.1 "
 msgstr "Bls. 1"
 
-#: kghostview.cpp:2504 kghostview.cpp:2517
+#: kghostview.cpp:2511 kghostview.cpp:2524
 #, c-format
 msgid "P.%d "
 msgstr "Bls.%d "
 
-#: kghostview.cpp:2519
+#: kghostview.cpp:2526
 #, c-format
 msgid "Sc.%d "
 msgstr "Nr. %d"

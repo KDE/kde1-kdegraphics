@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 1.0\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-17 10:48+0100\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -171,47 +171,47 @@ msgstr "Komando por &fona presado"
 msgid "&Environment variable"
 msgstr "&Mediovariablo"
 
-#: print.cpp:148
+#: print.cpp:160
 msgid "Print to file"
 msgstr "Presu al dosiero"
 
-#: print.cpp:153
+#: print.cpp:165
 msgid "Pages"
 msgstr "Paøoj"
 
-#: print.cpp:179
+#: print.cpp:191
 msgid "&All"
 msgstr "Æ&iuj"
 
-#: print.cpp:188
+#: print.cpp:200
 msgid "&Current"
 msgstr "&Aktuala"
 
-#: print.cpp:196
+#: print.cpp:208
 msgid "&Marked"
 msgstr "&Elektitaj"
 
-#: print.cpp:205
+#: print.cpp:217
 msgid "&Range"
 msgstr "&Paøoj"
 
-#: print.cpp:219
+#: print.cpp:231
 msgid "to"
 msgstr "øis"
 
-#: print.cpp:232
+#: print.cpp:244
 msgid "Print document in re&verse order"
 msgstr "Presu dokumentojn laý &inversa ordo"
 
-#: print.cpp:249
+#: print.cpp:261
 msgid "&Setup ..."
 msgstr "&Konfiguro ..."
 
-#: print.cpp:290
+#: print.cpp:314
 msgid "Range error"
 msgstr "Erara intervalo"
 
-#: print.cpp:291
+#: print.cpp:315
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -235,25 +235,25 @@ msgstr "&Sekcio"
 msgid "&Page"
 msgstr "&Paøo"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2229
-#: kghostview.cpp:2241 kghostview.cpp:2246 kghostview.cpp:2529
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
+#: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
 #, c-format
 msgid "of %d"
 msgstr "el %d"
 
-#: kghostview.cpp:1221 kghostview.cpp:2320 viewcontrol.cpp:64
+#: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "0 gradoj"
 
-#: kghostview.cpp:1223 kghostview.cpp:2326 viewcontrol.cpp:65
+#: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "90 gradoj"
 
-#: kghostview.cpp:1225 kghostview.cpp:2324 viewcontrol.cpp:66
+#: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "270 gradoj"
 
-#: kghostview.cpp:1227 kghostview.cpp:2322 viewcontrol.cpp:67
+#: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "180 gradoj"
 
@@ -584,23 +584,23 @@ msgstr ""
 msgid "Could not start or find KFM."
 msgstr "Ne eblis lanæi aý trovi KFM."
 
-#: kghostview.cpp:1266
+#: kghostview.cpp:1269
 msgid "Go to ..."
 msgstr "Iru al ..."
 
-#: kghostview.cpp:1508
+#: kghostview.cpp:1515
 msgid "Version 0.6"
 msgstr "Versio 0.6"
 
-#: kghostview.cpp:1509
+#: kghostview.cpp:1516
 msgid "Sorry, not ready yet"
 msgstr "Pardonu, sed ankoraý ne finita"
 
-#: kghostview.cpp:1516
+#: kghostview.cpp:1523
 msgid "About kghostview"
 msgstr "Pri Kghostview"
 
-#: kghostview.cpp:1517
+#: kghostview.cpp:1524
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -610,11 +610,11 @@ msgstr ""
 "Aýtoro: Mark Donohoe\n"
 "Retpoþto: donohoe@kde.org"
 
-#: kghostview.cpp:1569 kghostview.cpp:1689
+#: kghostview.cpp:1576 kghostview.cpp:1696
 msgid "Error printing"
 msgstr "Eraro dum presado"
 
-#: kghostview.cpp:1579
+#: kghostview.cpp:1586
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
@@ -626,7 +626,7 @@ msgstr ""
 "tiu, kiun vi nun rigardas per la rigardilo.\n"
 "Ne necesas presi æiujn paøojn al nova dosiero."
 
-#: kghostview.cpp:1592
+#: kghostview.cpp:1599
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
@@ -634,18 +634,18 @@ msgstr ""
 "Vi indikis neniun dosiernomon.\n"
 "Do ne eblis presi ion en dosieron.\n"
 
-#: kghostview.cpp:1633
+#: kghostview.cpp:1640
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
 
-#: kghostview.cpp:1654
+#: kghostview.cpp:1661
 #, c-format
 msgid "Print failure : %s"
 msgstr "Presado fiaskis: %s"
 
-#: kghostview.cpp:1690
+#: kghostview.cpp:1697
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -653,36 +653,36 @@ msgstr ""
 "Presado fiaskis æar la listo de\n"
 "la presendaj paøoj estis malplena.\n"
 
-#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2500
-#: kghostview.cpp:2523
+#: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
+#: kghostview.cpp:2530
 msgid "of 1    "
 msgstr "el 1    "
 
-#: kghostview.cpp:2225 kghostview.cpp:2237 kghostview.cpp:2525
+#: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
 #, c-format
 msgid "of %d    "
 msgstr "el %d    "
 
-#: kghostview.cpp:2227 kghostview.cpp:2239 kghostview.cpp:2527
-#: kghostview.cpp:2534
+#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
+#: kghostview.cpp:2541
 #, c-format
 msgid "of %d  "
 msgstr "el %d  "
 
-#: kghostview.cpp:2499
+#: kghostview.cpp:2506
 msgid "Sc.1 "
 msgstr "Sc.1 "
 
-#: kghostview.cpp:2502
+#: kghostview.cpp:2509
 msgid "P.1 "
 msgstr "P.1 "
 
-#: kghostview.cpp:2504 kghostview.cpp:2517
+#: kghostview.cpp:2511 kghostview.cpp:2524
 #, c-format
 msgid "P.%d "
 msgstr "P.%d "
 
-#: kghostview.cpp:2519
+#: kghostview.cpp:2526
 #, c-format
 msgid "Sc.%d "
 msgstr "Sc.%d "
