@@ -79,6 +79,9 @@ veryclean:
 depend: $(SRCS)
 	@makedepend $(INCFLAGS) $(SRCS) 2> /dev/null
 
+messages:
+	@XGETTEXT@ -C --keyword=i18n -x ../../kdelibs/po/kde.po *.cpp
+	
 ########## Meta objects ##########
 
 %.moc: %.h

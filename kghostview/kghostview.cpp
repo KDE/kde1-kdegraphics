@@ -41,7 +41,6 @@
 
 #include <klocale.h>
 #define i18n(X) klocale->translate(X)
-#define i18nC(X) ((char*)klocale->translate(X))
 
 extern "C" {
 	#include "ps.h"
@@ -567,37 +566,37 @@ void KGhostview::createToolbar()
 	toolbar = new KToolBar( this );
 
 	pixmap.load(PIXDIR + "back.xpm");
-	toolbar->insertButton(pixmap, ID_PREV, FALSE, i18nC("Go back"));
+	toolbar->insertButton(pixmap, ID_PREV, FALSE, i18n("Go back"));
 
 	pixmap.load(PIXDIR + "forward.xpm");
-	toolbar->insertButton(pixmap, ID_NEXT, FALSE, i18nC("Go forward"));
+	toolbar->insertButton(pixmap, ID_NEXT, FALSE, i18n("Go forward"));
 
 	pixmap.load(PIXDIR + "page.xpm");
-	toolbar->insertButton(pixmap, ID_PAGE, FALSE, i18nC("Go to page ..."));
+	toolbar->insertButton(pixmap, ID_PAGE, FALSE, i18n("Go to page ..."));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "viewzoom.xpm");
-	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18nC("Change view ..."));
+	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18n("Change view ..."));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "fileprint.xpm");
-	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18nC("Print document"));
+	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18n("Print document"));
 
 	pixmap.load(PIXDIR + "flag.xpm");
-	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18nC("Mark this page"));
+	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18n("Mark this page"));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "start.xpm");
-	toolbar->insertButton(pixmap, ID_START, FALSE, i18nC("Go to start"));
+	toolbar->insertButton(pixmap, ID_START, FALSE, i18n("Go to start"));
 
 	pixmap.load(PIXDIR + "finish.xpm");
-	toolbar->insertButton(pixmap, ID_END, FALSE, i18nC("Go to end"));
+	toolbar->insertButton(pixmap, ID_END, FALSE, i18n("Go to end"));
 
 	pixmap.load(PIXDIR + "next.xpm");
-	toolbar->insertButton(pixmap, ID_READ, FALSE, i18nC("Read down the page"));
+	toolbar->insertButton(pixmap, ID_READ, FALSE, i18n("Read down the page"));
 
 	// Register toolbar with KTopLevelWidget layout manager
 	
@@ -624,9 +623,9 @@ void KGhostview::createStatusbar()
     //printf("KGhostview::createStatusbar\n");
     
     statusbar = new KStatusBar( this );
-    statusbar->insertItem(i18nC("Sc.100 of 100  P.100 of 100"), ID_LOCATION);
-    statusbar->insertItem(i18nC("100 %"), ID_MAGSTEP);
-    statusbar->insertItem(i18nC("Upside Down"), ID_ORIENTATION);
+    statusbar->insertItem(i18n("Sc.100 of 100  P.100 of 100"), ID_LOCATION);
+    statusbar->insertItem(i18n("100 %"), ID_MAGSTEP);
+    statusbar->insertItem(i18n("Upside Down"), ID_ORIENTATION);
     statusbar->insertItem("", ID_FILENAME);
     
     statusbar->changeItem("", ID_LOCATION);
@@ -1072,13 +1071,13 @@ void KGhostview::applyViewChanges()
 	selection = vc->orientComboBox->currentItem()+1;
 	switch(selection) {
 		case 1:	orient=1;
-				statusbar->changeItem( i18nC("Portrait"), ID_ORIENTATION );
+				statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
 				break;
-		case 2:	orient=4;statusbar->changeItem( i18nC("Landscape"), ID_ORIENTATION );
+		case 2:	orient=4;statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
 				break;
-		case 3:	orient=3;statusbar->changeItem( i18nC("Seascape"), ID_ORIENTATION );
+		case 3:	orient=3;statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
 				break;
-		case 4:	orient=2;statusbar->changeItem( i18nC("Upside down"), ID_ORIENTATION );
+		case 4:	orient=2;statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
 				break;
 	}
 	force_orientation = True;
@@ -2060,13 +2059,13 @@ Bool	KGhostview::setup()
 	
 	statusbar->changeItem( filename.data(), ID_FILENAME );
 	switch(orientation) {
-		case 1:	statusbar->changeItem( i18nC("Portrait"), ID_ORIENTATION );
+		case 1:	statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
 				break;
-		case 2:	statusbar->changeItem( i18nC("Upside down"), ID_ORIENTATION );
+		case 2:	statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
 				break;
-		case 3:	statusbar->changeItem( i18nC("Seascape"), ID_ORIENTATION );
+		case 3:	statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
 				break;
-		case 4:	statusbar->changeItem( i18nC("Landscape"), ID_ORIENTATION );
+		case 4:	statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
 				break;
 	}
 	sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
