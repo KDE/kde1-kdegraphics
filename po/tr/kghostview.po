@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 1.0\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-06-29 11:00+0200\n"
 "Last-Translator: Yaþar PALA <bbm787@hun.edu.tr>\n"
 "Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
@@ -158,59 +158,59 @@ msgstr "Basýlma tarihi: "
 msgid "Printer setup"
 msgstr "Yazýcý Ayarlarý"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "&Yazýcý adý"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Spooler komutu"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "Ç&evre deðiþkeni"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Dosyaya yazdýr"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Sayfalar"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Hepsi"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "Þ&u anki"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "Ýþ&aretli"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Aralýk"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "içine"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Belgeyi ters sýrada yazdýr"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Ayarlar ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Aralýk hatasý"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: LinuxKorea Co. <kde@linuxkorea.co.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,59 +159,59 @@ msgstr "발행 일자 :"
 msgid "Printer setup"
 msgstr "프린터 설정"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "프린터 이름(&P)"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "스풀러 명령(&S)"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "환경 변수(&E)"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "파일로 인쇄"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "페이지"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "모두(&A)"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "현재(&C)"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "선택(&M)"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "범위(&R)"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "까지"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "역순 인쇄(&v)"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "설정(&S) ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "범위 오류"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

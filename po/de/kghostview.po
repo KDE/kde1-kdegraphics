@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-11-13 15:36 +0100\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -154,59 +154,59 @@ msgstr "Publikationsdatum:"
 msgid "Printer setup"
 msgstr "Druckereinstellung"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "&Druckername"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Spool-Befehl"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Umgebungsvariable"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "In Datei drucken"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Seiten"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Alle"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "A&ktuelle"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Markierte"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Bereich"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "bis"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Dokument in umgekehrter Reihenfolge drucken"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Einstellungen..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Bereichsfehler"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

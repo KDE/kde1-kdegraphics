@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-11-04 10:50-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -157,59 +157,59 @@ msgstr "Dags. skjals :"
 msgid "Printer setup"
 msgstr "Uppsetning prentara"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "Nafn &prentara"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Skipun f. prentröð"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Umhverfisbreyta"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Prenta í skrá"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Blaðsíður"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Allar"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "&Þessa"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Merktar"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Span"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "til"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Prenta skjal í ö&fugri röð"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Uppsetning..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Síðuspanvilla"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

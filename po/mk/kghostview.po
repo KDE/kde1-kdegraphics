@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kedit\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-05-17 20:00-0500-\n"
 "Last-Translator: Vlatko Cingoski <vlatko@eml.hiroshima-u.ac.jp>\n"
 "Language-Team: Macedonian\n"
@@ -161,66 +161,66 @@ msgstr ""
 msgid "Printer setup"
 msgstr "Ime na pechatachot"
 
-#: print.cpp:65
+#: print.cpp:61
 #, fuzzy
 msgid "&Printer name"
 msgstr "Ime na pechatachot"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr ""
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr ""
 
-#: print.cpp:160
+#: print.cpp:145
 #, fuzzy
 msgid "Print to file"
 msgstr "Problem so pechatenjeto : lpr"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Stranici"
 
-#: print.cpp:191
+#: print.cpp:176
 #, fuzzy
 msgid "&All"
 msgstr "Site"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr ""
 
-#: print.cpp:208
+#: print.cpp:193
 #, fuzzy
 msgid "&Marked"
 msgstr "Markiranite"
 
-#: print.cpp:217
+#: print.cpp:202
 #, fuzzy
 msgid "&Range"
 msgstr "Stranica"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr ""
 
-#: print.cpp:244
+#: print.cpp:229
 #, fuzzy
 msgid "Print document in re&verse order"
 msgstr "Pechati go dokumentot"
 
-#: print.cpp:261
+#: print.cpp:246
 #, fuzzy
 msgid "&Setup ..."
 msgstr "&Otvori ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr ""
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

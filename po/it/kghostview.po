@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,59 +154,59 @@ msgstr "Data Pubblicazione :"
 msgid "Printer setup"
 msgstr "Impostazioni Stampante"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "Nome &Stampante"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Comando Spooler"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Variabili d'ambiente"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Stampa su file"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Pagine"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Tutte"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "&Corrente"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Segnate"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Intervallo"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "a"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Stampa documento in ordine in&verso"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Imposta ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Errore Intervallo"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

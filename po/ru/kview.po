@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
-"POT-Creation-Date: 1998-12-13 13:55+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-12-28 01:24+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -13,175 +13,197 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: viewer.cpp:86
+#: viewer.cpp:95
 msgid "no image loaded"
 msgstr "изображение не загружено"
 
-#: viewer.cpp:94 viewer.cpp:644
+#: viewer.cpp:103 viewer.cpp:599
 msgid "Ready"
 msgstr "Готов"
 
-#: viewer.cpp:241
+#: viewer.cpp:181
 msgid "Net saving not yet implemented"
 msgstr "Запись на сеть не реализована"
 
-#: viewer.cpp:249
+#: viewer.cpp:189
 #, c-format
 msgid "%s: written"
 msgstr "%s: записан"
 
-#: viewer.cpp:287
+#: viewer.cpp:227
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Введите коэффициент масштабирования: (100 = 1x"
 
-#: viewer.cpp:291
+#: viewer.cpp:231
 msgid "Illegal zoom factor"
 msgstr "Недопустимый коэффициент масштабирования"
 
-#: viewer.cpp:340
+#: viewer.cpp:282
+#, c-format
+msgid ""
+"KView -- Graphics viewer. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
+msgstr ""
+
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "О KView"
 
-#: viewer.cpp:365 viewer.cpp:465
+#: viewer.cpp:310 viewer.cpp:412
 msgid "&List..."
 msgstr "Список..."
 
-#: viewer.cpp:368 viewer.cpp:469
+#: viewer.cpp:312 viewer.cpp:416
 msgid "&Previous"
 msgstr "Предыдущее"
 
-#: viewer.cpp:370 viewer.cpp:471
+#: viewer.cpp:314 viewer.cpp:418
 msgid "&Next"
 msgstr "Следующее"
 
-#: viewer.cpp:373 viewer.cpp:474
+#: viewer.cpp:316 viewer.cpp:421
 msgid "&Slideshow On/Off"
 msgstr "Показывать слайды вкл./выкл."
 
-#: viewer.cpp:382
+#: viewer.cpp:324
 msgid "&Zoom"
 msgstr "Масштаб"
 
-#: viewer.cpp:383
+#: viewer.cpp:325
 msgid "&Transform"
 msgstr "Изменить"
 
-#: viewer.cpp:384
+#: viewer.cpp:326
 msgid "To &Desktop"
 msgstr "На рабочий стол"
 
-#: viewer.cpp:386
+#: viewer.cpp:328
 msgid "F&ilter"
 msgstr "Фильтр"
 
-#: viewer.cpp:390
+#: viewer.cpp:332
 msgid "&Images"
 msgstr "Изображения"
 
-#: viewer.cpp:409
+#: viewer.cpp:352
 msgid "&Save As..."
 msgstr "Записать как..."
 
-#: viewer.cpp:415
+#: viewer.cpp:356
 msgid "&Close Window"
 msgstr "Закрыть окно"
 
-#: viewer.cpp:421
+#: viewer.cpp:362
 msgid "&Full Screen"
 msgstr "На полный экран"
 
-#: viewer.cpp:424
+#: viewer.cpp:365
 msgid "&Crop"
 msgstr "Обрезать"
 
-#: viewer.cpp:427
+#: viewer.cpp:367
 msgid "&Reset"
 msgstr "Сбросить"
 
-#: viewer.cpp:432
+#: viewer.cpp:369
+msgid "&Preferences..."
+msgstr ""
+
+#: viewer.cpp:375
 msgid "&Zoom..."
 msgstr "Масштаб..."
 
-#: viewer.cpp:434
+#: viewer.cpp:376
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "Увеличить на 10%"
 
-#: viewer.cpp:436
+#: viewer.cpp:378
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Уменьшить на 10%"
 
-#: viewer.cpp:438
+#: viewer.cpp:380
 msgid "&Double size"
 msgstr "Двойной размер"
 
-#: viewer.cpp:440
+#: viewer.cpp:382
 msgid "&Half size"
 msgstr "Половинный размер"
 
-#: viewer.cpp:442
+#: viewer.cpp:384
 msgid "&Max size"
 msgstr "Максимальный размер"
 
-#: viewer.cpp:444
+#: viewer.cpp:386
 msgid "Max/&aspect"
 msgstr "Макс/с сохранением осей"
 
-#: viewer.cpp:449
+#: viewer.cpp:392
 msgid "Rotate &clockwise"
 msgstr "Повернуть по часовой"
 
-#: viewer.cpp:451
+#: viewer.cpp:394
 msgid "Rotate &anti-clockwise"
 msgstr "Повернуть против часовой"
 
-#: viewer.cpp:453
+#: viewer.cpp:396
 msgid "Flip &vertical"
 msgstr "Перевернуть вертикально"
 
-#: viewer.cpp:455
+#: viewer.cpp:398
 msgid "Flip &horizontal"
 msgstr "Перевернуть горизонтально"
 
-#: viewer.cpp:460
-msgid "&Tile"
-msgstr "Черепицей"
+#: viewer.cpp:404
+msgid "Desktop &Tile"
+msgstr ""
 
-#: viewer.cpp:461
-msgid "&Max"
-msgstr "Макс"
+#: viewer.cpp:405
+#, fuzzy
+msgid "Desktop &Max"
+msgstr "На рабочий стол"
 
-#: viewer.cpp:462
-msgid "Max&pect"
+#: viewer.cpp:407
+#, fuzzy
+msgid "Desktop Max&pect"
 msgstr "Макс с сохранением осей"
 
-#: viewer.cpp:479
+#: viewer.cpp:426
+msgid "&How do I..."
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&What is a..."
+msgstr ""
+
+#: viewer.cpp:429
 msgid "&About KView..."
 msgstr "О KView..."
 
-#: viewer.cpp:521 viewer.cpp:528
+#: viewer.cpp:471 viewer.cpp:478
 msgid "Existing transfer not yet complete."
 msgstr "Передача не завершена."
 
-#: viewer.cpp:542
+#: viewer.cpp:493
 msgid "Couldn't get temporary transfer name."
 msgstr "Ошибка получения временного имени для передачи."
 
-#: viewer.cpp:581
+#: viewer.cpp:532
 msgid "Transfer error: "
 msgstr "Ошибка передачи: "
 
-#: viewer.cpp:662
+#: viewer.cpp:618
 msgid "Loading..."
 msgstr "Загружаю..."
 
-#: viewer.cpp:671
+#: viewer.cpp:632
 #, c-format
 msgid "Couldn't load %s"
 msgstr "Ошибка загрузки %s"
 
-#: viewer.cpp:860
+#: viewer.cpp:852
 msgid "Printing..."
 msgstr "Печатаю..."
 
@@ -237,42 +259,84 @@ msgstr "Интенсивность:Коррекция гаммы..."
 msgid "External.."
 msgstr "Внешние..."
 
-#: ilistdlg.cpp:57
+#: ilistdlg.cpp:56
 msgid "Prev"
 msgstr "Пред"
 
-#: ilistdlg.cpp:61
+#: ilistdlg.cpp:60
 msgid "Shu&ffle"
 msgstr "Вперемешку"
 
-#: ilistdlg.cpp:66
+#: ilistdlg.cpp:65
 msgid "Next"
 msgstr "След"
 
-#: ilistdlg.cpp:70
+#: ilistdlg.cpp:69
 msgid "Start slide"
 msgstr "Показывать слайды"
 
-#: ilistdlg.cpp:75
-msgid "Interval.."
-msgstr "Интервал..."
-
-#: ilistdlg.cpp:80
-msgid "Loop"
-msgstr "По циклу"
-
-#: ilistdlg.cpp:94
+#: ilistdlg.cpp:85
 msgid "Image List"
 msgstr "Список изображений"
 
-#: ilistdlg.cpp:268
+#: ilistdlg.cpp:259
 msgid "Stop &slide"
 msgstr "Остановить слайды"
 
-#: ilistdlg.cpp:276
+#: ilistdlg.cpp:267
 msgid "Start &slide"
 msgstr "Показывать слайды"
 
-#: ilistdlg.cpp:339
-msgid "Time between slides (sec):"
-msgstr "Время между слайдами (сек):"
+#: prefdlg.cpp:32
+msgid "kView Preferences"
+msgstr ""
+
+#: prefdlg.cpp:36
+msgid "&Apply"
+msgstr ""
+
+#: prefdlg.cpp:51
+msgid "On Load"
+msgstr ""
+
+#: prefdlg.cpp:58
+#, fuzzy
+msgid "Resize Window"
+msgstr "Закрыть окно"
+
+#: prefdlg.cpp:61
+msgid "Resize Image"
+msgstr ""
+
+#: prefdlg.cpp:64
+msgid "No Resize"
+msgstr ""
+
+#: prefdlg.cpp:69
+#, fuzzy
+msgid "Slideshow"
+msgstr "Показывать слайды вкл./выкл."
+
+#: prefdlg.cpp:72
+msgid "Loop"
+msgstr "По циклу"
+
+#: prefdlg.cpp:76
+msgid "Slide interval (sec)"
+msgstr ""
+
+#: prefdlg.cpp:84
+msgid "&Keys"
+msgstr ""
+
+#~ msgid "&Tile"
+#~ msgstr "Черепицей"
+
+#~ msgid "&Max"
+#~ msgstr "Макс"
+
+#~ msgid "Interval.."
+#~ msgstr "Интервал..."
+
+#~ msgid "Time between slides (sec):"
+#~ msgstr "Время между слайдами (сек):"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-12-13 13:55+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -14,175 +14,198 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:86
+#: viewer.cpp:95
 msgid "no image loaded"
 msgstr "nenhuma imagem carregada"
 
-#: viewer.cpp:94 viewer.cpp:644
+#: viewer.cpp:103 viewer.cpp:599
 msgid "Ready"
 msgstr "Pronto"
 
-#: viewer.cpp:241
+#: viewer.cpp:181
 msgid "Net saving not yet implemented"
 msgstr "Salvamento incremental ainda não implementado"
 
-#: viewer.cpp:249
+#: viewer.cpp:189
 #, c-format
 msgid "%s: written"
 msgstr "%s: gravado"
 
-#: viewer.cpp:287
+#: viewer.cpp:227
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Entre fator de ampliação (100 = 1x):"
 
-#: viewer.cpp:291
+#: viewer.cpp:231
 msgid "Illegal zoom factor"
 msgstr "Fator de ampliação ilegal"
 
-#: viewer.cpp:340
+#: viewer.cpp:282
+#, c-format
+msgid ""
+"KView -- Graphics viewer. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
+msgstr ""
+
+#: viewer.cpp:285
 msgid "About KView"
 msgstr "Sobre KView"
 
-#: viewer.cpp:365 viewer.cpp:465
+#: viewer.cpp:310 viewer.cpp:412
 msgid "&List..."
 msgstr "&Lista..."
 
-#: viewer.cpp:368 viewer.cpp:469
+#: viewer.cpp:312 viewer.cpp:416
 msgid "&Previous"
 msgstr "&Anterior"
 
-#: viewer.cpp:370 viewer.cpp:471
+#: viewer.cpp:314 viewer.cpp:418
 msgid "&Next"
 msgstr "&Próxima"
 
-#: viewer.cpp:373 viewer.cpp:474
+#: viewer.cpp:316 viewer.cpp:421
 msgid "&Slideshow On/Off"
 msgstr "&Show de slides Liga/Desliga"
 
-#: viewer.cpp:382
+#: viewer.cpp:324
 msgid "&Zoom"
 msgstr "&Aproximar"
 
-#: viewer.cpp:383
+#: viewer.cpp:325
 msgid "&Transform"
 msgstr "&Transformar"
 
-#: viewer.cpp:384
+#: viewer.cpp:326
 msgid "To &Desktop"
 msgstr "para a &Área de Trabalho"
 
-#: viewer.cpp:386
+#: viewer.cpp:328
 msgid "F&ilter"
 msgstr "F&iltro"
 
-#: viewer.cpp:390
+#: viewer.cpp:332
 msgid "&Images"
 msgstr "&Imagens"
 
-#: viewer.cpp:409
+#: viewer.cpp:352
 msgid "&Save As..."
 msgstr "&Salvar como..."
 
-#: viewer.cpp:415
+#: viewer.cpp:356
 msgid "&Close Window"
 msgstr "&Fechar janela"
 
-#: viewer.cpp:421
+#: viewer.cpp:362
 msgid "&Full Screen"
 msgstr "Te&la Cheia"
 
-#: viewer.cpp:424
+#: viewer.cpp:365
 msgid "&Crop"
 msgstr "&Enquadrar"
 
-#: viewer.cpp:427
+#: viewer.cpp:367
 msgid "&Reset"
 msgstr "&Reiniciar"
 
-#: viewer.cpp:432
+#: viewer.cpp:369
+msgid "&Preferences..."
+msgstr ""
+
+#: viewer.cpp:375
 msgid "&Zoom..."
 msgstr "&Ampliação..."
 
-#: viewer.cpp:434
+#: viewer.cpp:376
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "A&mpliar 10%"
 
-#: viewer.cpp:436
+#: viewer.cpp:378
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Redu&zir 10%"
 
-#: viewer.cpp:438
+#: viewer.cpp:380
 msgid "&Double size"
 msgstr "&Duplicar tamanho"
 
-#: viewer.cpp:440
+#: viewer.cpp:382
 msgid "&Half size"
 msgstr "Diminuir à &Metade"
 
-#: viewer.cpp:442
+#: viewer.cpp:384
 msgid "&Max size"
 msgstr "Tamanho &Máximo"
 
-#: viewer.cpp:444
+#: viewer.cpp:386
 msgid "Max/&aspect"
 msgstr "Máx/&aspecto"
 
-#: viewer.cpp:449
+#: viewer.cpp:392
 msgid "Rotate &clockwise"
 msgstr "&Sentido horário"
 
-#: viewer.cpp:451
+#: viewer.cpp:394
 msgid "Rotate &anti-clockwise"
 msgstr "&Anti-horário"
 
-#: viewer.cpp:453
+#: viewer.cpp:396
 msgid "Flip &vertical"
 msgstr "Virar &Verticalmente"
 
-#: viewer.cpp:455
+#: viewer.cpp:398
 msgid "Flip &horizontal"
 msgstr "Virar &Horizontalmente"
 
-#: viewer.cpp:460
-msgid "&Tile"
-msgstr "&Mosaico"
+#: viewer.cpp:404
+#, fuzzy
+msgid "Desktop &Tile"
+msgstr "Para a Área de Trabalho"
 
-#: viewer.cpp:461
-msgid "&Max"
-msgstr "&Máximo"
+#: viewer.cpp:405
+#, fuzzy
+msgid "Desktop &Max"
+msgstr "Para a Área de Trabalho"
 
-#: viewer.cpp:462
-msgid "Max&pect"
+#: viewer.cpp:407
+#, fuzzy
+msgid "Desktop Max&pect"
 msgstr "Má&ximo"
 
-#: viewer.cpp:479
+#: viewer.cpp:426
+msgid "&How do I..."
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&What is a..."
+msgstr ""
+
+#: viewer.cpp:429
 msgid "&About KView..."
 msgstr "&Sobre o KView..."
 
-#: viewer.cpp:521 viewer.cpp:528
+#: viewer.cpp:471 viewer.cpp:478
 msgid "Existing transfer not yet complete."
 msgstr "Transferência ainda não completada"
 
-#: viewer.cpp:542
+#: viewer.cpp:493
 msgid "Couldn't get temporary transfer name."
 msgstr "Impossível obter nome temporário para transferência"
 
-#: viewer.cpp:581
+#: viewer.cpp:532
 msgid "Transfer error: "
 msgstr "Erro de transferência: "
 
-#: viewer.cpp:662
+#: viewer.cpp:618
 msgid "Loading..."
 msgstr "Carregando..."
 
-#: viewer.cpp:671
+#: viewer.cpp:632
 #, c-format
 msgid "Couldn't load %s"
 msgstr "Impossível carregar %s"
 
-#: viewer.cpp:860
+#: viewer.cpp:852
 msgid "Printing..."
 msgstr "Imprimindo..."
 
@@ -238,45 +261,87 @@ msgstr "Intensidade:Correção de Gama..."
 msgid "External.."
 msgstr "Externo..."
 
-#: ilistdlg.cpp:57
+#: ilistdlg.cpp:56
 msgid "Prev"
 msgstr "Anterior"
 
-#: ilistdlg.cpp:61
+#: ilistdlg.cpp:60
 msgid "Shu&ffle"
 msgstr "Em&baralhar"
 
-#: ilistdlg.cpp:66
+#: ilistdlg.cpp:65
 msgid "Next"
 msgstr "Próxima"
 
-#: ilistdlg.cpp:70
+#: ilistdlg.cpp:69
 msgid "Start slide"
 msgstr "Iniciar slide"
 
-#: ilistdlg.cpp:75
-msgid "Interval.."
-msgstr "Intervalo..."
-
-#: ilistdlg.cpp:80
-msgid "Loop"
-msgstr "Ciclo"
-
-#: ilistdlg.cpp:94
+#: ilistdlg.cpp:85
 msgid "Image List"
 msgstr "Lista de Imagens"
 
-#: ilistdlg.cpp:268
+#: ilistdlg.cpp:259
 msgid "Stop &slide"
 msgstr "Parar &slide"
 
-#: ilistdlg.cpp:276
+#: ilistdlg.cpp:267
 msgid "Start &slide"
 msgstr "Iniciar &slide"
 
-#: ilistdlg.cpp:339
-msgid "Time between slides (sec):"
-msgstr "Tempo entre slides (seg):"
+#: prefdlg.cpp:32
+msgid "kView Preferences"
+msgstr ""
+
+#: prefdlg.cpp:36
+msgid "&Apply"
+msgstr ""
+
+#: prefdlg.cpp:51
+msgid "On Load"
+msgstr ""
+
+#: prefdlg.cpp:58
+#, fuzzy
+msgid "Resize Window"
+msgstr "Tamanho da &Janela"
+
+#: prefdlg.cpp:61
+msgid "Resize Image"
+msgstr ""
+
+#: prefdlg.cpp:64
+msgid "No Resize"
+msgstr ""
+
+#: prefdlg.cpp:69
+#, fuzzy
+msgid "Slideshow"
+msgstr "&Show de slides Liga/Desliga"
+
+#: prefdlg.cpp:72
+msgid "Loop"
+msgstr "Ciclo"
+
+#: prefdlg.cpp:76
+msgid "Slide interval (sec)"
+msgstr ""
+
+#: prefdlg.cpp:84
+msgid "&Keys"
+msgstr ""
+
+#~ msgid "&Tile"
+#~ msgstr "&Mosaico"
+
+#~ msgid "&Max"
+#~ msgstr "&Máximo"
+
+#~ msgid "Interval.."
+#~ msgstr "Intervalo..."
+
+#~ msgid "Time between slides (sec):"
+#~ msgstr "Tempo entre slides (seg):"
 
 #~ msgid "Fi&lter"
 #~ msgstr "Fi&ltro"
@@ -304,9 +369,6 @@ msgstr "Tempo entre slides (seg):"
 
 #~ msgid "&Toggle Menu"
 #~ msgstr "&Ativar o Menu"
-
-#~ msgid "&Size Window"
-#~ msgstr "Tamanho da &Janela"
 
 #~ msgid "I&mage Info"
 #~ msgstr "Informações da I&magem"
@@ -337,9 +399,6 @@ msgstr "Tempo entre slides (seg):"
 
 #~ msgid "Rotate"
 #~ msgstr "Girar"
-
-#~ msgid "To Desktop"
-#~ msgstr "Para a Área de Trabalho"
 
 #~ msgid "Fit window size to pixmap size"
 #~ msgstr "Ajustar o tamanho da janela para o tamanho do mapa de pixels"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -158,59 +158,59 @@ msgstr "Datum izdavanja :"
 msgid "Printer setup"
 msgstr "Postava pisaèa"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "Naziv &pisaèa"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Naredba posredniku"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Okoli¹na (env) varijabla"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Ispi¹i u datoteku"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Stranice"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Sve"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "&Trenutna"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Oznaèene"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Raspon"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "na"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Ispi¹i dokument u obratnom redoslijedu"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Podesi ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Gre¹ka u rasponu"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

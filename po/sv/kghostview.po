@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-07-15 12:50+0200\n"
 "Last-Translator: Anders Bengtsson <d96-abe@nada.kth.se>\n"
 "MIME-Version: 1.0\n"
@@ -153,59 +153,59 @@ msgstr "Datum :"
 msgid "Printer setup"
 msgstr "Skrivarinställningar"
 
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "Skrivar&namn"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Utskriftskommando"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Miljövariabel"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Skriv ut till fil"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Sidor"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Alla"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "&Nuvarande"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Markerade"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "I&ntervall"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "till"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Skriv ut dokument i &omvänd ordning"
 
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Inställningar ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Felaktigt intervall"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

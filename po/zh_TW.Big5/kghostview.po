@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-04-21 02:55+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -154,65 +154,65 @@ msgstr "出版日期 :"
 msgid "Printer setup"
 msgstr "印表機設定"
 
-#: print.cpp:65
+#: print.cpp:61
 #, fuzzy
 msgid "&Printer name"
 msgstr "印表機名稱[&P]"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr ""
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "環境變數[&E]"
 
-#: print.cpp:160
+#: print.cpp:145
 #, fuzzy
 msgid "Print to file"
 msgstr "列印至檔案"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "頁"
 
-#: print.cpp:191
+#: print.cpp:176
 #, fuzzy
 msgid "&All"
 msgstr "全部[&A]"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "目前頁[&C]"
 
-#: print.cpp:208
+#: print.cpp:193
 #, fuzzy
 msgid "&Marked"
 msgstr "已標示[&M]"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "範圍[&R]"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr ""
 
-#: print.cpp:244
+#: print.cpp:229
 #, fuzzy
 msgid "Print document in re&verse order"
 msgstr "以反向順序列印文件[&V]"
 
-#: print.cpp:261
+#: print.cpp:246
 #, fuzzy
 msgid "&Setup ..."
 msgstr "設定[&S] ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "錯誤的範圍"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostscript VERSION\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Szâkely Krisztiﬂn <szekelyk@edasz.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -175,65 +175,65 @@ msgstr ""
 msgid "Printer setup"
 msgstr "Nyomtat neve"
 
-#: print.cpp:65
+#: print.cpp:61
 #, fuzzy
 msgid "&Printer name"
 msgstr "Nyomtat neve"
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr ""
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr ""
 
-#: print.cpp:160
+#: print.cpp:145
 #, fuzzy
 msgid "Print to file"
 msgstr "Nyomtatﬂsi hiba : lpr"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Oldalak"
 
-#: print.cpp:191
+#: print.cpp:176
 #, fuzzy
 msgid "&All"
 msgstr "Mind"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr ""
 
-#: print.cpp:208
+#: print.cpp:193
 #, fuzzy
 msgid "&Marked"
 msgstr "Kijel˜ltek"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr ""
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr ""
 
-#: print.cpp:244
+#: print.cpp:229
 #, fuzzy
 msgid "Print document in re&verse order"
 msgstr "Dokumentum nyomtatﬂs"
 
-#: print.cpp:261
+#: print.cpp:246
 #, fuzzy
 msgid "&Setup ..."
 msgstr "&Megnyit ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr ""
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"

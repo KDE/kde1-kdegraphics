@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -140,60 +140,60 @@ msgid "Printer setup"
 msgstr "打印机设置"
 
 #
-#: print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "打印机名[&P] ..."
 
-#: print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "脱机命令[&S]"
 
-#: print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "环境变量[&E]"
 
-#: print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "打印到文件"
 
-#: print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "页"
 
-#: print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "全部[&A]"
 
-#: print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "当前[&C]"
 
-#: print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "标记的[&M]"
 
-#: print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "范围[&R]"
 
-#: print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "到"
 
-#: print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "以反向顺序打印文章"
 
 #
-#: print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "设置[&S] ..."
 
-#: print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "范围错误"
 
-#: print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
