@@ -36,7 +36,7 @@ msgstr "Cercle"
 
 #: depthdialog.cpp:18
 msgid "Image Depth:"
-msgstr "Nombre de plans de couleurs :"
+msgstr "Nombre de bits de couleur :"
 
 #: depthdialog.cpp:24
 msgid "1 (2 Colours)"
@@ -76,7 +76,7 @@ msgstr "Format du fichier :"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
-msgstr "Nombre de plans de couleur :"
+msgstr "Nombre de bits de couleur :"
 
 #: infodialog.cpp:39
 msgid "Colours Used:"
@@ -92,7 +92,7 @@ msgstr "Hauteur de l'image :"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr "OK"
+msgstr "Fermer"
 
 #: kpaint.cpp:76 kpaint.cpp:754
 msgid "untitled.gif"
@@ -199,7 +199,7 @@ msgstr "Modifier la palette..."
 
 #: kpaint.cpp:458
 msgid "Change Colour Depth..."
-msgstr "Changer le nombre de plans de couleurs..."
+msgstr "Changer le nombre de couleurs..."
 
 #: kpaint.cpp:461
 msgid "Tool Properties..."
