@@ -19,7 +19,7 @@ Canvas::Canvas(int width, int height,
   currentTool= 0;
   s= INACTIVE;
   matrix= new QWMatrix;
-  zoomed= NULL;
+  zoomed= 0;
 
   // Create pixmap
   pix= new QPixmap(width, height);
@@ -42,7 +42,7 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
 {
   currentTool= 0;
   s= INACTIVE;
-  zoomed= NULL;
+  zoomed= 0;
   matrix= new QWMatrix;
 
   // Create pixmap
@@ -105,7 +105,7 @@ void Canvas::setZoom(int z)
   matrix->reset();
   matrix->scale((float) z/100, (float) z/100);
 
-  if (zoomed != NULL)
+  if (zoomed != 0)
     delete zoomed;
 
   w= (int) (pix->width()* ((float) zoomFactor/100));
@@ -126,7 +126,7 @@ void Canvas::setZoom(int z)
   repaint(0);
 }
 
-void Canvas::updateZoomed(void)
+void Canvas::updateZoomed()
 {
   QPainter p;
 /*  int w, h; */
@@ -141,7 +141,7 @@ void Canvas::updateZoomed(void)
   repaint(0);
 }
 
-int Canvas::zoom(void)
+int Canvas::zoom()
 {
   return zoomFactor;
 }
@@ -165,7 +165,7 @@ QPixmap *Canvas::pixmap()
   return pix;
 }
 
-QPixmap *Canvas::zoomedPixmap(void)
+QPixmap *Canvas::zoomedPixmap()
 {
   return zoomed;
 }

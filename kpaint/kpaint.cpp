@@ -7,11 +7,11 @@
 #include <qfiledlg.h>
 #include <qmsgbox.h>
 #include "QwViewport.h"
-#include <kmenubar.h>
 #include <kkeyconf.h>
 #include <ktopwidget.h>
 #include <ktoolbar.h>
 #include <kmsgbox.h>
+#include <kiconloader.h>
 #include <klocale.h>
 #include <config.h>
 #include <kurl.h>
@@ -24,6 +24,7 @@
 #include "palettedialog.h"
 #include "app.h"
 #include "infodialog.h"
+#include "depthdialog.h"
 #include "formatdialog.h"
 #include "formats.h"
 
@@ -41,7 +42,7 @@ KPaint::KPaint(const char *url_) : KTopLevelWidget()
   modified= false;
   filename= klocale->translate("untitled.gif");
   format= "GIF";
-  kfm= NULL;
+  kfm= 0;
 
   w= 300;
   h= 200;
@@ -58,21 +59,14 @@ KPaint::KPaint(const char *url_) : KTopLevelWidget()
   zoom= 100;
   openwins++;
 
-  initToolbar();
-  initStatus();
   initMenus();
+  initToolbars();
+  initStatus();
 
-  // Look at config file for these
-  toolbar->show();
-  statusbar->show();
-  addToolBar(toolbar);
-  setStatusBar(statusbar);
-  KToolBar *t= man->toolbar();
-  t->show();
-  addToolBar(t);
+  readOptions();
 
   // Was a URL specified?
-  if (url_ != NULL) {
+  if (url_ != 0) {
     QString u(url_);
 
     // Is there a ':'?
@@ -87,6 +81,15 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint:: initialising from file %s\n", url_);
       loadLocal(url_);
     }
   }
+
+  if (c->pixmap()->depth() > 8) {
+    allowEditPalette= false;
+  }
+  else {
+    allowEditPalette= true;
+  }
+
+  updateCommands();
 }
 
 KPaint::~KPaint()
@@ -146,42 +149,145 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp \'%s\'\n", filename.data());
   }
 
   if (openwins == 0)
-    ::exit(0);
+    kpaintApp->exit(0);
 }
 
-void KPaint::initToolbar()
+void KPaint::initToolbars()
 {
   QPixmap pixmap;
-  QString pixdir= kapp->kdedir().copy();
 
-  toolbar= new KToolBar(this);
+  // Create command toolbar
+  commandsToolbar= new KToolBar(this);
 
-  pixdir.append("/share/apps/kpaint/toolbar/");
-  pixmap.load(pixdir+"filenew.xpm");
-  toolbar->insertButton(pixmap, ID_NEW, TRUE, klocale->translate("New Canvas"));
+  pixmap= kapp->getIconLoader()->loadIcon( "filenew.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_NEW, TRUE, klocale->translate("New Canvas"));
 
-  pixmap.load(pixdir+"fileopen.xpm");
-  toolbar->insertButton(pixmap, ID_OPEN, TRUE, klocale->translate("Open File"));
+  pixmap= kapp->getIconLoader()->loadIcon( "fileopen.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_OPEN, TRUE, klocale->translate("Open File"));
 
-  pixmap.load(pixdir+"filefloppy.xpm");
-  toolbar->insertButton(pixmap, ID_SAVE, TRUE, klocale->translate("Save File"));
-  toolbar->insertSeparator();
+  pixmap= kapp->getIconLoader()->loadIcon( "filefloppy.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_SAVE, TRUE, klocale->translate("Save File"));
+  commandsToolbar->insertSeparator();
 
-  pixmap.load(pixdir+"editcopy.xpm");
-  toolbar->insertButton(pixmap, ID_COPY, FALSE, klocale->translate("Copy"));
+  pixmap= kapp->getIconLoader()->loadIcon( "editcopy.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_COPY, FALSE, klocale->translate("Copy"));
 
-  pixmap.load(pixdir+"editcut.xpm");
-  toolbar->insertButton(pixmap, ID_CUT, FALSE, klocale->translate("Cut"));
+  pixmap= kapp->getIconLoader()->loadIcon( "editcut.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_CUT, FALSE, klocale->translate("Cut"));
 
-  pixmap.load(pixdir+"editpaste.xpm");
-  toolbar->insertButton(pixmap, ID_PASTE, FALSE, klocale->translate("Paste"));
-  toolbar->insertSeparator();
+  pixmap= kapp->getIconLoader()->loadIcon( "editpaste.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_PASTE, FALSE, klocale->translate("Paste"));
+  commandsToolbar->insertSeparator();
 
-  pixmap.load(pixdir+"viewmag+.xpm");
-  toolbar->insertButton(pixmap, ID_ZOOMIN, TRUE, klocale->translate("Zoom In"));
+  pixmap= kapp->getIconLoader()->loadIcon( "viewmag+.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_ZOOMIN, TRUE, klocale->translate("Zoom In"));
 
-  pixmap.load(pixdir+"viewmag-.xpm");
-  toolbar->insertButton(pixmap, ID_ZOOMOUT, TRUE, klocale->translate("Zoom Out"));
+  pixmap= kapp->getIconLoader()->loadIcon( "viewmag-.xpm" );
+  commandsToolbar->insertButton(pixmap, ID_ZOOMOUT, TRUE, klocale->translate("Zoom Out"));
+
+  commandsToolbar->show();
+  addToolBar(commandsToolbar);
+
+  // Tools toolbar
+  toolsToolbar= man->toolbar();
+  toolsToolbar->show();
+  addToolBar(toolsToolbar);
+}
+
+void KPaint::updateCommands()
+{
+  if (allowEditPalette)
+    menu->setItemEnabled(ID_PALETTE, true);
+  else
+    menu->setItemEnabled(ID_PALETTE, false);
+}
+
+void KPaint::readOptions()
+{
+  KConfig *config = KApplication::getKApplication()->getConfig();
+  
+  config->setGroup( "Appearance" );
+  
+  // Read the entries
+  if (config->readNumEntry("ShowToolsToolBar", 1))
+    showToolsToolBar= true;
+  else
+    showToolsToolBar= false;
+
+  if (config->readNumEntry("ShowCommandsToolBar", 1))
+    showCommandsToolBar= true;
+  else
+    showCommandsToolBar= false;
+
+  if (config->readNumEntry("ShowStatusBar", 1))
+    showStatusBar= true;
+  else
+    showStatusBar= false;
+
+  updateControls();
+}
+
+void KPaint::writeOptions()
+{
+  KConfig *config = KApplication::getKApplication()->getConfig();
+
+  config->setGroup( "Appearance" );
+  
+  // Write the entries
+  if (showToolsToolBar)
+    config->writeEntry("ShowToolsToolBar", 1);
+  else
+    config->writeEntry("ShowToolsToolBar", 0);
+
+  if (showCommandsToolBar)
+    config->writeEntry("ShowCommandsToolBar", 1);
+  else
+    config->writeEntry("ShowCommandsToolBar", 0);
+
+  if (showStatusBar)
+    config->writeEntry("ShowStatusBar", 1);
+  else
+    config->writeEntry("ShowStatusBar", 0);
+
+  config->sync();
+}
+
+void KPaint::updateControls()
+{
+  if (showToolsToolBar) {
+    enableToolBar(KToolBar::Show, ID_TOOLSTOOLBAR);
+    menu->setItemChecked(ID_SHOWTOOLSTOOLBAR, true);
+  }
+  else {
+    enableToolBar(KToolBar::Hide, ID_TOOLSTOOLBAR);
+    menu->setItemChecked(ID_SHOWTOOLSTOOLBAR, false);
+  }
+
+  if (showCommandsToolBar) {
+    enableToolBar(KToolBar::Show, ID_COMMANDSTOOLBAR);
+    menu->setItemChecked(ID_SHOWCOMMANDSTOOLBAR, true);
+  }
+  else {
+    enableToolBar(KToolBar::Hide, ID_COMMANDSTOOLBAR);
+    menu->setItemChecked(ID_SHOWCOMMANDSTOOLBAR, false);
+  }
+
+  if (showStatusBar) {
+    enableStatusBar(KStatusBar::Show);
+    menu->setItemChecked(ID_SHOWSTATUSBAR, true);
+  }
+  else {
+    enableStatusBar(KStatusBar::Hide);
+    menu->setItemChecked(ID_SHOWSTATUSBAR, false);
+  }
+}
+
+void KPaint::canvasSizeChanged()
+{
+  QString size;
+
+  size.sprintf("%d x %d", c->width(), c->height());
+  statusbar->changeItem(size, ID_FILESIZE);
 }
 
 void KPaint::initStatus()
@@ -190,13 +296,16 @@ void KPaint::initStatus()
   statusbar= new KStatusBar(this);
 
   size.sprintf("%d x %d", c->width(), c->height());
-  statusbar->insertItem(size.data(), ID_FILESIZE);
+  statusbar->insertItem(size, ID_FILESIZE);
   statusbar->insertItem("100%", ID_ZOOMFACTOR);
 
   if (url.isEmpty())
     statusbar->insertItem(filename, ID_FILENAME);
   else
     statusbar->insertItem(url, ID_FILENAME);
+
+  statusbar->show();
+  setStatusBar(statusbar);
 }
 
 void KPaint::initMenus()
@@ -248,7 +357,8 @@ void KPaint::initMenus()
 
   QPopupMenu *options = new QPopupMenu;
   options->setCheckable(true);
-  options->insertItem( klocale->translate("Show Toolbar"), ID_SHOWTOOLBAR);
+  options->insertItem( klocale->translate("Show Tools Toolbar"), ID_SHOWTOOLSTOOLBAR);
+  options->insertItem( klocale->translate("Show Commands Toolbar"), ID_SHOWCOMMANDSTOOLBAR);
   options->insertItem( klocale->translate("Show Status Bar"), ID_SHOWSTATUSBAR);
   options->insertItem( klocale->translate("Save Options"), ID_SAVEOPTIONS);
 
@@ -257,7 +367,7 @@ void KPaint::initMenus()
   help->insertItem( klocale->translate("Release Notes"), ID_RELEASENOTES);
   help->insertItem( klocale->translate("About..."), ID_ABOUT);
 
-  KMenuBar *menu = new KMenuBar( this );
+  menu = new KMenuBar( this );
   menu->insertItem( klocale->translate("&File"), file );
   menu->insertItem( klocale->translate("&Edit"), edit );
   menu->insertItem( klocale->translate("&Image"), image );
@@ -348,16 +458,22 @@ void KPaint::handleCommand(int command)
     break;
 
     // Options
-  case ID_SHOWTOOLBAR:
-    enableToolBar(KToolBar::Toggle, ID_TOOLTOOLBAR);
-    enableToolBar(KToolBar::Toggle, ID_FILETOOLBAR);
+  case ID_SHOWTOOLSTOOLBAR:
+    showToolsToolBar= !showToolsToolBar;
+    updateControls();
+    break;
+  case ID_SHOWCOMMANDSTOOLBAR:
+    showCommandsToolBar= !showCommandsToolBar;
+    updateControls();
     break;
   case ID_SHOWMENUBAR:
     break;
   case ID_SHOWSTATUSBAR:
-    enableStatusBar();
+    showStatusBar= !showStatusBar;
+    updateControls();
     break;
   case ID_SAVEOPTIONS:
+    writeOptions();
     break;
 
   // Help
@@ -383,14 +499,14 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
 
   fmt= QPixmap::imageFormat(filename_);
 
-  if (fmt != NULL) {
+  if (fmt != 0) {
     if (c->load(filename_)) {
       result= true;
       format= fmt;
       filename= filename_;
       modified= false;
 
-      if (url_ == NULL) {
+      if (url_ == 0) {
 	url= "";
 	statusbar->changeItem(filename.data(), ID_FILENAME);
       }
@@ -398,10 +514,7 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
 	url= url_;
 	statusbar->changeItem(url.data(), ID_FILENAME);
       }
-
-
-      size.sprintf("%d x %d", c->width(), c->height());
-      statusbar->changeItem( size.data(), ID_FILESIZE);
+      canvasSizeChanged();
     }
     else {
       KMsgBox::message(0, klocale->translate("KPaint: Could not open file"),
@@ -452,7 +565,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Local file:%s\n",u.path());
     return loadLocal(u.path());
   }
 
-  if (kfm != NULL) {
+  if (kfm != 0) {
     QMessageBox::message (klocale->translate("Sorry"), 
 			  klocale->translate("KPaint is already accessing a remote file, you must\n"
 			  "cancel the current remote job or wait for it to complete."),
@@ -469,7 +582,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Local file:%s\n",u.path());
 			  klocale->translate("Error: KPaint could not find a running KFM or start one itself."),
 			  klocale->translate("Continue"));
     delete kfm;
-    kfm = NULL;
+    kfm = 0;
     return false;
   }
   
@@ -493,7 +606,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Local file:%s\n",u.path());
 
 void KPaint::KFMfinished()
 {
-  assert(kfm != NULL);
+  assert(kfm != 0);
 
   if (kfmOp == KfmPut)
     KFMputFinished();
@@ -503,13 +616,13 @@ void KPaint::KFMfinished()
 
 void KPaint::KFMgetFinished()
 {
-  assert(kfm != NULL);
+  assert(kfm != 0);
   const char *filename_;
   const char *url_;
 
   // Free the file manager
   delete kfm;
-  kfm= NULL;
+  kfm= 0;
 
 KDEBUG2(KDEBUG_INFO, 3000, "Fetch completed, loading %s as %s...\n", (const char *) filename, (const char *) url);
 
@@ -528,10 +641,10 @@ KDEBUG2(KDEBUG_INFO, 3000, "Fetch completed, loading %s as %s...\n", (const char
 
 void KPaint::KFMputFinished()
 {
-  assert(kfm != NULL);
+  assert(kfm != 0);
 
   delete kfm;
-  kfm= NULL;
+  kfm= 0;
 }
 
 bool KPaint::saveLocal(const char *filename_, const char *url_)
@@ -564,7 +677,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Save file:%s\n", u.path());
     return saveLocal(u.path(), url_);
   }
 
-  if (kfm != NULL) {
+  if (kfm != 0) {
     QMessageBox::message (klocale->translate("Sorry"), 
 			  klocale->translate("KPaint is already accessing a remote file, you must\n"
 			  "cancel the current remote job or wait for it to complete."),
@@ -581,7 +694,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Save file:%s\n", u.path());
 			  klocale->translate("Error: KPaint could not find a running KFM or start one itself."),
 			  klocale->translate("Continue"));
     delete kfm;
-    kfm = NULL;
+    kfm = 0;
     return false;
   }
   
@@ -604,7 +717,6 @@ void KPaint::fileNew()
 {
   int w, h;
   QPixmap p;
-  QString size;
   QString proto;
   canvasSizeDialog sz(0, klocale->translate("Canvas Size"));
 
@@ -636,8 +748,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data(
 
     statusbar->changeItem(filename.data(), ID_FILENAME);
 
-    size.sprintf("%d x %d", w, h);
-    statusbar->changeItem( size.data(), ID_FILESIZE);
+    canvasSizeChanged();
 
     repaint(0);
   }
@@ -732,22 +843,22 @@ void KPaint::fileExit()
 
 KDEBUG(KDEBUG_INFO, 3000, "fileExit()\n");
 
-    if (exit()) {
-      // Delete any temp files from the image
-      if (!url.isEmpty()) {
-	KURL u(url);
+  if (exit()) {
+    // Delete any temp files from the image
+    if (!url.isEmpty()) {
+      KURL u(url);
+      
+      if (!u.isMalformed()) {
+	proto= u.protocol();
 	
-	if (!u.isMalformed()) {
-	  proto= u.protocol();
-	  
-	  if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-	    unlink(filename);
-	  }
+	if (proto != "file") {
+	  KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
+	  unlink(filename);
 	}
       }
-    ::exit(0);
     }
+    kpaintApp->exit(0);
+  }
 }
 
 void KPaint::newWindow()
@@ -931,7 +1042,11 @@ KDEBUG(KDEBUG_INFO, 3000, "imageEditPalette()\n");
 
 void KPaint::imageChangeDepth()
 {
-KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
+  depthDialog d(c);
+  KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
+  if (d.exec()) {
+fprintf(stderr, "TODO: finish KPaint::imageChangeDepth()");
+  }
 }
 
 // Tool

@@ -20,8 +20,8 @@
 
 Manager::Manager(Canvas *c, QWidget *top) : QObject()
 {
-  assert(c != NULL);
-  assert(top != NULL);
+  assert(c != 0);
+  assert(top != 0);
   assert(!(c->isActive()));
 
 KDEBUG(KDEBUG_INFO, 3000, "Manager:: Constructing...\n");
@@ -45,7 +45,7 @@ Manager::~Manager()
   delete p;
 }
 
-void Manager::createTools(void)
+void Manager::createTools()
 {
   // Create the Tools
   list.setAutoDelete(TRUE);
@@ -63,7 +63,7 @@ void Manager::createTools(void)
 	  this, SLOT(updateProperties()) );
 }
 
-void Manager::updateProperties(void)
+void Manager::updateProperties()
 {
   QPen *tp;
   QBrush *tb;
@@ -78,7 +78,7 @@ void Manager::updateProperties(void)
   delete tb;
 }
 
-int Manager::getCurrentTool(void)
+int Manager::getCurrentTool()
 {
   return currentTool;
 }
@@ -102,7 +102,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "got setCurrentTool %d\n", tool);
 }
 
 
-void Manager::showPropertiesDialog(void)
+void Manager::showPropertiesDialog()
 {
   props->show();
 }
@@ -120,7 +120,7 @@ void Manager::initToolbar()
   QPixmap *pix;
   int i;
   const char *tip;
-  for (i= 0, tool= list.first(); tool != NULL; i++, tool= list.next()) {
+  for (i= 0, tool= list.first(); tool != 0; i++, tool= list.next()) {
     tip= tool->tip();
     pix= tool->pixmap();
 KDEBUG2(KDEBUG_INFO, 3000, "Adding Pix: %p  // %s\n", pix, tip);

@@ -9,6 +9,7 @@
 #include "QwViewport.h"
 #include <ktopwidget.h>
 #include <ktoolbar.h>
+#include <kmenubar.h>
 #include <kstatusbar.h>
 #include <kfm.h>
 #include <qrect.h>
@@ -20,7 +21,7 @@ class KPaint : public KTopLevelWidget
   Q_OBJECT
 
 public:
-  KPaint(const char *url_= NULL);
+  KPaint(const char *url_= 0);
   ~KPaint();
 
   void setPixmap(QPixmap *);
@@ -65,40 +66,74 @@ public slots:
   void handleCommand(int command);
 
 protected:
-  // Load file
-  bool loadLocal(const char *filename_, const char *url_= NULL);
-  bool loadRemote(const char *url_= NULL);
+  // Load/Save files
+  bool loadLocal(const char *filename_, const char *url_= 0);
+  bool loadRemote(const char *url_= 0);
   bool saveRemote(const char *url_);
-  bool saveLocal(const char *filename_, const char *url_= NULL);
+  bool saveLocal(const char *filename_, const char *url_= 0);
+
+  // remote file results
   void KFMgetFinished();
   void KFMputFinished();
+
+  // Should we really?
   int exit();
-  KFM *kfm;
+
   enum transferDirection { KfmNone, KfmGet, KfmPut };
 
 protected slots:
   void KFMfinished();
 
 private:
-  // actual local filename
-  QString filename;
-  // URL it came from or empty if local
-  QString url;
-  transferDirection kfmOp;
+  // Initialisation
+  void initToolbars();
+  void initMenus();
+  void initStatus();
+
+  // Catch close events
+  void closeEvent(QCloseEvent *);
+
+  // Update status item
+  void canvasSizeChanged();
+
+  // Read/write the options
+  void readOptions();
+  void writeOptions();
+
+  // Update toolbars/status bars etc.
+  void updateControls();
+  void updateCommands();
+
+  // Info about the currently open image
+  QString filename; // actual local filename
+  QString url; // URL it came from or empty if local
   QString tempURL;
   QString format;
   int zoom;
-  void closeEvent(QCloseEvent *e);
   bool modified;
 
+  // UI configuation
+  bool showStatusBar;
+  bool showCommandsToolBar;
+  bool showToolsToolBar;
+
+  // Command status
+  bool allowEditPalette;
+
+  // Kfm ipc stuff
+  KFM *kfm;
+  transferDirection kfmOp;
+
+  // Tool manager
+  Manager *man;
+
+  // Child widgets
   QwViewport *v;
   Canvas *c;
-  KToolBar *toolbar;
+  KToolBar *toolsToolbar;
+  KToolBar *commandsToolbar;
   KStatusBar *statusbar;
-  Manager *man;
-  void initToolbar(void);
-  void initMenus(void);
-  void initStatus(void);
+  KMenuBar *menu;
 };
 
 // Define generic command codes
@@ -133,6 +168,8 @@ private:
 #define ID_PALETTE 206
 #define ID_DEPTH 207
 #define ID_RELEASENOTES 208
+#define ID_SHOWTOOLSTOOLBAR 209
+#define ID_SHOWCOMMANDSTOOLBAR 210
 
 // Tags for statusbar items
 #define ID_FILESIZE 300
@@ -140,8 +177,8 @@ private:
 #define ID_FILENAME 302
 
 // Tags for toolbars
-#define ID_FILETOOLBAR 0
-#define ID_TOOLTOOLBAR 1
+#define ID_COMMANDSTOOLBAR 0
+#define ID_TOOLSTOOLBAR 1
 
 #endif
 

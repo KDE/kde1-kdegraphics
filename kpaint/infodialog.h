@@ -16,7 +16,7 @@ class imageInfoDialog : public QDialog
 
 public:
 
-    imageInfoDialog(Canvas *c, QWidget* parent = NULL, const char* name = NULL);
+    imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name= 0);
 
 private:
     QLabel* colourDepth;

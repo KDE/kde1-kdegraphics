@@ -27,9 +27,9 @@ public:
   Manager(Canvas *c, QWidget *top);
   ~Manager();
 
-  int getCurrentTool(void);
-  void showPropertiesDialog(void);
-  KToolBar *toolbar(void);
+  int getCurrentTool();
+  void showPropertiesDialog();
+  KToolBar *toolbar();
 
 public slots:
   void setCurrentTool(int);
@@ -38,8 +38,8 @@ public slots:
 signals:
   void toolChanged(int);
 protected:
-  void createTools(void);
-  void initToolbar(void);
+  void createTools();
+  void initToolbar();
 
 private:
   QList<Tool> list;

@@ -22,9 +22,8 @@ public:
   Canvas(int width, int height,
 	 QWidget *parent= 0, const char *name=0);
   Canvas(const char *filename, QWidget *parent= 0, const char *name=0);
-  void paintEvent(QPaintEvent *e);
 
-  QPixmap *pixmap(void);
+  QPixmap *pixmap();
   void setPixmap(QPixmap *);
 
   const QRect &selection();
@@ -32,21 +31,24 @@ public:
   void clearSelection();
   QPixmap *selectionData();
 
-  QPixmap *zoomedPixmap(void);
+  QPixmap *zoomedPixmap();
   void setZoom(int);
-  int zoom(void);
-  void updateZoomed(void);
+  int zoom();
+  void updateZoomed();
 
   bool load(const char *filename= 0, const char *format= 0);
   bool save(const char *filename= 0, const char *format= 0);
 
-  bool isActive(void);
+  bool isActive();
 
   // This controls which tool the events go to (if any)
   void activate(Tool *tool);
   void deactivate();
 
-  // Event redirectors
+  // Handle paint events
+  void paintEvent(QPaintEvent *e);
+
+  // Redirect events tools can use
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);
