@@ -432,6 +432,8 @@ void TopLevel::setupToolBar(){
 
   QString PIXDIR = mykapp->kde_toolbardir().copy();
 
+  PIXDIR += "/";
+
   QPixmap pixmap;
   toolbar = new KToolBar( this );
 
