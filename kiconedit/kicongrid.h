@@ -51,6 +51,7 @@
 #include "utils.h"
 #include "kcolorgrid.h"
 #include "kresize.h"
+#include "properties.h"
 
 enum Direction { In = 0, Out = 1, Up = In, Down = Out, Left, Right };
 

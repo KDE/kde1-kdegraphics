@@ -116,7 +116,27 @@ protected:
   QWidget::BackgroundMode bgmode;
 };
 
+class KMiscConfig : public QWidget
+{
+  Q_OBJECT
+public:
+  KMiscConfig(QWidget *parent);
+  ~KMiscConfig();
 
+public slots:
+  void saveSettings();
+  void pasteMode(bool);
+
+protected slots:
+
+signals:
+
+protected:
+  bool pastemode;
+  Properties *pprops;
+  QButtonGroup *btngrp;
+  QRadioButton *rbp;
+};
 
 class KIconConfig : public KNoteBook
 {
@@ -138,6 +158,7 @@ protected:
   KKeyChooser *keychooser;
   KTemplateConfig *temps;
   KBackgroundConfig *backs;
+  KMiscConfig *misc;
 };
 
 #endif //__KICONCONFIG_H__

@@ -18,10 +18,28 @@
     Boston, MA 02111-1307, USA.
 */  
 
+#include <kpixmap.h>
 #include "debug.h"
 #include "kicongrid.h"
 #include "main.h"
 
+const QImage *fixTransparence(QImage *image)
+{
+  *image = image->convertDepth(32);
+  image->setAlphaBuffer(true);
+  for(int y = 0; y < image->height(); y++)
+  {
+    uint *l = (uint*)image->scanLine(y);
+    for(int x = 0; x < image->width(); x++, l++)
+    {
+      if(*l < OPAQUE_MASK)
+      {
+        *l = TRANSPARENT;
+      }
+    }
+  }
+  return image;
+}
 
 KIconEditGrid::KIconEditGrid(QWidget *parent, const char *name)
  : KColorGrid(parent, name, 1)
@@ -497,7 +515,8 @@ void KIconEditGrid::checkClipboard()
 {
   bool ok = false;
   const QImage *tmp = clipboardImage(ok);
-  delete tmp;
+  if(tmp)
+    delete tmp;
   if(ok)
     emit clipboarddata(true);
   else
@@ -515,11 +534,17 @@ const QImage *KIconEditGrid::clipboardImage(bool &ok)
   iio.setIODevice(&buf);
   iio.setFormat("XPM");
   
+  QImage *image = 0L;
   if(iio.read() && !iio.image().isNull())
+  {
+    image = new QImage(iio.image().convertDepth(32));
+    image->setAlphaBuffer(true);
     ok = true;
+  }
 
   buf.close();
-  return new QImage(iio.image());
+
+  return image;
 }
 
 void KIconEditGrid::editSelectAll()
@@ -603,13 +628,11 @@ void KIconEditGrid::editCopy(bool cut)
   QImage *sel = getSelection(cut);
 
   sel->setAlphaBuffer(true);
-  QImage tmp(sel->convertDepth(8));
-  tmp.setAlphaBuffer(true);
   QString str = "";
   QBuffer buf(str);
   buf.open(IO_WriteOnly);
   QImageIO iio;
-  iio.setImage(tmp);
+  iio.setImage(*sel);
   iio.setIODevice(&buf);
   iio.setFormat("XPM");
   iio.setDescription("Created by KDE Draw");
@@ -634,6 +657,9 @@ void KIconEditGrid::editPaste(bool paste)
 {
   bool ok = false;
   const QImage *tmp = clipboardImage(ok);
+  fixTransparence((QImage*)tmp);
+
+  Properties *pprops = props(this);
 
   if(ok)
   {
@@ -657,24 +683,22 @@ void KIconEditGrid::editPaste(bool paste)
     }
     else
     {
-      QImage *tmp2 = new QImage(tmp->convertDepth(32));
-      tmp2->setAlphaBuffer(true);
-      debug("KIconEditGrid: Pasting at: %d x %d", insrect.x(), insrect.y());
+      //debug("KIconEditGrid: Pasting at: %d x %d", insrect.x(), insrect.y());
 
       QApplication::setOverrideCursor(waitCursor);
 
       for(int y = insrect.y(), ny = 0; y < numRows(), ny < insrect.height(); y++, ny++)
       {
         uint *l = ((uint*)img->scanLine(y)+insrect.x());
-        uint *cl = (uint*)tmp2->scanLine(ny);
+        uint *cl = (uint*)tmp->scanLine(ny);
         for(int x = insrect.x(), nx = 0; x < numCols(), nx < insrect.width(); x++, nx++, l++, cl++)
         {
-          //debug("img: %d x %d - tmp: %d x %d", x, y, nx, ny);
-          //debug("RGB: %d %d %d", qRed((uint)*cl), qGreen(*cl), qBlue(*cl));
-          *l = *cl;
-          setColor((y*numCols())+x, (uint)*cl, false);
+          if(*cl != TRANSPARENT || pprops->pastetransparent)
+          {
+            *l = *cl;
+            setColor((y*numCols())+x, (uint)*cl, false);
+          }
         }
-        //kapp->processEvents(250);
       }
       updateColors();
       repaint(insrect.x()*cellSize(), insrect.y()*cellSize(),
@@ -682,7 +706,6 @@ void KIconEditGrid::editPaste(bool paste)
 
       QApplication::restoreOverrideCursor();
 
-      delete tmp2;
       modified = true;
       p = *img;
       emit changed(QPixmap(p));
@@ -1141,14 +1164,191 @@ bool KIconEditGrid::isMarked(int x, int y)
   return false;
 }
 
+// Fast diffuse dither to 3x3x3 color cube
+// Based on Qt's image conversion functions
+static bool kdither_32_to_8( const QImage *src, QImage *dst )
+{
+    register QRgb *p;
+    uchar  *b;
+    int	    y;
+	
+	//printf("kconvert_32_to_8\n");
+	
+    if ( !dst->create(src->width(), src->height(), 8, 256) ) {
+		warning("KPixmap: destination image not valid\n");
+		return FALSE;
+	}
+
+    int ncols = 256;
+
+    static uint bm[16][16];
+    static int init=0;
+    if (!init) {
+		// Build a Bayer Matrix for dithering
+
+		init = 1;
+		int n, i, j;
+
+		bm[0][0]=0;
+
+		for (n=1; n<16; n*=2) {
+	    	for (i=0; i<n; i++) {
+			for (j=0; j<n; j++) {
+		    	bm[i][j]*=4;
+		    	bm[i+n][j]=bm[i][j]+2;
+		    	bm[i][j+n]=bm[i][j]+3;
+		    	bm[i+n][j+n]=bm[i][j]+1;
+			}
+	    	}
+		}
+
+		for (i=0; i<16; i++)
+	    	for (j=0; j<16; j++)
+			bm[i][j]<<=8;
+    }
+
+    dst->setNumColors( ncols );
+
+#define MAX_R 2
+#define MAX_G 2
+#define MAX_B 2
+#define INDEXOF(r,g,b) (((r)*(MAX_G+1)+(g))*(MAX_B+1)+(b))
+
+	int rc, gc, bc;
+
+	for ( rc=0; rc<=MAX_R; rc++ )		// build 2x2x2 color cube
+	    for ( gc=0; gc<=MAX_G; gc++ )
+		for ( bc=0; bc<=MAX_B; bc++ ) {
+		    dst->setColor( INDEXOF(rc,gc,bc),
+			qRgb( rc*255/MAX_R, gc*255/MAX_G, bc*255/MAX_B ) );
+		}	
+
+	int sw = src->width();
+	int* line1[3];
+	int* line2[3];
+	int* pv[3];
+
+	line1[0] = new int[src->width()];
+	line2[0] = new int[src->width()];
+	line1[1] = new int[src->width()];
+	line2[1] = new int[src->width()];
+	line1[2] = new int[src->width()];
+	line2[2] = new int[src->width()];
+	pv[0] = new int[sw];
+	pv[1] = new int[sw];
+	pv[2] = new int[sw];
+
+	for ( y=0; y < src->height(); y++ ) {
+	    p = (QRgb *)src->scanLine(y);
+	    b = dst->scanLine(y);
+		int endian = (QImage::systemByteOrder() == QImage::BigEndian);
+		int x;
+		uchar* q = src->scanLine(y);
+		uchar* q2 = src->scanLine(y+1 < src->height() ? y + 1 : 0);
+		for (int chan = 0; chan < 3; chan++) {
+		    b = dst->scanLine(y);
+		    int *l1 = (y&1) ? line2[chan] : line1[chan];
+		    int *l2 = (y&1) ? line1[chan] : line2[chan];
+		    if ( y == 0 ) {
+			for (int i=0; i<sw; i++)
+			    l1[i] = q[i*4+chan+endian];
+		    }
+		    if ( y+1 < src->height() ) {
+			for (int i=0; i<sw; i++)
+			    l2[i] = q2[i*4+chan+endian];
+		    }
+		    // Bi-directional error diffusion
+		    if ( y&1 ) {
+			for (x=0; x<sw; x++) {
+			    int pix = QMAX(QMIN(2, (l1[x] * 2 + 128)/ 255), 0);
+			    int err = l1[x] - pix * 255 / 2;
+			    pv[chan][x] = pix;
+
+			    // Spread the error around...
+			    if ( x+1<sw ) {
+				l1[x+1] += (err*7)>>4;
+				l2[x+1] += err>>4;
+			    }
+			    l2[x]+=(err*5)>>4;
+			    if (x>1) 
+				l2[x-1]+=(err*3)>>4;
+			}
+		    } else {
+			for (x=sw; x-->0; ) {
+			    int pix = QMAX(QMIN(2, (l1[x] * 2 + 128)/ 255), 0);
+			    int err = l1[x] - pix * 255 / 2;
+			    pv[chan][x] = pix;
+
+			    // Spread the error around...
+			    if ( x > 0 ) {
+				l1[x-1] += (err*7)>>4;
+				l2[x-1] += err>>4;
+			    }
+			    l2[x]+=(err*5)>>4;
+			    if (x+1 < sw) 
+				l2[x+1]+=(err*3)>>4;
+			}
+		    }
+		}
+		if (endian) {
+		    for (x=0; x<sw; x++) {
+			*b++ = INDEXOF(pv[2][x],pv[1][x],pv[0][x]);
+		    }
+		} else {
+		    for (x=0; x<sw; x++) {
+			*b++ = INDEXOF(pv[0][x],pv[1][x],pv[2][x]);
+		    }
+		}
+	}
+
+	delete line1[0];
+	delete line2[0];
+	delete line1[1];
+	delete line2[1];
+	delete line1[2];
+	delete line2[2];
+	delete pv[0];
+	delete pv[1];
+	delete pv[2];
+	
+#undef MAX_R
+#undef MAX_G
+#undef MAX_B
+#undef INDEXOF
+
+    return TRUE;
+}
+
+// this doesn't work the way it should but the way KPixmap does.
 void KIconEditGrid::mapToKDEPalette()
 {
+  QImage dest;
+
+  kdither_32_to_8(img, &dest);
+  *img = dest;
+  *img = img->convertDepth(32);
+
+  for(int y = 0; y < img->height(); y++)
+  {
+    uint *l = (uint*)img->scanLine(y);
+    for(int x = 0; x < img->width(); x++, l++)
+    {
+      if(*l < 0xff000000)
+      {
+        *l = *l | 0xff000000;
+      }
+    }
+  }
+
+  load(img);
+  return;
+/*
 #if QT_VERSION > 140
   *img = img->convertDepthWithPalette(32, iconpalette, 42);
   load(img);
   return;
 #endif
-
+*/
   QApplication::setOverrideCursor(waitCursor);
   for(int y = 0; y < numRows(); y++)
   {

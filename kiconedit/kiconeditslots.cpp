@@ -303,7 +303,7 @@ void KIconEdit::slotConfigure(int id)
         options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, true);
         ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(true);
         //toolbar->setButton(ID_OPTIONS_TOGGLE_GRID, true);
-        props(this)->showgrid = false;
+        props(this)->showgrid = true;
         grid->setGrid(true);
       }
       break;

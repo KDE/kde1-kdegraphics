@@ -72,6 +72,7 @@ KIconEditProperties::KIconEditProperties(QWidget *parent) : QObject()
   debug("BackgroundPixmap: %s", pprops->backgroundpixmap.data());
 
   config->setGroup( "Grid" );
+  pprops->pastetransparent = config->readBoolEntry( "PasteTransparent", false );
   pprops->showgrid = config->readBoolEntry( "ShowGrid", true );
   pprops->gridscaling = config->readNumEntry( "GridScaling", 10 );
 }
@@ -127,6 +128,7 @@ void KIconEditProperties::saveProperties(QWidget *parent)
   config->writeEntry("MenuBarPos", (int)pprops->menubarpos);
 
   config->setGroup( "Grid" );
+  config->writeEntry("PasteTransparent", pprops->pastetransparent);
   config->writeEntry("ShowGrid", pprops->showgrid);
   config->writeEntry("GridScaling", pprops->gridscaling);
 }

@@ -234,10 +234,11 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent) : QWidget(parent)
 
   pprops = KIconEditProperties::getProperties(parent);
   color = pprops->backgroundcolor;
-  pix.load(pprops->backgroundpixmap.data());
+  pixpath = pprops->backgroundpixmap;
+  pix.load(pixpath.data());
   if(pix.isNull())
   {
-    debug("BGPIX: %s not valid!", pprops->backgroundpixmap.data());
+    debug("BGPIX: %s not valid!", pixpath.data());
     QPixmap pmlogo((const char**)logo);
     pix = pmlogo;
   }
@@ -354,10 +355,12 @@ void KBackgroundConfig::slotBackgroundMode(int id)
 
 void KBackgroundConfig::saveSettings()
 {
+  debug("KBackgroundConfig::saveSettings");
   Properties *pprops = props(this);
   pprops->backgroundmode = bgmode;
   pprops->backgroundpixmap = pixpath;
   pprops->backgroundcolor = color;
+  debug("KBackgroundConfig::saveSettings - done");
 }
 
 void KBackgroundConfig::selectColor()
@@ -382,6 +385,54 @@ void KBackgroundConfig::selectPixmap()
       pixpath = path;
     }
   }
+}
+
+KMiscConfig::KMiscConfig(QWidget *parent) : QWidget(parent)
+{
+  debug("KMiscConfig - constructor");
+  initMetaObject();
+
+  pprops = props(parent);
+
+  QGroupBox *grp1 = new QGroupBox(i18n("Paste mode"), this);
+
+  QRadioButton *rbp = new QRadioButton(i18n("Paste transparent pixels"), grp1);
+  rbp->setFixedSize(rbp->sizeHint());
+  connect(rbp, SIGNAL(toggled(bool)), SLOT(pasteMode(bool)));
+
+  QBoxLayout *ml = new QVBoxLayout(this);
+
+  QBoxLayout *l1 = new  QVBoxLayout(grp1, 20);
+
+  l1->addWidget(rbp, 0, AlignLeft);
+
+  pastemode = pprops->pastetransparent;
+  if(pastemode)
+    rbp->setChecked(true);
+
+  ml->addWidget(grp1);
+  ml->addStretch(1);
+  l1->activate();
+  ml->activate();
+
+  debug("KMiscConfig - constructor done");
+}
+
+KMiscConfig::~KMiscConfig()
+{
+
+}
+
+void KMiscConfig::saveSettings()
+{
+  debug("KMiscConfig::saveSettings");
+  pprops->pastetransparent = pastemode;
+  debug("KMiscConfig::saveSettings - done");
+}
+
+void KMiscConfig::pasteMode(bool mode)
+{
+  pastemode = mode;
 }
 
 KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
@@ -449,6 +500,18 @@ KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
   p->enabled = true;
   addPage( p );
 
+  misc = new KMiscConfig(this);
+
+  tab = new QTab;            // create a QTab to hold the tab data
+  tab->label = i18n("Miscellaneous");
+  tab->enabled = true;
+  addTab( tab );
+  p = new KWizardPage;
+  p->w = misc;
+  p->title = i18n("Paste mode");
+  p->enabled = true;
+  addPage( p );
+
   setSizes();
 
   debug("KIconConfig - constructor - done");
@@ -461,13 +524,14 @@ KIconConfig::~KIconConfig()
 
 void KIconConfig::saveSettings()
 {
-  debug("OK clicked");
+  debug("KIconEditConfig::saveSettings");
 
   pprops->keys->setKeyDict(pprops->keydict);
   debug("KIconEditConfig::saveSettings - keys saved");
   temps->saveSettings();
   backs->saveSettings();
-  debug("KIconEditConfig::saveSettings - templates saved");
+  misc->saveSettings();
+  debug("KIconEditConfig::saveSettings - done");
   accept();
 }
 
