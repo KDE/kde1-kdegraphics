@@ -1,10 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# kghostview prijevod
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Vladimir Vuksan <vuksan@veus.hr>, 1998.
+#
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
@@ -557,6 +558,10 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
+"Izabrali ste ispisivanje svih strana u datoteku.\n"
+"To æe stvoriti dokument istovjetan\n"
+"ovom koji je trenutno u pregledniku.\n"
+"Nema potrebe za ispisivanjem svih strana u novu datoteku."
 
 #: kghostview.cpp:1582
 msgid ""

@@ -39,6 +39,7 @@
 #include <qlined.h>
 #include <qlistbox.h>
 #include <qpushbt.h>
+#include <qprinter.h>
 #include <qradiobt.h>
 #include <qtooltip.h>
 
