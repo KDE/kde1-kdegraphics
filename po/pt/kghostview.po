@@ -290,7 +290,7 @@ msgstr "Configurar &interpretador ..."
 
 #: kghostview.cpp:564
 msgid "Configure &key bindings ..."
-msgstr "Configurar dependências de &teclas ..."
+msgstr "Configurar &teclas ..."
 
 #: kghostview.cpp:566
 msgid "&Save options"
