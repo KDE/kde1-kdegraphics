@@ -10,22 +10,74 @@
 #include "areaselect.h"
 #include "app.h"
 
+#define TIMER_INTERVALL 600
+
+
 AreaSelect::AreaSelect(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
-
+  showedSF= false;
   tooltip= klocale->translate("Area Selection");
   props= 0;
 }
 
+/*
 AreaSelect::~AreaSelect()
 {
+}
+*/
+
+void 
+AreaSelect::selection(bool b)
+{
+  debug("AreaSelect::selection %i",b);
+  if (!b) {
+    disableSelection();
+  }
+}
+
+void 
+AreaSelect::disableSelection()
+{
+  // stop all the timer 
+  killTimers();
+  if (showedSF) {
+    QPainter paint;
+    paint.begin(canvas->zoomedPixmap());
+    paint.setPen(QPen(green, 0, DashLine));
+    paint.setRasterOp(DEFAULT_RASTER_OP);
+    paint.drawRect(startx, starty, lastx-startx, lasty-starty);
+    paint.end();
+    canvas->repaint(0);
+    showedSF = false;
+  }
 }
 
 void AreaSelect::activating()
 {
   KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::activating() hook called\n");
   canvas->setCursor(crossCursor);
+}
+
+void AreaSelect::deactivating()
+{
+  KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::deactivating() hook called\n");
+  // erase old selection frame
+  disableSelection();
+  canvas->clearSelection();
+}
+
+void
+AreaSelect::timerEvent(QTimerEvent *)
+{
+  QPainter paint;
+  paint.begin(canvas->zoomedPixmap());
+  paint.setPen(QPen(green, 0, DashLine));
+  paint.setRasterOp(DEFAULT_RASTER_OP);
+  paint.drawRect(startx, starty, lastx-startx, lasty-starty);
+  paint.end();
+  canvas->repaint(0);
+  showedSF = !showedSF;
 }
 
 void AreaSelect::mousePressEvent(QMouseEvent *e)
@@ -37,6 +89,9 @@ void AreaSelect::mousePressEvent(QMouseEvent *e)
       KDEBUG(KDEBUG_WARN, 3000, "AreaSelect: Warning Left Button press received when pressed\n");
     }
     else {
+      // erase old selection frame
+      disableSelection();
+      // mark new frame beginning
       startx= (e->pos()).x();
       starty= (e->pos()).y();
       lastx= startx;
@@ -62,7 +117,7 @@ void AreaSelect::mouseMoveEvent(QMouseEvent *e)
       if (drawing) {
 	paint.begin(canvas->zoomedPixmap());
 	paint.setPen(QPen(green, 0, DashLine));
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	// Erase old rectangle
 	paint.drawRect(startx, starty, lastx-startx, lasty-starty);
@@ -97,7 +152,7 @@ KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::mouseReleaseEvent() handler called\n");
     // Erase old line
     paint.begin(canvas->zoomedPixmap());
     paint.setPen(QPen(green, 0, DashLine));
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
     paint.drawRect(startx, starty, lastx-startx, lasty-starty);
 
     paint.end();
@@ -112,6 +167,9 @@ KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::mouseReleaseEvent() handler called\n");
     drawing= FALSE;
     canvas->updateZoomed();
     canvas->repaint(0);
+
+    startTimer(TIMER_INTERVALL);
+    showedSF= false;
   }
   else {
 KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
@@ -127,3 +185,5 @@ QPixmap *AreaSelect::pixmap()
   pixdir.append("areaselect.xpm");
   return new QPixmap(pixdir);
 }
+
+#include "areaselect.moc"

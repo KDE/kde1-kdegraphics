@@ -17,19 +17,20 @@ kpaint_SOURCES = main.cpp app.cpp canvas.cpp kpaint.cpp manager.cpp \
 	formatdialog.cpp canvassize.cpp properties.cpp gif.cpp jpeg.cpp \
 	QwViewport.cpp tool.cpp ellipse.cpp circle.cpp line.cpp \
 	spraycan.cpp rectangle.cpp pen.cpp areaselect.cpp depthdialog.cpp \
-	roundangle.cpp navwidget.cpp sidebar.cpp view.cpp
+	roundangle.cpp navwidget.cpp sidebar.cpp view.cpp colorbar.cpp \
+	mainview.cpp
 
 noinst_HEADERS = QwViewport.h areaselect.h canvas.h canvassize.h circle.h \
 	depthdialog.h ellipse.h formatdialog.h formats.h gif.h infodialog.h \
 	jpeg.h kpaint.h kundo.h line.h main.h manager.h navwidget.h palette.h \
 	palettedialog.h pen.h properties.h rectangle.h roundangle.h sidebar.h \
-	spraycan.h tool.h version.h view.h
+	spraycan.h tool.h version.h view.h colorbar.h mainview.h
 
 DISTCLEANFILES = canvas.moc app.moc kpaint.moc manager.moc infodialog.moc \
 	depthdialog.moc properties.moc formatdialog.moc palette.moc \
 	palettedialog.moc QwViewport.moc tool.moc spraycan.moc circle.moc \
 	navwidget.moc sidebar.moc view.moc rectangle.moc roundangle.moc \
-	pen.moc ellipse.moc
+	pen.moc ellipse.moc colorbar.moc mainview.moc areaselect.moc
 
 bin_PROGRAMS = kpaint
 
@@ -135,3 +136,15 @@ rectangle.cpp:rectangle.moc
 rectangle.moc: rectangle.h
 	$(MOC) rectangle.h -o rectangle.moc
 
+
+colorbar.cpp: colorbar.moc
+colorbar.moc: colorbar.h
+	$(MOC) colorbar.h -o colorbar.moc
+
+mainview.cpp: mainview.moc
+mainview.moc: mainview.h
+	$(MOC) mainview.h -o mainview.moc
+
+areaselect.cpp: areaselect.moc
+areaselect.moc: areaselect.h
+	$(MOC) areaselect.h -o areaselect.moc

@@ -1,3 +1,13 @@
+This file lists known bugs in KPaint 0.4.3
+==========================================
+- resize from 15x15 to 200x300 results in 1200x1800 in statusbar
+	and 200x300 in infodialog at 600% zoom
+- spraycan sprays little pix in zoom.
+- Filenames aren't accepted <:-} unbekannt.xpm is default
+- xpmfiles aren't written.
+- Toolbar 2x same tool clicked is deselected -> wrong
+
+
 This file lists known bugs in KPaint 0.3.1
 ==========================================
 

@@ -14,6 +14,13 @@
 #include "canvas.h"
 #include "tool.h"
 
+#define CUT_FILL_RGB 0xFFFFFF //white
+
+// static initialisers
+// can't construct a pixmap before qapplication
+QPixmap *Canvas::clipboardPix = NULL;
+int Canvas::inst = 0;
+
 Canvas::Canvas(int width, int height,
 	       QWidget *parent, const char *name)
   : QWidget(parent, name)
@@ -37,6 +44,13 @@ Canvas::Canvas(int width, int height,
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
   emit sizeChanged();
+  
+  if ((0 == inst) && (NULL == Canvas::clipboardPix)) {
+    debug("install clipboard");
+    Canvas::clipboardPix = new QPixmap;
+  }
+  Canvas::inst++;
+  
 }
 
 Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
@@ -62,7 +76,25 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
 
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
+  
+  if ((0 == inst) && (NULL == Canvas::clipboardPix)) {
+    debug("install clipboard");
+    Canvas::clipboardPix = new QPixmap;
+  }
+  Canvas::inst++;
+  
 }
+
+Canvas::~Canvas()
+{
+  /*
+  inst--;
+  if ((0 == inst) && (NULL != Canvas::clipboardPix)) {
+    delete Canvas::clipboardPix;
+    Canvas::clipboardPix = NULL;
+  }
+  */
+}   
 
 bool Canvas::isModified()
 {
@@ -87,6 +119,7 @@ void Canvas::setSelection(const QRect &rect)
 {
   selection_= rect;
   haveSelection_= true;
+  emit selection(true);
 }
 
 const QRect &Canvas::selection()
@@ -98,6 +131,7 @@ void Canvas::clearSelection()
 {
   haveSelection_= false;
   selection_= QRect(0,0,0,0);
+  emit selection(false);
 }
 
 QPixmap *Canvas::selectionData()
@@ -116,6 +150,48 @@ QPixmap *Canvas::selectionData()
 
   return p;
 }
+
+// -------- CUT / COPY / PASTE ------------
+
+/* currently not implemented */
+void 
+Canvas::cut()
+{
+  if (haveSelection_) {
+    // copy the selection and fill the 
+    // copied rect with CUT_FILL_RGB, mostly white, see definition above
+    copy();
+    const QColor c((QRgb)CUT_FILL_RGB);
+    QPixmap p(selection_.size());
+    p.fill(c);
+    bitBlt(pix, selection_.topLeft(), &p, selection_, CopyROP);    
+  }
+}
+
+
+void 
+Canvas::copy()
+{
+  if (haveSelection_) {
+    Canvas::clipboardPix->resize(selection_.size());
+    const QPoint p(0,0);
+    bitBlt(Canvas::clipboardPix, p, pix, selection_, CopyROP);
+    clearSelection();
+    emit clipboard(true);
+  }
+}
+
+void
+Canvas::paste()
+{
+#warning "paste not implemented"
+  warning("paste from clipboard not implemented");
+  
+  clearSelection();
+}
+
+
+// ---------- ZOOM ------------------------
 
 void Canvas::setZoom(int z)
 {
@@ -298,10 +374,11 @@ bool Canvas::load(const char *filename, const char *format)
   QPixmap p;
   QPixmap q; // Fix UMR when reading transparent pixels (they hold junk)
 
-  if (!format)
+  if (!format) { // format == NULL
     s= p.load(filename);
-  else
+  } else {
     s= p.load(filename, format);
+  }
 
   if (s) {
     q.resize(p.size());

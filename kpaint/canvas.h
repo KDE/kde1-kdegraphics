@@ -16,12 +16,14 @@ class Tool;
 
 class Canvas : public QWidget
 {
-  Q_OBJECT
+Q_OBJECT
 
 public:
-  Canvas(int width, int height,
-	 QWidget *parent= 0, const char *name=0);
-  Canvas(const char *filename, QWidget *parent= 0, const char *name=0);
+Canvas(int width, int height,
+       QWidget *parent= 0, const char *name=0);
+Canvas(const char *filename,
+       QWidget *parent= 0, const char *name=0);
+~Canvas();
 
   QPixmap *pixmap();
   void setPixmap(QPixmap *);
@@ -30,8 +32,16 @@ public:
 
   const QRect &selection();
   void setSelection(const QRect&);
+  inline bool hasSelection() const;
   void clearSelection();
   QPixmap *selectionData();
+
+  void cut(); // cuts from selection into clipboard
+  void copy(); // copys from selection into clipboard
+  void paste(); // paste from clipboard into canvas
+  static inline bool hasClipboardData();
+  static inline const QPixmap *clipboardData();
+
 
   QPixmap *zoomedPixmap();
   void setZoom(int);
@@ -67,6 +77,8 @@ signals:
   void sizeChanged();
   void pixmapChanged(QPixmap *);
   void modified();
+  void selection(bool);
+  void clipboard(bool);
 
 protected:
   enum state {
@@ -88,6 +100,11 @@ protected:
   QPixmap *pix;
 
   /**
+   * Clipboard Data from Cut/Copy
+   */
+  static QPixmap *clipboardPix;
+
+  /**
    * % of original size
    */
   int zoomFactor;
@@ -99,11 +116,24 @@ protected:
   state s;
   QRect selection_;
   bool haveSelection_;
+
+  static int inst; // how many instances have we ?
 };
 
-int Canvas::getDepth()
+int 
+Canvas::getDepth()
 { return pix->depth(); }
 
+bool 
+Canvas::hasSelection() const
+{ return haveSelection_; }
+
+bool 
+Canvas::hasClipboardData()
+{ return (NULL==clipboardPix)? false : !Canvas::clipboardPix->isNull(); }
+
+const QPixmap *
+Canvas::clipboardData()
+{ return Canvas::clipboardPix; }
+
 #endif // CANVAS_H
-
-

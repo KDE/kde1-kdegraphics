@@ -58,6 +58,7 @@ Manager::~Manager()
 
 void Manager::createTools()
 {
+  AreaSelect *as; // handled different because of slot
   // Create the Tools
   list.setAutoDelete(TRUE);
   list.append(new Ellipse( i18n("Ellipse")));
@@ -72,8 +73,11 @@ void Manager::createTools()
   list.last()->id = 4;
   list.append(new SprayCan( i18n("Spray Can")));
   list.last()->id = 5;
-  list.append(new AreaSelect( i18n("Area Select")));
-  list.last()->id = 6;
+  as = new AreaSelect( i18n("Area Select"));
+  connect(canvas, SIGNAL(selection(bool)),
+	  as, SLOT(selection(bool)));
+  list.append(as);
+  as->id = 6;
   list.append(new Roundangle( i18n("Round Angle")));
   list.last()->id = 7;
 
@@ -114,10 +118,12 @@ warning("setRMBcolour\n");
 
 void Manager::setCurrentTool(int tool)
 {
+  /*
   KDEBUG1(KDEBUG_INFO, 3000,
 	  "got setCurrentTool %d\n", tool);
   KDEBUG1(KDEBUG_INFO, 3000,
 	  " old Tool is %d\n", currentToolID);
+  */
   Tool *t;
 
   if (currentToolID != tool) {

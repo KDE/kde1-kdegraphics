@@ -33,46 +33,86 @@
 #include "formats.h"
 #include "view.h"
 #include "sidebar.h"
+#include "colorbar.h"
+#include "mainview.h"
 
 #include <unistd.h>
 #include <time.h>
 
 #define max(x,y) (x>y?x:y)
+/* color definitions in RGB */
+#define RED_FILT 0x0000FF
+#define GREEN_FILT 0x00FF00
+#define BLUE_FILT 0xFF0000
+#define DARK_FILT 0x808080
 
+#define WHITE 0xFFFFFF
+
+#define RED (WHITE & RED_FILT)
+#define GREEN (WHITE & GREEN_FILT)
+#define BLUE (WHITE & BLUE_FILT)
+#define CYAN (GREEN | BLUE)
+#define MAGENTA (RED | BLUE)
+#define YELLOW (RED | GREEN)
+#define DARK_RED (DARK_FILT & RED)
+#define DARK_GREEN (DARK_FILT & GREEN)
+#define DARK_BLUE (DARK_FILT & BLUE)
+#define DARK_CYAN (DARK_FILT & CYAN)
+#define DARK_MAGENTA (DARK_FILT & MAGENTA)
+#define DARK_YELLOW (DARK_FILT & YELLOW)
+#define LIGHT_GREY 0xC0C0C0
+#define GREY 0xA4A0A0
+#define DARK_GREY (DARK_FILT & WHITE)
+#define BLACK 0x000000
 
 extern FormatManager *formatMngr;
 extern int openwins;
 
 KPaint::KPaint(const char *url) : KTopLevelWidget()
 {
-  int w, h; 
+  /*  int w, h; */
 
   modified= false;
   filename= i18n("untitled.gif");
   format= "GIF";
 
+  /*
   w= 300;
   h= 200;
+  */
 
 /* obsolet (jha)
    keys = new KAccel(this); */
 
+  /*
   View *view= new View(this, "view container");
   v= new QwViewport(view);
   c= new Canvas(w, h, v->portHole());
+  */
+  mv = new MainView(this);
+  v = mv->getViewport();
+  c = mv->getCanvas();
+  SideBar *side = mv->getSideBar();
 
   v->resize(c->size());
 
-  setView(view);
+  /*  setView(view);*/
+  setView( mv );
 
   man= new Manager(c);
   connect(c, SIGNAL(sizeChanged()), v, SLOT(resizeScrollBars()));
   connect(c, SIGNAL(modified()), this, SLOT(updateCommands()));
+  connect(c, SIGNAL(selection(bool)), SLOT(enableEditCutCopy(bool)));
+  connect(c, SIGNAL(clipboard(bool)), SLOT(enableEditPaste(bool)));
+
+  /*
   SideBar *side= new SideBar(c, view, "sidebar");
   connect(c, SIGNAL(modified()), side, SLOT(pixmapChanged()));
 
+  
   view->c= v;
   view->s= side;
+  */
 
   connect(side, SIGNAL(lmbColourChanged(const QColor &)),
 	  man, SLOT(setLMBcolour(const QColor &)));
@@ -98,7 +138,12 @@ KPaint::KPaint(const char *url) : KTopLevelWidget()
     allowEditPalette= true;
   }
 
+  /* add default Colors to colorbar */
+  defaultCb = mv->getDefaultColorBar();
+  addDefaultColors(*defaultCb);
+
   updateCommands();
+
 }
 
 KPaint::~KPaint()
@@ -120,19 +165,22 @@ int KPaint::exit()
 {
   int die= 0;
 
-  if (!(c->isModified()))
+  if (!(c->isModified())) {
     die= 1;
-  else
+  }
+  else {
     if (QMessageBox::warning(this, i18n("Unsaved Changes"),
 			     i18n("You have unsaved changes, you "
 				  "will loose them if you close "
 				  "this window now."),
-			      i18n("Close"), i18n("Cancel"),
-			      0, 1, 1))
+			     i18n("Close"), i18n("Cancel"),
+			     0, 1, 1)) {
       die= 0;
-    else
+    }
+    else {
       die= 1;
-
+    }
+  }
   return die;
 }
 
@@ -196,6 +244,13 @@ void KPaint::initToolbars()
   //  toolsToolbar= toolBar(ID_TOOLSTOOLBAR);
   toolsToolbar= new KToolBar(this);
   man->populateToolbar(toolsToolbar);
+  // add left and right mous button color
+  /*
+  KColorButton *lmbColourBtn= new KColorButton(red, this, "lmbColour");
+  KColorButton *rmbColourBtn= new KColorButton(green, this, "rmbColour");
+
+  toolsToolbar->insertButton(lmbColourBtn,
+  */
   toolsToolbar->show();
   addToolBar(toolsToolbar, ID_TOOLS_TOOLBAR);
   toolsToolbar->setFullWidth(false);
@@ -206,6 +261,7 @@ void KPaint::initToolbars()
 
 void KPaint::updateCommands()
 {
+  /*
   if (allowEditPalette)
     menu->setItemEnabled(ID_PALETTE, true);
   else
@@ -217,7 +273,14 @@ void KPaint::updateCommands()
   else {
     menu->setItemEnabled(ID_SAVE, false);
   }
+  */
 
+  menu->setItemEnabled(ID_PALETTE, allowEditPalette);
+  menu->setItemEnabled(ID_SAVE, c->isModified());
+  menu->setItemEnabled(ID_COPY, c->hasSelection());
+  menu->setItemEnabled(ID_CUT,  c->hasSelection());
+  menu->setItemEnabled(ID_PASTE, c->hasClipboardData());
+  /*  debug ("clipboard data %i %s",c->hasClipboardData(),c->hasClipboardData()?"true":"false"); */
   menu->setItemEnabled(ID_MASK, false);
 }
 
@@ -246,6 +309,24 @@ void KPaint::writeOptions()
   config->writeEntry("ShowCommandsToolBar", showCommandsToolBar);
   config->writeEntry("ShowStatusBar", showStatusBar);
   config->sync();
+}
+
+void 
+KPaint::enableEditCutCopy(bool e)
+{
+  debug ("kpaint: %s cut/copy",e?"enable":"disable");
+  menu->setItemEnabled(ID_CUT, e);
+  menu->setItemEnabled(ID_COPY, e);
+  commandsToolbar->setItemEnabled(ID_CUT, e);
+  commandsToolbar->setItemEnabled(ID_COPY, e);
+}
+
+void 
+KPaint::enableEditPaste(bool e)
+{
+  debug ("kpaint: %s paste",e?"enable":"disable");
+  menu->setItemEnabled(ID_PASTE, e);
+  commandsToolbar->setItemEnabled(ID_PASTE, e);
 }
 
 void KPaint::updateControls()
@@ -435,6 +516,29 @@ void KPaint::initMenus()
   connect (options, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (help, SIGNAL (activated (int)), SLOT (handleCommand (int)));
 }
+
+void
+KPaint::addDefaultColors(ColorBar &cb)
+{
+  cb.addColor(RED);
+  cb.addColor(GREEN);
+  cb.addColor(BLUE);
+  cb.addColor(CYAN);
+  cb.addColor(MAGENTA);
+  cb.addColor(YELLOW);
+  cb.addColor(DARK_RED);
+  cb.addColor(DARK_GREEN);
+  cb.addColor(DARK_BLUE);
+  cb.addColor(DARK_CYAN);
+  cb.addColor(DARK_MAGENTA);
+  cb.addColor(DARK_YELLOW);
+  cb.addColor(WHITE);
+  cb.addColor(LIGHT_GREY);
+  cb.addColor(GREY);
+  cb.addColor(DARK_GREY);
+  cb.addColor(BLACK);
+}
+
 
 void KPaint::handleCommand(int command)
 {
@@ -796,19 +900,22 @@ void KPaint::fileSaveAsURL()
 // Edit
 void KPaint::editCopy()
 {
-  kdebug(KDEBUG_INFO, 3000, "editCopy()");
-  myapp->clipboard_= c->selectionData();
+  kdebug(KDEBUG_INFO, 3000, "editCopy()\n");
+  /*  myapp->clipboard_= c->selectionData(); */
+  c->copy();
 }
 
 void KPaint::editCut()
 {
-  kdebug(KDEBUG_INFO, 3000, "editCut()");
-  myapp->clipboard_= c->selectionData();
+  kdebug(KDEBUG_INFO, 3000, "editCut()\n");
+  /*  myapp->clipboard_= c->selectionData(); */
+  c->cut();
 }
 
 void KPaint::editPaste()
 {
-  kdebug(KDEBUG_INFO, 3000, "editPaste()");
+  kdebug(KDEBUG_INFO, 3000, "editPaste()\n");
+  c->paste();
 }
 
 void KPaint::editPasteImage()

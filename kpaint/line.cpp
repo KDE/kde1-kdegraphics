@@ -99,7 +99,7 @@ void Line::mouseMoveEvent(QMouseEvent *e)
 	else
 	  paint.setPen(rightpen);
 
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	// Draw new line
 	paint.drawLine(startx, starty, x, y);
@@ -138,7 +138,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
       paint.setPen(leftpen);
     else
       paint.setPen(rightpen);
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
     paint.drawLine(startx, starty, lastx, lasty);
 
     paint.end();

@@ -16,6 +16,8 @@
 #include <qpixmap.h>
 #include "canvas.h"
 
+#define DEFAULT_RASTER_OP NotROP
+
 /**
  * @short Tool - Abstract base class
  * Tool is the parent of all kpaint tools, it provides virtual methods
@@ -33,7 +35,7 @@
  */
 class Tool : public QObject
 {
-  Q_OBJECT
+Q_OBJECT
 public:
   /**
    * Page flags

@@ -85,7 +85,7 @@ void Circle::mouseMoveEvent(QMouseEvent *e)
 	else
 	  paint.setPen(rightpen);
 
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	if (r >= 2)
 	  paint.drawEllipse(bbx, bby, 2*r, 2*r);
@@ -145,7 +145,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Circle::mouseReleaseEvent() handler called\n");
     else
       paint.setPen(rightpen);
 
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
 
     if (r >= 2)
       paint.drawEllipse(bbx, bby, 2*r, 2*r);

@@ -75,7 +75,7 @@ void Ellipse::mouseMoveEvent(QMouseEvent *e)
 	else
 	  paint.setPen(rightpen);
 
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	if (abs(lastx-startx)*abs(lasty-starty) >= 4) 
 	  paint.drawEllipse(startx, starty, lastx-startx, lasty-starty);
@@ -118,7 +118,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Ellipse::mouseReleaseEvent() handler called\n");
     else
       paint.setPen(rightpen);
 
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
 
     if (abs(lastx-startx)*abs(lasty-starty) > 4) 
       paint.drawEllipse(startx, starty, lastx-startx, lasty-starty);

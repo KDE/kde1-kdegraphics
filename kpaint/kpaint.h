@@ -22,9 +22,13 @@
 #include "manager.h"
 #include "commands.h"
 
+class ColorBar;
+class MainView;
+//class QVBoxLayout;
+
 class KPaint : public KTopLevelWidget
 {
-  Q_OBJECT
+Q_OBJECT
 
 public:
   KPaint(const char *url_= 0);
@@ -88,6 +92,9 @@ public slots:
    */
   void writeOptions();
 
+  void enableEditCutCopy(bool);
+  void enableEditPaste(bool);
+
 protected:
   // Load/Save files
   bool loadLocal(const char *filename_, const char *url_= 0);
@@ -105,6 +112,7 @@ private:
   void initToolbars();
   void initMenus();
   void initStatus();
+  void addDefaultColors(ColorBar &);
 
   /**
    * Catch close events
@@ -135,15 +143,23 @@ private:
   // Tool manager
   Manager *man;
 
+  //GUIManager
+  //  QVBoxLayout *vlayout;
+
   // Child widgets
   QwViewport *v;
   Canvas *c;
+
   KToolBar *toolsToolbar;
   KToolBar *commandsToolbar;
   KStatusBar *statusbar;
   KMenuBar *menu;
+  MainView *mv;
 /* obsolet (jha)
    KAccel *keys; */
+
+  QPixmap *lmbColor, *rmbColor;
+  ColorBar *defaultCb;
 };
 
 #endif

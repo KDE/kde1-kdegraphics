@@ -66,7 +66,7 @@ void Roundangle::mouseMoveEvent(QMouseEvent *e)
 	else
 	  paint.setPen(rightpen);
 
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	// Erase old roundangle
 	paint.drawRoundRect(startx, starty, lastx-startx, lasty-starty, 
@@ -109,7 +109,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Roundangle::mouseReleaseEvent() handler called\n");
     else
       paint.setPen(rightpen);
 
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
     paint.drawRoundRect(startx, starty, lastx-startx, lasty-starty,
 			ROUNDNESS, ROUNDNESS);
 

@@ -64,7 +64,7 @@ void Rectangle::mouseMoveEvent(QMouseEvent *e)
 	else
 	  paint.setPen(rightpen);
 
-	paint.setRasterOp(XorROP);
+	paint.setRasterOp(DEFAULT_RASTER_OP);
 
 	// Erase old rectangle
 	paint.drawRect(startx, starty, lastx-startx, lasty-starty);
@@ -105,7 +105,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Rectangle::mouseReleaseEvent() handler called\n");
     else
       paint.setPen(rightpen);
 
-    paint.setRasterOp(XorROP);
+    paint.setRasterOp(DEFAULT_RASTER_OP);
     paint.drawRect(startx, starty, lastx-startx, lasty-starty);
 
     paint.end();
