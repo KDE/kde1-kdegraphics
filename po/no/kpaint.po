@@ -408,12 +408,3 @@ msgstr "Sett linjefarge..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid "KPaint"
-#~ msgstr "KPaint"
-
-#~ msgid " version "
-#~ msgstr " versjon "
-
-#~ msgid "(c) "
-#~ msgstr "(c) "
