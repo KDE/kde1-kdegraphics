@@ -8,7 +8,7 @@
 # Configuration
 #
 prefix 	= 	@prefix@
-INCDIRS	=	@all_includes@ -I..
+INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 INSTALL	=   	@INSTALL@
