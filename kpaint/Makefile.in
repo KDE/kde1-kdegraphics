@@ -47,7 +47,8 @@ METAS=	canvas.moc \
 	infodialog.moc \
 	properties.moc \
 	palette.moc \
-	palettedialog.moc 
+	palettedialog.moc \
+	QwViewport.moc
 
 .PHONY:	all clean kplib install uninstall
 
