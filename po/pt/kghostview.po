@@ -386,7 +386,7 @@ msgid ""
 msgstr ""
 "Já á espera\n"
 "que um processo internet termine.\n"
-"Por favor espere que acabe.\bEm alternativa pare o actualmente a executar."
+"Por favor espere que acabe.\nEm alternativa pare o actualmente a executar."
 
 #: kghostview.cpp:782
 msgid "Could not start or find KFM."
