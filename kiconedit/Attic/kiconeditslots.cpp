@@ -543,6 +543,7 @@ void KIconEdit::slotDropEvent( KDNDDropZone * _dropZone )
 void KIconEdit::slotQDropEvent( QDropEvent *e )
 {
   debug("Got QDropEvent!");
+  gridview->setAcceptDrop(false);
   QImage image;
   QStrList list;
   char *s;
@@ -596,16 +597,23 @@ void KIconEdit::slotQDropEvent( QDropEvent *e )
 void KIconEdit::slotQDragLeaveEvent( QDragLeaveEvent * /*e*/ )
 {
   debug("Got QDragLeaveEvent!");
+  gridview->setAcceptDrop(false);
 }
 
 void KIconEdit::slotQDragEnterEvent( QDragEnterEvent *e )
 {
   debug("Got QDragEnterEvent!");
   if( QImageDrag::canDecode( e ) )
+  {
     e->accept();
+    gridview->setAcceptDrop(true);
+  }
 #if QT_VERSION > 140
   else if( QUrlDrag::canDecode( e ) )
+  {
+    gridview->setAcceptDrop(true);
     e->accept();
+  }
 #endif
   else
     e->ignore();

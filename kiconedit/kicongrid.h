@@ -71,6 +71,7 @@ public:
   KIconEditGrid *grid() { return _grid; }
   void setShowRulers(bool mode);
   bool rulers() { return pprops->showrulers; }
+  void setAcceptDrop(bool a);
 
 public slots:
   void sizeChange(int, int);
@@ -78,7 +79,9 @@ public slots:
   void scalingChange(int, bool);
 
 protected:
-  void resizeEvent(QResizeEvent*);
+  virtual void paintEvent(QPaintEvent*);
+  virtual void resizeEvent(QResizeEvent*);
+  void paintDropSite();
   void setSizes();
 
   QFrame *_corner;
@@ -86,6 +89,7 @@ protected:
   KRuler *_hruler, *_vruler;
   Properties *pprops;
   QScrollView *viewport;
+  bool acceptdrop;
 };
 
 /**

@@ -31,6 +31,8 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
   _corner = 0L;
   _hruler = _vruler = 0L;
   _grid = 0L;
+
+  acceptdrop = false;
   
   pprops = props(this);
 
@@ -154,6 +156,52 @@ void KGridView::setShowRulers(bool mode)
   setSizes();
   QResizeEvent e(size(), size());
   resizeEvent(&e);
+}
+
+void KGridView::setAcceptDrop(bool a)
+{
+  if(a == acceptdrop)
+    return;
+  acceptdrop = a;
+  paintDropSite();
+}
+
+void KGridView::paintDropSite()
+{
+  int x, y, cx, cy;
+  if(viewport->horizontalScrollBar()->isVisible())
+  {
+    x = viewport->contentsX();
+    cx = viewport->viewport()->width();
+  }
+  else
+  {
+    x = 0;
+    cx = viewport->contentsWidth();
+  }
+
+  if(viewport->verticalScrollBar()->isVisible())
+  {
+    y = viewport->contentsY();
+    cy = viewport->viewport()->height();
+  }
+  else
+  {
+    y = 0;
+    cy = viewport->contentsHeight();
+  }
+
+  QPainter p;
+  p.begin( _grid );
+  p.setRasterOp (NotROP);
+  p.drawRect(x, y, cx, cy );
+  p.end();
+}
+
+void KGridView::paintEvent(QPaintEvent *e)
+{
+  //if(acceptdrop)
+    //paintDropSite();
 }
 
 
