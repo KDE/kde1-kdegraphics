@@ -83,11 +83,11 @@ msgstr "&Sideomdreining"
 
 #: kfax.cpp:427
 msgid "Zoom &in"
-msgstr "Zoom &inn"
+msgstr "Fors&tørre"
 
 #: kfax.cpp:428
 msgid "Zoom &out"
-msgstr "Zoom &ut"
+msgstr "For&minske"
 
 #: kfax.cpp:433
 msgid "&Fax Options..."
@@ -119,11 +119,11 @@ msgstr "Gå til slutt"
 
 #: kfax.cpp:480
 msgid "Zoom in"
-msgstr "Zoom inn"
+msgstr "Forstørre"
 
 #: kfax.cpp:483
 msgid "Zoom out"
-msgstr "Zoom ut"
+msgstr "Forminske"
 
 #: kfax.cpp:488
 msgid "Print document"
@@ -320,7 +320,7 @@ msgstr "Råfaksoppløsning:"
 
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
-msgstr "Automatisk"
+msgstr "Auto"
 
 #: options.cpp:71
 msgid "Fine"
