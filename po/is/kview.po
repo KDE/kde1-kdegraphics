@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1998-02-01 10:05-0500\n"
+"PO-Revision-Date: 1999-03-26 03:35-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 
@@ -96,11 +96,11 @@ msgstr "&Loka glugga"
 
 #: viewer.cpp:362
 msgid "&Full Screen"
-msgstr "Útvíða &sýn"
+msgstr "&Full útvíð sýn"
 
 #: viewer.cpp:365
 msgid "&Crop"
-msgstr "&Afmarka"
+msgstr "&Klippa út"
 
 #: viewer.cpp:367
 msgid "&Reset"
@@ -130,7 +130,7 @@ msgstr "&Tvöfalda stærð"
 
 #: viewer.cpp:382
 msgid "&Half size"
-msgstr "&Hálfa stærð"
+msgstr "Hálfa &stærð"
 
 #: viewer.cpp:384
 msgid "&Max size"
@@ -138,7 +138,7 @@ msgstr "&Hámark"
 
 #: viewer.cpp:386
 msgid "Max/&aspect"
-msgstr "Hámar&k+hlutföll"
+msgstr "Hámar&k í hlutfalli"
 
 #: viewer.cpp:392
 msgid "Rotate &clockwise"
@@ -219,7 +219,7 @@ msgstr "Breyti birtustigi..."
 
 #: colour.cpp:58
 msgid "Intensity:Brightness"
-msgstr "Styrkleiki:Birta"
+msgstr "Styrkleiki:Birta..."
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -271,7 +271,7 @@ msgstr "Næsta"
 
 #: ilistdlg.cpp:69
 msgid "Start slide"
-msgstr "Byrja á glæru"
+msgstr "Byrja á skyggnu"
 
 #: ilistdlg.cpp:85
 msgid "Image List"
@@ -279,11 +279,11 @@ msgstr "Myndalisti"
 
 #: ilistdlg.cpp:259
 msgid "Stop &slide"
-msgstr "Stöðva glæru"
+msgstr "Stöðva skyggnu"
 
 #: ilistdlg.cpp:267
 msgid "Start &slide"
-msgstr "Byrja á &glæru"
+msgstr "Byrja á &skyggnu"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"

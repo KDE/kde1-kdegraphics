@@ -23,7 +23,7 @@ msgid ""
 "\n"
 "Version: %s"
 msgstr ""
-"Ýttu á 'Mynda' hnappinn, og smelltu\n"
+"Ýttu á 'Taka mynd' hnappinn og smelltu\n"
 "svo á glugga til að ná mynd af honum.\n"
 "\n"
 "Höfundarrétt KSnapshot á Richard Moore (rich@kde.org),\n"
@@ -45,7 +45,7 @@ msgstr "sekúndur."
 
 #: ksnapshot.cpp:191
 msgid "Auto raise"
-msgstr "Hækka sjálfkrafa"
+msgstr "Fleyta glugga sjálfkrafa"
 
 #: ksnapshot.cpp:192
 msgid "Hide KSnapshot window"
@@ -57,7 +57,7 @@ msgstr "Mynda aðeins gluggann sem inniheldur bendilinn"
 
 #: ksnapshot.cpp:225
 msgid "Grab"
-msgstr "Mynda"
+msgstr "Taka mynd"
 
 #: ksnapshot.cpp:455
 msgid "Error: Unable to save image"

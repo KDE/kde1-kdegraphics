@@ -119,7 +119,7 @@ msgstr "Fríhendis"
 
 #: kiconedit.cpp:482
 msgid "Rectangle"
-msgstr "Ferhyrningur"
+msgstr "Rétthyrningur"
 
 #: kiconedit.cpp:483
 msgid "Filled rectangle"
@@ -266,11 +266,11 @@ msgstr "Teikna línu"
 
 #: kiconedit.cpp:675
 msgid "Draw rectangle"
-msgstr "Deikna rétthyrning"
+msgstr "Teikna rétthyrning"
 
 #: kiconedit.cpp:677
 msgid "Draw filled rectangle"
-msgstr "Teikna fylltan rétthyrn."
+msgstr "Teikna fylltan rétthyrning"
 
 #: kiconedit.cpp:679
 msgid "Draw circle"
@@ -626,7 +626,7 @@ msgid ""
 msgstr ""
 "Fylltur rétthyrningur\n"
 "\n"
-"Teikna einlitaðan kassa"
+"Teikna einlitan kassa"
 
 #: kiconedit.cpp:892
 msgid ""
