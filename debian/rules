@@ -28,6 +28,7 @@ clean: debian-clean
 	-rm -f debian/files
 	-rm -f debian/menu
 	-rm -f debian/substvars
+	-rm -f debian/mailcap
 	-rm -f configure
 	dh_clean -k
 
