@@ -12,7 +12,7 @@
 ///
 class KViewError : public QObject{
 
-	Q_OBJECT;
+	Q_OBJECT
 
 private:
 static	const char *errormsgs[8];

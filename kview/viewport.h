@@ -24,7 +24,7 @@
 */
 class WViewPort : public QLabel
 {
-	Q_OBJECT;
+	Q_OBJECT
 private:
 	QString imagefile;
 	QPixmap *image;

@@ -64,7 +64,7 @@ QWidget* QwViewport::viewedWidget() const
 // update both the sliders.  Otherwise, updating the sliders would
 // cause two image scrolls, creating ugly flashing.
 //
-bool QwViewport::signal_choke=false;
+bool QwViewport::signal_choke=FALSE;
 
 void QwViewport::hslide(int pos)
 {
@@ -96,9 +96,9 @@ void QwViewport::resizeScrollBars()
 		bool needv = h<viewedWidget()->height();
 
 		if (needh && h-scrollBarWidth()<viewedWidget()->height())
-			needv=true;
+			needv=TRUE;
 		if (needv && w-scrollBarWidth()<viewedWidget()->width())
-			needh=true;
+			needh=TRUE;
 
 		if (needh) {
 			hbar.show();
@@ -197,7 +197,7 @@ Default returns false (always on left).
 */
 bool QwViewport::scrollBarOnLeft() const
 {
-	return false;
+	return FALSE;
 }
 
 /*!
@@ -206,7 +206,7 @@ Default returns false (always on bottom).
 */
 bool QwViewport::scrollBarOnTop() const
 {
-	return false;
+	return FALSE;
 }
 
 /*!
@@ -218,7 +218,7 @@ Default returns true (empty when both appear).
 */
 bool QwViewport::emptyCorner() const
 {
-	return true;
+	return TRUE;
 }
 
 /*!
@@ -231,7 +231,7 @@ Default returns false.
 */
 bool QwViewport::alwaysEmptyCorner() const
 {
-	return false;
+	return FALSE;
 }
 
 // Inlines:
@@ -268,7 +268,7 @@ before attaching it. ??do what if it resizes??
  Move such that (x,y) is visible and with at least the given
  pixel margins (if possible, otherwise, centered).
 */
-void QwViewport::ensureVisible(int x, int y, int xmargin=50, int ymargin=50)
+void QwViewport::ensureVisible(int x, int y, int xmargin, int ymargin)
 {
 	// Algorithm taken from my WAX++ original
 
@@ -309,12 +309,12 @@ void QwViewport::ensureVisible(int x, int y, int xmargin=50, int ymargin=50)
 	else if (cy < ph-ch && ch>ph) cy=ph-ch;
 
 	// Choke signal handling while we update BOTH sliders.
-	signal_choke=true;
+	signal_choke=TRUE;
 	child->move(cx,cy);
 	vbar.setValue(-cy);
 	hbar.setValue(-cx);
 	resizeScrollBars();
-	signal_choke=false;
+	signal_choke=TRUE;
 }
 
 /*!
@@ -331,7 +331,7 @@ void QwViewport::centerOn(int x, int y)
    0.5 = Ensure (x,y) is in middle 50% of visible area.
    1.0 = CenterOn(x,y).
 */
-void QwViewport::centralize(int x, int y, float xmargin=0.5, float ymargin=0.5)
+void QwViewport::centralize(int x, int y, float xmargin, float ymargin)
 {
 	int pw=portHole()->width();
 	int ph=portHole()->height();

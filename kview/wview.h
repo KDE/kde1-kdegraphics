@@ -34,7 +34,7 @@ class Fileman;
 */
 class WView : public QWidget
 {
-	Q_OBJECT;
+	Q_OBJECT
 
 public:
 

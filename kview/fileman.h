@@ -46,7 +46,7 @@
 
 class Fileman : public KTopLevelWidget
 {
-    Q_OBJECT;
+    Q_OBJECT
 public:
   Fileman( const char *name=0, WView * myparent=0 );
  ~Fileman();

@@ -18,14 +18,14 @@
 #include "viewport.moc"
 #include "confighandler.h"
 
-WViewPort::WViewPort(const char *file=0, QWidget *parent=0, 
-		const char *name=0, WFlags f = 0)
+WViewPort::WViewPort(const char *file, QWidget *parent, 
+		const char *name, WFlags f)
 	: QLabel(parent, name, f)
 {
 	oldContext=0;
 	registerFormats();
 
-	setAutoResize(true);
+	setAutoResize(TRUE);
 	
 	QPopupMenu *ImageZoom = new QPopupMenu;
 	ImageZoom->insertItem("+50%", this,
