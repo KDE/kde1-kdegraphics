@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1997-11-08 23:50+0100\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -564,7 +564,6 @@ msgid ""
 "nothing could be printed to a file.\n"
 msgstr ""
 
-
 #: kghostview.cpp:1640
 #, c-format
 msgid "Print failure : %s"
@@ -638,7 +637,7 @@ msgstr "Uporaba: "
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr 
+msgstr ""
 "[datoteka] [switches]\n"
 "\n"
 
@@ -646,7 +645,7 @@ msgstr
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr 
+msgstr ""
 "Pogledajte dokumentaciju Qt za \n"
 "opcije na komandnoj liniji\n"
 

@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1997-11-08 23:50+0100\n"
+"PO-Revision-Date: 1998-03-15 20:00-0500\n"
+"Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
+"Language-Team: Croatian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: iso-8859-2\n"
+
+#: about.cpp:39
+msgid "About KFax"
+msgstr "O KFaxu"
+
+#: about.cpp:58
+msgid "Version "
+msgstr "Inaèica "
+
+#: kfax.cpp:222 kfax.cpp:820
+msgid "Show &Tool Bar"
+msgstr "Poka¾i Alat&e"
+
+#: kfax.cpp:224 kfax.cpp:813
+msgid "Hide &Tool Bar"
+msgstr "&Sakrij alate"
+
+#: kfax.cpp:227 kfax.cpp:793
+msgid "Show &Status Bar"
+msgstr "Poka¾i s&tatus"
+
+#: kfax.cpp:229 kfax.cpp:786
+msgid "Hide &Status Bar"
+msgstr "Sakrij st&atus"
+
+#: kfax.cpp:380
+msgid "&About..."
+msgstr "&O..."
+
+#: kfax.cpp:381
+msgid "Help page"
+msgstr "Pomoæ"
+
+#: kfax.cpp:382
+msgid "KFax &Help "
+msgstr "KFax &Pomoæ"
+
+#: kfax.cpp:384
+msgid "&Open Fax..."
+msgstr "&Otvori Fax..."
+
+#: kfax.cpp:385
+msgid "&Add Fax..."
+msgstr "&Dodaj Fax..."
+
+#: kfax.cpp:388
+msgid "Open &URL..."
+msgstr "Otvori &URL..."
+
+#: kfax.cpp:389
+msgid "Save to U&RL..."
+msgstr "Spremi u U&RL..."
+
+#: kfax.cpp:390
+msgid "&Close Fax"
+msgstr "&Zatvori Fax"
+
+#: kfax.cpp:397
+msgid "&Next Page"
+msgstr "&Slijedeæa stranica"
+
+#: kfax.cpp:398
+msgid "&Prev Page"
+msgstr "&Prethodna stranica"
+
+#: kfax.cpp:399
+msgid "&First Page"
+msgstr "P&rva stranica"
+
+#: kfax.cpp:400
+msgid "&Last Page"
+msgstr "&Zadnja stranica"
+
+#: kfax.cpp:402
+msgid "&Rotate Page"
+msgstr "&Rotiraj stranicu"
+
+#: kfax.cpp:403
+msgid "&Mirror Page"
+msgstr "Zr&cali stranicu"
+
+#: kfax.cpp:404
+msgid "&Flip Page"
+msgstr "&Okreni stranicu"
+
+#: kfax.cpp:406
+msgid "Zoom &in"
+msgstr "U&veæaj"
+
+#: kfax.cpp:407
+msgid "Zoom &out"
+msgstr "U&manji"
+
+#: kfax.cpp:412
+msgid "&Fax Options"
+msgstr "&Fax Opcije"
+
+#: kfax.cpp:414
+msgid "&Tool Bar"
+msgstr "Alat&i"
+
+#: kfax.cpp:415
+msgid "&Status Bar"
+msgstr "S&tatusna linija"
+
+#: kfax.cpp:442
+msgid "Go back"
+msgstr "Idi nazad"
+
+#: kfax.cpp:445
+msgid "Go forward"
+msgstr "Idi naprijed"
+
+#: kfax.cpp:450
+msgid "Go to start"
+msgstr "Idi na poèetak"
+
+#: kfax.cpp:453
+msgid "Go to end"
+msgstr "Idi na kraj"
+
+#: kfax.cpp:459
+msgid "Zoom in"
+msgstr "Uveæaj"
+
+#: kfax.cpp:462
+msgid "Zoom out"
+msgstr "Umanji"
+
+#: kfax.cpp:467
+msgid "Print document"
+msgstr "Ispi¹i dokument"
+
+#: kfax.cpp:476
+msgid "Go to page ..."
+msgstr "Idi na stranicu ..."
+
+#: kfax.cpp:562
+msgid "Open Location:"
+msgstr "Otvori lokaciju:"
+
+#: kfax.cpp:578
+msgid "You need to open a Fax first"
+msgstr "Prvo trebate otvoriti Fax"
+
+#: kfax.cpp:584
+msgid "Save to Location:"
+msgstr "Spremi na lokaciju:"
+
+#: kfax.cpp:625
+msgid "Select Facsimile to Open"
+msgstr "Izaberite Fax koji ¾elite otvoriti"
+
+#: kfax.cpp:662
+msgid "Select Facsimile to Add"
+msgstr "Izaberite Fax koji ¾elite dodati"
+
+#: kfax.cpp:804
+msgid "Not yet implemented"
+msgstr "Nije ugraðeno"
+
+#: kfax.cpp:854
+msgid "     There is no document active      "
+msgstr "     Nema aktivnog dokumenta          "
+
+#: kfax.cpp:988
+#, c-format
+msgid ""
+"Invalid page dimensions:\n"
+"Width %.2f Height %.2f\n"
+msgstr ""
+"Nepravilne dimenzije stranice:\n"
+"©irina %.2f Visina %.2f\n"
+
+#: kfax.cpp:1004
+#, c-format
+msgid "Can't print to \"%s\"\n"
+msgstr "Ne mogu ispisivati na \"%s\"\n"
+
+#: kfax.cpp:1015
+#, c-format
+msgid "Couldn't create %s\n"
+msgstr "Ne mogu napraviti %s\n"
+
+#: kfax.cpp:1085
+msgid "Saving ..."
+msgstr "Spremam..."
+
+#: kfax.cpp:1092
+msgid "Loading ..."
+msgstr "Uèitavam..."
+
+#: kfax.cpp:1119 kfax.cpp:1155
+msgid ""
+"Failure in 'copy file()'\n"
+"Couldn't save file!"
+msgstr ""
+"Gre¹ka u 'copy file()'\n"
+"Ne mogu spremiti datoteku!"
+
+#: kfax.cpp:1125
+msgid "Saved"
+msgstr "Spremljeno"
+
+#: kfax.cpp:1132 kfax.cpp:1194
+msgid ""
+"KFax is already waiting\n"
+"for an internet job to finish\n"
+"Please wait until has finished\n"
+msgstr ""
+"KFax veæ èeka na jedan posao\n"
+"Èekajte da posao zavr¹i ili ga\n"
+"zaustavite.\n" 
+
+#: kfax.cpp:1143 kfax.cpp:1207
+msgid "Could not communicate with KFM"
+msgstr "Ne mogu stupiti u kontakt s KFMom"
+
+#: kfax.cpp:1184
+#, c-format
+msgid "Loading '%s'"
+msgstr "Uèitavam '%s'"
+
+#: kfax.cpp:1201
+msgid "Calling KFM"
+msgstr "Pozivam KFM"
+
+#: kfax.cpp:1214
+msgid "Starting Job"
+msgstr "Pokreæem zadatak"
+
+#: kfax.cpp:1217
+msgid "Connected"
+msgstr "Spojen"
+
+#: kfax.cpp:1219
+msgid "Waiting..."
+msgstr "Èekam..."
+
+#: kfax.cpp:2070
+msgid "You need to open a fax page first."
+msgstr "Morate prvo otvoriti fax stranicu."
+
+#: kfax.cpp:2740
+msgid ""
+"A file with this name already exists\n"
+"Do you want to overwrite it?\n"
+"\n"
+msgstr ""
+"Datoteka sa ovim imenom veæ postoji\n"
+"®elite li spremiti preko nje?\n"
+"\n"
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "KFax Opcije"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Sirova Fax Rezolucija"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Fino"
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Opcije za prikazivanje:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Polo¾eno"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Naopaèke"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Okreni"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Sirovi Fax podaci su:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "Prvo LS-Bit"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Sirovi Faxovi su:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "©irina Faxa:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "visina:"
+
+#: print.cpp:51
+msgid "KFax Print Dialog"
+msgstr "KFax Ispis"
+
+#: print.cpp:57
+msgid "Print as Postscript to Printer"
+msgstr "Ispi¹i kao Postscript na Pisaè"
+
+#: print.cpp:62
+msgid "Print Command:"
+msgstr "Naredba za ispis:"
+
+#: print.cpp:71
+msgid "Print as Postscript to File:"
+msgstr "Ispi¹i kao Postscript u Datoteku:"
+
+#: print.cpp:77
+msgid "Browse"
+msgstr "Potra¾i"
+
+#: print.cpp:86
+msgid "Page Size:"
+msgstr "Velièina Stranice:"
+
+#: print.cpp:105
+msgid "Scale fax to page size"
+msgstr "Razvuci/smanji da prekrije cijelu stranicu"
+
+#: print.cpp:111
+msgid "Add Printer Margins (measured in cm):"
+msgstr "Dodaj margine za ispisivanje (u cm):"
+
+#: print.cpp:119
+msgid "Horizontal:"
+msgstr "Vodoravno:"
+
+#: print.cpp:128
+msgid "Vertical:"
+msgstr "Uspravno:"
+
+#: print.cpp:258
+msgid "Select Filename"
+msgstr "Izaberi Ime Datoteke"
+
+#: print.cpp:280
+msgid "You must enter a file name if you wish to print to a file."
+msgstr "Morate unjeti ime datoteke ako ¾elite ispisivati u datoteku."
+
+#: print.cpp:290
+msgid ""
+"You must enter a print command such as \"lpr\"\n"
+" if you wish to print to a printer."
+msgstr ""
+"Morate unjeti naredbu za ispisivanje poput \"lpr\"\n"
+"ukoliko ¾elite ispisivati na pisaèu."
