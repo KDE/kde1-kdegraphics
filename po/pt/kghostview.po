@@ -1,22 +1,13 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-01-05 22:02+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"PO-Revision-Date: 1998-01-26 22:00+0000\n"
+"Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
 
 #: copyright.cpp:28
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: copyright.cpp:42
 msgid ""
@@ -61,7 +52,7 @@ msgstr "Ficheiro :"
 
 #: info.cpp:67
 msgid "Title :"
-msgstr "Titulo :"
+msgstr "Título :"
 
 #: info.cpp:76
 msgid "Date :"
@@ -105,7 +96,7 @@ msgstr "Monocromico"
 
 #: interpreter.cpp:201
 msgid "Backing"
-msgstr ""
+msgstr "Fundo"
 
 #: interpreter.cpp:224
 msgid "Pixmap"
@@ -113,11 +104,11 @@ msgstr "Pixmap"
 
 #: interpreter.cpp:235
 msgid "Backing store"
-msgstr ""
+msgstr "Armazenar Fundo"
 
 #: interpreter.cpp:255
 msgid "Defaults"
-msgstr ""
+msgstr "Valores por defeito"
 
 #: interpreter.cpp:339
 msgid "gs"
@@ -146,11 +137,11 @@ msgstr "Reduzir"
 
 #: kghostview.cpp:309 kghostview.cpp:373 kghostview.cpp:453
 msgid "Next Page"
-msgstr "Nova Página"
+msgstr "Próxima Página"
 
 #: kghostview.cpp:310 kghostview.cpp:376 kghostview.cpp:454
 msgid "Prev Page"
-msgstr "Página Ant"
+msgstr "Página Anterior"
 
 #: kghostview.cpp:311 kghostview.cpp:379
 msgid "Scroll Up"
@@ -249,57 +240,50 @@ msgid "&Read down"
 msgstr "&Ler para baixo"
 
 #: kghostview.cpp:535
-#, fuzzy
 msgid "Mark &current page"
-msgstr "Marcar esta página"
+msgstr "Marcar página a&ctual"
 
 #: kghostview.cpp:538
-#, fuzzy
 msgid "Mark &all pages"
-msgstr "Marcar esta página"
+msgstr "Marcar tod&as as páginas"
 
 #: kghostview.cpp:540
-#, fuzzy
 msgid "Mark &even pages"
-msgstr "Marcar esta página"
+msgstr "Marcar páginas par&es"
 
 #: kghostview.cpp:542
-#, fuzzy
 msgid "Mark &odd pages"
-msgstr "Marcar esta página"
+msgstr "Marcar página &impares"
 
 #: kghostview.cpp:545
 msgid "&Toggle page marks"
-msgstr ""
+msgstr "&Mudar marcações de página"
 
 #: kghostview.cpp:548
 msgid "&Remove page marks"
-msgstr ""
+msgstr "&Remove marcações de página"
 
 #: kghostview.cpp:559
 msgid "Show &tool bar"
 msgstr "Mostrar barra de &ferramentas"
 
 #: kghostview.cpp:560
-#, fuzzy
 msgid "Show st&atus bar"
 msgstr "Mostrar barra de &status"
 
 #: kghostview.cpp:561
 msgid "Show &page list"
-msgstr ""
+msgstr "Mostrar lista de &páginas"
 
 #: kghostview.cpp:563
-#, fuzzy
 msgid "Configure &interpreter ..."
-msgstr "&Configurar interpretador ..."
+msgstr "Configurar &interpretador ..."
 
 #: kghostview.cpp:564
 msgid "Configure &key bindings ..."
-msgstr "Configurar dependencias de teclas ..."
+msgstr "Configurar dependencias de &teclas ..."
 
 #: kghostview.cpp:566
-#, fuzzy
 msgid "&Save options"
 msgstr "&Gravar Opções"
 
@@ -320,9 +304,8 @@ msgid "&Go"
 msgstr "&Ir"
 
 #: kghostview.cpp:585
-#, fuzzy
 msgid "&Pagemarks"
-msgstr "Páginas"
+msgstr "Marcas de &Página"
 
 #: kghostview.cpp:686
 msgid "Print document"
@@ -402,16 +385,15 @@ msgstr "Paisagem"
 
 #: kghostview.cpp:1237 kghostview.cpp:2281 viewcontrol.cpp:104
 msgid "Seascape"
-msgstr ""
+msgstr "Paisagem Marítima"
 
 #: kghostview.cpp:1239 kghostview.cpp:2279 viewcontrol.cpp:105
 msgid "Upside down"
-msgstr ""
+msgstr "Ao contrário"
 
 #: kghostview.cpp:1277
-#, fuzzy
 msgid "Go to ..."
-msgstr "Ir para a página ..."
+msgstr "Ir para ..."
 
 #: kghostview.cpp:1426
 msgid "Turn antialiasing on"
@@ -430,9 +412,8 @@ msgid "Hide Ghostscript messages"
 msgstr "Esconder mensagens do Ghostscript"
 
 #: kghostview.cpp:1504
-#, fuzzy
 msgid "Version 0.6"
-msgstr "Versão 0.5"
+msgstr "Versão 0.6"
 
 #: kghostview.cpp:1505
 msgid "Sorry, not ready yet"
@@ -443,13 +424,12 @@ msgid "About kghostview"
 msgstr "Acerca do kghostview"
 
 #: kghostview.cpp:1513
-#, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
-"Versão :\t0.5 alpha\n"
+"Versão :\t0.6 alpha\n"
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
@@ -459,11 +439,11 @@ msgstr "Nome da Impressora : "
 
 #: kghostview.cpp:1620
 msgid "Print failure : lpr"
-msgstr "Flaha na impressão : lpr"
+msgstr "Falha na impressão : lpr"
 
 #: kghostview.cpp:1660
 msgid "No pages have been marked for printing."
-msgstr ""
+msgstr "Nenhuma página foi marcadas para impressão."
 
 #: kghostview.cpp:2182 kghostview.cpp:2194 kghostview.cpp:2442
 #: kghostview.cpp:2465
@@ -526,7 +506,7 @@ msgstr "[nome do ficheiro]\n"
 
 #: main.cpp:29
 msgid "See Qt documentation for command line options\n"
-msgstr "Veja a documentação do QT para opçÕes de linha de comando\n"
+msgstr "Veja a documentação do QT para opções de linha de comando\n"
 
 #: main.cpp:111
 #, c-format
@@ -564,9 +544,8 @@ msgid "Marked"
 msgstr "Marcadas"
 
 #: viewcontrol.cpp:44
-#, fuzzy
 msgid "Force changes to "
-msgstr "Forçar mudanças"
+msgstr "Forçar mudanças a "
 
 #: viewcontrol.cpp:72
 msgid "Magnification"
@@ -579,48 +558,3 @@ msgstr "Media"
 #: viewcontrol.cpp:92
 msgid "Orientation"
 msgstr "Orientação"
-
-#~ msgid "Information"
-#~ msgstr "Infromação"
-
-#~ msgid "New"
-#~ msgstr "Novo"
-
-#~ msgid "&New"
-#~ msgstr "&Novo"
-
-#~ msgid "&Close"
-#~ msgstr "&Fechar"
-
-#~ msgid "E&xit"
-#~ msgstr "&Sair"
-
-#~ msgid "&File"
-#~ msgstr "&Ficheiro"
-
-#~ msgid "&View"
-#~ msgstr "&Ver"
-
-#~ msgid "&Options"
-#~ msgstr "&Opções"
-
-#~ msgid "&Help"
-#~ msgstr "&Ajuda"
-
-#~ msgid "Sorry"
-#~ msgstr "Lamento"
-
-#~ msgid "KGhostview: Version 0.5"
-#~ msgstr "KGhostview: Versão 0.5"
-
-#~ msgid "Go to"
-#~ msgstr "Ir para"
-
-#~ msgid "Clear"
-#~ msgstr "Limpar"
-
-#~ msgid "Even"
-#~ msgstr "Pares"
-
-#~ msgid "Odd"
-#~ msgstr "Impares"

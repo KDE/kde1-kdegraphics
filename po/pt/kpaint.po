@@ -1,18 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-01-05 22:01+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"PO-Revision-Date: 1998-01-26 20:00+0000\n"
+"Last-Translator: Pedro Morais <pmmm@camoes.rnl.ist.utl.pt>\n"
 
 #: app.cpp:40
 msgid ""
@@ -33,7 +24,7 @@ msgstr "[url | nome de ficheiro]\n"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
-msgstr ""
+msgstr "Selecção de Área"
 
 #: canvassize.cpp:12
 msgid "Width"
@@ -81,7 +72,7 @@ msgstr "sem-titulo.gif"
 
 #: kpaint.cpp:113
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Alterações Não Gravadas"
 
 #: kpaint.cpp:161
 msgid "New Canvas"
@@ -121,7 +112,7 @@ msgstr "Gravar Imagem Como..."
 
 #: kpaint.cpp:212
 msgid "Image Format..."
-msgstr "Formato de Imagem..."
+msgstr "Formato da Imagem..."
 
 #: kpaint.cpp:214
 msgid "Open from URL..."
@@ -140,9 +131,8 @@ msgid "Close Window"
 msgstr "Fechar Janela"
 
 #: kpaint.cpp:220
-#, fuzzy
 msgid "Exit"
-msgstr "&Editar"
+msgstr "Sair"
 
 #: kpaint.cpp:223
 msgid "Copy Region"
@@ -174,11 +164,11 @@ msgstr "Editar Paleta"
 
 #: kpaint.cpp:235
 msgid "Change Colour Depth..."
-msgstr "Mudar Profundidade Cor..."
+msgstr "Mudar Profundidade de Cor..."
 
 #: kpaint.cpp:238
 msgid "Tool Properties..."
-msgstr "Propriedades de Ferramentas..."
+msgstr "Propriedades das Ferramentas..."
 
 #: kpaint.cpp:240 pen.cpp:19
 msgid "Pen"
@@ -198,28 +188,27 @@ msgstr "Lata de Spray"
 
 #: kpaint.cpp:246
 msgid "Area Select"
-msgstr ""
+msgstr "Seleccionar Área"
 
 #: kpaint.cpp:251
 msgid "Show Toolbar"
-msgstr ""
+msgstr "Mostrar Barra de Ferramentas"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Mostras Barra de Status"
 
 #: kpaint.cpp:253
-#, fuzzy
 msgid "Save Options"
-msgstr "Opções"
+msgstr "Opções de Gravação"
 
 #: kpaint.cpp:257
 msgid "Release Notes"
-msgstr ""
+msgstr "Notas de Lançamento"
 
 #: kpaint.cpp:258
 msgid "About..."
-msgstr ""
+msgstr "Acerca..."
 
 #: kpaint.cpp:263
 msgid "&Image"
@@ -239,7 +228,7 @@ msgid ""
 "KPaint could not open the specified file."
 msgstr ""
 "Erro: Não foi possivel abrir o ficheiro\n"
-"KPaint não conseguiru abrir o ficheiro especificado."
+"KPaint não conseguir abrir o ficheiro especificado."
 
 #: kpaint.cpp:411 kpaint.cpp:421 kpaint.cpp:444 kpaint.cpp:459 kpaint.cpp:470
 #: kpaint.cpp:525 kpaint.cpp:556 kpaint.cpp:571 kpaint.cpp:582
@@ -282,7 +271,7 @@ msgstr ""
 
 #: kpaint.cpp:468
 msgid "KPaint: Could not find KFM"
-msgstr "KPaint: Não foi possivel encontrar KFM"
+msgstr "KPaint: Não foi possivel encontrar o KFM"
 
 #: kpaint.cpp:469 kpaint.cpp:581
 msgid "Error: KPaint could not find a running KFM or start one itself."
@@ -291,23 +280,23 @@ msgstr ""
 
 #: kpaint.cpp:521
 msgid "KPaint: Network Load Failed"
-msgstr "KPaint: Carregamento da Rede Falhado"
+msgstr "KPaint: Carregamento pela Rede Falhado"
 
 #: kpaint.cpp:522
 msgid ""
 "Error: Netword Load Failed\n"
 "Something went wrong :-("
 msgstr ""
-"Erro: Carregamento da Rede Falhado\n"
+"Erro: Carregamento pela Rede Falhado\n"
 "Algo ocorreu mal :-("
 
 #: kpaint.cpp:580
 msgid "KPaint: Could not start KFM"
-msgstr "KPaint: Não conseguiu iniciar o KFM"
+msgstr "KPaint: Não consegui iniciar o KFM"
 
 #: kpaint.cpp:609
 msgid "Canvas Size"
-msgstr "Tamalho da Tela"
+msgstr "Tamanho da Tela"
 
 #: kpaint.cpp:776
 msgid "Open Location:"
@@ -343,7 +332,7 @@ msgstr "Nenhum"
 
 #: properties.cpp:75 properties.cpp:235
 msgid "Solid"
-msgstr "Solido"
+msgstr "Sólido"
 
 #: properties.cpp:76
 msgid "Vertical Lines"
@@ -415,41 +404,8 @@ msgstr "Ainda Não"
 
 #: properties.cpp:266
 msgid "Join style:"
-msgstr "Estilo de Junção"
+msgstr "Estilo de Junção:"
 
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Especificar Cor de Linha..."
-
-#~ msgid "Save File As"
-#~ msgstr "Gravar Ficheiro Como"
-
-#~ msgid "This was a QString"
-#~ msgstr "Isto era uma QString"
-
-#~ msgid "Cut"
-#~ msgstr "Cortar"
-
-#~ msgid "Copy"
-#~ msgstr "Copiar"
-
-#~ msgid "Paste"
-#~ msgstr "Colar"
-
-#~ msgid "Index"
-#~ msgstr "Indice"
-
-#~ msgid "About KPaint"
-#~ msgstr "Acerca do KPaint"
-
-#~ msgid "&File"
-#~ msgstr "&Ficheiro"
-
-#~ msgid "&Help"
-#~ msgstr "&Ajuda"
-
-#~ msgid "Sorry"
-#~ msgstr "Lamento"
-
-#~ msgid "Browse..."
-#~ msgstr "Examinar..."
