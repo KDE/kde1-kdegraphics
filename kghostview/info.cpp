@@ -29,8 +29,6 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
 	
-	debug("Info Dialog");
-	
 	//QFrame* tmpQFrame;
 	//tmpQFrame = new QFrame( this );
 	//tmpQFrame->setGeometry( 5, 5, 250, 100 );
@@ -52,8 +50,6 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	//grid->addRowSpacing(6,10);
 	
 	grid->setColStretch(2,10);
-	
-	debug("added grid");
 	
 	QLabel *tmpQLabel;
 	tmpQLabel = new QLabel( this );
@@ -101,8 +97,6 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	
 	grid->addWidget( dateLabel, 3, 1 );
 	
-	debug("filled in grid");
-
 	QFrame* tmpQFrame;
 	tmpQFrame = new QFrame( this );
 	//tmpQFrame->setGeometry( 5, 5, 250, 100 );
@@ -126,8 +120,6 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	ok = bbox->addButton( i18n("OK") );
 	ok->setDefault( TRUE );
 	connect( ok, SIGNAL(clicked()), SLOT(reject()) );
-	
-	debug("added buttons");
 	
 	bbox->layout();
 	topLayout->addWidget( bbox );
