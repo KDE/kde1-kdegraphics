@@ -36,19 +36,13 @@ OBJ=	main.o \
 	canvassize.o \
 	properties.o \
 	QwViewport.o \
-	KTopWidget.o \
-	KToolbar.o \
-	KStatusbar.o \
 	gif.o jpeg.o
 
 METAS=	canvas.moc \
 	kpaint.moc \
 	manager.moc \
 	properties.moc \
-	QwViewport.moc \
-	KTopWidget.moc \
-	KToolbar.moc \
-	KStatusbar.moc
+	QwViewport.moc
 
 OBJS= $(addprefix objs/,$(OBJ))
 

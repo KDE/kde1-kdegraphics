@@ -4,8 +4,8 @@
 #include <qfiledlg.h>
 #include <qmsgbox.h>
 #include "QwViewport.h"
-#include "KTopWidget.h"
-#include "KToolbar.h"
+#include "ktopwidget.h"
+#include "ktoolbar.h"
 #include "canvas.h"
 #include "commands.h"
 #include "version.h"

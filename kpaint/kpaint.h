@@ -5,8 +5,8 @@
 
 #include <qwidget.h>
 #include "QwViewport.h"
-#include "KTopWidget.h"
-#include "KToolbar.h"
+#include "ktopwidget.h"
+#include "ktoolbar.h"
 #include "canvas.h"
 #include "manager.h"
 
