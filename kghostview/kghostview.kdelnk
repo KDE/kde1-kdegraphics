@@ -2,7 +2,7 @@
 [KDE Desktop Entry]
 Name=PS Viewer
 MimeType=application/pdf;application/postscript;
-Exec=kghostview %u
+Exec=kghostview %f
 Icon=kghostview.xpm
 Type=Application
 DocPath=kghostview/index.html
