@@ -145,15 +145,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " versjon "
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -218,7 +214,7 @@ msgstr "Spraykanne"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -403,16 +399,3 @@ msgstr "32 (sannhetsfarger)"
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Utgitt under GPL, se LICENSE for detaljer\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Bruk: "
-
-#~ msgid " [url | filename]\n"
-#~ msgstr " [url | filnavn]\n"
