@@ -9,6 +9,7 @@ Terminal=0
 BinaryPattern=kview;
 DocPath=kview/kview.html
 Comment=KDE Image Viewer
+Comment[cs]=Prohlí¾eè obrázkù pro KDE
 Comment[de]=KDE Bilderbetrachter
 Comment[es]=Visor de imágenes de KDE
 Comment[fi]=KDE Kuvanäyttäjä
