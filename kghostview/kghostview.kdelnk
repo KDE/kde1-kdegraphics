@@ -2,6 +2,7 @@
 [KDE Desktop Entry]
 Name=PS Viewer
 Name[pl]=PS Viewer
+Name[fi]=PS Näyttäjä
 MimeType=application/pdf;application/postscript;
 Exec=kghostview %f
 Icon=kghostview.xpm
@@ -9,5 +10,6 @@ Type=Application
 DocPath=kghostview/index.html
 Comment=PostScript document viewer
 Comment[pl]=Podgl±darka dokumentów PostScriptowych
+Comment[fi]=Postscript dokumentin näyttäjä
 Terminal=0
 MiniIcon=kghostview.xpm

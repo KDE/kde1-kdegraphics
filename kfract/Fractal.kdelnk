@@ -12,5 +12,7 @@ Type=Application
 Terminal=0
 Comment=Generator for fractals
 Comment[pl]=Generator fraktali
+Comment[fi]=Fraktaaleja luova ohjelma
 Name=Fractals Generator
 Name[pl]=Generatol fraktali
+Name[fi]=Fraktaaliohjelma
