@@ -754,6 +754,12 @@ void KGhostview::openNetFile( const char *_url )
 	QString string;
 	netFile = _url;
 	netFile.detach();
+
+	// if _url is just a relative filename, make it at least an absolute one
+	if( ( netFile.left( 1 ) != '/') &&
+		( netFile.find( ':' ) == -1 ) )
+	  netFile = QDir().absPath() + '/' + netFile;
+
 	KURL u( netFile.data() );
 
 	if ( u.isMalformed() ) {
