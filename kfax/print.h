@@ -47,17 +47,17 @@
 #include <qfont.h>
 #include <kapp.h>
 
-#define US_LETTER "US Letter 8.5x11 in"
-#define US_LEGAL "US Legal 8.5x14 in"
-#define US_LEDGER "US Ledger 11x17 in"
-#define US_EXECUTIVE "US Executive 7.25x10.5 in"
-#define JAP_LETTER "Japanese Letter 18.2x25.7 cm"
-#define JAP_LEGAL "Japanese Legal 25.7x36.4 cm"
-#define DIN_A3 "DIN A3 20.7x42 cm"
-#define DIN_A4 "DIN A4 21x29.7 cm"
-#define DIN_A5 "DIN A5 15.1x21 cm"
-#define DIN_A6 "DIN A6 10.7x14.8 cm"
-#define DIN_B4 "DIN B4 25.5x36.4 cm"
+#define US_LETTER i18n("US Letter 8.5x11 in")
+#define US_LEGAL i18n("US Legal 8.5x14 in")
+#define US_LEDGER i18n("US Ledger 11x17 in")
+#define US_EXECUTIVE i18n("US Executive 7.25x10.5 in")
+#define JAP_LETTER i18n("Japanese Letter 18.2x25.7 cm")
+#define JAP_LEGAL i18n("Japanese Legal 25.7x36.4 cm")
+#define DIN_A3 i18n("DIN A3 20.7x42 cm")
+#define DIN_A4 i18n("DIN A4 21x29.7 cm")
+#define DIN_A5 i18n("DIN A5 15.1x21 cm")
+#define DIN_A6 i18n("DIN A6 10.7x14.8 cm")
+#define DIN_B4 i18n("DIN B4 25.5x36.4 cm")
 
 
 struct printinfo {

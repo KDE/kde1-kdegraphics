@@ -391,14 +391,13 @@ void TopLevel::setupMenuBar(){
   options = 	new QPopupMenu ();
 
 
-  help = mykapp->getHelpMenu(TRUE, 
-		"\n"\
-		"KFax "\
- 	         KFAXVERSION "\n\n"\
-		"Copyright 1997-98\n"\
-                "Bernd Johannes Wuebben\n"\
-                "wuebben@kde.org"
-		);
+  QString about;
+  about.sprintf(i18n("\nKFax %s\n\n"
+		     "Copyright 1997-98\n"
+                     "Bernd Johannes Wuebben\n"
+                     "wuebben@kde.org"), KFAXVERSION);
+
+  help = mykapp->getHelpMenu(TRUE, about);
 
   help->insertItem (i18n("Help page"), 		this, 	SLOT(helpshort()));
   
@@ -552,10 +551,10 @@ void TopLevel::setupStatusBar(){
 
     statusbar = new KStatusBar( this );
     //    statusbar->insertItem("Mem: 000000000", ID_LINE_COLUMN);
-    statusbar->insertItem("w: 00000 h: 00000", ID_INS_OVR);
-    statusbar->insertItem("Res: XXXXX", ID_GENERAL);
-    statusbar->insertItem("Type: XXXXXXX", ID_TYPE);
-    statusbar->insertItem("P:XXXofXXX", ID_PAGE_NO);
+    statusbar->insertItem(i18n("w: 00000 h: 00000"), ID_INS_OVR);
+    statusbar->insertItem(i18n("Res: XXXXX"), ID_GENERAL);
+    statusbar->insertItem(i18n("Type: XXXXXXX"), ID_TYPE);
+    statusbar->insertItem(i18n("P:XXXofXXX"), ID_PAGE_NO);
     statusbar->insertItem("",ID_FNAME);
 
     //    statusbar->changeItem("", ID_LINE_COLUMN);
@@ -2398,7 +2397,7 @@ void TopLevel::uiUpdate(){
     }
     
     QString pagestr;
-    pagestr.sprintf("P.%d of %d",currentpage,pages);
+    pagestr.sprintf(i18n("P.%d of %d"),currentpage,pages);
 
     statusbar->changeItem(pagestr.data(), ID_PAGE_NO);
 
@@ -2409,12 +2408,12 @@ void TopLevel::uiUpdate(){
 
     QString wh;
 
-    wh.sprintf("W: %d H: %d",Image->width,Image->height);
+    wh.sprintf(i18n("W: %d H: %d"),Image->width,Image->height);
     statusbar->changeItem(wh.data(), ID_INS_OVR);
     }
 
     QString resolution;
-    resolution.sprintf("Res: %s",thispage->vres ? "Fine" : "Normal");
+    resolution.sprintf(i18n("Res: %s"),thispage->vres ? i18n("Fine") : i18n("Normal"));
     statusbar->changeItem(resolution.data(), ID_GENERAL);
 
     statusbar->changeItem(thispage->name,ID_FNAME);
@@ -2422,10 +2421,10 @@ void TopLevel::uiUpdate(){
     QString typestring;
 
     if(thispage->type == FAX_TIFF){
-      typestring = "Type: Tiff ";
+      typestring = i18n("Type: Tiff ");
     }	
     else if ( thispage->type == FAX_RAW){
-      typestring = "Type: Raw ";
+      typestring = i18n("Type: Raw ");
     }
 
     if ( thispage->expander == g31expand )
