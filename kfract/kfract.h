@@ -41,6 +41,7 @@ class KFract : public KApplication
     Q_OBJECT
   public:
     KFract( int &argc, char **argv, const QString& rAppName );
+    ~KFract();
   signals:
     void mandel();
     void julia();

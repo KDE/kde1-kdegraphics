@@ -57,6 +57,13 @@ KFract::KFract( int &argc, char **argv, const QString& rAppName) :
   };
 
 
+KFract::~KFract()
+  {
+  if ( t != NULL ) delete t;
+  if ( m != NULL ) delete m;
+  }
+
+
 void KFract::setupMenuBar()
   {
   QPopupMenu *file = new QPopupMenu();
@@ -107,25 +114,25 @@ void KFract::setupToolBar()
   {
   QPixmap pixmap;
 
-  QString pixdir = kapp->kdedir() + QString( "/lib/pics/toolbar/" );
+  QString pixdir = kapp->kdedir() + QString( "/share/toolbar/" );
   pixmap.load( pixdir + "fileopen.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
                    SLOT( loadParam() ), TRUE, "Open parameters" );
-  pixmap.load( pixdir + "save.xpm" );
+  pixmap.load( pixdir + "filefloppy.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
                    SLOT( saveParam() ), TRUE, "Save parameters" );
-  pixmap.load( pixdir + "save.xpm" );
+  pixmap.load( pixdir + "filefloppy.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
                    SLOT( savePic() ), TRUE, "Save picture" );
   t->insertSeparator();
-  pixmap.load( pixdir + "zoomin.xpm" );
+  pixmap.load( pixdir + "viewmag+.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
                    SLOT( doZoomIn() ), TRUE, "Zoom in" );
-  pixmap.load( pixdir + "zoomout.xpm" );
+  pixmap.load( pixdir + "viewmag-.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
                    SLOT( doZoomOut() ), TRUE, "Zoom out" );

@@ -1,7 +1,14 @@
+# KDE Config File
 [KDE Desktop Entry]
+BinaryPattern=kfract
+Protocols=file
 Exec=kfract
 Icon=kfract.xpm
 DocPath=kfract/kfract.html
-Type=Game
-Info=KDE Fractal Generator
-
+TerminalOptions=
+Path=
+Extensions=
+Type=Graphics
+Terminal=0
+Comment=Generator for fractals
+Name=Fractals Generator

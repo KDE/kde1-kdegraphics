@@ -25,9 +25,10 @@ INSTALL_DIR_PRIVATE = $(install) -d -m 0700
 prefix = @prefix@
 KDEINC = $(prefix)/include
 BINDIR = $(prefix)/bin
-LIBDIR = $(prefix)/lib
-PICSDIR = $(LIBDIR)/pics
-DOCSDIR = $(prefix)/doc/HTML
+SHAREDIR = $(prefix)/share
+LNKDIR = $(SHAREDIR)/applnk/Graphics
+ICONDIR = $(SHAREDIR)/icons
+DOCSDIR = $(SHAREDIR)/doc/HTML
 
 ########### File Formats ###########
 
@@ -68,15 +69,15 @@ install: all
 	$(INSTALL_DIR) $(DOCSDIR)/kfract
 	$(INSTALL_DATA) ./kfract.html $(DOCSDIR)/kfract
 	$(INSTALL_DATA) ./kfract.gif $(DOCSDIR)/kfract
-	$(INSTALL_DIR) $(prefix)/apps/Games
-	$(INSTALL_DATA) ./Fractal.kdelnk $(prefix)/apps/Games
-	$(INSTALL_DIR) $(PICSDIR)
-	$(INSTALL_DATA) ./kfract.xpm $(PICSDIR)
+	$(INSTALL_DIR) $(LNKDIR)
+	$(INSTALL_DATA) ./Fractal.kdelnk $(LNKDIR)
+	$(INSTALL_DIR) $(ICONDIR)
+	$(INSTALL_DATA) ./kfract.xpm $(ICONDIR)
 
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	rm -rf $(DOCSDIR)/kfract
-	rm -f $(prefix)/apps/Games/Fractal.kdelnk
-	rm -f $(PICSDIR)/kfract.xpm
+	rm -f $(LNKDIR)/Fractal.kdelnk
+	rm -f $(ICONDIR)/kfract
 
-# DO NOT DELETE THIS LINE -- make depend depends on it.
+
