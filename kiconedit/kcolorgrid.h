@@ -80,6 +80,7 @@ public:
 
   virtual void setCellSize( int s );
   virtual int cellSize() { return cellsize; }
+  virtual QSize sizeHint() const;
 
   void setSize(const QSize s) { setNumRows(s.height()); setNumCols(s.width()); }
 

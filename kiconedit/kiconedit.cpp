@@ -326,7 +326,7 @@ void KIconEdit::writeConfig()
 
 }
 
-QSize KIconEdit::sizeHint()
+QSize KIconEdit::sizeHint() const
 {
   if(gridview)
     return gridview->sizeHint();

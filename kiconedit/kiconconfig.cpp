@@ -401,10 +401,16 @@ KToolBarConfig::KToolBarConfig(QWidget *parent) : QWidget(parent)
   btngrpdraw = new QButtonGroup(i18n("Drawing tools"), this);
   btngrpdraw->setExclusive(true);
 
+  QLabel *lb = new QLabel(
+      i18n("Note: Other settings of the toolbars can be reached\n"
+           "from the toolbar \"handle\" or from the \"Options\" menu"), this);
+  lb->setFixedSize(lb->sizeHint());
+
   QBoxLayout *ml = new  QVBoxLayout(this, 10);
   QBoxLayout *lh = new QHBoxLayout();
 
   ml->addLayout(lh);
+  ml->addWidget(lb);
 
   QBoxLayout *l1 = new  QVBoxLayout(btngrptool, 10);
   QBoxLayout *l2 = new  QVBoxLayout(btngrpdraw, 10);
@@ -449,8 +455,10 @@ KToolBarConfig::KToolBarConfig(QWidget *parent) : QWidget(parent)
 
   ml->activate();
 
-  btngrptool->setButton(pprops->maintoolbartext);
-  btngrpdraw->setButton(pprops->drawtoolbartext);
+  mstat = pprops->maintoolbartext;
+  dstat = pprops->drawtoolbartext;
+  btngrptool->setButton(mstat);
+  btngrpdraw->setButton(dstat);
 
   connect(btngrptool, SIGNAL(clicked(int)), SLOT(mainToolBar(int)));
   connect(btngrpdraw, SIGNAL(clicked(int)), SLOT(drawToolBar(int)));

@@ -572,12 +572,6 @@ void KIconEditGrid::mouseReleaseEvent( QMouseEvent *e )
   //emit colorschanged(numColors(), data());
 }
 
-QSize KIconEditGrid::sizeHint()
-{
-  //return QSize(totalWidth(), totalHeight()); // doesn't give expected result
-  return QSize(cellSize()*numCols(), cellSize()*numRows()); // neither does this :-(
-}
-
 //void KIconEditGrid::setColorSelection( const QColor &color )
 void KIconEditGrid::setColorSelection( uint c )
 {

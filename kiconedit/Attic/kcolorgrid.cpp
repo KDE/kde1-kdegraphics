@@ -150,6 +150,11 @@ void KColorGrid::resizeEvent(QResizeEvent *)
 }
 */
 
+QSize KColorGrid::sizeHint() const
+{
+  return QSize(totalwidth, totalheight);
+}
+
 int KColorGrid::getY( int y )
 {
   y += ypos;

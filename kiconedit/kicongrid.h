@@ -111,7 +111,6 @@ public:
   const QImage &image() { return *img; }
   const QImage *clipboardImage(bool &ok);
   QImage *getSelection(bool);
-  virtual QSize sizeHint();
   int rows() { return numRows(); };
   int cols() { return numCols(); };
   uint getColors( uint *_colors) { return colors(_colors); }

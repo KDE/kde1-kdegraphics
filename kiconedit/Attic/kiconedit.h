@@ -124,7 +124,7 @@ public:
   KIconEdit( const QImage image, const char *name = "kiconedit");
   ~KIconEdit();
 
-  virtual QSize sizeHint();
+  virtual QSize sizeHint() const;
 
 signals:
 
