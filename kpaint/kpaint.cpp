@@ -10,6 +10,7 @@
 #include "commands.h"
 #include "version.h"
 #include "kpaint.h"
+#include <kapp.h>
 #include "manager.h"
 #include "canvassize.h"
 
@@ -39,7 +40,8 @@ KPaint::KPaint(char *name= 0) :
 
 void KPaint::initToolbar(void)
 {
-  QString pixdir("/usr/local/kde/lib/pics/toolbar/");
+
+  QString pixdir = kapp->kdedir() + QString("/lib/pics/toolbar/");
   QPixmap pixmap;
 
   toolbar= new KToolBar(this);
