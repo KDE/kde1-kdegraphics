@@ -39,7 +39,7 @@ enum {
 	StatStatus
 };
 
-const MessageDelay = 3000;
+const int MessageDelay = 3000;
 
 KImageViewer::KImageViewer()
 	: KTopLevelWidget(),
