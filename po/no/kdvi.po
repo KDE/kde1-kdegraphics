@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-03-05 17:23+0100\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-03-17 HO:MI+ZONE\n"
 "Last-Translator: Svein Olav Aasen <svein.aasen@caa.no / soaasen@online.no>\n"
 "Language-Team: no<LL@li.org>\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-01-05 22:01+0100\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-02-22 23:30:+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -39,11 +39,28 @@ msgstr "寬度"
 msgid "Height"
 msgstr "高度"
 
-#: circle.cpp:20 kpaint.cpp:244
+#: circle.cpp:20 kpaint.cpp:354
 msgid "Circle"
 msgstr "圓形"
 
-#: ellipse.cpp:18 kpaint.cpp:243
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "影像寬度"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
+
+#: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
 msgstr "橢圓"
 
@@ -71,163 +88,161 @@ msgstr "影像高度"
 msgid "Dismiss"
 msgstr "解散"
 
-#: kpaint.cpp:42 kpaint.cpp:633
+#: kpaint.cpp:44 kpaint.cpp:758
 msgid "untitled.gif"
 msgstr "未命名.gif"
 
-#: kpaint.cpp:113
+#: kpaint.cpp:117
 msgid "Unsaved Changes"
 msgstr "未儲存變更"
 
-#: kpaint.cpp:161
+#: kpaint.cpp:164
 msgid "New Canvas"
 msgstr "新畫布"
 
-#: kpaint.cpp:164
+#: kpaint.cpp:167
 msgid "Open File"
 msgstr "開啟檔案"
 
-#: kpaint.cpp:167
+#: kpaint.cpp:170
 msgid "Save File"
 msgstr "儲存檔案"
 
-#: kpaint.cpp:181 kpaint.cpp:228
+#: kpaint.cpp:184 kpaint.cpp:338
 msgid "Zoom In"
 msgstr "放大"
 
-#: kpaint.cpp:184 kpaint.cpp:229
+#: kpaint.cpp:187 kpaint.cpp:339
 msgid "Zoom Out"
 msgstr "縮小"
 
-#: kpaint.cpp:208
+#: kpaint.cpp:318
 msgid "Open Image..."
 msgstr "開啟影像..."
 
-#: kpaint.cpp:209
+#: kpaint.cpp:319
 msgid "New Image..."
 msgstr "新影像..."
 
-#: kpaint.cpp:210
+#: kpaint.cpp:320
 msgid "Save Image..."
 msgstr "儲存影像..."
 
-#: kpaint.cpp:211
+#: kpaint.cpp:321
 msgid "Save Image As..."
 msgstr "儲存影像至..."
 
-#: kpaint.cpp:212
+#: kpaint.cpp:322
 msgid "Image Format..."
 msgstr "影像格式..."
 
-#: kpaint.cpp:214
+#: kpaint.cpp:324
 msgid "Open from URL..."
 msgstr "開啟 URL..."
 
-#: kpaint.cpp:215
+#: kpaint.cpp:325
 msgid "Save to URL..."
 msgstr "儲存至 URL..."
 
-#: kpaint.cpp:217
+#: kpaint.cpp:327
 msgid "New Window"
 msgstr "新視窗"
 
-#: kpaint.cpp:218
+#: kpaint.cpp:328
 msgid "Close Window"
 msgstr "關閉視窗"
 
-#: kpaint.cpp:220
+#: kpaint.cpp:330
 msgid "Exit"
 msgstr "結束"
 
-#: kpaint.cpp:223
+#: kpaint.cpp:333
 msgid "Copy Region"
 msgstr "區域拷背"
 
-#: kpaint.cpp:224
+#: kpaint.cpp:334
 msgid "Cut Region"
 msgstr "區域剪下"
 
-#: kpaint.cpp:225
+#: kpaint.cpp:335
 msgid "Paste Region"
 msgstr "區域貼上"
 
-#: kpaint.cpp:226
+#: kpaint.cpp:336
 msgid "Paste As Image"
 msgstr "貼成新影像"
 
-#: kpaint.cpp:230
+#: kpaint.cpp:340
 msgid "Mask..."
 msgstr "遮罩..."
 
-#: kpaint.cpp:233
+#: kpaint.cpp:343
 msgid "Information..."
 msgstr "相關資訊..."
 
-#: kpaint.cpp:234
+#: kpaint.cpp:344
 msgid "Edit Palette..."
 msgstr "編輯調色盤..."
 
-#: kpaint.cpp:235
+#: kpaint.cpp:345
 msgid "Change Colour Depth..."
 msgstr "改變顏色深度..."
 
-#: kpaint.cpp:238
+#: kpaint.cpp:348
 msgid "Tool Properties..."
 msgstr "工具內容..."
 
-#: kpaint.cpp:240 pen.cpp:19
+#: kpaint.cpp:350 pen.cpp:19
 msgid "Pen"
 msgstr "畫筆"
 
-#: kpaint.cpp:241 line.cpp:22
+#: kpaint.cpp:351 line.cpp:22
 msgid "Line"
 msgstr "線段"
 
-#: kpaint.cpp:242 rectangle.cpp:19
+#: kpaint.cpp:352 rectangle.cpp:19
 msgid "Rectangle"
 msgstr "矩形"
 
-#: kpaint.cpp:245 spraycan.cpp:22
+#: kpaint.cpp:355 spraycan.cpp:22
 msgid "Spray Can"
 msgstr "噴嘴"
 
-#: kpaint.cpp:246
+#: kpaint.cpp:356
 msgid "Area Select"
 msgstr "區域選擇"
 
-#: kpaint.cpp:251
-msgid "Show Toolbar"
+#: kpaint.cpp:361
+#, fuzzy
+msgid "Show Tools Toolbar"
 msgstr "顯示工具列"
 
-#: kpaint.cpp:252
+#: kpaint.cpp:362
+#, fuzzy
+msgid "Show Commands Toolbar"
+msgstr "顯示工具列"
+
+#: kpaint.cpp:363
 msgid "Show Status Bar"
 msgstr "顯示狀態列"
 
-#: kpaint.cpp:253
+#: kpaint.cpp:364
 msgid "Save Options"
 msgstr "儲存選項"
 
-#: kpaint.cpp:257
-msgid "Release Notes"
-msgstr ""
-
-#: kpaint.cpp:258
-msgid "About..."
-msgstr "有關..."
-
-#: kpaint.cpp:263
+#: kpaint.cpp:382
 msgid "&Image"
 msgstr "影像[&I]"
 
-#: kpaint.cpp:264
+#: kpaint.cpp:383
 msgid "&Tool"
 msgstr "工具[&T]"
 
-#: kpaint.cpp:407
+#: kpaint.cpp:533
 msgid "KPaint: Could not open file"
 msgstr "KPaint: 無法開啟檔案"
 
-#: kpaint.cpp:408
+#: kpaint.cpp:534
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -235,29 +250,30 @@ msgstr ""
 "錯誤: 無法開啟檔案\n"
 "KPaint  無法開啟指定的檔案."
 
-#: kpaint.cpp:411 kpaint.cpp:421 kpaint.cpp:444 kpaint.cpp:459 kpaint.cpp:470
-#: kpaint.cpp:525 kpaint.cpp:556 kpaint.cpp:571 kpaint.cpp:582
+#: kpaint.cpp:537 kpaint.cpp:547 kpaint.cpp:570 kpaint.cpp:585 kpaint.cpp:596
+#: kpaint.cpp:651 kpaint.cpp:682 kpaint.cpp:697 kpaint.cpp:708
 msgid "Continue"
 msgstr "繼續"
 
-#: kpaint.cpp:416
+#: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
 msgstr "KPaint: 未知的格式"
 
-#: kpaint.cpp:417
+#: kpaint.cpp:543
+#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
-"KPaint does not understand the format of the specified fileor the file is "
-"corrupt."
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
 msgstr ""
 "錯誤:  未知的格式\n"
 "KPaint 無法辨識檔案正確的格式或檔案有錯."
 
-#: kpaint.cpp:440 kpaint.cpp:552
+#: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
 msgstr "KPaint: 不正確的 URL"
 
-#: kpaint.cpp:441 kpaint.cpp:553
+#: kpaint.cpp:567 kpaint.cpp:679
 msgid ""
 "Error: Malformed URL\n"
 "KPaint does not understand the specifed URL, check it's correct."
@@ -265,7 +281,7 @@ msgstr ""
 "錯誤: 不正確的 URL\n"
 "KPaint 無法辨識指定的 URL, 請確認是否正確."
 
-#: kpaint.cpp:457 kpaint.cpp:569
+#: kpaint.cpp:583 kpaint.cpp:695
 msgid ""
 "KPaint is already accessing a remote file, you must\n"
 "cancel the current remote job or wait for it to complete."
@@ -273,37 +289,37 @@ msgstr ""
 "KPaint 已在讀取一個遠端檔案,\n"
 "可以選擇放棄或等待完成"
 
-#: kpaint.cpp:468
+#: kpaint.cpp:594
 msgid "KPaint: Could not find KFM"
 msgstr "KPaint: 找不到 KFM"
 
-#: kpaint.cpp:469 kpaint.cpp:581
+#: kpaint.cpp:595 kpaint.cpp:707
 msgid "Error: KPaint could not find a running KFM or start one itself."
 msgstr "錯誤: KPaint 找不到或無法開啟 KFM"
 
-#: kpaint.cpp:521
+#: kpaint.cpp:647
 msgid "KPaint: Network Load Failed"
 msgstr "KPaint: 網路讀取失敗"
 
-#: kpaint.cpp:522
+#: kpaint.cpp:648
 msgid ""
 "Error: Netword Load Failed\n"
 "Something went wrong :-("
 msgstr "錯誤: 網路讀取失敗"
 
-#: kpaint.cpp:580
+#: kpaint.cpp:706
 msgid "KPaint: Could not start KFM"
 msgstr "KPaint: 無法開啟 KFM"
 
-#: kpaint.cpp:609
+#: kpaint.cpp:734
 msgid "Canvas Size"
 msgstr "畫布大小"
 
-#: kpaint.cpp:776
+#: kpaint.cpp:901
 msgid "Open Location:"
 msgstr "開啟位置:"
 
-#: kpaint.cpp:808
+#: kpaint.cpp:933
 msgid "Save to Location:"
 msgstr "儲存位置:"
 
@@ -410,3 +426,6 @@ msgstr "線段交點類型:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "設定線段顏色..."
+
+#~ msgid "About..."
+#~ msgstr "有關..."
