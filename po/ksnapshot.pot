@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-30 01:40+0100\n"
+"POT-Creation-Date: 1999-01-10 01:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgid "snapshot"
 msgstr ""
 
 #: ksnapshot.cpp:94
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -26,7 +27,7 @@ msgid ""
 "KSnapshot is copyright Richard Moore (rich@kde.org)\n"
 "and is released under LGPL\n"
 "\n"
-"Version: "
+"Version: %s"
 msgstr ""
 
 #: ksnapshot.cpp:129

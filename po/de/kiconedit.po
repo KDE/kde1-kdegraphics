@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1999-01-10 01:46+0100\n"
 "PO-Revision-Date: 1998-11-13 23:00+MET\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -143,11 +143,11 @@ msgstr "Ellipse"
 msgid "Filled ellipse"
 msgstr "Gefüllte Ellipse"
 
-#: kiconedit.cpp:488 kiconedit.cpp:686
+#: kiconedit.cpp:488 kiconedit.cpp:687
 msgid "Spray"
 msgstr "Spray"
 
-#: kiconedit.cpp:489 kiconedit.cpp:688
+#: kiconedit.cpp:489 kiconedit.cpp:689
 msgid "Flood fill"
 msgstr "Gießkanne"
 
@@ -187,103 +187,115 @@ msgstr "&Statuszeile sichtbar"
 msgid "&Save options"
 msgstr "O&ptionen speichern"
 
-#: kiconedit.cpp:569
+#: kiconedit.cpp:520
+msgid ""
+"KDE Icon Editor\n"
+"\n"
+"A graphics drawing program for creating\n"
+"icons using the KDE icon palette\n"
+"\n"
+"Copyright 1998 by Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
+msgstr ""
+
+#: kiconedit.cpp:570
 msgid "What is ...?"
 msgstr "Was ist...?"
 
-#: kiconedit.cpp:578
+#: kiconedit.cpp:579
 msgid "Drag source"
 msgstr "Quelle ziehen"
 
-#: kiconedit.cpp:583
+#: kiconedit.cpp:584
 msgid "New File"
 msgstr "Neue Datei"
 
-#: kiconedit.cpp:587
+#: kiconedit.cpp:588
 msgid "Save the file"
 msgstr "Datei speichern"
 
-#: kiconedit.cpp:590
+#: kiconedit.cpp:591
 msgid "Print icon"
 msgstr "Icon drucken"
 
-#: kiconedit.cpp:605
+#: kiconedit.cpp:606
 msgid "Select area"
 msgstr "Ausschnitt wählen"
 
-#: kiconedit.cpp:611
+#: kiconedit.cpp:612
 msgid "Resize"
 msgstr "Größe ändern"
 
-#: kiconedit.cpp:614
+#: kiconedit.cpp:615
 msgid "GrayScale"
 msgstr "Graustufen"
 
-#: kiconedit.cpp:621
+#: kiconedit.cpp:622
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: kiconedit.cpp:624
+#: kiconedit.cpp:625
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: kiconedit.cpp:628
+#: kiconedit.cpp:629
 msgid "Toggle grid"
 msgstr "Gitter an/aus"
 
-#: kiconedit.cpp:639
+#: kiconedit.cpp:640
 msgid "New Window"
 msgstr "Neues Fenster"
 
-#: kiconedit.cpp:667
+#: kiconedit.cpp:668
 msgid "Find pixel"
 msgstr "Pixel finden"
 
-#: kiconedit.cpp:669
+#: kiconedit.cpp:670
 msgid "Draw freehand"
 msgstr "Freihandzeichnen"
 
-#: kiconedit.cpp:672
+#: kiconedit.cpp:673
 msgid "Draw line"
 msgstr "Linie zeichnen"
 
-#: kiconedit.cpp:674
+#: kiconedit.cpp:675
 msgid "Draw rectangle"
 msgstr "Rechteck zeichnen"
 
-#: kiconedit.cpp:676
+#: kiconedit.cpp:677
 msgid "Draw filled rectangle"
 msgstr "Gefülltes Rechteck zeichnen"
 
-#: kiconedit.cpp:678
+#: kiconedit.cpp:679
 msgid "Draw circle"
 msgstr "Kreis zeichnen"
 
-#: kiconedit.cpp:680
+#: kiconedit.cpp:681
 msgid "Draw filled circle"
 msgstr "Gefüllten Kreis zeichnen"
 
-#: kiconedit.cpp:682
+#: kiconedit.cpp:683
 msgid "Draw ellipse"
 msgstr "Ellipse zeichnen"
 
-#: kiconedit.cpp:684
+#: kiconedit.cpp:685
 msgid "Draw filled ellipse"
 msgstr "Gefüllte Ellipse zeichnen"
 
-#: kiconedit.cpp:691
+#: kiconedit.cpp:692
 msgid "Erase"
 msgstr "Radieren"
 
-#: kiconedit.cpp:714
+#: kiconedit.cpp:715
 msgid "System Colors"
 msgstr "Systemfarben"
 
-#: kiconedit.cpp:744
+#: kiconedit.cpp:745
 msgid "Custom Colors"
 msgstr "Benutzerdefinierte Farben"
 
-#: kiconedit.cpp:785
+#: kiconedit.cpp:786
 msgid ""
 "Icon draw grid\n"
 "\n"
@@ -301,7 +313,7 @@ msgstr ""
 "(Tip: Halten Sie den Vergrößerungsknopf für einige Sekunden gedrückt, um auf "
 "eine vordefinierte Größe einzustellen.)"
 
-#: kiconedit.cpp:790
+#: kiconedit.cpp:791
 msgid ""
 "Rulers\n"
 "\n"
@@ -311,7 +323,7 @@ msgstr ""
 "\n"
 "Dies ist eine visuelle Darstellung der aktuellen Cursorposition"
 
-#: kiconedit.cpp:794
+#: kiconedit.cpp:795
 msgid ""
 "Statusbar\n"
 "\n"
@@ -335,7 +347,7 @@ msgstr ""
 "\t- Anzahl der Farben\n"
 "\t- Meldungen des Programms"
 
-#: kiconedit.cpp:803
+#: kiconedit.cpp:804
 msgid ""
 "Preview\n"
 "\n"
@@ -345,7 +357,7 @@ msgstr ""
 "\n"
 "Dies ist eine 1:1 Vorschau des aktuellen Icons"
 
-#: kiconedit.cpp:806
+#: kiconedit.cpp:807
 msgid ""
 "System colors\n"
 "\n"
@@ -355,7 +367,7 @@ msgstr ""
 "\n"
 "Hier können Sie Farben aus der KDE Icon-Palette auswählen."
 
-#: kiconedit.cpp:809
+#: kiconedit.cpp:810
 msgid ""
 "Custom colors\n"
 "\n"
@@ -367,7 +379,7 @@ msgstr ""
 "Hier können Sie eine Palette von benutzerdefinierten Farben erstellen.\n"
 "Klicken Sie einfach doppelt auf ein Kästchen und bearbeiten Sie die Farbe."
 
-#: kiconedit.cpp:815
+#: kiconedit.cpp:816
 msgid ""
 "New\n"
 "\n"
@@ -378,7 +390,7 @@ msgstr ""
 "Erstellen Sie ein neues Icon von einer Vorlage oder indem Sie die Größe "
 "festlegen"
 
-#: kiconedit.cpp:818
+#: kiconedit.cpp:819
 msgid ""
 "Open\n"
 "\n"
@@ -388,7 +400,7 @@ msgstr ""
 "\n"
 "Vorhandenes Icon öffnen"
 
-#: kiconedit.cpp:821
+#: kiconedit.cpp:822
 msgid ""
 "Save\n"
 "\n"
@@ -398,7 +410,7 @@ msgstr ""
 "\n"
 "Aktuelles Icon sichern"
 
-#: kiconedit.cpp:824
+#: kiconedit.cpp:825
 msgid ""
 "Print\n"
 "\n"
@@ -410,7 +422,7 @@ msgstr ""
 "Öffnet einen Druckdialog, um Sie das aktuelle Icon drucken zu lassen. "
 "(Funktioniert nich würklich wie man erwarten sollte.)"
 
-#: kiconedit.cpp:828
+#: kiconedit.cpp:829
 msgid ""
 "Cut\n"
 "\n"
@@ -424,7 +436,7 @@ msgstr ""
 "\n"
 "(Tip: Sie können sowohl rechteckig als auch kreisförmig auswählen)"
 
-#: kiconedit.cpp:832
+#: kiconedit.cpp:833
 msgid ""
 "Copy\n"
 "\n"
@@ -438,7 +450,7 @@ msgstr ""
 "\n"
 "(Tip: Sie können sowohl rechteckig als auch kreisförmig auswählen)"
 
-#: kiconedit.cpp:836
+#: kiconedit.cpp:837
 msgid ""
 "Paste\n"
 "\n"
@@ -460,7 +472,7 @@ msgstr ""
 "(Tip: Wählen Sie \"Transparente Pixel einfügen\" im Konfigurations-Dialog, "
 "wenn Sie auch etwas Transparentes einfügen möchten)"
 
-#: kiconedit.cpp:843
+#: kiconedit.cpp:844
 msgid ""
 "Select\n"
 "\n"
@@ -474,7 +486,7 @@ msgstr ""
 "\n"
 "(Tip: Sie können sowohl rechteckig als auch kreisförmig auswählen)"
 
-#: kiconedit.cpp:847
+#: kiconedit.cpp:848
 msgid ""
 "Resize\n"
 "\n"
@@ -484,7 +496,7 @@ msgstr ""
 "\n"
 "Verändert sachte die Größe, während versucht wird, den Inhalt beizubehalten."
 
-#: kiconedit.cpp:850
+#: kiconedit.cpp:851
 msgid ""
 "Gray scale\n"
 "\n"
@@ -497,7 +509,7 @@ msgstr ""
 "(Warnung: Das Ergebnis enthält wahrscheinlich Farben außerhalb der "
 "Iconpalette)"
 
-#: kiconedit.cpp:854
+#: kiconedit.cpp:855
 msgid ""
 "Zoom out\n"
 "\n"
@@ -512,7 +524,7 @@ msgstr ""
 "(Tip: Halten Sie den Knopf für einige Sekunden gedrückt, um auf eine "
 "vordefinierte Größe einzustellen"
 
-#: kiconedit.cpp:858
+#: kiconedit.cpp:859
 msgid ""
 "Zoom in\n"
 "\n"
@@ -527,7 +539,7 @@ msgstr ""
 "(Tip: Halten Sie den Knopf für einige Sekunden gedrückt, um auf eine "
 "vordefinierte Größe einzustellen"
 
-#: kiconedit.cpp:862
+#: kiconedit.cpp:863
 msgid ""
 "Toggle grid\n"
 "\n"
@@ -537,7 +549,7 @@ msgstr ""
 "\n"
 "Schaltet das Gitter der Bearbeitungsfläche ein und aus"
 
-#: kiconedit.cpp:865
+#: kiconedit.cpp:866
 msgid ""
 "New window\n"
 "\n"
@@ -547,7 +559,7 @@ msgstr ""
 "\n"
 "Öffnet ein neues Fenster des Icon-Editors."
 
-#: kiconedit.cpp:868
+#: kiconedit.cpp:869
 msgid ""
 "Whats is...?\n"
 "\n"
@@ -557,7 +569,7 @@ msgstr ""
 "\n"
 "Na ja, da Sie es grade lesen, nehme ich an, Sie wissen es jetzt ;-)"
 
-#: kiconedit.cpp:871
+#: kiconedit.cpp:872
 msgid ""
 "Drag source\n"
 "\n"
@@ -576,7 +588,7 @@ msgstr ""
 "(Anm.: Die \"Quelle\" (drag source) benutzt das QT XDND Protokoll, das in "
 "KDE noch nicht Standard ist)"
 
-#: kiconedit.cpp:879
+#: kiconedit.cpp:880
 msgid ""
 "Free hand\n"
 "\n"
@@ -586,7 +598,7 @@ msgstr ""
 "\n"
 "Ungerade Linien zeichnen"
 
-#: kiconedit.cpp:882
+#: kiconedit.cpp:883
 msgid ""
 "Flood fill\n"
 "\n"
@@ -596,7 +608,7 @@ msgstr ""
 "\n"
 "Benachbarte Pixel von derselben Farbe mit aktueller Farbe füllen"
 
-#: kiconedit.cpp:885
+#: kiconedit.cpp:886
 msgid ""
 "Rectangle\n"
 "\n"
@@ -606,7 +618,7 @@ msgstr ""
 "\n"
 "Rechteck zeichnen"
 
-#: kiconedit.cpp:888
+#: kiconedit.cpp:889
 msgid ""
 "Filled rectangle\n"
 "\n"
@@ -616,7 +628,7 @@ msgstr ""
 "\n"
 "Gefülltes Rechteck zeichnen"
 
-#: kiconedit.cpp:891
+#: kiconedit.cpp:892
 msgid ""
 "Circle\n"
 "\n"
@@ -626,7 +638,7 @@ msgstr ""
 "\n"
 "Kreis zeichnen"
 
-#: kiconedit.cpp:894
+#: kiconedit.cpp:895
 msgid ""
 "Filled circle\n"
 "\n"
@@ -636,7 +648,7 @@ msgstr ""
 "\n"
 "Gefüllten Kreis zeichnen"
 
-#: kiconedit.cpp:897
+#: kiconedit.cpp:898
 msgid ""
 "Ellipse\n"
 "\n"
@@ -646,7 +658,7 @@ msgstr ""
 "\n"
 "Ellipse zeichnen"
 
-#: kiconedit.cpp:900
+#: kiconedit.cpp:901
 msgid ""
 "Filled ellipse\n"
 "\n"
@@ -656,7 +668,7 @@ msgstr ""
 "\n"
 "Gefüllte Ellipse zeichnen"
 
-#: kiconedit.cpp:903
+#: kiconedit.cpp:904
 msgid ""
 "Line\n"
 "\n"
@@ -666,7 +678,7 @@ msgstr ""
 "\n"
 "Eine gerade Linie zeichnen -- vertikal, horizontal oder in 45-Grad-Winkeln"
 
-#: kiconedit.cpp:906
+#: kiconedit.cpp:907
 msgid ""
 "Spray\n"
 "\n"
@@ -676,7 +688,7 @@ msgstr ""
 "\n"
 "Verstreute Pixel in der aktuellen Farbe produzieren"
 
-#: kiconedit.cpp:909
+#: kiconedit.cpp:910
 msgid ""
 "Find\n"
 "\n"
@@ -686,7 +698,7 @@ msgstr ""
 "\n"
 "Die Farbe des Pixels, worauf Sie klicken, wird zur aktuellen Zeichenfarbe"
 
-#: kiconedit.cpp:912
+#: kiconedit.cpp:913
 msgid ""
 "Erase\n"
 "\n"
@@ -702,6 +714,14 @@ msgstr ""
 "(Tip: Wenn Sie mit einem anderen Werkzeug transparent zeichnen möchten, dann "
 "klicken Sie auf \"Radieren\" und anschließend auf das Werkzeug, das Sie "
 "benutzen wollen)"
+
+#: kicongrid.cpp:66
+msgid "width"
+msgstr ""
+
+#: kicongrid.cpp:71
+msgid "height"
+msgstr ""
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
