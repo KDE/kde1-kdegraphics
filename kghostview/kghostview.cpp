@@ -45,6 +45,7 @@
 
 #include <kmisc.h>
 #include "kghostview.h"
+#include "version.h"
 
 #include <kkeyconf.h>
 #include <kapp.h>
@@ -589,7 +590,9 @@ void KGhostview::createMenubar()
 	menubar->insertItem( i18n("&Help"), 
 		kapp->getHelpMenu( FALSE,
 		"\n"\
-		"KGhostview Version 0.6 - the PostScript document viewer for\n"\
+		"KGhostview "\
+ 	         KGHOSTVIEW_VERSION\
+	         " - the PostScript document viewer for\n"\
 		"the K Desktop Environment.\n"\
 		"\n"\
 		"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"\
@@ -1009,7 +1012,7 @@ void KGhostview::setName()
 		s += " - ";
 		s += QFileInfo( filename ).fileName();
 	} else {
-		s += " - Version 0.6";
+//		s += " - Version 0.6";
 	}
 	QWidget::setCaption(s);
 }
