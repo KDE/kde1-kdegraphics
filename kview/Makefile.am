@@ -23,8 +23,7 @@ EXTRA_DIST = $(lnk_DATA)
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = layout/liblayout.a \
-	-lkfile -lkfm -lkdeui -lkdecore -lkimgio -lqt -lXext -lX11 \
-		$(KIMGIO_LIBS) -lm
+	-lkfile -lkfm $(LIB_KIMGIO) $(LIB_KDEUI)
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
