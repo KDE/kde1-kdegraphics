@@ -55,23 +55,20 @@ msgid "To &Desktop"
 msgstr "Til &skrivebord"
 
 #: viewer.cpp:297
-#, fuzzy
 msgid "Fi&lter"
-msgstr "&Side ved side"
+msgstr "Fi&lter"
 
 #: viewer.cpp:314
 msgid "F&ilter"
 msgstr "F&ilter"
 
 #: viewer.cpp:318
-#, fuzzy
 msgid "&Images"
-msgstr "&Bilde"
+msgstr "&Bilder"
 
 #: viewer.cpp:333
-#, fuzzy
 msgid "&Open.."
-msgstr "Å&pne fil..."
+msgstr "Å&pne..."
 
 #: viewer.cpp:334
 msgid "&Save As.."
@@ -112,31 +109,28 @@ msgid "Rotate &clockwise"
 msgstr "Roter &klokkevis"
 
 #: viewer.cpp:354
-#, fuzzy
 msgid "Rotate &anti-clockwise"
-msgstr "&Mot klokken"
+msgstr "Roter &Mot klokken"
 
 #: viewer.cpp:357
 msgid "Flip &vertical"
-msgstr ""
+msgstr "Drei &vertikalt"
 
 #: viewer.cpp:359
 msgid "Flip &horizontal"
-msgstr ""
+msgstr "Drei &horisontalt"
 
 #: viewer.cpp:362
 msgid "&Tile"
 msgstr "&Side ved side"
 
 #: viewer.cpp:363
-#, fuzzy
 msgid "&Max"
-msgstr "&Maks størrelse"
+msgstr "&Maks"
 
 #: viewer.cpp:364
-#, fuzzy
 msgid "Max&pect"
-msgstr "Sidemaks"
+msgstr "Maks&pekt"
 
 #: viewer.cpp:367
 msgid "&List.."
@@ -176,217 +170,84 @@ msgstr "Laster.."
 
 #: colour.cpp:29
 msgid "Brightening..."
-msgstr ""
+msgstr "Lysner..."
 
 #: colour.cpp:43
 msgid "Intensity:Brighten"
-msgstr ""
+msgstr "Intensitet:Lys"
 
 #: colour.cpp:63
 msgid "Darkening..."
-msgstr ""
+msgstr "Mørkner"
 
 #: colour.cpp:76
 msgid "Intensity:Darken"
-msgstr ""
+msgstr "Intensitet:Mørk"
 
 #: colour.cpp:114
 msgid "Converting to Greyscale..."
-msgstr ""
+msgstr "Konverterer til gråskala..."
 
 #: colour.cpp:143
 msgid "Greyscale"
-msgstr ""
+msgstr "Gråskala"
 
 #: colour.cpp:161
 msgid "Smoothing..."
-msgstr ""
+msgstr "Jevner..."
 
 #: colour.cpp:227
 msgid "Smooth"
-msgstr ""
+msgstr "Jevn"
 
 #: colour.cpp:248
 msgid "Enter gamma value (0...1):"
-msgstr ""
+msgstr "Skriv inn gamma-verdi (0...1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Gamma-korrigering..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
-msgstr ""
+msgstr "Gamma-korrekt..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
-msgstr ""
+msgstr "For."
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
-msgstr ""
+msgstr "&Lempe"
 
 #: ilistdlg.cpp:66
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: ilistdlg.cpp:70
 msgid "Start slide"
-msgstr ""
+msgstr "Start lydbilde"
 
 #: ilistdlg.cpp:75
 msgid "Interval.."
-msgstr ""
+msgstr "Interval..."
 
 #: ilistdlg.cpp:80
 msgid "Loop"
-msgstr ""
+msgstr "Sløyfe"
 
 #: ilistdlg.cpp:94
-#, fuzzy
 msgid "Image List"
-msgstr "&Bilde"
+msgstr "Bildeliste"
 
 #: ilistdlg.cpp:268
 msgid "Stop &slide"
-msgstr ""
+msgstr "Stopp &lysbilde"
 
 #: ilistdlg.cpp:276
 msgid "Start &slide"
-msgstr ""
+msgstr "Start &lystbilde"
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
-msgstr ""
-
-#~ msgid "Open &URL.."
-#~ msgstr "Åpne &URL..."
-
-#~ msgid "&Rotate"
-#~ msgstr "&Roter"
-
-#~ msgid "&Toggle Menu"
-#~ msgstr "&Av/på meny"
-
-#~ msgid "&Size Window"
-#~ msgstr "&Sett bildestørrelse"
-
-#~ msgid "I&mage Info"
-#~ msgstr "&Bildeinformasjon"
-
-#~ msgid "&in"
-#~ msgstr "&inn"
-
-#~ msgid "&out"
-#~ msgstr "&ut"
-
-#~ msgid "M&axpect"
-#~ msgstr "&Sidemaks"
-
-#~ msgid "&Contents"
-#~ msgstr "&Innhold"
-
-#~ msgid "Clockwise"
-#~ msgstr "Klokkevis"
-
-#~ msgid "Anti-clock"
-#~ msgstr "Mot klokken"
-
-#~ msgid "Mirror X"
-#~ msgstr "Speil om X"
-
-#~ msgid "Mirror Y"
-#~ msgstr "Speil om Y"
-
-#~ msgid "Max Size"
-#~ msgstr "Maks størrelse"
-
-#~ msgid "Zoom"
-#~ msgstr "Forstørr"
-
-#~ msgid "Rotate"
-#~ msgstr "Roter"
-
-#~ msgid "To Desktop"
-#~ msgstr "Til skrivebord"
-
-#~ msgid "Fit window size to pixmap size"
-#~ msgstr "Tilpass vindustørrelse til pixmap-størrelse"
-
-#~ msgid "Fit pixmap size to window size"
-#~ msgstr "Tilpass pixmap-størrelse til vindustørrelse"
-
-#~ msgid "KView Display Manager"
-#~ msgstr "KView Skjermbehandler"
-
-#~ msgid "Open &URL..."
-#~ msgstr "Åpne &URL..."
-
-#~ msgid "Image Caching"
-#~ msgstr "Bildemellomlagring"
-
-#~ msgid "Cache Size"
-#~ msgstr "Mellomlagerstørrelse"
-
-#~ msgid "Save Options"
-#~ msgstr "Lagre valg"
-
-#~ msgid "New Window"
-#~ msgstr "Nytt vindu"
-
-#~ msgid "open new file"
-#~ msgstr "åpne ny fil"
-
-#~ msgid "shrink -50%"
-#~ msgstr "forminsk -50%"
-
-#~ msgid "magnify +50%"
-#~ msgstr "forstørr +50%"
-
-#~ msgid "size Window"
-#~ msgstr "sett vindusstørrelse"
-
-#~ msgid "launch help"
-#~ msgstr "kjør hjelp"
-
-#~ msgid "first pic"
-#~ msgstr "første bilde"
-
-#~ msgid "last pic"
-#~ msgstr "siste bilde"
-
-#~ msgid "prev pic"
-#~ msgstr "forrige bilde"
-
-#~ msgid "next pic"
-#~ msgstr "neste bilde"
-
-#~ msgid "start picture show"
-#~ msgstr "start bildefremvisning"
-
-#~ msgid "random picture show"
-#~ msgstr "tilfeldig bildefremvisning"
-
-#~ msgid "stop picture show"
-#~ msgstr "stopp bildefremvisning"
-
-#~ msgid "slow"
-#~ msgstr "sakte"
-
-#~ msgid "fast"
-#~ msgstr "hurtig"
-
-#~ msgid "Output Device"
-#~ msgstr "Utenhet"
-
-#~ msgid " Files: %d"
-#~ msgstr " Filer: %d"
-
-#~ msgid " Format: %s Size: %dx%d"
-#~ msgstr " Format: %s Størrelse: %dx%d"
-
-#~ msgid "Window %d"
-#~ msgstr "Vindu %d"
-
-#~ msgid "(c) 1996 - 1998 by \n"
-#~ msgstr "(c) 1996 - 1998 av \n"
+msgstr "Tid mellom lydbilder (sek):"
