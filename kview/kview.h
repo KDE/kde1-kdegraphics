@@ -13,6 +13,8 @@ class KFilterList;
 class KFiltMenuFactory;
 class KHelpIndex;
 class KImageViewer;
+#include "viewer.h" //gcc-2.7.2
+#include "filtmenu.h" //gcc-2.7.2
 
 /**
 * KView application object.
