@@ -18,7 +18,7 @@ msgid "snapshot"
 msgstr "øyeblikksfoto"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -28,13 +28,13 @@ msgid ""
 "\n"
 "Version: %s"
 msgstr ""
-"Trykk `Grab'-knappen, klikk så\n"
+"Trykk på `Fotografer'-knappen, klikk så\n"
 "på et vindu for å fotografere det.\n"
 "\n"
 "KSnapshot er under enerett av Richard Moore (rich@kde.org)\n"
 "og er gitt ut under LGPL\n"
 "\n"
-"Versjon: "
+"Versjon: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
