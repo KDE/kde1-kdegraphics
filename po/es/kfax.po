@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics \n"
-"POT-Creation-Date: 1998-11-03 09:55+0100\n"
+"POT-Creation-Date: 1998-11-04 01:46+0100\n"
 "PO-Revision-Date: 1998-06-17 +0200\n"
 "Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
 

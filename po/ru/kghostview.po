@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-03 09:55+0100\n"
+"POT-Creation-Date: 1998-11-04 01:46+0100\n"
 "PO-Revision-Date: 1998-08-19 00:46+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
