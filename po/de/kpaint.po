@@ -1,3 +1,18 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
 #: app.cpp:27 app.cpp:44 kpaint.cpp:204
 msgid "Close Window"
 msgstr "Fenster schließen"
@@ -61,7 +76,7 @@ msgstr "Aufruf:"
 
 #: app.cpp:71
 msgid " [url | filename]\n"
-msgstr "[url | dateiname]\n"
+msgstr "[URL | Dateiname]\n"
 
 #: canvassize.cpp:11
 msgid "Width"
@@ -117,11 +132,11 @@ msgstr "Einfügen"
 
 #: kpaint.cpp:168 kpaint.cpp:214
 msgid "Zoom In"
-msgstr "Hineinzoomen"
+msgstr "Vergrößern"
 
 #: kpaint.cpp:170 kpaint.cpp:215
 msgid "Zoom Out"
-msgstr "Herauszoomen"
+msgstr "Verkleinern"
 
 #: kpaint.cpp:194
 msgid "New Image..."
@@ -173,7 +188,7 @@ msgstr "Maskieren..."
 
 #: kpaint.cpp:217
 msgid "Options..."
-msgstr "Optionen..."
+msgstr "Einstellungen..."
 
 #: kpaint.cpp:220
 msgid "Information..."
@@ -181,7 +196,7 @@ msgstr "Information..."
 
 #: kpaint.cpp:221
 msgid "Edit Palette..."
-msgstr "Palette editieren..."
+msgstr "Palette bearbeiten..."
 
 #: kpaint.cpp:222
 msgid "Change Colour Depth..."
@@ -247,8 +262,7 @@ msgid ""
 "corrupt."
 msgstr ""
 "Fehler: Unbekanntes Format\n"
-"KPaint versteht das Format der angegebenen Datei nicht, oder die Datei ist "
-"korrupt."
+"KPaint versteht das Format der angegebenen Datei nicht, oder die Datei ist beschädigt."
 
 #: kpaint.cpp:316 kpaint.cpp:433
 msgid "KPaint: Malformed URL"
@@ -272,8 +286,8 @@ msgid ""
 "cancel the current remote job or wait for it to complete."
 msgstr ""
 "KPaint greift bereits auf eine entfernte Datei zu,\n"
-"Sie müssen entweder den aktuellen entfernten Job abbrechenoder warten, bis "
-"er beendet ist."
+"Sie müssen entweder den aktuellen entfernten Job abbrechen oder warten, \n"
+"bis er beendet ist."
 
 #: kpaint.cpp:346
 msgid "KPaint: Could not find KFM"
@@ -292,7 +306,9 @@ msgstr "KPaint: Laden vom Netzwerk schlug fehl"
 msgid ""
 "Error: Netword Load Failed\n"
 "Something went wrong :-("
-msgstr "Fehler: Laden vom Netzwerk schlug fehlIrgendwas ist schiefgegangen :-("
+msgstr ""
+"Fehler: Laden vom Netzwerk schlug fehl.\n"
+"Irgendwas ist schiefgegangen :-("
 
 #: kpaint.cpp:463
 msgid "KPaint: Could not start KFM"
@@ -316,7 +332,7 @@ msgstr "Werkzeugeigenschaften"
 
 #: palette.cpp:101
 msgid "Edit Colour"
-msgstr "Farbe editieren"
+msgstr "Farbe bearbeiten"
 
 #: properties.cpp:19
 msgid "Line Properties"
@@ -360,7 +376,7 @@ msgstr "Diagonale Linien \\"
 
 #: properties.cpp:80
 msgid "Diagonal Grid"
-msgstr "Diagonales Raster"
+msgstr "Diagonales Gitter"
 
 #: properties.cpp:90
 msgid "Custom"

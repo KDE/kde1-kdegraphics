@@ -1,3 +1,18 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
 #: copyright.cpp:17
 msgid "Copyright"
 msgstr "Copyright"
@@ -66,7 +81,7 @@ msgstr "Allgemein"
 
 #: interpreter.cpp:28
 msgid "Interpreter name"
-msgstr "Interpreter name"
+msgstr "Interpreter"
 
 #: interpreter.cpp:42
 msgid "Antialiasing"
@@ -94,7 +109,7 @@ msgstr "Graustufen"
 
 #: interpreter.cpp:72
 msgid "Monochrome"
-msgstr "Monochrom"
+msgstr "Schwarz-Weiß"
 
 #: interpreter.cpp:78
 msgid "Backing"
@@ -110,7 +125,7 @@ msgstr "Backing store"
 
 #: interpreter.cpp:103
 msgid "Defaults"
-msgstr "Defaults"
+msgstr "Voreinstellungen"
 
 #: interpreter.cpp:160
 msgid "gs"
@@ -171,11 +186,11 @@ msgstr "Nach rechts verschieben"
 
 #: kghostview.cpp:239 kghostview.cpp:314 kghostview.cpp:370
 msgid "Redisplay"
-msgstr "aktualisieren"
+msgstr "Aktualisieren"
 
 #: kghostview.cpp:347
 msgid "Configure interpreter"
-msgstr "Interpreter konfigurieren"
+msgstr "Interpreter einstellen"
 
 #: kghostview.cpp:403
 msgid "&New"
@@ -199,7 +214,7 @@ msgstr "&1."
 
 #: kghostview.cpp:410
 msgid "&2."
-msgstr "&1."
+msgstr "&2."
 
 #: kghostview.cpp:411
 msgid "&3."
@@ -231,7 +246,7 @@ msgstr "ganze &Seite"
 
 #: kghostview.cpp:431
 msgid "&Redisplay"
-msgstr "&aktualisieren"
+msgstr "&Aktualisieren"
 
 #: kghostview.cpp:433
 msgid "&Info ..."
@@ -255,7 +270,7 @@ msgstr "Zum &Anfang"
 
 #: kghostview.cpp:447
 msgid "Go to &end"
-msgstr "Ans &Ende"
+msgstr "Zum &Ende"
 
 #: kghostview.cpp:449
 msgid "&Read down"
@@ -323,7 +338,7 @@ msgstr "Vorwärts"
 
 #: kghostview.cpp:575
 msgid "Go to page ..."
-msgstr "Zu Seite gehen ..."
+msgstr "Zu Seite ..."
 
 #: kghostview.cpp:580
 msgid "Change view ..."
@@ -343,7 +358,7 @@ msgstr "Zum Anfang"
 
 #: kghostview.cpp:596
 msgid "Go to end"
-msgstr "Ans Ende"
+msgstr "Zum Ende"
 
 #: kghostview.cpp:599
 msgid "Read down the page"
@@ -377,10 +392,10 @@ msgid ""
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
 msgstr ""
-"Ein Internet Auftrag wird\n"
+"Ein Internet-Auftrag wird\n"
 "gerade bearbeitet.\n"
-"Bitte warten Sie bis er abgeschlossen ist.\n"
-"Alternativ können Sie ihn auch stoppen."
+"Bitte warten Sie bis er beendet ist\n"
+"oder stoppen Sie ihn."
 
 #: kghostview.cpp:674
 msgid "Could not start or find KFM."
@@ -392,11 +407,11 @@ msgstr "KGhostview: Version 0.5"
 
 #: kghostview.cpp:1074 kghostview.cpp:2062 viewcontrol.cpp:29
 msgid "Portrait"
-msgstr "Portrait"
+msgstr "Hochformat"
 
 #: kghostview.cpp:1076 kghostview.cpp:2068 viewcontrol.cpp:30
 msgid "Landscape"
-msgstr "Landscape"
+msgstr "Querformat"
 
 #: kghostview.cpp:1078 kghostview.cpp:2066 viewcontrol.cpp:31
 msgid "Seascape"
@@ -420,11 +435,11 @@ msgstr "Kantenglättung aus"
 
 #: kghostview.cpp:1270
 msgid "Show Ghostscript messages"
-msgstr "Zeige Ghostview Meldungen"
+msgstr "Zeige Ghostview-Meldungen"
 
 #: kghostview.cpp:1272
 msgid "Hide Ghostscript messages"
-msgstr "Zeige keine Ghostview Meldungen"
+msgstr "Unterdrücke Ghostview-Meldungen"
 
 #: kghostview.cpp:1321
 msgid "Version 0.5"
@@ -450,11 +465,11 @@ msgstr ""
 
 #: kghostview.cpp:1376 kghostview.cpp:1377 kghostview.cpp:1378
 msgid "Printer Name : "
-msgstr "Drucker Name :"
+msgstr "Druckername :"
 
 #: kghostview.cpp:1442
 msgid "Print failure : lpr"
-msgstr "Drucker Fehler : lpr"
+msgstr "Druckerfehler : lpr"
 
 #: kghostview.cpp:1974 kghostview.cpp:1986 kghostview.cpp:2223
 #: kghostview.cpp:2246
@@ -517,9 +532,7 @@ msgstr "[Dateiname]\n"
 
 #: main.cpp:21
 msgid "See Qt documentation for command line options\n"
-msgstr ""
-"Bitte schlagen Sie die Optionen der Kommandozeile in der Benutzeranleitung "
-"nach.\n"
+msgstr "Bitte schlagen Sie die Kommandoparameter in der Benutzeranleitung nach.\n"
 
 #: main.cpp:89
 #, c-format
@@ -538,7 +551,7 @@ msgstr "Dateiformat konnte nicht erkannt werden\n"
 
 #: messages.cpp:17
 msgid "Ghostscript messages"
-msgstr "Ghostscript Nachrichten"
+msgstr "Ghostscript-Meldungen"
 
 #: messages.cpp:35
 msgid "Clear"
@@ -578,7 +591,7 @@ msgstr "Vergrößerung"
 
 #: viewcontrol.cpp:50
 msgid "Orientation"
-msgstr "Drehung"
+msgstr "Ausrichtung"
 
 #: viewcontrol.cpp:55
 msgid "Media"
