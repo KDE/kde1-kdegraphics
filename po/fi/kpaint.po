@@ -6,13 +6,93 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: ENCODING\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Alueen valinta"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Kuvan koko"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Leveys:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Korkeus:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Ympyrä"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Kuvan syvyys:"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr "1 (2 väriä)"
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr "4 (16 väriä)"
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr "8 (256 väriä)"
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr "15 (32k väriä)"
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr "16 (64k väriä)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (Täysväri)"
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr "32 (Täysväri)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Ellipsi"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Kuvaformaatti:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Värisyvyys:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Värejä käytetty:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Kuvan leveys:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Kuvan korkeus:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Peruuta"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -188,21 +268,13 @@ msgstr ""
 "Virhe: Tuntematon formaatti\n"
 "KPaint ei ymmärrä kuvan formaattia tai tiedosto on vaurioitunut."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Ellipsi"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Ympyrä"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Viiva"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Kynä"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Viiva"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -228,45 +300,9 @@ msgstr "Alueen valinta"
 msgid "Tool Properties"
 msgstr "Työkalujen ominaisuudet"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Värisyvyys:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Värejä käytetty:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Kuvan leveys:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Kuvan korkeus:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Peruuta"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Muokkaa väriä"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Kuvaformaatti:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Kuvan koko"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Leveys:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Korkeus:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -363,42 +399,6 @@ msgstr "Liitostyyli:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Viivan väri..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Alueen valinta"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Kuvan syvyys:"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr "1 (2 väriä)"
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr "4 (16 väriä)"
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr "8 (256 väriä)"
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr "15 (32k väriä)"
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr "16 (64k väriä)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (Täysväri)"
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr "32 (Täysväri)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

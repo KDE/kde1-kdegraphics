@@ -6,12 +6,95 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-04-21 03:23:+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "區域選擇"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "畫布大小"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "寬度"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "高度"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "圓形"
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "影像寬度"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr ""
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr ""
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "橢圓"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "檔案格式:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "顏色深度:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "使用顏色數:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "影像寬度:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "影像高度:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "解散"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -187,21 +270,13 @@ msgstr ""
 "錯誤:  未知的格式\n"
 "KPaint 無法辨識檔案正確的格式或檔案有錯."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "橢圓"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "圓形"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "線段"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "畫筆"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "線段"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -227,47 +302,9 @@ msgstr "區域選擇"
 msgid "Tool Properties"
 msgstr "工具內容"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "顏色深度:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "使用顏色數:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "影像寬度:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "影像高度:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "解散"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "編輯顏色"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "檔案格式:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "畫布大小"
-
-#: canvassize.cpp:25
-#, fuzzy
-msgid "Width:"
-msgstr "寬度"
-
-#: canvassize.cpp:26
-#, fuzzy
-msgid "Height:"
-msgstr "高度"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -364,43 +401,6 @@ msgstr "線段交點類型:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "設定線段顏色..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "區域選擇"
-
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "影像寬度"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr ""
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr ""
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr ""
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr ""
 
 #: roundangle.cpp:19
 #, fuzzy

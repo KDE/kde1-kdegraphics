@@ -1,13 +1,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@Ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Selezione Area"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Dimensioni del disegno"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Larghezza:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Altezza:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Cerchio"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Numero Colori Immagine:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "True Colour (24 bit)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "True Colour (24 bit)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Ellissi"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Formato del File:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Numero di colori:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Colori in Uso:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Larghezza Immagine:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Altezza Immagine:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr ""
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -190,21 +276,13 @@ msgstr ""
 "KPaint non é capace di interpretare il formato del file o il\n"
 " file é rovinato."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Ellissi"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Cerchio"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linea"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Penna"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linea"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -230,45 +308,9 @@ msgstr "Area selezionata"
 msgid "Tool Properties"
 msgstr "Caratteristiche degli Strumenti"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Numero di colori:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Colori in Uso:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Larghezza Immagine:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Altezza Immagine:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr ""
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Modifica Colore"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Formato del File:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Dimensioni del disegno"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Larghezza:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Altezza:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -365,48 +407,6 @@ msgstr "Stile giuntura:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Imposta Colore Linea..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Selezione Area"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Numero Colori Immagine:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "256 Colori (8 bit)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "256 Colori (8 bit)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "256 Colori (8 bit)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "256 Colori (8 bit)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "256 Colori (8 bit)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "True Colour (24 bit)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "True Colour (24 bit)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

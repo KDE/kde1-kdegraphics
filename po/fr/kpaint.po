@@ -5,13 +5,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-01-28 22:55 CET\n"
 "Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; \n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Sélection d'une zone"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Taille de la feuille"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Largeur :"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Hauteur :"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Cercle"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Nombre de plans de couleurs :"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 couleurs)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 couleurs)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 couleurs)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 couleurs)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 couleurs)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (couleurs réelles)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (couleurs réelles)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Ellipse"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Format du fichier :"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Nombre de plans de couleur :"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Couleurs utilisées :"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Largeur de l'image :"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Hauteur de l'image :"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "OK"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -189,21 +275,13 @@ msgstr ""
 "Erreur : format inconnu\n"
 "KPaint n'a pas pu reconnaître le format du fichier spécifié."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Ellipse"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Cercle"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Ligne"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Stylo"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Ligne"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -229,45 +307,9 @@ msgstr "Sélectionner une zone"
 msgid "Tool Properties"
 msgstr "Propriétés des outils"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Nombre de plans de couleur :"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Couleurs utilisées :"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Largeur de l'image :"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Hauteur de l'image :"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "OK"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Editer les couleurs"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Format du fichier :"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Taille de la feuille"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Largeur :"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Hauteur :"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -364,48 +406,6 @@ msgstr "Style de connexion :"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Définir la couleur des lignes..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Sélection d'une zone"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Nombre de plans de couleurs :"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 couleurs)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 couleurs)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 couleurs)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 couleurs)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 couleurs)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (couleurs réelles)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (couleurs réelles)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

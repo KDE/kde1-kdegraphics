@@ -4,10 +4,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-06-24 00:06+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Zaznaczony obszar"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Rozmiar obrazu"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "Szeroko¶æ:"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "Wysoko¶æ:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Okr±g"
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "G³êboko¶æ obrazu:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 kolorów)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 kolorów)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 kolorów)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 kolorów)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 kolorów)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (True Colour)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (True Colour)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Elipsa"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Format pliku:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "G³êbia kolorów:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Kolory u¿yte:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Szeroko¶æ obrazu:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Wysoko¶æ obrazu:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Wycofaj"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -188,21 +277,13 @@ msgstr ""
 "B³±d: Nieznany format\n"
 "KPaint nie rozpozna³ formatu lub plik jest uszkodzony."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Elipsa"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Okr±g"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linia"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Piórko"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linia"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -228,47 +309,9 @@ msgstr "Zaznacz obszar"
 msgid "Tool Properties"
 msgstr "W³a¶ciwo¶ci narzêdzi"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "G³êbia kolorów:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Kolory u¿yte:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Szeroko¶æ obrazu:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Wysoko¶æ obrazu:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Wycofaj"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Edytuj kolor"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Format pliku:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Rozmiar obrazu"
-
-#: canvassize.cpp:25
-#, fuzzy
-msgid "Width:"
-msgstr "Szeroko¶æ:"
-
-#: canvassize.cpp:26
-#, fuzzy
-msgid "Height:"
-msgstr "Wysoko¶æ:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -365,49 +408,6 @@ msgstr "Styl ³±czenia:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Kolor &linii..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Zaznaczony obszar"
-
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "G³êboko¶æ obrazu:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 kolorów)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 kolorów)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 kolorów)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 kolorów)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 kolorów)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (True Colour)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (True Colour)"
 
 #: roundangle.cpp:19
 #, fuzzy

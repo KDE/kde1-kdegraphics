@@ -6,13 +6,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: LinuxKorea Co. <kde@linuxkorea.co.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8BIT\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "영역 선택"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "그림판 크기"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "넓이:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "높이:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "원"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "이미지 색:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 색)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 색)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 색)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 색)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 색)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (트루 칼라)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (트루 칼라)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "타원"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "파일 포맷"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "색상 수"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "사용한 색:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "이미지 넓이:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "이미지 높이:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr ""
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -190,21 +276,13 @@ msgstr ""
 "KPaint가 지정한 파일의 포맷을 이해하지 못하거나\n"
 "파일이 손상되었습니다."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "타원"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "원"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "선"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "곡선"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "선"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -230,45 +308,9 @@ msgstr "영역 선택"
 msgid "Tool Properties"
 msgstr "도구 등록정보"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "색상 수"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "사용한 색:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "이미지 넓이:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "이미지 높이:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr ""
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "색 편집"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "파일 포맷"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "그림판 크기"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "넓이:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "높이:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -365,48 +407,6 @@ msgstr "연결 스타일:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "선 색 설정..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "영역 선택"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "이미지 색:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 색)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 색)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 색)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 색)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 색)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (트루 칼라)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (트루 칼라)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

@@ -1,10 +1,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "区域选择"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "画布大小"
+
+#
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "宽度:"
+
+#
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "高度:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "圆形"
+
+#
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "图象颜色深度:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 色)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 色)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 色)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 色)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 色)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (真彩色)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (真彩色)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "椭圆"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "文件格式:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "颜色深度"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "使用颜色数:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "图象宽度"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "图象高度"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "取消"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -182,21 +271,13 @@ msgstr ""
 "错误: 未知格式\n"
 "KPaint 不知道指定文件的格式或者文件已损坏."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "椭圆"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "圆形"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "线段"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "画笔"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "线段"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -222,47 +303,9 @@ msgstr "区域选择"
 msgid "Tool Properties"
 msgstr "工具特性"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "颜色深度"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "使用颜色数:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "图象宽度"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "图象高度"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "取消"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "编辑颜色"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "文件格式:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "画布大小"
-
-#
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "宽度:"
-
-#
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "高度:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -359,49 +402,6 @@ msgstr "线段交点类型:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "设定线段颜色..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "区域选择"
-
-#
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "图象颜色深度:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 色)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 色)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 色)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 色)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 色)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (真彩色)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (真彩色)"
 
 #
 #: roundangle.cpp:19

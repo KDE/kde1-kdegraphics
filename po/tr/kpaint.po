@@ -5,13 +5,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 1.0\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-06-29 11:00+0200\n"
 "Last-Translator: Kerem ERZURUMLU <kerem@linux.org.tr>\n"
 "Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ISO 8859-9\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Alan Seçimi"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Pano Boyu"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "En:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Boy:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Daire"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Resim Derinliði:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (Gerçek Renkler)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (Gerçek Renkler)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Elips"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Dosya Türü:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Renk Çözünürlüðü:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Kullanýlan Renkler:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Görüntü Geniþliði:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Görüntü Yüksekliði:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr ""
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -188,21 +274,13 @@ msgstr ""
 "KPaint belirtilen dosyadaki türü anlayamadý yada dosya\n"
 "bozulmuþ."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Elips"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Daire"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Çizgi"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Kalem"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Çizgi"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -228,45 +306,9 @@ msgstr "Alan Seçimi"
 msgid "Tool Properties"
 msgstr "Araç Özellikleri"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Renk Çözünürlüðü:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Kullanýlan Renkler:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Görüntü Geniþliði:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Görüntü Yüksekliði:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr ""
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Renkler Ýle Oyna"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Dosya Türü:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Pano Boyu"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "En:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Boy:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -363,48 +405,6 @@ msgstr "Birleþtirme Biçimi:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Çizgi Rengi..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Alan Seçimi"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Resim Derinliði:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (Gerçek Renkler)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (Gerçek Renkler)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

@@ -5,13 +5,93 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kpaint\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-04-13 17:48+0100\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Områdevalg"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Lærretstørrelse"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Bredde:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Høyde:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Sirkel"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Billeddybde:"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr "1 (2 farger)"
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr "4 (16 farger)"
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr "8 (256 farger)"
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr "15 (32k farger)"
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr "16 (54k farger)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (sannhetsfarger)"
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr "32 (sannhetsfarger)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Ellipse"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Filformat:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Fargedybde:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Brukte farger:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Billedbredde:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Billedhøyde:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Forkast"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -184,21 +264,13 @@ msgstr ""
 "Feil: Ukjent format\n"
 "KPaint forstår ikke formatet til den angitte fil eller filen er ødelagt."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Ellipse"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Sirkel"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linje"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Penn"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linje"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -224,45 +296,9 @@ msgstr "Områdevalg"
 msgid "Tool Properties"
 msgstr "Verktøyegenskaper"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Fargedybde:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Brukte farger:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Billedbredde:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Billedhøyde:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Forkast"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Rediger farge"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Filformat:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Lærretstørrelse"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Bredde:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Høyde:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -359,42 +395,6 @@ msgstr "Kople sammen stil:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Sett linjefarge..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Områdevalg"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Billeddybde:"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr "1 (2 farger)"
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr "4 (16 farger)"
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr "8 (256 farger)"
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr "15 (32k farger)"
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr "16 (54k farger)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (sannhetsfarger)"
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr "32 (sannhetsfarger)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

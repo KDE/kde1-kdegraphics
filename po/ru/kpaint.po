@@ -6,13 +6,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-08-19 01:14+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8-bit\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Выделение области"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Размер картины"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Ширина:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Высота:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Окружность"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Глубина изображения:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 цветов)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 цветов)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 цветов)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 цветов)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 цветов)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (Полноцвет)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (Полноцвет)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Эллипс"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Формат файла:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Количество бит на точку:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Цветов используется:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Ширина изображения"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Высота изображения"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr ""
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -187,21 +273,13 @@ msgstr ""
 "KPaint не может распознать формат указанного файла,\n"
 "или файл поврежден."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Эллипс"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Окружность"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Линия"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Ручка"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Линия"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -227,45 +305,9 @@ msgstr "Выделение области"
 msgid "Tool Properties"
 msgstr "Свойства инструментов"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Количество бит на точку:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Цветов используется:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Ширина изображения"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Высота изображения"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr ""
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Редактировать цвета"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Формат файла:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Размер картины"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Ширина:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Высота:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -362,48 +404,6 @@ msgstr "Присоеденить тип:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Установить цвет линии..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Выделение области"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Глубина изображения:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 цветов)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 цветов)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 цветов)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 цветов)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 цветов)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (Полноцвет)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (Полноцвет)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

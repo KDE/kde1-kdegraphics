@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-11-14 14:04 +0100\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"
@@ -9,6 +9,86 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: iso-8859-1\n"
 "Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Bereichsauswahl"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Größe der Zeichenfläche"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Breite:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Höhe:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Kreis"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Farbtiefe:"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr "1 (2 Farben)"
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr "4 (16 Farben)"
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr "8 (256 Farben)"
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr "15 (32k Farben)"
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr "16 (64k Farben)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (Echtfarben)"
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr "32 (Echtfarben)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Ellipse"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Dateiformat:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Farbtiefe:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Benutzte Farben:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Bildbreite:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Bildhöhe:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Schließen"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -183,21 +263,13 @@ msgstr ""
 "KPaint kennt das Format der angegebenen Datei nicht,\n"
 "oder die Datei ist beschädigt."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Ellipse"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Kreis"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linie"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Stift"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linie"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -223,45 +295,9 @@ msgstr "Bereichsauswahl"
 msgid "Tool Properties"
 msgstr "Werkzeugeigenschaften"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Farbtiefe:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Benutzte Farben:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Bildbreite:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Bildhöhe:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Schließen"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Farbe bearbeiten"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Dateiformat:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Größe der Zeichenfläche"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Breite:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Höhe:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -358,42 +394,6 @@ msgstr "Verbindungsstil:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Linienfarbe setzen..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Bereichsauswahl"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Farbtiefe:"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr "1 (2 Farben)"
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr "4 (16 Farben)"
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr "8 (256 Farben)"
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr "15 (32k Farben)"
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr "16 (64k Farben)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (Echtfarben)"
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr "32 (Echtfarben)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

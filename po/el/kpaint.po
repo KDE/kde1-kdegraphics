@@ -5,13 +5,96 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@exi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Επιλογή περιοχής"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Μέγεθος καμβά"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "Πλάτος"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "Ύψος"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Κύκλος"
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "Πλάτος εικόνας:"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr ""
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr ""
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr ""
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr ""
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Έλλειψη"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Τύπος αρχείου:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Βάθος χρώματος:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Χρώματα που σρησιμοποιούνται:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Πλάτος εικόνας:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Ύψος εικόνας"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Ξουτ!"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -188,21 +271,13 @@ msgstr ""
 "Το KPaint δεν αναγνωρίζει τον τύπο του συγκεκριμένου αρχείου ή το αρχείο "
 "είναι κατεστραμμένο."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Έλλειψη"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Κύκλος"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Γραμμή"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Πένα"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Γραμμή"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -228,47 +303,9 @@ msgstr "Επιλογή περιοχής"
 msgid "Tool Properties"
 msgstr "Ιδιότητες εργαλείου"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Βάθος χρώματος:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Χρώματα που σρησιμοποιούνται:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Πλάτος εικόνας:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Ύψος εικόνας"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Ξουτ!"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Επεξεργασία χρώματος"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Τύπος αρχείου:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Μέγεθος καμβά"
-
-#: canvassize.cpp:25
-#, fuzzy
-msgid "Width:"
-msgstr "Πλάτος"
-
-#: canvassize.cpp:26
-#, fuzzy
-msgid "Height:"
-msgstr "Ύψος"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -365,43 +402,6 @@ msgstr "Ένωση:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Χρώμα γραμμής"
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Επιλογή περιοχής"
-
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "Πλάτος εικόνας:"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr ""
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr ""
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr ""
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr ""
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr ""
 
 #: roundangle.cpp:19
 #, fuzzy

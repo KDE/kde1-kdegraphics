@@ -6,13 +6,99 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint 1.0\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-3\n"
 "Content-Transfer-Encoding: 8-bit\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Regionelekto"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Tabulgrandeco"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Larøeco:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Alteco:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Cirklo"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Kolorbitoj:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (multaj koloroj)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (multaj koloroj)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Elipso"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Dosierspeco:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Kolorbitoj"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Uzitaj koloroj:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Bildlarøeco"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Bildalteco"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr ""
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -190,21 +276,13 @@ msgstr ""
 "KPaint ne komprenas la specon de la indikita dosiero\n"
 "aý la dosiero estas difektita."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Elipso"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Cirklo"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linio"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Krajono"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linio"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -230,45 +308,9 @@ msgstr "Regionelekto"
 msgid "Tool Properties"
 msgstr "Ilkonfiguro"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Kolorbitoj"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Uzitaj koloroj:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Bildlarøeco"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Bildalteco"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr ""
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Redaktu kolorojn"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Dosierspeco:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Tabulgrandeco"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Larøeco:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Alteco:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -365,48 +407,6 @@ msgstr "Ligstilo:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Linikoloro..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Regionelekto"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Kolorbitoj:"
-
-#: depthdialog.cpp:24
-#, fuzzy
-msgid "1 (2 Colours)"
-msgstr "8 (256 koloroj)"
-
-#: depthdialog.cpp:25
-#, fuzzy
-msgid "4 (16 Colours)"
-msgstr "8 (256 koloroj)"
-
-#: depthdialog.cpp:26
-#, fuzzy
-msgid "8 (256 Colours)"
-msgstr "8 (256 koloroj)"
-
-#: depthdialog.cpp:27
-#, fuzzy
-msgid "15 (32k Colours)"
-msgstr "8 (256 koloroj)"
-
-#: depthdialog.cpp:28
-#, fuzzy
-msgid "16 (64k Colours)"
-msgstr "8 (256 koloroj)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (multaj koloroj)"
-
-#: depthdialog.cpp:30
-#, fuzzy
-msgid "32 (True Colour)"
-msgstr "24 (multaj koloroj)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
