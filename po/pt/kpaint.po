@@ -1,0 +1,421 @@
+
+#: app.cpp:27 app.cpp:44 kpaint.cpp:204
+msgid "Close Window"
+msgstr "Fechar Janela"
+
+#: app.cpp:28 app.cpp:43 kpaint.cpp:203
+msgid "New Window"
+msgstr "Nova Janela"
+
+#: app.cpp:29 app.cpp:45 kpaint.cpp:156
+msgid "Open File"
+msgstr "Abrir Ficheiro"
+
+#: app.cpp:30 app.cpp:46 kpaint.cpp:158
+msgid "Save File"
+msgstr "Gravar Ficheiro"
+
+#: app.cpp:31 app.cpp:47
+msgid "Save File As"
+msgstr "Gravar Ficheiro Como"
+
+#: app.cpp:33 kpaint.cpp:227
+msgid "Pen"
+msgstr "Caneta"
+
+#: app.cpp:34 kpaint.cpp:228
+msgid "Line"
+msgstr "Linha"
+
+#: app.cpp:35 kpaint.cpp:229
+msgid "Rectangle"
+msgstr "Rectangulo"
+
+#: app.cpp:36 kpaint.cpp:230
+msgid "Ellipse"
+msgstr "Elipse"
+
+#: app.cpp:37 kpaint.cpp:231
+msgid "Circle"
+msgstr "Circulo"
+
+#: app.cpp:38 kpaint.cpp:232
+msgid "Spray Can"
+msgstr "Lata de Spray"
+
+#: app.cpp:59
+msgid "This was a QString"
+msgstr "Isto era uma QString"
+
+#: app.cpp:68
+msgid ""
+"\n"
+"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+msgstr ""
+"\n"
+"(c) Richard J. Moore 1997 Disponibilizado atraves da GPL. Veja o ficheiro LICEN
+SE para detalhes\n"
+
+#: app.cpp:69
+msgid "Usage: "
+msgstr "Utilização"
+
+#: app.cpp:71
+msgid " [url | filename]\n"
+msgstr "[url | nome de ficheiro]\n"
+
+#: canvassize.cpp:11
+msgid "Width"
+msgstr "Largura"
+
+#: canvassize.cpp:12
+msgid "Height"
+msgstr "Altura"
+
+#: formatdialog.cpp:20
+msgid "File Format:"
+msgstr "Formato do Ficheiro:"
+
+#: infodialog.cpp:23
+msgid "Colour Depth:"
+msgstr "Profundidade de Cor:"
+
+#: infodialog.cpp:38
+msgid "Colours Used:"
+msgstr "Cores Usadas:"
+
+#: infodialog.cpp:65
+msgid "Image Width:"
+msgstr "Largura da Imagem:"
+
+#: infodialog.cpp:81
+msgid "Image Height:"
+msgstr "Altura da Imagem:"
+
+#: infodialog.cpp:93 palettedialog.cpp:13
+msgid "Dismiss"
+msgstr "Mandar Embora"
+
+#: kpaint.cpp:50 kpaint.cpp:520
+msgid "untitled.gif"
+msgstr "sem-titulo.gif"
+
+#: kpaint.cpp:154
+msgid "New Canvas"
+msgstr "Nova Tela"
+
+#: kpaint.cpp:161
+msgid "Cut"
+msgstr "Cortar"
+
+#: kpaint.cpp:163
+msgid "Copy"
+msgstr "Copiar"
+
+#: kpaint.cpp:165
+msgid "Paste"
+msgstr "Colar"
+
+#: kpaint.cpp:168 kpaint.cpp:214
+msgid "Zoom In"
+msgstr "Aumentar"
+
+#: kpaint.cpp:170 kpaint.cpp:215
+msgid "Zoom Out"
+msgstr "Diminuir"
+
+#: kpaint.cpp:194
+msgid "New Image..."
+msgstr "Nova Imagem..."
+
+#: kpaint.cpp:195
+msgid "Open Image..."
+msgstr "Abrir Imagem..."
+
+#: kpaint.cpp:196
+msgid "Save Image..."
+msgstr "Gravar Imagem..."
+
+#: kpaint.cpp:197
+msgid "Save Image As..."
+msgstr "Gravar Imagem Como..."
+
+#: kpaint.cpp:198
+msgid "Image Format..."
+msgstr "Formato de Imagem..."
+
+#: kpaint.cpp:200
+msgid "Open from URL..."
+msgstr "Abrir a partir do URL..."
+
+#: kpaint.cpp:201
+msgid "Save to URL..."
+msgstr "Gravar para o URL..."
+
+#: kpaint.cpp:209
+msgid "Copy Region"
+msgstr "Copiar Região"
+
+#: kpaint.cpp:210
+msgid "Cut Region"
+msgstr "Cortar Região"
+
+#: kpaint.cpp:211
+msgid "Paste Region"
+msgstr "Colar Região"
+
+#: kpaint.cpp:212
+msgid "Paste As Image"
+msgstr "Colar Como Imagem"
+
+#: kpaint.cpp:216
+msgid "Mask..."
+msgstr "Mascara..."
+
+#: kpaint.cpp:217
+msgid "Options..."
+msgstr "Opções"
+
+#: kpaint.cpp:220
+msgid "Information..."
+msgstr "Informação..."
+
+#: kpaint.cpp:221
+msgid "Edit Palette..."
+msgstr "Editar Paleta"
+
+#: kpaint.cpp:222
+msgid "Change Colour Depth..."
+msgstr "Mudar Profundidade Cor..."
+
+#: kpaint.cpp:225
+msgid "Tool Properties..."
+msgstr "Propriedades de Ferramentas..."
+
+#: kpaint.cpp:237
+msgid "Index"
+msgstr "Indice"
+
+#: kpaint.cpp:238
+msgid "About KPaint"
+msgstr "Acerca do KPaint"
+
+#: kpaint.cpp:241
+msgid "&File"
+msgstr "&Ficheiro"
+
+#: kpaint.cpp:242
+msgid "&Edit"
+msgstr "&Editar"
+
+#: kpaint.cpp:243
+msgid "&Image"
+msgstr "&Imagem"
+
+#: kpaint.cpp:244
+msgid "&Tool"
+msgstr "&Ferramenta"
+
+#: kpaint.cpp:246
+msgid "&Help"
+msgstr "&Ajuda"
+
+#: kpaint.cpp:281
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Não foi possivel abrir o ficheiro"
+
+#: kpaint.cpp:282
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Erro: Não foi possivel abrir o ficheiro\n"
+"KPaint não conseguiru abrir o ficheiro especificado."
+
+#: kpaint.cpp:285 kpaint.cpp:295 kpaint.cpp:320 kpaint.cpp:337 kpaint.cpp:348
+#: kpaint.cpp:406 kpaint.cpp:437 kpaint.cpp:454 kpaint.cpp:465
+msgid "Continue"
+msgstr "Continuar"
+
+#: kpaint.cpp:290
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Formato Desconhecido"
+
+#: kpaint.cpp:291
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified fileor the file is "
+"corrupt."
+msgstr ""
+"Erro: Formato Desconhecido\n"
+"KPaint não reconhece o formato do ficheiro especificado ou o ficheiro está"
+"corrompido."
+
+#: kpaint.cpp:316 kpaint.cpp:433
+msgid "KPaint: Malformed URL"
+msgstr "KPaint: URL Inválido"
+
+#: kpaint.cpp:317 kpaint.cpp:434
+msgid ""
+"Error: Malformed URL\n"
+"KPaint does not understand the specifed URL, check it's correct."
+msgstr ""
+"Erro: URL Inválido\n"
+"KPaint não compreende o URL especificao, verifique se está correcto."
+
+#: kpaint.cpp:334 kpaint.cpp:451
+msgid "Sorry"
+msgstr "Lamento"
+
+#: kpaint.cpp:335 kpaint.cpp:452
+msgid ""
+"KPaint is already accessing a remote file, you must\n"
+"cancel the current remote job or wait for it to complete."
+msgstr "KPaint já está a aceder a um ficheiro remoto, necessita\n"
+"de cancelar o trabalho remoto actual ou esperar que termine.""
+
+#: kpaint.cpp:346
+msgid "KPaint: Could not find KFM"
+msgstr "KPaint: Não foi possivel encontrar KFM"
+
+#: kpaint.cpp:347 kpaint.cpp:464
+msgid "Error: KPaint could not find a running KFM or start one itself."
+msgstr "Erro: KPaint não conseguiu encontrar um KFM a ser executado ou iniciar u
+m."
+
+#: kpaint.cpp:402
+msgid "KPaint: Network Load Failed"
+msgstr "KPaint: Carregamento da Rede Falhado"
+
+#: kpaint.cpp:403
+msgid ""
+"Error: Netword Load Failed\n"
+"Something went wrong :-("
+msgstr ""
+"Erro: Carregamento da Rede Falhado\n"
+"Algo ocorreu mal :-("
+
+#: kpaint.cpp:463
+msgid "KPaint: Could not start KFM"
+msgstr "KPaint: Não conseguiu iniciar o KFM"
+
+#: kpaint.cpp:492
+msgid "Canvas Size"
+msgstr "Tamalho da Tela"
+
+#: kpaint.cpp:680
+msgid "Open Location:"
+msgstr "Abrir Localização:"
+
+#: kpaint.cpp:716
+msgid "Save to Location:"
+msgstr "Gravar para Localização"
+
+#: manager.cpp:60
+msgid "Tool Properties"
+msgstr "Propriedades da Ferramenta"
+
+#: palette.cpp:101
+msgid "Edit Colour"
+msgstr "Editar Cor"
+
+#: properties.cpp:19
+msgid "Line Properties"
+msgstr "Propriedades da Linha"
+
+#: properties.cpp:21
+msgid "Fill Properties"
+msgstr "Propriedades de Enchimento"
+
+#: properties.cpp:67
+msgid "Fill Pattern:"
+msgstr "Padrão de Enchimento"
+
+#: properties.cpp:73 properties.cpp:239
+msgid "None"
+msgstr "Nenhum"
+
+#: properties.cpp:74 properties.cpp:234
+msgid "Solid"
+msgstr "Solido"
+
+#: properties.cpp:75
+msgid "Vertical Lines"
+msgstr "Linhas Verticais"
+
+#: properties.cpp:76
+msgid "Horizontal Lines"
+msgstr "Linhas Horizontais"
+
+#: properties.cpp:77
+msgid "Grid"
+msgstr "Rede"
+
+#: properties.cpp:78
+msgid "Diagonal Lines //"
+msgstr "Linhas Diagonais //"
+
+#: properties.cpp:79
+msgid "Diagonal Lines \\"
+msgstr "Linhas Diagonais \\"
+
+#: properties.cpp:80
+msgid "Diagonal Grid"
+msgstr "Rede Diagonal"
+
+#: properties.cpp:90
+msgid "Custom"
+msgstr "Personalizado"
+
+#: properties.cpp:93
+msgid "Pattern Filename:"
+msgstr "Nome de Ficheiro do Padrão:"
+
+#: properties.cpp:100
+msgid "Browse..."
+msgstr "Examinar..."
+
+#: properties.cpp:103
+msgid "Set Fill Colour..."
+msgstr "Especificar Cor de Enchimento..."
+
+#: properties.cpp:229
+msgid "Line Style:"
+msgstr "Estilo de Linha:"
+
+#: properties.cpp:235
+msgid "Dashed"
+msgstr "Tracejada"
+
+#: properties.cpp:236
+msgid "Dotted"
+msgstr "Pontilhada"
+
+#: properties.cpp:237
+msgid "Dash Dot"
+msgstr "Traço Ponto"
+
+#: properties.cpp:238
+msgid "Dash Dot Dot"
+msgstr "Traço Ponto Ponto"
+
+#: properties.cpp:243
+msgid "Line Width:"
+msgstr "Espessura de Linha:"
+
+#: properties.cpp:253
+msgid "End style:"
+msgstr "Estilo de Fim:"
+
+#: properties.cpp:258 properties.cpp:271
+msgid "Not Yet"
+msgstr "Ainda Não"
+
+#: properties.cpp:265
+msgid "Join style:"
+msgstr "Estilo de Junção"
+
+#: properties.cpp:277
+msgid "Set Line Colour..."
+msgstr "Especificar Cor de Linha..."
+
