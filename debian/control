@@ -1,0 +1,11 @@
+Source: kdegraphics
+Section: contrib/x11
+Priority: extra
+Maintainer: Stephan Kulow <coolo@kde.org>
+Standards-Version: 2.1.2.2
+
+Package: kdegraphics
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: KDE collection of graphics programs.
+ This collections includes kfax kfract kghostview kpaint kview and kdvi
