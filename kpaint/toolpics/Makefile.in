@@ -10,13 +10,21 @@ PICS=	circle.xpm \
 	pen.xpm \
 	spraycan.xpm \
 	ellipse.xpm \
-	rectangle.xpm
+	rectangle.xpm \
+	editpaste.xpm \
+	filenew.xpm \
+	editcopy.xpm \
+	fileopen.xpm \
+	editcut.xpm \
+	filefloppy.xpm \
+	viewmag+.xpm \
+	viewmag-.xpm
 
 .PHONY:	install
 
 install:
-	$(INSTALL_DIR) $(prefix)/lib/pics/toolbar
-	$(INSTALL_DATA) $(PICS) $(prefix)/lib/pics/toolbar
+	$(INSTALL_DIR) $(prefix)/share/apps/kpaint/toolbar
+	$(INSTALL_DATA) $(PICS) $(prefix)/share/apps/kpaint/toolbar
 
 
 

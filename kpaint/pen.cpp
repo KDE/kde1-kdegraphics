@@ -128,7 +128,7 @@ QPixmap *Pen::pixmap()
   QString pixdir;
 
   pixdir= kpaintApp->kdedir();
-  pixdir.append("/lib/pics/toolbar/");
+  pixdir.append("/share/apps/kpaint/toolbar/");
 
   pixdir.append("pen.xpm");
   return new QPixmap(pixdir);

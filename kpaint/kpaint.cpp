@@ -145,28 +145,36 @@ void KPaint::closeEvent(QCloseEvent *e)
 
 void KPaint::initToolbar()
 {
-  QString pixdir;
   QPixmap pixmap;
+  QString pixdir= kapp->kdedir();
 
   toolbar= new KToolBar(this);
-  pixdir= kpaintApp->kdedir()+"/lib/pics/toolbar/";
-  pixmap.load(pixdir + "filenew.xpm");
+
+  pixdir.append("/share/apps/kpaint/toolbar/");
+  pixmap.load(pixdir+"filenew.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(fileNew()), TRUE, klocale->translate("New Canvas"));
-  pixmap.load(pixdir + "fileopen.xpm");
+
+  pixmap.load(pixdir+"fileopen.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(fileOpen()), TRUE, klocale->translate("Open File"));
-  pixmap.load(pixdir + "filefloppy.xpm");
+
+  pixmap.load(pixdir+"filefloppy.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(fileSave()), TRUE, klocale->translate("Save File"));
   toolbar->insertSeparator();
-  pixmap.load(pixdir + "editcut.xpm");
+
+  pixmap.load(pixdir+"editcut.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(editCut()), FALSE, klocale->translate("Cut"));
-  pixmap.load(pixdir + "editcopy.xpm");
+
+  pixmap.load(pixdir+"editcopy.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(editCopy()), FALSE, klocale->translate("Copy"));
-  pixmap.load(pixdir + "editpaste.xpm");
+
+  pixmap.load(pixdir+"editpaste.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(editPaste()), FALSE, klocale->translate("Paste"));
   toolbar->insertSeparator();
-  pixmap.load(pixdir + "viewmag+.xpm");
+
+  pixmap.load(pixdir+"viewmag+.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(editZoomIn()), TRUE, klocale->translate("Zoom In"));
-  pixmap.load(pixdir + "viewmag-.xpm");
+
+  pixmap.load(pixdir+"viewmag-.xpm");
   toolbar->insertButton(pixmap, 0, SIGNAL(clicked()), this, SLOT(editZoomOut()), TRUE, klocale->translate("Zoom Out"));
 }
 
