@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-12-28 15:35+0100\n"
+"POT-Creation-Date: 1999-08-11 05:35+0100\n"
 "PO-Revision-Date: 1999-02-14 02:00+0900\n"
 "Last-Translator: Taiki Komoda <tklab@ma6.seikyou.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@albert.nikkeibp.co.jp>\n"
@@ -569,7 +569,7 @@ msgstr "レンダリング"
 
 #: prefs.cpp:387
 msgid "Paper"
-msgstr "ページャー"
+msgstr "用紙"
 
 #: print.cpp:61
 msgid "Print "
