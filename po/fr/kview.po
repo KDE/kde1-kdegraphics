@@ -277,4 +277,3 @@ msgstr "Lancer le &diaporama"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Durée entre images (sec) :"
-
