@@ -4,6 +4,7 @@
 	Use new RESTORE macro and menu/tool/status bar factories
 	Changed 'Save Image...' to 'Save Image' (it doesn't have dialog)
 	Added myapp macro (like kapp)
+	Geometry manages everything!
 
 0.4.2   [Robert Williams]  Renamed Paint.kdelnk to kpaint.kdelnk
         [Robert Williams]  Added -caption "%c" to kpaint.kdelnk
