@@ -3,6 +3,9 @@
 // fileman.cpp -- The KView Display Manager Widget
 //
 // Martin Hartig
+//
+// $Id$
+//////////////////////////
 
 #define ID_CACHING   1
 #define ID_CACHESIZE 2
@@ -666,7 +669,7 @@ void Fileman::saveOptions()
   imageCaching(-1);
 }
 
-void Fileman::imageCaching(int i)
+void Fileman::imageCaching(int)
 {
   if (KVConfigHandler::cachingOn == 0)
     {
