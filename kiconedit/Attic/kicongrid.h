@@ -42,6 +42,7 @@
 #include <qdialog.h>
 #include <qstrlist.h>
 #include <qtimer.h>
+#include <qscrollview.h>
 #include <kcolordlg.h>
 #include <kiconloader.h>
 #include <kapp.h>
@@ -73,6 +74,7 @@ public:
 
 public slots:
   void sizeChange(int, int);
+  void moving(int, int);
   void scalingChange(int, bool);
 
 protected:
@@ -83,6 +85,7 @@ protected:
   KIconEditGrid *_grid;
   KRuler *_hruler, *_vruler;
   Properties *pprops;
+  QScrollView *viewport;
 };
 
 /**

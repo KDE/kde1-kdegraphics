@@ -23,6 +23,7 @@
 #include "debug.h"
 #include "kicongrid.h"
 #include "main.h"
+#include "pics/logo.xpm"
 
 KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(parent, name)
 {
@@ -33,8 +34,27 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
   
   pprops = props(this);
 
-  _grid = new KIconEditGrid(image, this);
+  viewport = new QScrollView(this);
+  CHECK_PTR(viewport);
+
+  if(pprops->backgroundmode == FixedPixmap)
+  {
+    QPixmap pix(pprops->backgroundpixmap.data());
+    if(pix.isNull())
+    {
+      QPixmap pmlogo((const char**)logo);
+      pix = pmlogo;
+    }
+    viewport->viewport()->setBackgroundPixmap(pix);
+  }
+  else
+  {
+    viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
+  }
+
+  _grid = new KIconEditGrid(image, viewport->viewport());
   CHECK_PTR(_grid);
+  viewport->addChild(_grid);
 
   _corner = new QFrame(this);
   _corner->setFrameStyle(QFrame::WinPanel | QFrame::Raised);
@@ -42,17 +62,18 @@ KGridView::KGridView(QImage *image, QWidget *parent, const char *name) : QFrame(
   _hruler = new KRuler(KRuler::horizontal, this);
   _hruler->setEndLabel("width");
   _hruler->setOffset( 0 );
-  _hruler->setRange(0, _grid->width());
+  _hruler->setRange(0, 1000);
 
   _vruler = new KRuler(KRuler::vertical, this);
   _vruler->setEndLabel("height");
   _vruler->setOffset( 0 );
-  _vruler->setRange(0, _grid->height());
+  _vruler->setRange(0, 1000);
 
   connect(_grid, SIGNAL(scalingchanged(int, bool)), SLOT(scalingChange(int, bool)));
   connect(_grid, SIGNAL(sizechanged(int, int)), SLOT(sizeChange(int, int)));
   connect( _grid, SIGNAL(xposchanged(int)), _hruler, SLOT(slotNewValue(int)) );
   connect( _grid, SIGNAL(yposchanged(int)), _vruler, SLOT(slotNewValue(int)) );
+  connect(viewport, SIGNAL(contentsMoving(int, int)), SLOT(moving(int, int)));
 
   setSizes();
   QResizeEvent e(size(), size());
@@ -99,20 +120,27 @@ void KGridView::setSizes()
     _vruler->show();
 
     _corner->show();
-    resize(_grid->width()+_vruler->width(), _grid->height()+_hruler->height());
+    //resize(_grid->width()+_vruler->width(), _grid->height()+_hruler->height());
   }
   else
   {
     _hruler->hide();
     _vruler->hide();
     _corner->hide();
-    resize(_grid->size());
+    //resize(_grid->size());
   }
 }
 
 void KGridView::sizeChange(int, int)
 {
   setSizes();
+}
+
+void KGridView::moving(int x, int y)
+{
+  //debug("Moving: %i x %i", x, y);
+  _hruler->setOffset(abs(x));
+  _vruler->setOffset(abs(y));
 }
 
 void KGridView::scalingChange(int, bool)
@@ -132,16 +160,18 @@ void KGridView::setShowRulers(bool mode)
 void KGridView::resizeEvent(QResizeEvent*)
 {
   debug("KGridView::resizeEvent");
+  setSizes();
   if(pprops->showrulers)
   {
-    _hruler->setGeometry(_vruler->width(), 0, _grid->width(), _hruler->height());
-    _vruler->setGeometry(0, _hruler->height(), _vruler->width(), _grid->height());
+    _hruler->setGeometry(_vruler->width(), 0, width(), _hruler->height());
+    _vruler->setGeometry(0, _hruler->height(), _vruler->width(), height());
 
     _corner->setGeometry(0, 0, _vruler->width(), _hruler->height());
-    _grid->move(_corner->width(), _corner->height());
+    viewport->setGeometry(_corner->width(), _corner->height(),
+                   width()-_corner->width(), height()-_corner->height());
   }
   else
-    _grid->move(0, 0);
+    viewport->setGeometry(0, 0, width(), height());
 }
 
 const QImage *fixTransparence(QImage *image)

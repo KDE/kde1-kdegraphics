@@ -274,10 +274,10 @@ void KIconEdit::slotConfigure(int id)
             QPixmap pmlogo((const char**)logo);
             pix = pmlogo;
           }
-          viewport->viewport()->setBackgroundPixmap(pix);
+          //viewport->viewport()->setBackgroundPixmap(pix);
         }
-        else
-          viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
+        //else
+          //viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
       }
       //KKeyDialog::configureKeys( keys );
       break;
@@ -432,7 +432,7 @@ void KIconEdit::slotUpdateStatusSize(int x, int y)
   QString str;
   str.sprintf("%d x %d", x, y);
   statusbar->changeItem( str.data(), 1);
-  viewport->updateScrollBars();
+  //viewport->updateScrollBars();
 }
 
 void KIconEdit::slotUpdateStatusScaling(int s, bool show)

@@ -24,7 +24,6 @@
 #include "kiconedit.h"
 #include "kdragsource.h"
 #include "main.h"
-#include "pics/logo.xpm"
 
 KIconEdit::KIconEdit(const QImage image, const char *name)
  : KTopLevelWidget(name)
@@ -62,9 +61,9 @@ void KIconEdit::init()
   menubar = 0L;
   toolbar = 0L;
   drawtoolbar = 0L;
+  palettetoolbar = 0L;
   statusbar = 0L;
   what = 0L;
-  mainview = 0L;
 
   msgtimer = new QTimer(this);
   CHECK_PTR(msgtimer);
@@ -76,45 +75,17 @@ void KIconEdit::init()
   debug("Templates created");
 #endif
 
-  mainview = new QWidget(this); //KIconEditView(this);
-  CHECK_PTR(mainview);
-  debug("mainview created");
-  l = new QHBoxLayout(mainview);
-
-  viewport = new QScrollView(mainview);
-  CHECK_PTR(viewport);
-
-  if(pprops->backgroundmode == FixedPixmap)
-  {
-    QPixmap pix(pprops->backgroundpixmap.data());
-    if(pix.isNull())
-    {
-      QPixmap pmlogo((const char**)logo);
-      pix = pmlogo;
-    }
-    viewport->viewport()->setBackgroundPixmap(pix);
-  }
-  else
-  {
-    viewport->viewport()->setBackgroundColor(pprops->backgroundcolor);
-  }
-
-  gridview = new KGridView(&img, viewport->viewport()); //KIconEditView(this);
+  gridview = new KGridView(&img, this); //viewport->viewport()); //KIconEditView(this);
   CHECK_PTR(gridview);
   gridview->setShowRulers(pprops->showrulers);
 
   grid = gridview->grid();
 
-  viewport->addChild(gridview);
   debug("Grid created");
   grid->setGrid(pprops->showgrid);
   debug("Grid->setGrid done");
   grid->setCellSize(pprops->gridscaling);
   debug("Grid->setCellSize done");
-
-  l->addWidget(viewport);
-  l->activate();
-  debug("Layout activated");
 
   icon = new KIcon(this, &grid->image());
   CHECK_PTR(icon);
@@ -193,9 +164,7 @@ void KIconEdit::init()
   uint *c = 0, n = 0;
   n = grid->getColors(c);
   slotUpdateStatusColors(n, c);
-  debug("Setting mainview");
-  setView(mainview);
-  viewport->show();
+  setView(gridview);
 
   if((pprops->winwidth > 0) && (pprops->winheight > 0))
     resize( pprops->winwidth, pprops->winheight );
@@ -217,9 +186,6 @@ KIconEdit::~KIconEdit()
     if(toolsw)
       delete toolsw;
     toolsw = 0L; 
-    if(mainview)
-      delete mainview;
-    mainview = 0L; 
     if(newicon)
       delete newicon;
     newicon = 0L; 
@@ -361,8 +327,8 @@ void KIconEdit::writeConfig()
 
 QSize KIconEdit::sizeHint()
 {
-  if(mainview)
-    return mainview->sizeHint();
+  if(gridview)
+    return gridview->sizeHint();
   else
     return QSize(-1, -1);
 }
@@ -652,13 +618,13 @@ bool KIconEdit::setupToolBar()
 
   toolbar->insertSeparator();
 
+  toolbar->insertWidget(ID_HELP_WHATSTHIS, btwhat->sizeHint().width(), btwhat);
+
   toolbar->insertButton(Icon("newwin.xpm"),ID_FILE_NEWWIN,
          SIGNAL(clicked()), this, SLOT(slotNewWin()), TRUE,
                           i18n("New Window"));
   toolbar->alignItemRight( ID_FILE_NEWWIN, true);
     
-  toolbar->insertWidget(ID_HELP_WHATSTHIS, btwhat->sizeHint().width(), btwhat);
-
   toolbar->setBarPos(pprops->maintoolbarpos);
   if(pprops->maintoolbarstat)
     toolbar->enable(KToolBar::Show);
@@ -751,9 +717,9 @@ bool KIconEdit::setupPaletteToolBar()
   preview->setFrameStyle(QFrame::Panel|QFrame::Sunken);
   preview->setFixedSize(iw, 60);
 
-  palettetoolbar->insertWidget(0, iw, preview);
+  palettetoolbar->insertWidget(ID_PREVIEW, iw, preview);
   palettetoolbar->insertSeparator();
-  palettetoolbar->insertWidget(1, iw, w);
+  palettetoolbar->insertWidget(ID_SYSTEM_COLORS, iw, w);
   palettetoolbar->insertSeparator();
 
   w = new QWidget(palettetoolbar);
@@ -766,7 +732,7 @@ bool KIconEdit::setupPaletteToolBar()
   ml->addWidget(customcolors);
   ml->activate();
 
-  palettetoolbar->insertWidget(1, iw, w);
+  palettetoolbar->insertWidget(ID_CUSTOM_COLORS, iw, w);
 
   return true;
 }

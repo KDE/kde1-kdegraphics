@@ -40,7 +40,6 @@
 #include <qlist.h>
 #include <qkeycode.h>
 #include <qtimer.h>
-#include <qscrollview.h>
 #include "kicontools.h"
 #include "knew.h"
 #include "kicon.h"
@@ -102,6 +101,10 @@
 #define ID_SELECT_CIRCLE        582
 
 #define ID_HELP_WHATSTHIS       590
+
+#define ID_CUSTOM_COLORS        600
+#define ID_SYSTEM_COLORS        601
+#define ID_PREVIEW              602
 
 class QWhatsThis;
 class QToolButton;
@@ -201,11 +204,8 @@ protected:
   KStatusBar *statusbar;
   QPopupMenu *edit, *file, *view, *image, *help, *tools, *options, *zoom, *recent, *select;
   KIconEditGrid *grid;
-  KGridView *gridview;
-  QWidget *mainview;
-  QBoxLayout *l;
   QTimer *msgtimer;
-  QScrollView *viewport;
+  KGridView *gridview;
   KIcon *icon;
   KDNDDropZone *dropzone;
   KDropSite *dropsite;
