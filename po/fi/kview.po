@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KVIEW\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: wview.cpp:81
+msgid "&Image"
+msgstr "&Kuva"
+
+#: wview.cpp:87
+msgid "&Open File.."
+msgstr "&Avaa tiedosto.."
+
+#: wview.cpp:88
+msgid "Open &URL.."
+msgstr "Avaa &URL.."
+
+#: wview.cpp:95
+msgid "&Zoom"
+msgstr "&Suurennus"
+
+#: wview.cpp:96
+msgid "&Rotate"
+msgstr "&Kierto"
+
+#: wview.cpp:97
+msgid "To &Desktop"
+msgstr "&Työpöydälle"
+
+#: wview.cpp:99
+msgid "&Toggle Menu"
+msgstr "&Vaihda valikko"
+
+#: wview.cpp:100
+msgid "&Size Window"
+msgstr "&Ikkunan koko"
+
+#: wview.cpp:102
+msgid "I&mage Info"
+msgstr "&Kuvan koko"
+
+#: wview.cpp:106
+msgid "&in"
+msgstr "&sisään"
+
+#: wview.cpp:107
+msgid "&out"
+msgstr "&ulos"
+
+#: wview.cpp:111
+msgid "&Clockwise"
+msgstr "&Myötäpäivään"
+
+#: wview.cpp:113
+msgid "&Anti-clock"
+msgstr "&Vastapäivään"
+
+#: viewport.cpp:51 wview.cpp:118
+msgid "Ti&le"
+msgstr "&Otsikko"
+
+#: wview.cpp:119
+msgid "&Max Size"
+msgstr "&Maksimikoko"
+
+#: wview.cpp:120
+msgid "M&axpect"
+msgstr "Maksimipect"
+
+#: fileman.cpp:138 wview.cpp:126
+msgid "&Contents"
+msgstr "&Sisältö"
+
+#: viewport.cpp:41
+msgid "Clockwise"
+msgstr "Myötäpäivään"
+
+#: viewport.cpp:43
+msgid "Anti-clock"
+msgstr "Vastapäivään"
+
+#: viewport.cpp:45
+msgid "Mirror X"
+msgstr "Peilaa X"
+
+#: viewport.cpp:47
+msgid "Mirror Y"
+msgstr "Peilaa Y"
+
+#: viewport.cpp:52
+msgid "Max Size"
+msgstr "Maksimikoko"
+
+#: viewport.cpp:53
+msgid "Maxpect"
+msgstr "Maksimipect"
+
+#: viewport.cpp:56
+msgid "Zoom"
+msgstr "Suurennus"
+
+#: viewport.cpp:57
+msgid "Rotate"
+msgstr "Kierto"
+
+#: viewport.cpp:58
+msgid "To Desktop"
+msgstr "Työpöydälle"
+
+#: viewport.cpp:59
+msgid "Fit window size to pixmap size"
+msgstr "Sovita ikkunan koko kuvan mukaan"
+
+#: viewport.cpp:61
+msgid "Fit pixmap size to window size"
+msgstr "Sovita kuvan koko ikkunan koon mukaan"
+
+#: fileman.cpp:53
+msgid "KView Display Manager"
+msgstr "KView Näytönhallinta"
+
+#: fileman.cpp:101
+msgid "Open &URL..."
+msgstr "Avaa &URL..."
+
+#: fileman.cpp:124
+msgid "Image Caching"
+msgstr "Kuvavälimuisti"
+
+#: fileman.cpp:132
+msgid "Cache Size"
+msgstr "Välimuistin koko"
+
+#: fileman.cpp:134
+msgid "Save Options"
+msgstr "Tallenna asetukset"
+
+#: fileman.cpp:139
+msgid "&About KView"
+msgstr "&Tietoja KView:tä"
+
+#: fileman.cpp:163
+msgid "New Window"
+msgstr "Uusi ikkuna"
+
+#: fileman.cpp:169
+msgid "open new file"
+msgstr "avaa uusi tiedosto"
+
+#: fileman.cpp:184
+#, c-format
+msgid "shrink -50%"
+msgstr "pienennä -50%"
+
+#: fileman.cpp:190
+#, c-format
+msgid "magnify +50%"
+msgstr "suurenna +50%"
+
+#: fileman.cpp:196
+msgid "size Window"
+msgstr "ikkunan koko"
+
+#: fileman.cpp:203
+msgid "launch help"
+msgstr "käynnistä ohje"
+
+#: fileman.cpp:210
+msgid "first pic"
+msgstr "ensimmäinen kuva"
+
+#: fileman.cpp:216
+msgid "last pic"
+msgstr "viimeinen kuva"
+
+#: fileman.cpp:223
+msgid "prev pic"
+msgstr "edellinen kuva"
+
+#: fileman.cpp:229
+msgid "next pic"
+msgstr "seuraava kuva"
+
+#: fileman.cpp:236
+msgid "start picture show"
+msgstr "käynnistä kuvashow"
+
+#: fileman.cpp:242
+msgid "random picture show"
+msgstr "satunnainen kuvashow"
+
+#: fileman.cpp:248
+msgid "stop picture show"
+msgstr "pysäytä kuvashow"
+
+#: fileman.cpp:281
+msgid "slow"
+msgstr "hidas"
+
+#: fileman.cpp:286
+msgid "fast"
+msgstr "nopea"
+
+#: fileman.cpp:300
+msgid "Output Device"
+msgstr "Näyttölaite"
+
+#: fileman.cpp:379
+#, c-format
+msgid " Files: %d"
+msgstr " Tiedostoja: %d"
+
+#: fileman.cpp:389
+#, c-format
+msgid " Format: %s Size: %dx%d"
+msgstr " Formaatti: %s Koko :%dx%d"
+
+#: fileman.cpp:532
+#, c-format
+msgid "Window %d"
+msgstr "Ikkuna %d"
+
+#: fileman.cpp:656
+msgid "(c) 1996 - 1998 by \n"
+msgstr "(c) 1996 - 1998 \n"
+
+#: fileman.cpp:659
+msgid "About KView"
+msgstr "Tietoja KView:tä"
