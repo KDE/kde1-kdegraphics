@@ -18,8 +18,6 @@
 
 #include "kghostview.h"
 
-#define i18n(X) klocale->translate(X)
-
 Display *kde_display;
 
 void Syntax(char *call)

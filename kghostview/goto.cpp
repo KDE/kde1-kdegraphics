@@ -22,8 +22,6 @@
 #include <kapp.h>
 #include <kbuttonbox.h>
 
-#define i18n(X) klocale->translate(X)
-
 GoTo::GoTo( QWidget *parent, const char *name )
 	: QDialog( parent, name, TRUE )
 {

@@ -53,7 +53,6 @@
 #include <kmsgbox.h>
 
 #include <klocale.h>
-#define i18n(X) klocale->translate(X)
 
 extern "C" {
 	#include "ps.h"

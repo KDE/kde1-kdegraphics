@@ -19,7 +19,6 @@
 
 #include <klocale.h>
 #include <kapp.h>
-#define i18n(X) klocale->translate(X)
 
 CopyrightDialog::CopyrightDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name )

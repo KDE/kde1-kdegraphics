@@ -23,8 +23,6 @@
 #include <kapp.h>
 #include <kbuttonbox.h>
 
-#define i18n(X) klocale->translate(X)
-
 ViewControl::ViewControl( QWidget *parent, const char *name )
 	: QDialog( parent, name )
 {
