@@ -1,7 +1,7 @@
 
 # This has to be set. The rest should be reusable
 GMOFILES = kpaint.gmo kghostview.gmo kdvi.gmo kfax.gmo kview.gmo \
-	kiconedit.gmo kfract.gmo
+	kiconedit.gmo kfract.gmo ksnapshot.gmo
 POFILES = $(GMOFILES:.gmo=.po)
 
 LANG = pt_BR
