@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1998-11-13 15:36 +0100\n"
-"Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
-"Language-Team: German <kde-i18n@kde.org>\n"
+"PO-Revision-Date: 1998-03-27 16:23 +0100\n"
+"Last-Translator: Matthias Kiefer <matthias.kiefer@gmx.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: iso-8859-1\n"
@@ -28,7 +28,7 @@ msgstr "Ungerade Seiten markieren"
 
 #: marklist.cpp:42
 msgid "Toggle page marks"
-msgstr "Markierungen umschalten"
+msgstr "Markierungen an/aus"
 
 #: marklist.cpp:43
 msgid "Remove page marks"
@@ -60,19 +60,19 @@ msgid ""
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
 "\n"
-"This program is free software; you can redistribute it and/or modify\n"
-"it under the terms of the GNU General Public License as published by\n"
-"the Free Software Foundation; either version 2 of the License, or\n"
-"(at your option) any later version.\n"
+"Dieses Program ist Freie Software; Sie können sie weitergeben\n" 
+"und/oder verändern entsprechend den Bestimmungen der GNU General Public\n"
+"License, wie von der Free Software Foundation veröffentlicht, entweder\n"
+"Version 2 der Bestimmungen oder (nach ihrer Wahl) jeder späteren Version.\n"
 "\n"
-"This program is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details.\n"
+"Dieses Programm wird in der Hoffnung, daß es nützlich ist, aber OHNE EINE\n"
+"GARANTIE verbreitet; sogar ohne die implizite Garantie der MARKTGÄNGIGKEIT\n"
+"oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Lesen Sie die GNU General\n"
+"Public License, um weitere Details zu erfahren.\n"
 "\n"
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+"Sie sollten eine Kopie der GNU General Public License zusammen mit diesem\n"
+"Programm erhalten haben; wenn nicht, so  schreiben sie an die Free Software\n"
+"Foundation, Inc., 675 Mass  Ave, Cambridge, MA 02139, USA."
 
 #: interpreter.cpp:42
 msgid "General"
@@ -88,7 +88,7 @@ msgstr "&Kantenglättung"
 
 #: interpreter.cpp:97
 msgid "Platform &fonts"
-msgstr "&Schriftarten"
+msgstr "S&chriftarten"
 
 #: interpreter.cpp:107
 msgid "&Messages"
@@ -108,7 +108,7 @@ msgstr "&Graustufen"
 
 #: interpreter.cpp:169
 msgid "Monochrom&e"
-msgstr "&Schwarz-Weiß"
+msgstr "Schwarz-&Weiß"
 
 #: interpreter.cpp:192
 msgid "Backing"
@@ -128,7 +128,7 @@ msgstr "gs"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
-msgstr "Ghostscript-Meldungen"
+msgstr "Ghostscript Meldungen"
 
 #: messages.cpp:56
 msgid "&Clear"
@@ -144,7 +144,7 @@ msgstr "Dateiname:"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr "Dokument-Titel:"
+msgstr "Titel des Dokuments:"
 
 #: info.cpp:61
 msgid "Publication date :"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: goto.cpp:54
 msgid "&Section"
-msgstr "&Abschnitt"
+msgstr "A&bschnitt"
 
 #: goto.cpp:70
 msgid "&Page"
@@ -266,7 +266,7 @@ msgstr "&Ausrichtung"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
-msgstr "&Übernehmen"
+msgstr "Ü&bernehmen"
 
 #: main.cpp:25
 msgid "Usage: "
@@ -362,15 +362,15 @@ msgstr "&Neu"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
-msgstr "&Öffnen ..."
+msgstr "Ö&ffnen ..."
 
 #: kghostview.cpp:501
 msgid "Open &recent"
-msgstr "Öffne &bisherige"
+msgstr "&Zuletzt geöffnete"
 
 #: kghostview.cpp:509
 msgid "Page Set&up ..."
-msgstr "Seiten-&Einstellungen..."
+msgstr "Se&iten-Einstellungen..."
 
 #: kghostview.cpp:511
 msgid "&Print ..."
@@ -414,7 +414,7 @@ msgstr "Zum &Ende"
 
 #: kghostview.cpp:544
 msgid "&Read down"
-msgstr "&Weiter runter"
+msgstr "Nach &unten"
 
 #: kghostview.cpp:549
 msgid "Mark &current page"
@@ -434,7 +434,7 @@ msgstr "&Ungerade Seiten markieren"
 
 #: kghostview.cpp:559
 msgid "&Toggle page marks"
-msgstr "&Markierungen umschalten"
+msgstr "&Markierungen an/aus"
 
 #: kghostview.cpp:562
 msgid "&Remove page marks"
@@ -442,19 +442,19 @@ msgstr "Markierungen &löschen"
 
 #: kghostview.cpp:573
 msgid "Show &tool bar"
-msgstr "&Werkzeugleiste zeigen"
+msgstr "&Werkzeugleiste anzeigen"
 
 #: kghostview.cpp:574
 msgid "Show st&atus bar"
-msgstr "&Statuszeile zeigen"
+msgstr "&Statusleiste anzeigen"
 
 #: kghostview.cpp:575
 msgid "Show &page list"
-msgstr "Seitenliste zeigen"
+msgstr "Seiten&liste anzeigen"
 
 #: kghostview.cpp:577
 msgid "Configure &interpreter ..."
-msgstr "Interpreter &konfigurieren ..."
+msgstr "&Interpreter konfigurieren ..."
 
 #: kghostview.cpp:578
 msgid "Configure &key bindings ..."
@@ -466,7 +466,7 @@ msgstr "&Einstellungen sichern"
 
 #: kghostview.cpp:587
 msgid "&About this application"
-msgstr "&Über kghostview ..."
+msgstr "Ü&ber kghostview ..."
 
 #: kghostview.cpp:589
 msgid "&Help for this application"
@@ -497,7 +497,7 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
-" - der PostScript Betrachter für\n"
+" - der PostScript-Betrachter für\n"
 "das K Desktop Environment.\n"
 "\n"
 "Geschrieben von Mark Donohoe <donohoe@kde.org>, basierend auf der\n"
@@ -514,7 +514,7 @@ msgstr "Neues Fenster..."
 
 #: kghostview.cpp:668
 msgid "Open file ..."
-msgstr "Datei &Öffnen ..."
+msgstr "Datei Öffnen ..."
 
 #: kghostview.cpp:676
 msgid "Print document ..."
@@ -550,11 +550,11 @@ msgstr "Zum Ende"
 
 #: kghostview.cpp:706
 msgid "Read down the page"
-msgstr "Weiter runter"
+msgstr "Weiter nach unten"
 
 #: kghostview.cpp:711
 msgid "Toggle this page mark"
-msgstr "Diese Markierung ändern"
+msgstr "Markierung dieser Seite an/aus"
 
 #: kghostview.cpp:733
 msgid "Sc.100 of 100  P.100 of 100"

@@ -22,7 +22,7 @@ msgstr "Parameter &sichern..."
 # kfract.C:75
 #: kfract.C:75
 msgid "Save &pic..."
-msgstr "&Bild sichern"
+msgstr "&Bild speichern"
 
 # kfract.C:81
 #: kfract.C:81
@@ -88,7 +88,7 @@ msgstr "Parameter sichern"
 # kfract.C:131
 #: kfract.C:131
 msgid "Save picture"
-msgstr "Bild sichern"
+msgstr "Bild speichern"
 
 # kfract.C:136
 #: kfract.C:136

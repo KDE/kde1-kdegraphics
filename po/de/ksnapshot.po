@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 1999-03-05 01:49+0100\n"
-"PO-Revision-Date: 1999-01-10 11:25+MET\n"
-"Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
-"Language-Team: de <LL@li.org>\n"
+"PO-Revision-Date: 1999-03-24 11:25+MET\n"
+"Last-Translator: Matthias Kiefer <matthias.kiefer@gmx.de>\n"
+"Translator: Thomas Diehl <th_diehl@csi.com>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO 8859-1\n"
 
@@ -43,7 +44,7 @@ msgstr "Verzögerung:"
 
 #: ksnapshot.cpp:171
 msgid "seconds."
-msgstr "Sekunden:"
+msgstr "Sekunden"
 
 #: ksnapshot.cpp:191
 msgid "Auto raise"
@@ -63,7 +64,7 @@ msgstr "Aufnehmen"
 
 #: ksnapshot.cpp:455
 msgid "Error: Unable to save image"
-msgstr "Fehler: Bild kann nicht gesichert werden"
+msgstr "Fehler: Bild kann nicht gespeichert werden"
 
 #: ksnapshot.cpp:456
 msgid "Dismiss"
@@ -75,7 +76,7 @@ msgid ""
 "KSnapshot was unable to save the image to\n"
 "%s."
 msgstr ""
-"KSnapshot konnte das Bild nicht sichern nach\n"
+"KSnapshot konnte das Bild nicht speichern unter\n"
 "%s."
 
 #: ksnapshot.cpp:470

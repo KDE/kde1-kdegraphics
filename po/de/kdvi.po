@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1998-11-13 20:15+0100\n"
-"Last-Translator:Thomas Diehl <th_diehl@csi.com>\n"
+"PO-Revision-Date: 1999-03-24 10:55+0100\n"
+"Last-Translator:Matthias Kiefer <matthias.kiefer@gmx.de>\n"
 "Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
 #: dviwin.cpp:215 dviwin.cpp:231 dviwin.cpp:245 dviwin.cpp:282 dviwin.cpp:299
@@ -97,7 +97,7 @@ msgstr "Ö&ffnen..."
 
 #: kdvi.cpp:181
 msgid "Open &recent"
-msgstr "&Kürzlich benutzte"
+msgstr "&Zuletzt benutzte"
 
 #: kdvi.cpp:183
 msgid "&Print ..."
@@ -157,7 +157,7 @@ msgstr "&Tasten..."
 
 #: kdvi.cpp:218
 msgid "Make PK-&fonts"
-msgstr "PK-&Schriften erzeugen"
+msgstr "&PK-Schriften erzeugen"
 
 #: kdvi.cpp:220
 msgid "Show PS"
@@ -165,23 +165,23 @@ msgstr "PS anzeigen"
 
 #: kdvi.cpp:222
 msgid "Show &Menubar"
-msgstr "&Menüleiste sichtbar"
+msgstr "&Menüleiste anzeigen"
 
 #: kdvi.cpp:224
 msgid "Show &Buttons"
-msgstr "&Werkzeugleiste sichtbar"
+msgstr "&Werkzeugleiste anzeigen"
 
 #: kdvi.cpp:226
 msgid "Show Page Lis&t"
-msgstr "Seiten&liste anzeigen"
+msgstr "&Seitenliste anzeigen"
 
 #: kdvi.cpp:228
 msgid "Show &Statusbar"
-msgstr "S&tatusleiste anzeigen"
+msgstr "Status&leiste anzeigen"
 
 #: kdvi.cpp:230
 msgid "Show Scro&llbars"
-msgstr "S&crollbars anzeigen"
+msgstr "S&croll-Leisten anzeigen"
 
 #: kdvi.cpp:239
 msgid "DVI Viewer"
@@ -199,7 +199,7 @@ msgstr ""
 
 #: kdvi.cpp:261
 msgid "Open document ..."
-msgstr "Öffne Dokument..."
+msgstr "Dokument öffnen"
 
 #: kdvi.cpp:262
 msgid "Reload document"
@@ -207,7 +207,7 @@ msgstr "Dokument neu laden"
 
 #: kdvi.cpp:263
 msgid "Print ..."
-msgstr "Drucken..."
+msgstr "Dokument drucken"
 
 #: kdvi.cpp:265
 msgid "Go to first page"
@@ -219,7 +219,7 @@ msgstr "Vorherige Seite"
 
 #: kdvi.cpp:267
 msgid "Go down then top of next page"
-msgstr "Nächste Seite oben"
+msgstr "Nach unten, dann nächste Seite oben"
 
 #: kdvi.cpp:268
 msgid "Go to next page"
@@ -343,7 +343,7 @@ msgstr "Statusleiste an/aus"
 
 #: kdvi.cpp:362 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Scrolleisten an/aus"
+msgstr "Scroll-Leisten an/aus"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
@@ -363,7 +363,7 @@ msgstr "Geöffnet "
 
 #: kdvi.cpp:556
 msgid "Print dialog is open"
-msgstr "Drucken-Dialog offen"
+msgstr "Druckdialog offen"
 
 #: kdvi.cpp:571
 msgid "View size fits page"
@@ -439,11 +439,11 @@ msgstr "Statusleiste an"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Scrollleisten an"
+msgstr "Scroll-Leisten an"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
-msgstr "Scrollleisten aus"
+msgstr "Scroll-Leisten aus"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -516,7 +516,7 @@ msgstr "Seitenliste"
 
 #: prefs.cpp:217
 msgid "Scroll Bars"
-msgstr "Scrollleisten"
+msgstr "Scroll-Leisten"
 
 #: prefs.cpp:239
 msgid "Number of recent files"
@@ -580,7 +580,7 @@ msgstr "Kann dvi-Ausgabedatei nicht öffnen!"
 
 #: print.cpp:136
 msgid "Cannot handle this dvi version!"
-msgstr "Kann diese dvi-Version nicht berarbeiten!"
+msgstr "Kann diese dvi-Version nicht bearbeiten!"
 
 #: print.cpp:241
 msgid "Invalid page range!"
@@ -652,7 +652,7 @@ msgstr "Drucken auf"
 
 #: printSetup.cpp:23
 msgid "Print Setup"
-msgstr "Druckereinstellung"
+msgstr "Druckereinstellungen"
 
 #: printSetupData.cpp:42
 msgid "Printers"

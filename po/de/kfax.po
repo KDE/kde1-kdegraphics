@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1999-01-30 17:30+MET\n"
-"Last-Translator:Thomas Diehl <th_diehl@csi.com>\n"
-"Language-Team: German <kde-i18n@kde.org>\n"
+"PO-Revision-Date: 1999-04-02 16:19+MET\n"
+"Last-Translator:Matthias Kiefer <matthias.kiefer@gmx.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,19 +12,19 @@ msgstr ""
 
 #: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
-msgstr "&Werkzeugleiste zeigen"
+msgstr "&Werkzeugleiste anzeigen"
 
 #: kfax.cpp:235 kfax.cpp:820
 msgid "Hide &Tool Bar"
-msgstr "&Werkzeugleiste verbergen"
+msgstr "&Werkzeugleiste ausblenden"
 
 #: kfax.cpp:238 kfax.cpp:800
 msgid "Show &Status Bar"
-msgstr "&Statusleiste zeigen"
+msgstr "&Statusleiste anzeigen"
 
 #: kfax.cpp:240 kfax.cpp:793
 msgid "Hide &Status Bar"
-msgstr "&Statusleiste verbergen"
+msgstr "&Statusleiste ausblenden"
 
 #: kfax.cpp:395
 #, c-format
@@ -49,7 +49,7 @@ msgstr "Hilfeseite"
 
 #: kfax.cpp:404
 msgid "&Open Fax..."
-msgstr "Fax ö&ffnen..."
+msgstr "Ö&ffnen..."
 
 #: kfax.cpp:405
 msgid "&Add Fax..."
@@ -61,11 +61,11 @@ msgstr "&URL öffnen..."
 
 #: kfax.cpp:409
 msgid "Save to U&RL..."
-msgstr "Speichern unter U&RL..."
+msgstr "Speichern &unter URL..."
 
 #: kfax.cpp:410
 msgid "&Close Fax"
-msgstr "Fax &schließen"
+msgstr "S&chließen"
 
 #: kfax.cpp:417
 msgid "&Next Page"
@@ -105,7 +105,7 @@ msgstr "Ver&kleinern"
 
 #: kfax.cpp:432
 msgid "&Fax Options..."
-msgstr "&Fax-Optionen..."
+msgstr "&Fax-Einstellungen..."
 
 #: kfax.cpp:434
 msgid "&Tool Bar"
@@ -141,7 +141,7 @@ msgstr "Verkleinern"
 
 #: kfax.cpp:487
 msgid "Print document"
-msgstr "Drucken"
+msgstr "Dokument drucken"
 
 #: kfax.cpp:496
 msgid "Go to page ..."
@@ -312,7 +312,7 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
-"Öffen nicht möglich von:\n"
+"Öffnen nicht möglich:\n"
 "%s\n"
 
 #: print.cpp:51
