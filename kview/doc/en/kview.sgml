@@ -1,0 +1,23 @@
+<!-- LinuxDoc file was created by LyX 0.12 (C) 1995-1998 by <ssk> Thu Sep 24 16:20:24 1998
+ -->
+<!-- Export filter v0.6 by Pascal Andre/Bernhard Iselborn-->
+
+<!doctype linuxdoc system>
+
+<article>
+
+<title>KView - A KDE Image Viewer
+<author>Sirtaj Singh Kang &lt;taj@kde.org&gt;
+<date>23 September 1998
+<abstract>KView lets you view graphics in many formats. It also facilitates simple
+ image processing and format conversion operations.
+<toc>
+<sect>What is KView?
+<p>
+
+KView is a simple image viewer/converter application. For time T = C +
+ D, where C = time spent coding and D = time spent writing documentation and
+ T is ever-diminishing, you will note that D is small since at this stage, increasing
+ C is more fun.
+
+</article>
