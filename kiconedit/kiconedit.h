@@ -1,6 +1,6 @@
 /*
     kiconedit - a small graphics drawing program for creating KDE icons
-    Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
+    Copyright (C) 1998  Thomas Tanghus (tanghus@kde.org)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -102,8 +102,8 @@
 /**
 * KIconEdit
 * @short KIconEdit
-* @author Thomas Tanghus <tanghus@earthling.net>
-* @version 0.1
+* @author Thomas Tanghus <tanghus@kde.org>
+* @version 0.4
 */
 class KIconEdit : public KTopLevelWidget
 {

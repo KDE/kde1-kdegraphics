@@ -1,6 +1,6 @@
 /*
     kiconedit - a small graphics drawing program for the KDE
-    Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
+    Copyright (C) 1998  Thomas Tanghus (tanghus@kde.org)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -507,7 +507,15 @@ KMenuBar *KIconEdit::setupMenuBar()
   menubar->insertItem(i18n("&Options"), options);
 
   menubar->insertSeparator();
-  help = kapp->getHelpMenu(true,ABOUTSTR);
+
+  QString str = "KDE Icon Editor\n\n";
+  str += "A graphics drawing program for creating\n";
+  str += "icons using the KDE icon palette\n\n";
+  str += "Copyright 1998 by Thomas Tanghus\n";
+  str += "tanghus@kde.org\n";
+  str += "http://w1.1358.telia.com/~u135800018";
+
+  help = kapp->getHelpMenu(true,str.data());
   menubar->insertItem(i18n("&Help"), help);
 
   menubar->setMenuBarPos(pprops->menubarpos);

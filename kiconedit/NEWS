@@ -4,12 +4,13 @@ _______________
 ------------------------------------------------------------------------------
    News and fixes in version 0.4.0:
 ------------------------------------------------------------------------------
+ - Added rulers (can be toggled from the configuration dialog).
  - Circular selection.
  - Configuration dialog:
    - Shortcut keys.
    - Appearance.
    - Templates.
-   - Miscellaneous.
+   - Miscellaneous (paste mode, show rulers etc.).
 
 ------------------------------------------------------------------------------
    News and fixes in version 0.3.2:

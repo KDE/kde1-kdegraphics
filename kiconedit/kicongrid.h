@@ -74,7 +74,6 @@ public:
 public slots:
   void sizeChange(int, int);
   void scalingChange(int, bool);
-  void posChange(int, int);
 
 protected:
   void resizeEvent(QResizeEvent*);
@@ -140,6 +139,8 @@ signals:
   void changed( const QPixmap & );
   void sizechanged( int, int );
   void poschanged( int, int );
+  void xposchanged( int );
+  void yposchanged( int );
   void colorschanged( uint, uint* );
   void addingcolor(uint);
   void newmessage(const char *);

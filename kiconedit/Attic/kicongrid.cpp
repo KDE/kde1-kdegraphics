@@ -1,6 +1,6 @@
 /*
     KDE Icon Editor - a small graphics drawing program for the KDE.
-    Copyright (C) 1998  Thomas Tanghus (tanghus@adr.dk)
+    Copyright (C) 1998  Thomas Tanghus (tanghus@kde.org)
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -38,22 +38,25 @@ KGridView::KGridView(QWidget *parent, const char *name) : QFrame(parent, name)
 
   _grid = new KIconEditGrid(this);
   CHECK_PTR(_grid);
-  connect(_grid, SIGNAL(scalingchanged(int, bool)), SLOT(scalingChange(int, bool)));
-  connect(_grid, SIGNAL(sizechanged(int, int)), SLOT(sizeChange(int, int)));
-  connect(_grid, SIGNAL(poschanged(int, int)), SLOT(posChange(int, int)));
 
   _hruler = new KRuler(KRuler::horizontal, this);
-  _hruler->setEndLabel("Width");
+  _hruler->setEndLabel("width");
   _hruler->setOffset( 0 );
   _hruler->setRange(0, _grid->width());
 
   _vruler = new KRuler(KRuler::vertical, this);
-  _vruler->setEndLabel("Height");
+  _vruler->setEndLabel("height");
   _vruler->setOffset( 0 );
   _vruler->setRange(0, _grid->height());
 
+  connect(_grid, SIGNAL(scalingchanged(int, bool)), SLOT(scalingChange(int, bool)));
+  connect(_grid, SIGNAL(sizechanged(int, int)), SLOT(sizeChange(int, int)));
+  connect( _grid, SIGNAL(xposchanged(int)), _hruler, SLOT(slotNewValue(int)) );
+  connect( _grid, SIGNAL(yposchanged(int)), _vruler, SLOT(slotNewValue(int)) );
+
   setSizes();
-  adjustSize();
+  QResizeEvent e(size(), size());
+  resizeEvent(&e);
 }
 
 void KGridView::setSizes()
@@ -62,8 +65,10 @@ void KGridView::setSizes()
   {
     _hruler->setLittleMarkDistance(_grid->scaling());
     _vruler->setLittleMarkDistance(_grid->scaling());
+
     _hruler->setMediumMarkDistance(5);
     _vruler->setMediumMarkDistance(5);
+
     _hruler->setBigMarkDistance(10);
     _vruler->setBigMarkDistance(10);
 
@@ -103,12 +108,6 @@ void KGridView::setSizes()
     _corner->hide();
     resize(_grid->size());
   }
-}
-
-void KGridView::posChange(int x, int y)
-{
-  _hruler->setValue(x * _grid->scaling());
-  _vruler->setValue(y * _grid->scaling());
 }
 
 void KGridView::sizeChange(int, int)
@@ -352,6 +351,8 @@ void KIconEditGrid::mouseMoveEvent( QMouseEvent *e )
   {
     //debug("%d X %d", col, row);
     emit poschanged(col, row);
+    emit xposchanged((col*scaling())+scaling()/2); // for the rulers
+    emit yposchanged((row*scaling())+scaling()/2);
   }
 
   if(ispasting && !btndown && img->valid(col, row))
