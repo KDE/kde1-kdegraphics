@@ -72,24 +72,20 @@ msgid "No document"
 msgstr "Ei asiakirjaa"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
 msgstr "Näytä/piilota valikot"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Merkitse kaikki"
+msgstr "Merkitse sivu"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
 msgstr "Uudelleenpiirrä"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
-msgstr "&Asetukset ..."
+msgstr "Asetukset ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
@@ -185,10 +181,9 @@ msgstr "Näytä &liukupalkit"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "DVI näyttäjä"
 
 #: kdvi.cpp:240
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -196,7 +191,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
+"Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
@@ -702,18 +697,3 @@ msgstr "n-ylös"
 msgid "Printing method"
 msgstr "Tulostusmetodi"
 
-#~ msgid "&Contents"
-#~ msgstr "&Sisältö"
-
-#~ msgid "About &Qt"
-#~ msgstr "Tietoja &Qt:ta"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Tietoja Kdvi:tä"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - TeX DVI näyttäjä\n"
-#~ "Versio "

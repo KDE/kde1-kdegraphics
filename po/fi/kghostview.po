@@ -37,14 +37,12 @@ msgid ""
 msgstr ""
 
 #: goto.cpp:54
-#, fuzzy
 msgid "&Section"
-msgstr "Alue"
+msgstr "&Alue"
 
 #: goto.cpp:70
-#, fuzzy
 msgid "&Page"
-msgstr "Sivu"
+msgstr "&Sivu"
 
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2215
 #: kghostview.cpp:2227 kghostview.cpp:2232 kghostview.cpp:2515
@@ -53,79 +51,68 @@ msgid "of %d"
 msgstr "%d:ta"
 
 #: info.cpp:45
-#, fuzzy
 msgid "File name :"
 msgstr "Tiedosto :"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr ""
+msgstr "Asiakirjan otsikko :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr ""
+msgstr "Julkaisupäivä :"
 
 #: interpreter.cpp:42
 msgid "General"
 msgstr "Yleistä"
 
 #: interpreter.cpp:79
-#, fuzzy
 msgid "&Interpreter name"
-msgstr "Kääntäjän nimi"
+msgstr "&Kääntäjän nimi"
 
 #: interpreter.cpp:87
-#, fuzzy
 msgid "&Antialiasing"
-msgstr "Pehmennys"
+msgstr "&Reunapehmennys"
 
 #: interpreter.cpp:97
-#, fuzzy
 msgid "Platform &fonts"
-msgstr "Fontit"
+msgstr "&Fontit"
 
 #: interpreter.cpp:107
-#, fuzzy
 msgid "&Messages"
-msgstr "Viestit"
+msgstr "&Viestit"
 
 #: interpreter.cpp:130
 msgid "Palette"
 msgstr "Paletti"
 
 #: interpreter.cpp:152
-#, fuzzy
 msgid "Colo&r"
-msgstr "Väri"
+msgstr "&Väri"
 
 #: interpreter.cpp:161
-#, fuzzy
 msgid "&Grayscale"
-msgstr "Harmaasävy"
+msgstr "&Harmaasävy"
 
 #: interpreter.cpp:169
-#, fuzzy
 msgid "Monochrom&e"
-msgstr "Yksiväri"
+msgstr "&Yksivärinen"
 
 #: interpreter.cpp:192
 msgid "Backing"
 msgstr "Tuki"
 
 #: interpreter.cpp:214
-#, fuzzy
 msgid "&Pixmap"
-msgstr "Kuvat"
+msgstr "&Kuvat"
 
 #: interpreter.cpp:224
-#, fuzzy
 msgid "&Backing store"
-msgstr "Backing store?"
+msgstr "&Backing store?"
 
 #: interpreter.cpp:244 kkeydialog.cpp:230
-#, fuzzy
 msgid "&Defaults"
-msgstr "Oletukset"
+msgstr "&Oletukset"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -210,12 +197,11 @@ msgstr ""
 
 #: kaccel.cpp:225 kaccel.cpp:226 kaccel.cpp:434
 msgid "Prior"
-msgstr ""
+msgstr "Edellinen"
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
-msgstr "Seuraava sivu"
+msgstr "Seuraava"
 
 #: kaccel.cpp:234
 msgid "F1"
@@ -223,7 +209,7 @@ msgstr ""
 
 #: kghostview.cpp:202
 msgid "Document information"
-msgstr ""
+msgstr "Asiakirjan tiedot"
 
 #: kghostview.cpp:216 kghostview.cpp:349 kghostview.cpp:370 kghostview.cpp:439
 msgid "View Control"
@@ -251,19 +237,19 @@ msgstr "Edellinen sivu"
 
 #: kghostview.cpp:355 kghostview.cpp:376
 msgid "Scroll Up"
-msgstr "Scrollaa ylös"
+msgstr "Vieritä ylös"
 
 #: kghostview.cpp:356 kghostview.cpp:377
 msgid "Scroll Down"
-msgstr "Scrollaa alas"
+msgstr "Vieritä alas"
 
 #: kghostview.cpp:357 kghostview.cpp:378
 msgid "Scroll Left"
-msgstr "Scrollaa vasemmalle"
+msgstr "Vieritä vasemmalle"
 
 #: kghostview.cpp:358 kghostview.cpp:379
 msgid "Scroll Right"
-msgstr "Scrollaa oikealle"
+msgstr "Vieritä oikealle"
 
 #: kghostview.cpp:359 kghostview.cpp:380 kghostview.cpp:440
 msgid "Redisplay"
@@ -271,7 +257,7 @@ msgstr "Uudellennäytä"
 
 #: kghostview.cpp:402 kghostview.cpp:404
 msgid "Not known"
-msgstr ""
+msgstr "Tuntematon"
 
 #: kghostview.cpp:415
 msgid "Configure interpreter"
@@ -283,7 +269,7 @@ msgstr "&Avaa ..."
 
 #: kghostview.cpp:491
 msgid "Open &recent"
-msgstr ""
+msgstr "Avaa e&dellinen"
 
 #: kghostview.cpp:496
 msgid "&Print ..."
@@ -302,9 +288,8 @@ msgid "&View control ..."
 msgstr "&Näyttö kontrolli ..."
 
 #: kghostview.cpp:511
-#, fuzzy
 msgid "&Fit to page width"
-msgstr "S&iirry sivulle ..."
+msgstr "&Mahduta sivuleveyteen"
 
 #: kghostview.cpp:513
 msgid "&Redisplay"
@@ -408,27 +393,23 @@ msgstr "&Sivumerkit"
 
 #: kghostview.cpp:654
 msgid "New window ..."
-msgstr ""
+msgstr "Uusi ikkuna ..."
 
 #: kghostview.cpp:657
-#, fuzzy
 msgid "Open file ..."
-msgstr "&Avaa ..."
+msgstr "Avaa tiedosto..."
 
 #: kghostview.cpp:662
-#, fuzzy
 msgid "Print document ..."
-msgstr "Tulosta asiakirja"
+msgstr "Tulosta asiakirja..."
 
 #: kghostview.cpp:667
-#, fuzzy
 msgid "Zoom in"
-msgstr "&Suurenna"
+msgstr "Suurenna"
 
 #: kghostview.cpp:670
-#, fuzzy
 msgid "Zoom out"
-msgstr "&Pienennä"
+msgstr "Pienennä"
 
 #: kghostview.cpp:673
 msgid "Change view ..."
@@ -459,9 +440,8 @@ msgid "Read down the page"
 msgstr "Lue sivun loppu"
 
 #: kghostview.cpp:705
-#, fuzzy
 msgid "Toggle this page mark"
-msgstr "Käännä sivumerkit"
+msgstr "Käännä tämän sivun merkki"
 
 #: kghostview.cpp:727
 msgid "Sc.100 of 100  P.100 of 100"
@@ -555,7 +535,7 @@ msgstr ""
 
 #: kghostview.cpp:1559 kghostview.cpp:1675
 msgid "Error printing"
-msgstr ""
+msgstr "Virhe tulostettaessa"
 
 #: kghostview.cpp:1569
 msgid ""
@@ -564,23 +544,31 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
+"Valitsit asiakirjan kaikkien sivujen tulostuksen tiedostoon.\n"
+"Tämän tuloksena tuotetaan identtinen dokumentti\n"
+"ladatusta dokumentista.\n"
+"Ei ole tarvetta tulostaa kaikkia sivuja tiedostoon." 
 
 #: kghostview.cpp:1582
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
+"Tiedostonimeä ei ole annettu joten\n"
+"mitään ei voida tulostaa tiedostoon.\n"  
 
 #: kghostview.cpp:1640
-#, fuzzy, c-format
+#, c-format
 msgid "Print failure : %s"
-msgstr "Tulostimen virhe : lpr"
+msgstr "Tulostusvirhe : lpr"
 
 #: kghostview.cpp:1676
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
+"Tulostus epäonnistui koska lista\n"
+"tulostettavista sivuista on tyhjä.\n"
 
 #: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
 #: kghostview.cpp:2509
@@ -618,76 +606,68 @@ msgstr "Os.%d/"
 
 #: kkeydialog.cpp:308
 msgid "Current key"
-msgstr ""
+msgstr "Nykyinen näppäin"
 
 #: kkeydialog.cpp:319
-#, fuzzy
 msgid "&Action"
-msgstr "Alue"
+msgstr "&Tapahtuma"
 
 #: kkeydialog.cpp:378
 msgid "&No key"
-msgstr ""
+msgstr "&Ei näppäintä"
 
 #: kkeydialog.cpp:386
-#, fuzzy
 msgid "&Default key"
-msgstr "Oletukset"
+msgstr "&Oletusnäppäin"
 
 #: kkeydialog.cpp:394
 msgid "&Custom key"
-msgstr ""
+msgstr "O&ma näppäin"
 
 #: main.cpp:25
-#, fuzzy
 msgid "Usage: "
-msgstr "Käyttö: %s\n"
+msgstr "Käyttö: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr "[tiedostonimi]\n"
+msgstr ""
+" [tiedostonimi] <valitsimet>\n"
+"\n"
 
 #: main.cpp:28
-#, fuzzy
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr "Lue Qt:n dokumentaatioa komentorivioptioista\n"
+msgstr "Lue Qt:n dokumentaatioa\n"
+"komentorivioptioista.\n"  
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Komentorivivirhe"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark current page"
-msgstr "&Merkitse sivu"
+msgstr "Merkitse sivu"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark all pages"
-msgstr "Merkitse &kaikki sivut"
+msgstr "Merkitse kaikki sivut"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Mark even pages"
-msgstr "Merkitse &parilliset sivut"
+msgstr "Merkitse parilliset sivut"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Mark odd pages"
 msgstr "Merkitse parittomat sivut"
 
 #: marklist.cpp:42
-#, fuzzy
 msgid "Toggle page marks"
 msgstr "Käännä sivumerkit"
 
 #: marklist.cpp:43
-#, fuzzy
 msgid "Remove page marks"
 msgstr "Poista sivumerkit"
 
@@ -697,74 +677,67 @@ msgstr "Ghostscriptin viestit"
 
 #: messages.cpp:56
 msgid "&Clear"
-msgstr ""
+msgstr "&Puhdista"
 
 #: messages.cpp:59 viewcontrol.cpp:114
 msgid "&Dismiss"
-msgstr ""
+msgstr "P&eruuta"
 
 #: print.cpp:35
-#, fuzzy
 msgid "Printer setup"
-msgstr "Tulostimen nimi"
+msgstr "Tulostimen asetukset"
 
 #: print.cpp:65
-#, fuzzy
 msgid "&Printer name"
-msgstr "Tulostimen nimi"
+msgstr "Tulostimen &nimi"
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr ""
+msgstr "&Jonokomento"
 
 #: print.cpp:89
 msgid "&Environment variable"
-msgstr ""
+msgstr "&Ympäristömuuttuja"
 
 #: print.cpp:148
-#, fuzzy
 msgid "Print to file"
-msgstr "Tulostimen virhe : lpr"
+msgstr "Tulosta tiedostoon"
 
 #: print.cpp:153
 msgid "Pages"
 msgstr "Sivut"
 
 #: print.cpp:179
-#, fuzzy
 msgid "&All"
-msgstr "Kaikki"
+msgstr "&Kaikki"
 
 #: print.cpp:188
 msgid "&Current"
-msgstr ""
+msgstr "&Nykyinen"
 
 #: print.cpp:196
-#, fuzzy
 msgid "&Marked"
-msgstr "Merkityt"
+msgstr "&Merkityt"
 
 #: print.cpp:205
 msgid "&Range"
-msgstr ""
+msgstr "&Alue"
 
 #: print.cpp:219
 msgid "to"
-msgstr ""
+msgstr " - "
 
 #: print.cpp:232
-#, fuzzy
 msgid "Print document in re&verse order"
-msgstr "Tulosta asiakirja"
+msgstr "Tulosta asiakirja käänteisessä järjestyksessä"
 
 #: print.cpp:249
-#, fuzzy
 msgid "&Setup ..."
-msgstr "&Avaa ..."
+msgstr "&Asetukset ..."
 
 #: print.cpp:289
 msgid "Range error"
-msgstr ""
+msgstr "Aluevirhe"
 
 #: print.cpp:290
 msgid ""
@@ -775,81 +748,29 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
+"Tulostettavien sivujen aluetta ei ole\n"
+"määritelty oikein.\n"
+"\n"
+"Valittava alue on oltava asiakirjan sivualueella\n"
+"tässä asiakirjan osassa.\n"
+"Tarkista tilariviltä tämä tieto.\n"  
 
 #: viewcontrol.cpp:36
-#, fuzzy
 msgid "Force changes to ..."
-msgstr "Pakota muutokset"
+msgstr "Pakota muutokset ..."
 
 #: viewcontrol.cpp:78
-#, fuzzy
 msgid "&magnification"
-msgstr "Suurennus"
+msgstr "&suurennus"
 
 #: viewcontrol.cpp:86
-#, fuzzy
 msgid "m&edia"
-msgstr "Paperi"
+msgstr "m&edia"
 
 #: viewcontrol.cpp:94
-#, fuzzy
 msgid "&orientation"
-msgstr "Suunta"
+msgstr "&suunta"
 
 #: viewcontrol.cpp:111
 msgid "&Apply"
-msgstr ""
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr "&Muuta sivukokoon"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid "Title :"
-#~ msgstr "Otsikko :"
-
-#~ msgid "Date :"
-#~ msgstr "Päivä :"
-
-#~ msgid "Mark this page"
-#~ msgstr "Merkitse sivu"
-
-#~ msgid "Printer Name : "
-#~ msgstr "Tulostimen nimi : "
-
-#~ msgid "No pages have been marked for printing."
-#~ msgstr "Yhtään sivua ei ole merkattu tulostettaviksi"
-
-#~ msgid ""
-#~ "The file\n"
-#~ "\"%s\"\n"
-#~ "could not be found."
-#~ msgstr ""
-#~ "Tiedostoa\n"
-#~ "\"%s\"\n"
-#~ "ei löytynyt."
-
-#~ msgid "Didn't recognise file\n"
-#~ msgstr "En tunnistanut tiedostoa\n"
+msgstr "&Käytä"

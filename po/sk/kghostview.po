@@ -564,7 +564,7 @@ msgstr "Odd.%d "
 
 #: main.cpp:25
 msgid "Usage: "
-msgstr "Pou¾itie: \n"
+msgstr "Pou¾itie: "
 
 #: main.cpp:27
 msgid ""

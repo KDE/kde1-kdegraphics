@@ -48,21 +48,20 @@ msgid "Circle"
 msgstr "Ympyrä"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Kuvan leveys:"
+msgstr "Kuvan syvyys:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (bittikartta)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 väriä)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (Täysväri)"
 
 #: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
@@ -217,7 +216,6 @@ msgid "Area Select"
 msgstr "Alueen valinta"
 
 #: kpaint.cpp:361
-#, fuzzy
 msgid "Show Tools Toolbar"
 msgstr "Näytä työkalupalkki"
 
@@ -264,14 +262,13 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Tuntematon formaatti"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Virhe: Tuntematon formaatti\n"
-"KPaint ei ymmärrä kuvan formaattia tai tiedosto on vautioitunut."
+"KPaint ei ymmärrä kuvan formaattia tai tiedosto on vaurioitunut."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -434,9 +431,3 @@ msgstr "Liitostyyli:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Viivan väri..."
-
-#~ msgid "Release Notes"
-#~ msgstr "Julkaisutietoja"
-
-#~ msgid "About..."
-#~ msgstr "Tietoja..."
