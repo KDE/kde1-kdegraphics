@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 1.0\n"
-"POT-Creation-Date: 1999-01-11 01:50+0100\n"
+"POT-Creation-Date: 1999-04-09 02:04+0200\n"
 "PO-Revision-Date: 1998-06-29 11:00+0200\n"
 "Last-Translator: Kerem ERZURUMLU <kerem@linux.org.tr>\n"
 "Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
@@ -33,40 +33,40 @@ msgstr "Boy:"
 msgid "Circle"
 msgstr "Daire"
 
-#: depthdialog.cpp:18
+#: depthdialog.cpp:23
 msgid "Image Depth:"
 msgstr "Resim Derinliði:"
 
-#: depthdialog.cpp:24
+#: depthdialog.cpp:30
 #, fuzzy
 msgid "1 (2 Colours)"
 msgstr "8 (256 Renk)"
 
-#: depthdialog.cpp:25
+#: depthdialog.cpp:31
 #, fuzzy
 msgid "4 (16 Colours)"
 msgstr "8 (256 Renk)"
 
-#: depthdialog.cpp:26
+#: depthdialog.cpp:32
 #, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 Renk)"
 
-#: depthdialog.cpp:27
+#: depthdialog.cpp:33
 #, fuzzy
 msgid "15 (32k Colours)"
 msgstr "8 (256 Renk)"
 
-#: depthdialog.cpp:28
+#: depthdialog.cpp:34
 #, fuzzy
 msgid "16 (64k Colours)"
 msgstr "8 (256 Renk)"
 
-#: depthdialog.cpp:29
+#: depthdialog.cpp:35
 msgid "24 (True Colour)"
 msgstr "24 (Gerçek Renkler)"
 
-#: depthdialog.cpp:30
+#: depthdialog.cpp:36
 #, fuzzy
 msgid "32 (True Colour)"
 msgstr "24 (Gerçek Renkler)"
@@ -79,23 +79,23 @@ msgstr "Elips"
 msgid "File Format:"
 msgstr "Dosya Türü:"
 
-#: infodialog.cpp:24
+#: infodialog.cpp:34
 msgid "Colour Depth:"
 msgstr "Renk Çözünürlüðü:"
 
-#: infodialog.cpp:39
+#: infodialog.cpp:55
 msgid "Colours Used:"
 msgstr "Kullanýlan Renkler:"
 
-#: infodialog.cpp:66
+#: infodialog.cpp:89
 msgid "Image Width:"
 msgstr "Görüntü Geniþliði:"
 
-#: infodialog.cpp:82
+#: infodialog.cpp:111
 msgid "Image Height:"
 msgstr "Görüntü Yüksekliði:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
+#: infodialog.cpp:130 palettedialog.cpp:14
 msgid "Dismiss"
 msgstr ""
 

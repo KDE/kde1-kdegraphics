@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-01-11 01:50+0100\n"
+"POT-Creation-Date: 1999-04-09 02:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: LinuxKorea Co. <kde@linuxkorea.co.kr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,40 +34,40 @@ msgstr "높이:"
 msgid "Circle"
 msgstr "원"
 
-#: depthdialog.cpp:18
+#: depthdialog.cpp:23
 msgid "Image Depth:"
 msgstr "이미지 색:"
 
-#: depthdialog.cpp:24
+#: depthdialog.cpp:30
 #, fuzzy
 msgid "1 (2 Colours)"
 msgstr "8 (256 색)"
 
-#: depthdialog.cpp:25
+#: depthdialog.cpp:31
 #, fuzzy
 msgid "4 (16 Colours)"
 msgstr "8 (256 색)"
 
-#: depthdialog.cpp:26
+#: depthdialog.cpp:32
 #, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 색)"
 
-#: depthdialog.cpp:27
+#: depthdialog.cpp:33
 #, fuzzy
 msgid "15 (32k Colours)"
 msgstr "8 (256 색)"
 
-#: depthdialog.cpp:28
+#: depthdialog.cpp:34
 #, fuzzy
 msgid "16 (64k Colours)"
 msgstr "8 (256 색)"
 
-#: depthdialog.cpp:29
+#: depthdialog.cpp:35
 msgid "24 (True Colour)"
 msgstr "24 (트루 칼라)"
 
-#: depthdialog.cpp:30
+#: depthdialog.cpp:36
 #, fuzzy
 msgid "32 (True Colour)"
 msgstr "24 (트루 칼라)"
@@ -80,23 +80,23 @@ msgstr "타원"
 msgid "File Format:"
 msgstr "파일 포맷"
 
-#: infodialog.cpp:24
+#: infodialog.cpp:34
 msgid "Colour Depth:"
 msgstr "색상 수"
 
-#: infodialog.cpp:39
+#: infodialog.cpp:55
 msgid "Colours Used:"
 msgstr "사용한 색:"
 
-#: infodialog.cpp:66
+#: infodialog.cpp:89
 msgid "Image Width:"
 msgstr "이미지 넓이:"
 
-#: infodialog.cpp:82
+#: infodialog.cpp:111
 msgid "Image Height:"
 msgstr "이미지 높이:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
+#: infodialog.cpp:130 palettedialog.cpp:14
 msgid "Dismiss"
 msgstr ""
 

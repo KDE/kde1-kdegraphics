@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1999-01-11 01:50+0100\n"
+"POT-Creation-Date: 1999-04-09 02:04+0200\n"
 "PO-Revision-Date: 1999-01-22 23:50+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -33,35 +33,35 @@ msgstr "Vý¹ka:"
 msgid "Circle"
 msgstr "Kruh"
 
-#: depthdialog.cpp:18
+#: depthdialog.cpp:23
 msgid "Image Depth:"
 msgstr "Barevná hloubka obrázku:"
 
-#: depthdialog.cpp:24
+#: depthdialog.cpp:30
 msgid "1 (2 Colours)"
 msgstr "1 (2 barvy)"
 
-#: depthdialog.cpp:25
+#: depthdialog.cpp:31
 msgid "4 (16 Colours)"
 msgstr "4 (16 barev)"
 
-#: depthdialog.cpp:26
+#: depthdialog.cpp:32
 msgid "8 (256 Colours)"
 msgstr "8 (256 barev)"
 
-#: depthdialog.cpp:27
+#: depthdialog.cpp:33
 msgid "15 (32k Colours)"
 msgstr "15 (32k barev)"
 
-#: depthdialog.cpp:28
+#: depthdialog.cpp:34
 msgid "16 (64k Colours)"
 msgstr "16 (64k barev)"
 
-#: depthdialog.cpp:29
+#: depthdialog.cpp:35
 msgid "24 (True Colour)"
 msgstr "24 (Pravé barvy)"
 
-#: depthdialog.cpp:30
+#: depthdialog.cpp:36
 msgid "32 (True Colour)"
 msgstr "32 (Pravé barvy)"
 
@@ -73,23 +73,23 @@ msgstr "Elipsa"
 msgid "File Format:"
 msgstr "Datový formát:"
 
-#: infodialog.cpp:24
+#: infodialog.cpp:34
 msgid "Colour Depth:"
 msgstr "Barevná hloubka:"
 
-#: infodialog.cpp:39
+#: infodialog.cpp:55
 msgid "Colours Used:"
 msgstr "Pou¾ito barev:"
 
-#: infodialog.cpp:66
+#: infodialog.cpp:89
 msgid "Image Width:"
 msgstr "©íøka obrázku:"
 
-#: infodialog.cpp:82
+#: infodialog.cpp:111
 msgid "Image Height:"
 msgstr "Vý¹ka obrázku:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
+#: infodialog.cpp:130 palettedialog.cpp:14
 msgid "Dismiss"
 msgstr "Zru¹it"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kpaint\n"
-"POT-Creation-Date: 1999-01-11 01:50+0100\n"
+"POT-Creation-Date: 1999-04-09 02:04+0200\n"
 "PO-Revision-Date: 1999-02-16 17:48-0100\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
@@ -33,35 +33,35 @@ msgstr "Højde:"
 msgid "Circle"
 msgstr "Cirkel"
 
-#: depthdialog.cpp:18
+#: depthdialog.cpp:23
 msgid "Image Depth:"
 msgstr "Billeddybde:"
 
-#: depthdialog.cpp:24
+#: depthdialog.cpp:30
 msgid "1 (2 Colours)"
 msgstr "1 (2 farver)"
 
-#: depthdialog.cpp:25
+#: depthdialog.cpp:31
 msgid "4 (16 Colours)"
 msgstr "4 (16 farver)"
 
-#: depthdialog.cpp:26
+#: depthdialog.cpp:32
 msgid "8 (256 Colours)"
 msgstr "8 (256 farver)"
 
-#: depthdialog.cpp:27
+#: depthdialog.cpp:33
 msgid "15 (32k Colours)"
 msgstr "15 (32k farver)"
 
-#: depthdialog.cpp:28
+#: depthdialog.cpp:34
 msgid "16 (64k Colours)"
 msgstr "16 (54k farver)"
 
-#: depthdialog.cpp:29
+#: depthdialog.cpp:35
 msgid "24 (True Colour)"
 msgstr "24 (sand farve)"
 
-#: depthdialog.cpp:30
+#: depthdialog.cpp:36
 msgid "32 (True Colour)"
 msgstr "32 (sand farve)"
 
@@ -73,23 +73,23 @@ msgstr "Ellipse"
 msgid "File Format:"
 msgstr "Filformat:"
 
-#: infodialog.cpp:24
+#: infodialog.cpp:34
 msgid "Colour Depth:"
 msgstr "Farvedybde:"
 
-#: infodialog.cpp:39
+#: infodialog.cpp:55
 msgid "Colours Used:"
 msgstr "Brugte farver:"
 
-#: infodialog.cpp:66
+#: infodialog.cpp:89
 msgid "Image Width:"
 msgstr "Billedbredde:"
 
-#: infodialog.cpp:82
+#: infodialog.cpp:111
 msgid "Image Height:"
 msgstr "Billedhøjde:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
+#: infodialog.cpp:130 palettedialog.cpp:14
 msgid "Dismiss"
 msgstr "Forkast"
 
