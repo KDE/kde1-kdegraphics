@@ -184,9 +184,8 @@ void KImageViewer::saveAs()
 		return;
 	}
 
-	QString msg = urls;
-	msg += ": ";
-	msg += i18n( "written" );
+	QString msg;
+        ksprintf(&msg, i18n("%s: written"), urls);
 	message( msg );
 }
 
@@ -310,8 +309,8 @@ void KImageViewer::makePopupMenus()
 	_aggreg	= new QPopupMenu;
 	_help		= new QPopupMenu;
 
-	_file->insertItem( i18n( "&Open.." ), this, SLOT(load()) );
-	_file->insertItem( i18n( "&Save As.." ), this, SLOT(saveAs()) );
+	_file->insertItem( i18n( "&Open..." ), this, SLOT(load()) );
+	_file->insertItem( i18n( "&Save As..." ), this, SLOT(saveAs()) );
 	_file->insertSeparator();
 	_file->insertItem( i18n( "&Close" ), this, SLOT(closeWindow()) );
 	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()) );
@@ -343,7 +342,7 @@ void KImageViewer::makePopupMenus()
 	_desktop->insertItem( i18n("Max&pect"),this, SLOT(maxpect()) );
 
 
-	int id = _aggreg->insertItem( i18n("&List.."), this,
+	int id = _aggreg->insertItem( i18n("&List..."), this,
 		SLOT(toggleImageList()), Key_I );
 	_aggreg->setItemChecked( id, false );
 	_aggreg->insertSeparator();
@@ -355,7 +354,7 @@ void KImageViewer::makePopupMenus()
 
 	_help->insertItem( i18n( "&Contents" ), this, SLOT(help()) );
 	_help->insertSeparator();
-	_help->insertItem( i18n( "&About KView.." ), this, SLOT(about()) );
+	_help->insertItem( i18n( "&About KView..." ), this, SLOT(about()) );
 }
 
 void KImageViewer::closeWindow()
@@ -534,7 +533,7 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		_imageList->pauseSlideShow();
 	}
 
-	setStatus( i18n( "Loading.." ) );
+	setStatus( i18n( "Loading..." ) );
 	_canvas->load( file );
 	setStatus( 0 );
 

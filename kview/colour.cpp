@@ -22,7 +22,7 @@ void BriteFilter::invoke( QImage before )
 		return;
 	}
 
-	emit status( i18n( "Brightening.." ) );
+	emit status( i18n( "Brightening..." ) );
 
 	QApplication::setOverrideCursor( waitCursor );    
 	QImage newimage = before;
@@ -52,7 +52,7 @@ void DarkFilter::invoke( QImage before )
 		return;
 	}
 
-	emit status( i18n( "Darkening.." ) );
+	emit status( i18n( "Darkening..." ) );
 	QApplication::setOverrideCursor( waitCursor );    
 	QImage newimage = before;
 
