@@ -20,11 +20,13 @@
 #include<kapp.h>
 #include<drag.h>
 #include<kfiledialog.h>
+#include<kstring.h>
 #include<kfm.h>
 
 #include"viewer.h"
 #include"canvas.h"
 #include"version.h"
+#include"numdlg.h"
 
 #include"filter.h"
 #include"filtmenu.h"
@@ -59,7 +61,8 @@ KImageViewer::KImageViewer()
 	_pctBuffer( new QString ),
 	_lastPct( - 1 ),
 	_msgTimer( 0 ),
-	_imageList( new ImgListDlg )
+	_imageList( new ImgListDlg ),
+	_zoomFactor( 100 )
 {
 
 	_canvas = new KImageCanvas( this );
@@ -99,6 +102,9 @@ KImageViewer::KImageViewer()
 			this, SLOT(fullScreen()) );
 	_accel->connectItem( _accel->insertItem( Key_I ), // image list
 			this, SLOT(toggleImageList()) );
+
+	_accel->connectItem( _accel->insertItem( Key_Z ), // zoom
+			this, SLOT(zoomCustom()) );
 
 	_accel->connectItem( _accel->insertItem( Key_S ), // slideshow
 			_imageList, SLOT(toggleSlideShow()) );
@@ -184,8 +190,8 @@ void KImageViewer::saveAs()
 		return;
 	}
 
-	QString msg;
-        ksprintf(&msg, i18n("%s: written"), urls);
+	QString msg = urls;
+	ksprintf( &msg, i18n( "%s: written" ), urls.data() );
 	message( msg );
 }
 
@@ -203,9 +209,9 @@ void KImageViewer::zoomOut10()
 	_canvas->transformImage( _mat );
 }
 
-void KImageViewer::zoomIn50()
+void KImageViewer::zoomIn200()
 {
-	_mat.scale( 1.5, 1.5 );
+	_mat.scale( 2.0, 2.0 );
 
 	_canvas->transformImage( _mat );
 }
@@ -219,7 +225,22 @@ void KImageViewer::zoomOut50()
 
 void KImageViewer::zoomCustom()
 {
-	//TODO: stub
+	KNumDialog num;
+	_zoomFactor = (int)(_mat.m11() * 100);
+
+	if( !num.getNum( _zoomFactor, i18n( 
+			"Enter Zoom factor (100 = 1x):" ) ) )
+		return;
+
+	if( _zoomFactor <= 0 ) {
+		message( i18n( "Illegal zoom factor" ) );
+		return;
+	}
+		
+	double val = (double)_zoomFactor/100;
+	_mat.reset();
+	_mat.scale( val, val );
+	_canvas->transformImage( _mat );
 }
 
 void KImageViewer::rotateClock()
@@ -309,8 +330,8 @@ void KImageViewer::makePopupMenus()
 	_aggreg	= new QPopupMenu;
 	_help		= new QPopupMenu;
 
-	_file->insertItem( i18n( "&Open..." ), this, SLOT(load()) );
-	_file->insertItem( i18n( "&Save As..." ), this, SLOT(saveAs()) );
+	_file->insertItem( i18n( "&Open.." ), this, SLOT(load()) );
+	_file->insertItem( i18n( "&Save As.." ), this, SLOT(saveAs()) );
 	_file->insertSeparator();
 	_file->insertItem( i18n( "&Close" ), this, SLOT(closeWindow()) );
 	_file->insertItem( i18n( "E&xit" ), this, SLOT(quitApp()) );
@@ -319,10 +340,11 @@ void KImageViewer::makePopupMenus()
 	_zoom->insertItem( i18n( "&Full Screen" ), this, SLOT(fullScreen()),
 			Key_F );
 	_zoom->insertSeparator();
+	_zoom->insertItem( i18n( "&Zoom..." ), 	this, SLOT(zoomCustom()) );
 	_zoom->insertItem( i18n( "Zoom &in 10%" ), this, SLOT(zoomIn10()) );
 	_zoom->insertItem( i18n( "Zoom &out 10%"), this, SLOT(zoomOut10()));
-	_zoom->insertItem( i18n( "&Zoom in 50%" ), this, SLOT(zoomIn50()) );
-	_zoom->insertItem( i18n( "Zoo&m out 50%"), this, SLOT(zoomOut50()));
+	_zoom->insertItem( i18n( "&Double size" ), this, SLOT(zoomIn200()) );
+	_zoom->insertItem( i18n( "&Half size"), this, SLOT(zoomOut50()));
 
 	_transform->insertItem( i18n( "&Reset"), this, SLOT(reset()),
 		CTRL + Key_R );
@@ -342,7 +364,7 @@ void KImageViewer::makePopupMenus()
 	_desktop->insertItem( i18n("Max&pect"),this, SLOT(maxpect()) );
 
 
-	int id = _aggreg->insertItem( i18n("&List..."), this,
+	int id = _aggreg->insertItem( i18n("&List.."), this,
 		SLOT(toggleImageList()), Key_I );
 	_aggreg->setItemChecked( id, false );
 	_aggreg->insertSeparator();
@@ -354,7 +376,7 @@ void KImageViewer::makePopupMenus()
 
 	_help->insertItem( i18n( "&Contents" ), this, SLOT(help()) );
 	_help->insertSeparator();
-	_help->insertItem( i18n( "&About KView..." ), this, SLOT(about()) );
+	_help->insertItem( i18n( "&About KView.." ), this, SLOT(about()) );
 }
 
 void KImageViewer::closeWindow()
@@ -456,20 +478,20 @@ void KImageViewer::urlFetchDone()
 	_kfm = 0;
 }
 
-void KImageViewer::urlFetchError( int code, const char *text )
+void KImageViewer::urlFetchError( int,  const char *text )
 {
 	delete _kfm;
 	_kfm = 0;
 
-	QString msg( "Transfer error: " );
+	QString msg( i18n("Transfer error: ") );
 	msg += text;
 
 	message( msg );
 }
 
-void KImageViewer::appendURL( const char *url )
+void KImageViewer::appendURL( const char *url, bool show )
 {
-	_imageList->addURL( url, false );
+	_imageList->addURL( url, show );
 }
 
 void KImageViewer::invokeFilter( KImageFilter *f )
@@ -533,7 +555,7 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		_imageList->pauseSlideShow();
 	}
 
-	setStatus( i18n( "Loading..." ) );
+	setStatus( i18n( "Loading.." ) );
 	_canvas->load( file );
 	setStatus( 0 );
 
@@ -621,7 +643,6 @@ void KImageViewer::toggleImageList()
 
 void KImageViewer::mousePressEvent( QMouseEvent *ev )
 {
-	debug( "press" );
 	if( ev->button() == RightButton ) {
 		_contextMenu->popup( ev->pos() );
 	}
@@ -655,7 +676,11 @@ void KImageViewer::fullScreen()
 		_canvas->resize( size() );
 		_canvas->move( 0, 0 );
 
-		setFocus();
+		// Grab WM focus. We need to do this for some
+		// reason, atleast with KWM. Otherwise the
+		// window loses focus and keyboard accelerators
+		// don't work unless the mouse is clicked once.
+		setActiveWindow();
 	}
 	else {
 		// change to normal
@@ -673,4 +698,49 @@ void KImageViewer::reset()
 {
 	_canvas->reset();
 	_mat.reset();
+}
+
+void KImageViewer::saveProperties( KConfig *cfg ) const
+{
+	debug( "kview: saving properties\n" );
+	if( _statusbar->isVisible() ) {
+		cfg->writeEntry( "ViewerFullScreen", false );
+		cfg->writeEntry( "ViewerPos", _posSave );
+		cfg->writeEntry( "ViewerSize", _sizeSave );
+	}
+	else {
+		cfg->writeEntry( "ViewerFullScreen", true );
+		cfg->writeEntry( "ViewerPos", pos() );
+		cfg->writeEntry( "ViewerPos", size() );
+	}
+	
+	_imageList->saveProperties( cfg );
+
+}
+
+void KImageViewer::restoreProperties( KConfig *cfg )
+{
+	debug( "kview: restoring properties" );
+
+	bool full = cfg->readBoolEntry( "ViewerFullScreen" );
+	
+	if( full ) {
+		fullScreen();
+		_posSave = cfg->readPointEntry( "ViewerPos" );
+		_sizeSave = cfg->readSizeEntry( "ViewerSize" );
+	}
+	else {
+		move( cfg->readPointEntry( "ViewerPos" ) );
+		resize( cfg->readSizeEntry( "ViewerSize" ) );
+	}
+
+	_imageList->restoreProperties( cfg );
+}
+
+void KImageViewer::saveOptions( KConfig * ) const
+{
+}
+
+void KImageViewer::restoreOptions( const KConfig * group )
+{
 }

@@ -5,6 +5,9 @@
 * Generated:	Thu Oct  9 09:03:54 EST 1997
 */
 
+#include<stdio.h>
+#include<unistd.h>
+
 #include<qcolor.h>
 #include<qpixmap.h>
 #include<qapp.h>
@@ -13,6 +16,9 @@
 #include<qimage.h>
 
 #include"canvas.h"
+
+
+static QString loadStdin();
 
 KImageCanvas::KImageCanvas( QWidget *parent )
 	: QScrollView( parent ),
@@ -45,6 +51,20 @@ int KImageCanvas::load( const char *file, const char *URL )
 		return 0;
 	}
 
+	QString realfile = file;
+	bool std = false;
+
+	if( realfile == "-") {
+		// stdin
+		std = true;
+		realfile = loadStdin();
+
+		if( realfile.isEmpty() ) {
+			setStatus( BadPath );
+			return 0;
+		}
+	}
+
 	static int allocContext = 0;
 	if( allocContext )  {
 		QColor::destroyAllocContext( allocContext );
@@ -55,9 +75,13 @@ int KImageCanvas::load( const char *file, const char *URL )
 	QApplication::setOverrideCursor( WaitCursor );
 
 	QPixmap newImage;
-	bool loadOK = newImage.load( file );
+	bool loadOK = newImage.load( realfile );
 
 	QColor::leaveAllocContext();
+
+	if( std ) {
+		unlink( realfile );
+	}
 
 	if( loadOK ) {
 		delete _orig; // delete old buffered image
@@ -72,14 +96,14 @@ int KImageCanvas::load( const char *file, const char *URL )
 
 		updateScrollBars();
 
-		_file = ( URL ? URL : file );
+		_file = ( URL ? URL : realfile.data() );
 		setStatus( OK );
 		setCaption( _file );
 		QApplication::restoreOverrideCursor();
 		return -1;
 	}
 	else {
-		warning( "Couldn't open %s", file );
+		warning( "Couldn't open %s", realfile.data() );
 		setStatus( BadPath );
 	}
 
@@ -216,4 +240,39 @@ QPixmap *KImageCanvas::transPixmap()
 	}
 
 	return client;
+}
+
+#define BUF_SIZE 1024
+/**
+* Read standard input into a file.
+* @return filename
+*/
+static QString loadStdin()
+{
+	if( feof( stdin ) ) {
+		return "";
+	}
+
+	QString name( 100 );
+	if( tmpnam( name.data() ) == 0  ) {
+		return "";
+	}
+
+	char buffer[ BUF_SIZE ];
+	FILE *o;
+
+	o = fopen( name, "w" );
+	if( o == 0 ) {
+		return "";
+	}
+
+	while( !feof( stdin ) ) {
+		size_t bytes = fread( buffer, sizeof(char), BUF_SIZE,
+			stdin );
+
+		fwrite( buffer, sizeof( char ), bytes, o );
+	}
+	fclose( o );
+
+	return name;
 }

@@ -48,15 +48,22 @@ int KView::exec()
 	_app.setMainWidget( viewer );
 
 	viewer->setFilterMenu( _menuFact );
-	viewer->show();
 
-	if ( _app.argc() > 1 ) {
-		viewer->loadURL( _app.argv()[ 1 ] );
+	if( _app.isRestored() ) {
+		debug( "Restoring kview %d", 1 );
+		viewer->restore( 1 );
+	}
+	else {
+		viewer->show();
 
-		for( int i = 1; i < _app.argc(); i++ ) {
-			viewer->appendURL( _app.argv()[ i ] );
+		// process arguments only if not restored
+		for( int i = 1; i <= _app.argc(); i++ ) {
+			viewer->appendURL( _app.argv()[ i ],
+				(i == 1)  );
 		}
 	}
+
+
 
 	int ret = _app.exec();
 
@@ -74,6 +81,8 @@ void KView::registerBuiltinFilters()
 	_filters->registerFilter( new GreyFilter, 
 		KFilterList::AutoDelete );
 	_filters->registerFilter( new SmoothFilter, 
+		KFilterList::AutoDelete );
+	_filters->registerFilter( new GammaFilter, 
 		KFilterList::AutoDelete );
 }
 

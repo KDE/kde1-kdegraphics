@@ -8,13 +8,15 @@
 #include<stdlib.h>
 #include<time.h>
 
-#include<qstrlist.h>
-#include<qtimer.h>
+#include<qaccel.h>
+#include<qcheckbox.h>
 #include<qlistbox.h>
 #include<qpushbt.h>
-#include<qcheckbox.h>
+#include<qstrlist.h>
+#include<qtimer.h>
 
 #include<kapp.h>
+#include<kconfig.h>
 #include<drag.h>
 
 #include"numdlg.h"
@@ -78,6 +80,12 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 	_loop = layout->newCheckBox( i18n( "Loop" ), 0, 7, 1, 1 );
 	_loop->setChecked( false );
 
+	// accelerators
+	QAccel *accel = new QAccel( this );
+
+	accel->connectItem( accel->insertItem( Key_Escape ),
+		this, SLOT(hide()) );
+
 	// caption
 
 	QString cap = kapp->appName();
@@ -88,6 +96,7 @@ ImgListDlg::ImgListDlg( QWidget *parent )
 	setCaption( cap );
 
 	srand( time(0) );
+
 }
 
 ImgListDlg::~ImgListDlg()
@@ -213,7 +222,7 @@ void ImgListDlg::addURLList( const QStrList& list )
 
 void ImgListDlg::select( int idx )
 {
-	if( idx < 0 || idx > _list->count() ) {
+	if( idx < 0 || (unsigned)idx > _list->count() ) {
 		return;
 	}
 
@@ -229,10 +238,6 @@ void ImgListDlg::shuffle()
 	for( int i = c; i > 0; --i  ) {
 		int idx = (int) ( ((double)i * (double)rand()) 
 			/ (RAND_MAX+1.0) );
-
-		if( idx >= i ) {
-			debug( "Index is %d of %d", idx, i );
-		}
 
 		newlist.append( _list->at( idx ) );
 
@@ -332,4 +337,77 @@ void ImgListDlg::setInterval()
 	KNumDialog dlg;
 	dlg.getNum( _slideInterval, 
 			i18n("Time between slides (sec):") );
+}
+
+void ImgListDlg::saveProperties( KConfig *cfg )
+{
+	// slideshow settings
+	cfg->writeEntry( "SlideInterval", _slideInterval );
+	cfg->writeEntry( "SlideLoop", _loop->isChecked() );
+
+	// url list
+	cfg->writeEntry( "ListNumUrls", _list->count() );
+
+
+	QString tag, num;
+	int i = 0;
+
+	for( _list->first(); 
+			_list->current(); 
+			_list->next(), i++ ) {
+		tag = "ListUrl";
+		num.setNum( i );
+		tag += num;
+		cfg->writeEntry( tag, _list->current() );
+	}
+
+	// geometry
+	cfg->writeEntry( "ListWinSize" , size() );
+	cfg->writeEntry( "ListWinPos" , pos() );
+	cfg->writeEntry( "ListVisible", isVisible() );
+}
+
+void ImgListDlg::restoreProperties( KConfig *cfg )
+{
+	_slideInterval = cfg->readNumEntry( "SlideInterval", 5 );
+	_loop->setChecked( cfg->readBoolEntry( "SlideLoop", false ) );
+
+	int urlCount = cfg->readNumEntry( "ListNumUrls", 0 );
+
+	QString tag, num;
+	for( int i = 0; i < urlCount; i++ ) {
+		// load each image
+		tag = "ListUrl";
+		num.setNum( i );
+		tag += num;
+
+		if( !cfg->hasKey( tag ) ) {
+			continue;
+		}
+
+		QString url = cfg->readEntry( tag );
+		addURL( url, (i == 0) );
+	}
+
+	// geometry
+	if( cfg->hasKey(  "ListWinSize" ) ) {
+		resize( cfg->readSizeEntry( "ListWinSize") );
+	}
+	if( cfg->hasKey( "ListWinPos" ) ) {
+		move( cfg->readPointEntry( "ListWinPos" ) );
+	}
+	if ( cfg->readBoolEntry( "ListVisible", false ) ) {
+		show();
+	}
+}
+
+void ImgListDlg::saveOptions( KConfig *cfg ) const
+{
+	cfg->writeEntry( "SlideInterval", _slideInterval );
+	cfg->writeEntry( "SlideLoop", _loop->isChecked() );
+}
+
+void ImgListDlg::restoreOptions( const KConfig *cfg )
+{
+	_slideInterval = cfg->readNumEntry( "SlideInterval", 5 );
 }

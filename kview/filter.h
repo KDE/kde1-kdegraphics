@@ -36,6 +36,13 @@ public:
 
 	virtual KImageFilter *clone() const = 0;
 
+	/**
+	* When this is called, the filter should
+	* assume a new image has been loaded and
+	* should forget its current state (if any);
+	*/
+	virtual void reset() {}
+
 signals:
 	/** 
 	 * This is raised when the image is changed.

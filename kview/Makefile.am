@@ -11,7 +11,7 @@ kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	viewer.cpp canvas.h kview.h \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
 	colour.h colour.cpp filtmenu.h filtmenu.cpp ilistdlg.h ilistdlg.cpp \
-	numdlg.h numdlg.cpp \
+	numdlg.h numdlg.cpp kcproc.h kcproc.cpp \
 	$(CORBA_SRC) $(BUILT_SOURCES)
 
 lnkdir = $(kde_appsdir)/Graphics
@@ -22,7 +22,7 @@ EXTRA_DIST = $(lnk_DATA)
 #kview_LDADD = $(all_libraries) -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-kview_LDADD = kimgio/libkimgio.a layout/liblayout.a \
+kview_LDADD = kimgio/.libs/libkimgio.a layout/liblayout.a \
 	-lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 \
 		$(LIBJPEG) $(LIBTIFF) -lm
 

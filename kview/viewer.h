@@ -9,7 +9,9 @@
 #include<qwmatrix.h>
 
 class KDNDDropZone;
+
 class KFiltMenuFactory;
+class KConfigGroup;
 class KImageCanvas;
 class KImageFilter;
 class KLocale;
@@ -65,7 +67,7 @@ public slots:
 	/** */
 	void zoomOut10();
 	/** */
-	void zoomIn50();
+	void zoomIn200();
 	/** */
 	void zoomOut50();
 	/** */
@@ -100,10 +102,9 @@ public slots:
 	void loadURL( const char *url );
 
 	/**
-	* Queues into the view list, but does not
-	* immediately display it.
+	* Queues into the view list. if
 	*/
-	void appendURL( const char *url );
+	void appendURL( const char *url, bool show = false );
 
 	/**
 	* Toggle full screen mode.
@@ -111,7 +112,14 @@ public slots:
 	void fullScreen();
 
 protected:
-	void mousePressEvent( QMouseEvent * );
+
+	virtual void mousePressEvent( QMouseEvent * );
+
+	virtual void saveProperties( KConfig * ) const;
+	virtual void restoreProperties( KConfig * );
+
+	virtual void saveOptions( KConfig * ) const;
+	virtual void restoreOptions( const KConfig * );
 
 private:
 	enum TransferDir {
@@ -160,6 +168,8 @@ private:
 	QPoint		_posSave;
 	QSize		_sizeSave;
 	QWMatrix	_mat;
+
+	int		_zoomFactor;
 
 	void loadFile( const char *file, const char *url = 0 );
 

@@ -91,6 +91,26 @@ public:
         virtual const char *name() const;
 
 	virtual KImageFilter *clone() const;
-	
 };
+
+class GammaFilter : public KImageFilter
+{
+
+public:
+	/**
+	* GammaFilter Constructor
+	*/
+	GammaFilter() : KImageFilter() {}
+
+	/**
+	* GammaFilter Destructor
+	*/
+	virtual ~GammaFilter() {}
+
+	virtual void invoke( QImage before );
+        virtual const char *name() const;
+
+	virtual KImageFilter *clone() const;
+};
+
 #endif // SSK_COLOUR_H

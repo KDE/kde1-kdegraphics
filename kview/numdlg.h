@@ -29,6 +29,11 @@ public:
 	bool getNum( int& num, const char *message = 0 );
 
 	/**
+	* Get a number from the user.
+	*/
+	bool getNum( double& num, const char *message = 0 );
+
+	/**
 	* KNumDialog Destructor
 	*/
 	virtual ~KNumDialog();

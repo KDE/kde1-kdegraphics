@@ -11,6 +11,7 @@
 class QStrList;
 class QListBox;
 class QPushButton;
+class KConfig;
 class KDNDDropZone;
 class QCheckBox;
 
@@ -36,6 +37,12 @@ public:
 	
 	void addURL( const char *, bool show = true );
 	void addURLList( const QStrList& list );
+
+	void saveOptions( KConfig * ) const;
+	void restoreOptions( const KConfig * );
+
+	virtual void saveProperties( KConfig * );
+	virtual void restoreProperties( KConfig * );
 
 public slots:
 

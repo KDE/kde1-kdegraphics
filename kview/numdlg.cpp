@@ -63,3 +63,18 @@ bool KNumDialog::getNum( int& num, const char *message )
 
 	return false;
 }
+
+bool KNumDialog::getNum( double& num, const char *message )
+{
+	_message->setText( message );
+	QString numtxt;
+	numtxt.setNum( num );
+	_edit->setText( numtxt );
+
+	if ( exec() ) {
+		num = atof( _edit->text() );
+		return true;
+	}
+
+	return false;
+}

@@ -12,7 +12,11 @@
 #include"colour.h"
 #include"kapp.h"
 
+#include"kcproc.h"
+
 static void modifyIntensity( QImage& image, int delta );
+
+// Brightness Filter
 
 void BriteFilter::invoke( QImage before )
 {
@@ -43,6 +47,10 @@ KImageFilter *BriteFilter::clone() const
 {
 	return new BriteFilter;
 }
+
+//
+// Darken filter
+//
 
 void DarkFilter::invoke( QImage before )
 {
@@ -95,11 +103,15 @@ static void modifyIntensity( QImage& image, int delta )
 	}
 }
 
+//
+// Greyscale filter
+//
+
 void GreyFilter::invoke( QImage before )
 {
 	int olddepth = 0;
 
-	emit status( i18n( "Converting to Greyscale.." ) );
+	emit status( i18n( "Converting to Greyscale..." ) );
 
 	QApplication::setOverrideCursor( waitCursor );    
 
@@ -136,13 +148,17 @@ KImageFilter *GreyFilter::clone() const
 	return new GreyFilter;
 }
 
+//
+// Smoothen filter
+//
+
 void SmoothFilter::invoke( QImage before )
 {
 	int olddepth = 0;
 	int delta[ 8 ];
 	int i;
 
-	emit status( i18n( "Smoothing.." ) );
+	emit status( i18n( "Smoothing..." ) );
 	QApplication::setOverrideCursor( waitCursor );    
 
 	QImage after = before;
@@ -214,4 +230,82 @@ const char *SmoothFilter::name() const
 KImageFilter *SmoothFilter::clone() const
 {
 	return new SmoothFilter;
+}
+
+
+//
+// Gamma filter
+//
+
+void GammaFilter::invoke( QImage before )
+{
+	// get gamma value
+	KNumDialog dlg;
+	KColourProc color;
+
+	double gamma = 1.0;
+
+	if( !dlg.getNum( gamma, i18n( "Enter gamma value (0...1):" ) ) 
+		|| gamma > 1.0 || gamma < 0 ) {
+		return;
+	}
+
+	// new image
+	emit status( i18n( "Gamma-correcting..." ) );
+
+	QApplication::setOverrideCursor( waitCursor );    
+
+	QImage after = before;
+	int olddepth = 0;
+
+	if ( after.depth() < 32 ) {
+		olddepth = after.depth();
+		after.convertDepth( 32 );
+	}
+
+	int cells = after.height() * after.width();
+	QRgb *c = (QRgb *)after.bits();
+
+	setMaxProgress( cells );
+
+	color.setGamma( gamma );
+
+	// calc gamma for each image
+	for( int y = 0; y < cells ; y++, c++ ) {
+		int r = qRed( *c );
+		int g = qGreen( *c );
+		int b = qBlue( *c );
+
+//		debug( "before: ( %d, %d, %d )", r, g, b );
+		color.gammaCorrect( r, g, b );
+//		debug( "after: ( %d, %d, %d )", r, g, b );
+
+		*c = qRgb( r, g, b );
+
+		if ( y % 50000 == 0 ) {
+			setProgress( y );
+			qApp->processEvents( 100 );
+		}
+	}
+
+
+	if ( olddepth != 0 ) {
+		after.convertDepth( olddepth );
+	}
+
+	QApplication::restoreOverrideCursor();
+	setProgress( 0 );
+
+	emit changed( after );
+	emit status( 0 );
+}
+
+const char *GammaFilter::name() const
+{
+	return i18n( "Gamma Correct..." );
+}
+
+KImageFilter *GammaFilter::clone() const
+{
+	return new GammaFilter;
 }
