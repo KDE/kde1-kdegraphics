@@ -201,6 +201,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"Editor de Ícones KDE\n"
+"\n"
+"Um programa de desenho gráfico para criação de\n"
+"ícones usando a paleta de ícones do KDE\n"
+"\n"
+"Copyright 1998 Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -716,11 +724,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "largura"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "altura"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"
