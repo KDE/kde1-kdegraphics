@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/ksnapshot\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-30 01:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "snapshot"
 msgstr "øyeblikksfoto"
 
-#: ksnapshot.cpp:93
+#: ksnapshot.cpp:94
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -35,43 +35,43 @@ msgstr ""
 "\n"
 "Versjon: "
 
-#: ksnapshot.cpp:127
+#: ksnapshot.cpp:129
 msgid "Filename:"
 msgstr "Filnavn:"
 
-#: ksnapshot.cpp:159
+#: ksnapshot.cpp:161
 msgid "Delay:"
 msgstr "Forsinkelse:"
 
-#: ksnapshot.cpp:168
+#: ksnapshot.cpp:170
 msgid "seconds."
 msgstr "sekunder."
 
-#: ksnapshot.cpp:188
+#: ksnapshot.cpp:190
 msgid "Auto raise"
 msgstr "Legg automatisk øverst"
 
-#: ksnapshot.cpp:189
+#: ksnapshot.cpp:191
 msgid "Hide KSnapshot window"
 msgstr "Skjul KSnapshot-vindu"
 
-#: ksnapshot.cpp:191
+#: ksnapshot.cpp:193
 msgid "Only grab the window containing the cursor"
 msgstr "Bare fotografer vindu som inneholder markør"
 
-#: ksnapshot.cpp:222
+#: ksnapshot.cpp:224
 msgid "Grab"
 msgstr "Fotografer"
 
-#: ksnapshot.cpp:452
+#: ksnapshot.cpp:454
 msgid "Error: Unable to save image"
 msgstr "Feil: Kunne ikke lagre bilde"
 
-#: ksnapshot.cpp:453
+#: ksnapshot.cpp:455
 msgid "Dismiss"
 msgstr "Forkast"
 
-#: ksnapshot.cpp:457
+#: ksnapshot.cpp:459
 #, c-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -80,6 +80,6 @@ msgstr ""
 "KSnapshot kunne ikke lagre bilde til\n"
 "%s."
 
-#: ksnapshot.cpp:467
+#: ksnapshot.cpp:469
 msgid "KSnapshot preview"
 msgstr "KSnapshot-forhåndsvisning"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KSNAPSHOT\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1998-11-30 01:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "snapshot"
 msgstr "valokuva"
 
-#: ksnapshot.cpp:93
+#: ksnapshot.cpp:94
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -36,43 +36,43 @@ msgstr ""
 "\n"
 "Versio: "
 
-#: ksnapshot.cpp:127
+#: ksnapshot.cpp:129
 msgid "Filename:"
 msgstr "Tiedostonimi:"
 
-#: ksnapshot.cpp:159
+#: ksnapshot.cpp:161
 msgid "Delay:"
 msgstr "Viive:"
 
-#: ksnapshot.cpp:168
+#: ksnapshot.cpp:170
 msgid "seconds."
 msgstr "sekuntia."
 
-#: ksnapshot.cpp:188
+#: ksnapshot.cpp:190
 msgid "Auto raise"
 msgstr "Automaattinosta"
 
-#: ksnapshot.cpp:189
+#: ksnapshot.cpp:191
 msgid "Hide KSnapshot window"
 msgstr "Piilota KSnapshot -ikkuna"
 
-#: ksnapshot.cpp:191
+#: ksnapshot.cpp:193
 msgid "Only grab the window containing the cursor"
 msgstr "Kaappa vain ikkuna jossa osoitin on"
 
-#: ksnapshot.cpp:222
+#: ksnapshot.cpp:224
 msgid "Grab"
 msgstr "Kaappaa"
 
-#: ksnapshot.cpp:452
+#: ksnapshot.cpp:454
 msgid "Error: Unable to save image"
 msgstr "Virhe: Kuvan tallennus ei onnistunut"
 
-#: ksnapshot.cpp:453
+#: ksnapshot.cpp:455
 msgid "Dismiss"
 msgstr "Hylk‰‰"
 
-#: ksnapshot.cpp:457
+#: ksnapshot.cpp:459
 #, c-format
 msgid ""
 "KSnapshot was unable to save the image to\n"
@@ -81,6 +81,6 @@ msgstr ""
 "KSnapshot ei saanut tallennettua kuvaa\n"
 "%s."
 
-#: ksnapshot.cpp:467
+#: ksnapshot.cpp:469
 msgid "KSnapshot preview"
 msgstr "KSnapshot esikatselu"
