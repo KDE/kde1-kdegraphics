@@ -196,7 +196,7 @@ msgid ""
 "Width %.2f Height %.2f\n"
 msgstr ""
 "Dimensioni pagina non valide:\n"
-"Larghezza %.2f Altezza %.2f"
+"Larghezza %.2f Altezza %.2f\n"
 
 #: kfax.cpp:1011
 #, c-format
@@ -236,7 +236,7 @@ msgid ""
 msgstr ""
 "KFax sta già aspettando\n"
 "che un job internet finisca\n"
-"Per favore aspetta che abbia finito"
+"Per favore aspetta che abbia finito\n"
 
 #: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
@@ -318,7 +318,7 @@ msgid ""
 "%s\n"
 msgstr ""
 "Impossibile aprire:\n"
-"%s"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

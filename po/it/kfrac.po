@@ -97,7 +97,7 @@ msgstr "Oops! Non ancora implementato."
 
 #: kfractdlgs.C:96 kfractdlgs.C:604
 msgid "Iterations:"
-msgstr Iterazioni""
+msgstr "Iterazioni:"
 
 #: kfractdlgs.C:107 kfractdlgs.C:615
 msgid "0 - 999"
