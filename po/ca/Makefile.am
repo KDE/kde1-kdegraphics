@@ -1,6 +1,6 @@
 
 # This has to be set. The rest should be reusable
-GMOFILES = ksnapshot.gmo
+GMOFILES = ksnapshot.gmo kfax.gmo kdvi.gmo
 POFILES = $(GMOFILES:.gmo=.po)
 
 LANG = ca
