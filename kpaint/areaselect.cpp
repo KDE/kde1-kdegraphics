@@ -125,8 +125,8 @@ QPixmap *AreaSelect::pixmap()
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kdedir().copy();
-  pixdir.append("/share/apps/kpaint/toolbar/");
+  pixdir= kpaintApp->kde_datadir().copy();
+  pixdir.append("/kpaint/toolbar/");
   pixdir.append("areaselect.xpm");
   return new QPixmap(pixdir);
 }

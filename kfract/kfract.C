@@ -116,7 +116,7 @@ void KFract::setupToolBar()
   {
   QPixmap pixmap;
 
-  QString pixdir = kapp->kdedir() + QString( "/share/toolbar/" );
+  QString pixdir = kapp->kde_toolbardir().copy() + "/";
   pixmap.load( pixdir + "fileopen.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,

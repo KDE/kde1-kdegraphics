@@ -122,8 +122,8 @@ QPixmap *Rectangle::pixmap()
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kdedir().copy();
-  pixdir.append("/share/apps/kpaint/toolbar/");
+  pixdir= kpaintApp->kde_datadir().copy();
+  pixdir.append("/kpaint/toolbar/");
   pixdir.append("rectangle.xpm");
   return new QPixmap(pixdir);
 }

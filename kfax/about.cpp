@@ -37,9 +37,8 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
 
   setCaption("About KFax");
 
-  QString pixdir = mykapp->kdedir();
-  pixdir.detach();
-  pixdir +=  QString("/share/apps/kfax/pics/");  
+  QString pixdir = mykapp->kde_datadir().copy();
+  pixdir +=  "/kfax/pics/";
   QPixmap pm((pixdir + "kfaxlogo.xpm").data());
 
   QLabel *logo = new QLabel(this);

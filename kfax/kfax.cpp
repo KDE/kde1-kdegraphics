@@ -51,7 +51,7 @@ void    setFaxDefaults();
 
 void 	parse(char* buf, char** args);
 void 	setfaxtitle(char* name);
-int     copyfile(char* to,char* from);
+int     copyfile(const char* to,char* from);
 
 extern  "C"{
 int    fax2psmain(char* faxtiff_file,FILE* psoutput, float width,float height,int scale);
@@ -430,19 +430,7 @@ void TopLevel::setupMenuBar(){
 void TopLevel::setupToolBar(){
 
 
-  QString PIXDIR = "";
-  PIXDIR = mykapp->kdedir();
-  PIXDIR.detach();
-   
-  /*
-  char *kdedir = getenv("KDEDIR");
-  if(kdedir)
-    PIXDIR.append(kdedir);
-  else
-    PIXDIR.append("/usr/local/kde");
-    */
-
-  PIXDIR.append("/share/toolbar/");
+  QString PIXDIR = mykapp->kde_toolbardir().copy();
 
   QPixmap pixmap;
   toolbar = new KToolBar( this );
@@ -2080,9 +2068,8 @@ void TopLevel::helptiff(){
   
   if (helppage == NULL) {
     QString file;
-    file = mykapp->kdedir();
-    file.detach();
-    file += "/share/apps/kfax/pics/kfax.tif";
+    file = mykapp->kde_datadir().copy();
+    file += "/kfax/pics/kfax.tif";
     if (!notetiff(file.data())){
       return;
     }
@@ -2728,7 +2715,7 @@ void parse(char* buf, char** args){
 
 }
 
-int copyfile(char* toname,char* fromname){
+int copyfile(const char* toname,char* fromname){
 
   char buffer[4*1028];
   int count = 0;
