@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"POT-Creation-Date: 1998-03-05 17:23+0100\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -71,22 +71,18 @@ msgid "No document"
 msgstr "®iadny dokument"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
 msgstr "Zapnú»/vypnú» zobrazenie menu"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Oznaèi» v¹etky"
+msgstr "Oznaèi» stránku"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
-msgstr "Prekresli» stranu"
+msgstr "Prekresli»"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
 msgstr "&Preferencie ..."
 
@@ -184,10 +180,9 @@ msgstr "Zobrazova» posunovacie &li¹ty"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "Prehliadaè DVI"
 
 #: kdvi.cpp:240
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -195,7 +190,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
+"napísal Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
@@ -701,18 +696,3 @@ msgstr "n-up"
 msgid "Printing method"
 msgstr "Spôsob tlaèe"
 
-#~ msgid "&Contents"
-#~ msgstr "&Obsah"
-
-#~ msgid "About &Qt"
-#~ msgstr "Informácie o &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Informácie o Kdvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - TeX DVI prehliadaè\n"
-#~ "Verzia "
