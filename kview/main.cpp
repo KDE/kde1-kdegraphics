@@ -21,10 +21,9 @@ int main(int argc, char **argv)
 {
   int i=0;
 
-  QApplication::setColorSpec( QApplication::ManyColor );
-
-  theApp = new KApplication (argc, argv, "kview");
-  
+  KApplication a(argc, argv, "kview");
+  theApp = &a;
+ 
   //KVConfigHandler::setConfigEntry("General","Cache",3);
   //i=(int)KVConfigHandler::getConfigEntry("General","Cache");
   

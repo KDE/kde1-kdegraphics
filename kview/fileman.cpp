@@ -56,6 +56,7 @@ Fileman::Fileman(const char *name, WView *)
   setFrameBorderWidth (1);
   setView(mainwidget, FALSE);
 
+  showrunning = FALSE;  
   // fill the listbox
   updateListbox(3);
   
@@ -68,13 +69,12 @@ Fileman::Fileman(const char *name, WView *)
   resize(sizeX,sizeY);
 
   // other stuff
-  showrunning = FALSE;
   fileList.setAutoDelete( TRUE );
   timerDelay = KVConfigHandler::delay;
   lastPath = 0;
 
   // DnD support 
-  KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
+  dropZone = new KDNDDropZone( this , DndURL);
   connect(dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
 		this, SLOT( slotDropEvent( KDNDDropZone *) ) ); 
 
@@ -794,14 +794,13 @@ Fileman::~Fileman()
   --manCount;
 
   //clean up
-  //delete dropZone;
+  delete dropZone;
 
   delete ktoolbar1;
   delete ktoolbar2;
   delete statusbar;
 
-  delete file;
-  delete help;
+  // delete file;
   delete menubar;
   
   delete listbox;
@@ -810,7 +809,7 @@ Fileman::~Fileman()
   delete slider;
   if (lineEdit!=0L) delete lineEdit;
   delete mainwidget;	  
-  delete imageWindow;
+  // delete imageWindow;
 }
 
 void Fileman::closeEvent(QCloseEvent *)

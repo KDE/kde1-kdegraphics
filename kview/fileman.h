@@ -119,7 +119,8 @@ private:
   KToolBar    *ktoolbar1,*ktoolbar2;
   int         iktoolbar1,iktoolbar2;
   KMenuBar    *menubar;
-  QPopupMenu  *file,*options, *help;
+  QPopupMenu  *file,*options;
+  KDNDDropZone * dropZone;
   
   
   bool    showrunning;

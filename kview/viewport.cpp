@@ -69,6 +69,12 @@ WViewPort::WViewPort(const char *file, QWidget *parent,
 	load(file);
 }
 
+WViewPort::~WViewPort()
+{
+      if(oldContext)
+            QColor::destroyAllocContext( oldContext );   
+      delete image;
+}
 
 bool WViewPort::load(const char *filename)
 {
@@ -110,9 +116,14 @@ bool WViewPort::load(const char *filename)
 			// make a duplicate of image, because 
 			// QPixmapCache doesn't allocate memory,
 			// and put the duplicate in the cache.
-			copyimage = new QPixmap; 
-			*copyimage = *image;    
-			QPixmapCache::insert(filename,copyimage);
+
+		        // Stephan: I disabled the caching for now, 
+			// because it has a big, fat color problem
+			// under 256 color displays. The color context
+			// is not saved. So, you always get the colors
+			// or the latest loaded pixmap.
+			// QPixmapCache::insert(filename,new QPixmap(*image));
+
 			// Rem. On cache removal, the allocated 
 			// memory is freed by QPixmapCache
 		      }
@@ -139,7 +150,6 @@ bool WViewPort::load(const char *filename)
 	if(!ret)
 		imagefile = save;
 
-	
 	return ret;
 }
 

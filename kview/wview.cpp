@@ -162,7 +162,7 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 
 	// DND Destination
 
-        KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
+        dropZone = new KDNDDropZone( this , DndURL);
 
         connect( dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
 		this, SLOT( slotDropEvent( KDNDDropZone *) ) ); 
@@ -387,6 +387,7 @@ void WView::tileToDesktop(){
 WView::~WView(){
 	windowList.removeRef(this);
 	--winCount;
+        delete dropZone;
 }
 
 

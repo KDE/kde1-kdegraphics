@@ -60,6 +60,7 @@ private:
 
 // Net IO
 	KFM *kfm;
+	KDNDDropZone * dropZone;
 	ioAction kfmAction;
 	QString netFile, tmpFile;
 
