@@ -1,4 +1,4 @@
-SUBDIRS = kimgio layout doc
+SUBDIRS = layout doc
 bin_PROGRAMS= kview
 
 #CORBA_SRC = kmicoapp.h kmicoapp.cpp
@@ -22,9 +22,9 @@ EXTRA_DIST = $(lnk_DATA)
 #kview_LDADD = $(all_libraries) -L/usr/local/mico/lib -lkfile -lkdeui -lkdecore -lkfm -lqt -lX11 -lXext -ljpeg -lmico2.0.8 -ldl
 
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
-kview_LDADD = kimgio/.libs/libkimgio.a layout/liblayout.a \
-	-lkfile -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 \
-		$(LIBJPEG) $(LIBTIFF) -lm
+kview_LDADD = layout/liblayout.a \
+	-lkfile -lkfm -lkdeui -lkdecore -lkimgio -lqt -lXext -lX11 \
+		$(KIMGIO_LIBS) -lm
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
