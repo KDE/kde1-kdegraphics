@@ -52,14 +52,12 @@ msgstr ""
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:54
-#, fuzzy
 msgid "&Section"
-msgstr "Seksjon"
+msgstr "&Seksjon"
 
 #: goto.cpp:70
-#, fuzzy
 msgid "&Page"
-msgstr "Side"
+msgstr "S&ide"
 
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
 #: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
@@ -68,79 +66,68 @@ msgid "of %d"
 msgstr "av %d"
 
 #: info.cpp:45
-#, fuzzy
 msgid "File name :"
-msgstr "Fil :"
+msgstr "Filnavn :"
 
 #: info.cpp:53
 msgid "Document title :"
-msgstr ""
+msgstr "Dokumenttittel :"
 
 #: info.cpp:61
 msgid "Publication date :"
-msgstr ""
+msgstr "Publikasjonsdato :"
 
 #: interpreter.cpp:42
 msgid "General"
 msgstr "Generelt"
 
 #: interpreter.cpp:79
-#, fuzzy
 msgid "&Interpreter name"
-msgstr "Oversetter navn"
+msgstr "Navn på &oversetter"
 
 #: interpreter.cpp:87
-#, fuzzy
 msgid "&Antialiasing"
-msgstr "Antialiasing"
+msgstr "&Antialiasing"
 
 #: interpreter.cpp:97
-#, fuzzy
 msgid "Platform &fonts"
-msgstr "Plattform skrifttyper"
+msgstr "Plattformskrifttyper"
 
 #: interpreter.cpp:107
-#, fuzzy
 msgid "&Messages"
-msgstr "Meldinger"
+msgstr "&Meldinger"
 
 #: interpreter.cpp:130
 msgid "Palette"
 msgstr "Palett"
 
 #: interpreter.cpp:152
-#, fuzzy
 msgid "Colo&r"
-msgstr "Farge"
+msgstr "Fa&rge"
 
 #: interpreter.cpp:161
-#, fuzzy
 msgid "&Grayscale"
-msgstr "Greskala"
+msgstr "&Gråskala"
 
 #: interpreter.cpp:169
-#, fuzzy
 msgid "Monochrom&e"
-msgstr "Ensfarget"
+msgstr "E&nsfarget"
 
 #: interpreter.cpp:192
 msgid "Backing"
-msgstr "Ger tilbake"
+msgstr "Går tilbake"
 
 #: interpreter.cpp:214
-#, fuzzy
 msgid "&Pixmap"
-msgstr "Pixmap"
+msgstr "&Pixmap"
 
 #: interpreter.cpp:224
-#, fuzzy
 msgid "&Backing store"
-msgstr "Lagrer ge tilbake"
+msgstr "&Backing store"
 
 #: interpreter.cpp:244 kkeydialog.cpp:233
-#, fuzzy
 msgid "&Defaults"
-msgstr "Standard"
+msgstr "&Standard"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -148,19 +135,19 @@ msgstr "gs"
 
 #: kaccel.cpp:169
 msgid "CTRL+O"
-msgstr ""
+msgstr "CTRL+O"
 
 #: kaccel.cpp:173
 msgid "CTRL+N"
-msgstr ""
+msgstr "CTRL+N"
 
 #: kaccel.cpp:177
 msgid "CTRL+W"
-msgstr ""
+msgstr "CTRL+W"
 
 #: kaccel.cpp:181
 msgid "CTRL+S"
-msgstr ""
+msgstr "CTRL+S"
 
 #: kaccel.cpp:184 kaccel.cpp:419 kghostview.cpp:436 kghostview.cpp:1284
 msgid "Print"
@@ -168,85 +155,83 @@ msgstr "Skriv ut"
 
 #: kaccel.cpp:185
 msgid "CTRL+P"
-msgstr ""
+msgstr "CTRL+P"
 
 #: kaccel.cpp:189
 msgid "CTRL+Q"
-msgstr ""
+msgstr "CTRL+Q"
 
 #: kaccel.cpp:193
 msgid "CTRL+X"
-msgstr ""
+msgstr "CTRL+X"
 
 #: kaccel.cpp:197
 msgid "CTRL+C"
-msgstr ""
+msgstr "CTRL+C"
 
 #: kaccel.cpp:201
 msgid "CTRL+V"
-msgstr ""
+msgstr "CTRL+V"
 
 #: kaccel.cpp:205
 msgid "CTRL+Z"
-msgstr ""
+msgstr "CTRL+Z"
 
 #: kaccel.cpp:209
 msgid "CTRL+F"
-msgstr ""
+msgstr "CTRL+F"
 
 #: kaccel.cpp:213
 msgid "CTRL+R"
-msgstr ""
+msgstr "CTRL+R"
 
 #: kaccel.cpp:216 kaccel.cpp:443
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: kaccel.cpp:217
 msgid "CTRL+Insert"
-msgstr ""
+msgstr "CTRL+Insert"
 
 #: kaccel.cpp:221
 msgid "CTRL+Home"
-msgstr ""
+msgstr "CTRL+Home"
 
 #: kaccel.cpp:224 kaccel.cpp:449
 msgid "End"
-msgstr ""
+msgstr "End"
 
 #: kaccel.cpp:225
 msgid "CTRL+End"
-msgstr ""
+msgstr "CTRL+End"
 
 #: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
 msgid "Prior"
-msgstr ""
+msgstr "Forrige"
 
 #: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
-#, fuzzy
 msgid "Next"
-msgstr "Neste side"
+msgstr "Neste"
 
 #: kaccel.cpp:237
 msgid "F1"
-msgstr ""
+msgstr "F1"
 
 #: kghostview.cpp:199
 msgid "Document information"
-msgstr ""
+msgstr "Dokumentinformasjon"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Skriver navn"
+msgstr "Sideoppsett"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
-msgstr "Visnings kontrol"
+msgstr "Visningskontrol"
 
 #: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
 msgid "Go To Page"
-msgstr "Ge til side"
+msgstr "Gå til side"
 
 #: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
 msgid "Zoom In"
@@ -274,19 +259,19 @@ msgstr "Skroll ned"
 
 #: kghostview.cpp:361 kghostview.cpp:382
 msgid "Scroll Left"
-msgstr "Skroll  venstre"
+msgstr "Skroll venstre"
 
 #: kghostview.cpp:362 kghostview.cpp:383
 msgid "Scroll Right"
-msgstr "Skroll hxyre"
+msgstr "Skroll høyre"
 
 #: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
 msgid "Redisplay"
-msgstr "Vis pe nytt"
+msgstr "Vis på nytt"
 
 #: kghostview.cpp:406 kghostview.cpp:408
 msgid "Not known"
-msgstr ""
+msgstr "Ikke kjent"
 
 #: kghostview.cpp:419
 msgid "Configure interpreter"
@@ -294,20 +279,19 @@ msgstr "Konfigurer oversetter"
 
 #: kghostview.cpp:494
 msgid "&Open ..."
-msgstr "&Epne ..."
+msgstr "&Åpne ..."
 
 #: kghostview.cpp:495
 msgid "Open &recent"
-msgstr ""
+msgstr "Åpne &nylig"
 
 #: kghostview.cpp:500
 msgid "&Reload"
-msgstr ""
+msgstr "&Vis på nytt"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Epne ..."
+msgstr "Side&oppsett ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -322,9 +306,8 @@ msgid "Zoom &out"
 msgstr "Zoom &ut"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Zoom ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -340,15 +323,15 @@ msgstr "&Neste side"
 
 #: kghostview.cpp:531
 msgid "&Go to page ..."
-msgstr "&Ge til side ..."
+msgstr "&Gå til side ..."
 
 #: kghostview.cpp:534
 msgid "Go to &start"
-msgstr "Ge t&il start"
+msgstr "Gå t&il start"
 
 #: kghostview.cpp:536
 msgid "Go to &end"
-msgstr "Ge til sl&utten"
+msgstr "Gå til sl&utten"
 
 #: kghostview.cpp:538
 msgid "&Read down"
@@ -380,7 +363,7 @@ msgstr "&Fjern sidemerker"
 
 #: kghostview.cpp:567
 msgid "Show &tool bar"
-msgstr "Vis &verktxylinje"
+msgstr "Vis &verktøylinje"
 
 #: kghostview.cpp:568
 msgid "Show st&atus bar"
@@ -388,7 +371,7 @@ msgstr "Vis st&atuslinje"
 
 #: kghostview.cpp:569
 msgid "Show &page list"
-msgstr "Vis &side liste"
+msgstr "Vis &sideliste"
 
 #: kghostview.cpp:571
 msgid "Configure &interpreter ..."
@@ -416,7 +399,7 @@ msgstr "&Kopirettighet"
 
 #: kghostview.cpp:592
 msgid "&Go"
-msgstr "&Kjxr"
+msgstr "&Kjør"
 
 #: kghostview.cpp:593
 msgid "&Pagemarks"
@@ -424,56 +407,51 @@ msgstr "&Sidemerker"
 
 #: kghostview.cpp:661
 msgid "New window ..."
-msgstr ""
+msgstr "Nytt vindu ..."
 
 #: kghostview.cpp:664
-#, fuzzy
 msgid "Open file ..."
-msgstr "&Epne ..."
+msgstr "&Åpne fil..."
 
 #: kghostview.cpp:672
-#, fuzzy
 msgid "Print document ..."
-msgstr "Skriv ut dokument"
+msgstr "Skriv ut dokument..."
 
 #: kghostview.cpp:677
-#, fuzzy
 msgid "Zoom in"
-msgstr "Zoom &inn"
+msgstr "Zoom inn"
 
 #: kghostview.cpp:680
-#, fuzzy
 msgid "Zoom out"
-msgstr "Zoom &ut"
+msgstr "Zoom ut"
 
 #: kghostview.cpp:685
 msgid "Go back"
-msgstr "Ge tilbake"
+msgstr "Gå tilbake"
 
 #: kghostview.cpp:688
 msgid "Go forward"
-msgstr "Ge fremover"
+msgstr "Gå fremover"
 
 #: kghostview.cpp:691
 msgid "Go to page ..."
-msgstr "Ge til side ..."
+msgstr "Gå til side ..."
 
 #: kghostview.cpp:696
 msgid "Go to start"
-msgstr "Ge til start"
+msgstr "Gå til start"
 
 #: kghostview.cpp:699
 msgid "Go to end"
-msgstr "Ge til slutten"
+msgstr "Gå til slutten"
 
 #: kghostview.cpp:702
 msgid "Read down the page"
 msgstr "Les ned siden"
 
 #: kghostview.cpp:707
-#, fuzzy
 msgid "Toggle this page mark"
-msgstr "&Toggle sidemerker"
+msgstr "Toggle dette sidemerket"
 
 #: kghostview.cpp:729
 msgid "Sc.100 of 100  P.100 of 100"
@@ -510,11 +488,11 @@ msgstr "Kunne ikke starte eller finne KFM."
 
 #: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
 msgid "Portrait"
-msgstr "Portrett"
+msgstr "Stående"
 
 #: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
 msgid "Landscape"
-msgstr "Landskap"
+msgstr "Liggende"
 
 #: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
 msgid "Seascape"
@@ -526,12 +504,11 @@ msgstr "Opp ned"
 
 #: kghostview.cpp:1262
 msgid "Go to ..."
-msgstr "Ge til ..."
+msgstr "Gå til ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Zoom inn"
+msgstr "Zoom"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -539,7 +516,7 @@ msgstr "Versjon 0.6"
 
 #: kghostview.cpp:1524
 msgid "Sorry, not ready yet"
-msgstr "Beklager, er ikke klar enne"
+msgstr "Beklager, er ikke klar ennå"
 
 #: kghostview.cpp:1531
 msgid "About kghostview"
@@ -557,7 +534,7 @@ msgstr ""
 
 #: kghostview.cpp:1584 kghostview.cpp:1700
 msgid "Error printing"
-msgstr ""
+msgstr "Feil ved skriving"
 
 #: kghostview.cpp:1594
 msgid ""
@@ -566,23 +543,31 @@ msgid ""
 "that currently loaded into the viewer.\n"
 "There is no need to print all pages into a new file."
 msgstr ""
+"Du velger å skrive alle sider til en fil.\n"
+"Dette vil produsere et dokument identisk til\n"
+"det som er lastet inn i viseren nå.\n"
+"Det er ikke behov for å skrive ut alle sidene til en ny fil."
 
 #: kghostview.cpp:1607
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr ""
+"Intet filnavn ble gitt, så\n"
+"ingenting kan bli skrevet ut til en fil.\n"
 
 #: kghostview.cpp:1665
-#, fuzzy, c-format
+#, c-format
 msgid "Print failure : %s"
-msgstr "Skriver feil : lpr"
+msgstr "Skriverfeil : %s"
 
 #: kghostview.cpp:1701
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
+"Utskriften mislyktes fordi listen av\n"
+"sidene som skulle skrives ut var tom.\n"
 
 #: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
 #: kghostview.cpp:2534
@@ -620,153 +605,140 @@ msgstr "Sk.%d "
 
 #: kkeydialog.cpp:312
 msgid "Current key"
-msgstr ""
+msgstr "Gjeldende tast"
 
 #: kkeydialog.cpp:323
-#, fuzzy
 msgid "&Action"
-msgstr "Seksjon"
+msgstr "&Aksjon"
 
 #: kkeydialog.cpp:382
 msgid "&No key"
-msgstr ""
+msgstr "I&ngen tast"
 
 #: kkeydialog.cpp:390
-#, fuzzy
 msgid "&Default key"
-msgstr "Standard"
+msgstr "Standar&dtast"
 
 #: kkeydialog.cpp:398
 msgid "&Custom key"
-msgstr ""
+msgstr "&Egen tast"
 
 #: main.cpp:25
-#, fuzzy
 msgid "Usage: "
-msgstr "Bruk: %s\n"
+msgstr "Bruk: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr "[filnavn]\n"
+msgstr ""
+" [filnavn] [brytere]\n"
+"\n"
 
 #: main.cpp:28
-#, fuzzy
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr "Se Qt dokumentasjon for kommando linje valg\n"
+msgstr ""
+"Se Qt-dokumentasjon for\n"
+"kommandolinjevalg\n"
 
 #: main.cpp:30
 msgid "Error on command line"
-msgstr ""
+msgstr "Veil på kommandolinje"
 
 #: marklist.cpp:38
-#, fuzzy
 msgid "Mark current page"
-msgstr "&Merk gjeldene side"
+msgstr "Merk gjeldene side"
 
 #: marklist.cpp:39
-#, fuzzy
 msgid "Mark all pages"
-msgstr "Merk &alle sider"
+msgstr "Merk alle sider"
 
 #: marklist.cpp:40
-#, fuzzy
 msgid "Mark even pages"
-msgstr "Merk &like sider"
+msgstr "Merk partallsider"
 
 #: marklist.cpp:41
 #, fuzzy
 msgid "Mark odd pages"
-msgstr "Merk &ulike sider"
+msgstr "Merk oddetallsider"
 
 #: marklist.cpp:42
-#, fuzzy
 msgid "Toggle page marks"
-msgstr "&Toggle sidemerker"
+msgstr "Toggle sidemerker"
 
 #: marklist.cpp:43
-#, fuzzy
 msgid "Remove page marks"
-msgstr "&Fjern sidemerker"
+msgstr "Fjern sidemerker"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
-msgstr "Ghostscript melding"
+msgstr "Ghostscript-melding"
 
 #: messages.cpp:56
 msgid "&Clear"
-msgstr ""
+msgstr "&Rens"
 
 #: messages.cpp:59
 msgid "&Dismiss"
-msgstr ""
+msgstr "&Avvis"
 
 #: print.cpp:35
-#, fuzzy
 msgid "Printer setup"
-msgstr "Skriver navn"
+msgstr "Skrivernavn"
 
 #: print.cpp:65
-#, fuzzy
 msgid "&Printer name"
-msgstr "Skriver navn"
+msgstr "Skrivernavn"
 
 #: print.cpp:77
 msgid "&Spooler command"
-msgstr ""
+msgstr "&Spooler-kommando"
 
 #: print.cpp:89
 msgid "&Environment variable"
-msgstr ""
+msgstr "&Miljøvariabel"
 
 #: print.cpp:148
-#, fuzzy
 msgid "Print to file"
-msgstr "Skriver feil : lpr"
+msgstr "Skriv til fil"
 
 #: print.cpp:153
 msgid "Pages"
 msgstr "Sider"
 
 #: print.cpp:179
-#, fuzzy
 msgid "&All"
-msgstr "Alle"
+msgstr "&Alle"
 
 #: print.cpp:188
 msgid "&Current"
-msgstr ""
+msgstr "&Gjeldende"
 
 #: print.cpp:196
-#, fuzzy
 msgid "&Marked"
-msgstr "Merket"
+msgstr "&Merket"
 
 #: print.cpp:205
 msgid "&Range"
-msgstr ""
+msgstr "&Område"
 
 #: print.cpp:219
 msgid "to"
-msgstr ""
+msgstr "til"
 
 #: print.cpp:232
-#, fuzzy
 msgid "Print document in re&verse order"
 msgstr "Skriv ut dokument"
 
 #: print.cpp:249
-#, fuzzy
 msgid "&Setup ..."
-msgstr "&Epne ..."
+msgstr "&Åpne ..."
 
 #: print.cpp:289
 msgid "Range error"
-msgstr ""
+msgstr "Feil i tallområde"
 
 #: print.cpp:290
 msgid ""
@@ -777,110 +749,29 @@ msgid ""
 "range for this part of the document.\n"
 "Check the status bar for this information.\n"
 msgstr ""
+"Området for hvilke sider som skulle skrives ut\n"
+"kan ikke bli forstått.\n"
+"\n"
+"Området som gis må ligge innenfor sideområdet\n"
+"for denne delen av dokumentet.\n"
+"Sjekk statuslinjen for denne informasjonen.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "Forstxrrelse"
+msgstr "forstørrelse"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "Media"
+msgstr "&Media"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "Orientering"
+msgstr "&Orientering"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
-msgstr ""
+msgstr "&Bruk"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "Forstxrrelse"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Visnings kontroll ..."
-
-#, fuzzy
-#~ msgid "&Fit to page width"
-#~ msgstr "&Ge til side ..."
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Vise pe nytt"
-
-#~ msgid "Change view ..."
-#~ msgstr "Endre visning ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Sle antialiasing pe"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Sle antialiasing av"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Vis Ghostscript meldinger"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Skjul Ghostscript meldinger"
-
-#, fuzzy
-#~ msgid "Force changes to ..."
-#~ msgstr "Tving endringer for "
-
-#~ msgid "Title :"
-#~ msgstr "Tittel :"
-
-#~ msgid "Date :"
-#~ msgstr "Dato :"
-
-#~ msgid "&1."
-#~ msgstr "&1."
-
-#~ msgid "&2."
-#~ msgstr "&2."
-
-#~ msgid "&3."
-#~ msgstr "&3."
-
-#~ msgid "&4."
-#~ msgstr "&4."
-
-#~ msgid "&Shrink wrap"
-#~ msgstr "&Krympe "
-
-#~ msgid "Mark this page"
-#~ msgstr "Merk denne side"
-
-#~ msgid "Printer Name : "
-#~ msgstr "Skriver navn :"
-
-#~ msgid "No pages have been marked for printing."
-#~ msgstr "Ingen sider har blitt merket for utskrift"
-
-#~ msgid "&1. "
-#~ msgstr "&1. "
-
-#~ msgid "&2. "
-#~ msgstr "&2. "
-
-#~ msgid "&3. "
-#~ msgstr "&3. "
-
-#~ msgid "&4. "
-#~ msgstr "&4. "
-
-#~ msgid ""
-#~ "The file\n"
-#~ "\"%s\"\n"
-#~ "could not be found."
-#~ msgstr ""
-#~ "Filen\n"
-#~ "\"%s\"\n"
-#~ "finnes ikke."
-
-#~ msgid "Didn't recognise file\n"
-#~ msgstr "Gjentkjente ikke filen\n"
+msgstr "&Forstørrelse"

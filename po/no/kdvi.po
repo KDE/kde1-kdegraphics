@@ -39,7 +39,7 @@ msgid ""
 "The change in Metafont mode will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Endring av Metaskrifter modus vil være effektiv\n"
+"Endring av metaskriftmodus vil være effektiv\n"
 "først når du starter kdvi igjen!"
 
 #: dviwin.cpp:284
@@ -64,29 +64,25 @@ msgstr "HEI"
 
 #: dviwin.cpp:425 dviwin.cpp:459
 msgid "What's this? DVI problem!\n"
-msgstr "Hva er dette? DVI problem!\n"
+msgstr "Hva er dette? DVI-problem!\n"
 
 #: kdvi.cpp:92
 msgid "No document"
 msgstr "Intet dokument"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
-msgstr "Toggle menylinje"
+msgstr "Vis/skjul menylinje"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Merk alle"
+msgstr "Merk side"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
-msgstr "Tegne side på nytt"
+msgstr "Tegne på nytt"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
 msgstr "&Preferanser ..."
 
@@ -132,11 +128,11 @@ msgstr "&Neste"
 
 #: kdvi.cpp:204
 msgid "&First"
-msgstr "Første"
+msgstr "&Første"
 
 #: kdvi.cpp:205
 msgid "&Last"
-msgstr "Siste"
+msgstr "&Siste"
 
 #: kdvi.cpp:206
 msgid "&Go to ..."
@@ -144,7 +140,7 @@ msgstr "&Gå til ..."
 
 #: kdvi.cpp:209
 msgid "&Page"
-msgstr "Side"
+msgstr "&Side"
 
 #: kdvi.cpp:214
 msgid "&Preferences ..."
@@ -156,7 +152,7 @@ msgstr "&Taster ..."
 
 #: kdvi.cpp:217
 msgid "Make PK-&fonts"
-msgstr "Lag PK-skrifttyper"
+msgstr "Lag PK-skri&fttyper"
 
 #: kdvi.cpp:219
 msgid "Show PS"
@@ -180,11 +176,11 @@ msgstr "Vis statuslinje"
 
 #: kdvi.cpp:229
 msgid "Show Scro&llbars"
-msgstr "Vis scrollinjer"
+msgstr "Vis rullefelt"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "DVI-viser"
 
 #: kdvi.cpp:240
 msgid ""
@@ -192,6 +188,9 @@ msgid ""
 "\n"
 "by Markku Hihnala"
 msgstr ""
+"\n"
+"\n"
+"av Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
@@ -319,31 +318,31 @@ msgstr "Konfigurer taster"
 
 #: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
-msgstr "Toggle vise PS"
+msgstr "Vis/skjul PS"
 
 #: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
-msgstr "Toggle menylinje"
+msgstr "Vis/skjul menylinje"
 
 #: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
-msgstr "Toggle knappelinje"
+msgstr "Vis/skjul knappelinje"
 
 #: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
-msgstr "Toggle sideliste"
+msgstr "Vis/skjul sideliste"
 
 #: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
-msgstr "Toggle statuslinje"
+msgstr "Vis/skjul statuslinje"
 
 #: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Toggle scrollinjer"
+msgstr "Vis/skjul rullefelt"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
-msgstr "Fil åpen dialog er åpen"
+msgstr "Filåpningsdialog er åpen"
 
 #: kdvi.cpp:515
 msgid "Can't read file:\n"
@@ -435,11 +434,11 @@ msgstr "Statuslinje er vist"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Scrollinjer er vist"
+msgstr "Rullefelt er vist"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
-msgstr "Ingen scrollinjer"
+msgstr "Ingen rullefelt"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -483,7 +482,7 @@ msgstr "Merk ulike"
 
 #: marklist.cpp:43
 msgid "Toggle marks"
-msgstr "Toggle merker"
+msgstr "Snu om på merker"
 
 #: marklist.cpp:44
 msgid "Remove marks"
@@ -495,23 +494,23 @@ msgstr "Preferanser"
 
 #: prefs.cpp:214
 msgid "Menu Bar"
-msgstr "Meny linje"
+msgstr "Menylinje"
 
 #: prefs.cpp:215
 msgid "Button Bar"
-msgstr "Knappe linje"
+msgstr "Knapplinje"
 
 #: prefs.cpp:216
 msgid "Status Bar"
-msgstr "Status linje"
+msgstr "Statuslinje"
 
 #: prefs.cpp:217
 msgid "Page List"
-msgstr "Side liste"
+msgstr "Sideliste"
 
 #: prefs.cpp:218
 msgid "Scroll Bars"
-msgstr "Scroll linjer"
+msgstr "Rullefelt"
 
 #: prefs.cpp:240
 msgid "Number of recent files"
@@ -531,19 +530,19 @@ msgstr "Oppløsning"
 
 #: prefs.cpp:283
 msgid "Metafont mode"
-msgstr "Metaskrifttype modus"
+msgstr "Metaskrifttypemodus"
 
 #: prefs.cpp:292
 msgid "PK Font Path"
-msgstr "PK skrifttype sit"
+msgstr "PK-skrifttypesti"
 
 #: prefs.cpp:301
 msgid "Shrink factor for small text"
-msgstr "Krymp faktoren for liten tekst"
+msgstr "Krympefaktoren for liten tekst"
 
 #: prefs.cpp:306
 msgid "Shrink factor for large text"
-msgstr "Krymp faktoren for stor tekst"
+msgstr "Krympefaktoren for stor tekst"
 
 #: prefs.cpp:319
 msgid "Fonts"
@@ -551,11 +550,11 @@ msgstr "Skrifttyper"
 
 #: prefs.cpp:326
 msgid "Show postscript specials"
-msgstr "Vis postcript spesialer"
+msgstr "Vis postscript-spesialer"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
-msgstr "Antialiased postsript"
+msgstr "Antialiased postscript"
 
 #: prefs.cpp:345
 msgid "Gamma"
@@ -595,11 +594,11 @@ msgstr "Ugyldig side område!"
 
 #: print.cpp:320 printSetup.cpp:74
 msgid "Default Printer"
-msgstr "Standard skriver"
+msgstr "Standardskriver"
 
 #: printData.cpp:32
 msgid "&File Name:"
-msgstr "&Fil navn:"
+msgstr "&Filnavn:"
 
 #: printData.cpp:59
 msgid "&All"
@@ -659,7 +658,7 @@ msgstr "Skriv til"
 
 #: printSetup.cpp:24
 msgid "Print Setup"
-msgstr "Skriver oppsett"
+msgstr "Skriveroppsett"
 
 #: printSetupData.cpp:43
 msgid "Printers"
@@ -687,7 +686,7 @@ msgstr "&Fjern"
 
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
-msgstr "&Spooler kommando:"
+msgstr "&Spooler-kommando:"
 
 #: printSetupData.cpp:128
 msgid "n-up"
@@ -695,20 +694,4 @@ msgstr "n-opp"
 
 #: printSetupData.cpp:137
 msgid "Printing method"
-msgstr "Utskrifts metode"
-
-#~ msgid "&Contents"
-#~ msgstr "&Innhold"
-
-#~ msgid "About &Qt"
-#~ msgstr "Om &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Om Kdvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdiv - TeX DVI viser\n"
-#~ "Versjon "
+msgstr "Utskriftsmetode"

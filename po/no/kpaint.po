@@ -32,42 +32,39 @@ msgstr " [url | filnavn]\n"
 
 #: areaselect.cpp:17
 msgid "Area Selection"
-msgstr "Område valg"
+msgstr "Områdevalg"
 
 #: canvassize.cpp:16
 msgid "Canvas Size"
-msgstr "Lærrets størrelse"
+msgstr "Lærretstørrelse"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Bredde"
+msgstr "Bredde:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Høyde"
+msgstr "Høyde:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
 msgstr "Sirkel"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Billed bredde:"
+msgstr "Billeddybde:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Bitmappe)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 farger)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (sannhetsfarger)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -75,23 +72,23 @@ msgstr "Ellipse"
 
 #: formatdialog.cpp:21
 msgid "File Format:"
-msgstr "Fil format:"
+msgstr "Filformat:"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
-msgstr "Farge dybde:"
+msgstr "Fargedybde:"
 
 #: infodialog.cpp:39
 msgid "Colours Used:"
-msgstr "Farger brukt:"
+msgstr "Brukte farger:"
 
 #: infodialog.cpp:66
 msgid "Image Width:"
-msgstr "Billed bredde:"
+msgstr "Billedbredde:"
 
 #: infodialog.cpp:82
 msgid "Image Height:"
-msgstr "Billed høyde:"
+msgstr "Billedhøyde:"
 
 #: kpaint.cpp:52 kpaint.cpp:603
 msgid "untitled.gif"
@@ -105,6 +102,7 @@ msgstr "Ikke lagrede endringer"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Du har ulagrede endringer, du vil miste dem hvis du lukker dette vindu nå."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -135,9 +133,8 @@ msgid "New Image..."
 msgstr "Nytt bilde..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Lagre bilde..."
+msgstr "Lagre bilde"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
@@ -145,7 +142,7 @@ msgstr "Lagre bilde som..."
 
 #: kpaint.cpp:316
 msgid "Image Format..."
-msgstr "Billed format..."
+msgstr "Billedformat..."
 
 #: kpaint.cpp:318
 msgid "Open from URL..."
@@ -173,7 +170,7 @@ msgstr "Kopier region"
 
 #: kpaint.cpp:328
 msgid "Cut Region"
-msgstr "Fjerne region"
+msgstr "Klipp region"
 
 #: kpaint.cpp:329
 msgid "Paste Region"
@@ -193,19 +190,19 @@ msgstr "Informasjon..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Endre størrelse..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
-msgstr "Rediger palett"
+msgstr "Rediger palett..."
 
 #: kpaint.cpp:340
 msgid "Change Colour Depth..."
-msgstr "Endre farge dybde..."
+msgstr "Endre fargedybde..."
 
 #: kpaint.cpp:343
 msgid "Tool Properties..."
-msgstr "Verktøy egenskaper..."
+msgstr "Verktøyegenskaper..."
 
 #: kpaint.cpp:345 pen.cpp:17
 msgid "Pen"
@@ -221,25 +218,23 @@ msgstr "Rektangel"
 
 #: kpaint.cpp:350 spraycan.cpp:19
 msgid "Spray Can"
-msgstr "Spray kanne"
+msgstr "Spraykanne"
 
 #: kpaint.cpp:351
 msgid "Area Select"
-msgstr "Område valg"
+msgstr "Områdevalg"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
 msgstr ""
 
 #: kpaint.cpp:357
-#, fuzzy
 msgid "Show Tools Toolbar"
 msgstr "Vis verktøylinje"
 
 #: kpaint.cpp:358
-#, fuzzy
 msgid "Show Commands Toolbar"
-msgstr "Vis verktøylinje"
+msgstr "Vis kommandoenes verktøylinje"
 
 #: kpaint.cpp:359
 msgid "Show Status Bar"
@@ -251,7 +246,7 @@ msgstr "Lagre valg"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -259,6 +254,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -289,7 +287,6 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Ukjent format"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
@@ -308,7 +305,7 @@ msgstr "Lagre til plassering:"
 
 #: manager.cpp:69
 msgid "Tool Properties"
-msgstr "Verktøy egenskaper"
+msgstr "Verktøyegenskaper"
 
 #: palette.cpp:100
 msgid "Edit Colour"
@@ -316,7 +313,7 @@ msgstr "Rediger farge"
 
 #: properties.cpp:21
 msgid "Line Properties"
-msgstr "Linje egenskaper"
+msgstr "Linjeegenskaper"
 
 #: properties.cpp:23
 msgid "Fill Properties"
@@ -356,7 +353,7 @@ msgstr "Diagonale linjer \\"
 
 #: properties.cpp:83 properties.cpp:137
 msgid "Diagonal Grid"
-msgstr "Diagonal grid"
+msgstr "Diagonalt gitter"
 
 #: properties.cpp:93
 msgid "Custom"
@@ -364,15 +361,15 @@ msgstr "Tilpass"
 
 #: properties.cpp:96 properties.cpp:149
 msgid "Pattern Filename:"
-msgstr "Mønster filnavn:"
+msgstr "Mønsterfilnavn:"
 
 #: properties.cpp:106
 msgid "Set Fill Colour..."
-msgstr "Sett fyll-inn farge..."
+msgstr "Sett fyllinnfarge..."
 
 #: properties.cpp:283 properties.cpp:344
 msgid "Line Style:"
-msgstr "Linje stil:"
+msgstr "Linjestil:"
 
 #: properties.cpp:289 properties.cpp:349
 msgid "Dashed"
@@ -384,7 +381,7 @@ msgstr "Prikket"
 
 #: properties.cpp:291 properties.cpp:351
 msgid "Dash Dot"
-msgstr "Strek prikk"
+msgstr "Strekprikk"
 
 #: properties.cpp:292 properties.cpp:352
 msgid "Dash Dot Dot"
@@ -392,7 +389,7 @@ msgstr "Strek prikk prikk"
 
 #: properties.cpp:297 properties.cpp:356
 msgid "Line Width:"
-msgstr "Linje bredde"
+msgstr "Linjebredde"
 
 #: properties.cpp:307 properties.cpp:366
 msgid "End style:"
@@ -408,54 +405,8 @@ msgstr "Kople sammen stil:"
 
 #: properties.cpp:331
 msgid "Set Line Colour..."
-msgstr "Sett linje farge..."
+msgstr "Sett linjefarge..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid "Dismiss"
-#~ msgstr "Avslutt"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Feil utformet URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Feil: Feil utformet URL\n"
-#~ "KPaint forstår ikke den angitte URL, sjekk at den er iorden."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint er allerede i  kontakt med en fil annet sted, du må\n"
-#~ "kansellere nåværende jobb eller vente på at den skal bli ferdig."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Kunne ikke finne KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Feil: KPaint kunne ikke finne en KFM i bruk eller starte en sjøl."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Nettverks belastning mislykkes"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Feil: Nettverks belastning mislykkes\n"
-#~ "Noe gikk galt :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Kunne ikke starte KFM"
-
-#~ msgid "Release Notes"
-#~ msgstr "Utgi notater"
-
-#~ msgid "About..."
-#~ msgstr "Om..."
