@@ -27,6 +27,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 #include <fcntl.h>
 #include "faxexpand.h"
 #include <qstring.h>
+#include <kapp.h>
 
 void statusbarupdate(char* name,int width,int height,char* res);
 extern "C" void kfaxerror(char* title,char* error);
@@ -107,7 +108,7 @@ notetiff(char *name)
 
     if ((tf = fopen(name, "r")) == NULL) {
         QString mesg;
-	mesg.sprintf("Unable to open:\n%s\n",name);
+	mesg.sprintf(i18n("Unable to open:\n%s\n"),name);
 	kfaxerror("Sorry",mesg.data());
 	return 0;
     }
