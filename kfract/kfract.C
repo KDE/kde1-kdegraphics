@@ -27,6 +27,7 @@
 #include <kmsgbox.h>
 
 #include "kfract.moc"
+#include "version.h"
 
 
 
@@ -87,11 +88,11 @@ void KFract::setupMenuBar()
   options->insertItem( "Colour cycling...", this, SIGNAL( colorCycling() ) );
   options->insertItem( "Zoom factor...", this, SIGNAL( zoomFactor() ) );
 
-  QPopupMenu *help = new QPopupMenu();
+  QPopupMenu *help = kapp->getHelpMenu(true, QString(i18n("Fractals Generator"))
+                                         + " " + KFRACT_VERSION
+                                         + i18n("\n\nby Uwe Thiem")
+                                         + " (uwe@uwix.alt.na)");  
   CHECK_PTR( help );
-  help->insertItem( "Help", this, SIGNAL( help() ) );
-  help->insertSeparator();
-  help->insertItem( "About...", this, SIGNAL( about() ) );
 
 
   m->insertItem( "&File", file );
@@ -106,7 +107,7 @@ void KFract::setupMenuBar()
   connect( this, SIGNAL( colorScheme() ), this, SLOT( colorSchemeFract() ) );
   connect( this, SIGNAL( colorCycling() ), this, SLOT( notImplemented() ) );
   connect( this, SIGNAL( zoomFactor() ), this, SLOT( zoomFract() ) );
-  connect( this, SIGNAL( about() ), this, SLOT( aboutFract() ) );
+//  connect( this, SIGNAL( about() ), this, SLOT( aboutFract() ) );
   connect( this, SIGNAL( help() ), this, SLOT( helpFract() ) );
   }
 
@@ -280,7 +281,7 @@ void KFract::notImplemented()
                     KMsgBox::INFORMATION, "OK" );
   }
 
-
+/*
 void KFract::aboutFract()
   {
   char tmp[1000];
@@ -292,7 +293,7 @@ void KFract::aboutFract()
   KMsgBox::message( w, "About KFract", tmp,
                     KMsgBox::INFORMATION, "OK" );
   }
-
+*/
 
 void KFract::helpFract()
   {

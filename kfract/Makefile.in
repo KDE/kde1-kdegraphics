@@ -77,7 +77,7 @@ install: all
 	$(INSTALL_DATA) ./index.html $(DOCSDIR)/kfract
 	$(INSTALL_DATA) ./kfract.gif $(DOCSDIR)/kfract
 	$(INSTALL_DIR) $(LNKDIR)
-	$(INSTALL_DATA) ./Fractal.kdelnk $(LNKDIR)
+	$(INSTALL_DATA) ./kfract.kdelnk $(LNKDIR)
 	$(INSTALL_DIR) $(ICONDIR)
 	$(INSTALL_DATA) ./kfract.xpm $(ICONDIR)
 	$(INSTALL_DIR) $(MINIDIR)
@@ -86,7 +86,7 @@ install: all
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	rm -rf $(DOCSDIR)/kfract
-	rm -f $(LNKDIR)/Fractal.kdelnk
+	rm -f $(LNKDIR)/kfract.kdelnk
 	rm -f $(ICONDIR)/kfract.xpm
 	rm -f $(MINIDIR)/kfract.xpm
 

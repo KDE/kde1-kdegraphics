@@ -26,7 +26,8 @@
 #ifndef KFRACT_H
 # define KFRACT_H
 
-#define KFRACT_VERSION "1.2"
+//#define KFRACT_VERSION "1.2"
+
 
 #include <qpainter.h>
 #include <kapp.h>
@@ -34,7 +35,7 @@
 
 #include "drawview.h"
 #include "kfractdlgs.h"
-
+#include "version.h"
 
 class KFract : public KApplication
   {
@@ -49,7 +50,7 @@ class KFract : public KApplication
     void colorScheme();
     void colorCycling();
     void zoomFactor();
-    void about();
+//    void about();
     void help();
   protected:
   private:
@@ -64,7 +65,7 @@ class KFract : public KApplication
     void loadParam();
     void saveParam();
     void savePic();
-    void aboutFract();
+//    void aboutFract();
     void helpFract();
     void mandelFract();
     void juliaFract();
