@@ -32,6 +32,7 @@ the spool command to "lp", the printer name to your desired printer
 
 TODO
 
+- Selection, copy bitmap, extract text, print selection as EPS file.
 - Improve PDF support
 - Finalise kdvi and kghostview standard
 - Generally clean code

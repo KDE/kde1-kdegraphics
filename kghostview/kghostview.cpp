@@ -83,9 +83,9 @@ KGhostview::KGhostview( QWidget *, char *name )
     
     kfm = 0L;
 	
-	//ga = new KGlobalAccel();
-	//ga->insertItem( "Wag the dog", "CTRL+SHIFT+W");
-	//ga->connectItem( "Wag the dog", this, SLOT( openNewFile() ) );
+	ga = new KGlobalAccel();
+	ga->insertItem( "Wag the dog", "CTRL+SHIFT+W");
+	ga->connectItem( "Wag the dog", this, SLOT( openNewFile() ) );
 	
 	isNetFile = false;
     
@@ -340,12 +340,19 @@ void KGhostview::bindKeys()
 
 	// create functionName/keyCode association
 	
-	keys->insertItem(i18n("Quit"), "CTRL+Q");
-	keys->insertItem(i18n("Open"), "CTRL+O");
-	keys->insertItem(i18n("New"), "CTRL+N");
-	keys->insertItem(i18n("Close"), "CTRL+W");
-	keys->insertItem(i18n("Print"), "CTRL+P");
-	keys->insertItem(i18n("Help"), "F1");
+	//keys->insertItem(i18n("Quit"), "CTRL+Q");
+	keys->insertStdItem( KAccel::Quit );
+	keys->insertStdItem( KAccel::Open );
+	keys->insertStdItem( KAccel::New );
+	keys->insertStdItem( KAccel::Close );
+	keys->insertStdItem( KAccel::Print );
+	keys->insertStdItem( KAccel::Help );
+	
+	//keys->insertItem(i18n("Open"), "CTRL+O");
+	//keys->insertItem(i18n("New"), "CTRL+N");
+	//keys->insertItem(i18n("Close"), "CTRL+W");
+	//keys->insertItem(i18n("Print"), "CTRL+P");
+	//keys->insertItem(i18n("Help"), "F1");
 	keys->insertItem(i18n("View Control"), "CTRL+L");
 	keys->insertItem(i18n("Go To Page"), "CTRL+G");
 	keys->insertItem(i18n("Zoom In"), "Plus");     
@@ -361,12 +368,12 @@ void KGhostview::bindKeys()
 	
 	//keys->readSettings();
 	
-	keys->connectItem( i18n("Quit"), qApp, SLOT( quit() ) );
-	keys->connectItem( i18n("Open"), this, SLOT( openNewFile() ) );
-	keys->connectItem( i18n("New"),	this, SLOT( newWindow() ) );
-	keys->connectItem( i18n("Close"), this, SLOT( closeWindow() ) );
-	keys->connectItem( i18n("Print"), this, SLOT( print() ) );
-	keys->connectItem( i18n("Help"), this, SLOT( help() ) );
+	keys->connectItem( keys->stdAction( KAccel::Quit ), qApp, SLOT( quit() ) );
+	keys->connectItem( keys->stdAction( KAccel::Open ), this, SLOT( openNewFile() ) );
+	keys->connectItem( keys->stdAction( KAccel::New ),	this, SLOT( newWindow() ) );
+	keys->connectItem( keys->stdAction( KAccel::Close ), this, SLOT( closeWindow() ) );
+	keys->connectItem( keys->stdAction( KAccel::Print ), this, SLOT( print() ) );
+	keys->connectItem( keys->stdAction( KAccel::Help ), this, SLOT( help() ) );
 	keys->connectItem( i18n("View Control"), this, SLOT( viewControl() ) );
 	keys->connectItem( i18n("Go To Page"), this, SLOT( goToPage() ) );
 	keys->connectItem( i18n("Zoom In"), this, SLOT( zoomIn() ) );
@@ -422,7 +429,7 @@ void KGhostview::configureGhostscript()
 void KGhostview::configureKeybindings()
 {
 	//keys->configureKeys( this );
-	if( KKeyDialog::configureKeys( keys ) ) {
+	if( KKeyDialog::configureKeys( ga ) ) {
 		updateMenuAccel();
 	}
 }
@@ -492,6 +499,8 @@ void KGhostview::createMenubar()
 	closeID =
     m_file->insertItem( i18n("&Close"), this, SLOT( closeWindow() ) );
     m_file->insertSeparator();
+	pgsetupID =
+	m_file->insertItem( i18n("Page Set&up ..."), this, SLOT( viewControl() ) );
 	printID =
     m_file->insertItem( i18n("&Print ..."), this, SLOT( print() ) );
     m_file->insertSeparator();
@@ -505,10 +514,10 @@ void KGhostview::createMenubar()
 	zoomOutID =
 	m_view->insertItem( i18n("Zoom &out"), this, SLOT( zoomOut() ) );
 	viewControlID =
-	m_view->insertItem( i18n("&View control ..."), this, SLOT( viewControl() ) );
+	m_view->insertItem( i18n("&Zoom ..."), this, SLOT( viewControl() ) );
 	m_view->insertSeparator();
-	shrinkWrapID = 
-	m_view->insertItem( i18n("&Fit to page width"), this, SLOT( shrinkWrap() ) );
+	//shrinkWrapID = 
+	//m_view->insertItem( i18n("&Fit to page width"), this, SLOT( shrinkWrap() ) );
 	redisplayID =
 	m_view->insertItem( i18n("&Redisplay"), this, SLOT( redisplay() ) );
 	infoID =
@@ -1045,9 +1054,7 @@ void KGhostview::writeSettings()
 {
 	//printf("KGhostview::writeSettings\n");
 	
-	changed = TRUE;
-	if ( !changed )
-		return;
+	keys->writeSettings();
 
 	KConfig *config = KApplication::getKApplication()->getConfig();
 	

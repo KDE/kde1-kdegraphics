@@ -178,6 +178,7 @@ void KKeyButton::paint( QPainter *painter )
 	painter->drawRoundRect( 0, 0, width(), height(), 20, 20 );
 
 	painter->setClipping( FALSE );
+	if( width() > 12 && height() > 8 )
 	qDrawShadePanel( painter, 6, 4, width() - 12, height() - 8, 
 								colorGroup(), TRUE, 1, 0L );
 	if ( editing ) {
@@ -187,6 +188,7 @@ void KKeyButton::paint( QPainter *painter )
 		painter->setPen( backgroundColor() );
 		painter->setBrush( backgroundColor() );
 	}
+	if( width() > 14 && height() > 10 )
 	painter->drawRect( 7, 5, width() - 14, height() - 10 ); 
 
 	drawButtonLabel( painter );
@@ -194,6 +196,7 @@ void KKeyButton::paint( QPainter *painter )
 	painter->setPen( colorGroup().text() );
 	painter->setBrush( NoBrush );
 	if( hasFocus() || editing ) {
+		if( width() > 16 && height() > 12 )
 		painter->drawRect( 8, 6, width() - 16, height() - 12 );
 	}	
 }
@@ -228,8 +231,8 @@ KKeyDialog::KKeyDialog( QDict<KKeyEntry> *aKeyDict, QWidget *parent )
 	bHelp->setEnabled( false );
 	
 	bDefaults = bbox->addButton( i18n("&Defaults") );
-	//connect( bDefaults, SIGNAL(clicked()), SLOT(defaults()) );
-	bDefaults->setEnabled( false );
+	connect( bDefaults, SIGNAL(clicked()), kc, SLOT(allDefault()) );
+	//bDefaults->setEnabled( false );
 	
 	bbox->addStretch( 10 );
 		
@@ -272,6 +275,7 @@ int KKeyDialog::configureKeys( KGlobalAccel *keys )
     delete kd;
 
 	if( retcode ) {
+		keys->setKeyDict( dict );
 	}
     return retcode;
 }
@@ -564,7 +568,21 @@ void KKeyChooser::toChange( int index )
 		
 	((QRadioButton *)kbGroup->find(NoKey))->setChecked( kbMode == NoKey );
 	((QRadioButton *)kbGroup->find(DefaultKey))->setChecked( kbMode == DefaultKey );
-	((QRadioButton *)kbGroup->find(CustomKey))->setChecked( kbMode == CustomKey );	
+	((QRadioButton *)kbGroup->find(CustomKey))->setChecked( kbMode == CustomKey );
+	
+	if ( !pEntry->bConfigurable ) {
+		cAlt->setEnabled( false );
+		cShift->setEnabled( false );
+		cCtrl->setEnabled( false );
+		bChange->setEnabled( false );
+		((QRadioButton *)kbGroup->find(NoKey))->setEnabled( false );
+		((QRadioButton *)kbGroup->find(DefaultKey))->setEnabled( false );
+		((QRadioButton *)kbGroup->find(CustomKey))->setEnabled( false );
+	} else {
+		((QRadioButton *)kbGroup->find(NoKey))->setEnabled( true );
+		((QRadioButton *)kbGroup->find(DefaultKey))->setEnabled( true );
+		((QRadioButton *)kbGroup->find(CustomKey))->setEnabled( true );
+	}	
 }
 
 void KKeyChooser::fontChange( const QFont & )
@@ -641,35 +659,37 @@ void KKeyChooser::defaultKey()
 void KKeyChooser::allDefault()
 {
 	// Change all configKeyCodes to default values
-	
-	// NB. There is a bug with this method. If an item in the list
-	// is selected then only this item is found in the dictionary
-	//
+
+	disconnect( wList, SIGNAL( highlighted( int ) ),
+		this, SLOT( updateAction( int ) ) );
+	wList->setAutoUpdate(FALSE);
+	wList->clear();
 	
 	aIt->toFirst();
-	wList->clear();
 	while ( aIt->current() ) {
-		aIt->current()->aConfigKeyCode = aIt->current()->aDefaultKeyCode;
+		if ( aIt->current()->bConfigurable )
+			aIt->current()->aConfigKeyCode = aIt->current()->aDefaultKeyCode;
 		
 		KSplitListItem *sli = new KSplitListItem(
 		 	item(aIt->current()->aConfigKeyCode, aIt->currentKey())
 		);
-		
-		debug("%s", sli->text());
-		
+
 		connect( wList, SIGNAL( newWidth( int ) ),
 				 sli, SLOT( setWidth( int ) ) );
 				 
-					
 		sli->setWidth( wList->width() );
 		
 		wList->insertItem( sli );
 		
 		++(*aIt);
 	}
+	
+	wList->setAutoUpdate( true );
+	wList->update();
+	connect( wList, SIGNAL( highlighted( int ) ), SLOT( updateAction( int ) ) );
 }
 
-#define MAX_FCTN_LENGTH 30
+#define MAX_FCTN_LENGTH 15
 
 const QString KKeyChooser::item( uint keyCode, const QString& entryKey )
 {
@@ -848,24 +868,20 @@ bool KKeyChooser::isKeyPresent()
 	   elsewhere */
 	aIt->toFirst();
 	while ( aIt->current() ) {
-		if ( aIt->current()!=pEntry
-				&& aIt->current()->aConfigKeyCode==pEntry->aConfigKeyCode ) {
-			QString str( item(pEntry->aConfigKeyCode, sEntryKey) );
-			int i = str.find( ":" );
+		if ( aIt->current() != pEntry
+				&& aIt->current()->aConfigKeyCode == pEntry->aConfigKeyCode ) {
+			QString actionName( aIt->currentKey() );
+			actionName.stripWhiteSpace();
 
-			QString actionName = str.left( i );
-			actionName.simplifyWhiteSpace();
-
-			str.remove( 0, i+1 );
-
-			QString keyName = str.simplifyWhiteSpace();
+			QString keyName = keyToString( aIt->current()->aConfigKeyCode );
 			
+			QString str;
 			str.sprintf(
-				"The  %s  key combination has already been allocated\nto the  %s  action.\n\nPlease choose a unique key combination.",
+				"The %s key combination has already been allocated\nto the %s action.\n\nPlease choose a unique key combination.",
 				keyName.data(),
 				actionName.data() );
 				
-			QMessageBox::warning( this, "Warning", str.data() );
+			QMessageBox::warning( this, "Key conflict", str.data() );
 			
 			return TRUE;
 		}

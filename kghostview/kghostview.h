@@ -69,7 +69,7 @@ public:
     
 	KAccel *keys;
 	
-	//KGlobalAccel *ga;
+	KGlobalAccel *ga;
 	
 	enum action { GET, PUT };
 	void openNetFile( const char *_url );
@@ -205,6 +205,7 @@ private:
 	int topOffset, bottomOffset;
 	
 	int viewControlID;
+	int pgsetupID;
 	int printID;
 	int openID;
 	int newID;

@@ -6,21 +6,21 @@ INCLUDES= $(all_includes)
 
 
 bin_PROGRAMS = 	kcmkeys
-kcmkeys_SOURCES = main.cpp kcmkeys.cpp display.cpp \
+kcmkeys_SOURCES = main.cpp standard.cpp global.cpp \
  kaccel.cpp kkeydialog.cpp kckey.c kglobalaccel.cpp
-noinst_HEADERS =  kcmkeys.h \
+noinst_HEADERS =  standard.h \
 kaccel.h \
-kkeydialog.h kckey.h kglobalaccel.h display.h 
+kkeydialog.h kckey.h kglobalaccel.h global.h 
 kcmkeys_LDADD = $(all_libraries) -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
 kcmkeys_LDFLAGS = $(LDFLAGS) $(KDE_RPATH)
 
-BUILTSOURCES = kcmkeys.moc \
-kaccel.moc kkeydialog.moc kglobalaccel.moc display.moc 
-DISTCLEANFILES = kcmkeys.moc kaccel.moc kkeydialog.moc kglobalaccel.moc
+BUILTSOURCES = standard.moc \
+kaccel.moc kkeydialog.moc kglobalaccel.moc global.moc 
+DISTCLEANFILES = standard.moc kaccel.moc kkeydialog.moc kglobalaccel.moc
 
-display.cpp:display.moc
-display.moc: display.h
-	$(MOC) display.h -o display.moc
+global.cpp:global.moc
+global.moc: global.h
+	$(MOC) global.h -o global.moc
 
 kglobalaccel.cpp:kglobalaccel.moc
 kglobalaccel.moc: kglobalaccel.h
@@ -34,9 +34,9 @@ kaccel.cpp:kaccel.moc
 kaccel.moc: kaccel.h
 	$(MOC) kaccel.h -o kaccel.moc
 	
-kcmkeys.cpp:kcmkeys.moc
-kcmkeys.moc: kcmkeys.h
-	$(MOC) kcmkeys.h -o kcmkeys.moc
+standard.cpp:standard.moc
+standard.moc: standard.h
+	$(MOC) standard.h -o standard.moc
 
 
 install-data-local: 

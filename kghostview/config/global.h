@@ -4,8 +4,8 @@
 // Copyright (c)  Mark Donohoe 1998
 //
 
-#ifndef __SHORTCUTS_H__
-#define __SHORTCUTS_H__
+#ifndef __GLOBAL_H__
+#define __GLOBAL_H__
 
 #include <qwidget.h>
 #include <qpushbt.h>
@@ -16,12 +16,11 @@
 #include <qbttngrp.h>
 #include <kcontrol.h>
 
-#include "display.h"
 
 #include "kaccel.h"
 #include "kkeydialog.h"
 
-class KShortcuts : public KDisplayModule
+class KGlobalConfig : public KConfigWidget
 {
 	Q_OBJECT
 public:
@@ -31,9 +30,9 @@ public:
 	enum { Portrait = 1, Landscape };
 	enum { Gradient = 1, Pattern };
 
-	KShortcuts( QWidget *parent, int mode, int desktop = 0 );
+	KGlobalConfig( QWidget *parent, const char *name = 0 );
 
-	virtual void readSettings( int deskNum = 0 );
+	virtual void readSettings( );
 	virtual void apply( bool force = FALSE );
 
         virtual void loadSettings();
@@ -58,7 +57,7 @@ protected:
 	void getDeskNameList();
 	void setDesktop( int );
 	void showSettings();
-	void writeSettings( int deskNum = 0 );
+	void writeSettings( );
 	void setMonitor();
 	int  loadWallpaper( const char *filename, bool useContext = TRUE );
 	void retainResources();

@@ -38,35 +38,17 @@
 #include "kaccel.h"
 
 
-#include "kcmkeys.h"
-#include "kcmkeys.moc"
+#include "global.h"
+#include "global.moc"
 
 
 //----------------------------------------------------------------------------
 
-KShortcuts::KShortcuts( QWidget *parent, int mode, int desktop )
-	: KDisplayModule( parent, mode, desktop )
+KGlobalConfig::KGlobalConfig( QWidget *parent, const char *name )
+	: KConfigWidget( parent, name )
 {
 	dict.setAutoDelete( false );
 	keys = new KAccel( this );
-	
-	keys->insertItem(i18n("Quit"), "CTRL+Q");
-	keys->insertItem(i18n("Open"), "CTRL+O");
-	keys->insertItem(i18n("New"), "CTRL+N");
-	keys->insertItem(i18n("Close"), "CTRL+W");
-	keys->insertItem(i18n("Print"), "CTRL+P");
-	keys->insertItem(i18n("Help"), "F1");
-	keys->insertItem(i18n("Next"), "Next");
-	keys->insertItem(i18n("Prior"), "Prior");
-	keys->insertItem(i18n("Cut"), "CTRL+X");
-	keys->insertItem(i18n("Copy"), "CTRL+C");
-	keys->insertItem(i18n("Paste"), "CTRL+V");
-	keys->insertItem(i18n("Undo"), "CTRL+Z");
-	keys->insertItem(i18n("Find"), "CTRL+F");
-	keys->insertItem(i18n("Replace"), "CTRL+R");
-	keys->insertItem(i18n("Insert"), "CTRL+Insert");
-	keys->insertItem(i18n("Home"), "CTRL+Home");
-	keys->insertItem(i18n("End"), "CTRL+End");
 	
 	keys->insertItem(i18n("Switch to next window"), "ALT+Tab");
 	keys->insertItem(i18n("Switch to previous window"), "SHIFT+ALT+Tab");
@@ -94,7 +76,8 @@ KShortcuts::KShortcuts( QWidget *parent, int mode, int desktop )
 	
 	debug("inserted keys");
 	
-	keys->setConfig( "Keys", true );
+	keys->setConfigGlobal( true );
+	keys->setConfigGroup( "Global Keys" );
 	keys->readSettings();
 	
 	debug("read settings");
@@ -135,52 +118,52 @@ KShortcuts::KShortcuts( QWidget *parent, int mode, int desktop )
 	//keys->setKeyDict( dave );
 }
 
-void KShortcuts::resizeEvent( QResizeEvent * )
+void KGlobalConfig::resizeEvent( QResizeEvent * )
 {
  
 }
 
-void KShortcuts::readSettings( int num )
+void KGlobalConfig::readSettings( )
 {
   
 }
 
-void KShortcuts::writeSettings( int num )
+void KGlobalConfig::writeSettings(  )
 {
 	debug("Writing key settings");
 	keys->writeSettings();
 }
 
-void KShortcuts::getDeskNameList()
+void KGlobalConfig::getDeskNameList()
 {
    
 }
 
-void KShortcuts::setDesktop( int desk )
+void KGlobalConfig::setDesktop( int desk )
 {
    
 }
 
-void KShortcuts::showSettings()
+void KGlobalConfig::showSettings()
 { 
    
 }
 
-void KShortcuts::slotApply()
+void KGlobalConfig::slotApply()
 {
 	writeSettings();
 }
 
-void KShortcuts::apply( bool force )
+void KGlobalConfig::apply( bool force )
 {
 	
 }
 
-void KShortcuts::retainResources() {
+void KGlobalConfig::retainResources() {
 	
 }
 
-void KShortcuts::setMonitor()
+void KGlobalConfig::setMonitor()
 {
    
     
@@ -191,72 +174,72 @@ void KShortcuts::setMonitor()
 // Note that centred pixmaps are placed on a full screen image of background
 // color1, so if you want to save memory use a small tiled pixmap.
 //
-int KShortcuts::loadWallpaper( const char *name, bool useContext )
+int KGlobalConfig::loadWallpaper( const char *name, bool useContext )
 {
 	
 }
 
-void KShortcuts::slotSelectColor1( const QColor &col )
+void KGlobalConfig::slotSelectColor1( const QColor &col )
 {
 	
 }
 
-void KShortcuts::slotSelectColor2( const QColor &col )
+void KGlobalConfig::slotSelectColor2( const QColor &col )
 {
 
 }
 
-void KShortcuts::slotBrowse()
-{
-	
-}
-
-void KShortcuts::slotWallpaper( const char *filename )
-{
-   
-}
-
-void KShortcuts::slotWallpaperMode( int m )
-{
-
-}
-
-void KShortcuts::slotColorMode( int m )
+void KGlobalConfig::slotBrowse()
 {
 	
 }
 
-void KShortcuts::slotSetup2Color()
+void KGlobalConfig::slotWallpaper( const char *filename )
 {
    
 }
 
-void KShortcuts::slotStyleMode( int m )
+void KGlobalConfig::slotWallpaperMode( int m )
+{
+
+}
+
+void KGlobalConfig::slotColorMode( int m )
+{
+	
+}
+
+void KGlobalConfig::slotSetup2Color()
 {
    
 }
 
-void KShortcuts::slotSwitchDesk( int num )
+void KGlobalConfig::slotStyleMode( int m )
 {
    
 }
 
-void KShortcuts::slotRenameDesk()
+void KGlobalConfig::slotSwitchDesk( int num )
 {
    
 }
 
-void KShortcuts::slotHelp()
-{
-
-}
-
-void KShortcuts::loadSettings()
+void KGlobalConfig::slotRenameDesk()
 {
    
 }
 
-void KShortcuts::applySettings()
+void KGlobalConfig::slotHelp()
+{
+
+}
+
+void KGlobalConfig::loadSettings()
+{
+   
+}
+
+void KGlobalConfig::applySettings()
 {
 	debug("apply settings");
 	debug("No. of items in dict %d", dict.count() );

@@ -215,6 +215,12 @@ class KGlobalAccel : public QObject
 	 */
     void removeItem( const char * action );  
 	
+	void setConfigGroup( const char *group );
+	void setConfigGlobal( bool global );
+	
+	const char * configGroup();
+	bool configGlobal();
+	
 	/** 
 	 * Enables the accelerator if activate is TRUE, or disables it if
 	 * activate is FALSE..
@@ -272,6 +278,8 @@ protected:
 	int aAvailableId;
 	QDict<KKeyEntry> aKeyDict;
 	bool bEnabled;
+	bool bGlobal;
+	QString aGroup;
 
  protected:
 };

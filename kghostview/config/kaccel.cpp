@@ -54,11 +54,11 @@ void KAccel::connectItem( const char * action,
 							bool activate )
 {
     KKeyEntry *pEntry = aKeyDict[ action ];
+
 	if ( !pEntry ) {
 		QString str;
-		str.sprintf(
-			"KAccel : Cannot connect action %s"\
-			"which is not in the object dictionary", action );
+		str.sprintf( "KAccel : Cannot connect action %s ", action );
+		str.append( "which is not in the object dictionary" );
 		warning(str);
 		return;
 	}
@@ -160,7 +160,7 @@ bool KAccel::insertItem( const char * action,
 	return insertItem( action, iKeyCode, configurable );
 }
 
-const char * KAccel::insertStdItem( int id )
+const char * KAccel::insertStdItem( StdAccel id )
 {
 	QString action, key;
 	switch( id ) {
@@ -400,7 +400,7 @@ bool KAccel::setKeyDict( QDict<KKeyEntry> nKeyDict )
 	return true;
 }
 
-const char * KAccel::stdAction( int id ) {
+const char * KAccel::stdAction( StdAccel id ) {
 	QString action;
 	switch( id ) {
 		case Open:
@@ -464,10 +464,24 @@ const char * KAccel::stdAction( int id ) {
 	return action.data();
 }
 
-void KAccel::setConfig( const char *group, bool global )
+void KAccel::setConfigGroup( const char *group )
 {
 	aGroup.sprintf( group );
+}
+
+void KAccel::setConfigGlobal( bool global )
+{
 	bGlobal = global;
+}
+
+const char *KAccel::configGroup()
+{
+	return aGroup.data();
+}
+
+bool KAccel::configGlobal()
+{
+	return bGlobal;
 }
 
 void KAccel::writeSettings()
@@ -483,12 +497,13 @@ void KAccel::writeSettings()
 				pConfig->writeEntry( aKeyIt.currentKey(),
 					keyToString( aKeyIt.current()->aCurrentKeyCode ),
 					true, true );
-			else
+			 else
 				pConfig->writeEntry( aKeyIt.currentKey(),
 					keyToString( aKeyIt.current()->aCurrentKeyCode ) );
 		}
 		++aKeyIt;
 	}
+	pConfig->sync();
 }
 
 /*****************************************************************************/

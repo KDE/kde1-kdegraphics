@@ -59,7 +59,7 @@ protected:
 public slots:
 	void setWidth( int newWidth );
 	
-private:
+protected:
 	int halfWidth;
 	QString keyName;
 	QString actionName;
@@ -86,7 +86,7 @@ protected:
 	void paletteChange ( const QPalette & oldPalette );
 	void styleChange ( GUIStyle );
 
-private:
+protected:
 	QColor selectColor;
 	QColor selectTextColor;
 };
@@ -112,9 +112,13 @@ protected:
 };
 
 /**
-* A dialog for configuration of function/accelerator assignments.
-* @short A widget for configuration of function/accelerator assignments.
-*/
+ * The KKeyDialog class is used for configuring dictionaries of key/action
+ * associations for KAccel and KGlobalAccel. It uses the KKeyChooser widget and
+ * offers buttons to set all keys to defaults and invoke on-line help. 
+ *
+ * Two static methods are supplied which provide the most convienient interface
+ * to the dialog.
+ */
 class KKeyDialog : public QDialog
 {
 	Q_OBJECT
@@ -131,9 +135,13 @@ private:
 };
 
 /**
-* A widget for configuration of function/accelerator assignments.
-* @short A widget for configuration of function/accelerator assignments.
-*/
+ * The KKeyChooser widget is used for configuring dictionaries of key/action
+ * associations for KAccel and KGlobalAccel.
+ *
+ * The class takes care of all aspects of configuration, including handling key
+ * conflicts internally. Connect to the allDefault slot if you want to set all
+ * configurable keybindings to their default values.
+ */
 class KKeyChooser : public QWidget
 {
 	Q_OBJECT
@@ -144,9 +152,11 @@ public:
 	KKeyChooser( QDict<KKeyEntry> *aKeyDict, QWidget *parent = 0 );
 	~KKeyChooser();
 
-private slots:
-	void toChange(int index);
+public slots:
 	void allDefault();
+
+protected slots:
+	void toChange(int index);
 	void changeKey();
 	void updateAction(int index);
 	void defaultKey();
@@ -162,7 +172,7 @@ protected:
 	void keyPressEvent( QKeyEvent *e );
 	void fontChange( const QFont & ); 
 
-private:
+protected:
 	QDictIterator<KKeyEntry> *aIt;
 	QDictIterator<KKeyEntry> *aKeyIt;
 	KKeyEntry *pEntry;

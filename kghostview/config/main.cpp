@@ -25,9 +25,8 @@
 #include <kslider.h>
 
 #include <kcontrol.h>
-#include "kcmkeys.h"
-
-#include "display.h"
+#include "standard.h"
+#include "global.h"
 
 
 class KDisplayApplication : public KControlApplication
@@ -41,28 +40,33 @@ public:
 
 private:
 
-  KShortcuts *background;
+  KStdConfig *standard;
+  KGlobalConfig *global;
 };
 
 
 KDisplayApplication::KDisplayApplication(int &argc, char **argv, const char *name)
   : KControlApplication(argc, argv, name)
 {
-  background = 0;
+  standard = 0;
+  global = 0;
 
   if (runGUI())
     {
     
-      if (!pages || pages->contains("background"))
-        addPage(background = new KShortcuts(dialog, KDisplayModule::Setup), 
-		klocale->translate("&Desktop shortcuts"), "kdisplay-3.html");
+      if (!pages || pages->contains("standard"))
+        addPage(standard = new KStdConfig(dialog), 
+		klocale->translate("&Standard shortcuts"), "kdisplay-3.html");
+	if (!pages || pages->contains("global"))
+        addPage(global = new KGlobalConfig(dialog), 
+		klocale->translate("&Global shortcuts"), "kdisplay-3.html");
      
       
-      if (background)
+      if (standard)
         dialog->show();
       else
         {
-          fprintf(stderr, klocale->translate("usage: kcmdisplay [-init | {background,screensaver,colors,style}]\n"));
+          fprintf(stderr, klocale->translate("usage: kcmdisplay [-init | {standard,screensaver,colors,style}]\n"));
           justInit = TRUE;
         }
       
@@ -73,8 +77,11 @@ KDisplayApplication::KDisplayApplication(int &argc, char **argv, const char *nam
 void KDisplayApplication::init()
 {
  
-  KShortcuts *background =  new KShortcuts(0, KDisplayModule::Init);
-  delete background;
+  KStdConfig *standard =  new KStdConfig(0);
+  delete standard;
+  
+  KGlobalConfig *global =  new KGlobalConfig(0);
+  delete global;
  
 }
 
@@ -82,19 +89,18 @@ void KDisplayApplication::init()
 void KDisplayApplication::apply()
 {
 
-  if (background)
-    background->applySettings();
+  if (standard)
+    standard->applySettings();
+if (global)
+    global->applySettings();
 
 }
 
 int main(int argc, char **argv)
 {
-  //QApplication::setColorSpec( QApplication::ManyColor );
-  // Please don't use this as it prevents users from choosing exactly the
-  // colors they want - Mark Donohoe
   
-  KDisplayApplication app(argc, argv, "kdisplay");
-  app.setTitle(klocale->translate("Input devices settings"));
+  KDisplayApplication app(argc, argv, "kcmkeys");
+  app.setTitle(klocale->translate("Key binding settings"));
   
   if (app.runGUI())
     return app.exec();

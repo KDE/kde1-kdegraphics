@@ -44,6 +44,8 @@ KGlobalAccel::KGlobalAccel()
 {
 	aAvailableId = 1;
 	bEnabled = true;
+	bGlobal = true;
+	aGroup.sprintf("Global Keys");
 }
 
 KGlobalAccel::~KGlobalAccel()
@@ -279,6 +281,26 @@ void KGlobalAccel::removeItem( const char * action )
 	}
 	
 	aKeyDict.remove( action );
+}
+
+void KGlobalAccel::setConfigGroup( const char *group )
+{
+	aGroup.sprintf( group );
+}
+
+void KGlobalAccel::setConfigGlobal( bool global )
+{
+	bGlobal = global;
+}
+
+const char *KGlobalAccel::configGroup()
+{
+	return aGroup.data();
+}
+
+bool KGlobalAccel::configGlobal()
+{
+	return bGlobal;
 }
 
 void KGlobalAccel::setEnabled( bool activate )

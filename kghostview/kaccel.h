@@ -95,8 +95,8 @@ struct KKeyEntry {
 class KAccel 
 { 
  public:
- 	enum{ Open=1, New, Close, Save, Print, Quit, Cut, Copy, Paste, Undo, Find,
-			Replace, Insert, Home, End, Prior, Next, Help };
+ 	enum StdAccel { Open=1, New, Close, Save, Print, Quit, Cut, Copy,
+		Paste, Undo, Find, Replace, Insert, Home, End, Prior, Next, Help };
 	/** 
 	 * Creates a KAccel object with a parent widget and a name.
 	 */
@@ -210,7 +210,7 @@ class KAccel
 	 * If an action already exists the old association and connections will be
 	 * removed..
 	 */
-	const char *insertStdItem( int id );
+	const char *insertStdItem( StdAccel id );
 				 
 	bool isEnabled();
 	bool isItemEnabled( const char *action );
@@ -231,6 +231,12 @@ class KAccel
 	 * Removes the accelerator item with the action name action.
 	 */
     void removeItem( const char * action );  
+	
+	void setConfigGroup( const char *group );
+	void setConfigGlobal( bool global );
+	
+	const char * configGroup();
+	bool configGlobal();
 	
 	/** 
 	 * Enables the accelerator if activate is TRUE, or disables it if
@@ -265,7 +271,7 @@ class KAccel
 	 *	Close, Save, Print, Quit, Cut, Copy, Paste, Undo, Find, Replace,
 	 *	Insert, Home, End, Prior, Next, or Help and zero otherwise.
 	 */
-	const char *stdAction( int id );
+	const char *stdAction( StdAccel id );
 
 	/** 
 	 * Writes the current configurable associations to the application's
@@ -278,6 +284,8 @@ protected:
 	int aAvailableId;
 	QDict<KKeyEntry> aKeyDict;
 	bool bEnabled;
+	bool bGlobal;
+	QString aGroup;
 	
  
 };
