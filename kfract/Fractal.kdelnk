@@ -14,8 +14,10 @@ Comment=Generator for fractals
 Comment[pl]=Generator fraktali
 Comment[fi]=Fraktaaleja luova ohjelma
 Comment[hu]=Fraktál készítõ
+Comment[pt]=Um gerador de fractais
 Name=Fractals Generator
 Name[pl]=Generatol fraktali
 Name[fi]=Fraktaaliohjelma
 Name[hu]=Fraktál készítõ
+Nome[pt]=Gerador de Fractais
 
