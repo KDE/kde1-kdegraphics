@@ -8,6 +8,7 @@
 #include "print.h"
 #include "copyright.h"
 #include "marklist.h"
+#include "kaccel.h"
 #include <ktopwidget.h>
 
 #include <stdlib.h>
@@ -65,6 +66,8 @@ public:
 
 	// Tells us what kind of job kghostview is waiting for.
     
+	KAccel *keys;
+	
 	enum action { GET, PUT };
 	void openNetFile( const char *_url );
 

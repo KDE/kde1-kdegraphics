@@ -50,7 +50,7 @@
 #include "kghostview.h"
 #include "version.h"
 
-#include <kkeyconf.h>
+
 #include <kapp.h>
 #include <kiconloader.h>
 
@@ -61,6 +61,8 @@
 extern "C" {
 	#include "ps.h"
 }
+
+#include "kkeydialog.h"
 
 #include "kghostview.moc"
 #include "marklist.moc"
@@ -264,7 +266,7 @@ KGhostview::KGhostview( QWidget *, char *name )
 
 	setMinimumSize( 250, 250 );
 	setName();
-	if( windowList.count() == 1 ) bindKeys();
+	bindKeys();
 	updateMenuAccel();
 	
 	resize( options_width, options_height );
@@ -328,112 +330,53 @@ KGhostview::~KGhostview()
 
 void KGhostview::bindKeys()
 {    
-    // create the KKeyCode object
-    
-    if(  this == KGhostview::windowList.first() ) {
-    
-	initKKeyConfig( kapp->getConfig() );
+    // create the KAccel object
+	
+	keys = new KAccel( this );
 
 	// create functionName/keyCode association
 	
-	kKeys->addKey(i18n("Quit"), "CTRL+Q");
-	kKeys->addKey(i18n("Open"), "CTRL+O");
-	kKeys->addKey(i18n("New"), "CTRL+N");
-	kKeys->addKey(i18n("Close"), "CTRL+W");
-	kKeys->addKey(i18n("Print"), "CTRL+P");
-	kKeys->addKey(i18n("Help"), "F1");
-	kKeys->addKey(i18n("View Control"), "CTRL+L");
-	kKeys->addKey(i18n("Go To Page"), "CTRL+G");
-	kKeys->addKey(i18n("Zoom In"), "Plus");     
-	kKeys->addKey(i18n("Zoom Out"), "Minus"); 
-	kKeys->addKey(i18n("Next Page"), "Next");
-	kKeys->addKey(i18n("Prev Page"), "Prior");
-	kKeys->addKey(i18n("Scroll Up"), "Up");
-	kKeys->addKey(i18n("Scroll Down"), "Down");
-	kKeys->addKey(i18n("Scroll Left"), "Left");
-	kKeys->addKey(i18n("Scroll Right"), "Right");
-	kKeys->addKey(i18n("Redisplay"), "CTRL+R");
-	kKeys->addKey(i18n("Information"), "CTRL+I");  
+	keys->insertItem(i18n("Quit"), "CTRL+Q");
+	keys->insertItem(i18n("Open"), "CTRL+O");
+	keys->insertItem(i18n("New"), "CTRL+N");
+	keys->insertItem(i18n("Close"), "CTRL+W");
+	keys->insertItem(i18n("Print"), "CTRL+P");
+	keys->insertItem(i18n("Help"), "F1");
+	keys->insertItem(i18n("View Control"), "CTRL+L");
+	keys->insertItem(i18n("Go To Page"), "CTRL+G");
+	keys->insertItem(i18n("Zoom In"), "Plus");     
+	keys->insertItem(i18n("Zoom Out"), "Minus"); 
+	keys->insertItem(i18n("Next Page"), "Next");
+	keys->insertItem(i18n("Prev Page"), "Prior");
+	keys->insertItem(i18n("Scroll Up"), "Up");
+	keys->insertItem(i18n("Scroll Down"), "Down");
+	keys->insertItem(i18n("Scroll Left"), "Left");
+	keys->insertItem(i18n("Scroll Right"), "Right");
+	keys->insertItem(i18n("Redisplay"), "CTRL+R");
+	keys->insertItem(i18n("Information"), "CTRL+I");
 	
-	}    
-
-	// Register the main widget
+	//keys->readSettings();
 	
-	KGhostview *kg_temp = NULL;
-	int window_count=0;
-	QString widgetName;
-	for (kg_temp = KGhostview::windowList.first(); kg_temp!=0;
-		kg_temp=KGhostview::windowList.next() )
-	{
+	keys->connectItem( i18n("Quit"), qApp, SLOT( quit() ) );
+	keys->connectItem( i18n("Open"), this, SLOT( openNewFile() ) );
+	keys->connectItem( i18n("New"),	this, SLOT( newWindow() ) );
+	keys->connectItem( i18n("Close"), this, SLOT( closeWindow() ) );
+	keys->connectItem( i18n("Print"), this, SLOT( print() ) );
+	keys->connectItem( i18n("Help"), this, SLOT( help() ) );
+	keys->connectItem( i18n("View Control"), this, SLOT( viewControl() ) );
+	keys->connectItem( i18n("Go To Page"), this, SLOT( goToPage() ) );
+	keys->connectItem( i18n("Zoom In"), this, SLOT( zoomIn() ) );
+	keys->connectItem( i18n("Zoom Out"), this, SLOT( zoomOut() ) );
+	keys->connectItem( i18n("Next Page"), this, SLOT( nextPage() ) );
+	keys->connectItem( i18n("Prev Page"), this, SLOT( prevPage() ) );
+	keys->connectItem( i18n("Scroll Up"), this, SLOT( scrollUp() ) );
+	keys->connectItem( i18n("Scroll Down"), this, SLOT( scrollDown() ) );
+	keys->connectItem( i18n("Scroll Left"), this, SLOT( scrollLeft() ) );
+	keys->connectItem( i18n("Scroll Right"), this, SLOT( scrollRight() ) );
+	keys->connectItem( i18n("Redisplay"), this, SLOT( redisplay() ) );
+	keys->connectItem( i18n("Information"), this, SLOT( info() ) );
 	
-	window_count++;
-	if( kg_temp == this )
-		break;
-	
-	}
-
-	widgetName.sprintf( "kg%d", window_count);
-	
-	kKeys->registerWidget(widgetName.data(), this);
-
-	kg_temp = this;
-	
-	// define the connection for the main widget
-	
-	kKeys->connectFunction( widgetName.data(), i18n("Quit"),
-							qApp, SLOT( quit() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Open"),
-								kg_temp, SLOT( openNewFile() ) );
-	
-	kKeys->connectFunction( widgetName.data(), i18n("New"),
-								kg_temp, SLOT( newWindow() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Close"),
-								kg_temp, SLOT( closeWindow() ) );
-	
-	kKeys->connectFunction( widgetName.data(), i18n("Print"),
-								kg_temp, SLOT( print() ) );
-	
-	kKeys->connectFunction( widgetName.data(), i18n("Help"),
-								kg_temp, SLOT( help() ) );
-	
-	kKeys->connectFunction( widgetName.data(), i18n("View Control"),
-								kg_temp, SLOT( viewControl() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Go To Page"),
-								kg_temp, SLOT( goToPage() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Zoom In"),
-								kg_temp, SLOT( zoomIn() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Zoom Out"),
-								kg_temp, SLOT( zoomOut() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Next Page"),
-								kg_temp, SLOT( nextPage() ) );
-	
-	kKeys->connectFunction( widgetName.data(), i18n("Prev Page"),
-								kg_temp, SLOT( prevPage() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Scroll Up"),
-								kg_temp, SLOT( scrollUp() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Scroll Down"),
-								kg_temp, SLOT( scrollDown() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Scroll Left"),
-								kg_temp, SLOT( scrollLeft() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Scroll Right"),
-								kg_temp, SLOT( scrollRight() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Redisplay"),
-								kg_temp, SLOT( redisplay() ) );
-								
-	kKeys->connectFunction( widgetName.data(), i18n("Information"),
-								kg_temp, SLOT( info() ) );
-								
+	keys->readSettings();
 }
 
 void KGhostview::copyright()
@@ -474,8 +417,10 @@ void KGhostview::configureGhostscript()
 
 void KGhostview::configureKeybindings()
 {
-	kKeys->configureKeys( this );
-	updateMenuAccel();
+	//keys->configureKeys( this );
+	if( KKeyDialog::configureKeys( keys ) ) {
+		updateMenuAccel();
+	}
 }
 
 void KGhostview::updateMenuAccel()
@@ -504,7 +449,7 @@ void KGhostview::changeMenuAccel ( QPopupMenu *menu, int id,
 	
 	int i = s.find('\t');
 	
-	QString k = keyToString( kKeys->readCurrentKey( functionName ) );
+	QString k = keyToString( keys->currentKey( functionName ) );
 	if( !k ) return;
 	
 	if ( i >= 0 )
@@ -1040,14 +985,14 @@ void KGhostview::setName()
 void KGhostview::newWindow()
 {
 	KGhostview *kg = new KGhostview ();
-	kg->resize(width(), height());
+	//kg->resize(width(), height());
 	
 	//windowList.append( kg );
 
-	kg->setMinimumSize( 250, 250 );
+	//kg->setMinimumSize( 250, 250 );
 	//kg->setName();
-	kg->bindKeys();
-	kg->updateMenuAccel();
+	//kg->bindKeys();
+	//kg->updateMenuAccel();
 }
 
 void KGhostview::closeEvent( QCloseEvent * )
@@ -1810,7 +1755,7 @@ Bool KGhostview::same_document_media()
 {
     //printf("KGhostview::same_document_media\n");
 
-    unsigned int i;
+    unsigned int j;
 
     if (olddoc == 0 && doc == 0) {
     	//printf("	0 olddoc and doc\n");
@@ -1823,8 +1768,8 @@ Bool KGhostview::same_document_media()
     	//fprintf(stderr, "Old document was EPS and this isn't or vice versa\n");
     	return False;
     }
-    for (i = 0; i < doc->nummedia; i++)
-		if (strcmp(olddoc->media[i].name, doc->media[i].name)) return False;
+    for (j = 0; j < doc->nummedia; j++)
+		if (strcmp(olddoc->media[j].name, doc->media[j].name)) return False;
 	
     return False;
 }
