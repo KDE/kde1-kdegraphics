@@ -29,7 +29,7 @@ msgstr "Verkkotalennusta ei ole vielä toteutettu"
 #: viewer.cpp:189
 #, c-format
 msgid "%s: written"
-msgstr "%s: kirjoitettut"
+msgstr "%s: kirjoitettu"
 
 #: viewer.cpp:227
 msgid "Enter Zoom factor (100 = 1x):"
@@ -109,7 +109,7 @@ msgstr "&Oletus"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Asetukset..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -159,25 +159,23 @@ msgstr "Käännä vaakasuunnassa"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "Työpöytä &kopioi"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "&Työpöydälle"
+msgstr "&Työpöytä &Max."
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Maksimipect"
+msgstr "Työpöytä Max&aspect"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Miten..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "&Mikä on..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -290,33 +288,31 @@ msgstr "Aloita kuva"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "kView asetukset"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Käytä"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Ladattaessa"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "&Sulje ikkuna"
+msgstr "Muuta ikkunan kokoa"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Muuta kuvan kokoa"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Älä muuta kokoa"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "&Diashow Päällä/Pois"
+msgstr "Diaesitys"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -324,20 +320,9 @@ msgstr "Looppi"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Diojen viive (sek)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
+msgstr "&Näppäimet"
 
-#~ msgid "&Tile"
-#~ msgstr "&Sarjoita"
-
-#~ msgid "&Max"
-#~ msgstr "&Maksimikoko"
-
-#~ msgid "Interval.."
-#~ msgstr "Kestoaika.."
-
-#~ msgid "Time between slides (sec):"
-#~ msgstr "Aika kuvien välillä (sek):"

@@ -417,20 +417,3 @@ msgstr "Raakafaksin leveys:"
 msgid "height:"
 msgstr "korkeus:"
 
-#~ msgid "About KFax"
-#~ msgstr "Tietoja KFax:ta"
-
-#~ msgid "Version "
-#~ msgstr "Versio "
-
-#~ msgid "&About..."
-#~ msgstr "&Tietoja..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "KFax &Ohje"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Valitse avattava faksi"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Valitse liitettävä faksi"

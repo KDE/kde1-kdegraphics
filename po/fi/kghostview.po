@@ -364,7 +364,7 @@ msgstr "&Sivun asetukset ..."
 
 #: kghostview.cpp:511
 msgid "&Print ..."
-msgstr "&Tulosta"
+msgstr "&Tulosta..."
 
 #: kghostview.cpp:519
 msgid "Zoom &in"
@@ -687,29 +687,3 @@ msgstr "Os.%d/"
 msgid "&Magnification"
 msgstr "&Suurennus"
 
-#~ msgid "&Defaults"
-#~ msgstr "&Oletukset"
-
-#~ msgid "Prior"
-#~ msgstr "Edellinen"
-
-#~ msgid "Next"
-#~ msgstr "Seuraava"
-
-#~ msgid "Zoom"
-#~ msgstr "Suurenna"
-
-#~ msgid "Current key"
-#~ msgstr "Nykyinen näppäin"
-
-#~ msgid "&Action"
-#~ msgstr "&Tapahtuma"
-
-#~ msgid "&No key"
-#~ msgstr "&Ei näppäintä"
-
-#~ msgid "&Default key"
-#~ msgstr "&Oletusnäppäin"
-
-#~ msgid "&Custom key"
-#~ msgstr "O&ma näppäin"
