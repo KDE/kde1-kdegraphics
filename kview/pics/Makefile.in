@@ -2,13 +2,14 @@ prefix = @prefix@
 
 FILES =  diashow.xpm random.xpm resize.xpm
 
-PICSDIR = $(prefix)/lib/pics/toolbar
 INSTALL_DIR = @INSTALL@ -d -m 0755
 INSTALL_DATA = @INSTALL@ -m 644
 
 all:
 
 install:
+	$(INSTALL_DIR) $(prefix)/share/apps/kview/toolbar
+	$(INSTALL_DATA) $(PICS) $(prefix)/share/apps/kview/toolbar
 
 uninstall:
 	for i in $(FILES); do \
