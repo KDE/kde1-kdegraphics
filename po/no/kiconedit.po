@@ -19,14 +19,14 @@ msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Det oppsto en feil under åpning av målfil: %s"
 
 #: utils.cpp:72
-#, fuzzy, c-format
+#, c-format
 msgid "copyFile - There was an error reading source file: %s"
-msgstr "copyFile - Det oppsto en feil under åpning av kildefil: %s"
+msgstr "copyFile - Det oppsto en feil under lesing av kildefil: %s"
 
 #: utils.cpp:80
-#, fuzzy, c-format
+#, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
-msgstr "copyFile - Det oppsto en feil under åpning av målfil: %s"
+msgstr "copyFile - Det oppsto en feil under skriving til målfil: %s"
 
 #: utils.cpp:93
 #, c-format
@@ -749,36 +749,35 @@ msgstr "Ugyldig pixmap-data i utklippsbrett!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr ""
+msgstr "Mapper:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"
-msgstr ""
+msgstr "Innhold:"
 
 #: kicondetaillist.cpp:50
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 #: kicondetaillist.cpp:52
-#, fuzzy
 msgid "Size"
-msgstr "Størrelse:"
+msgstr "Størrelse"
 
 #: kicondetaillist.cpp:55
 msgid "Permissions"
-msgstr ""
+msgstr "Tilgang"
 
 #: kicondetaillist.cpp:57
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 #: kicondetaillist.cpp:60
 msgid "Owner"
-msgstr ""
+msgstr "Eier"
 
 #: kicondetaillist.cpp:62
 msgid "Group"
-msgstr ""
+msgstr "Gruppe"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
@@ -801,6 +800,8 @@ msgid ""
 "\n"
 "seems to be malformed.\n"
 msgstr ""
+"\n"
+"ser ut til å være misdannet.\n"
 
 #: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
 #: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
@@ -828,6 +829,8 @@ msgid ""
 "\n"
 "doesn't exist or isn't readable.\n"
 msgstr ""
+"\n"
+"eksisterer ikke eller er ikke lesbar.\n"
 
 #: kicon.cpp:160
 msgid ""
@@ -864,6 +867,10 @@ msgid ""
 "*.gif|GIF files (*.gif)\n"
 "*jpg|JPEG files (*.jpg)\n"
 msgstr ""
+"*|Alle filer (*)\n"
+"*.xpm|XPM (*.xpm)\n"
+"*.gif|GIF-filer (*.gif)\n"
+"*jpg|JPEG-filer (*.jpg)\n"
 
 #: kicon.cpp:283
 msgid "The KDE Icon Editor has found a recover\n"
@@ -943,7 +950,7 @@ msgstr "Lag nytt ikon"
 
 #: debug.cpp:20
 msgid "Fatal!"
-msgstr ""
+msgstr "Fatal!"
 
 #: kiconeditslots.cpp:403
 msgid "Sorry - not implemented."

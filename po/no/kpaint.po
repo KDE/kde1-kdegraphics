@@ -383,51 +383,33 @@ msgid "Image Depth:"
 msgstr "Billeddybde:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 farger)"
+msgstr "1 (2 farger)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 farger)"
+msgstr "4 (16 farger)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 farger)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 farger)"
+msgstr "15 (32k farger)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 farger)"
+msgstr "16 (54k farger)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (sannhetsfarger)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (sannhetsfarger)"
+msgstr "32 (sannhetsfarger)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid "Exit"
-#~ msgstr "Gå ut"
-
-#~ msgid "Open Location:"
-#~ msgstr "Åpne plassering:"
-
-#~ msgid "Save to Location:"
-#~ msgstr "Lagre til plassering:"
-
-#~ msgid "1 (Bitmap)"
-#~ msgstr "1 (Bitmappe)"
