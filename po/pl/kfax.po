@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1999-01-24 16:16+0100\n"
+"PO-Revision-Date: 1999-01-21 05:53+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -262,7 +262,7 @@ msgid "You need to open a fax page first."
 msgstr "Najpierw musisz otworzyæ stronê faxu."
 
 #: kfax.cpp:2400
-#, fuzzy, c-format
+#, c-format
 msgid "P.%d of %d"
 msgstr "D.%d z %d"
 

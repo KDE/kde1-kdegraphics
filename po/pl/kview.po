@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-01-24 16:17+0100\n"
+"PO-Revision-Date: 1999-01-31 05:54+0100\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -41,6 +41,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- Przegl±darka plików graficznych. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -104,11 +107,11 @@ msgstr "&Anuluj zmiany"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&W³a¶ciwo¶ci..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
-msgstr "&Powiêkszenie"
+msgstr "&Powiêkszenie..."
 
 #: viewer.cpp:376
 #, c-format
@@ -154,25 +157,23 @@ msgstr "Odwróæ w poziomie"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "&S±siaduj±co"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "Na &biurko"
+msgstr "&Rozci±gnij"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
 msgstr "Rozci±gnij z zach. stosunku &boków"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Jak zrobiæ..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "&Co to jest..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -285,33 +286,31 @@ msgstr "Rozpocznij prze&gl±d"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "Ustawienia KView"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Zastosuj"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Podczs ³adowania"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "Z&amknij"
+msgstr "Zmieñ rozmiar okna"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Zmieñ rozmiar obrazu"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Nic nie zmieniaj"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "Przegl±d w&szystkich po kolei"
+msgstr "Przegl±d wszystkich po kolei"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -319,11 +318,11 @@ msgstr "Cyklicznie"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Czas wy¶wietlania pojedynczego (sec)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
+msgstr "&Skróty klawiszowe"
 
 #~ msgid "&Tile"
 #~ msgstr "&S±siaduj±co"
