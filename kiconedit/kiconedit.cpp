@@ -156,7 +156,7 @@ KIconEdit::KIconEdit(const char *name, const char *xpm)
   debug("Updating statusbar");
   slotUpdateStatusSize(grid->cols(), grid->rows());
   slotUpdateStatusScaling(grid->scaling(), true);
-  slotUpdateStatusName(icon->url());
+  slotUpdateStatusName(icon->url().data());
   slotUpdateCopy(false);
   uint *c = 0, n = 0;
   n = grid->getColors(c);

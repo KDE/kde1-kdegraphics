@@ -47,7 +47,10 @@ void KColorArray::append(uint c)
 
 uint KColorArray::closestMatch(uint color)
 {
+  //debug("KColorArray: %u", c);
   uint c = color & ~OPAQUE_MASK, d = 0xffffff, t;
+  //debug("KColorArray: %u", c);
+  //debug("KColorArray: %u", c|OPAQUE_MASK);
   uint cb = c;
   for(uint i = 0; i < size(); i++)
   {

@@ -492,10 +492,10 @@ void KIconEdit::slotUpdateStatusName(const char *name)
   {
     cap += name;
     cap += " - ";
+    addRecent(name);
   }
   cap += kapp->getCaption();
   setCaption(cap.data());
-  addRecent(name);
 }
 
 void KIconEdit::slotUpdatePaste(bool state)

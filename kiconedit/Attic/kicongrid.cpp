@@ -265,6 +265,7 @@ void KIconEditGrid::mouseMoveEvent( QMouseEvent *e )
     }
     case Find:
     {
+      iconcolors.closestMatch(colorAt(cell));
       if ( selected != cell )
       {
         int prevSel = selected;
@@ -331,8 +332,8 @@ void KIconEditGrid::mouseReleaseEvent( QMouseEvent *e )
       if(!img->valid(col, row))
         return;
       setColor( cell, currentcolor );
-      if ( selected != cell )
-      {
+      //if ( selected != cell )
+      //{
         //modified = true;
         int prevSel = selected;
         selected = cell;
@@ -340,7 +341,7 @@ void KIconEditGrid::mouseReleaseEvent( QMouseEvent *e )
         updateCell( row, col, FALSE );
         *((uint*)img->scanLine(row) + col) = colorAt(cell);
         p = *img;
-      }
+      //}
       break;
     }
     case Ellipse:
