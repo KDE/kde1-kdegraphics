@@ -43,7 +43,7 @@ void kimgioRegister(void)
                 read_ps_epsf, NULL);
 
 #ifdef HAVE_LIBTIFF
-	QImageIO::defineIOHandler("TIFF","", 0,
+	QImageIO::defineIOHandler("TIFF","MM", 0,
                 kimg_read_tiff, kimg_write_tiff );
 #endif
 }

@@ -29,8 +29,12 @@ void kimg_read_tiff( QImageIO *io )
 	TIFFGetField( tiff, TIFFTAG_IMAGEWIDTH,	&width );
 	TIFFGetField( tiff, TIFFTAG_IMAGELENGTH, &height );
 
+	debug( "Width: %ld, Height: %ld", width, height );
 	QImage image( width, height, 32 );
 	data = (uint32 *)image.bits();
+
+	debug( "unsigned size: %d, uint32 size: %d",
+		sizeof(unsigned), sizeof(uint32) );
 
 	// read data
 	bool stat =TIFFReadRGBAImage( tiff, width, height, data );
@@ -40,12 +44,32 @@ void kimg_read_tiff( QImageIO *io )
 		return;
 	}
 
-	for( int ctr = image.numBytes(); ctr ; ctr-- ) {
-		// TODO: manage alpha with TIFFGetA
-		*data = qRgb( TIFFGetR( *data ), 
-			TIFFGetG( *data ), TIFFGetB( *data ) );
-		data++;
+	// reverse image (it's upside down)
+	for( unsigned ctr = 0; ctr < (height>>1); ) {
+		unsigned *line1 = (unsigned *)image.scanLine( ctr );
+		unsigned *line2 = (unsigned *)image.scanLine( height 
+			- ( ++ctr ) );
+
+		for( unsigned x = 0; x < width; x++ ) {
+			int temp = *line1;
+			*line1 = *line2;
+			*line2 = temp;
+			line1++;
+			line2++;
+		}
+
+		// swap rows
 	}
+
+	// set channel order to Qt order
+	// FIXME: Right now they are the same, but will it change?
+
+//	for( int ctr = (image.numBytes() / sizeof(uint32))+1; ctr ; ctr-- ) {
+//		// TODO: manage alpha with TIFFGetA
+//		*data = qRgb( TIFFGetR( *data ), 
+//			TIFFGetG( *data ), TIFFGetB( *data ) );
+//		data++;
+//	}
 	TIFFClose( tiff );
 
 	io->setImage( image );
