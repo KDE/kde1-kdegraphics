@@ -934,18 +934,19 @@ AC_TRY_LINK(dnl
 #include<tiff.h>
 ],
             [return (TIFFOpen( "", "r") == 0); ],
-            eval "ac_cv_lib_tiff=yes",
+            eval "ac_cv_lib_tiff=-ltiff",
             eval "ac_cv_lib_tiff=no")
 LIBS="$ac_save_LIBS"
 ])dnl
-if eval "test \"`echo $ac_cv_lib_tiff`\" = yes"; then
-  AC_MSG_RESULT(yes)
+if eval "test ! \"`echo $ac_cv_lib_tiff`\" = no"; then
   AC_DEFINE_UNQUOTED(HAVE_LIBTIFF)
   LIBTIFF="$ac_cv_lib_tiff"
   AC_SUBST(LIBTIFF)
   AC_MSG_RESULT($ac_cv_lib_tiff)
 else
   AC_MSG_RESULT(no)
+  LIBTIFF=""
+  AC_SUBST(LIBTIFF)
 fi
 ])
 
