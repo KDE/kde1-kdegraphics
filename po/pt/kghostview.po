@@ -211,9 +211,8 @@ msgid "Document information"
 msgstr "Informações do documento"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Configuraçao da impressora"
+msgstr "Configuração da página"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -277,12 +276,11 @@ msgstr "Abrir &recente"
 
 #: kghostview.cpp:500
 msgid "&Reload"
-msgstr ""
+msgstr "&Recarregar"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Configuração ..."
+msgstr "Config&uração da Página..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -297,9 +295,8 @@ msgid "Zoom &out"
 msgstr "&Diminuir"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "Am&pliação ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -499,9 +496,8 @@ msgid "Go to ..."
 msgstr "Ir para ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Ampliar"
+msgstr "Ampliação"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -749,28 +745,24 @@ msgstr ""
 "Esta informação está disponível na barra de status.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "a&mpliação"
+msgstr "ampliação"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "m&edia"
+msgstr "&Media"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "&orientação"
+msgstr "&Orientação"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Aplicar"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "a&mpliação"
+msgstr "A&mpliação"
 
 #~ msgid "Home"
 #~ msgstr "Home"
