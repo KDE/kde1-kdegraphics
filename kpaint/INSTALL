@@ -1,0 +1,7 @@
+Either use the included Linux (i486) binary or type:
+make
+make install
+
+If it doesn't work or you want to remove kpaint then type:
+make uninstall
+
