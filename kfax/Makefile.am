@@ -2,7 +2,7 @@
 
 LDFLAGS	=	$(all_libraries)
 LDADD   =       -lkfm -lkdecore -lkdeui -lqt -lXext -lX11 ./libtiffax/libtif.a  -lm $(LIBSOCKET) $(KDE_RPATH)
-INCLUDES=	$(all_includes) -I./libtiffax
+INCLUDES=	-I./libtiffax $(all_includes) 
 
 ####### Files
 noinst_HEADERS = kfax.h faxexpand.h print.h options.h about.h
