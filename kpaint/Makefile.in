@@ -19,7 +19,7 @@ topdir  =       @topdir@
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H
-LDLIBS	=	-lkptools -lkdeui -lkdecore -lkfm -lgif -lqt -lXext -lm -lX11 @LIBSOCKET@ @LIBJPEG@
+LDLIBS	=	-lkptools -lkdeui -lkfm -lkdecore -lgif -lqt -lXext -lm -lX11 @LIBSOCKET@ @LIBJPEG@
 METADIR	=	metas
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
