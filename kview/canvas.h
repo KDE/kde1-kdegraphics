@@ -36,7 +36,7 @@ public:
 	virtual ~KImageCanvas();
 
 	/**
-	* Check canvas status. 
+	* Check canvas status.
 	* @return Status code
 	* @see ::Error
 	*/
@@ -74,7 +74,7 @@ public:
 	void tileToDesktop() const;
 
 	/**
-	* 
+	*
 	*/
 	void maxToDesktop() const;
 	/**
@@ -136,6 +136,7 @@ signals:
 	*
 	*/
 	void imageSizeChanged();
+    void contextPress(const QPoint&);
 
 private:
 	Error		_status;
@@ -167,6 +168,7 @@ inline QString KImageCanvas::url() const
 */
 class KVImageHolder : public QLabel
 {
+	Q_OBJECT
 private:
 	QRect _selection;
 
@@ -190,6 +192,10 @@ public:
 	void clearSelection() { _selected = false; }
 
 	void setImagePix( const QPixmap& image );
+    
+signals:
+    void contextPress(const QPoint&);
+ 
 
 protected:
 	void mousePressEvent( QMouseEvent * );

@@ -71,9 +71,13 @@ KImageViewer::KImageViewer()
 {
 
 	_canvas = new KImageCanvas( this );
+	
+	connect(_canvas, SIGNAL( contextPress(const QPoint&) ), 
+		this, SLOT ( contextPress(const QPoint&) ));
+
 	assert( _canvas );
 	setView( _canvas, FALSE );
-
+	
 	// set caption
 
 	QString cap;
@@ -93,9 +97,9 @@ KImageViewer::KImageViewer()
 	connect( _imageList, SIGNAL(selected(const char *)),
 		this, SLOT(loadURL(const char *)) );
 
-	// accelerators, enabled only when the menubar is 
+	// accelerators, enabled only when the menubar is
 	// turned off.
-	_accel = new QAccel( this ); 
+	_accel = new QAccel( this );
 	_accel->setEnabled( false );
 
 
@@ -279,7 +283,7 @@ void KImageViewer::zoomCustom()
 	KNumDialog num;
 	_zoomFactor = (int)(_mat.m11() * 100);
 
-	if( !num.getNum( _zoomFactor, i18n( 
+	if( !num.getNum( _zoomFactor, i18n(
 			"Enter Zoom factor (100 = 1x):" ) ) )
 		return;
 
@@ -340,6 +344,7 @@ void KImageViewer::about()
 
 void KImageViewer::makeRootMenu(QMenuData *menu)
 {
+    /*
 	menu->insertItem( i18n( "&File" ),	_file );
 	menu->insertItem( i18n( "&Edit" ),	_edit );
 	menu->insertItem( i18n( "&Zoom" ),	_zoom );
@@ -354,6 +359,20 @@ void KImageViewer::makeRootMenu(QMenuData *menu)
 	
 	menu->insertSeparator();
 	menu->insertItem( i18n( "&Help" ), _help );
+	
+    */	
+    
+    menu->insertItem( i18n("&List..."), this,
+			 SLOT(toggleImageList()), Key_I );
+    menu->insertSeparator();
+    menu->insertItem( i18n("&Previous"), _imageList, SLOT(prev()),
+			 Key_Backspace );
+    menu->insertItem( i18n("&Next"), _imageList, SLOT(next()),
+			 Key_Tab );
+    menu->insertSeparator();
+    menu->insertItem( i18n("&Slideshow On/Off"), _imageList,
+			 SLOT(toggleSlideShow()), Key_S );
+
 }
 
 void KImageViewer::makeRootMenu(KMenuBar *menu)
@@ -427,9 +446,9 @@ void KImageViewer::makePopupMenus()
 
 	// transform pulldown
 
-	_transform->insertItem( i18n( "Rotate &clockwise" ), 
+	_transform->insertItem( i18n( "Rotate &clockwise" ),
 			this, SLOT(rotateClock()) );
-	_transform->insertItem( i18n( "Rotate &anti-clockwise" ), 
+	_transform->insertItem( i18n( "Rotate &anti-clockwise" ),
 			this, SLOT(rotateAntiClock()) );
 	_transform->insertItem( i18n( "Flip &vertical" ),
 			this, SLOT(flipVertical()) );
@@ -447,9 +466,9 @@ void KImageViewer::makePopupMenus()
 		SLOT(toggleImageList()), Key_I );
 	_aggreg->setItemChecked( id, false );
 	_aggreg->insertSeparator();
-	_aggreg->insertItem( i18n("&Previous"), _imageList, SLOT(prev()), 
+	_aggreg->insertItem( i18n("&Previous"), _imageList, SLOT(prev()),
 			Key_Backspace );
-	_aggreg->insertItem( i18n("&Next"), _imageList, SLOT(next()), 
+	_aggreg->insertItem( i18n("&Next"), _imageList, SLOT(next()),
 			Key_Tab );
 	_aggreg->insertSeparator();
 	_aggreg->insertItem( i18n("&Slideshow On/Off"), _imageList,
@@ -511,9 +530,9 @@ void KImageViewer::loadURL( const char *url )
 		}
 
 		// save transfer files
-		if( _transSrc == 0 ) 
+		if( _transSrc == 0 )
 			_transSrc = new QString;
-		if( _transDest == 0 ) 
+		if( _transDest == 0 )
 			_transDest = new QString;
 
 		_transSrc->setStr( url );
@@ -525,9 +544,9 @@ void KImageViewer::loadURL( const char *url )
 		}
 
 		// start transfer
-		connect( _kfm, SIGNAL( finished() ), 
+		connect( _kfm, SIGNAL( finished() ),
 			this, SLOT( urlFetchDone() ) );
-		connect( _kfm, SIGNAL( error(int, const char *) ), 
+		connect( _kfm, SIGNAL( error(int, const char *) ),
 			this, SLOT( urlFetchError(int, const char *) ) );
 
 		_kfm->copy( _transSrc->data(), _transDest->data() );
@@ -543,7 +562,7 @@ void KImageViewer::urlFetchDone()
 	}
 
 	switch ( _transDir ) {
-		case Get:	loadFile( _transDest->data(), 
+		case Get:	loadFile( _transDest->data(),
 				_transSrc->data() );
 				unlink( _transDest->data() );
 				break;
@@ -605,10 +624,12 @@ void KImageViewer::setFilterMenu( KFiltMenuFactory *filtmenu )
 
 	_menuFact = filtmenu;
 
-	makePopupMenus();
 
+	makePopupMenus();
 	_menubar = new KMenuBar(this);
 	makeRootMenu( _menubar );
+
+	makePopupMenus();
 	_contextMenu = new QPopupMenu;
 	makeRootMenu( _contextMenu );
 
@@ -675,11 +696,11 @@ void KImageViewer::loadFile( const char *file, const char *url )
 
 void KImageViewer::setSize()
 {
-		// size 
+		// size
 		QWidget *desk = kapp->desktop();
 
-		if( _canvas->height() < desk->height() 
-			&& _canvas->width() < desk->width() 
+		if( _canvas->height() < desk->height()
+			&& _canvas->width() < desk->width()
 			&& _canvas->height() ) {
 
 			resize( _canvas->size() );
@@ -688,7 +709,7 @@ void KImageViewer::setSize()
 
 void KImageViewer::setProgress( int pct )
 {
-	if( pct == _lastPct ) 
+	if( pct == _lastPct )
 		return;
 
 	const char *buf = "";
@@ -727,18 +748,11 @@ void KImageViewer::toggleImageList()
 	}
 }
 
-void KImageViewer::mousePressEvent( QMouseEvent *ev )
-{
-	if( ev->button() == RightButton ) {
-		_contextMenu->popup( ev->pos() );
-	}
-	else {
-		if( _contextMenu->isVisible() ) {
-			_contextMenu->hide();
-		}
 
-		KTopLevelWidget::mousePressEvent( ev );
-	}
+void KImageViewer::contextPress(const QPoint& p)
+{
+    _contextMenu->popup(p);
+
 }
 
 void KImageViewer::fullScreen()
@@ -754,7 +768,7 @@ void KImageViewer::fullScreen()
 		_posSave = pos();
 		_sizeSave = size();
 
-		move( frameGeometry().x() - geometry().x(), 
+		move( frameGeometry().x() - geometry().x(),
 			frameGeometry().y() - geometry().y() );
 
 		resize( qApp->desktop()->size() );

@@ -22,7 +22,7 @@
 
 
 static QString loadStdin();
-static maxpect( QWidget *dest, QPixmap *image );
+static void maxpect( QWidget *dest, QPixmap *image );
 
 KImageCanvas::KImageCanvas( QWidget *parent )
 	: QScrollView( parent ),
@@ -32,6 +32,9 @@ KImageCanvas::KImageCanvas( QWidget *parent )
 	_orig( 0 )
 {
 	_client = new KVImageHolder( this );
+	
+	connect(_client, SIGNAL( contextPress(const QPoint&) ), 
+		this, SIGNAL ( contextPress(const QPoint&) ));
 	addChild( _client );
 
 	_client->show();
@@ -175,55 +178,51 @@ void KImageCanvas::tileToDesktop() const
 		return;
 	}
 
-	qApp->desktop()->setBackgroundPixmap( 
+	qApp->desktop()->setBackgroundPixmap(
 			*image );
 }
 
 void KImageCanvas::maxToDesktop() const
 {
-	const QPixmap *image = _client->pixmap();
-
-	if( image == 0 ) {
+	if( _client->pixmap() == 0 )
 		return;
-	}
+	
+	QPixmap image = *(_client->pixmap());
 
-	double dh = (double)qApp->desktop()->height()/(double)image->height();
-	double dw = (double)qApp->desktop()->width()/(double)image->width();
-	QWMatrix mat;
+	int h = qApp->desktop()->height();
+	int w = qApp->desktop()->width();
 
-	mat.scale( dw, dh );
+	image.convertFromImage(image.convertToImage().smoothScale(w,h));
 
-	qApp->desktop()->setBackgroundPixmap( image->xForm(mat) );
+	qApp->desktop()->setBackgroundPixmap( image );
 
 }
 
 void KImageCanvas::maxpectToDesktop() const
 {
-	const QPixmap *image = _client->pixmap();
-
-	if( image == 0 ) {
+	if( _client->pixmap() == 0 )
 		return;
-	}
+	
+	QPixmap image = *(_client->pixmap());
 
-	double dh = (double)qApp->desktop()->height()/(double)image->height();
-	double dw = (double)qApp->desktop()->width()/(double)image->width();
-	QWMatrix mat;
+	double dh = (double)qApp->desktop()->height()/(double)image.height();
+	double dw = (double)qApp->desktop()->width()/(double)image.width();
 	double d = ( dh < dw ? dh : dw );
 	
-	mat.scale( d, d );
+	image.convertFromImage(image.convertToImage().smoothScale(int(d*image.width()),
+								  int (d*image.height())));
 
-	qApp->desktop()->setBackgroundPixmap( image->xForm(mat) );
+	qApp->desktop()->setBackgroundPixmap( image );
 }
 
-static maxpect( QWidget *dest, QPixmap *image )
+static void maxpect( QWidget *dest, QPixmap *image )
 {
 	double dh = (double)dest->height()/(double)image->height();
 	double dw = (double)dest->width()/(double)image->width();
-	QWMatrix mat;
 	double d = ( dh < dw ? dh : dw );
 	
-	mat.scale( d, d );
-	*image = image->xForm( mat );
+	image->convertFromImage(image->convertToImage().smoothScale(int(d*image->width()),
+								  int (d*image->height())));
 }
 
 void KImageCanvas::resizeEvent( QResizeEvent *ev )
@@ -279,7 +278,7 @@ void KImageCanvas::cropImage()
 
 	QPixmap newpix( select.width(), select.height() );
 	
-	bitBlt( &newpix, 0, 0, oldpix, select.left(), 
+	bitBlt( &newpix, 0, 0, oldpix, select.left(),
 		select.top(), select.width(), select.height(), CopyROP );
 
 	_client->setImagePix( newpix );
@@ -327,18 +326,14 @@ void KImageCanvas::maxToWin()
 {
 	transPixmap();
 
-	const QPixmap *image = _client->pixmap();
-
-	if( image == 0 ) {
+	if( _client->pixmap() == 0 )
 		return;
-	}
+	
+	QPixmap image = *(_client->pixmap());
 
-	double dh = (double)height()/(double)image->height();
-	double dw = (double)width()/(double)image->width();
-	QWMatrix mat;
-	mat.scale( dw, dh );
-
-	_client->setImagePix( image->xForm( mat ) );
+	image.convertFromImage(image.convertToImage().smoothScale(width(),height()));
+	_client->setImagePix( image );
+	
 	emit imageSizeChanged();
 }
 
@@ -346,19 +341,21 @@ void KImageCanvas::maxpectToWin()
 {
 	transPixmap();
 
-	QPixmap *image = _client->pixmap();
-
-	if( image == 0 )
+	if( _client->pixmap() == 0 )
 		return;
+	
+	QPixmap image = *(_client->pixmap());
 
-	double dh = (double)height()/(double)image->height();
-	double dw = (double)width()/(double)image->width();
-	QWMatrix mat;
+
+	double dh = (double)height()/(double)image.height();
+	double dw = (double)width()/(double)image.width();
 
 	double d = ( dh < dw ? dh : dw );
-	mat.scale( d, d );
+	
+	image.convertFromImage(image.convertToImage().smoothScale(int(d*image.width()),
+								   int (d*image.height())));
 
-	_client->setImagePix( image->xForm( mat ) );
+	_client->setImagePix( image );
 	emit imageSizeChanged();
 }
 
@@ -389,6 +386,10 @@ KVImageHolder::~KVImageHolder()
 
 void KVImageHolder::mousePressEvent( QMouseEvent *ev )
 {
+    if (ev->button() == RightButton) {
+	emit contextPress(ev->globalPos());
+	return;
+    }
 	if( pixmap() == 0 ) {
 		return;
 	}
@@ -417,7 +418,7 @@ void KVImageHolder::mouseMoveEvent( QMouseEvent *ev )
 	int b = (ev->y() < height()) ? ev->y() : height() - 1;
 
 	if( r != _selection.right() || b != _selection.bottom() ) {
-		if ( erase ) 
+		if ( erase )
 			eraseSelect();
 		
 		_selection.setRight( r );

@@ -123,9 +123,10 @@ public slots:
 	void copy();
 	void paste();
 
+               void contextPress(const QPoint&);
+
 protected:
 
-	virtual void mousePressEvent( QMouseEvent * );
 	virtual void closeEvent( QCloseEvent * );
 
 	virtual void saveProperties( KConfig * ) const;
