@@ -118,9 +118,9 @@ public:
   bool isMarked(QPoint p);
   bool isMarked(int x, int y);
   int scaling() { return cellSize(); }
+  void loadBlank( int w = 0, int h = 0);
 
 public slots:
-  void loadBlank( int w = 0, int h = 0);
   void load( QImage *);
   void editCopy(bool cut = false);
   void editPaste(bool paste = false);
