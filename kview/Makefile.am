@@ -25,6 +25,15 @@ EXTRA_DIST = $(lnk_DATA)
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = layout/liblayout.a $(LIB_KFILE) $(LIB_KIMGIO) 
 
+kde_icon_DATA = kview.xpm
+
+install-data-local:
+	$(mkinstalldirs) $(kde_minidir)
+	$(INSTALL_DATA) $(srcdir)/mini-kview.xpm $(kde_minidir)/kview.xpm
+
+uninstall-local:
+	-rm -f $(kde_minidir)/kview.xpm
+
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
 
