@@ -398,7 +398,7 @@ msgstr "Lagre bilde som"
 
 #: kicon.cpp:46
 msgid "There was an error removing temporary backup file:\n"
-msgstr "Det oppsto en feil under fjerning av midlertidig sikkerhetskopifil."
+msgstr "Det oppsto en feil under fjerning av midlertidig sikkerhetskopifil:\n"
 
 #: kicon.cpp:72 kicon.cpp:240 kicon.cpp:319 kicon.cpp:408
 msgid ""
