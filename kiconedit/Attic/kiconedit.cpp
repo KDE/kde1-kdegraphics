@@ -375,47 +375,66 @@ KMenuBar *KIconEdit::setupMenuBar()
 
   file = new QPopupMenu;
   CHECK_PTR(file);
+
   file->insertItem(Icon("newwin.xpm"), i18n("New &window"), ID_FILE_NEWWIN);
   file->connectItem(ID_FILE_NEWWIN, this, SLOT(slotNewWin()));
+
   file->insertSeparator();
-  id = file->insertItem(Icon("filenew.xpm"), i18n("&New..."), this, SLOT(slotNew()));
-  keys->changeMenuAccel(file, id, KAccel::New); 
-  id = file->insertItem(Icon("fileopen.xpm"), i18n("&Open..."), this, SLOT(slotOpen()));
-  keys->changeMenuAccel(file, id, KAccel::Open); 
+
+  id = file->insertItem(Icon("filenew.xpm"), i18n("&New..."), ID_FILE_NEWFILE);
+  file->connectItem(ID_FILE_NEWFILE, this, SLOT(slotNew()));
+
+  id = file->insertItem(Icon("fileopen.xpm"), i18n("&Open..."), ID_FILE_OPEN);
+  file->connectItem(ID_FILE_OPEN, this, SLOT(slotOpen()));
+
   file->insertItem(i18n("Open recent"), recent, ID_FILE_RECENT);
   //file->setItemEnabled(ID_FILE_RECENT, false);
+
   file->insertSeparator();
-  id = file->insertItem(Icon("filefloppy.xpm"), i18n("&Save"), this, SLOT(slotSave()));
-  keys->changeMenuAccel(file, id, KAccel::Save); 
-  file->insertItem(i18n("Save &as..."), this, SLOT(slotSaveAs()));
+
+  id = file->insertItem(Icon("filefloppy.xpm"), i18n("&Save"), ID_FILE_SAVE);
+  file->connectItem(ID_FILE_SAVE, this, SLOT(slotSave()));
+
+  file->insertItem(i18n("Save &as..."), ID_FILE_SAVEAS);
+  file->connectItem(ID_FILE_SAVEAS, this, SLOT(slotSaveAs()));
+
   file->insertSeparator();
+
   id = file->insertItem(Icon("fileprint.xpm"), i18n("&Print..."), ID_FILE_PRINT);
   file->connectItem(ID_FILE_PRINT, this, SLOT(slotPrint()));
-  keys->changeMenuAccel(file, id, KAccel::Print); 
+
   file->insertSeparator();
-  id = file->insertItem(Icon("fileclose.xpm"), i18n("&Close"), this, SLOT(slotClose()));
-  keys->changeMenuAccel(file, id, KAccel::Close); 
-  id = file->insertItem(i18n("&Exit"), this, SLOT(slotQuit()));
-  keys->changeMenuAccel(file, id, KAccel::Quit); 
+
+  id = file->insertItem(Icon("fileclose.xpm"), i18n("&Close"), ID_FILE_CLOSE);
+  file->connectItem(ID_FILE_CLOSE, this, SLOT(slotClose()));
+
+  id = file->insertItem(i18n("&Exit"), ID_FILE_QUIT);
+  file->connectItem(ID_FILE_QUIT, this, SLOT(slotQuit()));
+
   menubar->insertItem(i18n("&File"), file);
 
   edit = new QPopupMenu;
   CHECK_PTR(edit);
+
   id = edit->insertItem(Icon("editcut.xpm"), i18n("Cu&t"), ID_EDIT_CUT);
   edit->connectItem(ID_EDIT_CUT, this, SLOT(slotCut()));
-  keys->changeMenuAccel(edit, id, KAccel::Cut); 
+
   id = edit->insertItem(Icon("editcopy.xpm"), i18n("&Copy"), ID_EDIT_COPY);
   edit->connectItem(ID_EDIT_COPY, this, SLOT(slotCopy()));
-  keys->changeMenuAccel(edit, id, KAccel::Copy); 
+
   id = edit->insertItem(Icon("editpaste.xpm"), i18n("&Paste"), ID_EDIT_PASTE);
   edit->connectItem(ID_EDIT_PASTE, this, SLOT(slotPaste()));
-  keys->changeMenuAccel(edit, id, KAccel::Paste); 
+
   id = edit->insertItem(i18n("Paste as &new"), ID_EDIT_PASTE_AS_NEW);
   edit->connectItem(ID_EDIT_PASTE_AS_NEW, grid, SLOT(editPasteAsNew()));
+
   id = edit->insertItem(i18n("Clea&r"),  this, SLOT(slotClear()));
+
   edit->insertSeparator();
-  id = edit->insertItem(i18n("Select &all"),  this, SLOT(slotSelectAll()));
-  keys->changeMenuAccel(edit, id, "Select All"); 
+
+  id = edit->insertItem(i18n("Select &all"), ID_EDIT_SELECT_ALL);
+  edit->connectItem(ID_EDIT_SELECT_ALL, this, SLOT(slotSelectAll()));
+
   menubar->insertItem(i18n("&Edit"), edit);
 
   zoom = new QPopupMenu;
@@ -488,11 +507,31 @@ KMenuBar *KIconEdit::setupMenuBar()
   menubar->insertItem(i18n("&Help"), help);
 
   menubar->setMenuBarPos(pprops->menubarpos);
+  updateMenuAccel();
   menubar->show();
   //connect( menubar, SIGNAL(activated(int)), SLOT(slotActions(int)));
 
   debug("setupMenuBar - done");
   return menubar;
+}
+
+void KIconEdit::updateMenuAccel()
+{
+  KAccel *keys = props(this)->keys; // = new KAccel( this ); 
+  CHECK_PTR(keys);
+
+  keys->changeMenuAccel(file, ID_FILE_NEWFILE, KAccel::New); 
+  keys->changeMenuAccel(file, ID_FILE_OPEN, KAccel::Open); 
+  keys->changeMenuAccel(file, ID_FILE_SAVE, KAccel::Save); 
+  keys->changeMenuAccel(file, ID_FILE_PRINT, KAccel::Print); 
+  keys->changeMenuAccel(file, ID_FILE_CLOSE, KAccel::Close); 
+  keys->changeMenuAccel(file, ID_FILE_QUIT, KAccel::Quit); 
+
+  keys->changeMenuAccel(edit, ID_EDIT_CUT, KAccel::Cut); 
+  keys->changeMenuAccel(edit, ID_EDIT_COPY, KAccel::Copy); 
+  keys->changeMenuAccel(edit, ID_EDIT_PASTE, KAccel::Paste); 
+  keys->changeMenuAccel(edit, ID_EDIT_SELECT_ALL, "Select All"); 
+
 }
 
 KToolBar *KIconEdit::setupToolBar()

@@ -272,7 +272,7 @@ void KIconEdit::slotConfigure(int id)
       if(c.exec())
       {
         Properties *pprops = props(this);
-        setupMenuBar();
+        updateMenuAccel();
         if(pprops->backgroundmode == QWidget::FixedPixmap)
         {
           QPixmap pix(pprops->backgroundpixmap.data());

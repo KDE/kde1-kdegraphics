@@ -166,6 +166,7 @@ protected:
   void writeConfig();
   void toggleTool(int id);
   void addRecent(const char *file);
+  void updateMenuAccel();
 
 #ifdef KWIZARD_VERSION
   KIconTemplateContainer *icontemplates;
