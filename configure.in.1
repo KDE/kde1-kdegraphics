@@ -29,6 +29,13 @@ test "$CCC" = "" && CCC="xlC DCC"
 AC_PROG_CXX
 AC_PROG_LN_S
 AC_PROG_RANLIB
+ 
+dnl libtool is only for C, so I must force him
+dnl to find the correct flags for C++
+ac_save_cc=$CC
+CC=$CXX
+AM_PROG_LIBTOOL dnl for libraries
+CC=$ac_save_cc
 
 dnl for NLS support. Call them in this order!
 dnl WITH_NLS is for the po files
@@ -65,6 +72,13 @@ AC_CHECK_BOOL
 dnl Checks for library functions. MISCOBJS is for kdecore
 AC_CHECK_KSIZE_T
 AC_CHECK_SETENV
+
+
+KDE_RPATH="-rpath \$(kde_libraries)"
+if test -n "$qt_libraries"; then
+ KDE_RPATH="$KDE_RPATH -rpath \$(qt_libraries)"
+fi
+AC_SUBST(KDE_RPATH) 
 
 dnl output files
 topdir=`pwd`
