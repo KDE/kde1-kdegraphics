@@ -5,43 +5,52 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-17 10:48+0100\n"
+"POT-Creation-Date: 1999-01-31 01:52+0100\n"
 "PO-Revision-Date: 1999-02-01 10:50-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 
+# marklist.cpp:38
 #: marklist.cpp:38
 msgid "Mark current page"
 msgstr "Merkja þessa síðu"
 
+# marklist.cpp:39
 #: marklist.cpp:39
 msgid "Mark all pages"
 msgstr "Merkja allar síður"
 
+# marklist.cpp:40
 #: marklist.cpp:40
 msgid "Mark even pages"
 msgstr "Merkja sléttar síður"
 
+# marklist.cpp:41
 #: marklist.cpp:41
 msgid "Mark odd pages"
 msgstr "Merkja odda síður"
 
+# marklist.cpp:42
 #: marklist.cpp:42
 msgid "Toggle page marks"
 msgstr "Víxla síðumerkingum"
 
+# marklist.cpp:43
 #: marklist.cpp:43
 msgid "Remove page marks"
 msgstr "Fjarlægja síðumerkingar"
 
+# marklist.cpp:367
 #: marklist.cpp:367
 msgid "Page"
 msgstr "Bls"
 
+# copyright.cpp:27
 #: copyright.cpp:27
 msgid "Copyright"
 msgstr "Höfundaréttur"
 
+# copyright.cpp:41 kghostview.cpp:618
 #: copyright.cpp:41 kghostview.cpp:618
 msgid ""
 "\n"
@@ -59,154 +68,188 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
-"\n" 
+"\n"
 "Íslensk þýðing: Þórarinn R. Einarsson (thori@mindspring.com)\n"
 "Þetta forrit er frítt.  Þú mátt dreifa því og/eða breyta skv.\n"
 "skilmálum GNU höfundaréttarleyfisins (General Public License)\n"
 "eins og það er gefið út af Samtökum um Frían Hugbúnað (FSF).\n"
-"\n" 
+"\n"
 "Þér er frjálst að nota útgáfu 2 eða síðar af þessu leyfi.\n"
 "Þessu forriti er dreift með von um að það komi þér að gagni,\n"
 "en án nokkurra skuldbindinga eða ábyrgðar um verð- eða notagildi.\n"
 "Skoðaðu GNU höfundarleyfið ef þér vantar frekar upplýsingar.\n"
-"\n"
+"\n"
 "Þú ættir að hafa fengið afrit af því með þessu forriti.  Ef ekki,\n"
 "skrifaðu þá Free Software Foundation, Inc.675 Mass Ave, Cambridge,\n"
 "MA 02139, USA."
 
+# interpreter.cpp:42
 #: interpreter.cpp:42
 msgid "General"
 msgstr "Almennt"
 
+# interpreter.cpp:79
 #: interpreter.cpp:79
 msgid "&Interpreter name"
 msgstr "Nafn &þýðanda"
 
+# interpreter.cpp:87
 #: interpreter.cpp:87
 msgid "&Antialiasing"
 msgstr "&Afstöllun"
 
+# interpreter.cpp:97
 #: interpreter.cpp:97
 msgid "Platform &fonts"
 msgstr "&Letur"
 
+# interpreter.cpp:107
 #: interpreter.cpp:107
 msgid "&Messages"
 msgstr "&Skilaboð"
 
+# interpreter.cpp:130
 #: interpreter.cpp:130
 msgid "Palette"
 msgstr "Litaspjald"
 
+# interpreter.cpp:152
 #: interpreter.cpp:152
 msgid "Colo&r"
 msgstr "Litu&r"
 
+# interpreter.cpp:161
 #: interpreter.cpp:161
 msgid "&Grayscale"
 msgstr "&Grátónar"
 
+# interpreter.cpp:169
 #: interpreter.cpp:169
 msgid "Monochrom&e"
 msgstr "S&varthvítt"
 
+# interpreter.cpp:192
 #: interpreter.cpp:192
 msgid "Backing"
 msgstr "Bak"
 
+# interpreter.cpp:214
 #: interpreter.cpp:214
 msgid "&Pixmap"
 msgstr "&Punktafylki"
 
+# interpreter.cpp:224
 #: interpreter.cpp:224
 msgid "&Backing store"
 msgstr "&Bak"
 
+# interpreter.cpp:314
 #: interpreter.cpp:314
 msgid "gs"
 msgstr "gs"
 
+# messages.cpp:29
 #: messages.cpp:29
 msgid "Ghostscript messages"
 msgstr "Ghostscript skilaboð"
 
+# messages.cpp:56
 #: messages.cpp:56
 msgid "&Clear"
 msgstr "&Hreinsa"
 
+# messages.cpp:59
 #: messages.cpp:59
 msgid "&Dismiss"
 msgstr "Hæ&tta við"
 
+# info.cpp:45
 #: info.cpp:45
 msgid "File name :"
 msgstr "Skáarnafn :"
 
+# info.cpp:53
 #: info.cpp:53
 msgid "Document title :"
 msgstr "Nafn síðu :"
 
+# info.cpp:61
 #: info.cpp:61
 msgid "Publication date :"
 msgstr "Dags. skjals :"
 
+# print.cpp:35
 #: print.cpp:35
 msgid "Printer setup"
 msgstr "Uppsetning prentara"
 
-#: print.cpp:65
+# print.cpp:65
+#: print.cpp:61
 msgid "&Printer name"
 msgstr "Nafn &prentara"
 
-#: print.cpp:77
+# print.cpp:77
+#: print.cpp:73
 msgid "&Spooler command"
 msgstr "&Skipun f. prentröð"
 
-#: print.cpp:89
+# print.cpp:89
+#: print.cpp:85
 msgid "&Environment variable"
 msgstr "&Umhverfisbreyta"
 
-#: print.cpp:160
+# print.cpp:160
+#: print.cpp:145
 msgid "Print to file"
 msgstr "Prenta í skrá"
 
-#: print.cpp:165
+# print.cpp:165
+#: print.cpp:150
 msgid "Pages"
 msgstr "Blaðsíður"
 
-#: print.cpp:191
+# print.cpp:191
+#: print.cpp:176
 msgid "&All"
 msgstr "&Allar"
 
-#: print.cpp:200
+# print.cpp:200
+#: print.cpp:185
 msgid "&Current"
 msgstr "&Þessa"
 
-#: print.cpp:208
+# print.cpp:208
+#: print.cpp:193
 msgid "&Marked"
 msgstr "&Merktar"
 
-#: print.cpp:217
+# print.cpp:217
+#: print.cpp:202
 msgid "&Range"
 msgstr "&Span"
 
-#: print.cpp:231
+# print.cpp:231
+#: print.cpp:216
 msgid "to"
 msgstr "til"
 
-#: print.cpp:244
+# print.cpp:244
+#: print.cpp:229
 msgid "Print document in re&verse order"
 msgstr "Prenta skjal í ö&fugri röð"
 
-#: print.cpp:261
+# print.cpp:261
+#: print.cpp:246
 msgid "&Setup ..."
 msgstr "&Uppsetning..."
 
-#: print.cpp:314
+# print.cpp:314
+#: print.cpp:304
 msgid "Range error"
 msgstr "Síðuspanvilla"
 
-#: print.cpp:315
+# print.cpp:315
+#: print.cpp:305
 msgid ""
 "The range of pages entered for printing\n"
 "can't be understood.\n"
@@ -222,56 +265,70 @@ msgstr ""
 "skjalinu sem unnið er með núna.  Þessar\n"
 "upplýsingar má finna á stöðuslánni.\n"
 
+# goto.cpp:54
 #: goto.cpp:54
 msgid "&Section"
 msgstr "&Grein"
 
+# goto.cpp:70
 #: goto.cpp:70
 msgid "&Page"
 msgstr "&Bls"
 
+# goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
+# kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
 #: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
 #: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
 #, c-format
 msgid "of %d"
 msgstr "af %d"
 
+# kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
 #: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Skammsnið"
 
+# kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
 #: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Langsnið"
 
+# kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
 #: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
 msgid "Seascape"
 msgstr "Á hlið"
 
+# kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
 #: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
 msgid "Upside down"
 msgstr "Á hvolfi"
 
+# viewcontrol.cpp:75
 #: viewcontrol.cpp:75
 msgid "magnification"
 msgstr "stækkun"
 
+# viewcontrol.cpp:85
 #: viewcontrol.cpp:85
 msgid "&Media"
 msgstr "&Miðill"
 
+# viewcontrol.cpp:93
 #: viewcontrol.cpp:93
 msgid "&Orientation"
 msgstr "&Afstaða"
 
+# viewcontrol.cpp:117
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Virkja"
 
+# main.cpp:25
 #: main.cpp:25
 msgid "Usage: "
 msgstr "Notkun: "
 
+# main.cpp:27
 #: main.cpp:27
 msgid ""
 " [filename] [siwtches]\n"
@@ -280,6 +337,7 @@ msgstr ""
 " [skráarnafn] [rofar]\n"
 "\n"
 
+# main.cpp:28
 #: main.cpp:28
 msgid ""
 "See KDE and Qt documentation for\n"
@@ -288,202 +346,252 @@ msgstr ""
 "Sjá KDE og Qt leiðbeiningar fyrir\n"
 "mögulegar skipanir\n"
 
+# main.cpp:30
 #: main.cpp:30
 msgid "Error on command line"
 msgstr "Villa á skipanalínu"
 
+# kghostview.cpp:206
 #: kghostview.cpp:206
 msgid "Document information"
 msgstr "Upplýsingar um skjal"
 
+# kghostview.cpp:220
 #: kghostview.cpp:220
 msgid "Page Setup"
 msgstr "Uppsetning síðu"
 
+# kghostview.cpp:360 kghostview.cpp:449
 #: kghostview.cpp:360 kghostview.cpp:449
 msgid "View Control"
 msgstr "Sýn"
 
+# kghostview.cpp:361 kghostview.cpp:454
 #: kghostview.cpp:361 kghostview.cpp:454
 msgid "Go To Page"
 msgstr "Fara á bls"
 
+# kghostview.cpp:362 kghostview.cpp:447
 #: kghostview.cpp:362 kghostview.cpp:447
 msgid "Zoom In"
 msgstr "Renna að"
 
+# kghostview.cpp:363 kghostview.cpp:448
 #: kghostview.cpp:363 kghostview.cpp:448
 msgid "Zoom Out"
 msgstr "Renna frá"
 
+# kghostview.cpp:364 kghostview.cpp:452
 #: kghostview.cpp:364 kghostview.cpp:452
 msgid "Next Page"
 msgstr "Næsta síða"
 
+# kghostview.cpp:365 kghostview.cpp:453
 #: kghostview.cpp:365 kghostview.cpp:453
 msgid "Prev Page"
 msgstr "Fyrri síða"
 
+# kghostview.cpp:366
 #: kghostview.cpp:366
 msgid "Scroll Up"
 msgstr "Renna upp"
 
+# kghostview.cpp:367
 #: kghostview.cpp:367
 msgid "Scroll Down"
 msgstr "Renna niður"
 
+# kghostview.cpp:368
 #: kghostview.cpp:368
 msgid "Scroll Left"
 msgstr "Renna til vinstri"
 
+# kghostview.cpp:369
 #: kghostview.cpp:369
 msgid "Scroll Right"
 msgstr "Renna til hægri"
 
+# kghostview.cpp:370 kghostview.cpp:450
 #: kghostview.cpp:370 kghostview.cpp:450
 msgid "Redisplay"
 msgstr "Birta aftur"
 
+# kghostview.cpp:413 kghostview.cpp:415
 #: kghostview.cpp:413 kghostview.cpp:415
 msgid "Not known"
 msgstr "Ekki þekkt"
 
+# kghostview.cpp:426
 #: kghostview.cpp:426
 msgid "Configure interpreter"
 msgstr "Stilla þýðanda"
 
+# kghostview.cpp:444
 #: kghostview.cpp:444
 msgid "New"
 msgstr "Nýtt"
 
+# kghostview.cpp:498
 #: kghostview.cpp:498
 msgid "&New"
 msgstr "&Nýtt"
 
+# kghostview.cpp:500
 #: kghostview.cpp:500
 msgid "&Open ..."
 msgstr "&Opna..."
 
+# kghostview.cpp:501
 #: kghostview.cpp:501
 msgid "Open &recent"
 msgstr "Opna &nýlegt"
 
+# kghostview.cpp:509
 #: kghostview.cpp:509
 msgid "Page Set&up ..."
 msgstr "Bls &uppsetning..."
 
+# kghostview.cpp:511
 #: kghostview.cpp:511
 msgid "&Print ..."
 msgstr "&Prenta..."
 
+# kghostview.cpp:519
 #: kghostview.cpp:519
 msgid "Zoom &in"
 msgstr "Renna &að"
 
+# kghostview.cpp:521
 #: kghostview.cpp:521
 msgid "Zoom &out"
 msgstr "Renna &frá"
 
+# kghostview.cpp:523
 #: kghostview.cpp:523
 msgid "&Zoom ..."
 msgstr "&Renna að/frá..."
 
+# kghostview.cpp:528
 #: kghostview.cpp:528
 msgid "&Info ..."
 msgstr "Upp&l..."
 
+# kghostview.cpp:533
 #: kghostview.cpp:533
 msgid "&Previous Page"
 msgstr "&Fyrri síða"
 
+# kghostview.cpp:535
 #: kghostview.cpp:535
 msgid "&Next page"
 msgstr "&Næsta síða"
 
+# kghostview.cpp:537
 #: kghostview.cpp:537
 msgid "&Go to page ..."
 msgstr "Fara á &síðu..."
 
+# kghostview.cpp:540
 #: kghostview.cpp:540
 msgid "Go to &start"
 msgstr "Fara á &byrjun"
 
+# kghostview.cpp:542
 #: kghostview.cpp:542
 msgid "Go to &end"
 msgstr "Fara á &enda"
 
+# kghostview.cpp:544
 #: kghostview.cpp:544
 msgid "&Read down"
 msgstr "Ni&ður"
 
+# kghostview.cpp:549
 #: kghostview.cpp:549
 msgid "Mark &current page"
 msgstr "Merkja &þessa síðu"
 
+# kghostview.cpp:552
 #: kghostview.cpp:552
 msgid "Mark &all pages"
 msgstr "Merkja &allar síður"
 
+# kghostview.cpp:554
 #: kghostview.cpp:554
 msgid "Mark &even pages"
 msgstr "Merkja &sléttar síður"
 
+# kghostview.cpp:556
 #: kghostview.cpp:556
 msgid "Mark &odd pages"
 msgstr "Merkja &odda síður"
 
+# kghostview.cpp:559
 #: kghostview.cpp:559
 msgid "&Toggle page marks"
 msgstr "&Víxla bls merkingum"
 
+# kghostview.cpp:562
 #: kghostview.cpp:562
 msgid "&Remove page marks"
 msgstr "Fja&rlægja merkingar"
 
+# kghostview.cpp:573
 #: kghostview.cpp:573
 msgid "Show &tool bar"
 msgstr "Sýna &tækjaslá"
 
+# kghostview.cpp:574
 #: kghostview.cpp:574
 msgid "Show st&atus bar"
 msgstr "Sýna &stöðuslá"
 
+# kghostview.cpp:575
 #: kghostview.cpp:575
 msgid "Show &page list"
 msgstr "Sýna &bls lista"
 
+# kghostview.cpp:577
 #: kghostview.cpp:577
 msgid "Configure &interpreter ..."
 msgstr "Stilla &þýðanda..."
 
+# kghostview.cpp:578
 #: kghostview.cpp:578
 msgid "Configure &key bindings ..."
 msgstr "Stilla flýtil&ykla..."
 
+# kghostview.cpp:580
 #: kghostview.cpp:580
 msgid "&Save options"
 msgstr "&Vistunarstillingar"
 
+# kghostview.cpp:587
 #: kghostview.cpp:587
 msgid "&About this application"
 msgstr "&Um þetta forrit"
 
+# kghostview.cpp:589
 #: kghostview.cpp:589
 msgid "&Help for this application"
 msgstr "&Hjálp fyrir þetta forrit"
 
+# kghostview.cpp:591
 #: kghostview.cpp:591
 msgid "&Copyright"
 msgstr "H&öfundaréttur"
 
+# kghostview.cpp:598
 #: kghostview.cpp:598
 msgid "&Go"
 msgstr "Á&fram"
 
+# kghostview.cpp:599
 #: kghostview.cpp:599
 msgid "&Pagemarks"
 msgstr "&Bls merki"
 
+# kghostview.cpp:608
 #: kghostview.cpp:608
 msgid ""
 " - the PostScript document viewer for\n"
@@ -508,71 +616,88 @@ msgstr ""
 "\n"
 "Sjá slóðina http://www.thep.physic.uni-mainz.de/~plass/gv/n"
 
+# kghostview.cpp:665
 #: kghostview.cpp:665
 msgid "New window ..."
 msgstr "Nýr gluggi..."
 
+# kghostview.cpp:668
 #: kghostview.cpp:668
 msgid "Open file ..."
 msgstr "Opna skjal..."
 
+# kghostview.cpp:676
 #: kghostview.cpp:676
 msgid "Print document ..."
 msgstr "Prenta skjal..."
 
+# kghostview.cpp:681
 #: kghostview.cpp:681
 msgid "Zoom in"
 msgstr "Renna að"
 
+# kghostview.cpp:684
 #: kghostview.cpp:684
 msgid "Zoom out"
 msgstr "Renna frá"
 
+# kghostview.cpp:689
 #: kghostview.cpp:689
 msgid "Go back"
 msgstr "Til baka"
 
+# kghostview.cpp:692
 #: kghostview.cpp:692
 msgid "Go forward"
 msgstr "Áfram"
 
+# kghostview.cpp:695
 #: kghostview.cpp:695
 msgid "Go to page ..."
 msgstr "Fara á bls..."
 
+# kghostview.cpp:700
 #: kghostview.cpp:700
 msgid "Go to start"
 msgstr "Fara á byrjun"
 
+# kghostview.cpp:703
 #: kghostview.cpp:703
 msgid "Go to end"
 msgstr "Fara á enda"
 
+# kghostview.cpp:706
 #: kghostview.cpp:706
 msgid "Read down the page"
 msgstr "Lesa niður blaðsíðuna"
 
+# kghostview.cpp:711
 #: kghostview.cpp:711
 msgid "Toggle this page mark"
 msgstr "Víxla þessari merkingu"
 
+# kghostview.cpp:733
 #: kghostview.cpp:733
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "100 af 100  Bls. 100 af 100"
 
+# kghostview.cpp:734
 #: kghostview.cpp:734
 #, c-format
 msgid "100 %"
 msgstr "100 %"
 
+# kghostview.cpp:735
 #: kghostview.cpp:735
 msgid "Upside Down"
 msgstr "Á hvolfi"
 
+# kghostview.cpp:760
 #: kghostview.cpp:760
 msgid "Malformed URL."
 msgstr "Gölluð slóð (URL)"
 
+# kghostview.cpp:772
 #: kghostview.cpp:772
 msgid ""
 "Already waiting\n"
@@ -585,26 +710,32 @@ msgstr ""
 "aðeins við eða stöðvaðu það\n"
 "sem er í vinnslu."
 
+# kghostview.cpp:781
 #: kghostview.cpp:781
 msgid "Could not start or find KFM."
 msgstr "Gat ekki keyrt eða fundið KFM"
 
+# kghostview.cpp:1269
 #: kghostview.cpp:1269
 msgid "Go to ..."
 msgstr "Fara á..."
 
+# kghostview.cpp:1515
 #: kghostview.cpp:1515
 msgid "Version 0.6"
 msgstr "Útgáfa 0.6"
 
+# kghostview.cpp:1516
 #: kghostview.cpp:1516
 msgid "Sorry, not ready yet"
 msgstr "Afsakið, ekki tilbúin enn"
 
+# kghostview.cpp:1523
 #: kghostview.cpp:1523
 msgid "About kghostview"
 msgstr "Um kghostview"
 
+# kghostview.cpp:1524
 #: kghostview.cpp:1524
 msgid ""
 "Version :\t0.6 alpha\n"
@@ -615,10 +746,12 @@ msgstr ""
 "Höf.  : Mark Donohoe\n"
 "Póstur: donohoe@kde.org"
 
+# kghostview.cpp:1576 kghostview.cpp:1696
 #: kghostview.cpp:1576 kghostview.cpp:1696
 msgid "Error printing"
 msgstr "Villa í prentun"
 
+# kghostview.cpp:1586
 #: kghostview.cpp:1586
 msgid ""
 "You chose to print all pages to a file.\n"
@@ -631,6 +764,7 @@ msgstr ""
 "og það sem þú ert að vinna í núna.\n"
 "Þú þarft ekki að prenta þessar síður út í nýja skrá."
 
+# kghostview.cpp:1599
 #: kghostview.cpp:1599
 msgid ""
 "No file name was given so\n"
@@ -639,17 +773,20 @@ msgstr ""
 "Þú gafst ekki upp neitt nafn fyrir\n"
 "þetta skjal þannig að ekkert var prentað.\n"
 
+# kghostview.cpp:1640
 #: kghostview.cpp:1640
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr "Stilltu hvaða umhverfisbreyta er látin stjórna prentaranafni."
 
+# kghostview.cpp:1661
 #: kghostview.cpp:1661
 #, c-format
 msgid "Print failure : %s"
 msgstr "Prentvilla : %s"
 
+# kghostview.cpp:1697
 #: kghostview.cpp:1697
 msgid ""
 "Printing failed because the list of\n"
@@ -658,40 +795,50 @@ msgstr ""
 "Prentun brást vegna þess að engar\n"
 "blaðsíður voru valdar til prentunar.\n"
 
+# kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
+# kghostview.cpp:2530
 #: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
 #: kghostview.cpp:2530
 msgid "of 1    "
 msgstr "af 1    "
 
+# kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
 #: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
 #, c-format
 msgid "of %d    "
 msgstr "af %d    "
 
+# kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
+# kghostview.cpp:2541
 #: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
 #: kghostview.cpp:2541
 #, c-format
 msgid "of %d  "
 msgstr "af %d  "
 
+# kghostview.cpp:2506
 #: kghostview.cpp:2506
 msgid "Sc.1 "
 msgstr "Nr. 1"
 
+# kghostview.cpp:2509
 #: kghostview.cpp:2509
 msgid "P.1 "
 msgstr "Bls. 1"
 
+# kghostview.cpp:2511 kghostview.cpp:2524
 #: kghostview.cpp:2511 kghostview.cpp:2524
 #, c-format
 msgid "P.%d "
 msgstr "Bls.%d "
 
+# kghostview.cpp:2526
 #: kghostview.cpp:2526
 #, c-format
 msgid "Sc.%d "
 msgstr "Nr. %d"
 
+# zoom.cpp:46
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Stækkun"
