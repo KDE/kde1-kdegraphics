@@ -36,6 +36,7 @@ KFract::KFract( int &argc, char **argv, const QString& rAppName) :
   center = width = height = 0.0;
   w = new KTopLevelWidget( "kfract" );
   CHECK_PTR( w );
+  setMainWidget( w );
 
   v = new DrawView( w );
   CHECK_PTR( v );
