@@ -15,28 +15,28 @@ msgstr ""
 
 #: viewer.cpp:77
 msgid "no image loaded"
-msgstr ""
+msgstr "nenaèitaný ¾iadny obrázok"
 
 #: viewer.cpp:85 viewer.cpp:540
 msgid "Ready"
-msgstr ""
+msgstr "Pripravený"
 
 #: viewer.cpp:186
 msgid "Net saving not yet implemented"
-msgstr ""
+msgstr "Sie»ové ukladanie neimplementované"
 
 #: viewer.cpp:194
 #, c-format
 msgid "%s: written"
-msgstr ""
+msgstr "%s: zapísaný"
 
 #: viewer.cpp:232
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Zadajte faktor zväè¹enia (100 = 1x):"
 
 #: viewer.cpp:236
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Nesprávny faktor"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -48,349 +48,206 @@ msgstr "&Zväè¹i»"
 
 #: viewer.cpp:294 viewer.cpp:311
 msgid "&Transform"
-msgstr ""
+msgstr "&Transformova»"
 
 #: viewer.cpp:295 viewer.cpp:312
 msgid "To &Desktop"
 msgstr "Na &plochu"
 
 #: viewer.cpp:297
-#, fuzzy
 msgid "Fi&lter"
-msgstr "Vytapetov&a»"
+msgstr "Fi&lter"
 
 #: viewer.cpp:314
 msgid "F&ilter"
-msgstr ""
+msgstr "F&ilter"
 
 #: viewer.cpp:318
-#, fuzzy
 msgid "&Images"
-msgstr "O&brázok"
+msgstr "O&brázky"
 
 #: viewer.cpp:333
-#, fuzzy
 msgid "&Open.."
-msgstr "&Otvori» súbor.."
+msgstr "&Otvori».."
 
 #: viewer.cpp:334
 msgid "&Save As.."
-msgstr ""
+msgstr "&Ulo¾i» ako.."
 
 #: viewer.cpp:340
 msgid "&Full Screen"
-msgstr ""
+msgstr "&Celá obrazovka"
 
 #: viewer.cpp:343
-#, fuzzy
 msgid "&Zoom..."
-msgstr "&Zväè¹i»"
+msgstr "&Zväè¹i»..."
 
 #: viewer.cpp:344
-#, c-format
 msgid "Zoom &in 10%"
-msgstr ""
+msgstr "Zväè¹i» &o 10%"
 
 #: viewer.cpp:345
 #, c-format
 msgid "Zoom &out 10%"
-msgstr ""
+msgstr "Zmen¹&i» o 10%"
 
 #: viewer.cpp:346
 msgid "&Double size"
-msgstr ""
+msgstr "&Dvojnásobná veµkos»"
 
 #: viewer.cpp:347
 msgid "&Half size"
-msgstr ""
+msgstr "&Polovièná veµkos»"
 
 #: viewer.cpp:349
 msgid "&Reset"
-msgstr ""
+msgstr "&Reset"
 
 #: viewer.cpp:352
-#, fuzzy
 msgid "Rotate &clockwise"
 msgstr "&V smere hod. ruèièiek"
 
 #: viewer.cpp:354
-#, fuzzy
 msgid "Rotate &anti-clockwise"
 msgstr "Prot&i smeru hod. ruèièiek"
 
 #: viewer.cpp:357
 msgid "Flip &vertical"
-msgstr ""
+msgstr "Prevráti» &vertikálne"
 
 #: viewer.cpp:359
 msgid "Flip &horizontal"
-msgstr ""
+msgstr "Prevráti» &horizontálne"
 
 #: viewer.cpp:362
-#, fuzzy
 msgid "&Tile"
 msgstr "Vytapetov&a»"
 
 #: viewer.cpp:363
-#, fuzzy
 msgid "&Max"
-msgstr "&Max. veµkos»"
+msgstr "&Max"
 
 #: viewer.cpp:364
-#, fuzzy
 msgid "Max&pect"
-msgstr "Maxpect"
+msgstr "Max&pect"
 
 #: viewer.cpp:367
 msgid "&List.."
-msgstr ""
+msgstr "&Zoznam.."
 
 #: viewer.cpp:371
 msgid "&Previous"
-msgstr ""
+msgstr "&Predchádzajúci"
 
 #: viewer.cpp:372
 msgid "&Next"
-msgstr ""
+msgstr "&Nasledujúci"
 
 #: viewer.cpp:374
 msgid "&Slideshow On/Off"
-msgstr ""
+msgstr "&Premietanie Zap/Vyp"
 
 #: viewer.cpp:379
-#, fuzzy
 msgid "&About KView.."
-msgstr "Informácie o KView"
+msgstr "&Informácie o KView"
 
 #: viewer.cpp:426 viewer.cpp:433
 msgid "Existing transfer not yet complete."
-msgstr ""
+msgstr "Existujúci prenos nekompletný."
 
 #: viewer.cpp:447
 msgid "Couldn't get temporary transfer name."
-msgstr ""
+msgstr "Nemô¾em získa» doèasné meno prenosu."
 
 #: viewer.cpp:486
 msgid "Transfer error: "
-msgstr ""
+msgstr "Chyba prenosu: "
 
 #: viewer.cpp:558
 msgid "Loading.."
-msgstr ""
+msgstr "Nahrávam.."
 
 #: colour.cpp:29
 msgid "Brightening..."
-msgstr ""
+msgstr "Zosvetµujem..."
 
 #: colour.cpp:43
 msgid "Intensity:Brighten"
-msgstr ""
+msgstr "Intenzita:Zosvetli»"
 
 #: colour.cpp:63
 msgid "Darkening..."
-msgstr ""
+msgstr "Stmavujem..."
 
 #: colour.cpp:76
 msgid "Intensity:Darken"
-msgstr ""
+msgstr "Intenzita:Stmavi»"
 
 #: colour.cpp:114
 msgid "Converting to Greyscale..."
-msgstr ""
+msgstr "Mapujem do ¹edej ¹kály..."
 
 #: colour.cpp:143
 msgid "Greyscale"
-msgstr ""
+msgstr "©edá ¹kála"
 
 #: colour.cpp:161
 msgid "Smoothing..."
-msgstr ""
+msgstr "Vyhladzujem..."
 
 #: colour.cpp:227
 msgid "Smooth"
-msgstr ""
+msgstr "Vyhladi»"
 
 #: colour.cpp:248
 msgid "Enter gamma value (0...1):"
-msgstr ""
+msgstr "Zadajte gamma hodnotu (0...1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Korigujem gamma faktor..."
 
 #: colour.cpp:305
 msgid "Gamma Correct..."
-msgstr ""
+msgstr "Gamma korekcia"
 
 #: ilistdlg.cpp:57
 msgid "Prev"
-msgstr ""
+msgstr "Pred"
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
-msgstr ""
+msgstr "Zam&ie¹a»"
 
 #: ilistdlg.cpp:66
 msgid "Next"
-msgstr ""
+msgstr "Nasl"
 
 #: ilistdlg.cpp:70
 msgid "Start slide"
-msgstr ""
+msgstr "Spusti» prem."
 
 #: ilistdlg.cpp:75
 msgid "Interval.."
-msgstr ""
+msgstr "Interval.."
 
 #: ilistdlg.cpp:80
 msgid "Loop"
-msgstr ""
+msgstr "Opakovanie"
 
 #: ilistdlg.cpp:94
-#, fuzzy
 msgid "Image List"
-msgstr "O&brázok"
+msgstr "Zoznam obrázkov"
 
 #: ilistdlg.cpp:268
 msgid "Stop &slide"
-msgstr ""
+msgstr "Zastavi» &prem."
 
 #: ilistdlg.cpp:276
 msgid "Start &slide"
-msgstr ""
+msgstr "&Spusti» prem."
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
-msgstr ""
+msgstr "Èas medzi políèkami (sek):"
 
-#~ msgid "Open &URL.."
-#~ msgstr "Otvori» &URL.."
-
-#~ msgid "&Rotate"
-#~ msgstr "Otoè&i»"
-
-#~ msgid "&Toggle Menu"
-#~ msgstr "&Ukáza»/skry» menu"
-
-#~ msgid "&Size Window"
-#~ msgstr "Veµko&s» okna"
-
-#~ msgid "I&mage Info"
-#~ msgstr "Infor&mácie o obr."
-
-#~ msgid "&in"
-#~ msgstr "&v"
-
-#~ msgid "&out"
-#~ msgstr "v&on"
-
-#~ msgid "M&axpect"
-#~ msgstr "M&axpect"
-
-#~ msgid "&Contents"
-#~ msgstr "&Obsah"
-
-#~ msgid "Clockwise"
-#~ msgstr "V smere ruèièkových hodiniek"
-
-#~ msgid "Anti-clock"
-#~ msgstr "Proti smeru ruèièkových hodiniek"
-
-#~ msgid "Mirror X"
-#~ msgstr "Zrkadli» X"
-
-#~ msgid "Mirror Y"
-#~ msgstr "Zrkadli» Y"
-
-#~ msgid "Max Size"
-#~ msgstr "Max. veµkos»"
-
-#~ msgid "Zoom"
-#~ msgstr "Zväè¹i»"
-
-#~ msgid "Rotate"
-#~ msgstr "Otoèi»"
-
-#~ msgid "To Desktop"
-#~ msgstr "Na plochu"
-
-#~ msgid "Fit window size to pixmap size"
-#~ msgstr "Veµkos» okna na veµkos» pixmapy"
-
-#~ msgid "Fit pixmap size to window size"
-#~ msgstr "Veµkos» pixmapy na veµkos» okna"
-
-#~ msgid "KView Display Manager"
-#~ msgstr "KView mana¾ér"
-
-#~ msgid "Open &URL..."
-#~ msgstr "Otvori» URL..."
-
-#~ msgid "Image Caching"
-#~ msgstr "Ke¹ovanie obrázkov"
-
-#~ msgid "Cache Size"
-#~ msgstr "Veµkos» ke¹e"
-
-#~ msgid "Save Options"
-#~ msgstr "Ulo¾i» nastavenie"
-
-#~ msgid "New Window"
-#~ msgstr "Nové okno"
-
-#~ msgid "open new file"
-#~ msgstr "otvori» nový súbor"
-
-#~ msgid "shrink -50%"
-#~ msgstr "zmen¹i» -50%"
-
-#~ msgid "magnify +50%"
-#~ msgstr "zväè¹i» +50%"
-
-#~ msgid "size Window"
-#~ msgstr "veµkos» okna"
-
-#~ msgid "launch help"
-#~ msgstr "otvori» pomocníka"
-
-#~ msgid "first pic"
-#~ msgstr "prvý obr."
-
-#~ msgid "last pic"
-#~ msgstr "posledný obr."
-
-#~ msgid "prev pic"
-#~ msgstr "predch. obr."
-
-#~ msgid "next pic"
-#~ msgstr "nasled. obr."
-
-#~ msgid "start picture show"
-#~ msgstr "spusti» ukazovanie obr."
-
-#~ msgid "random picture show"
-#~ msgstr "náhodné ukazovanie obr."
-
-#~ msgid "stop picture show"
-#~ msgstr "ukonèi» ukazovanie obr."
-
-#~ msgid "slow"
-#~ msgstr "pomalé"
-
-#~ msgid "fast"
-#~ msgstr "rýchle"
-
-#~ msgid "Output Device"
-#~ msgstr "Výstupné zariadenie"
-
-#~ msgid " Files: %d"
-#~ msgstr " Súborov: %d"
-
-#~ msgid " Format: %s Size: %dx%d"
-#~ msgstr " Formát: %s Rozmery: %dx%d"
-
-#~ msgid "Window %d"
-#~ msgstr "Okno %d"
-
-#~ msgid "(c) 1996 - 1998 by \n"
-#~ msgstr "(c) 1996 - 1998 \n"
