@@ -116,7 +116,7 @@ msgstr "&Gråskaler"
 
 #: kiconedit.cpp:477
 msgid "&Icon"
-msgstr "&Ikon"
+msgstr "I&kon"
 
 #: kiconedit.cpp:481
 msgid "Freehand"
@@ -188,7 +188,7 @@ msgstr "&Statusbjælke Til/Fra"
 
 #: kiconedit.cpp:513
 msgid "&Save options"
-msgstr "&Gem indstillinger"
+msgstr "Ge&m indstillinger"
 
 #: kiconedit.cpp:520
 msgid ""

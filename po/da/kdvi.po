@@ -102,7 +102,7 @@ msgstr "Å&bn ..."
 
 #: kdvi.cpp:181
 msgid "Open &recent"
-msgstr "Åbne &nylige"
+msgstr "Åbn n&ylige"
 
 #: kdvi.cpp:183
 msgid "&Print ..."
@@ -118,7 +118,7 @@ msgstr "F&ormindsk"
 
 #: kdvi.cpp:193
 msgid "&Fit to page"
-msgstr "&Tilpas til siden"
+msgstr "Til&pas til siden"
 
 #: kdvi.cpp:194
 msgid "Fit to page &width"
@@ -138,7 +138,7 @@ msgstr "&Næste"
 
 #: kdvi.cpp:205
 msgid "&First"
-msgstr "&Første"
+msgstr "Fø&rste"
 
 #: kdvi.cpp:206
 msgid "&Last"

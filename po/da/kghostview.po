@@ -370,7 +370,7 @@ msgstr "Å&bn ..."
 
 #: kghostview.cpp:501
 msgid "Open &recent"
-msgstr "Åbn &nylig"
+msgstr "Åbn n&ylig"
 
 #: kghostview.cpp:509
 msgid "Page Set&up ..."

@@ -71,7 +71,7 @@ msgstr "&Lysbilledfremvisning til/fra"
 
 #: viewer.cpp:324
 msgid "&Zoom"
-msgstr "&Forstør"
+msgstr "For&stør"
 
 #: viewer.cpp:325
 msgid "&Transform"
@@ -120,7 +120,7 @@ msgstr "&Forstør..."
 #: viewer.cpp:376
 #, c-format
 msgid "Zoom &in 10%"
-msgstr "&Forstør 10%"
+msgstr "For&stør 10%"
 
 #: viewer.cpp:378
 #, c-format

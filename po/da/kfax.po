@@ -60,11 +60,11 @@ msgstr "&Tilføj fax..."
 
 #: kfax.cpp:408
 msgid "Open &URL..."
-msgstr "Åbn &URL..."
+msgstr "Åbn U&RL..."
 
 #: kfax.cpp:409
 msgid "Save to U&RL..."
-msgstr "&Gem til U&RL..."
+msgstr "&Gem til URL..."
 
 #: kfax.cpp:410
 msgid "&Close Fax"
@@ -88,15 +88,15 @@ msgstr "&Sidste side"
 
 #: kfax.cpp:422
 msgid "&Rotate Page"
-msgstr "&Roter side"
+msgstr "R&oter side"
 
 #: kfax.cpp:423
 msgid "&Mirror Page"
-msgstr "Spejlvend side"
+msgstr "Spejl&vend side"
 
 #: kfax.cpp:424
 msgid "&Flip Page"
-msgstr "&Flip side"
+msgstr "F&lip side"
 
 #: kfax.cpp:426
 msgid "Zoom &in"
