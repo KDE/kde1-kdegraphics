@@ -24,7 +24,7 @@
 #include"colour.h"
 
 KView::KView(int argc, char **argv)
-	: _app( argc, argv, "kView" ),
+	: _app( argc, argv, "kview" ),
 	_filters( new KFilterList ),
 	_menuFact( new KFiltMenuFactory( _filters ) )
 {
