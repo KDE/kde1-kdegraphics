@@ -20,12 +20,6 @@
 void WViewPort::registerFormats()
 {
 
-//#ifdef HAVE_LIBGIF
-#if 0
-        QImageIO::defineIOHandler("GIF", "^GIF[0-9][0-9][a-z]", 0, 
-                read_gif_file, NULL);
-#endif
-
 #ifdef HAVE_LIBJPEG
         QImageIO::defineIOHandler("JFIF","^\377\330\377\340..JFIF", 0,
                 read_jpeg_jfif, NULL);

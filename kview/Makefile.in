@@ -29,7 +29,7 @@ distclean:     clean
 	$(MAKE) -C pics distclean
 	-rm -f Makefile
 
-LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif @LIBJPEG@ @LIBSOCKET@ $(KDE_RPATH)
+LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext @LIBJPEG@ @LIBSOCKET@ $(KDE_RPATH)
 CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
@@ -58,8 +58,8 @@ MINIDIR = @kde_minidir@
 
 ###### No need to edit below this line #############3
 
-FORMATSRC= jpeg.cpp gif.cpp kpng.cpp eps.cpp netpbm.cpp
-FORMATOBJ= jpeg.o gif.o kpng.o eps.o netpbm.o
+FORMATSRC= jpeg.cpp kpng.cpp eps.cpp netpbm.cpp
+FORMATOBJ= jpeg.o kpng.o eps.o netpbm.o
 
 ######
 
