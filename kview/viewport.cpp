@@ -61,24 +61,23 @@ WViewPort::WViewPort(const char *file, QWidget *parent,
 	lb_popup->insertItem("Fit pixmap size to window size", this,
 			     SLOT(fitPixmapToWindow()));
 
-	QPixmapCache::setCacheLimit( KVConfigHandler::cacheSize );
 
+	if ( KVConfigHandler::cachingOn == 1)
+	  {
+	    QPixmapCache::setCacheLimit( KVConfigHandler::cacheSize );
+	    //printf("cache size %d\n", KVConfigHandler::cacheSize);
+	  }
+	//printf("cachingOn %d\n", KVConfigHandler::cachingOn);
 	image = new QPixmap();
 	imagefile="";
 	
 	load(file);
 }
 
-WViewPort::~WViewPort()
-{
-      if(oldContext)
-            QColor::destroyAllocContext( oldContext );   
-      delete image;
-}
 
 bool WViewPort::load(const char *filename)
 {
-	bool ret=0;
+	bool ret=0,ret2=0;
 	QString save=imagefile;
 	QPixmap *copyimage;
 
@@ -99,38 +98,42 @@ bool WViewPort::load(const char *filename)
 		oldContext = QColor::enterAllocContext();
 		
 		copyimage = 0L;
-
+	        
 		//query if the image "filename" is in cache 
 		copyimage = QPixmapCache::find(filename);
 		
-		if (copyimage==0L)
+		if (copyimage==0L || KVConfigHandler::cachingOn==0)
 		  { //image not cached 
-		    
+		    // printf("load\n");
 		    ret=image->load(filename);
 		    setPixmap(*image);
-		    if (ret==TRUE)
+		    if (ret==TRUE && KVConfigHandler::cachingOn==1)
 		      {
 			// picture load was succesful.
 			// let's put it in cache.
-
+			
 			// make a duplicate of image, because 
 			// QPixmapCache doesn't allocate memory,
 			// and put the duplicate in the cache.
-
-		        // Stephan: I disabled the caching for now, 
-			// because it has a big, fat color problem
-			// under 256 color displays. The color context
-			// is not saved. So, you always get the colors
-			// or the latest loaded pixmap.
-			// QPixmapCache::insert(filename,new QPixmap(*image));
-
-			// Rem. On cache removal, the allocated 
-			// memory is freed by QPixmapCache
+			copyimage = new QPixmap; 
+			*copyimage = *image;    
+			ret2=QPixmapCache::insert(filename,copyimage);
+			if (ret2==TRUE)
+			  {
+			    //printf("caching succesful %s \n", filename);
+			  }
+			else
+			  {
+			    //printf("caching NOT succesful \n");
+			    delete copyimage;
+			  }
+			    // Rem. On cache removal, the allocated 
+			    // memory is freed by QPixmapCache
 		      }
-		  }
+		  }  
 		else
 		  { //image cached 
-
+		    printf("cached %s\n", filename);
 		    *image = *copyimage; //no pionter copy, copy contructor!
 		    setPixmap(*image);
 		    ret = TRUE;
@@ -150,6 +153,7 @@ bool WViewPort::load(const char *filename)
 	if(!ret)
 		imagefile = save;
 
+	
 	return ret;
 }
 

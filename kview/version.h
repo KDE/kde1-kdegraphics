@@ -1,4 +1,3 @@
-#define KVIEW_VERSION	"0.11.4"
 #define VERSIONNR 0
 #define SUBVERSIONNR 11
 #define PATCHLEVEL 4

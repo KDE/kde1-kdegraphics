@@ -4,6 +4,14 @@
 //
 // Martin Hartig
 
+#define ID_CACHING   1
+#define ID_CACHESIZE 2
+
+#define ID_CZ_256  256
+#define ID_CZ_1024 1024
+#define ID_CZ_4096 4096
+#define ID_CZ_8192 8192
+
 
 #include <qevent.h>
 #include <stdio.h>
@@ -39,7 +47,7 @@ Fileman::Fileman(const char *name, WView *)
 {
   setMinimumSize(250, 350);
   setMaximumSize(700, 1400);  
-  setCaption( kapp->getCaption() );
+  setCaption("KView Display Manager");
 
   // count all display manager windows
   manList.setAutoDelete(FALSE);
@@ -53,10 +61,10 @@ Fileman::Fileman(const char *name, WView *)
   initToolBar();
   initStatusBar();
   initMainWidget();
+ 
   setFrameBorderWidth (1);
   setView(mainwidget, FALSE);
 
-  showrunning = FALSE;  
   // fill the listbox
   updateListbox(3);
   
@@ -67,17 +75,19 @@ Fileman::Fileman(const char *name, WView *)
   resize(sizeX,sizeY);
   show();
   resize(sizeX,sizeY);
-
+  doPositioning();
+  
   // other stuff
+  showrunning = FALSE;
   fileList.setAutoDelete( TRUE );
   timerDelay = KVConfigHandler::delay;
   lastPath = 0;
 
   // DnD support 
-  dropZone = new KDNDDropZone( this , DndURL);
+  KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
   connect(dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
 		this, SLOT( slotDropEvent( KDNDDropZone *) ) ); 
-
+ 
 }
 
 void Fileman::initMenuBar()
@@ -88,21 +98,48 @@ void Fileman::initMenuBar()
   file->insertItem("Open URL...",  this, SLOT(slotOpenUrl()));
   file->insertItem("Quit",         this, SLOT(closeWindow()));
 
-  //options = new QPopupMenu();
-  //options->insertItem("Save Options", this, SLOT(saveOptions()));
-
-  QPopupMenu *help = kapp->getHelpMenu(true, 0);
-
-  connect (help, SIGNAL (activated (int)), SLOT (menuCallback (int))); 
-/*
+  cacheSize = new QPopupMenu();
+  CHECK_PTR( cacheSize );
+  cacheSize->insertItem("256 KB", ID_CZ_256);
+  if (KVConfigHandler::cacheSize==256)
+    cacheSize->setItemChecked(ID_CZ_256,  TRUE);
+  cacheSize->insertItem("1024 KB", ID_CZ_1024);
+  if (KVConfigHandler::cacheSize==1024)
+    cacheSize->setItemChecked(ID_CZ_1024,  TRUE);
+  cacheSize->insertItem("4096 KB", ID_CZ_4096);
+  if (KVConfigHandler::cacheSize==4096)
+    cacheSize->setItemChecked(ID_CZ_4096,  TRUE);
+  cacheSize->insertItem("8192 KB", ID_CZ_8192);
+  if (KVConfigHandler::cacheSize==1892)
+    cacheSize->setItemChecked(ID_CZ_8192,  TRUE);
+  connect(cacheSize, SIGNAL( activated( int ) ), this,
+	  SLOT( setCacheSize( int ) ) );
+  
+  
+  options = new QPopupMenu();
+  CHECK_PTR( options );
+  options->insertItem("Image Caching" ,ID_CACHING);
+  connect(options, SIGNAL( activated( int ) ), this,
+	  SLOT( imageCaching( int ) ) );
+  if (KVConfigHandler::cachingOn == 0)
+    options->setItemChecked( ID_CACHING, FALSE );
+  else
+    options->setItemChecked( ID_CACHING, TRUE );
+ 
+  options->insertItem("Cache Size", cacheSize);
+  options->insertSeparator();
+  options->insertItem("Save Options", this, SLOT(saveOptions()));
+		      
+ 
   help = new QPopupMenu ();
   help->insertItem("About KView",  this, SLOT(aboutKview()));
   help->insertItem("Help on KView",this, SLOT(invokeHelp()));
-*/
+
   
   menubar = new KMenuBar(this,"menubar");
   menubar->insertItem("File", file);
-  //menubar->insertItem("Options", options);
+  menubar->insertItem("Options", options);
+  //menubar->insertItem("Cache", cacheSize);
   menubar->insertItem("Help", help);
   setMenu(menubar);
 }
@@ -198,7 +235,7 @@ void Fileman::initToolBar()
   ktoolbar2->insertButton(pixmap, ID_T_RANDOMSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(randomShow()), TRUE,
-			"stop picture show");
+			"random picture show");
   
   pixmap = theApp->getIconLoader()->loadIcon("stop.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_STOPSHOW,
@@ -570,9 +607,7 @@ void Fileman::slotOpen()
 void Fileman::slotOpenUrl()
 {
   DlgLocation *locDlg = new DlgLocation("Enter URL to image", "");
-  QString sTemp = kapp->getCaption();
-  sTemp += ": enter URL...";
-  locDlg->setCaption( sTemp );	
+  locDlg->setCaption("kview: enter URL..");	
   locDlg->show();	
   
   QString result = locDlg->getText();
@@ -614,13 +649,11 @@ void Fileman::aboutKview()
 {
   QString text;
   text.sprintf("kview %d.%d.%d \n",VERSIONNR,SUBVERSIONNR,PATCHLEVEL);
-  text += "(c) 1996, 1997 by \n";
-  text += "Sirtaj Singh Kang (taj@kde.org)\n";
-  text += "Martin Hartig (hartig@mathematik.uni-kl.de)";
-  QString sTemp = "About ";
-  sTemp += kapp->getCaption();
-  QMessageBox::about( NULL, sTemp, text.data() );
-			
+  text += "(c) 1996 - 1998 by \n";
+  text += "Sirtaj Singh Kang,  <taj@kde.org>\n";
+  text += "Martin Hartig,  <martinhartig@yahoo.com>";
+  QMessageBox::message("About kview", text.data(),
+			"Ok"); 
 }
 
 void Fileman::saveOptions()
@@ -630,6 +663,55 @@ void Fileman::saveOptions()
   KVConfigHandler::frameSizeY  = height();
   KVConfigHandler::delay       = timerDelay;
   KVConfigHandler::writeConfigEntries();
+  imageCaching(-1);
+}
+
+void Fileman::imageCaching(int i)
+{
+  if (KVConfigHandler::cachingOn == 0)
+    {
+      KVConfigHandler::cachingOn = 1;
+      options->setItemChecked( ID_CACHING, TRUE );
+    }
+  else
+    {
+      KVConfigHandler::cachingOn = 0;
+      options->setItemChecked( ID_CACHING, FALSE );
+    }  
+}
+
+void Fileman::setCacheSize(int i)
+{
+  switch(i){
+  case ID_CZ_256:
+    cacheSize->setItemChecked(ID_CZ_256,  TRUE);
+    cacheSize->setItemChecked(ID_CZ_1024, FALSE);
+    cacheSize->setItemChecked(ID_CZ_4096, FALSE);
+    cacheSize->setItemChecked(ID_CZ_8192, FALSE);
+    KVConfigHandler::cacheSize=256;
+    break;
+  case ID_CZ_1024:
+    cacheSize->setItemChecked(ID_CZ_256,  FALSE);
+    cacheSize->setItemChecked(ID_CZ_1024, TRUE);
+    cacheSize->setItemChecked(ID_CZ_4096, FALSE);
+    cacheSize->setItemChecked(ID_CZ_8192, FALSE);
+    KVConfigHandler::cacheSize=1024;
+    break;
+  case ID_CZ_4096:
+    cacheSize->setItemChecked(ID_CZ_256,  FALSE);
+    cacheSize->setItemChecked(ID_CZ_1024, FALSE);
+    cacheSize->setItemChecked(ID_CZ_4096, TRUE);
+    cacheSize->setItemChecked(ID_CZ_8192, FALSE);
+    KVConfigHandler::cacheSize=4096;
+    break;
+  case ID_CZ_8192:
+    cacheSize->setItemChecked(ID_CZ_256,  FALSE);
+    cacheSize->setItemChecked(ID_CZ_1024, FALSE);
+    cacheSize->setItemChecked(ID_CZ_4096, FALSE);
+    cacheSize->setItemChecked(ID_CZ_8192, TRUE);
+    KVConfigHandler::cacheSize=8192;
+    break;    
+  }
 }
 
 
@@ -794,13 +876,14 @@ Fileman::~Fileman()
   --manCount;
 
   //clean up
-  delete dropZone;
+  //delete dropZone;
 
   delete ktoolbar1;
   delete ktoolbar2;
   delete statusbar;
 
-  // delete file;
+  delete file;
+  delete help;
   delete menubar;
   
   delete listbox;
@@ -809,7 +892,7 @@ Fileman::~Fileman()
   delete slider;
   if (lineEdit!=0L) delete lineEdit;
   delete mainwidget;	  
-  // delete imageWindow;
+  delete imageWindow;
 }
 
 void Fileman::closeEvent(QCloseEvent *)
@@ -819,7 +902,7 @@ void Fileman::closeEvent(QCloseEvent *)
 
 void Fileman::closeWindow()
 {
-  saveOptions();
+  //saveOptions();
   theApp->quit();
 }
 
@@ -983,7 +1066,4 @@ void Fileman::slotDropEvent( KDNDDropZone * dropZone ){
 	updateListbox(3);
 }
 
-void Fileman::menuCallback(int item) {
-  if ( item == 2 )
-	aboutKview();
-}
+

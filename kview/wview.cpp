@@ -22,10 +22,8 @@
 #include "QwViewport.h"
 #include "viewport.h"
 #include "kerror.h"
-#include "version.h"
 
 #include <kurl.h>
-
 //extern    QStrList  Fileman::fileList;
 
 int winCount=0;
@@ -78,12 +76,12 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 	ImageRoot = new QPopupMenu;
 
 	// Main Menu
-/*
+
 	Menu->insertItem("&File", File);
 	Menu->insertItem("&Image", Image);
 	Menu->insertSeparator();
 	Menu->insertItem("&Help", Help);
-*/
+
 	// File Menu
 
 	File->insertItem("&Open File..", this, SLOT(loadImage()), CTRL+Key_O);
@@ -125,14 +123,7 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 
 	// Help Menu
 
-//	Help = kapp->getHelpMenu(true, 0 ); 
-
-	//id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
-
-    	Menu->insertItem("&File", File);
-        Menu->insertItem("&Image", Image);
-        Menu->insertSeparator();
-        Menu->insertItem("&Help", Help); 
+	id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
 
 
 	// Toggle menu if Image is clicked.
@@ -162,7 +153,7 @@ WView::WView(QWidget *parent, const char *name, WFlags f)
 
 	// DND Destination
 
-        dropZone = new KDNDDropZone( this , DndURL);
+        KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
 
         connect( dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
 		this, SLOT( slotDropEvent( KDNDDropZone *) ) ); 
@@ -202,7 +193,7 @@ bool WView::loadLocal(const char *filename)
 		return FALSE;
 	}
 
-	if( !file.isReadable() ) 	   {
+	if( !file.isReadable() ) {
 		emit kviewError( KViewError::accessDenied );
 		if (!loaded) sendCloseSignal();
 		loadSuccess = FALSE;
@@ -243,9 +234,7 @@ void WView::loadImage()
 void WView::loadURL()
 {
 	DlgLocation *locDlg = new DlgLocation("Enter URL to image", "");
-        QString sTemp = kapp->getCaption();
-        sTemp += ": enter URL...";
-	locDlg->setCaption( sTemp );	
+	locDlg->setCaption("kview: enter URL..");	
 	locDlg->show();	
 
 	QString result = locDlg->getText();
@@ -387,7 +376,6 @@ void WView::tileToDesktop(){
 WView::~WView(){
 	windowList.removeRef(this);
 	--winCount;
-        delete dropZone;
 }
 
 

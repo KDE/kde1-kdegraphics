@@ -58,10 +58,11 @@ public:
 public slots:
 
   // menubar action
-  void menuCallback(int); 
   void aboutKview();
   void saveOptions();
-
+  void imageCaching(int);
+  void setCacheSize(int);
+  
   // toolbar1 action
   void slotNew();
   void slotOpen();
@@ -105,7 +106,7 @@ protected:
   void initStatusBar();
   void initMainWidget();
   void checkValidButtons();
-  
+
   
 private:
   //Window elements
@@ -119,8 +120,7 @@ private:
   KToolBar    *ktoolbar1,*ktoolbar2;
   int         iktoolbar1,iktoolbar2;
   KMenuBar    *menubar;
-  QPopupMenu  *file,*options;
-  KDNDDropZone * dropZone;
+  QPopupMenu  *file,*options, *cacheSize,*help;
   
   
   bool    showrunning;

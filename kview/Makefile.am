@@ -10,7 +10,7 @@ SUBDIRS = doc pics
 
 LDFLAGS= $(all_libraries) $(KDE_RPATH)
 
-LDADD = -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext $(LIBJPEG) $(LIBSOCKET) $(LIBPNG)
+LDADD = -lkfm -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBJPEG) $(LIBSOCKET) $(LIBPNG)
 
 DISTCLEANFILES = *.moc
 

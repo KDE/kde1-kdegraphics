@@ -21,9 +21,8 @@ int main(int argc, char **argv)
 {
   int i=0;
 
-  KApplication a(argc, argv, "kview");
-  theApp = &a;
- 
+  theApp = new KApplication (argc, argv, "kview");
+  
   //KVConfigHandler::setConfigEntry("General","Cache",3);
   //i=(int)KVConfigHandler::getConfigEntry("General","Cache");
   
@@ -36,7 +35,7 @@ int main(int argc, char **argv)
       i=1;
       while ( i < qApp->argc() )
 	{
-	  QString f = qApp->argv()[i];
+	  QString f = theApp->argv()[i];
 	  
 	  if (i==1)
 	    {
@@ -47,10 +46,7 @@ int main(int argc, char **argv)
 		  f.sprintf( "%s/%s", buffer, argv[i] );
 		}*/
 	    }
-
-	  // VERY UGLY HACK,  I don't have time to make it better
-          if ( f != "Image Viewer" && f != "-caption" && f != "%u" && f != "%c" )
-	  	Fileman::appendFileList(QString(qApp->argv()[i]));
+	  Fileman::appendFileList(QString(theApp->argv()[i]));
 	  i++;
 	}
     }

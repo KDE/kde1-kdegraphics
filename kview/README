@@ -1,5 +1,5 @@
 
-kview 0.11.3
+kview 0.11.4
 ------------
 
 Yet another tentative release of kview, the KDE image viewer.
@@ -78,11 +78,11 @@ Tool: Ghostscript with PPM support
 CHANGES
 -------
 
-Version 0.11.4
-  * [Robert Williams]  Added KVIEW_VERSION to version.h 
-  * [Robert Williams]  Added getCaption()
-  * [Robert Williams]  Added -caption "%c" to kview.kdelnk
 Since 0.11.0 (Martin Hartig)
+
+0.11.4:
+* Fixing memory leak (Stephan Kulow) and other bugfixes
+* Menu "Options" for setting Image caching on/off and Cache Size
 
 0.11.3:
 * reads/writes some config data
@@ -128,7 +128,10 @@ planed for kview 0.12.0
   * _one_ display manager for several images (done)
   * implement: image to Desktop->centered
   * code clean up
- 
+  * session management
+  * internationalization
+  * "load all" option
+
 * PNG is getting there. Targa and tiff are a possibility. (done)
 * Print
 * There are still bugs, of course.
@@ -148,5 +151,11 @@ ACKNOWLEDGMENTS
 Sirtaj Kang, Sat March 15, 1997.
 ssk@physics.unimelb.edu.au, taj@kde.org
 
-Martin Hartig, Fri Jul 28, 1997
-hartig@mathematik.uni-kl.de
+
+
+Due to my special kind of work I don't have the time to develop on
+KView as someone should. So if you like to take over development of
+this little prog, contact me and you can do this. 
+
+Martin Hartig, Do April 16, 1998
+martinhartig@yahoo.com

@@ -24,6 +24,7 @@
 extern KApplication *theApp;
 
 int KVConfigHandler::cacheSize=1024;
+int KVConfigHandler::cachingOn=0;
 int KVConfigHandler::delay=1000;
 int KVConfigHandler::frameSizeX=250;
 int KVConfigHandler::frameSizeY=300;
@@ -42,7 +43,10 @@ void KVConfigHandler::readConfigEntries()
 
   str = config->readEntry("CacheSize");
   if ( !str.isNull() ) cacheSize=atoi(str.data());
-      
+
+  str = config->readEntry("CachingOn");
+  if ( !str.isNull() ) cachingOn=atoi(str.data());
+  
   config->setGroup("Display Manager");
   
   str = config->readEntry("Delay");
@@ -72,7 +76,9 @@ void KVConfigHandler::writeConfigEntries()
   config->setGroup("General");
   str.sprintf("%d",cacheSize);
   config->writeEntry("CacheSize",str);
-
+  str.sprintf("%d",cachingOn);
+  config->writeEntry("CachingOn",str);
+  
   config->setGroup("Display Manager");
   str.sprintf("%d",delay);
   config->writeEntry("Delay",str);

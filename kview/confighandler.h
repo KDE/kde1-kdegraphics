@@ -18,7 +18,7 @@ public:
 
   // General
   static int cacheSize;
-
+  static int cachingOn;
 
   // Display Manager
   static int delay;

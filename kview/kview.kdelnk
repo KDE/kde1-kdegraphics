@@ -1,8 +1,8 @@
 # KDE Config File
 [KDE Desktop Entry]
 Type=Application
-Exec=kview %u -caption "%c" %i %m
-Icon=kview.xpm
+Exec=kview %u
+Icon=image.xpm
 TerminalOptions=
 Path=
 Terminal=0
@@ -12,18 +12,8 @@ Comment=KDE Image Viewer
 Comment[de]=KDE Bilderbetrachter
 Comment[pl]=Przegl±darka plików graficznych
 Comment[fi]=KDE Kuvanäyttäjä
-Comment[hu]=KDE képnézõ
-Comment[pt]=Visualizador de Imagens do KDE
-Comment[sk]=Prehliadaè obrázkov
-Comment[cs]=Prohlí¾eè obrázkù
-Comment[hr]=Preglednik Slika
 MimeType=image/gif;image/x-xpm;image/x-xbm;image/jpeg;
 Name=Image Viewer
 Name[de]=Image Viewer
 Name[pl]=Image Viewer
 Name[fi]=Kuvannäyttäjä
-Name[hu]=Képnézõ
-Name[pt]=Visualizador de Imagens
-Name[sk]=Prehliadaè obrázkov
-Name[cs]=Prohlí¾eè obrázkù
-Name[hr]=Preglednik slika
