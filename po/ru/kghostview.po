@@ -663,8 +663,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
-"Настройте переменную окружения (к примеру, PRINTER или LPDEST) для того, чтобы"
-" учитывалось имя принтера."
+"Настройте переменную окружения (к примеру, PRINTER или LPDEST) для того, "
+"чтобы учитывалось имя принтера."
 
 #: kghostview.cpp:1661
 #, c-format
