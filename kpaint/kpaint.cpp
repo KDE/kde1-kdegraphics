@@ -808,9 +808,8 @@ KDEBUG(KDEBUG_INFO, 3000, "fileSaveAsCommand");
   					    "*",
   					    this);
 
-KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());
-
   if (!newfilename.isNull()) {
+    KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());  
     if (!url.isEmpty()) {
       KURL u(url);
 
@@ -818,7 +817,7 @@ KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());
 	proto= u.protocol();
 
 	if (proto != "file") {
-KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'", filename.data());
 	  unlink(filename);
 	}
       }
@@ -838,12 +837,14 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data(
 void KPaint::fileFormat()
 {
   formatDialog dlg(format);
-KDEBUG1(KDEBUG_INFO, 3000, "fileFormat() %s\n", (const char *) format);
+KDEBUG1(KDEBUG_INFO, 3000, "fileFormat() %s", (const char *) format);
     if (dlg.exec()) {
-KDEBUG1(KDEBUG_INFO, 3000, "Set format to %s\n", dlg.fileformat->text(dlg.fileformat->currentItem()));
+KDEBUG1(KDEBUG_INFO, 3000, "Set format to %s", dlg.fileformat->text(dlg.fileformat->currentItem()));
       
       format= dlg.fileformat->text(dlg.fileformat->currentItem());
-      filename.replace(QRegExp("\\..+$"), "");
+      int i = filename.findRev('.');
+      if (i > 0)
+	filename = filename.left(i+1);
       filename= filename+formatMngr->suffix(format);
       statusbar->changeItem(filename, ID_FILENAME);
     }
