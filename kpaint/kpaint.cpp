@@ -490,13 +490,16 @@ void KPaint::initMenus()
   help->insertItem( i18n("Release Notes"), ID_RELEASENOTES);
   help->insertItem( i18n("About..."), ID_ABOUT);
 */
-  QPopupMenu *help = kapp->getHelpMenu(false, QString("        ")
-				       + i18n("KPaint") +
-				       + i18n(" version ") + APPVERSTR
-				       + "\n\n" + i18n("(c) ") + APPAUTHOR 
-                                       /*  + "(" 
-					   + APPAUTHOREMAIL */
-                                         + "\n\n" + i18n(APPLICENSE) );  
+
+  QString about;
+  about.sprintf(i18n("KPaint version %s\n\n"
+		"(c) %s\n\n"
+		"KPaint is released under the\n"
+		"GNU Public License agreement,\n"
+		"see the online documentation\n"
+		"for details."), APPVERSTR, APPAUTHOR);
+
+  QPopupMenu *help = kapp->getHelpMenu(false, about);
 
   menu = new KMenuBar( this );
 
