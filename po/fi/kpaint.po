@@ -40,14 +40,12 @@ msgid "Canvas Size"
 msgstr "Kuvan koko"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Leveys"
+msgstr "Leveys:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Korkeus"
+msgstr "Korkeus:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -105,6 +103,7 @@ msgstr "Tallentamattomat muutokset"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Sinulla on tallentamattomia muutoksia, menetät ne jos suljet tämän ikkunan."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -135,9 +134,8 @@ msgid "New Image..."
 msgstr "Uusi kuva..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Tallenna kuva..."
+msgstr "Tallenna kuva"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
@@ -193,7 +191,7 @@ msgstr "Tietoja..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Muuta kokoa..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -229,7 +227,7 @@ msgstr "Alueen valinta"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Pyöreä kulma"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -249,7 +247,7 @@ msgstr "Tallenna asetukset"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -257,6 +255,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -408,47 +409,5 @@ msgid "Set Line Colour..."
 msgstr "Viivan väri..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Suorakulmio"
-
-#~ msgid "Dismiss"
-#~ msgstr "Peru"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Virheellinen URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Virhe: Virheellinen URL\n"
-#~ "KPaint ei ymmärrä annettua URL:ää, tarkista että se on oikein."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint käyttää jo tiedostoa, sinun pitää\n"
-#~ "keskeyttää nykyinen työ tai odottaa sen vamistumista."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: En löytä KFM:ää"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr ""
-#~ "Virhe: KPaint ei löytänyt käynnissä olevaa KFM:ää eikä saanut käynnistettyä "
-#~ "edes sitä."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Verkkolataus epäonnistui"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Virhe: Verkkolataus epäonnistui\n"
-#~ "Jotain meni vikaan :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: En saanut käynnistettyä KFM:ää"
+msgstr "Monikulmio"

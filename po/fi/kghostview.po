@@ -207,9 +207,8 @@ msgid "Document information"
 msgstr "Asiakirjan tiedot"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Tulostimen asetukset"
+msgstr "Sivun asetukset"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -273,12 +272,11 @@ msgstr "Avaa e&dellinen"
 
 #: kghostview.cpp:500
 msgid "&Reload"
-msgstr ""
+msgstr "&Uudelleenlataa"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Asetukset ..."
+msgstr "&Sivun asetukset ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -293,9 +291,8 @@ msgid "Zoom &out"
 msgstr "&Pienennä"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Tietoja ..."
+msgstr "&Suurenna ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -494,7 +491,6 @@ msgid "Go to ..."
 msgstr "Siirry ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
 msgstr "Suurenna"
 
@@ -744,52 +740,22 @@ msgstr ""
 "Tarkista tilariviltä tämä tieto.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "&suurennus"
+msgstr "suurennus"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "m&edia"
+msgstr "M&edia"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "&suunta"
+msgstr "&Suunta"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Käytä"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "&suurennus"
+msgstr "&Suurennus"
 
-#~ msgid "&View control ..."
-#~ msgstr "&Näyttö kontrolli ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "&Mahduta sivuleveyteen"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Uudelleennäytä"
-
-#~ msgid "Change view ..."
-#~ msgstr "Muuta näyttöä ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Käytä pehmennystä"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Poista pehmennys"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Näytä Ghostscriptin viestit"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Piilota Ghostscriptin viestit"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Pakota muutokset ..."
