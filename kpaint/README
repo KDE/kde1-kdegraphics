@@ -1,0 +1,51 @@
+
+                            KPaint - Help Contents
+                                       
+     _________________________________________________________________
+                                      
+   KPaint is a simple bitmap paint program. KPaint is currently ALPHA
+   quality software (ie. it will probably crash). There is of course NO
+   WARRANTY as this is free software. For details of the license see
+   the file LICENSE. KPaint is part of the KDE Desktop Environment.
+
+   If you have any suggestions or bug reports my mail address is
+   moorer@cs.man.ac.uk, please mention kpaint in the subject line of
+   your message. More general dicussions about KDE should take place on
+   the KDE mailing lists.
+   
+  What works?
+  
+   This is the first release of kpaint and there's a lot missing, see my
+   todo list for information about what is still to be implemented.
+   The currently implemented features are:
+   
+     * Load and Save standard Qt formats (xpm, bmp etc.)
+     * Load (only) kview formats (gif, jpeg)
+     * Circles
+     * Ellipses
+     * Pen, Rectangle, Line
+     * Some tool properties (fill etc.)
+     * KDisplay dynamic user interface configuration
+       
+  Planned features
+  
+   This is my todo list roughly in order of priority:
+   
+     * Some more tools.
+     * Network file access.
+     * Area selections and cut and paste.
+     * Image map generation.
+     * File write support to gif.
+     * Transparency support.
+     * User interface improvements.
+	 * More file formats.
+     * Better help.
+       
+     _________________________________________________________________
+                                      
+   
+    moorer@cs.man.ac.uk
+    
+   
+   Last Updated 5 April 1997
+

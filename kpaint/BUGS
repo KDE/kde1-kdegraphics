@@ -1,0 +1,18 @@
+This file lists known bugs in KPaint 0.1
+========================================
+
+KPaint aborts with a bad window error when displaying modal dialogs a second
+time under kwm 0.4.4, this does not occur with fvwm95-2. I think this is a bug
+in kwm.
+
+Gets confused if right button is pressed whilst drawing, ie. with the left
+button pressed too. (This may be related to my XFree86 ChordMiddle setting)
+
+The tool properties dialog may show problems with qt-1.1 as it forgets to give
+a repaint event when show is called for a dialog. I've added a fix for now,
+but you should upgrade to Qt 1.2 when it is released. If you are using Qt 1.2
+beta 3 or greater you can add -DNEWQT to the compiler defines to remove the
+fix.
+
+5 April 1997
+
