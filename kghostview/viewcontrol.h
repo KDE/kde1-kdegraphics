@@ -18,13 +18,14 @@ public:
   QComboBox* mediaComboBox;
   QComboBox* magComboBox;
   QComboBox* orientComboBox;
-  QPushButton *applyButton;
+  QPushButton *applyButton, *okButton;
 
   void updateMedia (int media);
   void updateOrientation (int orientation);
 
 public slots:
   void slotApplyClicked();
+  void slotOKClicked();
   void disableApply (int); 
 signals:
   void applyChanges();

@@ -1,4 +1,3 @@
-
 /****************************************************************************
  **
  ** A dialog for choosing the size of a document view. 
@@ -13,12 +12,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "zoom.h"
-#include "zoom.moc"
 #include <qaccel.h>
 #include <qlayout.h>
+#include <qlabel.h>
 #include <klocale.h>
 #include <kapp.h>
+
+#include "zoom.moc"
 
 
 //mag is an index
@@ -38,8 +38,8 @@ Zoom::Zoom( QWidget *parent, const char *name )
       
       topLayout->addStretch( 10 );
 
-      sbMag = new KSpinBox( this );
-
+      //sbMag = new KSpinBox( this );
+      sbMag = new QComboBox (false, this);
 
       // (2.0) make this configurable if needed -- at least don't hard code!
 
@@ -51,13 +51,15 @@ Zoom::Zoom( QWidget *parent, const char *name )
       for (i = 1; i <= 10; i++)
 	mags [i+10] = (int)(100+200*i/(10));
 
-      sbMag->setValue( withPercent (mags[mag]) );
-      sbMag->adjustSize();
+      for (i = 1; i <= 20; i++)
+	sbMag->insertItem( withPercent (mags[i]) );
+
+      //      sbMag->adjustSize();
       sbMag->setMinimumSize( sbMag->size() );
-      connect ( sbMag, SIGNAL (valueIncreased()),
-		SLOT (slotValueIncreased()) );
-      connect ( sbMag, SIGNAL (valueDecreased()),
-		SLOT (slotValueDecreased()) );
+      //      connect ( sbMag, SIGNAL (valueIncreased()),		SLOT (slotValueIncreased()) );
+      //      connect ( sbMag, SIGNAL (valueDecreased()),		SLOT (slotValueDecreased()) );
+      connect (sbMag, SIGNAL (activated (const char *)),
+	       SLOT (slotZoom (const char *)) );
 
       QLabel* tmpQLabel;
       tmpQLabel = new QLabel( sbMag, i18n("&Zoom factor"), this );
@@ -77,11 +79,16 @@ Zoom::Zoom( QWidget *parent, const char *name )
       
       KButtonBox *bbox = new KButtonBox( this );
       bbox->addStretch( 10 );
-              
+      
+      /*
+      okButton = bbox->addButton( i18n("&OK") );
+      connect( okButton, SIGNAL(clicked()), SLOT(slotOk ()) );
+      okButton->setEnabled (false);
+
       apply = bbox->addButton( i18n("&Apply") );
       connect( apply, SIGNAL(clicked()), SLOT(applyZoom()) );
       apply->setEnabled (false);
-
+      */
       QButton *close = bbox->addButton( i18n("&Close") );
       connect( close, SIGNAL(clicked()), SLOT(reject()) );
               
@@ -93,13 +100,13 @@ Zoom::Zoom( QWidget *parent, const char *name )
       resize( 200,0 );
 }
 
+/*
 void
-Zoom::applyZoom()
+Zoom::slotOk()
 {
-      mag = reverseArray (atoi (sbMag->getValue()));
-      emit applyChange();
+  hide();
 }
-
+*/
 
 unsigned int
 Zoom::reverseArray (int magnification)
@@ -123,6 +130,15 @@ Zoom::withPercent (int rmag)
   return (const char *)wp;
 }
 
+void
+Zoom::slotZoom (const char *val)
+{
+  mag = reverseArray (atoi (val));
+  emit applyChange();
+  
+  //  okButton->setEnabled (false);
+}
+
 
 #define MAGMAX 20
 
@@ -132,10 +148,14 @@ Zoom::updateZoom (int newmag)
   if ( mag >=1 && mag <= MAGMAX)
     {
       mag=newmag; 
-      sbMag->setValue (withPercent (mags[mag]));
-      apply->setEnabled (false);
+      sbMag->setCurrentItem (mag-1);
+      //      apply->setEnabled (false);
+      //      okButton->setEnabled (false);
     }
 }
+
+
+/*
 
 void
 Zoom::slotValueIncreased ()
@@ -145,7 +165,8 @@ Zoom::slotValueIncreased ()
     {
       mag++;
       sbMag->setValue (withPercent (mags[mag]));
-      apply->setEnabled (true);
+      //      apply->setEnabled (true);
+      //      okButton->setEnabled (true);
     }
 }
 
@@ -157,6 +178,8 @@ Zoom::slotValueDecreased ()
     {
       mag--;
       sbMag->setValue (withPercent (mags[mag]));
-      apply->setEnabled (true);
+      //      apply->setEnabled (true);
+      //      okButton->setEnabled (true);
    }
 }
+*/

@@ -84,11 +84,12 @@ KGhostview::KGhostview( QWidget *, char *name )
 {   
 //    printf("KGhostview::KGhostview\n");
   
-	windowList.append( this );
+  windowList.append( this );
     
     // Initialise all the variables declared in this class.
     // I ususally forget to do a few resulting in nasty seg. faults !
     
+
     kfm = 0L;
 	
     isNetFile = false;
@@ -387,7 +388,7 @@ void KGhostview::bindKeys()
 	keys->connectItem( keys->stdAction( KAccel::New ),	this, SLOT( newWindow() ) );
 	keys->connectItem( keys->stdAction( KAccel::Close ), this, SLOT( closeWindow() ) );
 	keys->connectItem( keys->stdAction( KAccel::Print ), this, SLOT( print() ) );
-	keys->connectItem( keys->stdAction( KAccel::Help ), this, SLOT( help() ) );
+	//	keys->connectItem( keys->stdAction( KAccel::Help ), this, SLOT( help() ) );
 	keys->connectItem( "Page Setup", this, SLOT( viewControl() ) );
 	keys->connectItem( "Go To Page", this, SLOT( goToPage() ) );
 	keys->connectItem( "Zoom In", this, SLOT( zoomIn() ) );
@@ -404,11 +405,13 @@ void KGhostview::bindKeys()
 	keys->readSettings();
 }
 
+/*
 void KGhostview::copyright()
 {
 	CopyrightDialog *cd = new CopyrightDialog( 0, "copyright" );
 	cd->exec();
 }
+*/
 
 void KGhostview::info()
 {
@@ -462,7 +465,7 @@ void KGhostview::updateMenuAccel()
 	changeMenuAccel( m_go, nextID, i18n("Next Page") );
 	changeMenuAccel( m_go, prevID, i18n("Prev Page") );
 	changeMenuAccel( m_go, goToPageID, i18n("Go To Page") );
-	changeMenuAccel( m_help, helpID, i18n("Help") );
+	//	changeMenuAccel( m_help, helpID, i18n("Help") );
 }
 
 void KGhostview::changeMenuAccel ( QPopupMenu *menu, int id,
@@ -592,6 +595,7 @@ void KGhostview::createMenubar()
     connect( m_options, SIGNAL( activated(int) ),
     			SLOT( optionsMenuActivated(int) ) );
     
+    /*
     m_help = new QPopupMenu;
     CHECK_PTR( m_help );
 	m_help->insertItem( i18n("&About this application"), this, SLOT( about() ) );
@@ -599,6 +603,7 @@ void KGhostview::createMenubar()
 	m_help->insertItem( i18n("&Help for this application"), this, SLOT( help() ) );
 	m_help->insertSeparator();
 	m_help->insertItem( i18n("&Copyright"), this, SLOT( copyright() ) );
+    */
 	
     menubar = new KMenuBar( this );
     CHECK_PTR( menubar );
@@ -615,10 +620,10 @@ void KGhostview::createMenubar()
 	abstr=	"\n"\
 		"KGhostview "\
  	         KGHOSTVIEW_VERSION;
-	abstr+=	i18n(" - the PostScript document viewer for\n"\
+	abstr+=	i18n(" - the PostScript/PDF document viewer for\n"\
 		"the K Desktop Environment.\n"\
 		"\n"\
-		"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"\
+		"Written by Mark Donohoe, based on original\n"\
 		"work by Tim Theisen.\n"\
 		"\n"\
 		"Incorporates code from Johanes Plass' gv. This adds compressed and\n"\
@@ -639,6 +644,9 @@ void KGhostview::createMenubar()
 		"You should have received a copy of the GNU General Public License\n"\
 		"along with this program; if not, write to the Free Software\n"\
 		"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.");
+
+	abstr += i18n("\n\nMaintained by David Sweet <dsweet@chaos.umd.edu>");
+
 	menubar->insertItem( i18n("&Help"), kapp->getHelpMenu( FALSE, abstr));
 	
 	m_file->setItemEnabled(printID, FALSE);
@@ -1230,26 +1238,7 @@ void KGhostview::scrollRight()
 	page->scrollRight();
 }
 
-void KGhostview::help()
-{
-    // Torben
-    kapp->invokeHTMLHelp( "", "" );
-    
-    /* if ( fork() == 0 )
-	{
-		QString path = "";
-		char* kdedir = getenv("KDEDIR");
-      	if (kdedir)
-			path.append(kdedir);
-     	 else
-		path.append("/usr/local/kde");
-      	path.append("/doc/HTML/kghostview");
-		path.append("/kghostview.html");
-		
-		execlp( "kdehelp", "kdehelp", path.data(), 0 );
-		exit( 1 );
-	} */
-}
+
 
 
 void
@@ -1585,13 +1574,19 @@ void KGhostview::dummy()
 
 }
 
+
+
+/*
+
 void KGhostview::about()
 {
-	 KMsgBox::message(0, i18n("About kghostview"), 
-                             i18n("Version :	0.6 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org") );
+  KMsgBox::message(0, i18n("About kghostview"), 
+		   i18n("Version :	0.6 alpha\nMaintainer : David Sweet : dsweet@chaos.umd.edu\nAuthor : Mark Donohoe\nMail : donohoe@kde.org") );
 
 
 }
+
+*/
 
 void KGhostview::printStart( int mode, bool reverseOrder, 
 					bool toFile,
@@ -2201,7 +2196,6 @@ KGhostview::setup()
   int oldtoc_entry_length;
   int k;
   int this_page, last_page=0;
-  char temp_text[20];
   
   
   if ( ! filename )
@@ -2493,9 +2487,9 @@ KGhostview::setup()
       statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
       break;
     }
-  sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-  statusbar->changeItem( temp_text, ID_MAGSTEP );
-  
+
+  showSBMagstep();
+
   marklist->setAutoUpdate( TRUE );
   marklist->update();
   marklist->select(0);
@@ -2504,6 +2498,16 @@ KGhostview::setup()
   return oldtoc_entry_length != toc_entry_length;
 }
 
+void
+KGhostview::showSBMagstep(void)
+{
+  char temp_text[20];
+  
+  sprintf(temp_text, "%d%%", 10 * 
+	  (int) floor ( (10*page->xdpi/default_xdpi) +.5) );
+	
+  statusbar->changeItem( temp_text, ID_MAGSTEP );
+}
 
 void KGhostview::changeFileRecord()
 {
@@ -2732,16 +2736,13 @@ void KGhostview::set_magstep(int i)
 {
     //printf("KGhostview::set_magstep\n");
 
-  char temp_text[20];
-  
   magstep = i;
   if (set_new_magstep())
     {
       page->KPSLayout( False );
       //page->resize(page->width(), page->height());
       //page->repaint();
-      sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-      statusbar->changeItem( temp_text, ID_MAGSTEP );
+      showSBMagstep();
       show_page(current_page);
       shrinkWrap();
       page->repaint();

@@ -151,8 +151,8 @@ public slots:
 	void scrollUp();
 	void scrollLeft();
 	void scrollRight();
-	void about();
-	void help();
+	//	void about();
+	//	void help();
 	void dummy();
 	void viewControl();			
 	void nextPage();
@@ -175,7 +175,7 @@ public slots:
 	void newWindow();
 	void closeWindow();
 	void info();
-	void copyright();
+	//	void copyright();
 	void configureGhostscript();
 	void openRecent( int id );
 	
@@ -295,6 +295,9 @@ private:
       it should open the file.
       */
     int openMode;
+
+
+    void showSBMagstep (void);
 };
 
 #endif // KGHOSTVIEW_H

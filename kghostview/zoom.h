@@ -2,22 +2,21 @@
 #define ZOOM_H
 
 #include <qdialog.h>
+#include <qcombobox.h>
 #include <kbuttonbox.h>
-
-#include <kspinbox.h>
 
 class Zoom : public QDialog {
       Q_OBJECT
       
 public:
       Zoom( QWidget *parent = 0, const char *name = 0 );
-      KSpinBox *sbMag;
+      QComboBox *sbMag;
       
       unsigned int zoomFactor (void) { return (unsigned int) mag; }
       
       void updateZoom (int mag);
 public slots:
-      void applyZoom();
+	//      void slotOk();
 
 signals:
       void applyChange();
@@ -27,13 +26,14 @@ protected:
       unsigned int reverseArray (int magnification);
 
 protected slots:
-      void slotValueDecreased ();
-      void slotValueIncreased ();
+	//      void slotValueDecreased ();
+	// void slotValueIncreased ();
+	void slotZoom (const char *);
 
 private:
       int mag;
       int *mags;
-      QButton *apply;
+      QButton *apply, *okButton;
       QString wp;
       
 };

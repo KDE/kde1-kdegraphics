@@ -118,6 +118,9 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	KButtonBox *bbox = new KButtonBox( this );
 	bbox->addStretch( 10 );
 
+	okButton = bbox->addButton( i18n("&OK") );
+	connect( okButton, SIGNAL(clicked()), SLOT(slotOKClicked()) );
+
 	applyButton = bbox->addButton( i18n("&Apply") );
 	connect( applyButton, SIGNAL(clicked()), SLOT(slotApplyClicked()) );
 
@@ -131,6 +134,7 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	topLayout->activate();
 
 	applyButton->setEnabled (false);
+	okButton->setEnabled (false);
 	
 	resize( 250 ,0);
 }
@@ -140,6 +144,15 @@ ViewControl::slotApplyClicked()
 {
   emit applyChanges();
   applyButton->setEnabled (false);
+  okButton->setEnabled (false);
+}
+
+
+void
+ViewControl::slotOKClicked()
+{
+  emit applyChanges();
+  hide();
 }
 
 void
@@ -152,4 +165,5 @@ void
 ViewControl::disableApply (int)
 {
   applyButton->setEnabled (true);
+  okButton->setEnabled (true);
 }
