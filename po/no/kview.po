@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Norwegian translations for KDE Graphics/kview
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Hans Petter Bieker <zerium@webindex.no>, 1998.
 #
@@ -79,7 +79,7 @@ msgstr "&Sidemaks"
 
 #: fileman.cpp:138 wview.cpp:126
 msgid "&Contents"
-msgstr ""
+msgstr "&Innhold"
 
 #: viewport.cpp:41
 msgid "Clockwise"
