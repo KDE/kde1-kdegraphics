@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-11-12 01:50+0100\n"
+"POT-Creation-Date: 1998-11-13 01:48+0100\n"
 "PO-Revision-Date: 1998-05-06 15:36 +0100\n"
 "Last-Translator: Tobias Burnus <burnus@berlin1.netsurf.de>\n"
 "Language-Team: German <kde-i18n@kde.org>\n"

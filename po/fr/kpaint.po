@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-11-12 01:50+0100\n"
+"POT-Creation-Date: 1998-11-13 01:48+0100\n"
 "PO-Revision-Date: 1998-01-28 22:55 CET\n"
 "Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"
