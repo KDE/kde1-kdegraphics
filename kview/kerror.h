@@ -8,6 +8,7 @@
 #ifndef _SSK_KVERROR_H
 #define _SSK_KVERROR_H
 
+#include <qobject.h>
 ///
 class KViewError : public QObject{
 
