@@ -172,7 +172,7 @@ msgstr "S&crollbars anzeigen"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "DVI Betrachter"
 
 #: kdvi.cpp:240
 msgid ""

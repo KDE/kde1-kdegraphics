@@ -191,9 +191,8 @@ msgid "Area Select"
 msgstr "Bereichsauswahl"
 
 #: kpaint.cpp:251
-#, fuzzy
 msgid "Show Toolbar"
-msgstr "Werkzeugleiste an"
+msgstr "Werkzeugleiste zeigen"
 
 #: kpaint.cpp:252
 msgid "Show Status Bar"
