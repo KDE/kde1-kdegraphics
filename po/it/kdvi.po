@@ -1,8 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -673,36 +668,3 @@ msgstr "n-up"
 msgid "Printing method"
 msgstr "Metodo di stampa"
 
-#~ msgid "&Previous"
-#~ msgstr "&Precedente"
-
-#~ msgid "&Next"
-#~ msgstr "&Successiva"
-
-#~ msgid "Appearance"
-#~ msgstr "Aspetto"
-
-#~ msgid "Fonts"
-#~ msgstr "Caratteri"
-
-#~ msgid "Print"
-#~ msgstr "Stampa"
-
-#~ msgid "&Remove"
-#~ msgstr "&Rimuovi"
-
-#~ msgid "&Contents"
-#~ msgstr "&Contenuti"
-
-#~ msgid "About &Qt"
-#~ msgstr "Info sulle &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Info su kDvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - visualizzatore Tex DVI\n"
-#~ "Version "
