@@ -424,8 +424,7 @@ void KGhostview::configureGhostscript()
 
 void KGhostview::configureKeybindings()
 {
-	//keys->configureKeys( this );
-	if( KKeyDialog::configureKeys( keys ) ) {
+	if( KKeyDialog::configureKeys( keys,false ) ) {
 		updateMenuAccel();
 	}
 }
