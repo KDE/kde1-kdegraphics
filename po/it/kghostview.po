@@ -392,7 +392,7 @@ msgstr ""
 
 #: kghostview.cpp:1074 kghostview.cpp:2062 viewcontrol.cpp:29
 msgid "Portrait"
-msgstr "Verticale
+msgstr "Verticale"
 
 #: kghostview.cpp:1076 kghostview.cpp:2068 viewcontrol.cpp:30
 msgid "Landscape"
@@ -526,7 +526,7 @@ msgid ""
 "\"%s\"\n"
 "could not be found."
 msgstr ""
-"Il file\n
+"Il file\n"
 "\"%s\"\n"
 "non puo' essere trovato."
 
@@ -581,6 +581,4 @@ msgstr "Orientamento"
 #: viewcontrol.cpp:55
 msgid "Media"
 msgstr ""
-
---------------4399FC77147F49113B0A315--
 
