@@ -38,8 +38,7 @@ msgid "Remove page marks"
 msgstr "Retirer les signets"
 
 #: marklist.cpp:367
-#, fuzzy
-msgid "Page"
+msgid "&Page"
 msgstr "&Page"
 
 #: copyright.cpp:27
@@ -355,11 +354,11 @@ msgstr "Configurer l'interpréteur"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Nouveau"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Nouveau"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -367,7 +366,7 @@ msgstr "&Ouvrir..."
 
 #: kghostview.cpp:501
 msgid "Open &recent"
-msgstr "Ouvrir &récent"
+msgstr "&Récemment ouvert"
 
 #: kghostview.cpp:509
 msgid "Page Set&up ..."

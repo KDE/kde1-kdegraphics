@@ -44,7 +44,6 @@ msgid "About KView"
 msgstr "A propos de KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Liste..."
 
@@ -81,13 +80,12 @@ msgid "&Images"
 msgstr "&Images"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
 msgstr "Enregistrer &sous..."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "Fe&rmer"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -124,9 +122,8 @@ msgid "&Half size"
 msgstr "Tai&lle moitié"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "Tai&lle moitié"
+msgstr "Taille &maximale"
 
 #: viewer.cpp:444
 msgid "Max/&aspect"
@@ -161,9 +158,8 @@ msgid "Max&pect"
 msgstr ""
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
-msgstr "&A propos de KView.."
+msgstr "&A propos de KView..."
 
 #: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
@@ -178,36 +174,33 @@ msgid "Transfer error: "
 msgstr "Erreur de transfert : "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
 msgstr "Chargement.."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Impossible de charger %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Eclaircissement..."
+msgstr "Impression..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Entrer le facteur de luminosité (%) :"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Le facteur de luminosité doit être positif"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Modification de la luminosité"
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
-msgstr "Intensité:Eclaircissement"
+msgstr "Intensité:Luminosité"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -226,27 +219,24 @@ msgid "Smooth"
 msgstr "Lissage"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
 msgstr "Entrer la valeur gamma ( >0 ) :"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Valeur Gamma incorrecte"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
-msgstr "Correction gamma en cours..."
-
-#: colour.cpp:296
-#, fuzzy
-msgid "Intensity:Gamma Correct..."
 msgstr "Correction gamma..."
 
+#: colour.cpp:296
+msgid "Intensity:Gamma Correct..."
+msgstr "Intensité:Correction gamma..."
+
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Intervalle.."
+msgstr ""
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -288,14 +278,3 @@ msgstr "Lancer le &diaporama"
 msgid "Time between slides (sec):"
 msgstr "Durée entre images (sec) :"
 
-#~ msgid "Fi&lter"
-#~ msgstr "Fi&ltre"
-
-#~ msgid "&Open.."
-#~ msgstr "&Ouvrir.."
-
-#~ msgid "Darkening..."
-#~ msgstr "Assombrissement..."
-
-#~ msgid "Intensity:Darken"
-#~ msgstr "Intensité:Assombrissement"
