@@ -1,0 +1,85 @@
+# Norwegian translations for KDE Graphics, ksnapshot
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Hans Petter Bieker <zerium@webindex.no>, 1998.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE GRAPHICS/ksnapshot\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
+"Language-Team: no <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO_8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "øyeblikksfoto"
+
+#: ksnapshot.cpp:93
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+"Trykk `Grab'-knappen, klikk så\n"
+"på et vindu for å fotografere det.\n"
+"\n"
+"KSnapshot er under enerett av Richard Moore (rich@kde.org)\n"
+"og er gitt ut under LGPL\n"
+"\n"
+"Versjon: "
+
+#: ksnapshot.cpp:127
+msgid "Filename:"
+msgstr "Filnavn:"
+
+#: ksnapshot.cpp:159
+msgid "Delay:"
+msgstr "Forsinkelse:"
+
+#: ksnapshot.cpp:168
+msgid "seconds."
+msgstr "sekunder."
+
+#: ksnapshot.cpp:188
+msgid "Auto raise"
+msgstr "Legg automatisk øverst"
+
+#: ksnapshot.cpp:189
+msgid "Hide KSnapshot window"
+msgstr "Skjul KSnapshot-vindu"
+
+#: ksnapshot.cpp:191
+msgid "Only grab the window containing the cursor"
+msgstr "Bare fotografer vindu som inneholder markør"
+
+#: ksnapshot.cpp:222
+msgid "Grab"
+msgstr "Fotografer"
+
+#: ksnapshot.cpp:452
+msgid "Error: Unable to save image"
+msgstr "Feil: Kunne ikke lagre bilde"
+
+#: ksnapshot.cpp:453
+msgid "Dismiss"
+msgstr "Forkast"
+
+#: ksnapshot.cpp:457
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot kunne ikke lagre bilde til\n"
+"%s."
+
+#: ksnapshot.cpp:467
+msgid "KSnapshot preview"
+msgstr "KSnapshot-forhåndsvisning"
