@@ -1,31 +1,23 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1998-06-16 14:19+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"PO-Revision-Date: 1998-06-17 22:08+0200\n"
+"First-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
+"Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:514
 msgid "Notice"
-msgstr ""
+msgstr "Nota"
 
 #: dviwin.cpp:217
 msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"¡El cambio en la generación de las fuentes, será\n"
-"efectivo después de rearrancar otra vez el kdvi!"
+"¡El cambio en la generación de las fuentes será\n"
+"efectivo después de reiniciar el kdvi!"
 
 #: dviwin.cpp:233
 msgid ""
@@ -33,7 +25,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "¡El cambio en la camino (path) de las fuentes será\n"
-"efectivo después de rearrancar otra vez el kdvi!"
+"efectivo después de reiniciar el kdvi!"
 
 #: dviwin.cpp:247
 msgid ""
@@ -41,7 +33,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "¡El cambio en el el modo Metafont será efctivo\n"
-"después de rearrancar otra vez el kdvi!"
+"después de reiniciar el kdvi!"
 
 #: dviwin.cpp:284
 msgid ""
@@ -49,7 +41,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "¡El cambio de resolución será efectivo\n"
-"después de rearrancar otra vez el kdvi!"
+"después de reiniciar el kdvi!"
 
 #: dviwin.cpp:301
 msgid ""
@@ -57,7 +49,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "¡El cambio en la 'gamma' será efectivo\n"
-"después de rearrancar otra vez el kdvi!"
+"después de reiniciar el kdvi!"
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
@@ -72,28 +64,24 @@ msgid "No document"
 msgstr "No hay documento"
 
 #: kdvi.cpp:108
-#, fuzzy
 msgid "Toggle Menubar"
-msgstr "Des/Activas barra de menús"
+msgstr "Des/activar barra de menús"
 
 #: kdvi.cpp:110
-#, fuzzy
 msgid "Mark page"
-msgstr "Marcar todas"
+msgstr "Marcar página"
 
 #: kdvi.cpp:112
-#, fuzzy
 msgid "Redraw"
-msgstr "Redibijar página"
+msgstr "Repintar página"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
 msgstr "Preferencias ..."
 
 #: kdvi.cpp:173
 msgid "&Open ..."
-msgstr "&Abrir"
+msgstr "&Abrir ..."
 
 #: kdvi.cpp:180
 msgid "Open &recent"
@@ -117,11 +105,11 @@ msgstr "Ajustar a página"
 
 #: kdvi.cpp:193
 msgid "Fit to page &width"
-msgstr "Ajustar a ancho de página"
+msgstr "Ajustar al ancho de página"
 
 #: kdvi.cpp:195
 msgid "&Redraw page"
-msgstr "Redibujar página"
+msgstr "Repintar página"
 
 #: kdvi.cpp:204
 msgid "&First"
@@ -149,7 +137,7 @@ msgstr "Teclas ..."
 
 #: kdvi.cpp:217
 msgid "Make PK-&fonts"
-msgstr "Hacer PK-&fuentes"
+msgstr "Hacer &fuentes PK"
 
 #: kdvi.cpp:219
 msgid "Show PS"
@@ -173,14 +161,13 @@ msgstr "Mostrar barra de estado"
 
 #: kdvi.cpp:229
 msgid "Show Scro&llbars"
-msgstr "Mostrar barrar de desplazamiento"
+msgstr "Mostrar barras de desplazamiento"
 
 #: kdvi.cpp:238
 msgid "DVI Viewer"
-msgstr ""
+msgstr "Procesador de DVI"
 
 #: kdvi.cpp:240
-#, fuzzy
 msgid ""
 "\n"
 "\n"
@@ -188,7 +175,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Markku Hihnala <mah@ee.oulu.fi>"
+"por Markku Hihnala"
 
 #: kdvi.cpp:260
 msgid "Open document ..."
@@ -288,11 +275,11 @@ msgstr "Ajustar ancho"
 
 #: kdvi.cpp:351 kdvi.cpp:403
 msgid "Redraw page"
-msgstr "Redibijar página"
+msgstr "Repintar página"
 
 #: kdvi.cpp:352 kdvi.cpp:405
 msgid "Next page"
-msgstr "Pagina siguiente"
+msgstr "Página siguiente"
 
 #: kdvi.cpp:353 kdvi.cpp:404
 msgid "Previous page"
@@ -316,27 +303,27 @@ msgstr "Configurar teclas"
 
 #: kdvi.cpp:358 kdvi.cpp:409
 msgid "Toggle show PS"
-msgstr "Des/Activar mostrar PS"
+msgstr "Des/activar mostrar PS"
 
 #: kdvi.cpp:359 kdvi.cpp:410
 msgid "Toggle menu bar"
-msgstr "Des/Activas barra de menús"
+msgstr "Des/activar barra de menús"
 
 #: kdvi.cpp:360 kdvi.cpp:411
 msgid "Toggle button bar"
-msgstr "Des/Activas barra de botones"
+msgstr "Des/activar barra de botones"
 
 #: kdvi.cpp:361 kdvi.cpp:412
 msgid "Toggle page list"
-msgstr "Des/Activas lista de páginas"
+msgstr "Des/activar lista de páginas"
 
 #: kdvi.cpp:362 kdvi.cpp:413
 msgid "Toggle status bar"
-msgstr "Des/Activas barra de estado"
+msgstr "Des/activar barra de estado"
 
 #: kdvi.cpp:363 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Des/Activas barras de desplazamiento"
+msgstr "Des/activar barras de desplazamiento"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
@@ -352,7 +339,7 @@ msgstr "Abriendo "
 
 #: kdvi.cpp:546
 msgid "Opened "
-msgstr "Abierto"
+msgstr "Abierto "
 
 #: kdvi.cpp:556
 msgid "Print dialog is open"
@@ -360,11 +347,11 @@ msgstr "El diálogo de impresión ya está abierto"
 
 #: kdvi.cpp:571
 msgid "View size fits page"
-msgstr ""
+msgstr "Tamaño cabe en página"
 
 #: kdvi.cpp:580
 msgid "View width fits page"
-msgstr ""
+msgstr "Ancho cabe en página"
 
 #: kdvi.cpp:672
 msgid "Preferences applied"
@@ -653,19 +640,19 @@ msgstr "Impresoras"
 
 #: printSetupData.cpp:48
 msgid "&Internal"
-msgstr "Interno"
+msgstr "&Interno"
 
 #: printSetupData.cpp:66
 msgid "Use ps&nup"
-msgstr "Utilizar psnup"
+msgstr "Utilizar ps&nup"
 
 #: printSetupData.cpp:72
 msgid "Use &mpage"
-msgstr "Utilizar mpage"
+msgstr "Utilizar &mpage"
 
 #: printSetupData.cpp:92
 msgid "&Add"
-msgstr "Añadir"
+msgstr "&Añadir"
 
 #: printSetupData.cpp:120
 msgid "&Spooler command:"
@@ -678,37 +665,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Método de impresión"
-
-#~ msgid "&Previous"
-#~ msgstr "&Anterior"
-
-#~ msgid "&Next"
-#~ msgstr "&Siguiente"
-
-#~ msgid "Appearance"
-#~ msgstr "Apariencia"
-
-#~ msgid "Fonts"
-#~ msgstr "Fuentes"
-
-#~ msgid "Print"
-#~ msgstr "Imprimir"
-
-#~ msgid "&Remove"
-#~ msgstr "Eliminar"
-
-#~ msgid "&Contents"
-#~ msgstr "&Contenido"
-
-#~ msgid "About &Qt"
-#~ msgstr "Acerca de &Qt"
-
-#~ msgid "About Kdvi"
-#~ msgstr "Acerca de Kdvi"
-
-#~ msgid ""
-#~ "kdvi - TeX DVI viewer\n"
-#~ "Version "
-#~ msgstr ""
-#~ "kdvi - Visor de TeX DVI\n"
-#~ "Versión "
