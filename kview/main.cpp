@@ -21,6 +21,8 @@ int main(int argc, char **argv)
 {
   int i=0;
 
+  QApplication::setColorSpec( QApplication::ManyColor );
+
   theApp = new KApplication (argc, argv, "kview");
   
   //KVConfigHandler::setConfigEntry("General","Cache",3);
