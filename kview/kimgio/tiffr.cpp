@@ -10,7 +10,7 @@
 
 #include"tiffr.h"
 
-void kimg_read_tiff( QImageIO *io )
+void kimgio_tiff_read( QImageIO *io )
 {
 	TIFF *tiff;
 	uint32 width, height;
@@ -29,7 +29,6 @@ void kimg_read_tiff( QImageIO *io )
 	TIFFGetField( tiff, TIFFTAG_IMAGEWIDTH,	&width );
 	TIFFGetField( tiff, TIFFTAG_IMAGELENGTH, &height );
 
-	debug( "Width: %ld, Height: %ld", width, height );
 	QImage image( width, height, 32 );
 	data = (uint32 *)image.bits();
 
@@ -76,7 +75,7 @@ void kimg_read_tiff( QImageIO *io )
 	io->setStatus ( 0 );
 }
 
-void kimg_write_tiff( QImageIO * )
+void kimgio_tiff_write( QImageIO * )
 {
 	// TODO: stub
 }

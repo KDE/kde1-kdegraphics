@@ -9,7 +9,7 @@
 
 #define BUFSIZE 1024
 
-void read_xv_file( QImageIO *_imageio )
+void kimgio_xv_read( QImageIO *_imageio )
 {      
 	int x=-1;
 	int y=-1;
@@ -83,7 +83,7 @@ void read_xv_file( QImageIO *_imageio )
 	return;
 }
 
-void write_xv_file( QImageIO *imageio )
+void kimgio_xv_write( QImageIO *imageio )
 {
 	QIODevice& f = *( imageio->ioDevice() );
 

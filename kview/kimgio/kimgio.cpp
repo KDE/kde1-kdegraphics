@@ -32,18 +32,18 @@ void kimgioRegister(void)
 #ifdef HAVE_LIBJPEG
 	// JPEG
 	QImageIO::defineIOHandler("JFIF","^\377\330\377\340..JFIF", 0,
-			read_jpeg_jfif, 0 );
+			kimgio_jpeg_read, kimgio_jpeg_write );
 #endif
 
 	// XV thumbnails
-	QImageIO::defineIOHandler( "XV", "^P7 332", 0, read_xv_file,
-		write_xv_file );
+	QImageIO::defineIOHandler( "XV", "^P7 332", 0, 
+		kimgio_xv_read, kimgio_xv_write );
 
 	QImageIO::defineIOHandler("PS","^%!PS-Adobe-[1-2]", 0,
-                read_ps_epsf, NULL);
+                kimgio_epsf_read, kimgio_epsf_write );
 
 #ifdef HAVE_LIBTIFF
-	QImageIO::defineIOHandler("TIFF","MM", 0,
-                kimg_read_tiff, kimg_write_tiff );
+	QImageIO::defineIOHandler("TIFF","[MI][MI]", 0,
+                kimgio_tiff_read, kimgio_tiff_write );
 #endif
 }

@@ -1,6 +1,7 @@
 ////////////////
 //
 // jpeg.h -- QImage IO handler declaration for JFIF JPEG graphic format,
+//	SirtaJ Singh Kang <taj@kde.org>, December 1996.
 //           using IJG JPEG library.
 //
 
@@ -15,7 +16,7 @@ class QImageIO;
 // JPEG IO handlers for QImage.
 //
 
-void read_jpeg_jfif(QImageIO *image);
-void write_jpeg_jfif(QImageIO *image);
+void kimgio_jpeg_read(QImageIO *image);
+void kimgio_jpeg_write(QImageIO *image);
 
 #endif

@@ -15,21 +15,23 @@
 
 #include<stdio.h>
 #include<assert.h>
-#include<sys/types.h>
 
 #include"qimage.h"
 #include"qdstream.h"
 #include"qcolor.h"
 #include"qpixmap.h"
 #include"jpeg.h"
-#include"jpeginc.h"
 
-extern "C"
-{
-#include"jpeglib.h"
+//
+// Hack to fix INT16 redefinition problem
+//
+
+#define XMD_H
+typedef short INT16;
+extern "C" {
+#include<jpeglib.h>
 }
-
-
+#undef XMD_H
 
 //////
 // Plug-in source manager for IJG JPEG compression/decompression library
@@ -55,7 +57,7 @@ typedef struct {
 	//
 
 	void qimageio_init_source(j_decompress_ptr cinfo);
-	boolean qimageio_fill_input_buffer(j_decompress_ptr cinfo);
+	int qimageio_fill_input_buffer(j_decompress_ptr cinfo);
 	void qimageio_skip_input_data(j_decompress_ptr cinfo, long num_bytes);
 	void qimageio_term_source(j_decompress_ptr cinfo);
 
@@ -69,7 +71,7 @@ typedef struct {
 // No JPEG save support yet
 //
 
-void write_jpeg_jfif(QImageIO *)
+void kimgio_jpeg_write(QImageIO *)
 {
     fprintf(stderr, "JPEG saving unimplemented.\n");
     return;
@@ -83,7 +85,7 @@ void write_jpeg_jfif(QImageIO *)
 // Plug-in to read files from JPEG into QImage
 //
 
-void read_jpeg_jfif(QImageIO * iio)
+void kimgio_jpeg_read(QImageIO * iio)
 {
     QIODevice *d = iio->ioDevice();
     QImage image;
@@ -107,7 +109,7 @@ void read_jpeg_jfif(QImageIO * iio)
     jpeg_create_decompress(&cinfo);
 
     qimageio_jpeg_src(&cinfo, &s);
-    jpeg_read_header(&cinfo, (boolean) TRUE);
+    jpeg_read_header(&cinfo, TRUE);
 
 
 
@@ -115,7 +117,7 @@ void read_jpeg_jfif(QImageIO * iio)
     // If we're in an 8bit display, we want a colourmap.
 
     if ((depth < 32) && (cinfo.out_color_space == JCS_RGB)) {
-	cinfo.quantize_colors = (boolean) TRUE;
+	cinfo.quantize_colors = TRUE;
 	cinfo.dither_mode = JDITHER_ORDERED;
     }
     jpeg_start_decompress(&cinfo);
@@ -262,13 +264,13 @@ void qimageio_init_source(j_decompress_ptr cinfo)
 {
     qimageio_jpeg_source_mgr *ptr = (qimageio_jpeg_source_mgr *) cinfo->src;
 
-    ptr->start_of_file = (boolean) TRUE;
+    ptr->start_of_file = TRUE;
 }				/////////
 
     //
     // Reads data from stream into JPEG working buffer
     //
-boolean qimageio_fill_input_buffer(j_decompress_ptr cinfo)
+int qimageio_fill_input_buffer(j_decompress_ptr cinfo)
 {
     qimageio_jpeg_source_mgr *ptr = (qimageio_jpeg_source_mgr *) cinfo->src;
     size_t nbytes;
@@ -281,7 +283,7 @@ boolean qimageio_fill_input_buffer(j_decompress_ptr cinfo)
 	if (ptr->start_of_file) {
 	    fprintf(stderr, "error: file empty.\n");
 
-	    return (boolean) FALSE;
+	    return FALSE;
 	}
 	fprintf(stderr, "warning: premature EOF in file.\n");
 
@@ -293,9 +295,9 @@ boolean qimageio_fill_input_buffer(j_decompress_ptr cinfo)
     }
     ptr->pub.next_input_byte = ptr->buffer;
     ptr->pub.bytes_in_buffer = nbytes;
-    ptr->start_of_file = (boolean) FALSE;
+    ptr->start_of_file = FALSE;
 
-    return (boolean) TRUE;
+    return TRUE;
 }
 
 

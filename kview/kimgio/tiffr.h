@@ -10,7 +10,7 @@
 
 class QImageIO;
 
-void kimg_read_tiff( QImageIO *io );
-void kimg_write_tiff( QImageIO *io );
+void kimgio_tiff_read( QImageIO *io );
+void kimgio_tiff_write( QImageIO *io );
 
 #endif

@@ -46,7 +46,7 @@ int bbox ( const char *fileName, int *x1, int *y1, int *x2, int *y2)
 	return ret;
 }  
 
-void read_ps_epsf (QImageIO *image)
+void kimgio_epsf_read (QImageIO *image)
 {
 	FILE * ghostfd, * imagefd;
 	char * tmpFileName;
@@ -130,4 +130,10 @@ void read_ps_epsf (QImageIO *image)
 	unlink (tmpFileName);
 
 	return;
+}
+
+void kimgio_epsf_write( QImageIO * )
+{
+	// TODO: implement this
+	warning( "kimgio_epsf_write: not yet implemented" );
 }
