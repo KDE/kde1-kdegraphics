@@ -187,8 +187,8 @@ void Fileman::initToolBar()
 
   //add the toolbars to the top level widget
   //default positions
-  ktoolbar1->setPos( KToolBar::Top );
-  ktoolbar2->setPos( KToolBar::Top );
+  ktoolbar1->setBarPos( KToolBar::Top );
+  ktoolbar2->setBarPos( KToolBar::Top );
 
   //the order of the 4 folowing lines is decisioning
   iktoolbar1 = addToolBar(ktoolbar1);

@@ -603,7 +603,7 @@ void KGhostview::createToolbar()
 	
 	//printf("Registered with ktopwidget\n");
 	
-	toolbar->setPos( KToolBar::Top );
+	toolbar->setBarPos( KToolBar::Top );
 	toolbar->show();
 	
 	//printf("Connect toolbar\n");
@@ -806,13 +806,13 @@ void KGhostview::readSettings()
 	str = config->readEntry( "Toolbar position" );
 	if ( !str.isNull() ) {
 		if( str == "Left" ) {
-			toolbar->setPos( KToolBar::Left );
+			toolbar->setBarPos( KToolBar::Left );
 		} else if( str == "Right" ) {
-			toolbar->setPos( KToolBar::Right );
+			toolbar->setBarPos( KToolBar::Right );
 		} else if( str == "Bottom" ) {
-			toolbar->setPos( KToolBar::Bottom );
+			toolbar->setBarPos( KToolBar::Bottom );
 		} else
-			toolbar->setPos( KToolBar::Top );
+			toolbar->setBarPos( KToolBar::Top );
 	}
 		
 	config->setGroup( "Last Opened" );
@@ -959,11 +959,11 @@ void KGhostview::writeSettings()
 	s.setNum( orientation );
 	config->writeEntry( "Orientation", s );
 	
-	if ( toolbar->Pos() == KToolBar::Left )
+	if ( toolbar->barPos() == KToolBar::Left )
 		s.sprintf("Left");
-	else if ( toolbar->Pos() == KToolBar::Right )
+	else if ( toolbar->barPos() == KToolBar::Right )
 		s.sprintf("Right");
-	else if ( toolbar->Pos() == KToolBar::Bottom )
+	else if ( toolbar->barPos() == KToolBar::Bottom )
 		s.sprintf("Bottom");
 	else
 		s.sprintf("Top");

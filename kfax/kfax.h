@@ -107,7 +107,7 @@
 #define ID_ZOOM_OUT 21
 #define ID_ZOOM_IN 20
 
-typedef KToolBar::Position Position;
+typedef KToolBar::BarPosition Position;
 
 class MyApp:public KApplication {
 
