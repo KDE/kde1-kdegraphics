@@ -83,6 +83,10 @@ KGhostview::KGhostview( QWidget *, char *name )
     
     kfm = 0L;
 	
+	ga = new KGlobalAccel();
+	ga->insertItem( "Wag the dog", "CTRL+SHIFT+W");
+	ga->connectItem( "Wag the dog", this, SLOT( openNewFile() ) );
+	
 	isNetFile = false;
     
     oldfilename.sprintf("");

@@ -42,6 +42,7 @@ public:
 MyApp::MyApp( int &argc, char **argv, const QString &rAppName )
 			: KApplication( argc, argv, rAppName )
 {
+	
 }
 
 MyApp::~MyApp()
@@ -51,9 +52,14 @@ MyApp::~MyApp()
 
 bool MyApp::x11EventFilter( XEvent *ev ) {
 	
+	
+	
 	for ( KGhostview *kg = KGhostview::windowList.first(); kg!=0;
 		kg=KGhostview::windowList.next() )
-	{ 
+	{
+	
+	if ( ev->type == KeyPress && kg->ga->x11EventFilter( ev ) ) 
+		return true;
 	
 	if(ev->xany.type == ClientMessage) {
 		kg->page->mwin = ev->xclient.data.l[0];

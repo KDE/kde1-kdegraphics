@@ -1,30 +1,31 @@
 /* This file is part of the KDE libraries
-    Copyright (C) 1997 Nicolas Hadacek <hadacek@via.ecp.fr>
+	Copyright (C) 1998 Jani Jaakkola (jjaakkol@cs.helsinki.fi),
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
+	This library is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Library General Public
+	License as published by the Free Software Foundation; either
+	version 2 of the License, or (at your option) any later version.
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
+	This library is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Library General Public License for more details.
 
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to
-    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-    Boston, MA 02111-1307, USA.
+	You should have received a copy of the GNU Library General Public License
+	along with this library; see the file COPYING.LIB.  If not, write to
+	the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+	Boston, MA 02111-1307, USA.
 */
-#ifndef _KACCEL_H
-#define _KACCEL_H
 
-#include <qdict.h>
-#include <qaccel.h>
+// TODO: documentation, global configure files
+// implement some unimplemented stuff in kglobalshortcut.cpp
 
-#include <kconfig.h>
+#ifndef _KGLOBALACCEL_H_
+#define _KGLOBALACCEL_H_
 
-#include "kckey.h"
+#include <kapp.h>
+#include <qobject.h>
+#include "kaccel.h"
 
 /** 
  * Return the keycode corresponding to the given string. The string must
@@ -32,26 +33,12 @@
  *	for instance.
  *	Return 0 if the string is not recognized.
  */	
-uint stringToKey( const char * sKey );
+uint keyToXMod( uint keyCode );
+uint keyToXSym( uint keyCode );
+
 
 /** 
- *  Return the string corresponding to the given keycode. 
- *  Return a null string if the keyCode is not recognized.
- */
-const QString keyToString( uint keyCode );
-
-
-struct KKeyEntry {
-	uint aCurrentKeyCode, aDefaultKeyCode, aConfigKeyCode;
-	bool bConfigurable;
-	bool bEnabled;
-	int aAccelId;
-	const QObject *receiver;
-	QString *member;
-};
-
-/** 
- * The KAccel class allows the easy management of "function/key"
+ * The KGlobalAccel class allows the easy management of "function/key"
  *  associations. It allows the user to configure (configurable) keys via
  *  the config file or via a dialog window.
  *
@@ -73,25 +60,30 @@ struct KKeyEntry {
  *  \item For a given widget you can connect a "action/keyCode"
  *  association to a SLOT :
  *  connectItem( widgetName, action, receiver, SLOT(...) )
- *  \item Then KAccel manages automatically the keypress.
+ *  \item Then KGlobalAccel manages automatically the keypress.
  * 	\end{itemize}
  *
  * @version $Id$
  * @short Allows easy management of function/accelerator association.
 */
-class KAccel 
-{ 
+class KGlobalAccel : public QObject
+{
+	Q_OBJECT
+	
  public:
 	/** 
-	 * Construct a KAccel object. 
-	 * Do not use directly this constructor; use initKAccel() instead. 
+	 * Construct a KGlobalAccel object. 
+	 * Do not use directly this constructor; use initKGlobalAccel() instead. 
 	 */
-	KAccel( QWidget * parent, const char * name = 0 );
+	KGlobalAccel( );
 			
 	/** 
-	 * Call sync() and destroy the KAccel object. 
+	 * Call sync() and destroy the KGlobalAccel object. 
 	 */
-	~KAccel();
+	~KGlobalAccel();
+	
+	bool x11EventFilter(const XEvent *);
+	bool grabKey(uint keysym, uint mod);
 
 	QDict<KKeyEntry> * keyDict();
 	
@@ -168,7 +160,6 @@ class KAccel
 	void writeSettings();
 	void readSettings();
 	
-	
 	/** 
 	 * Create a dialog showing all the associations and allow the user
 	 * to configure the configurable ones. On OK it will use the new values,
@@ -176,13 +167,13 @@ class KAccel
 	 * Nothing is change on CANCEL.
 	 */
 	//bool configureKeys( QWidget *parent );
-	
+ signals:
+	void activated();	
  private:
- 	QAccel *pAccel;
 	int aAvailableId;
 	QDict<KKeyEntry> aKeyDict;
 
  protected:
 };
-	
-#endif
+
+#endif _KGLOBALACCEL_H_
