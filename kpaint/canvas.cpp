@@ -9,10 +9,10 @@
 #include <kapp.h>
 #include <math.h>
 #include "canvas.h"
-#include "tools/tool.h"
+#include "tool.h"
 
 Canvas::Canvas(int width, int height,
-	       QWidget *parent, const char *name)
+	       QWidget *parent= 0, const char *name=0)
   : QWidget(parent, name)
 {
   currentTool= 0;
@@ -36,7 +36,7 @@ Canvas::Canvas(int width, int height,
   emit sizeChanged();
 }
 
-Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
+Canvas::Canvas(const char *filename, QWidget *parent= 0, const char *name=0)
   : QWidget(parent, name)
 {
   currentTool= 0;
@@ -59,6 +59,40 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
 
   // Set keyboard focus policy
   setFocusPolicy(QWidget::StrongFocus);
+}
+
+void Canvas::setSelection(const QRect &rect)
+{
+  selection_= rect;
+  haveSelection_= true;
+}
+
+const QRect &Canvas::selection()
+{
+  return selection_;
+}
+
+void Canvas::clearSelection()
+{
+  haveSelection_= false;
+  selection_= QRect(0,0,0,0);
+}
+
+QPixmap *Canvas::selectionData()
+{
+  QPixmap *p;
+
+  if (haveSelection_) {
+    p= new QPixmap(selection_.width(), selection_.height());
+    bitBlt(p, 0, 0, pix,
+	   selection_.left(), selection_.top(),
+	   selection_.width(), selection_.height(),
+	   CopyROP, true);
+  }
+  else
+    p= 0;
+
+  return p;
 }
 
 void Canvas::setZoom(int z)
@@ -177,9 +211,6 @@ void Canvas::mousePressEvent(QMouseEvent *e)
 
 void Canvas::mouseMoveEvent(QMouseEvent *e)
 {
-  // #ifdef KPDEBUG
-  //   fprintf(stderr, "Canvas::mouseMoveEvent() redirector called\n");
-  // #endif
   if (isActive())
     currentTool->mouseMoveEvent(e);
 }
@@ -201,7 +232,7 @@ bool Canvas::isActive()
     return false;
 }
 
-bool Canvas::load(const char *filename, const char *format)
+bool Canvas::load(const char *filename= 0, const char *format= 0)
 {
   bool s;
   QPixmap p;
@@ -224,7 +255,7 @@ bool Canvas::load(const char *filename, const char *format)
   return s;
 }
 
-bool Canvas::save(const char *filename, const char *format)
+bool Canvas::save(const char *filename=0, const char *format= 0)
 {
   bool s;
 

@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 // $Id$
 
 #ifndef CANVAS_H
@@ -24,6 +26,11 @@ public:
 
   QPixmap *pixmap(void);
   void setPixmap(QPixmap *);
+
+  const QRect &selection();
+  void setSelection(const QRect&);
+  void clearSelection();
+  QPixmap *selectionData();
 
   QPixmap *zoomedPixmap(void);
   void setZoom(int);
@@ -62,6 +69,8 @@ protected:
   int zoomFactor; // % of original size
   bool modified; // Has the pixmap been modified?
   state s;
+  QRect selection_;
+  bool haveSelection_;
 };
 
 #endif // CANVAS_H
