@@ -203,7 +203,7 @@ public slots:
     void file_save_url();
     void quiteditor();
     void file_open();
-    QFileDialog* getFileDialog(const char* captiontext);
+//    QFileDialog* getFileDialog(const char* captiontext);
     void toolbarClicked( int );
     void zoomin();
     void zoomout();
@@ -211,7 +211,7 @@ public slots:
     void file_close();
     void file_save();
     void file_save_as();
-    void about();
+//    void about();
     void helpselected();
     void helpshort();
     void toggleStatusBar();

@@ -31,7 +31,10 @@
 #include "kfax.h"
 #include "kfax.moc"
 #include "version.h"
-#include "about.h"
+#include "urldlg.h"
+
+#include <kfiledialog.h>
+#include <kstdaccel.h>
 
 TopLevel *toplevel;
 QFrame *faxqtwin;
@@ -372,27 +375,37 @@ void TopLevel::resizeView(){
 
 void TopLevel::setupMenuBar(){
 
+  KStdAccel keys(mykapp->getConfig());
+
   file = 	new QPopupMenu ();
   help = 	new QPopupMenu ();
   view =        new QPopupMenu ();
   options = 	new QPopupMenu ();
 
-  help->insertItem (i18n("&About..."),	this, 	SLOT(about()));
+
+  help = mykapp->getHelpMenu(TRUE, 
+		"\n"\
+		"KFax "\
+ 	         KFAXVERSION "\n\n"\
+		"Copyright 1997-98\n"\
+                "Bernd Johannes Wuebben\n"\
+                "wuebben@kde.org"
+		);
+
   help->insertItem (i18n("Help page"), 		this, 	SLOT(helpshort()));
-  help->insertItem (i18n("KFax &Help "), 		this, 	SLOT(helpselected()));
   
-  file->insertItem (i18n("&Open Fax..."),		this, 	SLOT(file_open()));
+  file->insertItem (i18n("&Open Fax..."),		this, 	SLOT(file_open()),keys.open());
   file->insertItem (i18n("&Add Fax..."),		this, 	SLOT(addFax()));
   //  file->insertItem ("&Save As...",		this, 	SLOT(dummy()));
   file->insertSeparator (-1);
   file->insertItem (i18n("Open &URL..."),	this,	SLOT(file_open_url()));
   file->insertItem (i18n("Save to U&RL..."),	this,	SLOT(file_save_url()));
-  file->insertItem (i18n("&Close Fax"),		this,	SLOT(closeFax()));
+  file->insertItem (i18n("&Close Fax"),		this,	SLOT(closeFax()),keys.close());
   file->insertSeparator (-1);
-  file->insertItem (i18n("&Print..."),	this,	SLOT(print()) );
+  file->insertItem (i18n("&Print..."),	this,	SLOT(print()),keys.print() );
   
   file->insertSeparator (-1);
-  file->insertItem (i18n("E&xit"), 		this,	SLOT(quiteditor()));
+  file->insertItem (i18n("E&xit"), 		this,	SLOT(quiteditor()),keys.quit());
 
   view->insertItem(i18n("&Next Page"),this,SLOT(nextPage()));
   view->insertItem(i18n("&Prev Page"),this,SLOT(prevPage()));
@@ -559,7 +572,7 @@ void TopLevel::setupStatusBar(){
 
 void TopLevel::file_open_url(){
 
-  DlgLocation l( i18n("Open Location:"), "ftp://localhost/welcome", this );
+  UrlDlg l( this,i18n("Open Location:"), "ftp://localhost/welcome");
 
   if ( l.exec() )
     {
@@ -581,7 +594,7 @@ void TopLevel::file_save_url(){
 
   if(thispage && thispage->pathname){
 
-    DlgLocation l( i18n("Save to Location:"), thispage->pathname, this );
+    UrlDlg l( this, i18n("Save to Location:"), thispage->pathname);
 
     if ( l.exec() )
       {
@@ -621,22 +634,25 @@ void TopLevel::file_open(){
 
   QString newfile;
 
-  QFileDialog *box;
-  box= getFileDialog(i18n("Select Facsimile to Open"));
+  /*
+  QString d;
+  if ( !filename.isEmpty() )
+    d.sprintf( QFileInfo( filename ).dirPath() );
+  else
+    d.sprintf( QDir::currentDirPath() );
+    */
+
+
+   newfile = KFileDialog::getOpenFileName(current_directory.data(),"*");
+   newfile.detach();
     
-  box->show();
-  
-  if (!box->result())   /* cancelled */
-    return;
-  
-  newfile =  box->selectedFile();
-  newfile.detach();
-  
-  if(newfile.isEmpty()) {  /* no selection */
-    return;
-  }
+    if (newfile.isEmpty()) {
+      return ;
+    }
+
     
-  current_directory = box->dirPath();
+  current_directory =  QFileInfo( newfile ).dirPath() ;
+  current_directory.detach();
 
   FreeFax();
 
@@ -658,22 +674,24 @@ void TopLevel::addFax(){
 
   QString newfile;
 
-  QFileDialog *box;
-  box= getFileDialog(i18n("Select Facsimile to Add"));
+  /*
+  QString d;
+  if ( !filename.isEmpty() )
+    d.sprintf( QFileInfo( filename ).dirPath() );
+  else
+    d.sprintf( QDir::currentDirPath() );
+    */
+
+
+   newfile = KFileDialog::getOpenFileName(current_directory.data(),"*");
+   newfile.detach();
     
-  box->show();
-  
-  if (!box->result())   /* cancelled */
-    return;
-  
-  newfile =  box->selectedFile();
-  newfile.detach();
-  
-  if(newfile.isEmpty()) {  /* no selection */
-    return;
-  }
-    
-  current_directory = box->dirPath();
+    if (newfile.isEmpty()) {
+      return ;
+    }
+
+  current_directory =  QFileInfo( newfile ).dirPath() ;
+  current_directory.detach();    
 
   fname = newfile.copy();
 
@@ -712,6 +730,7 @@ void TopLevel::openadd(QString filename){
 
 }
 
+/*
 QFileDialog* TopLevel::getFileDialog(const char* captiontext){
 
   if(!file_dialog){
@@ -724,6 +743,7 @@ QFileDialog* TopLevel::getFileDialog(const char* captiontext){
 
   return file_dialog;
 }
+*/
 
 
 void TopLevel::setGeneralStatusField(QString text){
@@ -741,27 +761,7 @@ void TopLevel::file_save_as(){
 }
 
 
-void TopLevel::about(){
 
-  QDialog *dlg = new About(0);
-
-  QPoint point = this->mapToGlobal (QPoint (0,0));
-
-  QRect pos = this->geometry();
-  dlg->setGeometry(point.x() + pos.width()/2  - dlg->width()/2,
-		   point.y() + pos.height()/2 - dlg->height()/2, 
-		   dlg->width(),dlg->height());
-
-  dlg->exec();
-  delete dlg;
-
-  /*
-  QMessageBox::about(this,"About KFax", "KFax Version "KFAXVERSION"\n"\
-			"Copyright 1997\nBernd Johannes Wuebben\n"\
-			"wuebben@math.cornell.edu\n"\
-			"wuebben@kde.org\n");*/
-		      
-}
 
 void TopLevel::helpselected(){
   

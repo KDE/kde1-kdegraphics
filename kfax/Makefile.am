@@ -1,16 +1,16 @@
 # $Id$
 
 LDFLAGS	=	$(all_libraries)
-LDADD   =       -lkfm -lkdecore -lkdeui -lqt -lXext -lX11 ./libtiffax/libtif.a  -lm $(LIBSOCKET) $(KDE_RPATH)
+LDADD   =       -lkfm -lkdecore -lkdeui -lkfile -lqt -lXext -lX11 ./libtiffax/libtif.a  -lm $(LIBSOCKET) $(KDE_RPATH)
 INCLUDES=	-I./libtiffax $(all_includes) 
 
 ####### Files
-noinst_HEADERS = kfax.h faxexpand.h print.h options.h about.h
+noinst_HEADERS = kfax.h faxexpand.h print.h options.h urldlg.h
 
 kfax_SOURCES   = kfax.cpp viewfax.cpp faxexpand.cpp faxinit.cpp faxinput.cpp\
-		 fax2tiff.c fax2ps.c print.cpp options.cpp about.cpp
+		 fax2tiff.c fax2ps.c print.cpp options.cpp urldlg.cpp
 
-SRCMETA	       = kfax.moc print.moc options.moc about.moc
+SRCMETA	       = kfax.moc print.moc options.moc urldlg.moc
 DISTCLEANFILES = $(SRCMETA)
 
 bin_PROGRAMS   = kfax
@@ -47,13 +47,14 @@ kfax.cpp: kfax.moc
 kfax.moc: kfax.h
 	$(MOC) kfax.h -o kfax.moc
 
-about.cpp: about.moc
-about.moc: about.h
-	$(MOC) about.h -o about.moc
 
 print.cpp: print.moc
 print.moc: print.h
 	$(MOC) print.h -o print.moc
+
+urldlg.cpp: urldlg.moc
+urldlg.moc: urldlg.h
+	$(MOC) urldlg.h -o urldlg.moc
 
 options.cpp: options.moc
 options.moc: options.h
