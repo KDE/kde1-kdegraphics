@@ -11,7 +11,7 @@ kcmkeys_SOURCES = main.cpp standard.cpp global.cpp \
 noinst_HEADERS =  standard.h \
 kaccel.h \
 kkeydialog.h kckey.h kglobalaccel.h global.h savescm.h
-kcmkeys_LDADD = -lkfm -lkdeui -lkdecore  -lXext  $(LIB_QT)
+kcmkeys_LDADD = -lkfm       $(LIB_KDEUI)
 kcmkeys_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 BUILTSOURCES = standard.moc \

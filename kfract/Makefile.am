@@ -1,7 +1,7 @@
 
 INCLUDES = $(all_includes)
 LDFLAGS	= $(all_libraries) $(KDE_RPATH)
-LDADD = -lkdeui -lkdecore   -lXext  $(LIB_QT)
+LDADD =        $(LIB_KDEUI)
 
 kfract_SOURCES = kfract.C kfractdlgs.C drawview.C fract.C \
                 mandel.C julia.C main.C
