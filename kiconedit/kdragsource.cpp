@@ -41,7 +41,9 @@ void KDragSource::mousePressEvent( QMouseEvent * /*e*/ )
       QImageDrag di( img, this );
       debug("KDragSource::mousePressEvent - before dragCopy");
 #if QT_VERSION > 140
-      di.setPixmap(Icon("image.xpm"));
+      QPixmap pm(Icon("image.xpm"));
+      QPoint pp(pm.width()/2, pm.height()/2);
+      di.setPixmap(pm, pp);
 #endif
       di.dragCopy();
     }
