@@ -5,6 +5,7 @@
 
 #include <kapp.h>
 #include <qstring.h>
+#include <qpixmap.h>
 #include <kfm.h>
 #include "kpaint.h"
 
@@ -16,6 +17,7 @@ public:
   static void usage();
   //   KPaint *kp;
    KFM *kfm;
+  QPixmap *clipboard_;
 };
 
 #endif // APP_H

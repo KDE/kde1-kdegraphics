@@ -19,7 +19,7 @@ topdir  =       @topdir@
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H
-LDLIBS	=	-lkptools -lkdeui -lkfm -lkdecore -lgif -lqt -lXext -lm -lX11 @LIBSOCKET@ @LIBJPEG@
+LDLIBS	=	-lkdeui -lkfm -lkdecore -lgif -lqt -lXext -lm -lX11 @LIBSOCKET@ @LIBJPEG@
 METADIR	=	metas
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
@@ -47,7 +47,15 @@ OBJS=	main.o \
 	properties.o \
 	gif.o \
 	jpeg.o \
-	QwViewport.o
+	QwViewport.o \
+	tool.o \
+	ellipse.o \
+	circle.o \
+	line.o \
+	spraycan.o \
+	rectangle.o \
+	pen.o \
+	areaselect.o
 
 METAS=	canvas.moc \
 	app.moc \
@@ -58,9 +66,11 @@ METAS=	canvas.moc \
 	formatdialog.moc \
 	palette.moc \
 	palettedialog.moc \
-	QwViewport.moc
+	QwViewport.moc \
+	tool.moc \
+	spraycan.moc
 
-.PHONY:	all clean kplib install uninstall
+.PHONY:	all clean install uninstall
 
 #
 # Implicit rules
@@ -72,7 +82,7 @@ METAS=	canvas.moc \
 %.moc:	%.h
 	$(MOC) -o $@ $<
 
-all:	kplib kpaint
+all:	kpaint
 
 install: all
 	$(INSTALL_DIR) $(prefix)/bin
@@ -95,18 +105,13 @@ uninstall:
 Makefile:	Makefile.in
 	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-kplib:
-	(cd tools; $(MAKE) all)
-
 kpaint: $(METAS) $(OBJS)
 	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS) $(KDE_RPATH)
 
 clean:
-	$(MAKE) -C tools clean
-	-rm -f $(OBJS) *.moc kpaint tools/libkptools.a
+	-rm -f $(OBJS) *.moc kpaint
 
 realclean:  clean
-	$(MAKE) -C tools realclean
 	-rm -f kpaint
 
 messages:
