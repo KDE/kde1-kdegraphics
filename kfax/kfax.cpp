@@ -462,10 +462,10 @@ void TopLevel::setupToolBar(){
 
   toolbar->insertSeparator();
   
-  pixmap.load(PIXDIR + "zoomin.xpm");
+  pixmap.load(PIXDIR + "viewmag+.xpm");
   toolbar->insertButton(pixmap, ID_ZOOM_IN, TRUE, "Zoom in");
 
-  pixmap.load(PIXDIR + "zoomout.xpm");
+  pixmap.load(PIXDIR + "viewmag-.xpm");
   toolbar->insertButton(pixmap, ID_ZOOM_OUT, TRUE, "Zoom out");
   
   toolbar->insertSeparator();

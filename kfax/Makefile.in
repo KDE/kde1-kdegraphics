@@ -7,13 +7,12 @@ LIBTOOL = @LIBTOOL@
 KDE_RPATH = @KDE_RPATH@
 
 prefix  = @prefix@
-BINDIR  = $(prefix)/bin
-LIBDIR  = $(prefix)/lib
-TOOLDIR  = $(prefix)/share/toolbar
-MIMEDIR = $(prefix)/share/mimelnk/image/
-DOCSDIR = $(prefix)/share/doc/HTML/default/kfax
-APPSDIR = $(prefix)/share/applnk/Graphics
-PICSDIR = $(prefix)/share/apps/kfax/pics/
+exec_prefix = @exec_prefix@
+BINDIR  = @kde_bindir@
+MIMEDIR = @kde_mimedir@/image/
+DOCSDIR = @kde_htmldir@/en/kfax
+APPSDIR = @kde_appsdir@/Graphics
+PICSDIR = @kde_datadir@/kfax/pics/
 install = @INSTALL@
 INSTALL = $(install) -m 0755
 INSTALL_DATA = $(install) -m 0644
@@ -84,12 +83,9 @@ install: all
 	$(INSTALL_DIR) $(BINDIR)
 	$(INSTALL) $(TARGET) $(BINDIR)
 	(cd docs && $(MAKE) install)
-	$(INSTALL_DIR) $(TOOLDIR)
-	$(INSTALL_DATA) zoomin.xpm $(TOOLDIR)
 	$(INSTALL_DIR) $(PICSDIR)
 	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
 	$(INSTALL_DATA)  kfaxlogo.xpm $(PICSDIR)
-	$(INSTALL_DATA) zoomout.xpm $(TOOLDIR)
 	$(INSTALL_DIR) $(MIMEDIR)	
 	$(INSTALL_DIR) $(APPSDIR)
 	$(INSTALL_DATA) fax-g3.kdelnk $(MIMEDIR)
