@@ -89,7 +89,7 @@ msgstr "&Sulje ikkuna"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
-msgstr "&Koko ruutu"
+msgstr "&Koko näyttö"
 
 #: viewer.cpp:424
 msgid "&Crop"

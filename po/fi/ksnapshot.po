@@ -19,7 +19,7 @@ msgid "snapshot"
 msgstr "valokuva"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -35,7 +35,7 @@ msgstr ""
 "KSnapshot copyright Richard Moore (rich@kde.org)\n"
 "julkaistu LGPL lisenssin alla\n"
 "\n"
-"Versio: "
+"Versio: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
