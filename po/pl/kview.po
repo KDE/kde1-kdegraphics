@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-01-31 05:54+0100\n"
+"PO-Revision-Date: 1999-05-20 20:05+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "%s: zapisane"
 
 #: viewer.cpp:227
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr "Podaj wspólczynnik powiêkszenia (100 = 1x):"
+msgstr "Podaj wspó³czynnik powiêkszenia (100 = 1x):"
 
 #: viewer.cpp:231
 msgid "Illegal zoom factor"
@@ -59,7 +59,7 @@ msgstr "&Poprzedni"
 
 #: viewer.cpp:314 viewer.cpp:418
 msgid "&Next"
-msgstr "&Nastepny"
+msgstr "&Nastêpny"
 
 #: viewer.cpp:316 viewer.cpp:421
 msgid "&Slideshow On/Off"

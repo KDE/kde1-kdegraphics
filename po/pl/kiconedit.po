@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit \n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-01-19 17:22+0100\n"
+"PO-Revision-Date: 1999-05-20 19:52+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Nowe &okno"
 
 #: kiconedit.cpp:396
 msgid "&New..."
-msgstr "&Nowy"
+msgstr "&Nowy..."
 
 #: kiconedit.cpp:402
 msgid "Open recent"
@@ -99,7 +99,7 @@ msgstr "Po&mniejsz"
 
 #: kiconedit.cpp:463
 msgid "Zoom factor"
-msgstr "Wspólczynnik powiêkszenia"
+msgstr "Wspó³czynnik powiêkszenia"
 
 #: kiconedit.cpp:470
 msgid "&Resize"
@@ -155,7 +155,7 @@ msgstr "Linia"
 
 #: kiconedit.cpp:491
 msgid "Eraser (Transparent)"
-msgstr "Gumka (prze¼roczysta)"
+msgstr "Gumka (przezroczysta)"
 
 #: kiconedit.cpp:494
 msgid "&Tools"
@@ -422,7 +422,7 @@ msgid ""
 msgstr ""
 "Drukowanie\n"
 "\n"
-"Otwiera dialog drukowania aby wydrukowaæ bie¿±c± ikonê (Nie do koñcadzia³a "
+"Otwiera dialog drukowania aby wydrukowaæ bie¿±c± ikonê (Nie do koñca dzia³a "
 "jak mo¿naby tego oczekiwaæ)"
 
 #: kiconedit.cpp:829
@@ -472,8 +472,8 @@ msgstr ""
 "Je¶li zawarto¶æ schowka jest wiêksza od bie¿acej ikony to mo¿na wkleiæ go do "
 "nowego okna\n"
 "\n"
-"(Wskazówka: Wybierz \"Wklejaj prze¼roczyste piksele\" w dialogu "
-"konfiguracyjnego je¶li chcesz wklejaæ w sposób prze¼roczysty)"
+"(Wskazówka: Wybierz \"Wklejaj przezroczyste piksele\" w dialogu "
+"konfiguracyjnego je¶li chcesz wklejaæ w sposób przezroczysty)"
 
 #: kiconedit.cpp:844
 msgid ""
@@ -560,7 +560,7 @@ msgid ""
 msgstr ""
 "Nowe okno\n"
 "\n"
-"Otwioera nowe okno Edytora Ikon"
+"Otwiera nowe okno Edytora Ikon"
 
 #: kiconedit.cpp:869
 msgid ""
@@ -608,7 +608,7 @@ msgid ""
 msgstr ""
 "Wype³nienie kolorem\n"
 "\n"
-"Wype³ñ wszystkie s±siaduj±ce piksele o tym samym kolorze bie¿±cym kolorem"
+"Wype³nij wszystkie s±siaduj±ce piksele o tym samym kolorze bie¿±cym kolorem"
 
 #: kiconedit.cpp:886
 msgid ""
@@ -711,9 +711,9 @@ msgid ""
 msgstr ""
 "Gumka\n"
 "\n"
-"Wygumuj piksele. Staj± siê one prze¼roczyste.\n"
+"Wyma¿ piksele. Staj± siê one przezroczyste.\n"
 "\n"
-"(Wskazówka: Je¶li chcesz rysowaæ w sposób prze¼roczysty innym narzêdziem "
+"(Wskazówka: Je¶li chcesz rysowaæ w sposób przezroczysty innym narzêdziem "
 "wtedy kliknij na \"Gumka\", a potem na narzêdzie, które chcesz u¿yæ)"
 
 #: kicongrid.cpp:66
@@ -835,7 +835,7 @@ msgstr "B£¡D"
 
 #: kicon.cpp:116
 msgid "The KDE Icon Editor has found a recover file for:\n"
-msgstr "KDE Edytor Ikon znalaz³ odzyskny plik dla:\n"
+msgstr "KDE Edytor Ikon znalaz³ zapasowy plik dla:\n"
 
 #: kicon.cpp:118 kicon.cpp:285
 msgid ""
@@ -1071,7 +1071,7 @@ msgstr "Tryb wklejania"
 
 #: kiconconfig.cpp:507
 msgid "Paste transparent pixels"
-msgstr "Wklejaj prze¼roczyste piksele"
+msgstr "Wklejaj przezroczyste piksele"
 
 #: kiconconfig.cpp:511
 msgid "Show rulers"
