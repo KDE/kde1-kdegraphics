@@ -1,7 +1,7 @@
 # KDE Config File
 [KDE Desktop Entry]
 Type=Application
-Exec=kview %f
+Exec=kview %u
 Icon=image.xpm
 TerminalOptions=
 Path=
@@ -9,6 +9,7 @@ Terminal=0
 BinaryPattern=kview;
 DocPath=kview/index.html
 Comment=KDE Image Viewer
-[Binding]
-Protocols=file;http;ftp;
-Extensions=Images;
+Comment[de]=KDE Bilderbetrachter
+MimeType=image/gif;image/x-xpm;image/x-xbm;image/jpeg;
+Name=Image Viewer
+Name[de]=Image Viewer
