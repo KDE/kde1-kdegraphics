@@ -25,6 +25,8 @@
 
 */
 
+#include <qlayout.h>
+
 #include "kfax.h"
 #include "options.h"
 
@@ -54,118 +56,214 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   setCaption(i18n("KFax Options Dialog"));
 
   this->setFocusPolicy(QWidget::StrongFocus);
-  
-  bg = new QGroupBox(this,"bg");
-  bg->setGeometry(10,10,400,220);  
 
+  int mw;
+
+  QVBoxLayout *mainLayout = new QVBoxLayout(this, 10);
+
+  bg = new QGroupBox(this,"bg");
+  mainLayout->addWidget( bg );
+
+  QVBoxLayout *vbl = new QVBoxLayout(bg, 10);
+
+  QHBoxLayout *hbl1 = new QHBoxLayout();
+  vbl->addSpacing( 15 );
+
+  vbl->addLayout( hbl1 );
+
+  displaylabel = new QLabel(i18n("Display Options:"),this,"displaylabel");
+  displaylabel->setFixedSize( displaylabel->sizeHint() );
+  hbl1->addSpacing( 10 );
+  hbl1->addWidget( displaylabel );
+  int labelw = displaylabel->sizeHint().width();
+
+  landscape = new QCheckBox(i18n("Landscape"),this,"Landscape");
+  landscape->setFixedSize( landscape->sizeHint() );
+  hbl1->addSpacing( 10 );
+  hbl1->addWidget( landscape );
+
+  flip = new QCheckBox(i18n("Upside Down"),this,"upsidedown");
+  flip->setFixedSize( flip->sizeHint() );
+  hbl1->addSpacing( 10 );
+  hbl1->addWidget( flip );
+
+  invert = new QCheckBox(i18n("Invert"),this,"invert");
+  invert->setFixedSize( invert->sizeHint() );
+  hbl1->addSpacing( 10 );
+  hbl1->addWidget( invert );
+  mw = displaylabel->sizeHint().width() + landscape->sizeHint().width() +
+  	flip->sizeHint().width() + invert->sizeHint().width() + 50;
+
+  vbl->addSpacing( 15 );
+  	
+  QHBoxLayout *hbl8 = new QHBoxLayout();
+  vbl->addLayout( hbl8 );
+  hbl8->addSpacing( 10 );
+  	
   resgroup = new QButtonGroup(this,"resgroup");
-  resgroup->setGeometry(20,60,370,30);
   resgroup->setFrameStyle(QFrame::NoFrame);
+  hbl8->addWidget( resgroup );
+
+  QHBoxLayout *hbl2 = new QHBoxLayout(resgroup);
+
   reslabel = new QLabel(i18n("Raw Fax Resolution:"),resgroup,"relabel");
-  reslabel->move(5,10);
-  reslabel->adjustSize();
+  reslabel->setFixedSize( reslabel->sizeHint() );
+  hbl2->addWidget( reslabel );
+  if( reslabel->sizeHint().width() > labelw ) labelw = reslabel->sizeHint().width();
 
   resauto = new QRadioButton(i18n("Auto"),resgroup,"resauto");
-  resauto->move(130,2);
+  resauto->setFixedSize( resauto->sizeHint() );
+  hbl2->addSpacing( 20 );
+  hbl2->addWidget( resauto );
 
   fine = new QRadioButton(i18n("Fine"),resgroup,"fine");
-  fine->move(215,2);
+  fine->setFixedSize( fine->sizeHint() );
+  hbl2->addSpacing( 30 );
+  hbl2->addWidget( fine );
 
   normal = new QRadioButton(i18n("Normal"),resgroup,"normal");
-  normal->move(290,2);
+  normal->setFixedSize( normal->sizeHint() );
+  hbl2->addSpacing( 30 );
+  hbl2->addWidget( normal );
+
+  int w2 = reslabel->width() + resauto->width() + fine->width()
+	  	+ normal->width() + 80;
+  if( w2 > mw ) mw = w2;
 
   /*  displaygroup = new QButtonGroup(this,"displaygroup");
   displaygroup->setGeometry(20,60,370,30);
   displaygroup->setFrameStyle(QFrame::NoFrame);*/
 
-  displaylabel = new QLabel(i18n("Display Options:"),this,"displaylabel");
-  displaylabel->move(25,30);
-  displaylabel->adjustSize();
+  vbl->addSpacing( 20 );
 
-  landscape = new QCheckBox(i18n("Landscape"),this,"Landscape");
-  landscape->move(150,30);
-  landscape->adjustSize();
+  QHBoxLayout *hbl3 = new QHBoxLayout();
+  vbl->addLayout( hbl3 );
 
-  flip = new QCheckBox(i18n("Upside Down"),this,"upsidedown");
-  flip->move(238,30);
-  flip->adjustSize();
+//  lsbgroup = new QButtonGroup(this,"lsbgroup");
 
-  invert = new QCheckBox(i18n("Invert"),this,"invert");
-  invert->move(340,30);
-  invert->adjustSize();
+  lsblabel = new QLabel(i18n("Raw Fax Data are:"),this,"lsblabel");
+  lsblabel->setFixedSize( lsblabel->sizeHint() );
+  hbl3->addSpacing( 10 );
+  hbl3->addWidget( lsblabel );
+  if( lsblabel->sizeHint().width() > labelw ) labelw = lsblabel->sizeHint().width();
 
-  lsbgroup = new QButtonGroup(this,"lsbgroup");
-  lsbgroup->setGeometry(20,100,370,30);
-  lsbgroup->setFrameStyle(QFrame::NoFrame);
+  lsb = new QCheckBox(i18n("LS-Bit first"),this,"lsbitfirst");
+  lsb->setFixedSize( lsb->sizeHint() );
+  hbl3->addSpacing( 10 );
+  hbl3->addWidget( lsb );
 
+  vbl->addSpacing( 15 );
 
-  lsblabel = new QLabel(i18n("Raw Fax Data are:"),lsbgroup,"lsblabel");
-  lsblabel->move(5,10);
-  lsblabel->adjustSize();
-  
-  lsb = new QCheckBox(i18n("LS-Bit first"),lsbgroup,"lsbitfirst");
-  lsb->move(130,10);
-  lsb->adjustSize();
+  QHBoxLayout *hbl9 = new QHBoxLayout();
+  vbl->addLayout( hbl9 );
+  hbl9->addSpacing( 10 );
 
   rawgroup = new QButtonGroup(this,"rawgroup");
-  rawgroup->setGeometry(20,140,370,30);
+  hbl9->addWidget( rawgroup );
+
+  QHBoxLayout *hbl4 = new QHBoxLayout( rawgroup );
+
   rawgroup->setFrameStyle(QFrame::NoFrame);
 
   rawlabel = new QLabel(i18n("Raw Facsimili are:"),rawgroup,"rawlabel");
-  rawlabel->move(5,10);
-  rawlabel->adjustSize();
-  
+  rawlabel->setFixedSize( rawlabel->sizeHint() );
+  hbl4->addWidget( rawlabel );
+  if( rawlabel->sizeHint().width() > labelw ) labelw = rawlabel->sizeHint().width();
+
   g3 = new QRadioButton("g3",rawgroup,"g3");
-  g3->move(130,10);
-  g3->adjustSize();
   connect(g3,SIGNAL(clicked()),this,SLOT(g3toggled()));
+  g3->setFixedSize( g3->sizeHint() );
+  hbl4->addSpacing( 20 );
+  hbl4->addWidget( g3 );
+
 
   g32d = new QRadioButton("g32d",rawgroup,"g32d");
-  g32d->move(218,10);
-  g32d->adjustSize();
   connect(g32d,SIGNAL(clicked()),this,SLOT(g32toggled()));
+  g32d->setFixedSize( g32d->sizeHint() );
+  hbl4->addSpacing( 30 );
+  hbl4->addWidget( g32d );
 
 
   g4 = new QRadioButton("g4",rawgroup,"g4");
-  g4->move(320,10);
-  g4->adjustSize();
   connect(g4,SIGNAL(clicked()),this,SLOT(g4toggled()));
+  g4->setFixedSize( g4->sizeHint() );
+  hbl4->addSpacing( 30 );
+  hbl4->addWidget( g4 );
 
-  
+  w2 = rawlabel->width() + g3->width() + g32d->width()
+	  	+ g4->width() + 80;
+  if( w2 > mw ) mw = w2;
+
+  vbl->addSpacing( 20 );
+
+  QHBoxLayout *hbl5 = new QHBoxLayout();
+  vbl->addLayout( hbl5 );
+
   widthlabel = new QLabel(i18n("Raw Fax width:"),this,"widthlabel");
-  widthlabel->move(25,190);
-  widthlabel->adjustSize();
+  widthlabel->setFixedSize( widthlabel->sizeHint() );
+  hbl5->addSpacing( 10 );
+  hbl5->addWidget( widthlabel );
 
   widthedit = new KIntLineEdit(this,"widthedit");
-  widthedit->setGeometry(135,185,60,22);
+  widthedit->setFixedHeight( widthedit->sizeHint().height() );
+  widthedit->setMinimumWidth( widthedit->sizeHint().width() );
+  hbl5->addWidget( widthedit );
 
   heightlabel = new QLabel(i18n("height:"),this,"heightlabel");
-  heightlabel->move(210,190);
-  heightlabel->adjustSize();
+  heightlabel->setFixedSize( heightlabel->sizeHint() );
+  hbl5->addSpacing( 10 );
+  hbl5->addWidget( heightlabel );
 
   heightedit = new KIntLineEdit(this,"heightedit");
-  heightedit->setGeometry(260,185,60,22);
+  heightedit->setFixedHeight( heightedit->sizeHint().height() );
+  heightedit->setMinimumWidth( heightedit->sizeHint().width() );
+  hbl5->addWidget( heightedit );
 
   geomauto = new QCheckBox(i18n("Auto"),this,"geomauto");
-  geomauto->setGeometry(340,185,50,22);
   connect(geomauto,SIGNAL(clicked()),this,SLOT(geomtoggled()));
-  
-  cancel_button = new QPushButton(i18n("Cancel"),this);
+  geomauto->setFixedSize( geomauto->sizeHint() );
+  hbl5->addSpacing( 10 );
+  hbl5->addWidget( geomauto );
 
-  cancel_button->setGeometry( 3*XOFFSET +100, 240, 80, BUTTONHEIGHT );
+  w2 = widthlabel->width() + widthedit->width() + heightlabel->width()
+	  	+ heightedit->width() + geomauto->width() + 50;
+  if( w2 > mw ) mw = w2;
+
+  bg->setMinimumHeight( displaylabel->sizeHint().height() +
+  			reslabel->sizeHint().height() +
+  			lsblabel->sizeHint().height() +
+  			rawlabel->sizeHint().height() +
+  			widthedit->sizeHint().height() + 160 );
+  bg->setMinimumWidth( mw + 30 );
+
+  displaylabel->setFixedWidth( labelw );
+  reslabel->setFixedWidth( labelw );
+  rawlabel->setFixedWidth( labelw );
+  lsblabel->setFixedWidth( labelw );
+
+  QHBoxLayout *hbl6 = new QHBoxLayout();
+//  mainLayout->addStretch( 1 );
+  mainLayout->addLayout( hbl6 );
+
+  cancel_button = new QPushButton(i18n("Cancel"),this);
+  cancel_button->setFixedSize( cancel_button->sizeHint());
   connect( cancel_button, SIGNAL( clicked() ), SLOT( reject() ) );
 
   ok_button = new QPushButton( i18n("OK"), this );
-  ok_button->setGeometry( 3*XOFFSET, 240, 80, BUTTONHEIGHT );
+  ok_button->setFixedSize( ok_button->sizeHint());
   connect( ok_button, SIGNAL( clicked() ), SLOT( ready() ) );	
 
   helpbutton = new QPushButton(i18n( "Help"), this );
-  helpbutton->setGeometry( 410  - 80, 240, 80, BUTTONHEIGHT );
+  helpbutton->setFixedSize( helpbutton->sizeHint());
   connect( helpbutton, SIGNAL( clicked() ), SLOT( help() ) );	
 
-  this->setFixedSize(420,270);
+  hbl6->addWidget( ok_button );
+  hbl6->addWidget( cancel_button );
+  hbl6->addStretch( 1 );
+  hbl6->addWidget( helpbutton );
 
-
+  mainLayout->activate();
+  resize(minimumSize());
 }
 
 
