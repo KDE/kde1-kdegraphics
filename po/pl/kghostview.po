@@ -1,11 +1,11 @@
 # KTranslator Generated File
 # mostly translated by Piotr Roszatycki <dexter@fnet.pl>
-# latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
+# currently maintained by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1999-04-23 02:23+0200\n"
-"PO-Revision-Date: 1999-01-03 12:15+0100\n"
+"PO-Revision-Date: 1999-06-15 16:49+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -99,7 +99,7 @@ msgstr "Paleta"
 
 #: interpreter.cpp:152
 msgid "Colo&r"
-msgstr "Kolo&r"
+msgstr "Kolo&rowa"
 
 #: interpreter.cpp:161
 msgid "&Grayscale"
@@ -107,7 +107,7 @@ msgstr "&Poziomy szaro¶ci"
 
 #: interpreter.cpp:169
 msgid "Monochrom&e"
-msgstr "Czarno-&bia³y"
+msgstr "Czarno-&bia³a"
 
 #: interpreter.cpp:192
 msgid "Backing"
@@ -257,7 +257,7 @@ msgstr "Powiêkszenie"
 
 #: viewcontrol.cpp:85
 msgid "&Media"
-msgstr "&Media"
+msgstr "&Rozmiar strony"
 
 #: viewcontrol.cpp:93
 msgid "&Orientation"
@@ -341,7 +341,7 @@ msgstr "Od¶wie¿"
 
 #: kghostview.cpp:424 kghostview.cpp:426
 msgid "Not known"
-msgstr "NIeznany"
+msgstr "Nieznany"
 
 #: kghostview.cpp:437
 msgid "Configure interpreter"
@@ -381,7 +381,7 @@ msgstr "Po&mniejsz"
 
 #: kghostview.cpp:534
 msgid "&Zoom ..."
-msgstr "&Powiekszenie..."
+msgstr "&Powiêkszenie..."
 
 #: kghostview.cpp:539
 msgid "&Info ..."
@@ -553,7 +553,7 @@ msgstr "Zamieñ zaznaczenie strony"
 
 #: kghostview.cpp:744
 msgid "Sc.100 of 100  P.100 of 100"
-msgstr "Sc.100 z 100  P.100 z 100"
+msgstr "Sek.100 z 100  P.100 z 100"
 
 #: kghostview.cpp:745
 #, c-format
@@ -576,8 +576,8 @@ msgid ""
 "Alternatively stop the running one."
 msgstr ""
 "Aktualnie czeka\n"
-"na zakoñczenie zadania.\n"
-"Przoszê poczekaæ na zakoñczenie,\n"
+"na zakoñczenie zadania sieciowego.\n"
+"Proszê poczekaæ na jego zakoñczenie,\n"
 "ewentualnie zakoñczyæ uruchomione zadanie."
 
 #: kghostview.cpp:792
@@ -624,7 +624,7 @@ msgstr ""
 "Mo¿esz wybraæ wydruk wszystkich stron do pliku.\n"
 "Powstanie w ten sposób dokument identyczny\n"
 "z aktualnie za³adowanym w przegl±darce.\n"
-"NIe ma potrzeby drukowania wszystkich stron do nowego pliku."
+"Nie ma potrzeby drukowania wszystkich stron do nowego pliku."
 
 #: kghostview.cpp:1661
 msgid ""
@@ -632,7 +632,7 @@ msgid ""
 "nothing could be printed to a file.\n"
 msgstr ""
 "Nie zosta³a podana nazwa pliku,\n"
-"dlatego nie mo¿na wydrukowaæ dokumentu do pliku.\n"
+"do którego mo¿naby wydrukowaæ dokument.\n"
 
 #: kghostview.cpp:1702
 msgid ""
@@ -652,8 +652,8 @@ msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr ""
-"Drukowanie ni powiod³o siê, nie wybrano\n"
-"¿adnych stron do wydruku.\n"
+"Drukowanie nie powiod³o siê, poniewa¿ nie\n"
+"wybrano ¿adnych stron do wydruku.\n"
 
 #: kghostview.cpp:2309 kghostview.cpp:2321 kghostview.cpp:2586
 #: kghostview.cpp:2609
@@ -673,7 +673,7 @@ msgstr "z %d   "
 
 #: kghostview.cpp:2585
 msgid "Sc.1 "
-msgstr "Sc.1 "
+msgstr "Sek.1 "
 
 #: kghostview.cpp:2588
 msgid "P.1 "
@@ -687,11 +687,11 @@ msgstr "Str.%d "
 #: kghostview.cpp:2605
 #, c-format
 msgid "Sc.%d "
-msgstr "Sc.%d "
+msgstr "Sek.%d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
+msgstr "&Wspó³czynnik powiêkszenia"
 
 #~ msgid "View Control"
 #~ msgstr "Parametry widoku"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-05-20 20:05+0200\n"
+"PO-Revision-Date: 1999-06-15 18:33+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -294,7 +294,7 @@ msgstr "&Zastosuj"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr "Podczs ³adowania"
+msgstr "W trakcie ³adowania"
 
 #: prefdlg.cpp:58
 msgid "Resize Window"

@@ -1,11 +1,11 @@
 # KTranslator Generated File
 # mostly translated by Piotr Roszatycki <dexter@fnet.pl>
-# latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
+# currently maintained by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi \n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1999-01-03 12:00+0100\n"
+"PO-Revision-Date: 1999-06-15 18:42+0200\n"
 "Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
@@ -19,7 +19,7 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Zmiana przy generowaniu czcionek zadzia³a\n"
+"Zmiana w generowaniu czcionek zadzia³a\n"
 "dopiero przy nastêpnym uruchomieniu kdvi!"
 
 #: dviwin.cpp:232
@@ -136,11 +136,11 @@ msgstr "&Nastêpna"
 
 #: kdvi.cpp:205
 msgid "&First"
-msgstr "Pie&rwszy"
+msgstr "Pie&rwsza"
 
 #: kdvi.cpp:206
 msgid "&Last"
-msgstr "Os&tatni"
+msgstr "Os&tatnia"
 
 #: kdvi.cpp:207
 msgid "&Go to ..."
@@ -408,7 +408,7 @@ msgstr "Specjalne dane Postcript s± renderowane"
 
 #: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
-msgstr "Specjalne dane Postscript nie s± renderowane"
+msgstr "Specjalne dane Postscriptu nie s± renderowane"
 
 #: kdvi.cpp:747
 msgid "No menu bar"
@@ -424,7 +424,7 @@ msgstr "Brak paska przycisków"
 
 #: kdvi.cpp:765
 msgid "Button bar is shown"
-msgstr "Pasek przycisków jest pokazany"
+msgstr "Pasek przycisków jest widoczny"
 
 #: kdvi.cpp:779
 msgid "Tool bar is shown"
@@ -440,11 +440,11 @@ msgstr "Brak paska stanu"
 
 #: kdvi.cpp:803
 msgid "Status bar is shown"
-msgstr "Pasek stanu jest pokazany"
+msgstr "Pasek stanu jest widoczny"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Paski przewijania s± pokazane"
+msgstr "Paski przewijania s± widoczne"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
@@ -460,11 +460,11 @@ msgstr " / "
 
 #: kdvi.cpp:905
 msgid "Large text button set to shrink factor "
-msgstr "Przycisk du¿ego tekstu ustawia wspó³czynnik powiêkszenia "
+msgstr "Przycisk z du¿ym \"A\" ma ustawiony wspó³czynnik powiêkszenia "
 
 #: kdvi.cpp:913
 msgid "Small text button set to shrink factor "
-msgstr "Przycisk ma³ego tekstu ustawia wspó³czynnik powiêkszenia "
+msgstr "Przycisk z ma³ym \"A\" ma ustawiony wspó³czynnik powiêkszenia "
 
 #: kdvi.cpp:931
 #, c-format
@@ -545,15 +545,15 @@ msgstr "¦cie¿ka PK Czcionek"
 
 #: prefs.cpp:300
 msgid "Shrink factor for small text"
-msgstr "Wspó³cz. powiêkszenia dla ma³ego tekstu"
+msgstr "Wspó³cz. powiêkszenia dla ma³ego \"A\""
 
 #: prefs.cpp:305
 msgid "Shrink factor for large text"
-msgstr "Wspó³cz. powiêkszenia dla du¿ego tekstu"
+msgstr "Wspó³cz. powiêkszenia dla du¿ego \"A\""
 
 #: prefs.cpp:325
 msgid "Show postscript specials"
-msgstr "Poka¿ specjalne dane postscript"
+msgstr "Poka¿ specjalne dane PostScriptu"
 
 #: prefs.cpp:326
 msgid "Antialiased postcript"
