@@ -134,7 +134,7 @@ msgstr "Maks&pekt"
 
 #: viewer.cpp:367
 msgid "&List.."
-msgstr "&List.."
+msgstr "&Liste.."
 
 #: viewer.cpp:371
 msgid "&Previous"
