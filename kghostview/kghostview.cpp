@@ -587,7 +587,7 @@ void KGhostview::createToolbar()
 	
 	//printf("Inserted all buttons\n");
 
-	toolbar1 = addToolbar( toolbar );
+	toolbar1 = addToolBar( toolbar );
 	
 	//printf("Registered with ktopwidget\n");
 	

@@ -34,7 +34,7 @@ KPaint::KPaint(char *name= 0) :
   initMenus();
 
   toolbar->show();
-  addToolbar(toolbar);
+  addToolBar(toolbar);
 }
 
 void KPaint::initToolbar(void)
