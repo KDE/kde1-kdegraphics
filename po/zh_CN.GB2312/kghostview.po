@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmkpanel\n"
 "POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
-"Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
+"Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
 
 #: copyright.cpp:27
@@ -107,7 +107,7 @@ msgstr "高速缓存[&B]"
 
 #: interpreter.cpp:244 kkeydialog.cpp:233
 msgid "&Defaults"
-msgstr "缺省[&D]"
+msgstr "默认[&D]"
 
 #: interpreter.cpp:314
 msgid "gs"
@@ -199,10 +199,10 @@ msgstr "F1"
 msgid "Document information"
 msgstr "文章信息"
 
+#
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "打印机设置"
+msgstr "页面设置"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -214,11 +214,11 @@ msgstr "跳至页数"
 
 #: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
 msgid "Zoom In"
-msgstr "放大"
+msgstr "缩小"
 
 #: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
 msgid "Zoom Out"
-msgstr "缩小"
+msgstr "放大"
 
 #: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
 msgid "Next Page"
@@ -265,10 +265,10 @@ msgid "Open &recent"
 msgstr "最近打开的[&R]"
 
 #
+#
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "设置[&S] ..."
+msgstr "页面设置[&U] ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -276,16 +276,16 @@ msgstr "打印[&P] ..."
 
 #: kghostview.cpp:513
 msgid "Zoom &in"
-msgstr "放大[&I]"
+msgstr "缩小[&I]"
 
 #: kghostview.cpp:515
 msgid "Zoom &out"
-msgstr "缩小[&O]"
+msgstr "放大[&O]"
 
+#
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "信息[&I] ..."
+msgstr "缩放[&Z] ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -400,12 +400,12 @@ msgstr "打印文章 ..."
 #
 #: kghostview.cpp:677
 msgid "Zoom in"
-msgstr "放大"
+msgstr "缩小"
 
 #
 #: kghostview.cpp:680
 msgid "Zoom out"
-msgstr "缩小"
+msgstr "放大"
 
 #: kghostview.cpp:685
 msgid "Go back"
@@ -489,10 +489,10 @@ msgstr "上下颠倒"
 msgid "Go to ..."
 msgstr "跳至 ..."
 
+#
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "放大"
+msgstr "缩放"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -596,7 +596,7 @@ msgstr "没有键[&N]"
 
 #: kkeydialog.cpp:390
 msgid "&Default key"
-msgstr "缺省的键[&D]"
+msgstr "默认的键[&D]"
 
 #: kkeydialog.cpp:398
 msgid "&Custom key"
@@ -606,6 +606,7 @@ msgstr "自定义键[&C]"
 msgid "Usage: "
 msgstr "用法: "
 
+#
 #: main.cpp:27
 #, fuzzy
 msgid ""
@@ -735,19 +736,19 @@ msgstr ""
 "指定的范围必须在文章的这个部分之中.检查状态\n"
 "行中的信息.\n"
 
+#
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "放大[&M]"
+msgstr "放大"
 
 #
+#
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "介质[&E]"
+msgstr "介质[&M]"
 
+#
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
 msgstr "方向[&O]"
 
@@ -755,8 +756,8 @@ msgstr "方向[&O]"
 msgid "&Apply"
 msgstr "应用[&A]"
 
+#
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
 msgstr "放大[&M]"
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kcmkpanel\n"
 "POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
-"Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
+"Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
 
 #: app.cpp:45
@@ -112,11 +112,11 @@ msgstr "保存文件"
 
 #: kpaint.cpp:180 kpaint.cpp:332
 msgid "Zoom In"
-msgstr "放大"
+msgstr "缩小"
 
 #: kpaint.cpp:183 kpaint.cpp:333
 msgid "Zoom Out"
-msgstr "缩小"
+msgstr "放大"
 
 #: kpaint.cpp:312
 msgid "Open Image..."
@@ -177,7 +177,7 @@ msgstr "贴成新图象"
 
 #: kpaint.cpp:334
 msgid "Mask..."
-msgstr "Mask..."
+msgstr "掩模..."
 
 #: kpaint.cpp:337
 msgid "Information..."
