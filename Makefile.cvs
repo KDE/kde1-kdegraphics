@@ -12,6 +12,13 @@ all:
 	echo $$mfs")" >> configure.in ;\
 	automake
 	cat configure.in.1 configure.in.2 > configure.in
+	@echo "Creating automoc"
+	@findperl
+	@perlpath=`cat perlbin`; \
+	echo "#!"$$perlpath > automoc
+	@cat automoc.in >> automoc
+	@chmod +x automoc
+	automoc
 	autoconf
 	touch -r configure.in.1 configure.in
 	touch configure
