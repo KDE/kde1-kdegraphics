@@ -35,7 +35,6 @@ msgid "About KView"
 msgstr "Sobre KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Lista..."
 
@@ -72,13 +71,12 @@ msgid "&Images"
 msgstr "&Imágenes"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
-msgstr "&Guardar como.."
+msgstr "&Guardar Como..."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "&Cerrar Ventana"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -86,7 +84,7 @@ msgstr "Pantalla &Completa"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Ajustar"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -115,14 +113,12 @@ msgid "&Half size"
 msgstr "Di&vidir tamaño"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "Di&vidir tamaño"
+msgstr "Tamaño &Máximo"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Max&pect"
+msgstr "Max/&aspecto"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
@@ -153,9 +149,8 @@ msgid "Max&pect"
 msgstr "Max&pect"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
-msgstr "&Sobre KView.."
+msgstr "&Sobre KView..."
 
 #: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
@@ -170,34 +165,31 @@ msgid "Transfer error: "
 msgstr "Error de tranferencia: "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
-msgstr "Cargando.."
+msgstr "Cargando..."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "No se puede cargar %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Abrillantando..."
+msgstr "Imprimiendo..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Introduzca el factor de brillo (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "El factor de brillo debe ser positivo"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Cambiando brillo..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
 msgstr "Intensidad:Brillo"
 
@@ -218,31 +210,28 @@ msgid "Smooth"
 msgstr "Igualar"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
-msgstr "Introduzca valor gamma (0...1):"
+msgstr "Introduzca valor gamma ( >0 ):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Valor gamma incorrecto"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Corrección gamma..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Gamma Correcto..."
+msgstr "Intensidad:Gamma Correcto..."
 
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Intervalo.."
+msgstr "Externo..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
-msgstr "Prev"
+msgstr "Anterior"
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
@@ -250,7 +239,7 @@ msgstr "Me&zclar"
 
 #: ilistdlg.cpp:66
 msgid "Next"
-msgstr "Sig"
+msgstr "Siguiente"
 
 #: ilistdlg.cpp:70
 msgid "Start slide"
