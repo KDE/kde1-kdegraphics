@@ -36,7 +36,7 @@ msgstr "Skriv inn forstørringsfaktor (100 = 1x):"
 
 #: viewer.cpp:291
 msgid "Illegal zoom factor"
-msgstr "Ulogliv forstørringsfaktor"
+msgstr "Ugyldig forstørringsfaktor"
 
 #: viewer.cpp:340
 msgid "About KView"
@@ -60,11 +60,11 @@ msgstr "&Lysbildefremvisning av/på"
 
 #: viewer.cpp:382
 msgid "&Zoom"
-msgstr "&Forstørr"
+msgstr "F&orstørre"
 
 #: viewer.cpp:383
 msgid "&Transform"
-msgstr "&Omgjør"
+msgstr "O&mdanne"
 
 #: viewer.cpp:384
 msgid "To &Desktop"
@@ -105,7 +105,7 @@ msgstr "&Forstørr..."
 #: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
-msgstr "&Forstørr 10%"
+msgstr "Fo&rstørr 10 %"
 
 #: viewer.cpp:436
 #, c-format
@@ -271,7 +271,7 @@ msgstr "Stopp &lysbilde"
 
 #: ilistdlg.cpp:276
 msgid "Start &slide"
-msgstr "Start &lystbilde"
+msgstr "Start &lysbilde"
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"

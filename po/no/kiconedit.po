@@ -96,7 +96,7 @@ msgstr "1:10"
 
 #: kiconedit.cpp:461
 msgid "Zoom &in"
-msgstr "&Forsørre"
+msgstr "&Forstørre"
 
 #: kiconedit.cpp:462
 msgid "Zoom &out"
@@ -108,7 +108,7 @@ msgstr "Forstørringsfaktor"
 
 #: kiconedit.cpp:470
 msgid "&Resize"
-msgstr "&Endre størresle"
+msgstr "&Endre størrelse"
 
 #: kiconedit.cpp:472
 msgid "&GrayScale"
@@ -136,7 +136,7 @@ msgstr "Sirkel"
 
 #: kiconedit.cpp:485
 msgid "Filled circle"
-msgstr "Fyllt sirkel"
+msgstr "Fylt sirkel"
 
 #: kiconedit.cpp:486
 msgid "Ellipse"
@@ -144,7 +144,7 @@ msgstr "Elipse"
 
 #: kiconedit.cpp:487
 msgid "Filled ellipse"
-msgstr "Fyllt elipse"
+msgstr "Fylt elipse"
 
 #: kiconedit.cpp:488 kiconedit.cpp:687
 msgid "Spray"
@@ -180,7 +180,7 @@ msgstr "Slå av/på &verktøylinje"
 
 #: kiconedit.cpp:506
 msgid "Toggle &drawing tools"
-msgstr "Slå av/på &tegneverktøyer"
+msgstr "Slå av/på &tegneverktøy"
 
 #: kiconedit.cpp:509
 msgid "Toggle &statusbar"
@@ -203,8 +203,8 @@ msgid ""
 msgstr ""
 "KDE Ikonredigerer\n"
 "\n"
-"Et grafisk tegneprogram for laging\n"
-"av ikoner med KDEs ikonpalett.\n"
+"Et grafisk tegneprogram for å lage\n"
+"ikoner med KDEs ikonpalett.\n"
 "\n"
 "Copyright 1998 ved Thomas Tanghus\n"
 "tanghus@kde.org\n"
@@ -276,7 +276,7 @@ msgstr "Tegne rektangel"
 
 #: kiconedit.cpp:677
 msgid "Draw filled rectangle"
-msgstr "Tegne fyllt rektangl"
+msgstr "Tegne fylt rektangel"
 
 #: kiconedit.cpp:679
 msgid "Draw circle"
@@ -284,7 +284,7 @@ msgstr "Tegne sirkel"
 
 #: kiconedit.cpp:681
 msgid "Draw filled circle"
-msgstr "Tegne fyllt sirkel"
+msgstr "Tegne fylt sirkel"
 
 #: kiconedit.cpp:683
 msgid "Draw ellipse"
@@ -292,7 +292,7 @@ msgstr "Tegne elipse"
 
 #: kiconedit.cpp:685
 msgid "Draw filled ellipse"
-msgstr "Tegne fyllt elipse"
+msgstr "Tegne fylt elipse"
 
 #: kiconedit.cpp:692
 msgid "Erase"
@@ -511,7 +511,7 @@ msgid ""
 "Gray scale the current icon.\n"
 "(Warning: The result is likely to contain colors not in the icon palette"
 msgstr ""
-"Grå skala\n"
+"Gråskala\n"
 "\n"
 "Gjør gjeldende ikon om til gråskala.\n"
 "(Varsel: Resultatet vil trolig inneholde farger som ikke er i ikonpalettet"
@@ -630,9 +630,9 @@ msgid ""
 "\n"
 "Draw a filled rectangle"
 msgstr ""
-"Fyllt rektangel\n"
+"Fylt rektangel\n"
 "\n"
-"Tegn et fyllt rektangel"
+"Tegn et fylt rektangel"
 
 #: kiconedit.cpp:892
 msgid ""
@@ -650,8 +650,8 @@ msgid ""
 "\n"
 "Draw a filled circle"
 msgstr ""
-"Fyllt sirkel\n"
-"Tegne en fyllt sirkel"
+"Fylt sirkel\n"
+"Tegne en fylt sirkel"
 
 #: kiconedit.cpp:898
 msgid ""
@@ -669,9 +669,9 @@ msgid ""
 "\n"
 "Draw a filled ellipse"
 msgstr ""
-"Fyllt elipse\n"
+"Fylt elipse\n"
 "\n"
-"Tegne en fyllt elipse"
+"Tegne en fylt elipse"
 
 #: kiconedit.cpp:904
 msgid ""
@@ -1011,7 +1011,7 @@ msgstr "&Legg til"
 
 #: kiconconfig.cpp:248
 msgid "Color or pixmap"
-msgstr "Varge eller pixmap"
+msgstr "Farge eller pixmap"
 
 #: kiconconfig.cpp:256
 msgid "Colored background"
