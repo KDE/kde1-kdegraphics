@@ -5,7 +5,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: KGHOSTVIEW\n"
 "POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
@@ -39,9 +39,8 @@ msgid "Remove page marks"
 msgstr "Poista sivumerkit"
 
 #: marklist.cpp:367
-#, fuzzy
 msgid "Page"
-msgstr "&Sivu"
+msgstr "Sivu"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -480,6 +479,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - Postscript dokumenttien näyttäjä\n"
+"K Desktop ympäristöön.\n"
+"\n"
+"Kirjoittanut Mark Donohoe <donohoe@kde.org>, perustuu Tim Theisenin.\n"
+"alkuperäistyöhön.\n"
+"\n"
+"Sisältää osia Johanes Plassin gv-ohjelmasta. Koodi lisää pakattujen\n"
+"ja PDF -tiedostojen tuen.\n"
+"\n"
+"Katso http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
