@@ -30,7 +30,7 @@ AreaSelect::~AreaSelect()
 void 
 AreaSelect::selection(bool b)
 {
-  debug("AreaSelect::selection %i",b);
+  // debug("AreaSelect::selection %i",b);
   if (!b) {
     disableSelection();
   }

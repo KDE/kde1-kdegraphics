@@ -34,7 +34,7 @@ ColorBar::ColorBar(QWidget *parent, int fixheight, const char *name)
     bcount(0)
 {
   setFixedHeight( (-1==fixheight)?WIDGET_HEIGHT:fixheight );
-  debug("set height %i", height());
+  // debug("set height %i", height());
   setFrameStyle( WinPanel | Sunken );
   setLineWidth( 1 );
 
@@ -135,7 +135,7 @@ ColorBar::drawContents(QPainter *p)
 void 
 ColorBar::slotClicked(int id)
 {
-  debug ("clicked id %i", id);
+  // debug ("clicked id %i", id);
   ColorButton *b = (ColorButton*)buttonGroup->find(id);
   b->setOn(true);
   emit selected(b->backgroundColor().rgb());

@@ -314,7 +314,7 @@ void KPaint::writeOptions()
 void 
 KPaint::enableEditCutCopy(bool e)
 {
-  debug ("kpaint: %s cut/copy",e?"enable":"disable");
+  // debug ("kpaint: %s cut/copy",e?"enable":"disable");
   menu->setItemEnabled(ID_CUT, e);
   menu->setItemEnabled(ID_COPY, e);
   commandsToolbar->setItemEnabled(ID_CUT, e);
@@ -324,7 +324,7 @@ KPaint::enableEditCutCopy(bool e)
 void 
 KPaint::enableEditPaste(bool e)
 {
-  debug ("kpaint: %s paste",e?"enable":"disable");
+  // debug ("kpaint: %s paste",e?"enable":"disable");
   menu->setItemEnabled(ID_PASTE, e);
   commandsToolbar->setItemEnabled(ID_PASTE, e);
 }

@@ -46,7 +46,7 @@ Canvas::Canvas(int width, int height,
   emit sizeChanged();
   
   if ((0 == inst) && (NULL == Canvas::clipboardPix)) {
-    debug("install clipboard");
+    // debug("install clipboard");
     Canvas::clipboardPix = new QPixmap;
   }
   Canvas::inst++;
@@ -78,7 +78,7 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
   setFocusPolicy(QWidget::StrongFocus);
   
   if ((0 == inst) && (NULL == Canvas::clipboardPix)) {
-    debug("install clipboard");
+    // debug("install clipboard");
     Canvas::clipboardPix = new QPixmap;
   }
   Canvas::inst++;

@@ -109,7 +109,7 @@ Text::keyPressEvent(QKeyEvent *e)
       paintC(&paint);
     }
     lastc = charBuffer.at(charBuffer.length()-1);
-    debug("remove %c", lastc);
+    // debug("remove %c", lastc);
     if (lastc == '\n') {
       charBuffer.remove(charBuffer.length()-1,1);
       // goto previous line
