@@ -13,19 +13,24 @@
 #include <qobject.h>
 #include <qpen.h>
 #include <qbrush.h>
+#include <qwidget.h>
+#include "ktoolbar.h"
 #include "canvas.h"
 #include "properties.h"
 #include "tools/tool.h"
+
 
 class Manager : public QObject
 {
   Q_OBJECT
 public:
-  Manager(Canvas *c);
+  Manager(Canvas *c, QWidget *top);
   ~Manager();
 
   int getCurrentTool(void);
   void showPropertiesDialog(void);
+  KToolBar *toolbar(void);
+
 public slots:
   void setCurrentTool(int);
   void updateProperties();
@@ -34,11 +39,14 @@ signals:
   void toolChanged(int);
 protected:
   void createTools(void);
+  void initToolbar(void);
 
 private:
   QList<Tool> list;
   Canvas *canvas;
+  QWidget *toplevel;
   propertiesDialog *props;
+  KToolBar *mytoolbar;
   int currentTool;
   QPen *p;
   QBrush *b;  

@@ -1,0 +1,20 @@
+# $Id$
+
+prefix 	= 	@prefix@
+
+INSTALL_DIR = @INSTALL@ -d -m 755 
+INSTALL_DATA= @INSTALL@ -m 644
+
+DOCS=	kpaint.html \
+       	index.html \
+       	Technic.gif
+
+.PHONY:	install
+
+install:
+	$(INSTALL_DIR) $(prefix)/doc/HTML/kpaint
+	$(INSTALL_DATA) $(DOCS) $(prefix)/doc/HTML/kpaint
+
+
+
+

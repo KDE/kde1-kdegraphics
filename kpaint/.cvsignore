@@ -1,6 +1,9 @@
-metas
 *~
 *.gif
+*.bmp
+*.o
+*.moc
 #*#
-objs
-tmp
+objs/*
+metas/*
+tmp/*

@@ -1,31 +1,26 @@
-#include <qimage.h>
 #include <qstring.h>
 #include "version.h"
 #include "app.h"
+#include "formats.h"
+#include <stdlib.h>
+#include <string.h>
 
-#ifdef HAVE_LIBGIF
-#include "gif.h"
-#endif
-
-#ifdef HAVE_LIBJPEG
-#include "jpeg.h"
-#endif
-
-Window mwin;
+MyApp *kpaintApp;
+FormatManager *formatMngr;
+int openwins= 0;
 
 int main( int argc, char **argv )
 {
-  MyApp a( argc, argv, QString(APPNAME) );
+  if ((argc == 2) && (strcmp(argv[1], "-h") == 0)) {
+    MyApp::usage();
+    exit(0);
+  }
 
-#ifdef HAVE_LIBGIF
-  QImageIO::defineIOHandler("GIF", "^GIF[0-9][0-9][a-z]",
-			    0, read_gif_file, NULL);
-#endif
-#ifdef HAVE_LIBJPEG
-  QImageIO::defineIOHandler("JFIF","^\377\330\377\340",
-			    0, read_jpeg_jfif, NULL);
-#endif
+  formatMngr= new FormatManager();
+  kpaintApp= new MyApp ( argc, argv, APPNAME);
 
-  return a.exec();
+  QObject::connect(kpaintApp, SIGNAL(lastWindowClosed()), kpaintApp, SLOT(quit()));
+
+  return kpaintApp->exec();
 }
 

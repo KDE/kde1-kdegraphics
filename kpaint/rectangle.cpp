@@ -3,12 +3,19 @@
 #include <stdio.h>
 #include <qcursor.h>
 #include <qpainter.h>
+#include <qstring.h>
+#include <qwmatrix.h>
 #include "rectangle.h"
+#include "../app.h"
+
+extern MyApp *kpaintApp;
 
 Rectangle::Rectangle() : Tool()
 {
   drawing= FALSE;
-  props= 3;
+
+  tooltip= "Rectangle";
+  props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
 void Rectangle::activating(void)
@@ -16,14 +23,11 @@ void Rectangle::activating(void)
 #ifdef KPDEBUG
   fprintf(stderr, "Rectangle::activating() hook called\n");
 #endif
-  p= canvas->pixmap();
   canvas->setCursor(crossCursor);
 }
 
 void Rectangle::mousePressEvent(QMouseEvent *e)
 {
-  int x,y;
-
 #ifdef KPDEBUG
   fprintf(stderr, "Rectangle::mousePressEvent() handler called\n");
 #endif
@@ -57,7 +61,7 @@ void Rectangle::mouseMoveEvent(QMouseEvent *e)
 
     if ((lastx != x) || (lasty != y)) {
       if (drawing) {
-	paint.begin(p);
+	paint.begin(canvas->zoomedPixmap());
 	paint.setPen(*pen);
 	paint.setRasterOp(XorROP);
 
@@ -83,6 +87,7 @@ void Rectangle::mouseReleaseEvent(QMouseEvent *e)
 {
   int x,y;
   QPainter paint;
+  QWMatrix m;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Rectangle::mouseReleaseEvent() handler called\n");
@@ -93,16 +98,24 @@ void Rectangle::mouseReleaseEvent(QMouseEvent *e)
     y= (e->pos()).y();
 
     // Erase old line
-    paint.begin(p);
-	     paint.setPen(*pen);
+    paint.begin(canvas->zoomedPixmap());
+    paint.setPen(*pen);
     paint.setRasterOp(XorROP);
     paint.drawRect(startx, starty, lastx-startx, lasty-starty);
+
+    paint.end();
+
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    paint.begin(canvas->pixmap());
+    paint.setPen(*pen);
+    paint.setWorldMatrix(m);
     paint.setRasterOp(CopyROP);
     // Draw new rectangle
 	paint.setBrush(*brush);
     paint.drawRect(startx, starty, x-startx, y-starty);
     paint.end();
     drawing= FALSE;
+    canvas->updateZoomed();
     canvas->repaint(0);
   }
   else {
@@ -110,3 +123,12 @@ void Rectangle::mouseReleaseEvent(QMouseEvent *e)
   }
 }
 
+QPixmap *Rectangle::pixmap()
+{
+  QString pixdir;
+
+  pixdir= kpaintApp->kdedir();
+  pixdir.append("/lib/pics/toolbar/");
+  pixdir.append("rectangle.xpm");
+  return new QPixmap(pixdir);
+}

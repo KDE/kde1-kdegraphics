@@ -3,13 +3,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
+#include <qstring.h>
+#include <qpainter.h>
+#include <qwmatrix.h>
 #include "pen.h"
+#include "../app.h"
+
+extern MyApp *kpaintApp;
 
 Pen::Pen() : Tool()
 {
   drawing= FALSE;
-   
-  props= 1;
+  tooltip= "Pen";
+  props= Tool::HasLineProperties;
 }
 
 void Pen::activating(void)
@@ -18,14 +24,16 @@ void Pen::activating(void)
   fprintf(stderr, "Pen::activating() hook called canvas=%p\n", canvas);
 #endif
   drawing= FALSE;
-  p= canvas->pixmap();
+
   canvas->setCursor(crossCursor);
 }
 
 void Pen::mousePressEvent(QMouseEvent *e)
 {
   int x,y;
-  QPainter paint;
+  QPainter painter1;
+  QPainter painter2;
+  QWMatrix m;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Pen::mousePressEvent() handler called\n");
@@ -39,10 +47,20 @@ void Pen::mousePressEvent(QMouseEvent *e)
     x= (e->pos()).x();
     y= (e->pos()).y();
 
-    paint.begin(p);
-    paint.setPen(*pen);
-    paint.drawPoint(x, y);
-    paint.end();
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    painter1.begin(canvas->pixmap());
+    painter1.setPen(*pen);
+    painter1.setWorldMatrix(m);
+
+    painter2.begin(canvas->zoomedPixmap());
+    painter2.setPen(*pen);
+
+    painter1.drawPoint(x, y);
+    painter2.drawPoint(x, y);
+
+    painter1.end();
+    painter2.end();
+
     canvas->repaint(0);
     lastx= x;
     lasty= y;
@@ -57,7 +75,9 @@ void Pen::mousePressEvent(QMouseEvent *e)
 void Pen::mouseMoveEvent(QMouseEvent *e)
 {
   int x,y;
-  QPainter paint;
+  QPainter painter1;
+  QPainter painter2;
+  QWMatrix m;
 
   if (isActive()) {
     x= (e->pos()).x();
@@ -65,13 +85,23 @@ void Pen::mouseMoveEvent(QMouseEvent *e)
 
     if (drawing) {
       if ((x != lastx) || (y != lasty)) {
-		 paint.begin(p);
-		 paint.setPen(*pen);
-		 paint.drawLine(lastx, lasty, x, y);
-		 paint.end();
-		 lastx= x;
-		 lasty= y;
-		 canvas->repaint(0);
+    m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
+    painter1.begin(canvas->pixmap());
+    painter1.setPen(*pen);
+    painter1.setWorldMatrix(m);
+
+    painter2.begin(canvas->zoomedPixmap());
+    painter2.setPen(*pen);
+
+    painter1.drawLine(lastx, lasty, x, y);
+    painter2.drawLine(lastx, lasty, x, y);
+
+    lastx= x;
+    lasty= y;
+
+    painter1.end();
+    painter2.end();
+    canvas->repaint(0);
 	  }
     }
   }
@@ -92,3 +122,13 @@ void Pen::mouseReleaseEvent(QMouseEvent *e)
   }
 }
 
+QPixmap *Pen::pixmap()
+{
+  QString pixdir;
+
+  pixdir= kpaintApp->kdedir();
+  pixdir.append("/lib/pics/toolbar/");
+
+  pixdir.append("pen.xpm");
+  return new QPixmap(pixdir);
+}

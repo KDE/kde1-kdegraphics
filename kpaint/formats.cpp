@@ -8,46 +8,64 @@ static int numFormats= 6;
 //static int numFormats= 5;
 
 static FormatRecord formatlist[]= {
-{   "GIF",
-	 FormatRecord::ReadFormat | FormatRecord::WriteFormat,
-	 "^GIF[0-9][0-9][a-z]",
-	 "*.gif",
-	 read_gif_file, write_gif_file,
+#ifndef QT13B_TESTER
+  {
+   "GIF",
+   FormatRecord::ReadFormat | FormatRecord::WriteFormat,
+   "^GIF[0-9][0-9][a-z]",
+   "*.gif",
+   "gif",
+   read_gif_file, write_gif_file,
 },
-{
-	 "JPEG",
-	 FormatRecord::ReadFormat,
-	 "^\377\330\377\340",
-	 "*.jpeg *.jpg",
-	 read_jpeg_jfif, 0,
-	   },
-{
-	 "BMP",
-	 FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
-	 0,
-	 "*.bmp",
-	 0, 0,
-	   },
-{	 
-	 "XBM",
-	 FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
-	 0,
-	 "*.xbm",
-	 0, 0,
-	   },
-{
-	 "XPM",
-	 FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
-	 0,
-	 "*.xpm",
-	 0, 0,
-	   },
-{
-	 "PNM",
-	 0,
-	 "*.pbm *.pgm *.ppm",
-	 0, 0
-	   }
+#else
+  {
+    "GIF",
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
+    "^GIF[0-9][0-9][a-z]",
+    "*.gif",
+    "gif",
+    0, 0,
+  },
+#endif
+  {
+    "JPEG",
+    FormatRecord::ReadFormat,
+    "^\377\330\377\340",
+    "*.jpeg *.jpg",
+    "jpeg",
+    read_jpeg_jfif, 0,
+  },
+  {
+    "BMP",
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
+    0,
+    "*.bmp",
+    "bmp",
+    0, 0,
+  },
+  {	 
+    "XBM",
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
+    0,
+    "*.xbm",
+    "xbm",
+    0, 0,
+  },
+  {
+    "XPM",
+    FormatRecord::InternalFormat | FormatRecord::ReadFormat | FormatRecord::WriteFormat,
+    0,
+    "*.xpm",
+    "xpm",
+    0, 0,
+  },
+  {
+    "PNM",
+    0,
+    "*.pbm *.pgm *.ppm",
+    "ppm",
+    0, 0
+  }
 };
 
 FormatManager::FormatManager()
@@ -70,7 +88,8 @@ void FormatManager::init(FormatRecord formatlist[])
      list.append(&formatlist[i]);
      names.append(formatlist[i].formatName);
      globAll.append(formatlist[i].glob);
-     globAll.append(" ");
+     if (i < numFormats-1)
+       globAll.append(" ");
    };
    
    // Register them with Qt
@@ -82,7 +101,7 @@ void FormatManager::init(FormatRecord formatlist[])
    }
 }
 	  
-const QStrList *FormatManager::formats(void)
+QStrList *FormatManager::formats(void)
 {
   return &names;
 }
@@ -110,6 +129,28 @@ const char *FormatManager::glob(const char *format)
 
   if (done)
     return rec->glob;
+  else
+    return NULL;
+}
+
+const char *FormatManager::suffix(const char *format)
+{
+  FormatRecord *rec;
+  QString name(format);
+  QString curr;
+  bool done= FALSE;
+
+  rec= list.first();
+  do { 
+    curr= rec->formatName;
+    if (curr == name)
+      done= TRUE;
+    else 
+      rec= list.next();
+  } while (!done && (rec != NULL));
+
+  if (done)
+    return rec->suffix;
   else
     return NULL;
 }

@@ -1,5 +1,4 @@
 # $Id$
-
 ##
 ## Makefile for kpaint
 ##
@@ -8,83 +7,89 @@
 # Configuration
 #
 prefix 	= 	@prefix@
-INCDIRS	=	@all_includes@ -I..
+INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
-INSTALL	=   	@INSTALL@
 CXX	= 	@CXX@
-OPTS	=	$(CXXFLAGS)
-DEFS	=	-DKPDEBUG -DAPPHELPCONTENTSURL="\"$(prefix)/doc/HTML/kpaint/kpaint.html\"" -DHAVE_CONFIG_H
-LDLIBS	=	-lkdecore -lkdeui -lkptools -lgif -lqt -lXext -lm -lX11
+DEFS	=	-DHAVE_CONFIG_H
+LDLIBS	=	-lkfm -lkdecore -lkdeui -lkptools -lgif @LIBJPEG@ -lqt -lXext @LIBSOCKET@ -lm
 METADIR	=	metas
 
-# Uncomment this is you are using Qt 1.2 beta 3 or higher
-#DEFS+=	-DNEWQT
+INSTALL_DIR = @INSTALL@ -d -m 755 
+INSTALL_DATA= @INSTALL@ -m 644
+INSTALL_BIN = @INSTALL@ -m 755
 
 #
 # End Configuration
 #
 
-CCFLAGS=	$(OPTS) $(DEFS) $(INCDIRS)
-LDFLAGS=	$(LIBDIR)
+CXXFLAGS=	@CXXFLAGS@ $(DEFS) $(INCDIRS)
+LDFLAGS=	@LDFLAGS@ $(LIBDIR)
 
-OBJ=	main.o \
+OBJS=	main.o \
 	app.o \
 	canvas.o \
 	kpaint.o \
 	manager.o \
+	formats.o \
+	infodialog.o \
+	palette.o \
+	palettedialog.o \
+	formatdialog.o \
 	canvassize.o \
 	properties.o \
-	QwViewport.o \
-	KTopWidget.o \
-	KToolbar.o \
-	KStatusbar.o \
-	gif.o jpeg.o
+	gif.o \
+	jpeg.o \
+	QwViewport.o
 
 METAS=	canvas.moc \
+	app.moc \
 	kpaint.moc \
 	manager.moc \
+	infodialog.moc \
 	properties.moc \
-	QwViewport.moc \
-	KTopWidget.moc \
-	KToolbar.moc \
-	KStatusbar.moc
+	formatdialog.moc \
+	palette.moc \
+	palettedialog.moc \
+	QwViewport.moc
 
-OBJS= $(addprefix objs/,$(OBJ))
-
-.PHONY:	all clean tools install uninstall
+.PHONY:	all clean kplib install uninstall
 
 #
 # Implicit rules
 #
 
-objs/%.o:	%.cpp
-	$(CXX) -c $(CCFLAGS) -o $@ $<
+%.o:	%.cpp
+	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
 %.moc:	%.h
-	$(MOC) -o $(METADIR)/$@ $<
+	$(MOC) -o $@ $<
 
-all:	kpaint
+all:	kplib kpaint
 
-install:
-	$(INSTALL) -d $(prefix)/bin
-	$(INSTALL) -d $(prefix)/doc/HTML/kpaint
-	$(INSTALL) kpaint $(prefix)/bin
-	$(INSTALL) doc/HTML/kpaint.html $(prefix)/doc/HTML/kpaint
+install: all
+	$(INSTALL_DIR) $(prefix)/bin
+	$(INSTALL_BIN) kpaint $(prefix)/bin
+	$(INSTALL_DIR) $(prefix)/lib/pics/toolbar
+	(cd doc ; $(MAKE) install)
+	(cd toolpics ; $(MAKE) install)
+	$(INSTALL_DIR) $(prefix)/apps/Applications
+	$(INSTALL_DATA) Paint.kdelnk $(prefix)/apps/Applications 
 
 uninstall:
-	rm -f $(prefix)/bin/kpaint
-	rm -rf $(prefix)/doc/HTML/kpaint
+	-rm -f $(prefix)/bin/kpaint
+	-rm -rf $(prefix)/doc/HTML/kpaint
+	-rm -f $(prefix)/apps/Applications/Paint.kdelnk
 
-tools:
-	$(MAKE) -C tools all
+kplib:
+	(cd tools; $(MAKE) all)
 
-kpaint:	tools $(METAS) $(OBJS)
+kpaint: $(METAS) $(OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS)
 
 clean:
 	$(MAKE) -C tools clean
-	-rm -f $(OBJS) $(METADIR)/*.moc
+	-rm -f $(OBJS) *.moc kpaint tools/libkptools.a
 
 realclean:  clean
 	$(MAKE) -C tools realclean

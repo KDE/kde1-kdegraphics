@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 // $Id$
 
 #ifndef IMAGEINFODIALOG_H
@@ -17,10 +19,8 @@ public:
     imageInfoDialog(Canvas *c, QWidget* parent = NULL, const char* name = NULL);
 
 private:
-    QLabel* filename;
     QLabel* colourDepth;
     QLabel* coloursUsed;
-    QComboBox* fileformat;
     QLabel* width;
     QLabel* height;
 };

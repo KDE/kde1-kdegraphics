@@ -1,0 +1,8 @@
+0.3.1	Fixed error in Makefile.in (missing -lkfm)
+	Fixed help menu labels
+
+0.3.2	Made Makefile.in more portable
+	Now deletes temp files sensibly
+	Fixed up the image info dialog a little
+	
+0.3.3	Fixed makefiles and added doc and toolpics makefiles

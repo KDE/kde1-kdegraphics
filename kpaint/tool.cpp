@@ -2,12 +2,20 @@
 
 #include <stdio.h>
 #include <assert.h>
+#include <qpixmap.h>
 #include "tool.h"
 
 Tool::Tool()
 {
   active= FALSE;
   canvas= 0;
+  props= 0;
+  tooltip= 0;
+}
+
+int Tool::getPages(void)
+{
+  return props;
 }
 
 void Tool::activate(Canvas *c)
@@ -48,3 +56,10 @@ void Tool::setBrush(QBrush *b)
 #endif
   brush= b;
 }
+
+QPixmap *Tool::pixmap()
+{
+  return NULL;
+}
+
+#include "tool.moc"

@@ -8,7 +8,7 @@
 #include <qcombo.h>
 #include <qbrush.h>
 #include <qpen.h>
-
+#include <qpixmap.h>
 
 class fillPropertiesWidget : public QWidget
 {
@@ -27,7 +27,8 @@ private:
   QLineEdit *customPatternField;
   QPushButton *browseButton;
   QPushButton *setFillColourButton;
-   QColor fillColour;
+  QColor fillColour;
+  QPixmap *pattern;
 };
 
 
@@ -54,11 +55,13 @@ private:
 
 class propertiesDialog  : public QTabDialog
 {
+  Q_OBJECT
 public:
-  propertiesDialog(QWidget *parent, const char *name);
+  propertiesDialog(int pages, QWidget *parent= 0, const char *name= 0);
 
   QBrush *getBrush(void);
   QPen *getPen(void);
+  void setPages(int);
 
 private:
   linePropertiesWidget *lineProps;

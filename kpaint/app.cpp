@@ -1,245 +1,72 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <qfiledlg.h>
-#include <qmsgbox.h>
 #include <kapp.h>
+#include <kkeyconf.h>
 #include "kpaint.h"
+#include "version.h"
 #include "app.h"
 
-Atom 		KDEChangePalette, KDEChangeGeneral;
-Display 	*kde_display;
-extern Window 	mwin;
-
-
-MyApp::MyApp( int &argc, char **argv, QString appname ) 
-  : KApplication( argc, argv, appname )
+MyApp::MyApp( int &argc, char **argv, const QString appname)
+  : KApplication( argc, argv, appname)
 {
-	kde_display = XOpenDisplay( NULL );
-	KDEChangePalette = XInternAtom( kde_display, "KDEChangePalette", FALSE);
-	KDEChangeGeneral = XInternAtom( kde_display, "KDEChangeGeneral", FALSE);
+  KPaint *kp;
 
-	readSettings();	
-	changePalette();
-	changeGeneral();
-	
-#ifdef KPDEBUG
-  switch (getConfigState()) {
-  case APPCONFIG_READONLY:
-    fprintf(stderr, "Opened config: RO\n");
-    break;
-  case APPCONFIG_READWRITE:
-    fprintf(stderr, "Opened config: RW\n");
-    break;
-  case APPCONFIG_NONE:
-    fprintf(stderr, "Opened config: NONE\n");
-    break;
-  default:
-    fprintf(stderr, "Opened config: ??\n");
-    break;
+  if (argc == 2) {
+    kp= new KPaint(argv[1]);
   }
-#endif
-  kp= new KPaint();
+  else if (argc == 1) {
+    kp= new KPaint();
+  }
+  else {
+    usage();
+    ::exit(1);
+  }
 
-  setMainWidget( kp );
+  /* KKeyCode initialization */
+  kKeys->addKey("Quit", "CTRL+Q");
+  kKeys->addKey("Close Window", "CTRL+C");
+  kKeys->addKey("New Window", "CTRL+C");
+  kKeys->addKey("Open File", "CTRL+O");
+  kKeys->addKey("Save File", "CTRL+S");
+  kKeys->addKey("Save File As", "CTRL+A");
+  kKeys->addKey("Help", "F1");
+  kKeys->addKey("Pen", "P");
+  kKeys->addKey("Line", "L");
+  kKeys->addKey("Rectangle", "R");
+  kKeys->addKey("Ellipse", "E");
+  kKeys->addKey("Circle", "C");
+  kKeys->addKey("Spray Can", "S");
+
+  /* connections for kpaint */
+  kKeys->registerWidget("kpaint", kp);
+  kKeys->connectFunction("kpaint", "Quit", kp, SLOT(fileQuit()));
+  kKeys->connectFunction("kpaint", "New Window", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Close Window", kp, SLOT(closeWindow()));
+  kKeys->connectFunction("kpaint", "Open File", kp, SLOT(fileOpen()));
+  kKeys->connectFunction("kpaint", "Save File", kp, SLOT(fileSave()));
+  kKeys->connectFunction("kpaint", "Save File As", kp, SLOT(fileSaveAs()));
+  kKeys->connectFunction("kpaint", "Help", kp, SLOT(helpContents()));
+  /*  kKeys->connectFunction("kpaint", "Pen", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Line", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Rectangle", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Ellipse", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Circle", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", "Spray Can", kp, SLOT(newWindow()));
+  */
+
+   KConfig *config = KApplication::getKApplication()->getConfig();
+   config->setGroup( "Test" );
+   config->writeEntry( "TestString", QString("This was a QString") );
+
+   
   kp->show();
 }
 
-
-bool MyApp::x11EventFilter( XEvent *ev ) {
-	
-  if(ev->xany.type == ClientMessage) {
-    mwin = ev->xclient.data.l[0];
-		
-    XClientMessageEvent *cme = ( XClientMessageEvent * ) ev;
-    
-    // These two event handlers act on messages sent by KDisplay-0.5
-		
-    if(cme->message_type == KDEChangePalette) {
-      readSettings();
-      changePalette();
-      
-      return False;
-						
-    } else if(cme->message_type == KDEChangeGeneral) {
-      
-      readSettings();
-      changeGeneral();
-      changePalette();
-			
-      return False;
-			
-    } else
-      KApplication::x11EventFilter( ev );
-  } else
-    KApplication::x11EventFilter( ev );
-  
-  return FALSE;
-}
-
-void MyApp::readSettings()
+void MyApp::usage()
 {
-  // use the global config files
-  KConfig config;
-	
-  QString str;
-	
-  // This is the default light gray for KDE
-  QColor col;
-  col.setRgb(214,214,214);
-
-
-	// Read the color scheme group from config file
-	// If unavailable set color scheme to KDE default
-	
-  config.setGroup( "Color Scheme");
-  str = config.readEntry( "InactiveTitleBarColor" );
-  if ( !str.isNull() )
-    inactiveTitleColor.setNamedColor( str );
-  else
-    inactiveTitleColor = gray;
-		
-  str = config.readEntry( "InactiveTitleTextColor" );
-  if ( !str.isNull() )
-    inactiveTextColor.setNamedColor( str );
-  else
-    inactiveTextColor = col;
-		
-  str = config.readEntry( "ActiveTitleBarColor" );
-  if ( !str.isNull() )
-    activeTitleColor.setNamedColor( str );
-  else
-    activeTitleColor = black;
-		
-  str = config.readEntry( "ActiveTitleTextColor" );
-  if ( !str.isNull() )
-    activeTextColor.setNamedColor( str );
-  else
-    activeTextColor = white;
-		
-  str = config.readEntry( "TextColor" );
-  if ( !str.isNull() )
-    textColor.setNamedColor( str );
-  else
-    textColor = black;
-		
-  str = config.readEntry( "BackgroundColor" );
-  if ( !str.isNull() )
-    backgroundColor.setNamedColor( str );
-  else
-    backgroundColor = col;
-		
-  str = config.readEntry( "SelectColor" );
-  if ( !str.isNull() )
-    selectColor.setNamedColor( str );
-  else
-    selectColor = black;	
-	
-  str = config.readEntry( "SelectTextColor" );
-  if ( !str.isNull() )
-    selectTextColor.setNamedColor( str );
-  else
-    selectTextColor = white;
-		
-  str = config.readEntry( "WindowColor" );
-  if ( !str.isNull() )
-    windowColor.setNamedColor( str );
-  else
-    windowColor = white;
-		
-  str = config.readEntry( "WindowTextColor" );
-  if ( !str.isNull() )
-    windowTextColor.setNamedColor( str );
-  else
-    windowTextColor = black;
-	
-	
-	//	Read the font specification from config.
-	// 	Initialize fonts to default first or it won't work !!
-		
-  generalFont = QFont("helvetica", 12, QFont::Normal);
-	
-  config.setGroup( "General Font" );
-  str = config.readEntry( "Family" );
-  if ( !str.isNull() )
-    generalFont.setFamily(str.data());
-	
-  str = config.readEntry( "Point Size" );
-  if ( !str.isNull() )
-    generalFont.setPointSize(atoi(str.data()));
-	
-  str = config.readEntry( "Weight" );
-  if ( !str.isNull() )
-    generalFont.setWeight(atoi(str.data()));
-		
-  str = config.readEntry( "Italic" );
-  if ( !str.isNull() )
-    if ( atoi(str.data()) != 0 )
-      generalFont.setItalic(True);
-				
-	// Finally, read GUI style from config.
-	
-  config.setGroup( "GUI Style" );
-  str = config.readEntry( "Style" );
-  if ( !str.isNull() )
-    {
-      if( str == "Windows 95" )
-	applicationStyle=WindowsStyle;
-      else
-	applicationStyle=MotifStyle;
-    } else
-      applicationStyle=MotifStyle;	
-	
+  printf("kpaint " APPVERSTR " " APPAUTHOREMAIL);
+  printf( "\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n");
+  printf("Usage: ");
+  printf(APPNAME " [url | filename]\n");
 }
 
-void MyApp::changePalette()
-{
-  // WARNING : QApplication::setPalette() produces inconsistent results.
-  // There are 3 problems :-
-  // 1) You can't change select colors
-  // 2) You need different palettes to apply the same color scheme to
-  //		different widgets !!
-  // 3) Motif style needs a different palette to Windows style.
-	
-  if ( applicationStyle==MotifStyle ) {
-    QColorGroup disabledgrp( textColor, backgroundColor, 
-			     backgroundColor.light(),
-			     backgroundColor.dark(), 
-			     backgroundColor.dark(120),
-			     gray, windowColor );
-
-    QColorGroup colgrp( textColor, backgroundColor, 
-			backgroundColor.light(),
-			backgroundColor.dark(), 
-			backgroundColor.dark(120),
-			textColor, windowColor );
-
-    QApplication::setPalette( QPalette(colgrp,disabledgrp,colgrp), TRUE );
-  } else {
-    QColorGroup disabledgrp( textColor, backgroundColor, 
-			     backgroundColor.light(150),
-			     backgroundColor.dark(), 
-			     backgroundColor.dark(120),
-			     gray, windowColor );
-
-    QColorGroup colgrp( textColor, backgroundColor, 
-			backgroundColor.light(150),
-			backgroundColor.dark(), 
-			backgroundColor.dark(120),
-			textColor, windowColor );
-
-    QApplication::setPalette( QPalette(colgrp,disabledgrp,colgrp), TRUE );
-  }
-}
-
-void MyApp::changeGeneral()
-{   
-  QApplication::setStyle( applicationStyle );
-    
-  // 	setStyle() works pretty well but may not change the style of combo
-  //	boxes.
-    
-  QApplication::setFont( generalFont, TRUE );
-    
-  // setFont() works every time for me !
-}	
-
+#include "app.moc"

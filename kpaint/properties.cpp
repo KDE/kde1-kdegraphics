@@ -8,7 +8,8 @@
 #include <kcolordlg.h>
 #include "properties.h"
 
-propertiesDialog::propertiesDialog(QWidget *parent, const char *name)
+propertiesDialog::propertiesDialog(int pages,
+				   QWidget *parent= 0, const char *name= 0)
   : QTabDialog(parent, name)
 {
   // Create the pages
@@ -17,8 +18,10 @@ propertiesDialog::propertiesDialog(QWidget *parent, const char *name)
   fillProps= new fillPropertiesWidget(this);
   addTab(fillProps, "Fill Properties");
 
-  setCancelButton ();
-  setApplyButton ();
+  setCancelButton();
+  setApplyButton();
+  setPages(pages);
+
 }
 
 QBrush *propertiesDialog::getBrush(void)
@@ -29,6 +32,20 @@ QBrush *propertiesDialog::getBrush(void)
 QPen *propertiesDialog::getPen(void)
 {
   return lineProps->getPen();
+}
+
+void propertiesDialog::setPages(int pages)
+{
+  // Adjust tabs to suit new tool
+  if (pages & 1)
+    lineProps->setEnabled(TRUE);
+  else
+    lineProps->setEnabled(FALSE);
+
+  if (pages & 2)
+    fillProps->setEnabled(TRUE);
+  else
+    fillProps->setEnabled(FALSE);
 }
 
 
@@ -48,14 +65,27 @@ fillPropertiesWidget::fillPropertiesWidget(QWidget *parent)
   patternLabel= new QLabel("Fill Pattern:", this);
   patternLabel->move(40, 40);
 
+  // Need to use an item that can display a sample of each one
   patternBox= new QComboBox(FALSE, this, 0);
   patternBox->resize(130, patternBox->height());
-fprintf(stderr, "Height of pattern box is %d\n", patternBox->height());
   patternBox->insertItem("None");
   patternBox->insertItem("Solid");
-  patternBox->insertItem("Diagonal Lines");
-  //  patternBox->insertItem("Grid");
-  //  patternBox->insertItem("Custom");
+  patternBox->insertItem("Vertical Lines");
+  patternBox->insertItem("Horizontal Lines");
+  patternBox->insertItem("Grid");
+  patternBox->insertItem("Diagonal Lines //");
+  patternBox->insertItem("Diagonal Lines \\");
+  patternBox->insertItem("Diagonal Grid");
+
+  patternBox->insertItem("94%");
+  patternBox->insertItem("88%");
+  patternBox->insertItem("63%");
+  patternBox->insertItem("50%");
+  patternBox->insertItem("37%");
+  patternBox->insertItem("12%");
+  patternBox->insertItem("6%");
+
+  patternBox->insertItem("Custom");
   patternBox->move(150, 40);
 
   customPatternLabel= new QLabel("Pattern Filename:", this);
@@ -70,11 +100,10 @@ fprintf(stderr, "Height of pattern box is %d\n", patternBox->height());
 
   setFillColourButton= new QPushButton("Set Fill Colour...", this);
   setFillColourButton->move(40, 200);
-  connect(setFillColourButton, SIGNAL(clicked()), this, SLOT(setFillColour()) );
 
-  customPatternLabel->setEnabled(FALSE);
-  customPatternField->setEnabled(FALSE);
-  browseButton->setEnabled(FALSE);
+     pattern= new QPixmap();
+
+   connect(setFillColourButton, SIGNAL(clicked()), this, SLOT(setFillColour()) );
 }
 
 void fillPropertiesWidget::setFillColour(void)
@@ -98,10 +127,56 @@ QBrush *fillPropertiesWidget::getBrush(void)
     b= new QBrush(fillColour, SolidPattern);
     break;
   case 2:
+    b= new QBrush(fillColour, VerPattern);
+    break;
+  case 3:
+    b= new QBrush(fillColour, HorPattern);
+    break;
+  case 4:
+    b= new QBrush(fillColour, CrossPattern);
+    break;
+  case 5:
     b= new QBrush(fillColour, BDiagPattern);
     break;
+  case 6:
+    b= new QBrush(fillColour, FDiagPattern);
+    break;
+  case 7:
+    b= new QBrush(fillColour, DiagCrossPattern);
+    break;
+
+    // Greys
+  case 8:
+    b= new QBrush(fillColour, Dense1Pattern);
+    break;
+  case 9:
+    b= new QBrush(fillColour, Dense2Pattern);
+    break;
+  case 10:
+    b= new QBrush(fillColour, Dense3Pattern);
+    break;
+  case 11:
+    b= new QBrush(fillColour, Dense4Pattern);
+    break;
+  case 12:
+    b= new QBrush(fillColour, Dense5Pattern);
+    break;
+  case 13:
+    b= new QBrush(fillColour, Dense6Pattern);
+    break;
+  case 14:
+    b= new QBrush(fillColour, Dense7Pattern);
+    break;
+
+    // Custom Pattern 
+  case 15:
+    b= new QBrush(fillColour);
+    pattern->load(customPatternField->text());
+    b->setPixmap(*pattern); 
+    break;
+
   default:
-    b= new QBrush(fillColour, BDiagPattern);
+    b= new QBrush(fillColour, Dense7Pattern);
     break;
   }
   return b;
@@ -117,6 +192,18 @@ QPen *linePropertiesWidget::getPen()
     break;
   case 1:
     p= new QPen(lineColour, widthBox->currentItem()+1, DashLine);
+    break;
+  case 2:
+    p= new QPen(lineColour, widthBox->currentItem()+1, DotLine);
+    break;
+  case 3:
+    p= new QPen(lineColour, widthBox->currentItem()+1, DashDotLine);
+    break;
+  case 4:
+    p= new QPen(lineColour, widthBox->currentItem()+1, DashDotDotLine);
+    break;
+  case 5:
+    p= new QPen(lineColour, widthBox->currentItem()+1, NoPen);
     break;
   default:
     p= new QPen(lineColour, widthBox->currentItem()+1, DotLine);
@@ -140,11 +227,14 @@ linePropertiesWidget::linePropertiesWidget(QWidget *parent)
   styleLabel= new QLabel("Line Style:", this);
   styleLabel->move(40, 40);
 
+  // These should have a picture
   styleBox= new QComboBox(FALSE, this, 0);
   styleBox->insertItem("Solid");
   styleBox->insertItem("Dashed");
   styleBox->insertItem("Dotted");
   styleBox->insertItem("Dash Dot");
+  styleBox->insertItem("Dash Dot Dot");
+  styleBox->insertItem("None");
   styleBox->move(150, 40);
 
   
@@ -197,4 +287,4 @@ void linePropertiesWidget::setLineColour(void)
    lineColour= mycol;
 }
 
-#include "metas/properties.moc"
+#include "properties.moc"

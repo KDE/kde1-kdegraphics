@@ -1,32 +1,23 @@
+// -*- c++ -*-
+
 #ifndef APP_H
 #define APP_H
 
 #include <kapp.h>
 #include <qstring.h>
+#include <kfm.h>
 #include "kpaint.h"
 
 class MyApp : public KApplication {
+  Q_OBJECT
+
 public:
-  	MyApp( int &argc, char **argv, QString appname );
- 	virtual bool x11EventFilter( XEvent * );
-        KPaint *kp;
-  	
-  	void changePalette();
-  	void changeGeneral();
-  	void readSettings();
-  
-  	QColor inactiveTitleColor;
-	QColor inactiveTextColor;
-	QColor activeTitleColor;
-	QColor activeTextColor;
-	QColor backgroundColor;
-	QColor textColor;
-	QColor selectColor;
-	QColor selectTextColor;
-	QColor windowColor;
-	QColor windowTextColor;
-	QFont generalFont;
-	GUIStyle applicationStyle;
+   MyApp( int &argc, char **argv, const QString );
+  static void usage();
+  //   KPaint *kp;
+   KFM *kfm;
 };
 
 #endif // APP_H
+
+

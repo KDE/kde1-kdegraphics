@@ -338,4 +338,4 @@ void QwViewport::centralize(int x, int y, float xmargin=0.5, float ymargin=0.5)
 	ensureVisible(x,y,int(xmargin/2.0*pw+0.5),int(ymargin/2.0*ph+0.5));
 }
 
-#include "metas/QwViewport.moc"
+#include "QwViewport.moc"
