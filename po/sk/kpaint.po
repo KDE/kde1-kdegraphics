@@ -317,7 +317,7 @@ msgstr "Vlastnosti vyplòovania"
 
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
-msgstr "Vzor pro vyplòovanie:"
+msgstr "Vzor pre vyplòovanie:"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"

@@ -533,12 +533,12 @@ msgid "Shrink factor for large text"
 msgstr "Stupeò zmen¹enia pre veµký text"
 
 #: prefs.cpp:326
-msgid "Show postscript specials"
+msgid "Show postskript specials"
 msgstr "Zobrazova» postskript. zvlá¹tnosti"
 
 #: prefs.cpp:327
 msgid "Antialiased postcript"
-msgstr "Antialiasovaný postscript"
+msgstr "Antialiasovaný postskript"
 
 #: prefs.cpp:345
 msgid "Gamma"
