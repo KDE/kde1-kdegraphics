@@ -1,9 +1,16 @@
-kdegraphics (4:1.1.1-19990701-1) unstable; urgency=low  
+kdegraphics (4:1.1.1-19990901-1) unstable; urgency=low
+
+  * New upstream CVS version
+  * Fixes problem with missing FontPath with kdvi by adding in a default
+    /etc/kde/kdvirc file with it set.
+
+ -- Ivan E. Moore II <rkrusty@debian.org>  Wed, 01 Sep 1999 13:45:56 -0400
+
+kdegraphics (4:1.1.1-19990822-1) unstable; urgency=low  
 
   * New upstream CVS version 
-  * This is pre-1.1.2 (frozen)
 
- -- Ivan E. Moore II <rkrusty@debian.org>  Thu, 01 Jul 1999 23:45:56 -0400
+ -- Ivan E. Moore II <rkrusty@debian.org>  Sun, 22 Aug 1999 08:45:56 -0400
 
 kdegraphics (4:1.1.1-19990624-1) unstable; urgency=low
 

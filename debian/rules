@@ -47,7 +47,9 @@ binary-arch: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	make -C $(BUILDDIR) install 
+	dh_installdirs
+	make -C $(BUILDDIR) install
+	cp debian/kdvirc debian/tmp/etc/kde
 	perl -w admin/debianrules
 	dh_movefiles
 	dh_undocumented 
