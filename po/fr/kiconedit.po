@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
 "PO-Revision-Date: 1998-12-09 12:00+0100\n"
-"Last-Translator: Francois-Xavier DURANCEAU & Alain Gibaud"
-"<Francois-Xavier.Duranceau@loria.fr>\n"
-"<Alain.Gibaud@univ-valenciennes.fr>\n"
+"Last-Translator: Francois-Xavier DURANCEAU & Alain "
+"Gibaud<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
+"<Alain.Gibaud@univ-valenciennes.fr>\n"
 
 #: utils.cpp:65
 #, c-format
@@ -518,8 +518,8 @@ msgstr ""
 "Niveaux de gris\n"
 "\n"
 "Convertit l'icône courante en niveaux de gris.\n"
-"(Attention : Le résultat pourra contenir des couleurs absentes de la "
-"palette de couleurs de l'icône)"
+"(Attention : Le résultat pourra contenir des couleurs absentes de la palette "
+"de couleurs de l'icône)"
 
 #: kiconedit.cpp:855
 msgid ""
@@ -724,8 +724,7 @@ msgstr ""
 "Efface les pixels. Rend les pixels transparents\n"
 "\n"
 "(Note : Si vous voulez dessiner en transparence avec un outil différent, "
-"cliquez d'abord sur la gomme et ensuite sur l'outil que vous voulez "
-"utiliser)"
+"cliquez d'abord sur la gomme et ensuite sur l'outil que vous voulez utiliser)"
 
 #: kicongrid.cpp:66
 msgid "width"
