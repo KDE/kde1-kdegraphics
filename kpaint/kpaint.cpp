@@ -152,7 +152,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp \'%s\'\n", filename.data());
 void KPaint::initToolbar()
 {
   QPixmap pixmap;
-  QString pixdir= kapp->kdedir();
+  QString pixdir= kapp->kdedir().copy();
 
   toolbar= new KToolBar(this);
 

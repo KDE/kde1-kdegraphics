@@ -152,7 +152,7 @@ QPixmap *Line::pixmap(void)
 {
   QString pixdir;
 
-  pixdir= kpaintApp->kdedir();
+  pixdir= kpaintApp->kdedir().copy();
   pixdir.append("/share/apps/kpaint/toolbar/");
   pixdir.append("line.xpm");
   return new QPixmap(pixdir);
