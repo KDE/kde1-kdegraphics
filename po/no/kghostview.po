@@ -355,7 +355,7 @@ msgstr "Merk &ulike sider"
 
 #: kghostview.cpp:553
 msgid "&Toggle page marks"
-msgstr "&Toggle sidemerker"
+msgstr "S&nu om på sidemerker"
 
 #: kghostview.cpp:556
 msgid "&Remove page marks"
@@ -451,7 +451,7 @@ msgstr "Les ned siden"
 
 #: kghostview.cpp:707
 msgid "Toggle this page mark"
-msgstr "Toggle dette sidemerket"
+msgstr "Snu om på dette sidemerket"
 
 #: kghostview.cpp:729
 msgid "Sc.100 of 100  P.100 of 100"
@@ -660,13 +660,12 @@ msgid "Mark even pages"
 msgstr "Merk partallsider"
 
 #: marklist.cpp:41
-#, fuzzy
 msgid "Mark odd pages"
 msgstr "Merk oddetallsider"
 
 #: marklist.cpp:42
 msgid "Toggle page marks"
-msgstr "Toggle sidemerker"
+msgstr "Snu om på sidemerker"
 
 #: marklist.cpp:43
 msgid "Remove page marks"
