@@ -7,12 +7,13 @@
 # Configuration
 #
 prefix 	= 	@prefix@
+topdir	= 	@topdir@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H
-LDLIBS	=	-lkptools -lkdeui -lkdecore -lgif -lqt -lXext -lm -lX11 -ljpeg
+LDLIBS	=	-lkptools -lkdeui -lkdecore -lgif -lqt -lXext -lm -lX11 @LIBJPEG@
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
 INSTALL_DATA= @INSTALL@ -m 644
