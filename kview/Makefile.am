@@ -6,7 +6,9 @@ CORBA_SRC=
 
 BUILT_SOURCES =  moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_ilistdlg.cpp moc_kview.cpp moc_prefdlg.cpp moc_viewer.cpp moc_kaccelmenuwatch.cpp
 
-INCLUDES = $(all_includes) -I/usr/local/mico/include -Ilayout
+DISTCLEANFILES = $(BUILT_SOURCES)
+
+INCLUDES = $(all_includes) -I/usr/local/mico/include -I$(srcdir)/layout
 kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	viewer.cpp canvas.h kview.h \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
@@ -32,30 +34,30 @@ srcdoc:
 ###KMAKE-start (don't edit or delete this block)
 
 moc_canvas.cpp: canvas.h
-	$(MOC) canvas.h -o moc_canvas.cpp
+	$(MOC) $(srcdir)/canvas.h -o moc_canvas.cpp
 
 moc_filter.cpp: filter.h
-	$(MOC) filter.h -o moc_filter.cpp
+	$(MOC) $(srcdir)/filter.h -o moc_filter.cpp
 
 moc_filtmenu.cpp: filtmenu.h
-	$(MOC) filtmenu.h -o moc_filtmenu.cpp
+	$(MOC) $(srcdir)/filtmenu.h -o moc_filtmenu.cpp
 
 moc_ilistdlg.cpp: ilistdlg.h
-	$(MOC) ilistdlg.h -o moc_ilistdlg.cpp
+	$(MOC) $(srcdir)/ilistdlg.h -o moc_ilistdlg.cpp
 
 moc_kmicoapp.cpp: kmicoapp.h
-	$(MOC) kmicoapp.h -o moc_kmicoapp.cpp
+	$(MOC) $(srcdir)/kmicoapp.h -o moc_kmicoapp.cpp
 
 moc_kview.cpp: kview.h
-	$(MOC) kview.h -o moc_kview.cpp
+	$(MOC) $(srcdir)/kview.h -o moc_kview.cpp
 
 moc_prefdlg.cpp: prefdlg.h
-	$(MOC) prefdlg.h -o moc_prefdlg.cpp
+	$(MOC) $(srcdir)/prefdlg.h -o moc_prefdlg.cpp
 
 moc_viewer.cpp: viewer.h
-	$(MOC) viewer.h -o moc_viewer.cpp
+	$(MOC) $(srcdir)/viewer.h -o moc_viewer.cpp
 
 moc_kaccelmenuwatch.cpp: kaccelmenuwatch.h
-	$(MOC) kaccelmenuwatch.h -o moc_kaccelmenuwatch.cpp
+	$(MOC) $(srcdir)/kaccelmenuwatch.h -o moc_kaccelmenuwatch.cpp
 
 ###KMAKE-end

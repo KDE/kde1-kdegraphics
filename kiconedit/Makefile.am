@@ -30,12 +30,11 @@ kiconedit_METASOURCES = USE_AUTOMOC
 kiconedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kiconedit_LDADD =   $(LIB_KIMGIO) $(LIB_KFILE)
 
-CLEANFILES = $(kiconedit_METASOURCES)
-DISTCLEANFILES = Makefile *~ .deps/* .libs/*
+DISTCLEANFILES = *~ .deps/* .libs/*
 
 install-data-local: 
 	$(mkinstalldirs) $(APPSDIR)
-	$(INSTALL_DATA) kiconedit.kdelnk $(APPSDIR)
+	$(INSTALL_DATA) $(srcdir)/kiconedit.kdelnk $(APPSDIR)
 
 uninstall-local:
 	-rm -f $(APPSDIR)/kiconedit.kdelnk

@@ -2,8 +2,6 @@
 APPSDIR = $(kde_appsdir)/Graphics
 INCLUDES= $(all_includes)
 
-####### Files
-
 
 bin_PROGRAMS = 	kcmkeys
 kcmkeys_SOURCES = main.cpp standard.cpp global.cpp \
@@ -11,42 +9,10 @@ kcmkeys_SOURCES = main.cpp standard.cpp global.cpp \
 noinst_HEADERS =  standard.h \
 kaccel.h \
 kkeydialog.h kckey.h kglobalaccel.h global.h savescm.h
-kcmkeys_LDADD =        $(LIB_KFM) $(LIB_KDEUI)
+kcmkeys_LDADD = $(LIB_KFM) $(LIB_KDEUI)
 kcmkeys_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
-BUILTSOURCES = standard.moc \
-kaccel.moc kkeydialog.moc kglobalaccel.moc global.moc savescm.moc
-DISTCLEANFILES = standard.moc kaccel.moc kkeydialog.moc kglobalaccel.moc
-
-savescm.cpp:savescm.moc
-savescm.moc: savescm.h
-	$(MOC) savescm.h -o savescm.moc
-
-global.cpp:global.moc
-global.moc: global.h
-	$(MOC) global.h -o global.moc
-
-kglobalaccel.cpp:kglobalaccel.moc
-kglobalaccel.moc: kglobalaccel.h
-	$(MOC) kglobalaccel.h -o kglobalaccel.moc
-
-kkeydialog.cpp:kkeydialog.moc
-kkeydialog.moc: kkeydialog.h
-	$(MOC) kkeydialog.h -o kkeydialog.moc
-
-kaccel.cpp:kaccel.moc
-kaccel.moc: kaccel.h
-	$(MOC) kaccel.h -o kaccel.moc
-
-standard.cpp:standard.moc
-standard.moc: standard.h
-	$(MOC) standard.h -o standard.moc
-
-
-install-data-local: 
-
-
-uninstall-local:
+METASOURCES = standard.moc kkeydialog.moc kglobalaccel.moc global.moc
 
 messages:
 	$(XGETTEXT) -C -ktranslate -ki18n -x $(includedir)/kde.pot $(kcmkeys_SOURCES) && mv messages.po ../po/kghostview.pot
