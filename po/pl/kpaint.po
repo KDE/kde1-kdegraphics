@@ -1,9 +1,14 @@
+# KTranslator Generated File
+
+#mostly translated by Piotr Roszatycki <dexter@fnet.pl>
+#latest updates by Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>
+
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint \n"
 "POT-Creation-Date: 1998-06-18 22:44+0200\n"
-"PO-Revision-Date: 1998-01-09 00:47+0100\n"
-"Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"PO-Revision-Date: 1998-06-24 00:06+0200\n"
+"Last-Translator: Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 
 #: app.cpp:45
@@ -12,14 +17,15 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Released na licencji GPL, szczegó³y zobacz w "
+"(c) Richard J. Moore 1997 Udostêpnione na licencji GPL, szczegó³y zobacz w "
 "LICENSE\n"
 "\n"
-"Polskie t³umaczenie (C) 1997 Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"Polskie t³umaczenie (C) 1998 Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"oraz Jacek Stolarczyk <jacek@mer.chemia.polsl.gliwice.pl>\n"
 
 #: app.cpp:46
 msgid "Usage: "
-msgstr "Uzycie: "
+msgstr "U¿ycie: "
 
 #: app.cpp:48
 msgid " [url | filename]\n"
@@ -36,12 +42,12 @@ msgstr "Rozmiar obrazu"
 #: canvassize.cpp:25
 #, fuzzy
 msgid "Width:"
-msgstr "Szeroko¶æ"
+msgstr "Szeroko¶æ:"
 
 #: canvassize.cpp:26
 #, fuzzy
 msgid "Height:"
-msgstr "Wysoko¶æ"
+msgstr "Wysoko¶æ:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -50,19 +56,19 @@ msgstr "Okr±g"
 #: depthdialog.cpp:18
 #, fuzzy
 msgid "Image Depth:"
-msgstr "Szeroko¶æ obrazu:"
+msgstr "G³êboko¶æ obrazu:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Monochromatyczny)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 kolorów)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (True Colour)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -100,6 +106,7 @@ msgstr "Niezachowane zmiany"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Niektóre zmiany nie s± zachowane, utracisz je je¶li zamkniesz teraz to okno."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -188,7 +195,7 @@ msgstr "Informacje..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Zmieñ rozmiar..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -224,7 +231,7 @@ msgstr "Zaznacz obszar"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Prostok±t o zaokr±glonych rogach"
 
 #: kpaint.cpp:357
 #, fuzzy
@@ -246,7 +253,7 @@ msgstr "Zachowaj opcje"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -254,6 +261,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -351,7 +361,7 @@ msgstr "U¿ytkownika"
 
 #: properties.cpp:96 properties.cpp:149
 msgid "Pattern Filename:"
-msgstr "Nazwa:"
+msgstr "Nazwa pliku wzorca:"
 
 #: properties.cpp:106
 msgid "Set Fill Colour..."
