@@ -305,7 +305,7 @@ msgstr "Vzor pre vyplòovanie:"
 
 #: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
-msgstr ""
+msgstr "®iadny"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"

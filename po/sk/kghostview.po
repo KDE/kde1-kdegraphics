@@ -354,11 +354,11 @@ msgstr "Nastav interpretér"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Nový"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Nový"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -645,6 +645,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Nastavte premennú prostredia (PRINTER alebo LPDEST, napr.)na meno tlaèiarne "
+"ktorú mám bra» do úvahy."
 
 #: kghostview.cpp:1654
 #, c-format

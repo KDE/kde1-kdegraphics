@@ -209,7 +209,7 @@ msgstr "Naèítavam '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Spravené"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
