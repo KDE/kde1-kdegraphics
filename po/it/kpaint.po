@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Andrea Rizzi <Bilibao@Ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,49 +25,232 @@ msgstr "Utilizzazione:"
 msgid " [url | filename]\n"
 msgstr " [url | nome file]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "Selezione Area"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "senza_titolo.gif"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Dimensioni del disegno"
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "Cambiamenti non salvati"
 
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Larghezza:"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
+"Hai modificato il file, perderai le modifiche se chiudi ora la finestra."
 
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Altezza:"
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Nouvo Disegno"
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Cerchio"
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Apri File"
 
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Numero Colori Immagine:"
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Salva File"
 
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "Bitmap (1 Bit)"
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Ingrandisci"
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr "256 Colori (8 bit)"
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Diminuisci"
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr "True Colour (24 bit)"
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Apri Immagine..."
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Nuova Immagine..."
+
+#: kpaint.cpp:317
+msgid "Save Image"
+msgstr "Salva Immagine"
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Salva Immagine con nome..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Formato Immagine..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Apri indirizzo (URL)..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Salva Indirizzo (URL)..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Nuova Finestra"
+
+# File : kpaint.po -- kde internationalization, italian translation.
+# Authors : Andrea Rizzi <bilibao@ouverture.it>,
+#           Lucien Nocera <lnocera@limpet.cis.upenn.edu> and
+#           Marco Spolaore <gemini@sctrade.it>.
+# v 0.1 -- 15/10/97
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Chiudi Finestra"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "Esci"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Copia Regione"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Taglia Regione"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Incolla Regione"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Incolla Come Immagine"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Maschera..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Informazione..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
+msgstr "Ridimensiona..."
+
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Modifica tavolozza..."
+
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Cambia Numero di Colori..."
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Caratteristiche degli Strumenti..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Penna"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Linea"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rettangolo"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Ellissi"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Formato del File:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Cerchio"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Bombola Spray"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "Area selezionata"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr "Angolo "
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr "Mostra oggetti della Barra Struemnti"
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr "Mostra comandi Barra strumenti"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "Mostra Barra di Stato"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "Salva Opzioni"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr "Kpaint"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+"\n"
+"\n"
+"(c)  "
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Immagine"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Strumento"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Impossibile aprire il file"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Errore: Impossibile aprire fileKPaint non ha potuto aprire il file "
+"specificato "
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Formato Sconosciuto"
+
+#: kpaint.cpp:546
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Errore: Formato Sconosciuto\n"
+"KPaint non é capace di interpretare il formato del file o il\n"
+" file é rovinato."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "Apri Indirizzo:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Salva all'Indirizzo:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Caratteristiche degli Strumenti"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -85,228 +268,29 @@ msgstr "Larghezza Immagine:"
 msgid "Image Height:"
 msgstr "Altezza Immagine:"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "senza_titolo.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "Cambiamenti non salvati"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
 msgstr ""
-"Hai modificato il file, perderai le modifiche se chiudi ora la finestra."
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Nouvo Disegno"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Apri File"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Salva File"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Ingrandisci"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Diminuisci"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Apri Immagine..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Nuova Immagine..."
-
-#: kpaint.cpp:314
-msgid "Save Image"
-msgstr "Salva Immagine"
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Salva Immagine con nome..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Formato Immagine..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "Apri indirizzo (URL)..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Salva Indirizzo (URL)..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Nuova Finestra"
-
-# File : kpaint.po -- kde internationalization, italian translation.
-# Authors : Andrea Rizzi <bilibao@ouverture.it>,
-#           Lucien Nocera <lnocera@limpet.cis.upenn.edu> and
-#           Marco Spolaore <gemini@sctrade.it>.
-# v 0.1 -- 15/10/97
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Chiudi Finestra"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "Esci"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Copia Regione"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Taglia Regione"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Incolla Regione"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Incolla Come Immagine"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Maschera..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Informazione..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr "Ridimensiona..."
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Modifica tavolozza..."
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Cambia Numero di Colori..."
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Caratteristiche degli Strumenti..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Penna"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Linea"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rettangolo"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Bombola Spray"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "Area selezionata"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr "Angolo "
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr "Mostra oggetti della Barra Struemnti"
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr "Mostra comandi Barra strumenti"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "Mostra Barra di Stato"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "Salva Opzioni"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr "Kpaint"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-"\n"
-"\n"
-"(c)  "
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Immagine"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Strumento"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Impossibile aprire il file"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Errore: Impossibile aprire fileKPaint non ha potuto aprire il file "
-"specificato "
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: Formato Sconosciuto"
-
-#: kpaint.cpp:543
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Errore: Formato Sconosciuto\n"
-"KPaint non é capace di interpretare il formato del file o il\n"
-" file é rovinato."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "Apri Indirizzo:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Salva all'Indirizzo:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Caratteristiche degli Strumenti"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Modifica Colore"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Formato del File:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Dimensioni del disegno"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Larghezza:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Altezza:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -399,6 +383,26 @@ msgstr "Stile giuntura:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Imposta Colore Linea..."
+
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "Selezione Area"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Numero Colori Immagine:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr "Bitmap (1 Bit)"
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr "256 Colori (8 bit)"
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr "True Colour (24 bit)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

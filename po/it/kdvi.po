@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:514
+#: kdvi.cpp:516
 msgid "Notice"
 msgstr "Messaggio"
 
@@ -62,115 +62,115 @@ msgstr "Ciao"
 msgid "What's this? DVI problem!\n"
 msgstr "Cosa succede? Problema di DVI\n"
 
-#: kdvi.cpp:92
+#: kdvi.cpp:95
 msgid "No document"
 msgstr "Nessun documento"
 
-#: kdvi.cpp:108
+#: kdvi.cpp:111
 msgid "Toggle Menubar"
 msgstr "Attiva/Disattiva barra menu"
 
-#: kdvi.cpp:110
+#: kdvi.cpp:113
 msgid "Mark page"
 msgstr "Segna pagina"
 
-#: kdvi.cpp:112
+#: kdvi.cpp:115
 msgid "Redraw"
 msgstr "Aggiorna"
 
-#: kdvi.cpp:114
+#: kdvi.cpp:117
 msgid "Preferences ..."
 msgstr "Preferenze ..."
 
-#: kdvi.cpp:173
+#: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "&Apri...."
 
-#: kdvi.cpp:180
+#: kdvi.cpp:183
 msgid "Open &recent"
 msgstr "Apri &recenti"
 
-#: kdvi.cpp:182
+#: kdvi.cpp:185
 msgid "&Print ..."
 msgstr "&Stampa ..."
 
-#: kdvi.cpp:190
+#: kdvi.cpp:193
 msgid "Zoom &in"
 msgstr "&Ingrandisci"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:194
 msgid "Zoom &out"
 msgstr "&Riduci"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:195
 msgid "&Fit to page"
 msgstr "&Adatta alla pagina"
 
-#: kdvi.cpp:193
+#: kdvi.cpp:196
 msgid "Fit to page &width"
 msgstr "Adatta alla &larghezza pagina"
 
-#: kdvi.cpp:195
+#: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "&Aggiorna pagina"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:207
 msgid "&First"
 msgstr "P&rima"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:208
 msgid "&Last"
 msgstr "&Ultima"
 
-#: kdvi.cpp:206
+#: kdvi.cpp:209
 msgid "&Go to ..."
 msgstr "&Vai a ..."
 
-#: kdvi.cpp:209
+#: kdvi.cpp:212
 msgid "&Page"
 msgstr "Pa&gina"
 
-#: kdvi.cpp:214
+#: kdvi.cpp:217
 msgid "&Preferences ..."
 msgstr "&Preferenze ..."
 
-#: kdvi.cpp:215
+#: kdvi.cpp:218
 msgid "&Keys ..."
 msgstr "&Tasti ..."
 
-#: kdvi.cpp:217
+#: kdvi.cpp:220
 msgid "Make PK-&fonts"
 msgstr "Crea &Caratteri-PK"
 
-#: kdvi.cpp:219
+#: kdvi.cpp:222
 msgid "Show PS"
 msgstr "Mostra PS"
 
-#: kdvi.cpp:221
+#: kdvi.cpp:224
 msgid "Show &Menubar"
 msgstr "&Mostra barra menu"
 
-#: kdvi.cpp:223
+#: kdvi.cpp:226
 msgid "Show &Buttons"
 msgstr "Mostra &pulsanti"
 
-#: kdvi.cpp:225
+#: kdvi.cpp:228
 msgid "Show Page Lis&t"
 msgstr "Mostra lis&ta pagine"
 
-#: kdvi.cpp:227
+#: kdvi.cpp:230
 msgid "Show &Statusbar"
 msgstr "Mostra barra di stato"
 
-#: kdvi.cpp:229
+#: kdvi.cpp:232
 msgid "Show Scro&llbars"
 msgstr "Mostra scrollbars"
 
-#: kdvi.cpp:238
+#: kdvi.cpp:241
 msgid "DVI Viewer"
 msgstr "Visualizzatore DVI"
 
-#: kdvi.cpp:240
+#: kdvi.cpp:243
 msgid ""
 "\n"
 "\n"
@@ -180,271 +180,271 @@ msgstr ""
 "\n"
 "di Markku Hihnala"
 
-#: kdvi.cpp:260
+#: kdvi.cpp:263
 msgid "Open document ..."
 msgstr "Apri documento ..."
 
-#: kdvi.cpp:261
+#: kdvi.cpp:264
 msgid "Reload document"
 msgstr "Riapri documento"
 
-#: kdvi.cpp:262
+#: kdvi.cpp:265
 msgid "Print ..."
 msgstr "Stampa ..."
 
-#: kdvi.cpp:264
+#: kdvi.cpp:267
 msgid "Go to first page"
 msgstr "Vai alla prima pagina"
 
-#: kdvi.cpp:265
+#: kdvi.cpp:268
 msgid "Go to previous page"
 msgstr "Vai alla pagina precedente"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:269
 msgid "Go down then top of next page"
 msgstr "Vai all'inizio della pagina successiva"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:270
 msgid "Go to next page"
 msgstr "Vai alla prossima pagina"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:271
 msgid "Go to last page"
 msgstr "Vai all'ultima pagina"
 
-#: kdvi.cpp:270
+#: kdvi.cpp:273
 msgid "Decrease magnification"
 msgstr "Riduci ingrandimento"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:274
 msgid "Small text"
 msgstr "Testo piccolo"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:275
 msgid "Large text"
 msgstr "Testo grande"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:276
 msgid "Increase magnification"
 msgstr "Aumenta ingrandimento"
 
-#: kdvi.cpp:298
+#: kdvi.cpp:301
 msgid "Scroll window and switch the page"
 msgstr "Scorri finestra e aggiorna pagina"
 
-#: kdvi.cpp:307
+#: kdvi.cpp:310
 msgid "Select page and mark pages for printing"
 msgstr "Seleziona pagina e selezionala per la stampa"
 
-#: kdvi.cpp:322
+#: kdvi.cpp:325
 msgid "X:0000, Y:0000 "
 msgstr "X:0000, Y:0000 "
 
-#: kdvi.cpp:324
+#: kdvi.cpp:327
 msgid "Shrink: xx"
 msgstr "Riduzione: xx"
 
-#: kdvi.cpp:326
+#: kdvi.cpp:329
 msgid "Page: xxxx / xxxx"
 msgstr "Pagina: xxxx / xxxx"
 
-#: kdvi.cpp:343 kdvi.cpp:395
+#: kdvi.cpp:344 kdvi.cpp:397
 msgid "New window"
 msgstr "Nuova finestra"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:345 kdvi.cpp:398
 msgid "Open file"
 msgstr "Apri file"
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:346 kdvi.cpp:399
 msgid "Print dialog"
 msgstr "Configura stampa"
 
-#: kdvi.cpp:347 kdvi.cpp:399
+#: kdvi.cpp:348 kdvi.cpp:401
 msgid "Zoom in"
 msgstr "Ingrandisci"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:349 kdvi.cpp:402
 msgid "Zoom out"
 msgstr "Riduci"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:350 kdvi.cpp:403
 msgid "Fit window"
 msgstr "Adatta alla finestra"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:351 kdvi.cpp:404
 msgid "Fit width"
 msgstr "Adatta alla larghezza"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Redraw page"
 msgstr "Aggiorna pagina"
 
-#: kdvi.cpp:352 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:407
 msgid "Next page"
 msgstr "Prossima pagina"
 
-#: kdvi.cpp:353 kdvi.cpp:404
+#: kdvi.cpp:354 kdvi.cpp:406
 msgid "Previous page"
 msgstr "Pagina precedente"
 
-#: kdvi.cpp:354 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:409
 msgid "Last page"
 msgstr "Ultima pagina"
 
-#: kdvi.cpp:355 kdvi.cpp:406
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "First page"
 msgstr "Prima pagina"
 
-#: kdvi.cpp:356 kdvi.cpp:408
+#: kdvi.cpp:357 kdvi.cpp:410
 msgid "Goto page"
 msgstr "Vai a pagina"
 
-#: kdvi.cpp:357
+#: kdvi.cpp:358
 msgid "Configure keys"
 msgstr "Configura tasti"
 
-#: kdvi.cpp:358 kdvi.cpp:409
+#: kdvi.cpp:359 kdvi.cpp:411
 msgid "Toggle show PS"
 msgstr "Scegli vista PS"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:360 kdvi.cpp:412
 msgid "Toggle menu bar"
 msgstr "Scegli vista barra menu"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:361 kdvi.cpp:413
 msgid "Toggle button bar"
 msgstr "(dis)attiva barra pulsanti"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:362 kdvi.cpp:414
 msgid "Toggle page list"
 msgstr "(dis)attiva lista pagine"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:363 kdvi.cpp:415
 msgid "Toggle status bar"
 msgstr "(dis)attiva barra di stato"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:364 kdvi.cpp:416
 msgid "Toggle scroll bars"
 msgstr "(dis)attiva barre di scorrimento"
 
-#: kdvi.cpp:466
+#: kdvi.cpp:468
 msgid "File open dialog is open"
 msgstr "La finestra di dialogo Apri file e` aperta"
 
-#: kdvi.cpp:515
+#: kdvi.cpp:517
 msgid "Can't read file:\n"
 msgstr "Non posso leggere il file:\n"
 
-#: kdvi.cpp:521
+#: kdvi.cpp:523
 msgid "Opening "
 msgstr "Apertura "
 
-#: kdvi.cpp:546
+#: kdvi.cpp:548
 msgid "Opened "
 msgstr "Aperto "
 
-#: kdvi.cpp:556
+#: kdvi.cpp:558
 msgid "Print dialog is open"
 msgstr "La finestra di dialogo Stampa e` aperta"
 
-#: kdvi.cpp:571
+#: kdvi.cpp:573
 msgid "View size fits page"
 msgstr "Visuale adattata alla pagina"
 
-#: kdvi.cpp:580
+#: kdvi.cpp:582
 msgid "View width fits page"
 msgstr "Larghezza vista adattata alla pagina"
 
-#: kdvi.cpp:672
+#: kdvi.cpp:674
 msgid "Preferences applied"
 msgstr "Preferenze attive"
 
-#: kdvi.cpp:676
+#: kdvi.cpp:678
 msgid " Page "
 msgstr " Pagina "
 
-#: kdvi.cpp:678
+#: kdvi.cpp:680
 msgid "Go to page"
 msgstr "Vai a pagina"
 
-#: kdvi.cpp:692
+#: kdvi.cpp:694
 msgid "Go to"
 msgstr "Vai a"
 
-#: kdvi.cpp:713
+#: kdvi.cpp:715
 msgid "Missing PK-fonts will be generated"
 msgstr "I caratteri-PK assenti saranno generati"
 
-#: kdvi.cpp:714
+#: kdvi.cpp:716
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "I caratteri-PK nmancanti saranno riportati nel 'missfont.log'"
 
-#: kdvi.cpp:730
+#: kdvi.cpp:732
 msgid "Postcsript specials are rendered"
 msgstr "Opzioni speciali PostScript attive"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:733
 msgid "Postscript specials are not rendered"
 msgstr "Opzioni speciali PostScript non attive"
 
-#: kdvi.cpp:747
+#: kdvi.cpp:749
 msgid "No menu bar"
 msgstr "Nessuna barra menu"
 
-#: kdvi.cpp:747
+#: kdvi.cpp:749
 msgid "Menu bar is shown"
 msgstr "Barra menu visibile"
 
-#: kdvi.cpp:765
+#: kdvi.cpp:767
 msgid "No button bar"
 msgstr "Nessuna barra pulsanti"
 
-#: kdvi.cpp:765
+#: kdvi.cpp:767
 msgid "Button bar is shown"
 msgstr "Barra pulsanti visibile"
 
-#: kdvi.cpp:779
+#: kdvi.cpp:781
 msgid "Tool bar is shown"
 msgstr "Toolbar visibile"
 
-#: kdvi.cpp:779
+#: kdvi.cpp:781
 msgid "No tool bar"
 msgstr "Nessuna tolbar"
 
-#: kdvi.cpp:803
+#: kdvi.cpp:805
 msgid "No status bar"
 msgstr "Nessuna barra di stato"
 
-#: kdvi.cpp:803
+#: kdvi.cpp:805
 msgid "Status bar is shown"
 msgstr "Barra di stato visibile"
 
-#: kdvi.cpp:817
+#: kdvi.cpp:819
 msgid "Scroll bars are shown"
 msgstr "Scrollbar visibili"
 
-#: kdvi.cpp:817
+#: kdvi.cpp:819
 msgid "No scroll bars"
 msgstr "Nessuna scrollbar"
 
-#: kdvi.cpp:874
+#: kdvi.cpp:876
 msgid "Page: "
 msgstr "Pagina: "
 
-#: kdvi.cpp:874
+#: kdvi.cpp:876
 msgid " / "
 msgstr " / "
 
-#: kdvi.cpp:905
+#: kdvi.cpp:907
 msgid "Large text button set to shrink factor "
 msgstr "Pulsanti con testo grande settati a fattore esatto"
 
-#: kdvi.cpp:913
+#: kdvi.cpp:915
 msgid "Small text button set to shrink factor "
 msgstr "Pulsanti con testo piccolo settati a fattore esatto"
 
-#: kdvi.cpp:937
+#: kdvi.cpp:939
 msgid "File reloaded"
 msgstr "File riaperto"
 

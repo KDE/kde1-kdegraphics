@@ -5,13 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
-#: kdvi.cpp:514
+#: kdvi.cpp:516
 msgid "Notice"
 msgstr "注意"
 
@@ -53,115 +53,115 @@ msgstr "嗨"
 msgid "What's this? DVI problem!\n"
 msgstr "这是什么?DVI 的问题!\n"
 
-#: kdvi.cpp:92
+#: kdvi.cpp:95
 msgid "No document"
 msgstr "没有文档"
 
-#: kdvi.cpp:108
+#: kdvi.cpp:111
 msgid "Toggle Menubar"
 msgstr "使用/不使用菜单条"
 
-#: kdvi.cpp:110
+#: kdvi.cpp:113
 msgid "Mark page"
 msgstr "标记页"
 
-#: kdvi.cpp:112
+#: kdvi.cpp:115
 msgid "Redraw"
 msgstr "重绘"
 
-#: kdvi.cpp:114
+#: kdvi.cpp:117
 msgid "Preferences ..."
 msgstr "设置..."
 
-#: kdvi.cpp:173
+#: kdvi.cpp:176
 msgid "&Open ..."
 msgstr "打开[&O] ..."
 
-#: kdvi.cpp:180
+#: kdvi.cpp:183
 msgid "Open &recent"
 msgstr "最近打开的[&R]"
 
-#: kdvi.cpp:182
+#: kdvi.cpp:185
 msgid "&Print ..."
 msgstr "打印[&P] ..."
 
-#: kdvi.cpp:190
+#: kdvi.cpp:193
 msgid "Zoom &in"
 msgstr "缩小[&I]"
 
-#: kdvi.cpp:191
+#: kdvi.cpp:194
 msgid "Zoom &out"
 msgstr "放大[&O]"
 
-#: kdvi.cpp:192
+#: kdvi.cpp:195
 msgid "&Fit to page"
 msgstr "调整页面"
 
-#: kdvi.cpp:193
+#: kdvi.cpp:196
 msgid "Fit to page &width"
 msgstr "调整到页宽"
 
-#: kdvi.cpp:195
+#: kdvi.cpp:198
 msgid "&Redraw page"
 msgstr "重绘页面"
 
-#: kdvi.cpp:204
+#: kdvi.cpp:207
 msgid "&First"
 msgstr "第一页[&F]"
 
-#: kdvi.cpp:205
+#: kdvi.cpp:208
 msgid "&Last"
 msgstr "最后一页[&L]"
 
-#: kdvi.cpp:206
+#: kdvi.cpp:209
 msgid "&Go to ..."
 msgstr "跳至[&G]..."
 
-#: kdvi.cpp:209
+#: kdvi.cpp:212
 msgid "&Page"
 msgstr "页[&P]"
 
-#: kdvi.cpp:214
+#: kdvi.cpp:217
 msgid "&Preferences ..."
 msgstr "设置[&P] ..."
 
-#: kdvi.cpp:215
+#: kdvi.cpp:218
 msgid "&Keys ..."
 msgstr "键设置[&K] ..."
 
-#: kdvi.cpp:217
+#: kdvi.cpp:220
 msgid "Make PK-&fonts"
 msgstr "生成PK字体[&F]"
 
-#: kdvi.cpp:219
+#: kdvi.cpp:222
 msgid "Show PS"
 msgstr "显示 PS"
 
-#: kdvi.cpp:221
+#: kdvi.cpp:224
 msgid "Show &Menubar"
 msgstr "显示菜单条[&M]"
 
-#: kdvi.cpp:223
+#: kdvi.cpp:226
 msgid "Show &Buttons"
 msgstr "显示工具按钮[&B]"
 
-#: kdvi.cpp:225
+#: kdvi.cpp:228
 msgid "Show Page Lis&t"
 msgstr "显示页列表[&T]"
 
-#: kdvi.cpp:227
+#: kdvi.cpp:230
 msgid "Show &Statusbar"
 msgstr "显示状态条[&S]"
 
-#: kdvi.cpp:229
+#: kdvi.cpp:232
 msgid "Show Scro&llbars"
 msgstr "显示滚动条[&L]"
 
-#: kdvi.cpp:238
+#: kdvi.cpp:241
 msgid "DVI Viewer"
 msgstr "DVI 阅读器"
 
-#: kdvi.cpp:240
+#: kdvi.cpp:243
 msgid ""
 "\n"
 "\n"
@@ -171,271 +171,271 @@ msgstr ""
 "\n"
 "作者:Markku Hihnala"
 
-#: kdvi.cpp:260
+#: kdvi.cpp:263
 msgid "Open document ..."
 msgstr "打开文档 ..."
 
-#: kdvi.cpp:261
+#: kdvi.cpp:264
 msgid "Reload document"
 msgstr "重新载入文档"
 
-#: kdvi.cpp:262
+#: kdvi.cpp:265
 msgid "Print ..."
 msgstr "打印 ..."
 
-#: kdvi.cpp:264
+#: kdvi.cpp:267
 msgid "Go to first page"
 msgstr "到第一页"
 
-#: kdvi.cpp:265
+#: kdvi.cpp:268
 msgid "Go to previous page"
 msgstr "到前一页"
 
-#: kdvi.cpp:266
+#: kdvi.cpp:269
 msgid "Go down then top of next page"
 msgstr "到此页底部及下一页的顶部"
 
-#: kdvi.cpp:267
+#: kdvi.cpp:270
 msgid "Go to next page"
 msgstr "到下一页"
 
-#: kdvi.cpp:268
+#: kdvi.cpp:271
 msgid "Go to last page"
 msgstr "到最后一页"
 
-#: kdvi.cpp:270
+#: kdvi.cpp:273
 msgid "Decrease magnification"
 msgstr "减小放大倍数"
 
-#: kdvi.cpp:271
+#: kdvi.cpp:274
 msgid "Small text"
 msgstr "小文字"
 
-#: kdvi.cpp:272
+#: kdvi.cpp:275
 msgid "Large text"
 msgstr "大文字"
 
-#: kdvi.cpp:273
+#: kdvi.cpp:276
 msgid "Increase magnification"
 msgstr "增大放大倍数"
 
-#: kdvi.cpp:298
+#: kdvi.cpp:301
 msgid "Scroll window and switch the page"
 msgstr "滚动窗口并切换页"
 
-#: kdvi.cpp:307
+#: kdvi.cpp:310
 msgid "Select page and mark pages for printing"
 msgstr "选择和标记页以供打印"
 
-#: kdvi.cpp:322
+#: kdvi.cpp:325
 msgid "X:0000, Y:0000 "
 msgstr "X:0000, Y:0000 "
 
-#: kdvi.cpp:324
+#: kdvi.cpp:327
 msgid "Shrink: xx"
 msgstr "收缩: xx"
 
-#: kdvi.cpp:326
+#: kdvi.cpp:329
 msgid "Page: xxxx / xxxx"
 msgstr "页: xxxx / xxxx"
 
-#: kdvi.cpp:343 kdvi.cpp:395
+#: kdvi.cpp:344 kdvi.cpp:397
 msgid "New window"
 msgstr "新开窗口"
 
-#: kdvi.cpp:344 kdvi.cpp:396
+#: kdvi.cpp:345 kdvi.cpp:398
 msgid "Open file"
 msgstr "打开文件"
 
-#: kdvi.cpp:345 kdvi.cpp:397
+#: kdvi.cpp:346 kdvi.cpp:399
 msgid "Print dialog"
 msgstr "打印对话"
 
-#: kdvi.cpp:347 kdvi.cpp:399
+#: kdvi.cpp:348 kdvi.cpp:401
 msgid "Zoom in"
 msgstr "缩小"
 
-#: kdvi.cpp:348 kdvi.cpp:400
+#: kdvi.cpp:349 kdvi.cpp:402
 msgid "Zoom out"
 msgstr "放大"
 
-#: kdvi.cpp:349 kdvi.cpp:401
+#: kdvi.cpp:350 kdvi.cpp:403
 msgid "Fit window"
 msgstr "调整窗口"
 
-#: kdvi.cpp:350 kdvi.cpp:402
+#: kdvi.cpp:351 kdvi.cpp:404
 msgid "Fit width"
 msgstr "调整宽度"
 
-#: kdvi.cpp:351 kdvi.cpp:403
+#: kdvi.cpp:352 kdvi.cpp:405
 msgid "Redraw page"
 msgstr "重绘页面"
 
-#: kdvi.cpp:352 kdvi.cpp:405
+#: kdvi.cpp:353 kdvi.cpp:407
 msgid "Next page"
 msgstr "下一页"
 
-#: kdvi.cpp:353 kdvi.cpp:404
+#: kdvi.cpp:354 kdvi.cpp:406
 msgid "Previous page"
 msgstr "前一页"
 
-#: kdvi.cpp:354 kdvi.cpp:407
+#: kdvi.cpp:355 kdvi.cpp:409
 msgid "Last page"
 msgstr "最后一页"
 
-#: kdvi.cpp:355 kdvi.cpp:406
+#: kdvi.cpp:356 kdvi.cpp:408
 msgid "First page"
 msgstr "第一页"
 
-#: kdvi.cpp:356 kdvi.cpp:408
+#: kdvi.cpp:357 kdvi.cpp:410
 msgid "Goto page"
 msgstr "到页面"
 
-#: kdvi.cpp:357
+#: kdvi.cpp:358
 msgid "Configure keys"
 msgstr "配置键功能"
 
-#: kdvi.cpp:358 kdvi.cpp:409
+#: kdvi.cpp:359 kdvi.cpp:411
 msgid "Toggle show PS"
 msgstr "显示/不显示PS"
 
-#: kdvi.cpp:359 kdvi.cpp:410
+#: kdvi.cpp:360 kdvi.cpp:412
 msgid "Toggle menu bar"
 msgstr "显示/不显示菜单条"
 
-#: kdvi.cpp:360 kdvi.cpp:411
+#: kdvi.cpp:361 kdvi.cpp:413
 msgid "Toggle button bar"
 msgstr "显示/不显示工具按钮"
 
-#: kdvi.cpp:361 kdvi.cpp:412
+#: kdvi.cpp:362 kdvi.cpp:414
 msgid "Toggle page list"
 msgstr "显示/不显示页列表"
 
-#: kdvi.cpp:362 kdvi.cpp:413
+#: kdvi.cpp:363 kdvi.cpp:415
 msgid "Toggle status bar"
 msgstr "显示/不显示状态条"
 
-#: kdvi.cpp:363 kdvi.cpp:414
+#: kdvi.cpp:364 kdvi.cpp:416
 msgid "Toggle scroll bars"
 msgstr "显示/不显示滚动条"
 
-#: kdvi.cpp:466
+#: kdvi.cpp:468
 msgid "File open dialog is open"
 msgstr "文件打开对话已经打开"
 
-#: kdvi.cpp:515
+#: kdvi.cpp:517
 msgid "Can't read file:\n"
 msgstr "不能读文件:\n"
 
-#: kdvi.cpp:521
+#: kdvi.cpp:523
 msgid "Opening "
 msgstr "打开 "
 
-#: kdvi.cpp:546
+#: kdvi.cpp:548
 msgid "Opened "
 msgstr "已经打开 "
 
-#: kdvi.cpp:556
+#: kdvi.cpp:558
 msgid "Print dialog is open"
 msgstr "打印对话已经打开"
 
-#: kdvi.cpp:571
+#: kdvi.cpp:573
 msgid "View size fits page"
 msgstr "显示大小调整到页面大小"
 
-#: kdvi.cpp:580
+#: kdvi.cpp:582
 msgid "View width fits page"
 msgstr "显示宽度调整到页面宽度"
 
-#: kdvi.cpp:672
+#: kdvi.cpp:674
 msgid "Preferences applied"
 msgstr "设置生效"
 
-#: kdvi.cpp:676
+#: kdvi.cpp:678
 msgid " Page "
 msgstr " 页 "
 
-#: kdvi.cpp:678
+#: kdvi.cpp:680
 msgid "Go to page"
 msgstr "到页面"
 
-#: kdvi.cpp:692
+#: kdvi.cpp:694
 msgid "Go to"
 msgstr "到"
 
-#: kdvi.cpp:713
+#: kdvi.cpp:715
 msgid "Missing PK-fonts will be generated"
 msgstr "找不到的PK字体将要自动生成"
 
-#: kdvi.cpp:714
+#: kdvi.cpp:716
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "找不到的PK字体会记录到 'missfont.log'"
 
-#: kdvi.cpp:730
+#: kdvi.cpp:732
 msgid "Postcsript specials are rendered"
 msgstr "Postscript specials 生成"
 
-#: kdvi.cpp:731
+#: kdvi.cpp:733
 msgid "Postscript specials are not rendered"
 msgstr "Postcript specials 没有生成"
 
-#: kdvi.cpp:747
+#: kdvi.cpp:749
 msgid "No menu bar"
 msgstr "没有菜单条"
 
-#: kdvi.cpp:747
+#: kdvi.cpp:749
 msgid "Menu bar is shown"
 msgstr "菜单条是显示的"
 
-#: kdvi.cpp:765
+#: kdvi.cpp:767
 msgid "No button bar"
 msgstr "没有工具按钮条"
 
-#: kdvi.cpp:765
+#: kdvi.cpp:767
 msgid "Button bar is shown"
 msgstr "工具按钮条是显示的"
 
-#: kdvi.cpp:779
+#: kdvi.cpp:781
 msgid "Tool bar is shown"
 msgstr "工具条是显示的"
 
-#: kdvi.cpp:779
+#: kdvi.cpp:781
 msgid "No tool bar"
 msgstr "没有工具条"
 
-#: kdvi.cpp:803
+#: kdvi.cpp:805
 msgid "No status bar"
 msgstr "没有状态条"
 
-#: kdvi.cpp:803
+#: kdvi.cpp:805
 msgid "Status bar is shown"
 msgstr "状态条是显示的"
 
-#: kdvi.cpp:817
+#: kdvi.cpp:819
 msgid "Scroll bars are shown"
 msgstr "滚动条是显示的"
 
-#: kdvi.cpp:817
+#: kdvi.cpp:819
 msgid "No scroll bars"
 msgstr "没有滚动条"
 
-#: kdvi.cpp:874
+#: kdvi.cpp:876
 msgid "Page: "
 msgstr "页面: "
 
-#: kdvi.cpp:874
+#: kdvi.cpp:876
 msgid " / "
 msgstr " / "
 
-#: kdvi.cpp:905
+#: kdvi.cpp:907
 msgid "Large text button set to shrink factor "
 msgstr "大文本按钮设到收缩因子"
 
-#: kdvi.cpp:913
+#: kdvi.cpp:915
 msgid "Small text button set to shrink factor "
 msgstr "小文本按钮设到收缩因子"
 
-#: kdvi.cpp:937
+#: kdvi.cpp:939
 msgid "File reloaded"
 msgstr "文件重新载入"
 

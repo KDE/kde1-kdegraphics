@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-04-21 03:23:+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"
@@ -27,52 +27,226 @@ msgstr "用法: "
 msgid " [url | filename]\n"
 msgstr " [url 或 檔案名稱]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "區域選擇"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "未命名.gif"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "畫布大小"
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "未儲存變更"
 
-#: canvassize.cpp:25
-#, fuzzy
-msgid "Width:"
-msgstr "寬度"
-
-#: canvassize.cpp:26
-#, fuzzy
-msgid "Height:"
-msgstr "高度"
-
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "圓形"
-
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "影像寬度"
-
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "新畫布"
+
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "開啟檔案"
+
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "儲存檔案"
+
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "放大"
+
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "縮小"
+
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "開啟影像..."
+
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "新影像..."
+
+#: kpaint.cpp:317
+#, fuzzy
+msgid "Save Image"
+msgstr "儲存影像..."
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "儲存影像至..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "影像格式..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "開啟 URL..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "儲存至 URL..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "新視窗"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "關閉視窗"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "結束"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "區域拷背"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "區域剪下"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "區域貼上"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "貼成新影像"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "遮罩..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "相關資訊..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
 msgstr ""
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr ""
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "編輯調色盤..."
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "改變顏色深度..."
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "工具內容..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "畫筆"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "線段"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "矩形"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "橢圓"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "檔案格式:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "圓形"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "噴嘴"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "區域選擇"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr ""
+
+#: kpaint.cpp:360
+#, fuzzy
+msgid "Show Tools Toolbar"
+msgstr "顯示工具列"
+
+#: kpaint.cpp:361
+#, fuzzy
+msgid "Show Commands Toolbar"
+msgstr "顯示工具列"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "顯示狀態列"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "儲存選項"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr ""
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "影像[&I]"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "工具[&T]"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: 無法開啟檔案"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"錯誤: 無法開啟檔案\n"
+"KPaint  無法開啟指定的檔案."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: 未知的格式"
+
+#: kpaint.cpp:546
+#, fuzzy
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"錯誤:  未知的格式\n"
+"KPaint 無法辨識檔案正確的格式或檔案有錯."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "開啟位置:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "儲存位置:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "工具內容"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -90,222 +264,31 @@ msgstr "影像寬度:"
 msgid "Image Height:"
 msgstr "影像高度:"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "未命名.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "未儲存變更"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "新畫布"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "開啟檔案"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "儲存檔案"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "放大"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "縮小"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "開啟影像..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "新影像..."
-
-#: kpaint.cpp:314
-#, fuzzy
-msgid "Save Image"
-msgstr "儲存影像..."
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "儲存影像至..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "影像格式..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "開啟 URL..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "儲存至 URL..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "新視窗"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "關閉視窗"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "結束"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "區域拷背"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "區域剪下"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "區域貼上"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "貼成新影像"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "遮罩..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "相關資訊..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr ""
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "編輯調色盤..."
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "改變顏色深度..."
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "工具內容..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "畫筆"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "線段"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "矩形"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "噴嘴"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "區域選擇"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr ""
-
-#: kpaint.cpp:357
-#, fuzzy
-msgid "Show Tools Toolbar"
-msgstr "顯示工具列"
-
-#: kpaint.cpp:358
-#, fuzzy
-msgid "Show Commands Toolbar"
-msgstr "顯示工具列"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "顯示狀態列"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "儲存選項"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr ""
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "影像[&I]"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "工具[&T]"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: 無法開啟檔案"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"錯誤: 無法開啟檔案\n"
-"KPaint  無法開啟指定的檔案."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: 未知的格式"
-
-#: kpaint.cpp:543
-#, fuzzy
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"錯誤:  未知的格式\n"
-"KPaint 無法辨識檔案正確的格式或檔案有錯."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "開啟位置:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "儲存位置:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "工具內容"
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "解散"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "編輯顏色"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "檔案格式:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "畫布大小"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "寬度"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "高度"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -399,6 +382,27 @@ msgstr "線段交點類型:"
 msgid "Set Line Colour..."
 msgstr "設定線段顏色..."
 
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "區域選擇"
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "影像寬度"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
+
 #: roundangle.cpp:19
 #, fuzzy
 msgid "Roundangle"
@@ -409,9 +413,6 @@ msgstr "矩形"
 
 #~ msgid "None"
 #~ msgstr "無"
-
-#~ msgid "Dismiss"
-#~ msgstr "解散"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: 不正確的 URL"

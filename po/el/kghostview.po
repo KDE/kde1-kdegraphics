@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatow <theodore@eexi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,11 +13,46 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
+#: marklist.cpp:38
+#, fuzzy
+msgid "Mark current page"
+msgstr "Σημείωση τρέχουσας σελίδας"
+
+#: marklist.cpp:39
+#, fuzzy
+msgid "Mark all pages"
+msgstr "Σημείωση όλων των σελίδων"
+
+#: marklist.cpp:40
+#, fuzzy
+msgid "Mark even pages"
+msgstr "Σημείωση ζυγών σελίδων"
+
+#: marklist.cpp:41
+#, fuzzy
+msgid "Mark odd pages"
+msgstr "Σημείωση μονών σελίδων"
+
+#: marklist.cpp:42
+#, fuzzy
+msgid "Toggle page marks"
+msgstr "Εναλλαγή σημειώσεων σελίδων"
+
+#: marklist.cpp:43
+#, fuzzy
+msgid "Remove page marks"
+msgstr "Αφαίρεση σημειώσεων σελίδων"
+
+#: marklist.cpp:367
+#, fuzzy
+msgid "Page"
+msgstr "Σελίδα"
+
 #: copyright.cpp:27
 msgid "Copyright"
 msgstr "Πνευματικά δικαιώματα"
 
-#: copyright.cpp:41
+#: copyright.cpp:41 kghostview.cpp:618
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -51,35 +86,6 @@ msgstr ""
 "αυτό το πρόγραμμα. Εάν όχι, γράψτε στο Ίδρυμα Ελεύθερου Λογισμικού\n"
 "στη διεύθυνση\n"
 "Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
-
-#: goto.cpp:54
-#, fuzzy
-msgid "&Section"
-msgstr "Τμήμα"
-
-#: goto.cpp:70
-#, fuzzy
-msgid "&Page"
-msgstr "Σελίδα"
-
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
-#: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
-#, c-format
-msgid "of %d"
-msgstr "από %d"
-
-#: info.cpp:45
-#, fuzzy
-msgid "File name :"
-msgstr "Αρχείο :"
-
-#: info.cpp:53
-msgid "Document title :"
-msgstr ""
-
-#: info.cpp:61
-msgid "Publication date :"
-msgstr ""
 
 #: interpreter.cpp:42
 msgid "General"
@@ -136,552 +142,9 @@ msgstr ""
 msgid "&Backing store"
 msgstr ""
 
-#: interpreter.cpp:244 kkeydialog.cpp:233
-#, fuzzy
-msgid "&Defaults"
-msgstr "Αρχικές τιμές"
-
 #: interpreter.cpp:314
 msgid "gs"
 msgstr ""
-
-#: kaccel.cpp:169
-msgid "CTRL+O"
-msgstr ""
-
-#: kaccel.cpp:173
-msgid "CTRL+N"
-msgstr ""
-
-#: kaccel.cpp:177
-msgid "CTRL+W"
-msgstr ""
-
-#: kaccel.cpp:181
-msgid "CTRL+S"
-msgstr ""
-
-#: kaccel.cpp:185
-msgid "CTRL+P"
-msgstr ""
-
-#: kaccel.cpp:189
-msgid "CTRL+Q"
-msgstr ""
-
-#: kaccel.cpp:193
-msgid "CTRL+X"
-msgstr ""
-
-#: kaccel.cpp:197
-msgid "CTRL+C"
-msgstr ""
-
-#: kaccel.cpp:201
-msgid "CTRL+V"
-msgstr ""
-
-#: kaccel.cpp:205
-msgid "CTRL+Z"
-msgstr ""
-
-#: kaccel.cpp:209
-msgid "CTRL+F"
-msgstr ""
-
-#: kaccel.cpp:213
-msgid "CTRL+R"
-msgstr ""
-
-#: kaccel.cpp:216 kaccel.cpp:443
-msgid "Insert"
-msgstr ""
-
-#: kaccel.cpp:217
-msgid "CTRL+Insert"
-msgstr ""
-
-#: kaccel.cpp:221
-msgid "CTRL+Home"
-msgstr ""
-
-#: kaccel.cpp:224 kaccel.cpp:449
-msgid "End"
-msgstr ""
-
-#: kaccel.cpp:225
-msgid "CTRL+End"
-msgstr ""
-
-#: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
-msgid "Prior"
-msgstr ""
-
-#: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
-#, fuzzy
-msgid "Next"
-msgstr "Επόμενη σελίδα"
-
-#: kaccel.cpp:237
-msgid "F1"
-msgstr ""
-
-#: kghostview.cpp:199
-msgid "Document information"
-msgstr ""
-
-#: kghostview.cpp:213
-#, fuzzy
-msgid "Page Setup"
-msgstr "Όνομα εκτυπωτή"
-
-#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
-msgid "View Control"
-msgstr "Παρουσίαση ελέγχου"
-
-#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
-msgid "Go To Page"
-msgstr "Μετακίνηση στη σελίδα"
-
-#: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
-msgid "Zoom In"
-msgstr "Μεγένθυση"
-
-#: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
-msgid "Zoom Out"
-msgstr "Σμίκρυνση"
-
-#: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
-msgid "Next Page"
-msgstr "Επόμενη σελίδα"
-
-#: kghostview.cpp:358 kghostview.cpp:379 kghostview.cpp:447
-msgid "Prev Page"
-msgstr "Προηγούμενη σελίδα"
-
-#: kghostview.cpp:359 kghostview.cpp:380
-msgid "Scroll Up"
-msgstr "Κύλιση επάνω"
-
-#: kghostview.cpp:360 kghostview.cpp:381
-msgid "Scroll Down"
-msgstr "Κύλιση κάτω"
-
-#: kghostview.cpp:361 kghostview.cpp:382
-msgid "Scroll Left"
-msgstr "Κύλιση αριστερά"
-
-#: kghostview.cpp:362 kghostview.cpp:383
-msgid "Scroll Right"
-msgstr "Κύλιση δεξιά"
-
-#: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
-msgid "Redisplay"
-msgstr "Επαναπροβολή"
-
-#: kghostview.cpp:406 kghostview.cpp:408
-msgid "Not known"
-msgstr ""
-
-#: kghostview.cpp:419
-msgid "Configure interpreter"
-msgstr "Προσαρμογή μεταγλωτιστή"
-
-#: kghostview.cpp:494
-msgid "&Open ..."
-msgstr "’νοιγμα"
-
-#: kghostview.cpp:495
-msgid "Open &recent"
-msgstr ""
-
-#: kghostview.cpp:503
-#, fuzzy
-msgid "Page Set&up ..."
-msgstr "’νοιγμα"
-
-#: kghostview.cpp:505
-msgid "&Print ..."
-msgstr "Εκτύπωση"
-
-#: kghostview.cpp:513
-msgid "Zoom &in"
-msgstr "Μεγένθυση"
-
-#: kghostview.cpp:515
-msgid "Zoom &out"
-msgstr "Σμίκρυνση"
-
-#: kghostview.cpp:517
-#, fuzzy
-msgid "&Zoom ..."
-msgstr "Πληροφορίες ..."
-
-#: kghostview.cpp:522
-msgid "&Info ..."
-msgstr "Πληροφορίες ..."
-
-#: kghostview.cpp:527
-msgid "&Previous Page"
-msgstr "Προηγούμενη σελίδα"
-
-#: kghostview.cpp:529
-msgid "&Next page"
-msgstr "Επόμενη σελίδα"
-
-#: kghostview.cpp:531
-msgid "&Go to page ..."
-msgstr "Μετακίνηση στη σελίδα ..."
-
-#: kghostview.cpp:534
-msgid "Go to &start"
-msgstr "Μετακίνηση στην αρχή"
-
-#: kghostview.cpp:536
-msgid "Go to &end"
-msgstr "Μετακίνηση στο τέλος"
-
-#: kghostview.cpp:538
-msgid "&Read down"
-msgstr "Διάβασμα κάτω"
-
-#: kghostview.cpp:543
-msgid "Mark &current page"
-msgstr "Σημείωση τρέχουσας σελίδας"
-
-#: kghostview.cpp:546
-msgid "Mark &all pages"
-msgstr "Σημείωση όλων των σελίδων"
-
-#: kghostview.cpp:548
-msgid "Mark &even pages"
-msgstr "Σημείωση ζυγών σελίδων"
-
-#: kghostview.cpp:550
-msgid "Mark &odd pages"
-msgstr "Σημείωση μονών σελίδων"
-
-#: kghostview.cpp:553
-msgid "&Toggle page marks"
-msgstr "Εναλλαγή σημειώσεων σελίδων"
-
-#: kghostview.cpp:556
-msgid "&Remove page marks"
-msgstr "Αφαίρεση σημειώσεων σελίδων"
-
-#: kghostview.cpp:567
-msgid "Show &tool bar"
-msgstr "Εμφάνιση γραμμής εργαλείων"
-
-#: kghostview.cpp:568
-msgid "Show st&atus bar"
-msgstr "Εμφάνιση γραμμής κατάστασης"
-
-#: kghostview.cpp:569
-msgid "Show &page list"
-msgstr "Εμφάνιση καταλόγου σελίδων"
-
-#: kghostview.cpp:571
-msgid "Configure &interpreter ..."
-msgstr "Προσαρμογή μεταγλωτιστή ..."
-
-#: kghostview.cpp:572
-msgid "Configure &key bindings ..."
-msgstr "Προσαρμογή λειτουργιών πλήκτρων ..."
-
-#: kghostview.cpp:574
-msgid "&Save options"
-msgstr "Αποθήκευση επιλογών"
-
-#: kghostview.cpp:581
-msgid "&About this application"
-msgstr "Για αυτήν την εφαρμογή"
-
-#: kghostview.cpp:583
-msgid "&Help for this application"
-msgstr "Βοήθεια για αυτήν την εφαρμογή"
-
-#: kghostview.cpp:585
-msgid "&Copyright"
-msgstr "Πνευματικά δικαιώματα"
-
-#: kghostview.cpp:592
-msgid "&Go"
-msgstr "Συνέχεια"
-
-#: kghostview.cpp:593
-msgid "&Pagemarks"
-msgstr "Σημειώσεις σελίδων"
-
-#: kghostview.cpp:661
-msgid "New window ..."
-msgstr ""
-
-#: kghostview.cpp:664
-#, fuzzy
-msgid "Open file ..."
-msgstr "’νοιγμα"
-
-#: kghostview.cpp:672
-#, fuzzy
-msgid "Print document ..."
-msgstr "Εκτύπωση αρχείου"
-
-#: kghostview.cpp:677
-#, fuzzy
-msgid "Zoom in"
-msgstr "Μεγένθυση"
-
-#: kghostview.cpp:680
-#, fuzzy
-msgid "Zoom out"
-msgstr "Σμίκρυνση"
-
-#: kghostview.cpp:685
-msgid "Go back"
-msgstr "Μετακίνηση πίσω"
-
-#: kghostview.cpp:688
-msgid "Go forward"
-msgstr "Μετακίνηση μπροστά"
-
-#: kghostview.cpp:691
-msgid "Go to page ..."
-msgstr "Μετακίνηση στη σελίδα ..."
-
-#: kghostview.cpp:696
-msgid "Go to start"
-msgstr "Μετακίνηση στην αρχή"
-
-#: kghostview.cpp:699
-msgid "Go to end"
-msgstr "Μετακίνηση στο τέλος"
-
-#: kghostview.cpp:702
-msgid "Read down the page"
-msgstr "Διάβασμα σελίδας προς τα κάτω"
-
-#: kghostview.cpp:707
-#, fuzzy
-msgid "Toggle this page mark"
-msgstr "Εναλλαγή σημειώσεων σελίδων"
-
-#: kghostview.cpp:729
-msgid "Sc.100 of 100  P.100 of 100"
-msgstr "Sc.100 από 100  Σ.100 από 100"
-
-#: kghostview.cpp:730
-#, c-format
-msgid "100 %"
-msgstr "100 %"
-
-#: kghostview.cpp:731
-msgid "Upside Down"
-msgstr "Αναποδογύρισμα"
-
-#: kghostview.cpp:756
-msgid "Malformed URL."
-msgstr "Λάθος σύνταξη URL."
-
-#: kghostview.cpp:768
-msgid ""
-"Already waiting\n"
-"for an internet job to finish.\n"
-"Please wait until has finished.\n"
-"Alternatively stop the running one."
-msgstr ""
-"Ήδη σε αναμονή για το τέλος μιας εργασίας δικτύου. Παρακαλώ\n"
-"περιμένετε μέχρι να τελειώσει. Εναλλακτικά μπορείτε να την\n"
-"σταματήσετε."
-
-#: kghostview.cpp:777
-msgid "Could not start or find KFM."
-msgstr "Δεν μπορώ να ξεκινήσω ή να βρώ τον KFM."
-
-#: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
-msgid "Portrait"
-msgstr "Πορτραίτο"
-
-#: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
-msgid "Landscape"
-msgstr "Τοπίο"
-
-#: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
-msgid "Seascape"
-msgstr ""
-
-#: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
-msgid "Upside down"
-msgstr "Αναποδογύρισμα"
-
-#: kghostview.cpp:1262
-msgid "Go to ..."
-msgstr "Μετακίνηση στο ...."
-
-#: kghostview.cpp:1337
-#, fuzzy
-msgid "Zoom"
-msgstr "Μεγένθυση"
-
-#: kghostview.cpp:1523
-msgid "Version 0.6"
-msgstr "Έκδοση 0.6"
-
-#: kghostview.cpp:1524
-msgid "Sorry, not ready yet"
-msgstr "Λυπάμαι, δεν είναι ακόμα έτοιμο"
-
-#: kghostview.cpp:1531
-msgid "About kghostview"
-msgstr "Για το kghostview"
-
-#: kghostview.cpp:1532
-msgid ""
-"Version :\t0.6 alpha\n"
-"Author : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
-msgstr ""
-"Έκδοση :\t0.6 ’λφα\n"
-"Προγραμματισμός : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
-
-#: kghostview.cpp:1584 kghostview.cpp:1700
-msgid "Error printing"
-msgstr ""
-
-#: kghostview.cpp:1594
-msgid ""
-"You chose to print all pages to a file.\n"
-"This would produce a document identical to\n"
-"that currently loaded into the viewer.\n"
-"There is no need to print all pages into a new file."
-msgstr ""
-
-#: kghostview.cpp:1607
-msgid ""
-"No file name was given so\n"
-"nothing could be printed to a file.\n"
-msgstr ""
-
-#: kghostview.cpp:1665
-#, fuzzy, c-format
-msgid "Print failure : %s"
-msgstr "Αποτυχία εκτύπωσης : lpr"
-
-#: kghostview.cpp:1701
-msgid ""
-"Printing failed because the list of\n"
-"pages to be printed was empty.\n"
-msgstr ""
-
-#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
-#: kghostview.cpp:2534
-msgid "of 1    "
-msgstr "από 1   "
-
-#: kghostview.cpp:2236 kghostview.cpp:2248 kghostview.cpp:2536
-#, c-format
-msgid "of %d    "
-msgstr "από %d   "
-
-#: kghostview.cpp:2238 kghostview.cpp:2250 kghostview.cpp:2538
-#: kghostview.cpp:2545
-#, c-format
-msgid "of %d  "
-msgstr "από %d "
-
-#: kghostview.cpp:2510
-msgid "Sc.1 "
-msgstr "Sc.1 "
-
-#: kghostview.cpp:2513
-msgid "P.1 "
-msgstr "Σ.1 "
-
-#: kghostview.cpp:2515 kghostview.cpp:2528
-#, c-format
-msgid "P.%d "
-msgstr "Σ.%d "
-
-#: kghostview.cpp:2530
-#, c-format
-msgid "Sc.%d "
-msgstr "Sc.%d "
-
-#: kkeydialog.cpp:312
-msgid "Current key"
-msgstr ""
-
-#: kkeydialog.cpp:323
-#, fuzzy
-msgid "&Action"
-msgstr "Τμήμα"
-
-#: kkeydialog.cpp:382
-msgid "&No key"
-msgstr ""
-
-#: kkeydialog.cpp:390
-#, fuzzy
-msgid "&Default key"
-msgstr "Αρχικές τιμές"
-
-#: kkeydialog.cpp:398
-msgid "&Custom key"
-msgstr ""
-
-#: main.cpp:25
-#, fuzzy
-msgid "Usage: "
-msgstr "Σύνταξη: %s\n"
-
-#: main.cpp:27
-#, fuzzy
-msgid ""
-" [filename] [siwtches]\n"
-"\n"
-msgstr "[όνομα αρχείου]\n"
-
-#: main.cpp:28
-#, fuzzy
-msgid ""
-"See KDE and Qt documentation for\n"
-"command line options.\n"
-msgstr "Δείτε την τεκμηρίωση του Qt για επιλογές γραμμής εντολών\n"
-
-#: main.cpp:30
-msgid "Error on command line"
-msgstr ""
-
-#: marklist.cpp:38
-#, fuzzy
-msgid "Mark current page"
-msgstr "Σημείωση τρέχουσας σελίδας"
-
-#: marklist.cpp:39
-#, fuzzy
-msgid "Mark all pages"
-msgstr "Σημείωση όλων των σελίδων"
-
-#: marklist.cpp:40
-#, fuzzy
-msgid "Mark even pages"
-msgstr "Σημείωση ζυγών σελίδων"
-
-#: marklist.cpp:41
-#, fuzzy
-msgid "Mark odd pages"
-msgstr "Σημείωση μονών σελίδων"
-
-#: marklist.cpp:42
-#, fuzzy
-msgid "Toggle page marks"
-msgstr "Εναλλαγή σημειώσεων σελίδων"
-
-#: marklist.cpp:43
-#, fuzzy
-msgid "Remove page marks"
-msgstr "Αφαίρεση σημειώσεων σελίδων"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
@@ -693,6 +156,19 @@ msgstr ""
 
 #: messages.cpp:59
 msgid "&Dismiss"
+msgstr ""
+
+#: info.cpp:45
+#, fuzzy
+msgid "File name :"
+msgstr "Αρχείο :"
+
+#: info.cpp:53
+msgid "Document title :"
+msgstr ""
+
+#: info.cpp:61
+msgid "Publication date :"
 msgstr ""
 
 #: print.cpp:35
@@ -768,6 +244,38 @@ msgid ""
 "Check the status bar for this information.\n"
 msgstr ""
 
+#: goto.cpp:54
+#, fuzzy
+msgid "&Section"
+msgstr "Τμήμα"
+
+#: goto.cpp:70
+#, fuzzy
+msgid "&Page"
+msgstr "Σελίδα"
+
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2225
+#: kghostview.cpp:2237 kghostview.cpp:2242 kghostview.cpp:2525
+#, c-format
+msgid "of %d"
+msgstr "από %d"
+
+#: kghostview.cpp:1221 kghostview.cpp:2316 viewcontrol.cpp:64
+msgid "Portrait"
+msgstr "Πορτραίτο"
+
+#: kghostview.cpp:1223 kghostview.cpp:2322 viewcontrol.cpp:65
+msgid "Landscape"
+msgstr "Τοπίο"
+
+#: kghostview.cpp:1225 kghostview.cpp:2320 viewcontrol.cpp:66
+msgid "Seascape"
+msgstr ""
+
+#: kghostview.cpp:1227 kghostview.cpp:2318 viewcontrol.cpp:67
+msgid "Upside down"
+msgstr "Αναποδογύρισμα"
+
 #: viewcontrol.cpp:75
 #, fuzzy
 msgid "magnification"
@@ -787,10 +295,428 @@ msgstr "Προσανατολισμός"
 msgid "&Apply"
 msgstr ""
 
+#: main.cpp:25
+#, fuzzy
+msgid "Usage: "
+msgstr "Σύνταξη: %s\n"
+
+#: main.cpp:27
+#, fuzzy
+msgid ""
+" [filename] [siwtches]\n"
+"\n"
+msgstr "[όνομα αρχείου]\n"
+
+#: main.cpp:28
+#, fuzzy
+msgid ""
+"See KDE and Qt documentation for\n"
+"command line options.\n"
+msgstr "Δείτε την τεκμηρίωση του Qt για επιλογές γραμμής εντολών\n"
+
+#: main.cpp:30
+msgid "Error on command line"
+msgstr ""
+
+#: kghostview.cpp:206
+msgid "Document information"
+msgstr ""
+
+#: kghostview.cpp:220
+#, fuzzy
+msgid "Page Setup"
+msgstr "Όνομα εκτυπωτή"
+
+#: kghostview.cpp:360 kghostview.cpp:449
+msgid "View Control"
+msgstr "Παρουσίαση ελέγχου"
+
+#: kghostview.cpp:361 kghostview.cpp:454
+msgid "Go To Page"
+msgstr "Μετακίνηση στη σελίδα"
+
+#: kghostview.cpp:362 kghostview.cpp:447
+msgid "Zoom In"
+msgstr "Μεγένθυση"
+
+#: kghostview.cpp:363 kghostview.cpp:448
+msgid "Zoom Out"
+msgstr "Σμίκρυνση"
+
+#: kghostview.cpp:364 kghostview.cpp:452
+msgid "Next Page"
+msgstr "Επόμενη σελίδα"
+
+#: kghostview.cpp:365 kghostview.cpp:453
+msgid "Prev Page"
+msgstr "Προηγούμενη σελίδα"
+
+#: kghostview.cpp:366
+msgid "Scroll Up"
+msgstr "Κύλιση επάνω"
+
+#: kghostview.cpp:367
+msgid "Scroll Down"
+msgstr "Κύλιση κάτω"
+
+#: kghostview.cpp:368
+msgid "Scroll Left"
+msgstr "Κύλιση αριστερά"
+
+#: kghostview.cpp:369
+msgid "Scroll Right"
+msgstr "Κύλιση δεξιά"
+
+#: kghostview.cpp:370 kghostview.cpp:450
+msgid "Redisplay"
+msgstr "Επαναπροβολή"
+
+#: kghostview.cpp:413 kghostview.cpp:415
+msgid "Not known"
+msgstr ""
+
+#: kghostview.cpp:426
+msgid "Configure interpreter"
+msgstr "Προσαρμογή μεταγλωτιστή"
+
+#: kghostview.cpp:500
+msgid "&Open ..."
+msgstr "’νοιγμα"
+
+#: kghostview.cpp:501
+msgid "Open &recent"
+msgstr ""
+
+#: kghostview.cpp:509
+#, fuzzy
+msgid "Page Set&up ..."
+msgstr "’νοιγμα"
+
+#: kghostview.cpp:511
+msgid "&Print ..."
+msgstr "Εκτύπωση"
+
+#: kghostview.cpp:519
+msgid "Zoom &in"
+msgstr "Μεγένθυση"
+
+#: kghostview.cpp:521
+msgid "Zoom &out"
+msgstr "Σμίκρυνση"
+
+#: kghostview.cpp:523
+#, fuzzy
+msgid "&Zoom ..."
+msgstr "Πληροφορίες ..."
+
+#: kghostview.cpp:528
+msgid "&Info ..."
+msgstr "Πληροφορίες ..."
+
+#: kghostview.cpp:533
+msgid "&Previous Page"
+msgstr "Προηγούμενη σελίδα"
+
+#: kghostview.cpp:535
+msgid "&Next page"
+msgstr "Επόμενη σελίδα"
+
+#: kghostview.cpp:537
+msgid "&Go to page ..."
+msgstr "Μετακίνηση στη σελίδα ..."
+
+#: kghostview.cpp:540
+msgid "Go to &start"
+msgstr "Μετακίνηση στην αρχή"
+
+#: kghostview.cpp:542
+msgid "Go to &end"
+msgstr "Μετακίνηση στο τέλος"
+
+#: kghostview.cpp:544
+msgid "&Read down"
+msgstr "Διάβασμα κάτω"
+
+#: kghostview.cpp:549
+msgid "Mark &current page"
+msgstr "Σημείωση τρέχουσας σελίδας"
+
+#: kghostview.cpp:552
+msgid "Mark &all pages"
+msgstr "Σημείωση όλων των σελίδων"
+
+#: kghostview.cpp:554
+msgid "Mark &even pages"
+msgstr "Σημείωση ζυγών σελίδων"
+
+#: kghostview.cpp:556
+msgid "Mark &odd pages"
+msgstr "Σημείωση μονών σελίδων"
+
+#: kghostview.cpp:559
+msgid "&Toggle page marks"
+msgstr "Εναλλαγή σημειώσεων σελίδων"
+
+#: kghostview.cpp:562
+msgid "&Remove page marks"
+msgstr "Αφαίρεση σημειώσεων σελίδων"
+
+#: kghostview.cpp:573
+msgid "Show &tool bar"
+msgstr "Εμφάνιση γραμμής εργαλείων"
+
+#: kghostview.cpp:574
+msgid "Show st&atus bar"
+msgstr "Εμφάνιση γραμμής κατάστασης"
+
+#: kghostview.cpp:575
+msgid "Show &page list"
+msgstr "Εμφάνιση καταλόγου σελίδων"
+
+#: kghostview.cpp:577
+msgid "Configure &interpreter ..."
+msgstr "Προσαρμογή μεταγλωτιστή ..."
+
+#: kghostview.cpp:578
+msgid "Configure &key bindings ..."
+msgstr "Προσαρμογή λειτουργιών πλήκτρων ..."
+
+#: kghostview.cpp:580
+msgid "&Save options"
+msgstr "Αποθήκευση επιλογών"
+
+#: kghostview.cpp:587
+msgid "&About this application"
+msgstr "Για αυτήν την εφαρμογή"
+
+#: kghostview.cpp:589
+msgid "&Help for this application"
+msgstr "Βοήθεια για αυτήν την εφαρμογή"
+
+#: kghostview.cpp:591
+msgid "&Copyright"
+msgstr "Πνευματικά δικαιώματα"
+
+#: kghostview.cpp:598
+msgid "&Go"
+msgstr "Συνέχεια"
+
+#: kghostview.cpp:599
+msgid "&Pagemarks"
+msgstr "Σημειώσεις σελίδων"
+
+#: kghostview.cpp:608
+msgid ""
+" - the PostScript document viewer for\n"
+"the K Desktop Environment.\n"
+"\n"
+"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"
+"work by Tim Theisen.\n"
+"\n"
+"Incorporates code from Johanes Plass' gv. This adds compressed and\n"
+"PDF file support.\n"
+"\n"
+"See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
+msgstr ""
+
+#: kghostview.cpp:665
+msgid "New window ..."
+msgstr ""
+
+#: kghostview.cpp:668
+#, fuzzy
+msgid "Open file ..."
+msgstr "’νοιγμα"
+
+#: kghostview.cpp:676
+#, fuzzy
+msgid "Print document ..."
+msgstr "Εκτύπωση αρχείου"
+
+#: kghostview.cpp:681
+#, fuzzy
+msgid "Zoom in"
+msgstr "Μεγένθυση"
+
+#: kghostview.cpp:684
+#, fuzzy
+msgid "Zoom out"
+msgstr "Σμίκρυνση"
+
+#: kghostview.cpp:689
+msgid "Go back"
+msgstr "Μετακίνηση πίσω"
+
+#: kghostview.cpp:692
+msgid "Go forward"
+msgstr "Μετακίνηση μπροστά"
+
+#: kghostview.cpp:695
+msgid "Go to page ..."
+msgstr "Μετακίνηση στη σελίδα ..."
+
+#: kghostview.cpp:700
+msgid "Go to start"
+msgstr "Μετακίνηση στην αρχή"
+
+#: kghostview.cpp:703
+msgid "Go to end"
+msgstr "Μετακίνηση στο τέλος"
+
+#: kghostview.cpp:706
+msgid "Read down the page"
+msgstr "Διάβασμα σελίδας προς τα κάτω"
+
+#: kghostview.cpp:711
+#, fuzzy
+msgid "Toggle this page mark"
+msgstr "Εναλλαγή σημειώσεων σελίδων"
+
+#: kghostview.cpp:733
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "Sc.100 από 100  Σ.100 από 100"
+
+#: kghostview.cpp:734
+#, c-format
+msgid "100 %"
+msgstr "100 %"
+
+#: kghostview.cpp:735
+msgid "Upside Down"
+msgstr "Αναποδογύρισμα"
+
+#: kghostview.cpp:760
+msgid "Malformed URL."
+msgstr "Λάθος σύνταξη URL."
+
+#: kghostview.cpp:772
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+"Ήδη σε αναμονή για το τέλος μιας εργασίας δικτύου. Παρακαλώ\n"
+"περιμένετε μέχρι να τελειώσει. Εναλλακτικά μπορείτε να την\n"
+"σταματήσετε."
+
+#: kghostview.cpp:781
+msgid "Could not start or find KFM."
+msgstr "Δεν μπορώ να ξεκινήσω ή να βρώ τον KFM."
+
+#: kghostview.cpp:1266
+msgid "Go to ..."
+msgstr "Μετακίνηση στο ...."
+
+#: kghostview.cpp:1508
+msgid "Version 0.6"
+msgstr "Έκδοση 0.6"
+
+#: kghostview.cpp:1509
+msgid "Sorry, not ready yet"
+msgstr "Λυπάμαι, δεν είναι ακόμα έτοιμο"
+
+#: kghostview.cpp:1516
+msgid "About kghostview"
+msgstr "Για το kghostview"
+
+#: kghostview.cpp:1517
+msgid ""
+"Version :\t0.6 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+"Έκδοση :\t0.6 ’λφα\n"
+"Προγραμματισμός : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+
+#: kghostview.cpp:1569 kghostview.cpp:1685
+msgid "Error printing"
+msgstr ""
+
+#: kghostview.cpp:1579
+msgid ""
+"You chose to print all pages to a file.\n"
+"This would produce a document identical to\n"
+"that currently loaded into the viewer.\n"
+"There is no need to print all pages into a new file."
+msgstr ""
+
+#: kghostview.cpp:1592
+msgid ""
+"No file name was given so\n"
+"nothing could be printed to a file.\n"
+msgstr ""
+
+#: kghostview.cpp:1650
+#, fuzzy, c-format
+msgid "Print failure : %s"
+msgstr "Αποτυχία εκτύπωσης : lpr"
+
+#: kghostview.cpp:1686
+msgid ""
+"Printing failed because the list of\n"
+"pages to be printed was empty.\n"
+msgstr ""
+
+#: kghostview.cpp:2219 kghostview.cpp:2231 kghostview.cpp:2496
+#: kghostview.cpp:2519
+msgid "of 1    "
+msgstr "από 1   "
+
+#: kghostview.cpp:2221 kghostview.cpp:2233 kghostview.cpp:2521
+#, c-format
+msgid "of %d    "
+msgstr "από %d   "
+
+#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2523
+#: kghostview.cpp:2530
+#, c-format
+msgid "of %d  "
+msgstr "από %d "
+
+#: kghostview.cpp:2495
+msgid "Sc.1 "
+msgstr "Sc.1 "
+
+#: kghostview.cpp:2498
+msgid "P.1 "
+msgstr "Σ.1 "
+
+#: kghostview.cpp:2500 kghostview.cpp:2513
+#, c-format
+msgid "P.%d "
+msgstr "Σ.%d "
+
+#: kghostview.cpp:2515
+#, c-format
+msgid "Sc.%d "
+msgstr "Sc.%d "
+
 #: zoom.cpp:46
 #, fuzzy
 msgid "&Magnification"
 msgstr "Μεγένθυση"
+
+#, fuzzy
+#~ msgid "&Defaults"
+#~ msgstr "Αρχικές τιμές"
+
+#, fuzzy
+#~ msgid "Next"
+#~ msgstr "Επόμενη σελίδα"
+
+#, fuzzy
+#~ msgid "Zoom"
+#~ msgstr "Μεγένθυση"
+
+#, fuzzy
+#~ msgid "&Action"
+#~ msgstr "Τμήμα"
+
+#, fuzzy
+#~ msgid "&Default key"
+#~ msgstr "Αρχικές τιμές"
 
 #~ msgid "Print"
 #~ msgstr "Εκτύπωση"

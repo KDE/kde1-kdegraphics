@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-01-28 14:59+0100\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-06-20 19:27 CEST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -13,171 +13,148 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: about.cpp:39
-msgid "About KFax"
-msgstr "Informace o KFaxu"
-
-#: about.cpp:58
-msgid "Version "
-msgstr "Verze "
-
-#: kfax.cpp:222 kfax.cpp:820
+#: kfax.cpp:233 kfax.cpp:828
 msgid "Show &Tool Bar"
 msgstr "Zobrazovat nás&trojovou li¹tu"
 
-#: kfax.cpp:224 kfax.cpp:813
+#: kfax.cpp:235 kfax.cpp:821
 msgid "Hide &Tool Bar"
 msgstr "Skrýt nás&trojovou li¹tu"
 
-#: kfax.cpp:227 kfax.cpp:793
+#: kfax.cpp:238 kfax.cpp:801
 msgid "Show &Status Bar"
 msgstr "Zobrazovat &statusbar"
 
-#: kfax.cpp:229 kfax.cpp:786
+#: kfax.cpp:240 kfax.cpp:794
 msgid "Hide &Status Bar"
 msgstr "Skrýt &statusbar"
 
-#: kfax.cpp:380
-msgid "&About..."
-msgstr "&Informace ..."
-
-#: kfax.cpp:381
+#: kfax.cpp:403
 msgid "Help page"
 msgstr "Stránka nápovìdy"
 
-#: kfax.cpp:382
-msgid "KFax &Help "
-msgstr "&Nápovìda KFaxu"
-
-#: kfax.cpp:384
+#: kfax.cpp:405
 msgid "&Open Fax..."
 msgstr "&Otevøít fax..."
 
-#: kfax.cpp:385
+#: kfax.cpp:406
 msgid "&Add Fax..."
 msgstr "Pøid&at fax ..."
 
-#: kfax.cpp:388
+#: kfax.cpp:409
 msgid "Open &URL..."
 msgstr "Otevøít UR&L..."
 
-#: kfax.cpp:389
+#: kfax.cpp:410
 msgid "Save to U&RL..."
 msgstr "Ulo¾it do U&RL ..."
 
-#: kfax.cpp:390
+#: kfax.cpp:411
 msgid "&Close Fax"
 msgstr "&Zavøít fax"
 
-#: kfax.cpp:397
+#: kfax.cpp:418
 msgid "&Next Page"
 msgstr "&Následující strana"
 
-#: kfax.cpp:398
+#: kfax.cpp:419
 msgid "&Prev Page"
 msgstr "&Pøedcházející strana"
 
-#: kfax.cpp:399
+#: kfax.cpp:420
 msgid "&First Page"
 msgstr "Pr&vní strana"
 
-#: kfax.cpp:400
+#: kfax.cpp:421
 msgid "&Last Page"
 msgstr "Pos&lední strana"
 
-#: kfax.cpp:402
+#: kfax.cpp:423
 msgid "&Rotate Page"
 msgstr "&Rotuj stranu"
 
-#: kfax.cpp:403
+#: kfax.cpp:424
 msgid "&Mirror Page"
 msgstr "Zr&cadli stranu"
 
-#: kfax.cpp:404
+#: kfax.cpp:425
 msgid "&Flip Page"
 msgstr "O&toèit stranu"
 
-#: kfax.cpp:406
+#: kfax.cpp:427
 msgid "Zoom &in"
 msgstr "Z&vìt¹it"
 
-#: kfax.cpp:407
+#: kfax.cpp:428
 msgid "Zoom &out"
 msgstr "Z&men¹it"
 
-#: kfax.cpp:412
+#: kfax.cpp:433
 msgid "&Fax Options"
 msgstr "Nastavení &faxu"
 
-#: kfax.cpp:414
+#: kfax.cpp:435
 msgid "&Tool Bar"
 msgstr "Nás&trojová li¹ta"
 
-#: kfax.cpp:415
+#: kfax.cpp:436
 msgid "&Status Bar"
 msgstr "&Statusbar"
 
-#: kfax.cpp:442
+#: kfax.cpp:463
 msgid "Go back"
 msgstr "Jdi zpìt"
 
-#: kfax.cpp:445
+#: kfax.cpp:466
 msgid "Go forward"
 msgstr "Jdi dopøedu"
 
-#: kfax.cpp:450
+#: kfax.cpp:471
 msgid "Go to start"
 msgstr "Jdi na zaèátek"
 
-#: kfax.cpp:453
+#: kfax.cpp:474
 msgid "Go to end"
 msgstr "Jdi na konec"
 
-#: kfax.cpp:459
+#: kfax.cpp:480
 msgid "Zoom in"
 msgstr "Zvìt¹it"
 
-#: kfax.cpp:462
+#: kfax.cpp:483
 msgid "Zoom out"
 msgstr "Zmen¹it"
 
-#: kfax.cpp:467
+#: kfax.cpp:488
 msgid "Print document"
 msgstr "Tisknout dokument"
 
-#: kfax.cpp:476
+#: kfax.cpp:497
 msgid "Go to page ..."
 msgstr "Jdi na stranu ..."
 
-#: kfax.cpp:562
+#: kfax.cpp:583
 msgid "Open Location:"
 msgstr "Otevøít URL:"
 
-#: kfax.cpp:578
+#: kfax.cpp:599
 msgid "You need to open a Fax first"
 msgstr "Nejprve musíte otevøít fax"
 
-#: kfax.cpp:584
+#: kfax.cpp:605
 msgid "Save to Location:"
 msgstr "Ulo¾it do URL"
 
-#: kfax.cpp:625
-msgid "Select Facsimile to Open"
-msgstr "Vyber fax k otevøení"
-
-#: kfax.cpp:662
-msgid "Select Facsimile to Add"
-msgstr "Vyber fax k pøidání"
-
-#: kfax.cpp:804
+#: kfax.cpp:812
 msgid "Not yet implemented"
 msgstr "Je¹tì není implementováno"
 
-#: kfax.cpp:854
+#: kfax.cpp:862
 msgid "     There is no document active      "
 msgstr "     Není ¾ádný aktivní dokument      "
 
-#: kfax.cpp:988
+#: kfax.cpp:996
+#, c-format
 msgid ""
 "Invalid page dimensions:\n"
 "Width %.2f Height %.2f\n"
@@ -185,23 +162,25 @@ msgstr ""
 "Neplatné rozmìry strany:\n"
 "©íøka %.2f Vý¹ka %.2f\n"
 
-#: kfax.cpp:1004
+#: kfax.cpp:1012
+#, c-format
 msgid "Can't print to \"%s\"\n"
 msgstr "Není mo¾né tisknout do \"%s\"\n"
 
-#: kfax.cpp:1015
+#: kfax.cpp:1023
+#, c-format
 msgid "Couldn't create %s\n"
 msgstr "Není mo¾né vytvoøit %s\n"
 
-#: kfax.cpp:1085
+#: kfax.cpp:1093
 msgid "Saving ..."
 msgstr "Ukládání..."
 
-#: kfax.cpp:1092
+#: kfax.cpp:1100
 msgid "Loading ..."
 msgstr "Nahrávání..."
 
-#: kfax.cpp:1119 kfax.cpp:1155
+#: kfax.cpp:1127 kfax.cpp:1163
 msgid ""
 "Failure in 'copy file()'\n"
 "Couldn't save file!"
@@ -209,11 +188,11 @@ msgstr ""
 "Selhání v 'copy file()'\n"
 "Není mo¾né ulo¾it soubor!"
 
-#: kfax.cpp:1125
+#: kfax.cpp:1133
 msgid "Saved"
 msgstr "Ulo¾eno"
 
-#: kfax.cpp:1132 kfax.cpp:1194
+#: kfax.cpp:1140 kfax.cpp:1202
 msgid ""
 "KFax is already waiting\n"
 "for an internet job to finish\n"
@@ -223,35 +202,36 @@ msgstr ""
 "internetem. Prosím èekejte na její \n"
 "ukonèení nebo ji zastavte.\n"
 
-#: kfax.cpp:1143 kfax.cpp:1207
+#: kfax.cpp:1151 kfax.cpp:1215
 msgid "Could not communicate with KFM"
 msgstr "Není mo¾né komunikovat KFM!"
 
-#: kfax.cpp:1184
+#: kfax.cpp:1192
+#, c-format
 msgid "Loading '%s'"
 msgstr "Nahrávání '%s'"
 
-#: kfax.cpp:1201
+#: kfax.cpp:1209
 msgid "Calling KFM"
 msgstr "Volání KFM"
 
-#: kfax.cpp:1214
+#: kfax.cpp:1222
 msgid "Starting Job"
 msgstr "Startuji práci"
 
-#: kfax.cpp:1217
+#: kfax.cpp:1225
 msgid "Connected"
 msgstr "Pøipojen"
 
-#: kfax.cpp:1219
+#: kfax.cpp:1227
 msgid "Waiting..."
 msgstr "Èekám..."
 
-#: kfax.cpp:2070
+#: kfax.cpp:2078
 msgid "You need to open a fax page first."
 msgstr "Musíte nejdø9ve otevøít stranu faxu."
 
-#: kfax.cpp:2740
+#: kfax.cpp:2748
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
@@ -259,58 +239,6 @@ msgid ""
 msgstr ""
 "Soubor s tímto jménem ji¾ existuje.\n"
 "Pøejete si jej pøepsat?\n"
-
-#: options.cpp:54
-msgid "KFax Options Dialog"
-msgstr "Dialog nastavení KFaxu"
-
-#: options.cpp:64
-msgid "Raw Fax Resolution:"
-msgstr "Rozli¹ení faxu:"
-
-#: options.cpp:68 options.cpp:149
-msgid "Auto"
-msgstr "Auto"
-
-#: options.cpp:71
-msgid "Fine"
-msgstr "Jemné"
-
-#: options.cpp:81
-msgid "Display Options:"
-msgstr "Nastavení zobrazení:"
-
-#: options.cpp:85
-msgid "Landscape"
-msgstr "Na ¹íøku"
-
-#: options.cpp:89
-msgid "Upside Down"
-msgstr "Vzhùru nohama"
-
-#: options.cpp:93
-msgid "Invert"
-msgstr "Invertovanì"
-
-#: options.cpp:102
-msgid "Raw Fax Data are:"
-msgstr "Syrová faxová data jsou:"
-
-#: options.cpp:106
-msgid "LS-Bit first"
-msgstr "Nejprve LS-bit"
-
-#: options.cpp:114
-msgid "Raw Facsimili are:"
-msgstr "Syrové faxy jsou:"
-
-#: options.cpp:135
-msgid "Raw Fax width:"
-msgstr "©íøka faxu:"
-
-#: options.cpp:142
-msgid "height:"
-msgstr "vý¹ka:"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -367,3 +295,77 @@ msgid ""
 msgstr ""
 "Pøejete-li si tisknout na tiskárnu, je nutné\n"
 "vlo¾it tiskový pøíkaz jako napø. \"lpr\"."
+
+#: options.cpp:54
+msgid "KFax Options Dialog"
+msgstr "Dialog nastavení KFaxu"
+
+#: options.cpp:64
+msgid "Raw Fax Resolution:"
+msgstr "Rozli¹ení faxu:"
+
+#: options.cpp:68 options.cpp:149
+msgid "Auto"
+msgstr "Auto"
+
+#: options.cpp:71
+msgid "Fine"
+msgstr "Jemné"
+
+#: options.cpp:74
+msgid "Normal"
+msgstr ""
+
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Nastavení zobrazení:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Na ¹íøku"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Vzhùru nohama"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Invertovanì"
+
+#: options.cpp:102
+msgid "Raw Fax Data are:"
+msgstr "Syrová faxová data jsou:"
+
+#: options.cpp:106
+msgid "LS-Bit first"
+msgstr "Nejprve LS-bit"
+
+#: options.cpp:114
+msgid "Raw Facsimili are:"
+msgstr "Syrové faxy jsou:"
+
+#: options.cpp:135
+msgid "Raw Fax width:"
+msgstr "©íøka faxu:"
+
+#: options.cpp:142
+msgid "height:"
+msgstr "vý¹ka:"
+
+#~ msgid "About KFax"
+#~ msgstr "Informace o KFaxu"
+
+#~ msgid "Version "
+#~ msgstr "Verze "
+
+#~ msgid "&About..."
+#~ msgstr "&Informace ..."
+
+#~ msgid "KFax &Help "
+#~ msgstr "&Nápovìda KFaxu"
+
+#~ msgid "Select Facsimile to Open"
+#~ msgstr "Vyber fax k otevøení"
+
+#~ msgid "Select Facsimile to Add"
+#~ msgstr "Vyber fax k pøidání"

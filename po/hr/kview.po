@@ -1,10 +1,9 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Vladimir Vuksan <vuksan@veus.hr>, 1998.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: graphics\n"
-"POT-Creation-Date: 1998-09-14 22:23+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-09-17 13:38+MST\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -76,6 +75,10 @@ msgstr "&Max velièina"
 msgid "M&axpect"
 msgstr ""
 
+#: fileman.cpp:138 wview.cpp:126
+msgid "&Contents"
+msgstr ""
+
 #: viewport.cpp:41
 msgid "Clockwise"
 msgstr "U smjeru kazaljke na satu"
@@ -144,91 +147,91 @@ msgstr "Spremi opcije"
 msgid "&About KView"
 msgstr "&O KView"
 
-#: fileman.cpp:162
+#: fileman.cpp:163
 msgid "New Window"
 msgstr "Novi prozor"
 
-#: fileman.cpp:168
+#: fileman.cpp:169
 msgid "open new file"
 msgstr "otvori novu datoteku"
 
-#: fileman.cpp:183
+#: fileman.cpp:184
 #, c-format
 msgid "shrink -50%"
 msgstr "umanji -50%"
 
-#: fileman.cpp:189
+#: fileman.cpp:190
 #, c-format
 msgid "magnify +50%"
 msgstr "uveæaj +50%"
 
-#: fileman.cpp:195
+#: fileman.cpp:196
 msgid "size Window"
 msgstr "velièina prozora"
 
-#: fileman.cpp:202
+#: fileman.cpp:203
 msgid "launch help"
 msgstr "tra¾i pomoæ"
 
-#: fileman.cpp:209
+#: fileman.cpp:210
 msgid "first pic"
 msgstr "prva slika"
 
-#: fileman.cpp:215
+#: fileman.cpp:216
 msgid "last pic"
 msgstr "zadnja slika"
 
-#: fileman.cpp:222
+#: fileman.cpp:223
 msgid "prev pic"
 msgstr "prethodna slika"
 
-#: fileman.cpp:228
+#: fileman.cpp:229
 msgid "next pic"
 msgstr "slijedeæa slika"
 
-#: fileman.cpp:235
+#: fileman.cpp:236
 msgid "start picture show"
 msgstr "pokreni show sa slikama"
 
-#: fileman.cpp:241
+#: fileman.cpp:242
 msgid "random picture show"
 msgstr "nasumièni show sa slikama"
 
-#: fileman.cpp:247
+#: fileman.cpp:248
 msgid "stop picture show"
 msgstr "zaustavi show sa slikama"
 
-#: fileman.cpp:280
+#: fileman.cpp:281
 msgid "slow"
 msgstr "sporo"
 
-#: fileman.cpp:285
+#: fileman.cpp:286
 msgid "fast"
 msgstr "brzo"
 
-#: fileman.cpp:299
+#: fileman.cpp:300
 msgid "Output Device"
 msgstr ""
 
-#: fileman.cpp:378
+#: fileman.cpp:379
 #, c-format
 msgid " Files: %d"
 msgstr " Datoteke: %d"
 
-#: fileman.cpp:388
+#: fileman.cpp:389
 #, c-format
 msgid " Format: %s Size: %dx%d"
 msgstr " Format: %s Velièina %dx%d"
 
-#: fileman.cpp:531
+#: fileman.cpp:532
 #, c-format
 msgid "Window %d"
 msgstr "Prozor %d"
 
-#: fileman.cpp:655
+#: fileman.cpp:656
 msgid "(c) 1996 - 1998 by \n"
 msgstr "(c) 1996 - 1998 \n"
 
-#: fileman.cpp:658
+#: fileman.cpp:659
 msgid "About KView"
 msgstr "O KView"

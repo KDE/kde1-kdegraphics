@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Theodore J. Soldatos <theodore@exi.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,52 +30,227 @@ msgstr "Σύνταξη:"
 msgid " [url | filename]\n"
 msgstr ""
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "Επιλογή περιοχής"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "ανώνυμο.gif"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Μέγεθος καμβά"
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "Μη αποθηκευμένες αλλαγές"
 
-#: canvassize.cpp:25
-#, fuzzy
-msgid "Width:"
-msgstr "Πλάτος"
-
-#: canvassize.cpp:26
-#, fuzzy
-msgid "Height:"
-msgstr "Ύψος"
-
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Κύκλος"
-
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "Πλάτος εικόνας:"
-
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Νέος καμβάς"
+
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "’νοιγμα αρχείου"
+
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Αποθήκευση αρχείου"
+
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Μεγένθυση"
+
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Σμίκρυνση"
+
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "’νοιγμα εικόνας..."
+
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Νέα εικόνα..."
+
+#: kpaint.cpp:317
+#, fuzzy
+msgid "Save Image"
+msgstr "Αποθήκευση εικόνας..."
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Αποθήκευση εικόνας ως..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Τύπος εικόνας..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "’νοιγμα από το URL..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Αποθήκευση στο URL..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Νέο παράθυρο"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Κλείσιμο παραθύρου"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "Έξοδος"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Αντιγραφή περιοχής"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Αποκοπή περιοχής"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Επικόλληση περιοχής"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Επικόλληση ως εικόνα"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Μάσκα..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Πληροφορίες..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
 msgstr ""
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr ""
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Επεξεργασία παλέττας"
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Αλλαγή βάθους χρώματος"
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Ιδιότητες εργαλείου..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Πένα"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Γραμμή"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Παραλληλόγραμμο"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Έλλειψη"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Τύπος αρχείου:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Κύκλος"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spray Can"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "Επιλογή περιοχής"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr ""
+
+#: kpaint.cpp:360
+#, fuzzy
+msgid "Show Tools Toolbar"
+msgstr "Εμφάνιση γραμμής εργαλείων"
+
+#: kpaint.cpp:361
+#, fuzzy
+msgid "Show Commands Toolbar"
+msgstr "Εμφάνιση γραμμής εργαλείων"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "Εμφάνιση γραμμής κατάστασης"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "Αποθήκευση επιλογών"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr ""
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "Εικόνα"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "Εργαλείο"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Δεν μπορώ να ανοίξω το αρχείο"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Σφάλμα: Δεν μπορώ να ανοίξω το αρχείο\n"
+"Το KPaint δεν μπορεί να ανοίξει το συγκεκριμένο αρχείο."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: ’γνωστος τύπος αρχείου"
+
+#: kpaint.cpp:546
+#, fuzzy
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Σφάλμα: ’γνωστος τύπος αρχείου\n"
+"Το KPaint δεν αναγνωρίζει τον τύπο του συγκεκριμένου αρχείου ή το αρχείο "
+"είναι κατεστραμμένο."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "’νοιγμα τοποθεσίας:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Αποθήκευση στην τοποθεσία:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Ιδιότητες εργαλείου"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -93,223 +268,31 @@ msgstr "Πλάτος εικόνας:"
 msgid "Image Height:"
 msgstr "Ύψος εικόνας"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "ανώνυμο.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "Μη αποθηκευμένες αλλαγές"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Νέος καμβάς"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "’νοιγμα αρχείου"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Αποθήκευση αρχείου"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Μεγένθυση"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Σμίκρυνση"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "’νοιγμα εικόνας..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Νέα εικόνα..."
-
-#: kpaint.cpp:314
-#, fuzzy
-msgid "Save Image"
-msgstr "Αποθήκευση εικόνας..."
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Αποθήκευση εικόνας ως..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Τύπος εικόνας..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "’νοιγμα από το URL..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Αποθήκευση στο URL..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Νέο παράθυρο"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Κλείσιμο παραθύρου"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "Έξοδος"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Αντιγραφή περιοχής"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Αποκοπή περιοχής"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Επικόλληση περιοχής"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Επικόλληση ως εικόνα"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Μάσκα..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Πληροφορίες..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr ""
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Επεξεργασία παλέττας"
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Αλλαγή βάθους χρώματος"
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Ιδιότητες εργαλείου..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Πένα"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Γραμμή"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Παραλληλόγραμμο"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spray Can"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "Επιλογή περιοχής"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr ""
-
-#: kpaint.cpp:357
-#, fuzzy
-msgid "Show Tools Toolbar"
-msgstr "Εμφάνιση γραμμής εργαλείων"
-
-#: kpaint.cpp:358
-#, fuzzy
-msgid "Show Commands Toolbar"
-msgstr "Εμφάνιση γραμμής εργαλείων"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "Εμφάνιση γραμμής κατάστασης"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "Αποθήκευση επιλογών"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr ""
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "Εικόνα"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "Εργαλείο"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Δεν μπορώ να ανοίξω το αρχείο"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Σφάλμα: Δεν μπορώ να ανοίξω το αρχείο\n"
-"Το KPaint δεν μπορεί να ανοίξει το συγκεκριμένο αρχείο."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: ’γνωστος τύπος αρχείου"
-
-#: kpaint.cpp:543
-#, fuzzy
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Σφάλμα: ’γνωστος τύπος αρχείου\n"
-"Το KPaint δεν αναγνωρίζει τον τύπο του συγκεκριμένου αρχείου ή το αρχείο "
-"είναι κατεστραμμένο."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "’νοιγμα τοποθεσίας:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Αποθήκευση στην τοποθεσία:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Ιδιότητες εργαλείου"
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Ξουτ!"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Επεξεργασία χρώματος"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Τύπος αρχείου:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Μέγεθος καμβά"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "Πλάτος"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "Ύψος"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -403,6 +386,27 @@ msgstr "Ένωση:"
 msgid "Set Line Colour..."
 msgstr "Χρώμα γραμμής"
 
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "Επιλογή περιοχής"
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "Πλάτος εικόνας:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
+
 #: roundangle.cpp:19
 #, fuzzy
 msgid "Roundangle"
@@ -413,9 +417,6 @@ msgstr "Παραλληλόγραμμο"
 
 #~ msgid "None"
 #~ msgstr "Κανένα"
-
-#~ msgid "Dismiss"
-#~ msgstr "Ξουτ!"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: Λάθος σύνταξη URL"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -13,11 +13,40 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: marklist.cpp:38
+msgid "Mark current page"
+msgstr "Oznaèit tuto stranu"
+
+#: marklist.cpp:39
+msgid "Mark all pages"
+msgstr "Oznaèit v¹echny strany"
+
+#: marklist.cpp:40
+msgid "Mark even pages"
+msgstr "Oznaèit sudé strany"
+
+#: marklist.cpp:41
+msgid "Mark odd pages"
+msgstr "Oznaèit liché strany"
+
+#: marklist.cpp:42
+msgid "Toggle page marks"
+msgstr "Prohodit znaèky"
+
+#: marklist.cpp:43
+msgid "Remove page marks"
+msgstr "Odstranit znaèky"
+
+#: marklist.cpp:367
+#, fuzzy
+msgid "Page"
+msgstr "&Strana"
+
 #: copyright.cpp:27
 msgid "Copyright"
 msgstr "Autorská práva"
 
-#: copyright.cpp:41
+#: copyright.cpp:41 kghostview.cpp:618
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -48,32 +77,6 @@ msgstr ""
 "Mìli by jste obdr¾et kopii GNU v¹eobecné veøejné licence s tímto \n"
 "programem; není-li tomu tak, napi¹te na adresu Free Software \n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
-
-#: goto.cpp:54
-msgid "&Section"
-msgstr "&Oddíl"
-
-#: goto.cpp:70
-msgid "&Page"
-msgstr "&Strana"
-
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
-#: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
-#, c-format
-msgid "of %d"
-msgstr "z %d"
-
-#: info.cpp:45
-msgid "File name :"
-msgstr "Jméno souboru :"
-
-#: info.cpp:53
-msgid "Document title :"
-msgstr "Název dokumentu :"
-
-#: info.cpp:61
-msgid "Publication date :"
-msgstr "Datum publikování :"
 
 #: interpreter.cpp:42
 msgid "General"
@@ -123,543 +126,9 @@ msgstr "&Pixmapa"
 msgid "&Backing store"
 msgstr "&Zálo¾ní pamìt"
 
-#: interpreter.cpp:244 kkeydialog.cpp:233
-msgid "&Defaults"
-msgstr "Impli&citní"
-
 #: interpreter.cpp:314
 msgid "gs"
 msgstr "gs"
-
-#: kaccel.cpp:169
-msgid "CTRL+O"
-msgstr "CTRL+O"
-
-#: kaccel.cpp:173
-msgid "CTRL+N"
-msgstr "CTRL+N"
-
-#: kaccel.cpp:177
-msgid "CTRL+W"
-msgstr "CTRL+W"
-
-#: kaccel.cpp:181
-msgid "CTRL+S"
-msgstr "CTRL+S"
-
-#: kaccel.cpp:185
-msgid "CTRL+P"
-msgstr "CTRL+P"
-
-#: kaccel.cpp:189
-msgid "CTRL+Q"
-msgstr "CTRL+Q"
-
-#: kaccel.cpp:193
-msgid "CTRL+X"
-msgstr "CTRL+X"
-
-#: kaccel.cpp:197
-msgid "CTRL+C"
-msgstr "CTRL+C"
-
-#: kaccel.cpp:201
-msgid "CTRL+V"
-msgstr "CTRL+V"
-
-#: kaccel.cpp:205
-msgid "CTRL+Z"
-msgstr "CTRL+Z"
-
-#: kaccel.cpp:209
-msgid "CTRL+F"
-msgstr "CTRL+F"
-
-#: kaccel.cpp:213
-msgid "CTRL+R"
-msgstr "CTRL+R"
-
-#: kaccel.cpp:216 kaccel.cpp:443
-msgid "Insert"
-msgstr "Insert"
-
-#: kaccel.cpp:217
-msgid "CTRL+Insert"
-msgstr "CTRL+Insert"
-
-#: kaccel.cpp:221
-msgid "CTRL+Home"
-msgstr "CTRL+Home"
-
-#: kaccel.cpp:224 kaccel.cpp:449
-msgid "End"
-msgstr "End"
-
-#: kaccel.cpp:225
-msgid "CTRL+End"
-msgstr "CTRL+End"
-
-#: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
-msgid "Prior"
-msgstr "Prior"
-
-#: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
-msgid "Next"
-msgstr "Next"
-
-#: kaccel.cpp:237
-msgid "F1"
-msgstr "F1"
-
-#: kghostview.cpp:199
-msgid "Document information"
-msgstr "Informace o dokumentu"
-
-#: kghostview.cpp:213
-msgid "Page Setup"
-msgstr "Nastavení stránky"
-
-#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
-msgid "View Control"
-msgstr "Nastavení zobrazení"
-
-#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
-msgid "Go To Page"
-msgstr "Jdi na stranu"
-
-#: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
-msgid "Zoom In"
-msgstr "Zvìt¹it"
-
-#: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
-msgid "Zoom Out"
-msgstr "Zmen¹it"
-
-#: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
-msgid "Next Page"
-msgstr "Následující strana"
-
-#: kghostview.cpp:358 kghostview.cpp:379 kghostview.cpp:447
-msgid "Prev Page"
-msgstr "Pøedcházející strana"
-
-#: kghostview.cpp:359 kghostview.cpp:380
-msgid "Scroll Up"
-msgstr "Posunout nahoru"
-
-#: kghostview.cpp:360 kghostview.cpp:381
-msgid "Scroll Down"
-msgstr "Posunout dolù"
-
-#: kghostview.cpp:361 kghostview.cpp:382
-msgid "Scroll Left"
-msgstr "Posunout vlevo"
-
-#: kghostview.cpp:362 kghostview.cpp:383
-msgid "Scroll Right"
-msgstr "Posunout vpravo"
-
-#: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
-msgid "Redisplay"
-msgstr "Aktualizovat"
-
-#: kghostview.cpp:406 kghostview.cpp:408
-msgid "Not known"
-msgstr "Neznámé"
-
-#: kghostview.cpp:419
-msgid "Configure interpreter"
-msgstr "Nastav interpretr"
-
-#: kghostview.cpp:494
-msgid "&Open ..."
-msgstr "&Otevøít ..."
-
-#: kghostview.cpp:495
-msgid "Open &recent"
-msgstr "Otevøít ne&dávný"
-
-#: kghostview.cpp:503
-msgid "Page Set&up ..."
-msgstr "Nastavit stránk&u ..."
-
-#: kghostview.cpp:505
-msgid "&Print ..."
-msgstr "&Tisknout ..."
-
-#: kghostview.cpp:513
-msgid "Zoom &in"
-msgstr "Z&vìt¹it"
-
-#: kghostview.cpp:515
-msgid "Zoom &out"
-msgstr "Z&men¹it"
-
-#: kghostview.cpp:517
-msgid "&Zoom ..."
-msgstr "&Zvìt¹ení ..."
-
-#: kghostview.cpp:522
-msgid "&Info ..."
-msgstr "&Info ..."
-
-#: kghostview.cpp:527
-msgid "&Previous Page"
-msgstr "&Pøedchazející stranu"
-
-#: kghostview.cpp:529
-msgid "&Next page"
-msgstr "&Následující stranu"
-
-#: kghostview.cpp:531
-msgid "&Go to page ..."
-msgstr "&Jdi na stranu ..."
-
-#: kghostview.cpp:534
-msgid "Go to &start"
-msgstr "Jdi na &zaèátek"
-
-#: kghostview.cpp:536
-msgid "Go to &end"
-msgstr "Jdi na &konec"
-
-#: kghostview.cpp:538
-msgid "&Read down"
-msgstr "Posuò &dále"
-
-#: kghostview.cpp:543
-msgid "Mark &current page"
-msgstr "Oznaèit &tuto stranu"
-
-#: kghostview.cpp:546
-msgid "Mark &all pages"
-msgstr "Oznaèit &v¹echny strany"
-
-#: kghostview.cpp:548
-msgid "Mark &even pages"
-msgstr "Oznaèit &sudé strany"
-
-#: kghostview.cpp:550
-msgid "Mark &odd pages"
-msgstr "Oznaèit &liché strany"
-
-#: kghostview.cpp:553
-msgid "&Toggle page marks"
-msgstr "Prohodit &znaèky"
-
-#: kghostview.cpp:556
-msgid "&Remove page marks"
-msgstr "&Odstranit znaèky"
-
-#: kghostview.cpp:567
-msgid "Show &tool bar"
-msgstr "Zobrazovat nás&trojovou li¹tu"
-
-#: kghostview.cpp:568
-msgid "Show st&atus bar"
-msgstr "Zobrazovat &statusbar"
-
-#: kghostview.cpp:569
-msgid "Show &page list"
-msgstr "Zobrazovat seznam &stránek"
-
-#: kghostview.cpp:571
-msgid "Configure &interpreter ..."
-msgstr "&Nastavit interpretr ..."
-
-#: kghostview.cpp:572
-msgid "Configure &key bindings ..."
-msgstr "Nastav &klávesové akcelerátory ..."
-
-#: kghostview.cpp:574
-msgid "&Save options"
-msgstr "&Ulo¾it nastavení"
-
-#: kghostview.cpp:581
-msgid "&About this application"
-msgstr "&Informace o aplikaci"
-
-#: kghostview.cpp:583
-msgid "&Help for this application"
-msgstr "&Nápovìda k této aplikaci"
-
-#: kghostview.cpp:585
-msgid "&Copyright"
-msgstr "&Autorská práva"
-
-#: kghostview.cpp:592
-msgid "&Go"
-msgstr "&Jdi na"
-
-#: kghostview.cpp:593
-msgid "&Pagemarks"
-msgstr "&Znaèky na stranách"
-
-#: kghostview.cpp:661
-msgid "New window ..."
-msgstr "Nové okno ..."
-
-#: kghostview.cpp:664
-msgid "Open file ..."
-msgstr "Otevøít soubor ..."
-
-#: kghostview.cpp:672
-msgid "Print document ..."
-msgstr "Tisknout dokument ..."
-
-#: kghostview.cpp:677
-msgid "Zoom in"
-msgstr "Zvìt¹it"
-
-#: kghostview.cpp:680
-msgid "Zoom out"
-msgstr "Zmen¹it"
-
-#: kghostview.cpp:685
-msgid "Go back"
-msgstr "Jdi zpìt"
-
-#: kghostview.cpp:688
-msgid "Go forward"
-msgstr "Jdi dopøedu"
-
-#: kghostview.cpp:691
-msgid "Go to page ..."
-msgstr "Jdi na stranu ..."
-
-#: kghostview.cpp:696
-msgid "Go to start"
-msgstr "Jdi na zaèátek"
-
-#: kghostview.cpp:699
-msgid "Go to end"
-msgstr "Jdi na konec"
-
-#: kghostview.cpp:702
-msgid "Read down the page"
-msgstr "Posuò se dále na stranì"
-
-#: kghostview.cpp:707
-msgid "Toggle this page mark"
-msgstr "Prohodit znaèku u této strany"
-
-#: kghostview.cpp:729
-msgid "Sc.100 of 100  P.100 of 100"
-msgstr "Odd.100 z 100 S.100 z 100"
-
-#: kghostview.cpp:730
-#, c-format
-msgid "100 %"
-msgstr "100%"
-
-#: kghostview.cpp:731
-msgid "Upside Down"
-msgstr "Vzhùru nohama"
-
-#: kghostview.cpp:756
-msgid "Malformed URL."
-msgstr "Chybný formát URL."
-
-#: kghostview.cpp:768
-msgid ""
-"Already waiting\n"
-"for an internet job to finish.\n"
-"Please wait until has finished.\n"
-"Alternatively stop the running one."
-msgstr ""
-"Ji¾ èekám na dokonèení\n"
-"práce s internetem.\n"
-"Prosím èekej na její ukonèení\n"
-"nebo ji zastavte."
-
-#: kghostview.cpp:777
-msgid "Could not start or find KFM."
-msgstr "Nemohu spustit nebo nalézt KFM!"
-
-#: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
-msgid "Portrait"
-msgstr "Na vý¹ku"
-
-#: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
-msgid "Landscape"
-msgstr "Na ¹íøku"
-
-#: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
-msgid "Seascape"
-msgstr "Na ¹íøku(zprava)"
-
-#: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
-msgid "Upside down"
-msgstr "Vzhùru nohama"
-
-#: kghostview.cpp:1262
-msgid "Go to ..."
-msgstr "Jdi na stranu ..."
-
-#: kghostview.cpp:1337
-msgid "Zoom"
-msgstr "Zvìt¹ení"
-
-#: kghostview.cpp:1523
-msgid "Version 0.6"
-msgstr "Verze 0.6"
-
-#: kghostview.cpp:1524
-msgid "Sorry, not ready yet"
-msgstr "Omlouvám se, je¹t¹ není hotové."
-
-#: kghostview.cpp:1531
-msgid "About kghostview"
-msgstr "Informace o kghostview"
-
-#: kghostview.cpp:1532
-msgid ""
-"Version :\t0.6 alpha\n"
-"Author : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
-msgstr ""
-"Verze : \t0.6 alpha\n"
-"Autor : Mark Donohoe\n"
-"Mail : donohoe@kde.org"
-
-#: kghostview.cpp:1584 kghostview.cpp:1700
-msgid "Error printing"
-msgstr "Chyba tisku"
-
-#: kghostview.cpp:1594
-msgid ""
-"You chose to print all pages to a file.\n"
-"This would produce a document identical to\n"
-"that currently loaded into the viewer.\n"
-"There is no need to print all pages into a new file."
-msgstr ""
-"Vybral(a) jste tisk v¹ech stránek do souboru.\n"
-"Tato akce by vytvoøila dokument identický\n"
-"s tím, který je nahrán v prohlí¾eèi.\n"
-"Není nutné tisknout v¹echny strany do nového souboru."
-
-#: kghostview.cpp:1607
-msgid ""
-"No file name was given so\n"
-"nothing could be printed to a file.\n"
-msgstr ""
-"Nebylo zadáno jméno souboru a tudí¾\n"
-"není mo¾né tisknout do souboru.\n"
-
-#: kghostview.cpp:1665
-#, c-format
-msgid "Print failure : %s"
-msgstr "Neuspì¹ný tisk: %s"
-
-#: kghostview.cpp:1701
-msgid ""
-"Printing failed because the list of\n"
-"pages to be printed was empty.\n"
-msgstr ""
-"Tisk byl neúspì¹ný, proto¾e seznam\n"
-"tisknutých stran byl prázdný.\n"
-
-#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
-#: kghostview.cpp:2534
-msgid "of 1    "
-msgstr "z 1     "
-
-#: kghostview.cpp:2236 kghostview.cpp:2248 kghostview.cpp:2536
-#, c-format
-msgid "of %d    "
-msgstr "z %d     "
-
-#: kghostview.cpp:2238 kghostview.cpp:2250 kghostview.cpp:2538
-#: kghostview.cpp:2545
-#, c-format
-msgid "of %d  "
-msgstr "z %d   "
-
-#: kghostview.cpp:2510
-msgid "Sc.1 "
-msgstr "Odd.1 "
-
-#: kghostview.cpp:2513
-msgid "P.1 "
-msgstr "S.1 "
-
-#: kghostview.cpp:2515 kghostview.cpp:2528
-#, c-format
-msgid "P.%d "
-msgstr "S.%d "
-
-#: kghostview.cpp:2530
-#, c-format
-msgid "Sc.%d "
-msgstr "Odd.%d "
-
-#: kkeydialog.cpp:312
-msgid "Current key"
-msgstr "Aktuální klávesa"
-
-#: kkeydialog.cpp:323
-msgid "&Action"
-msgstr "&Akce"
-
-#: kkeydialog.cpp:382
-msgid "&No key"
-msgstr "®ád&ná klávesa"
-
-#: kkeydialog.cpp:390
-msgid "&Default key"
-msgstr "Impli&citní klávesa"
-
-#: kkeydialog.cpp:398
-msgid "&Custom key"
-msgstr "&Vlastní kláveka"
-
-#: main.cpp:25
-msgid "Usage: "
-msgstr "Pou¾ití: "
-
-#: main.cpp:27
-msgid ""
-" [filename] [siwtches]\n"
-"\n"
-msgstr ""
-"[jméno souboru] <pøepínaèe>\n"
-"\n"
-
-#: main.cpp:28
-msgid ""
-"See KDE and Qt documentation for\n"
-"command line options.\n"
-msgstr ""
-"Nahlédni do dokumentate ke KDE a Qt\n"
-" na parametry pøíkazové øádky\n"
-
-#: main.cpp:30
-msgid "Error on command line"
-msgstr "Chyba na pøíkazové øádce"
-
-#: marklist.cpp:38
-msgid "Mark current page"
-msgstr "Oznaèit tuto stranu"
-
-#: marklist.cpp:39
-msgid "Mark all pages"
-msgstr "Oznaèit v¹echny strany"
-
-#: marklist.cpp:40
-msgid "Mark even pages"
-msgstr "Oznaèit sudé strany"
-
-#: marklist.cpp:41
-msgid "Mark odd pages"
-msgstr "Oznaèit liché strany"
-
-#: marklist.cpp:42
-msgid "Toggle page marks"
-msgstr "Prohodit znaèky"
-
-#: marklist.cpp:43
-msgid "Remove page marks"
-msgstr "Odstranit znaèky"
 
 #: messages.cpp:29
 msgid "Ghostscript messages"
@@ -672,6 +141,18 @@ msgstr "&Vyèistit"
 #: messages.cpp:59
 msgid "&Dismiss"
 msgstr "Zamí&tnout"
+
+#: info.cpp:45
+msgid "File name :"
+msgstr "Jméno souboru :"
+
+#: info.cpp:53
+msgid "Document title :"
+msgstr "Název dokumentu :"
+
+#: info.cpp:61
+msgid "Publication date :"
+msgstr "Datum publikování :"
 
 #: print.cpp:35
 msgid "Printer setup"
@@ -745,6 +226,36 @@ msgstr ""
 "Zkontroluj status bar k zji¹tìní\n"
 "této informace.\n"
 
+#: goto.cpp:54
+msgid "&Section"
+msgstr "&Oddíl"
+
+#: goto.cpp:70
+msgid "&Page"
+msgstr "&Strana"
+
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2225
+#: kghostview.cpp:2237 kghostview.cpp:2242 kghostview.cpp:2525
+#, c-format
+msgid "of %d"
+msgstr "z %d"
+
+#: kghostview.cpp:1221 kghostview.cpp:2316 viewcontrol.cpp:64
+msgid "Portrait"
+msgstr "Na vý¹ku"
+
+#: kghostview.cpp:1223 kghostview.cpp:2322 viewcontrol.cpp:65
+msgid "Landscape"
+msgstr "Na ¹íøku"
+
+#: kghostview.cpp:1225 kghostview.cpp:2320 viewcontrol.cpp:66
+msgid "Seascape"
+msgstr "Na ¹íøku(zprava)"
+
+#: kghostview.cpp:1227 kghostview.cpp:2318 viewcontrol.cpp:67
+msgid "Upside down"
+msgstr "Vzhùru nohama"
+
 #: viewcontrol.cpp:75
 msgid "magnification"
 msgstr "zvìt¹ení"
@@ -761,6 +272,487 @@ msgstr "&Orientace"
 msgid "&Apply"
 msgstr "&Aplikovat"
 
+#: main.cpp:25
+msgid "Usage: "
+msgstr "Pou¾ití: "
+
+#: main.cpp:27
+msgid ""
+" [filename] [siwtches]\n"
+"\n"
+msgstr ""
+"[jméno souboru] <pøepínaèe>\n"
+"\n"
+
+#: main.cpp:28
+msgid ""
+"See KDE and Qt documentation for\n"
+"command line options.\n"
+msgstr ""
+"Nahlédni do dokumentate ke KDE a Qt\n"
+" na parametry pøíkazové øádky\n"
+
+#: main.cpp:30
+msgid "Error on command line"
+msgstr "Chyba na pøíkazové øádce"
+
+#: kghostview.cpp:206
+msgid "Document information"
+msgstr "Informace o dokumentu"
+
+#: kghostview.cpp:220
+msgid "Page Setup"
+msgstr "Nastavení stránky"
+
+#: kghostview.cpp:360 kghostview.cpp:449
+msgid "View Control"
+msgstr "Nastavení zobrazení"
+
+#: kghostview.cpp:361 kghostview.cpp:454
+msgid "Go To Page"
+msgstr "Jdi na stranu"
+
+#: kghostview.cpp:362 kghostview.cpp:447
+msgid "Zoom In"
+msgstr "Zvìt¹it"
+
+#: kghostview.cpp:363 kghostview.cpp:448
+msgid "Zoom Out"
+msgstr "Zmen¹it"
+
+#: kghostview.cpp:364 kghostview.cpp:452
+msgid "Next Page"
+msgstr "Následující strana"
+
+#: kghostview.cpp:365 kghostview.cpp:453
+msgid "Prev Page"
+msgstr "Pøedcházející strana"
+
+#: kghostview.cpp:366
+msgid "Scroll Up"
+msgstr "Posunout nahoru"
+
+#: kghostview.cpp:367
+msgid "Scroll Down"
+msgstr "Posunout dolù"
+
+#: kghostview.cpp:368
+msgid "Scroll Left"
+msgstr "Posunout vlevo"
+
+#: kghostview.cpp:369
+msgid "Scroll Right"
+msgstr "Posunout vpravo"
+
+#: kghostview.cpp:370 kghostview.cpp:450
+msgid "Redisplay"
+msgstr "Aktualizovat"
+
+#: kghostview.cpp:413 kghostview.cpp:415
+msgid "Not known"
+msgstr "Neznámé"
+
+#: kghostview.cpp:426
+msgid "Configure interpreter"
+msgstr "Nastav interpretr"
+
+#: kghostview.cpp:500
+msgid "&Open ..."
+msgstr "&Otevøít ..."
+
+#: kghostview.cpp:501
+msgid "Open &recent"
+msgstr "Otevøít ne&dávný"
+
+#: kghostview.cpp:509
+msgid "Page Set&up ..."
+msgstr "Nastavit stránk&u ..."
+
+#: kghostview.cpp:511
+msgid "&Print ..."
+msgstr "&Tisknout ..."
+
+#: kghostview.cpp:519
+msgid "Zoom &in"
+msgstr "Z&vìt¹it"
+
+#: kghostview.cpp:521
+msgid "Zoom &out"
+msgstr "Z&men¹it"
+
+#: kghostview.cpp:523
+msgid "&Zoom ..."
+msgstr "&Zvìt¹ení ..."
+
+#: kghostview.cpp:528
+msgid "&Info ..."
+msgstr "&Info ..."
+
+#: kghostview.cpp:533
+msgid "&Previous Page"
+msgstr "&Pøedchazející stranu"
+
+#: kghostview.cpp:535
+msgid "&Next page"
+msgstr "&Následující stranu"
+
+#: kghostview.cpp:537
+msgid "&Go to page ..."
+msgstr "&Jdi na stranu ..."
+
+#: kghostview.cpp:540
+msgid "Go to &start"
+msgstr "Jdi na &zaèátek"
+
+#: kghostview.cpp:542
+msgid "Go to &end"
+msgstr "Jdi na &konec"
+
+#: kghostview.cpp:544
+msgid "&Read down"
+msgstr "Posuò &dále"
+
+#: kghostview.cpp:549
+msgid "Mark &current page"
+msgstr "Oznaèit &tuto stranu"
+
+#: kghostview.cpp:552
+msgid "Mark &all pages"
+msgstr "Oznaèit &v¹echny strany"
+
+#: kghostview.cpp:554
+msgid "Mark &even pages"
+msgstr "Oznaèit &sudé strany"
+
+#: kghostview.cpp:556
+msgid "Mark &odd pages"
+msgstr "Oznaèit &liché strany"
+
+#: kghostview.cpp:559
+msgid "&Toggle page marks"
+msgstr "Prohodit &znaèky"
+
+#: kghostview.cpp:562
+msgid "&Remove page marks"
+msgstr "&Odstranit znaèky"
+
+#: kghostview.cpp:573
+msgid "Show &tool bar"
+msgstr "Zobrazovat nás&trojovou li¹tu"
+
+#: kghostview.cpp:574
+msgid "Show st&atus bar"
+msgstr "Zobrazovat &statusbar"
+
+#: kghostview.cpp:575
+msgid "Show &page list"
+msgstr "Zobrazovat seznam &stránek"
+
+#: kghostview.cpp:577
+msgid "Configure &interpreter ..."
+msgstr "&Nastavit interpretr ..."
+
+#: kghostview.cpp:578
+msgid "Configure &key bindings ..."
+msgstr "Nastav &klávesové akcelerátory ..."
+
+#: kghostview.cpp:580
+msgid "&Save options"
+msgstr "&Ulo¾it nastavení"
+
+#: kghostview.cpp:587
+msgid "&About this application"
+msgstr "&Informace o aplikaci"
+
+#: kghostview.cpp:589
+msgid "&Help for this application"
+msgstr "&Nápovìda k této aplikaci"
+
+#: kghostview.cpp:591
+msgid "&Copyright"
+msgstr "&Autorská práva"
+
+#: kghostview.cpp:598
+msgid "&Go"
+msgstr "&Jdi na"
+
+#: kghostview.cpp:599
+msgid "&Pagemarks"
+msgstr "&Znaèky na stranách"
+
+#: kghostview.cpp:608
+msgid ""
+" - the PostScript document viewer for\n"
+"the K Desktop Environment.\n"
+"\n"
+"Written by Mark Donohoe <donohoe@kde.org>, based on original\n"
+"work by Tim Theisen.\n"
+"\n"
+"Incorporates code from Johanes Plass' gv. This adds compressed and\n"
+"PDF file support.\n"
+"\n"
+"See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
+msgstr ""
+
+#: kghostview.cpp:665
+msgid "New window ..."
+msgstr "Nové okno ..."
+
+#: kghostview.cpp:668
+msgid "Open file ..."
+msgstr "Otevøít soubor ..."
+
+#: kghostview.cpp:676
+msgid "Print document ..."
+msgstr "Tisknout dokument ..."
+
+#: kghostview.cpp:681
+msgid "Zoom in"
+msgstr "Zvìt¹it"
+
+#: kghostview.cpp:684
+msgid "Zoom out"
+msgstr "Zmen¹it"
+
+#: kghostview.cpp:689
+msgid "Go back"
+msgstr "Jdi zpìt"
+
+#: kghostview.cpp:692
+msgid "Go forward"
+msgstr "Jdi dopøedu"
+
+#: kghostview.cpp:695
+msgid "Go to page ..."
+msgstr "Jdi na stranu ..."
+
+#: kghostview.cpp:700
+msgid "Go to start"
+msgstr "Jdi na zaèátek"
+
+#: kghostview.cpp:703
+msgid "Go to end"
+msgstr "Jdi na konec"
+
+#: kghostview.cpp:706
+msgid "Read down the page"
+msgstr "Posuò se dále na stranì"
+
+#: kghostview.cpp:711
+msgid "Toggle this page mark"
+msgstr "Prohodit znaèku u této strany"
+
+#: kghostview.cpp:733
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "Odd.100 z 100 S.100 z 100"
+
+#: kghostview.cpp:734
+#, c-format
+msgid "100 %"
+msgstr "100%"
+
+#: kghostview.cpp:735
+msgid "Upside Down"
+msgstr "Vzhùru nohama"
+
+#: kghostview.cpp:760
+msgid "Malformed URL."
+msgstr "Chybný formát URL."
+
+#: kghostview.cpp:772
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+"Ji¾ èekám na dokonèení\n"
+"práce s internetem.\n"
+"Prosím èekej na její ukonèení\n"
+"nebo ji zastavte."
+
+#: kghostview.cpp:781
+msgid "Could not start or find KFM."
+msgstr "Nemohu spustit nebo nalézt KFM!"
+
+#: kghostview.cpp:1266
+msgid "Go to ..."
+msgstr "Jdi na stranu ..."
+
+#: kghostview.cpp:1508
+msgid "Version 0.6"
+msgstr "Verze 0.6"
+
+#: kghostview.cpp:1509
+msgid "Sorry, not ready yet"
+msgstr "Omlouvám se, je¹t¹ není hotové."
+
+#: kghostview.cpp:1516
+msgid "About kghostview"
+msgstr "Informace o kghostview"
+
+#: kghostview.cpp:1517
+msgid ""
+"Version :\t0.6 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+"Verze : \t0.6 alpha\n"
+"Autor : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+
+#: kghostview.cpp:1569 kghostview.cpp:1685
+msgid "Error printing"
+msgstr "Chyba tisku"
+
+#: kghostview.cpp:1579
+msgid ""
+"You chose to print all pages to a file.\n"
+"This would produce a document identical to\n"
+"that currently loaded into the viewer.\n"
+"There is no need to print all pages into a new file."
+msgstr ""
+"Vybral(a) jste tisk v¹ech stránek do souboru.\n"
+"Tato akce by vytvoøila dokument identický\n"
+"s tím, který je nahrán v prohlí¾eèi.\n"
+"Není nutné tisknout v¹echny strany do nového souboru."
+
+#: kghostview.cpp:1592
+msgid ""
+"No file name was given so\n"
+"nothing could be printed to a file.\n"
+msgstr ""
+"Nebylo zadáno jméno souboru a tudí¾\n"
+"není mo¾né tisknout do souboru.\n"
+
+#: kghostview.cpp:1650
+#, c-format
+msgid "Print failure : %s"
+msgstr "Neuspì¹ný tisk: %s"
+
+#: kghostview.cpp:1686
+msgid ""
+"Printing failed because the list of\n"
+"pages to be printed was empty.\n"
+msgstr ""
+"Tisk byl neúspì¹ný, proto¾e seznam\n"
+"tisknutých stran byl prázdný.\n"
+
+#: kghostview.cpp:2219 kghostview.cpp:2231 kghostview.cpp:2496
+#: kghostview.cpp:2519
+msgid "of 1    "
+msgstr "z 1     "
+
+#: kghostview.cpp:2221 kghostview.cpp:2233 kghostview.cpp:2521
+#, c-format
+msgid "of %d    "
+msgstr "z %d     "
+
+#: kghostview.cpp:2223 kghostview.cpp:2235 kghostview.cpp:2523
+#: kghostview.cpp:2530
+#, c-format
+msgid "of %d  "
+msgstr "z %d   "
+
+#: kghostview.cpp:2495
+msgid "Sc.1 "
+msgstr "Odd.1 "
+
+#: kghostview.cpp:2498
+msgid "P.1 "
+msgstr "S.1 "
+
+#: kghostview.cpp:2500 kghostview.cpp:2513
+#, c-format
+msgid "P.%d "
+msgstr "S.%d "
+
+#: kghostview.cpp:2515
+#, c-format
+msgid "Sc.%d "
+msgstr "Odd.%d "
+
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Zvìt¹ení"
+
+#~ msgid "&Defaults"
+#~ msgstr "Impli&citní"
+
+#~ msgid "CTRL+O"
+#~ msgstr "CTRL+O"
+
+#~ msgid "CTRL+N"
+#~ msgstr "CTRL+N"
+
+#~ msgid "CTRL+W"
+#~ msgstr "CTRL+W"
+
+#~ msgid "CTRL+S"
+#~ msgstr "CTRL+S"
+
+#~ msgid "CTRL+P"
+#~ msgstr "CTRL+P"
+
+#~ msgid "CTRL+Q"
+#~ msgstr "CTRL+Q"
+
+#~ msgid "CTRL+X"
+#~ msgstr "CTRL+X"
+
+#~ msgid "CTRL+C"
+#~ msgstr "CTRL+C"
+
+#~ msgid "CTRL+V"
+#~ msgstr "CTRL+V"
+
+#~ msgid "CTRL+Z"
+#~ msgstr "CTRL+Z"
+
+#~ msgid "CTRL+F"
+#~ msgstr "CTRL+F"
+
+#~ msgid "CTRL+R"
+#~ msgstr "CTRL+R"
+
+#~ msgid "Insert"
+#~ msgstr "Insert"
+
+#~ msgid "CTRL+Insert"
+#~ msgstr "CTRL+Insert"
+
+#~ msgid "CTRL+Home"
+#~ msgstr "CTRL+Home"
+
+#~ msgid "End"
+#~ msgstr "End"
+
+#~ msgid "CTRL+End"
+#~ msgstr "CTRL+End"
+
+#~ msgid "Prior"
+#~ msgstr "Prior"
+
+#~ msgid "Next"
+#~ msgstr "Next"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Zoom"
+#~ msgstr "Zvìt¹ení"
+
+#~ msgid "Current key"
+#~ msgstr "Aktuální klávesa"
+
+#~ msgid "&Action"
+#~ msgstr "&Akce"
+
+#~ msgid "&No key"
+#~ msgstr "®ád&ná klávesa"
+
+#~ msgid "&Default key"
+#~ msgstr "Impli&citní klávesa"
+
+#~ msgid "&Custom key"
+#~ msgstr "&Vlastní kláveka"

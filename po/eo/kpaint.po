@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint 1.0\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-07-25 11:00+0100\n"
 "Last-Translator: Wolfram Diestel <diestel@rzaix340.rz-uni-leipzig.de>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -30,49 +30,227 @@ msgstr "Uzo: "
 msgid " [url | filename]\n"
 msgstr " [url | dosiernomo]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "Regionelekto"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "sentitola.gif"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Tabulgrandeco"
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "Nesekurigitaj þanøoj"
 
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Larøeco:"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
+"Vi þanøis la bildon. Tiujn þanøojn vi perdos, we vi fermos la fenestron nun."
 
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Alteco:"
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Nova tabulo"
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Cirklo"
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Malfermu dosieron"
 
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Kolorbitoj:"
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Sekurigu dosieron"
 
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (du koloroj)"
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Grandigu"
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr "8 (256 koloroj)"
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Malgrandigu"
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr "24 (multaj koloroj)"
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Malfermu bildon...."
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Nova bildo..."
+
+#: kpaint.cpp:317
+msgid "Save Image"
+msgstr "Sekurigu bildon"
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Sekurigu bildon kiel..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Bildspeco..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Malfermu el URL..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Sekurigu kiel URL..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Nova fenestro"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Fermu fenestron"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "Finu"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Kopiu regionon"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Eltondu regionon"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Enmetu regionon"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Enmetu kiel bildo"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Masku..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Informoj..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
+msgstr "Þangu grandecon..."
+
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Redaktu paletron..."
+
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Þanøu kolornombron"
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Ilkonfiguro..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Krajono"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Linio"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rektangulo"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Elipso"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Dosierspeco:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Cirklo"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Þprucilo"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "Regionelekto"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr "Rondaj anguloj"
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr "Montru illistelon"
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr "Montru komandlistelon"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "Montru statolistelon"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "Sekurigu opciojn"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr "KPaint"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+"\n"
+"\n"
+"(c) "
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Bildo"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Ilo"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Ne eblis malfermi dosieron"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Eraro: Ne eblis malfermi dosieron\n"
+"KPaint ne povis malfermi la indikitan dosieron."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Nekonata dosierspeco"
+
+#: kpaint.cpp:546
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Eraro: Nekonata dosierspeco\n"
+"KPaint ne komprenas la specon de la indikita dosiero\n"
+"aý la dosiero estas difektita."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "Malfermu situon:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Sekurigu al situo:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Ilkonfiguro"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -90,223 +268,29 @@ msgstr "Bildlarøeco"
 msgid "Image Height:"
 msgstr "Bildalteco"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "sentitola.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "Nesekurigitaj þanøoj"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
 msgstr ""
-"Vi þanøis la bildon. Tiujn þanøojn vi perdos, we vi fermos la fenestron nun."
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Nova tabulo"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Malfermu dosieron"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Sekurigu dosieron"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Grandigu"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Malgrandigu"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Malfermu bildon...."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Nova bildo..."
-
-#: kpaint.cpp:314
-msgid "Save Image"
-msgstr "Sekurigu bildon"
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Sekurigu bildon kiel..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Bildspeco..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "Malfermu el URL..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Sekurigu kiel URL..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Nova fenestro"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Fermu fenestron"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "Finu"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Kopiu regionon"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Eltondu regionon"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Enmetu regionon"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Enmetu kiel bildo"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Masku..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Informoj..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr "Þangu grandecon..."
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Redaktu paletron..."
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Þanøu kolornombron"
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Ilkonfiguro..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Krajono"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Linio"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rektangulo"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Þprucilo"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "Regionelekto"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr "Rondaj anguloj"
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr "Montru illistelon"
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr "Montru komandlistelon"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "Montru statolistelon"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "Sekurigu opciojn"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr "KPaint"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Bildo"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Ilo"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Ne eblis malfermi dosieron"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Eraro: Ne eblis malfermi dosieron\n"
-"KPaint ne povis malfermi la indikitan dosieron."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: Nekonata dosierspeco"
-
-#: kpaint.cpp:543
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Eraro: Nekonata dosierspeco\n"
-"KPaint ne komprenas la specon de la indikita dosiero\n"
-"aý la dosiero estas difektita."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "Malfermu situon:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Sekurigu al situo:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Ilkonfiguro"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Redaktu kolorojn"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Dosierspeco:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Tabulgrandeco"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Larøeco:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Alteco:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -399,6 +383,26 @@ msgstr "Ligstilo:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Linikoloro..."
+
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "Regionelekto"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Kolorbitoj:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr "1 (du koloroj)"
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr "8 (256 koloroj)"
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr "24 (multaj koloroj)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"

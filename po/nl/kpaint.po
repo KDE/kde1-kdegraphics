@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,52 +31,230 @@ msgstr "Gebruik: "
 msgid " [url | filename]\n"
 msgstr "[url | bestandsnaam]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "naamloos.gif"
+
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
 msgstr ""
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Canvas grootte"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
 
-#: canvassize.cpp:25
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Nieuw canvas"
+
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Openen"
+
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Opslaan"
+
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Inzoomen"
+
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Uitzoomen"
+
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Afbeelding openen..."
+
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Nieuwe afbeelding..."
+
+#: kpaint.cpp:317
 #, fuzzy
-msgid "Width:"
-msgstr "Breedte"
+msgid "Save Image"
+msgstr "Afbeelding opslaan..."
 
-#: canvassize.cpp:26
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Afbeelding opslaan als..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Afbeeldingsformaat..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Van een URL openen..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Naar een URL opslaan..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Nieuw venster"
+
+# Dutch translation of the kpaint messages.
+# Copyright (C) 1997 Jeroen van der Most <jvdmost@wi.leidenuniv.nl>
+#
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Venster sluiten"
+
+#: kpaint.cpp:327
 #, fuzzy
-msgid "Height:"
-msgstr "Hoogte"
+msgid "Exit"
+msgstr "Be&werken"
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Cirkel"
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Regio kopiëren"
 
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "Afbeeldingbreedte:"
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Regio knippen"
 
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Regio plakken"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Als afbeelding plakken"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Masker..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Informatie..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
 msgstr ""
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr ""
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Palet wijzigen..."
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr ""
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Kleurdiepte wijzigen..."
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Gereedschapinstellingen..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Pen"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Lijn"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rechthoek"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Ellips"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Bestandsformaat:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Cirkel"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Spuitbus"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr ""
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr ""
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr ""
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr ""
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr ""
+
+#: kpaint.cpp:363
+#, fuzzy
+msgid "Save Options"
+msgstr "Instellingen..."
+
+#: kpaint.cpp:372
+#, fuzzy
+msgid "KPaint"
+msgstr "Info"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Afbeelding"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Gereedschap"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Kon bestand niet openen"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Fout: Kon bestand niet openen\n"
+"KPaint kon het gespecificeerde bestand niet openen."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Onbekend formaat"
+
+#: kpaint.cpp:546
+#, fuzzy
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Fehler: Onbekend formaat\n"
+"KPaint begrijpt het formaat van dit bestand niet of het bestand is beschadigd"
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "URL openen:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Naar URL opslaan"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Gereedschapinstellingen"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -94,226 +272,31 @@ msgstr "Afbeeldingbreedte:"
 msgid "Image Height:"
 msgstr "Afbeeldinghoogte:"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "naamloos.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr ""
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Nieuw canvas"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Openen"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Opslaan"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Inzoomen"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Uitzoomen"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Afbeelding openen..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Nieuwe afbeelding..."
-
-#: kpaint.cpp:314
-#, fuzzy
-msgid "Save Image"
-msgstr "Afbeelding opslaan..."
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Afbeelding opslaan als..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Afbeeldingsformaat..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "Van een URL openen..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Naar een URL opslaan..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Nieuw venster"
-
-# Dutch translation of the kpaint messages.
-# Copyright (C) 1997 Jeroen van der Most <jvdmost@wi.leidenuniv.nl>
-#
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Venster sluiten"
-
-#: kpaint.cpp:324
-#, fuzzy
-msgid "Exit"
-msgstr "Be&werken"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Regio kopiëren"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Regio knippen"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Regio plakken"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Als afbeelding plakken"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Masker..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Informatie..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr ""
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Palet wijzigen..."
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Kleurdiepte wijzigen..."
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Gereedschapinstellingen..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Pen"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Lijn"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rechthoek"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Spuitbus"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr ""
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr ""
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr ""
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr ""
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr ""
-
-#: kpaint.cpp:360
-#, fuzzy
-msgid "Save Options"
-msgstr "Instellingen..."
-
-#: kpaint.cpp:369
-#, fuzzy
-msgid "KPaint"
-msgstr "Info"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Afbeelding"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Gereedschap"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Kon bestand niet openen"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Fout: Kon bestand niet openen\n"
-"KPaint kon het gespecificeerde bestand niet openen."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: Onbekend formaat"
-
-#: kpaint.cpp:543
-#, fuzzy
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Fehler: Onbekend formaat\n"
-"KPaint begrijpt het formaat van dit bestand niet of het bestand is beschadigd"
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "URL openen:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Naar URL opslaan"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Gereedschapinstellingen"
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Sluiten"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Kleur aanpassen"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Bestandsformaat:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Canvas grootte"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "Breedte"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "Hoogte"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -407,6 +390,27 @@ msgstr "Verbindingstijl"
 msgid "Set Line Colour..."
 msgstr "Lijnkleur instellen..."
 
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr ""
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "Afbeeldingbreedte:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
+
 #: roundangle.cpp:19
 #, fuzzy
 msgid "Roundangle"
@@ -417,9 +421,6 @@ msgstr "Rechthoek"
 
 #~ msgid "None"
 #~ msgstr "Geen"
-
-#~ msgid "Dismiss"
-#~ msgstr "Sluiten"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: Misvormd URL"

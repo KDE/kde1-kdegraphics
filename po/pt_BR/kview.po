@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-08-03 21:27+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -78,6 +78,10 @@ msgstr "Tamanho &Máximo"
 msgid "M&axpect"
 msgstr "M&áximo"
 
+#: fileman.cpp:138 wview.cpp:126
+msgid "&Contents"
+msgstr ""
+
 #: viewport.cpp:41
 msgid "Clockwise"
 msgstr "Sentido horário"
@@ -146,92 +150,91 @@ msgstr "Opções de Salvamento"
 msgid "&About KView"
 msgstr "&Sobre KView"
 
-#: fileman.cpp:162
+#: fileman.cpp:163
 msgid "New Window"
 msgstr "Nova Janela"
 
-#: fileman.cpp:168
+#: fileman.cpp:169
 msgid "open new file"
 msgstr "abrir um novo arquivo"
 
-#: fileman.cpp:183
+#: fileman.cpp:184
 #, c-format
 msgid "shrink -50%"
 msgstr "encolher -50%"
 
-#: fileman.cpp:189
+#: fileman.cpp:190
 #, c-format
 msgid "magnify +50%"
 msgstr "aumentar +50%"
 
-#: fileman.cpp:195
+#: fileman.cpp:196
 msgid "size Window"
 msgstr "tamanho da janela"
 
-#: fileman.cpp:202
+#: fileman.cpp:203
 msgid "launch help"
 msgstr "inicia a ajuda"
 
-#: fileman.cpp:209
+#: fileman.cpp:210
 msgid "first pic"
 msgstr "primeira imagem"
 
-#: fileman.cpp:215
+#: fileman.cpp:216
 msgid "last pic"
 msgstr "última imagem"
 
-#: fileman.cpp:222
+#: fileman.cpp:223
 msgid "prev pic"
 msgstr "imagem anterior"
 
-#: fileman.cpp:228
+#: fileman.cpp:229
 msgid "next pic"
 msgstr "próxima imagem"
 
-#: fileman.cpp:235
+#: fileman.cpp:236
 msgid "start picture show"
 msgstr "iniciar show de imagens"
 
-#: fileman.cpp:241
+#: fileman.cpp:242
 msgid "random picture show"
 msgstr "show de imagens randômico"
 
-#: fileman.cpp:247
+#: fileman.cpp:248
 msgid "stop picture show"
 msgstr "parar show de imagens"
 
-#: fileman.cpp:280
+#: fileman.cpp:281
 msgid "slow"
 msgstr "devagar"
 
-#: fileman.cpp:285
+#: fileman.cpp:286
 msgid "fast"
 msgstr "rápido"
 
-#: fileman.cpp:299
+#: fileman.cpp:300
 msgid "Output Device"
 msgstr "Dispositivo de Saída"
 
-#: fileman.cpp:378
+#: fileman.cpp:379
 #, c-format
 msgid " Files: %d"
 msgstr " Arquivos: %d"
 
-#: fileman.cpp:388
+#: fileman.cpp:389
 #, c-format
 msgid " Format: %s Size: %dx%d"
 msgstr " Formato: %s Tamanho: %dx%d"
 
-#: fileman.cpp:531
+#: fileman.cpp:532
 #, c-format
 msgid "Window %d"
 msgstr "Janela %d"
 
-#: fileman.cpp:655
+#: fileman.cpp:656
 msgid "(c) 1996 - 1998 by \n"
 msgstr "(c) 1996 - 1998 por \n"
 
-#: fileman.cpp:658
+#: fileman.cpp:659
 msgid "About KView"
 msgstr "Sobre KView"
-

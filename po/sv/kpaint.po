@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,52 +30,228 @@ msgstr "Användning: "
 msgid " [url | filename]\n"
 msgstr " [url | filnamn]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "namnlös.gif"
+
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
 msgstr ""
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Dukstorlek"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
 
-#: canvassize.cpp:25
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Ny duk"
+
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Öppna fil"
+
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Spara fil"
+
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Zooma in"
+
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Zooma ut"
+
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Öppna bild..."
+
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Ny bild..."
+
+#: kpaint.cpp:317
 #, fuzzy
-msgid "Width:"
-msgstr "Bredd"
+msgid "Save Image"
+msgstr "Spara bild..."
 
-#: canvassize.cpp:26
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Spara bild som..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Bildformat..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Öppna från URL..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Spara till URL..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Nytt fönster"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Stäng fönster"
+
+#: kpaint.cpp:327
 #, fuzzy
-msgid "Height:"
-msgstr "Höjd"
+msgid "Exit"
+msgstr "&Redigera"
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Cirkel"
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Kopiera område"
 
-#: depthdialog.cpp:18
-#, fuzzy
-msgid "Image Depth:"
-msgstr "Bildbredd:"
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Klippp ur område"
 
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Klistra in område"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Klistra in bild som"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Mask..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Information..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
 msgstr ""
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr ""
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Regigera palett"
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr ""
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Ändra färgdjup"
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Verktygsinställningar"
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Penna"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Linje"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rektangel"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Ellips"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Filformat:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Cirkel"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Sprayburk"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr ""
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr ""
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr ""
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr ""
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr ""
+
+#: kpaint.cpp:363
+#, fuzzy
+msgid "Save Options"
+msgstr "Inställningar..."
+
+#: kpaint.cpp:372
+#, fuzzy
+msgid "KPaint"
+msgstr "Om KPaint"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Bild"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Verktyg"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Kunde inte öppna fil"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Fel: Kunde inte öppna fil\n"
+"KPaint kunde inte öppna den angivna filen."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Okänt filformat"
+
+#: kpaint.cpp:546
+#, fuzzy
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Fel: Okänt format\n"
+"Antingen förstår KPaint inte formatet på den angivna filen, eller så är den "
+"förstörd."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "Öppna plats:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Spara till plats:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Verktygsegenskaper"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -93,224 +269,31 @@ msgstr "Bildbredd:"
 msgid "Image Height:"
 msgstr "Bildhöjd"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "namnlös.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr ""
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Ny duk"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Öppna fil"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Spara fil"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Zooma in"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Zooma ut"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Öppna bild..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Ny bild..."
-
-#: kpaint.cpp:314
-#, fuzzy
-msgid "Save Image"
-msgstr "Spara bild..."
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Spara bild som..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Bildformat..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "Öppna från URL..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Spara till URL..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Nytt fönster"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Stäng fönster"
-
-#: kpaint.cpp:324
-#, fuzzy
-msgid "Exit"
-msgstr "&Redigera"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Kopiera område"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Klippp ur område"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Klistra in område"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Klistra in bild som"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Mask..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Information..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr ""
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Regigera palett"
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Ändra färgdjup"
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Verktygsinställningar"
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Penna"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Linje"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Rektangel"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Sprayburk"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr ""
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr ""
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr ""
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr ""
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr ""
-
-#: kpaint.cpp:360
-#, fuzzy
-msgid "Save Options"
-msgstr "Inställningar..."
-
-#: kpaint.cpp:369
-#, fuzzy
-msgid "KPaint"
-msgstr "Om KPaint"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Bild"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Verktyg"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Kunde inte öppna fil"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Fel: Kunde inte öppna fil\n"
-"KPaint kunde inte öppna den angivna filen."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: Okänt filformat"
-
-#: kpaint.cpp:543
-#, fuzzy
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Fel: Okänt format\n"
-"Antingen förstår KPaint inte formatet på den angivna filen, eller så är den "
-"förstörd."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "Öppna plats:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Spara till plats:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Verktygsegenskaper"
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Klar"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Redigera färg"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Filformat:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Dukstorlek"
+
+#: canvassize.cpp:25
+#, fuzzy
+msgid "Width:"
+msgstr "Bredd"
+
+#: canvassize.cpp:26
+#, fuzzy
+msgid "Height:"
+msgstr "Höjd"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -404,6 +387,27 @@ msgstr "Samanställ stil:"
 msgid "Set Line Colour..."
 msgstr "Ställ in linjefärg..."
 
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr ""
+
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "Bildbredd:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
+
 #: roundangle.cpp:19
 #, fuzzy
 msgid "Roundangle"
@@ -414,9 +418,6 @@ msgstr "Rektangel"
 
 #~ msgid "None"
 #~ msgstr "Ingen"
-
-#~ msgid "Dismiss"
-#~ msgstr "Klar"
 
 #~ msgid "KPaint: Malformed URL"
 #~ msgstr "KPaint: Ogiltlig URL"

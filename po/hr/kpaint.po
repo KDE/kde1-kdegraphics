@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"POT-Creation-Date: 1998-10-01 13:38+0200\n"
 "PO-Revision-Date: 1998-04-29 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -29,49 +29,227 @@ msgstr "Uporaba:"
 msgid " [url | filename]\n"
 msgstr " [url | ime_datoteke ]\n"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "Izbor podruèja"
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "bezimen.gif"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Velièina canvasa"
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "Nespremljene promjene"
 
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "©irina:"
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
+"Promjene nisu spremljene, izgubiti æe te ih ukoliko zatvorite ovaj prozor."
 
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Visina:"
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Novi canvas"
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Kru¾nica"
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Otvori datoteku"
 
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Dubina slike:"
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Spremi datoteku"
 
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (Bitmapa)"
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Uveæaj"
 
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr "8 (256 Boja)"
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Umanji"
 
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr "24 (Istinska Boja)"
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Otvori sliku..."
 
-#: ellipse.cpp:16 kpaint.cpp:348
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Nova slika..."
+
+#: kpaint.cpp:317
+msgid "Save Image"
+msgstr "Spremi sliku"
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Spremi sliku pod imenom..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Vrst slike..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Otvori iz URL..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Spremi na URL..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Novi prozor"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Zatvori prozor"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "Izlaz"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Kopiraj podruèje"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Izre¾i podruèje"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Umetni podruèje"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Umetni kao sliku"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Maska..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Informacije..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
+msgstr "Promijeni velièinu..."
+
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Uredi paletu..."
+
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Promijeni dubinu boja..."
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Pode¹avanja alata..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Olovka"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Crta"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Èetverokut"
+
+#: ellipse.cpp:16 kpaint.cpp:351
 msgid "Ellipse"
 msgstr "Elipsa"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Vrst zapisa:"
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Kru¾nica"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Sprej"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "Izbor podruèja"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr "Zaobljeni pravokutnik"
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr "Poka¾i Alate"
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr "Poka¾i traku sa naredbama"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "Poka¾i traku sa statusom"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "Spremi Opcije"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr "KPaint"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+"\n"
+"\n"
+"(c) "
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Slika"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Alati"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Ne mogu otvoriti datoteku"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Gre¹ka: Ne mogu otvoriti datoteku\n"
+"KPaint nije mogao otvoriti tra¾enu datoteku."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: nepoznata vrsta zapisa"
+
+#: kpaint.cpp:546
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Gre¹ka: Nepoznata vrsta zapisa\n"
+"KPaint ne razumije vrstu zapisa zadane datoteke ili\n"
+"je ona o¹teæena."
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "Otvori lokaciju:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Spremi na lokaciju:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Pode¹avanja alata"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -89,223 +267,29 @@ msgstr "©irina slike:"
 msgid "Image Height:"
 msgstr "Visina slike:"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "bezimen.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "Nespremljene promjene"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
 msgstr ""
-"Promjene nisu spremljene, izgubiti æe te ih ukoliko zatvorite ovaj prozor."
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Novi canvas"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Otvori datoteku"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Spremi datoteku"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Uveæaj"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Umanji"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Otvori sliku..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Nova slika..."
-
-#: kpaint.cpp:314
-msgid "Save Image"
-msgstr "Spremi sliku"
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Spremi sliku pod imenom..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Vrst slike..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "Otvori iz URL..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "Spremi na URL..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Novi prozor"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Zatvori prozor"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "Izlaz"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Kopiraj podruèje"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Izre¾i podruèje"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Umetni podruèje"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Umetni kao sliku"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Maska..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Informacije..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr "Promijeni velièinu..."
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Uredi paletu..."
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Promijeni dubinu boja..."
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Pode¹avanja alata..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Olovka"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Crta"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Èetverokut"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Sprej"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "Izbor podruèja"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr "Zaobljeni pravokutnik"
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr "Poka¾i Alate"
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr "Poka¾i traku sa naredbama"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "Poka¾i traku sa statusom"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "Spremi Opcije"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr "KPaint"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Slika"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Alati"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Ne mogu otvoriti datoteku"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Gre¹ka: Ne mogu otvoriti datoteku\n"
-"KPaint nije mogao otvoriti tra¾enu datoteku."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: nepoznata vrsta zapisa"
-
-#: kpaint.cpp:543
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Gre¹ka: Nepoznata vrsta zapisa\n"
-"KPaint ne razumije vrstu zapisa zadane datoteke ili\n"
-"je ona o¹teæena."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "Otvori lokaciju:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Spremi na lokaciju:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Pode¹avanja alata"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Uredi boju"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Vrst zapisa:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Velièina canvasa"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "©irina:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Visina:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -398,6 +382,26 @@ msgstr "Izgled spoja:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Postavi boju crte..."
+
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "Izbor podruèja"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Dubina slike:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr "1 (Bitmapa)"
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr "8 (256 Boja)"
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr "24 (Istinska Boja)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
