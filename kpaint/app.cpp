@@ -12,7 +12,7 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
   KPaint *kp;
 
   if (argc == 2) {
-    kp= new KPaint(argv[1]);
+    kp= new KPaint((const char *) (argv[1]));
   }
   else if (argc == 1) {
     kp= new KPaint();

@@ -19,9 +19,8 @@ class KPaint : public KTopLevelWidget
   Q_OBJECT
 
 public:
-  KPaint(char *url_= NULL);
+  KPaint(const char *url_= NULL);
 
-public slots:
   // File
   void fileNew();
   void fileOpen();
@@ -32,7 +31,7 @@ public slots:
   void fileSaveAsURL();
   void newWindow();
   void closeWindow();
-  void fileQuit();
+  void fileExit();
 
   // Edit
   void editCopy();
@@ -58,6 +57,9 @@ public slots:
   void helpContents();
   void helpIndex();
 
+public slots:
+  void handleCommand(int command);
+
 protected:
   // Load file
   bool loadLocal(const char *filename_, const char *url_= NULL);
@@ -66,6 +68,7 @@ protected:
   bool saveLocal(const char *filename_, const char *url_= NULL);
   void KFMgetFinished();
   void KFMputFinished();
+  int exit();
   KFM *kfm;
   enum transferDirection { KfmNone, KfmGet, KfmPut };
 
@@ -74,13 +77,12 @@ protected slots:
 
 private:
   // actual local filename
-  QString *filename;
-  // URL it came from or NULL if local
-  QString *url;
+  QString filename;
+  // URL it came from or empty if local
+  QString url;
   transferDirection kfmOp;
-  QString *tempURL;
-
-  QString *format;
+  QString tempURL;
+  QString format;
   int zoom;
   void closeEvent(QCloseEvent *e);
   bool modified;
