@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi VERSION\n"
-"POT-Creation-Date: 1998-06-16 14:19+0200\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Székely Krisztián <szekelyk@edasz.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"

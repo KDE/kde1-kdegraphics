@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-06-16 14:19+0200\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: 1998-04-21 02:55+0800\n"
 "Last-Translator: Chou Yeh-Jyi <ycchou@ccca.nctu.edu.tw>\n"
 "MIME-Version: 1.0\n"

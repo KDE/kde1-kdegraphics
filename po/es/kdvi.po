@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1998-06-16 14:19+0200\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: 1998-06-17 22:08+0200\n"
-"First-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
 "Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
+"First-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:514

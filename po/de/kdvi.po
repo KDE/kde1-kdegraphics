@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi 0.4.1\n"
-"POT-Creation-Date: 1998-06-16 14:19+0200\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
 "PO-Revision-Date: 1998-01-05 20:15+0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
