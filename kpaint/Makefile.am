@@ -9,7 +9,7 @@ INCLUDES=	$(all_includes)
 #INCLUDES= -I$(my_includes) $(X_INCLUDES) $(QT_INCLUDES)
 LDFLAGS	=	$(all_libraries) $(KDE_RPATH)
 #LDFLAGS = -L$(my_libraries) -L$(x_libraries) -rpath $(my_libraries) -rpath $(x_libraries)
-LDADD	= -lkfile -lkfm -lkdeui -lkdecore $(LIB_KIMGIO) -lgif -lqt -lXext -lX11 -lm $(LIBSOCKET)
+LDADD	= -lkfile -lkfm -lkdeui -lkdecore $(LIB_KIMGIO) -lgif  -lXext  -lm $(LIB_QT)
 
 
 appsdir = $(kde_appsdir)/Graphics
