@@ -214,11 +214,11 @@ msgstr "Gamma-korrekt..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
-msgstr "For."
+msgstr "Forrige"
 
 #: ilistdlg.cpp:61
 msgid "Shu&ffle"
-msgstr "&Lempe"
+msgstr "&Tilfeldig"
 
 #: ilistdlg.cpp:66
 msgid "Next"

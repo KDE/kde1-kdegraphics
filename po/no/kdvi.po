@@ -104,11 +104,11 @@ msgstr "S&kriv ut ..."
 
 #: kdvi.cpp:193
 msgid "Zoom &in"
-msgstr "Zoom &inn"
+msgstr "&Forstørre"
 
 #: kdvi.cpp:194
 msgid "Zoom &out"
-msgstr "Zoom &ut"
+msgstr "F&orminske"
 
 #: kdvi.cpp:195
 msgid "&Fit to page"
@@ -278,11 +278,11 @@ msgstr "Skriv ut dialog"
 
 #: kdvi.cpp:348 kdvi.cpp:401
 msgid "Zoom in"
-msgstr "Zoom inn"
+msgstr "Forstørre"
 
 #: kdvi.cpp:349 kdvi.cpp:402
 msgid "Zoom out"
-msgstr "Zoom ut"
+msgstr "Forminske"
 
 #: kdvi.cpp:350 kdvi.cpp:403
 msgid "Fit window"

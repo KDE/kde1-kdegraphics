@@ -314,11 +314,11 @@ msgstr "Gå til side"
 
 #: kghostview.cpp:362 kghostview.cpp:447
 msgid "Zoom In"
-msgstr "Zoom inn"
+msgstr "Forstørre"
 
 #: kghostview.cpp:363 kghostview.cpp:448
 msgid "Zoom Out"
-msgstr "Zoom ut"
+msgstr "Forminske"
 
 #: kghostview.cpp:364 kghostview.cpp:452
 msgid "Next Page"
@@ -382,15 +382,15 @@ msgstr "&Skriv ut ..."
 
 #: kghostview.cpp:519
 msgid "Zoom &in"
-msgstr "Zoom &inn"
+msgstr "&Forstørre"
 
 #: kghostview.cpp:521
 msgid "Zoom &out"
-msgstr "Zoom &ut"
+msgstr "F&orminske"
 
 #: kghostview.cpp:523
 msgid "&Zoom ..."
-msgstr "&Zoom ..."
+msgstr "&Forstørre ..."
 
 #: kghostview.cpp:528
 msgid "&Info ..."
@@ -527,11 +527,11 @@ msgstr "Skriv ut dokument..."
 
 #: kghostview.cpp:681
 msgid "Zoom in"
-msgstr "Zoom inn"
+msgstr "Forstørre"
 
 #: kghostview.cpp:684
 msgid "Zoom out"
-msgstr "Zoom ut"
+msgstr "Forminske"
 
 #: kghostview.cpp:689
 msgid "Go back"
