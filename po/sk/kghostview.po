@@ -698,7 +698,7 @@ msgstr "Zma¾"
 
 #: messages.cpp:59 viewcontrol.cpp:114
 msgid "&Dismiss"
-msgstr "Zavri"
+msgstr "&Zavrie»"
 
 #: print.cpp:35
 msgid "Printer setup"

@@ -39,14 +39,12 @@ msgid "Canvas Size"
 msgstr "Veµkos» kresliacej plochy"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "©írka"
+msgstr "©írka:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Vý¹ka"
+msgstr "Vý¹ka:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -104,6 +102,7 @@ msgstr "Zmeny neulo¾ené"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Neulo¾ili ste zmeny, stratíte ich, ak teraz zavriete toto okno."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -134,7 +133,6 @@ msgid "New Image..."
 msgstr "Nový obrázok..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
 msgstr "Ulo¾i» obrázok..."
 
@@ -192,7 +190,7 @@ msgstr "Informácie..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Zmeni» veµkos»..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -228,7 +226,7 @@ msgstr "Výber oblasti"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Zaoblený obdå¾nik"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -248,7 +246,7 @@ msgstr "Ulo¾i» nastavenie"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -256,6 +254,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -408,51 +409,6 @@ msgid "Set Line Colour..."
 msgstr "Farba èiary"
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Obdå¾nik"
+msgstr "Zaoblený obdå¾nik"
 
-#~ msgid "Dismiss"
-#~ msgstr "Zavrie»"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: chybný formát URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Chyba: chybný formát URL\n"
-#~ "KPaint nerozumie ¹pecifikovanému URL, skontrolujte, èi je správne."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint u¾ pristupuje k vzdialenému súboru, musíte túto èinnos»\n"
-#~ "preru¹i» alebo poèka» na jej dokonèenie."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KFM: Nie je mo¾né spusti» alebo nájs» KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Chyba: KPaint nemô¾e nájs» be¾iace KFM alebo si ho sám spusti»."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Nahrávanie po sieti zlyhalo"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Chyba: Nahrávanie po sieti zlyhalo\n"
-#~ "Nieèo bolo zlé :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Nemô¾em spusti» alebo nájs» KFM"
-
-#~ msgid "Release Notes"
-#~ msgstr "Poznámky na poslednú chvíµu"
-
-#~ msgid "About..."
-#~ msgstr "Informácie ..."
