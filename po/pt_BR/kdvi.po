@@ -684,4 +684,3 @@ msgstr "n-up"
 #: printSetupData.cpp:136
 msgid "Printing method"
 msgstr "Método de impressão"
-

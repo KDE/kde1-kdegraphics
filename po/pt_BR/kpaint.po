@@ -400,4 +400,3 @@ msgstr "Cor da Linha..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Redondângulo"
-

@@ -413,4 +413,3 @@ msgstr "Largura do Fax:"
 #: options.cpp:142
 msgid "height:"
 msgstr "altura:"
-
