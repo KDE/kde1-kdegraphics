@@ -8,26 +8,26 @@ msgstr ""
 "POT-Creation-Date: 1999-04-23 02:23+0200\n"
 "PO-Revision-Date: 1999-02-16 22:12-0100\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
-"Language-Team: da <LL@li.org>\n"
+"Language-Team: da <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: marklist.cpp:38
 msgid "Mark current page"
-msgstr "Marker nuværende side"
+msgstr "Markér nuværende side"
 
 #: marklist.cpp:39
 msgid "Mark all pages"
-msgstr "Marker alle sider"
+msgstr "Markér alle sider"
 
 #: marklist.cpp:40
 msgid "Mark even pages"
-msgstr "Marker lige sider"
+msgstr "Markér lige sider"
 
 #: marklist.cpp:41
 msgid "Mark odd pages"
-msgstr "Marker ulige sider"
+msgstr "Markér ulige sider"
 
 #: marklist.cpp:42
 msgid "Toggle page marks"
@@ -63,7 +63,7 @@ msgid ""
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
 "\n"
-"Dette program er fri programvare; du kan distribuere det videre og/eller "
+"Dette program er frit programmel; du kan distribuere det videre og/eller "
 "ændre\n"
 "det under betingelserne i GNU-licensen som er publiceret af \n"
 "Free Software Foundation; enten version 2 af licensen, eller\n"
@@ -617,7 +617,7 @@ msgstr ""
 
 #: kghostview.cpp:1638 kghostview.cpp:1758
 msgid "Error printing"
-msgstr "Fejl ved skrivning"
+msgstr "Fejl ved udskrift"
 
 #: kghostview.cpp:1648
 msgid ""

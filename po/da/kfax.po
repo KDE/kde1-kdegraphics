@@ -364,14 +364,14 @@ msgstr "Vælg filnavn"
 
 #: print.cpp:280
 msgid "You must enter a file name if you wish to print to a file."
-msgstr "Du må indkrive et filnavn hvis du ønsker at udskrive til en fil."
+msgstr "Du må indtaste et filnavn hvis du ønsker at udskrive til en fil."
 
 #: print.cpp:290
 msgid ""
 "You must enter a print command such as \"lpr\"\n"
 " if you wish to print to a printer."
 msgstr ""
-"Du må indskrive en udskriftskommando som f eks \"lpr\"\n"
+"Du må indtaste en udskriftskommando som f eks \"lpr\"\n"
 " hvis du ønsker at udskrive til en skriver."
 
 #: options.cpp:56

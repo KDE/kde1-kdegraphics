@@ -8,7 +8,7 @@ msgstr ""
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
 "PO-Revision-Date: 1999-02-16 13:22-0500\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
-"Language-Team: da <LL@li.org>\n"
+"Language-Team: da <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Ændringen af skriftkonstruktionen begynder først\n"
+"Ændringen af skrifttypegenerering begynder først\n"
 "når du starter kdvi igen!"
 
 #: dviwin.cpp:232
@@ -90,7 +90,7 @@ msgstr "Tegn påny"
 
 #: kdvi.cpp:115
 msgid "Preferences ..."
-msgstr "Præferancer ..."
+msgstr "Indstillinger ..."
 
 #: kdvi.cpp:173
 msgid "&New"
@@ -154,7 +154,7 @@ msgstr "&Side"
 
 #: kdvi.cpp:215
 msgid "&Preferences ..."
-msgstr "&Præferancer ..."
+msgstr "&Indstillinger ..."
 
 #: kdvi.cpp:216
 msgid "&Keys ..."
@@ -186,7 +186,7 @@ msgstr "Vis statusbjælke"
 
 #: kdvi.cpp:230
 msgid "Show Scro&llbars"
-msgstr "Vis rullefelter"
+msgstr "Vis rulleskakt"
 
 #: kdvi.cpp:239
 msgid "DVI Viewer"
@@ -348,7 +348,7 @@ msgstr "Vis/skjul statusbjælke"
 
 #: kdvi.cpp:362 kdvi.cpp:414
 msgid "Toggle scroll bars"
-msgstr "Vis/skjul rullefelt"
+msgstr "Vis/skjul rulleskakt"
 
 #: kdvi.cpp:466
 msgid "File open dialog is open"
@@ -380,7 +380,7 @@ msgstr "Fremvis bredde passer til siden"
 
 #: kdvi.cpp:672
 msgid "Preferences applied"
-msgstr "Præferancer anvendt"
+msgstr "Indstillinger anvendt"
 
 #: kdvi.cpp:676
 msgid " Page "
@@ -444,11 +444,11 @@ msgstr "Statusbjælke vises"
 
 #: kdvi.cpp:817
 msgid "Scroll bars are shown"
-msgstr "Rullefelt vises"
+msgstr "Rulleskakt vises"
 
 #: kdvi.cpp:817
 msgid "No scroll bars"
-msgstr "Intet rullefelt"
+msgstr "Ingen rulleskakt"
 
 #: kdvi.cpp:874
 msgid "Page: "
@@ -460,11 +460,11 @@ msgstr " / "
 
 #: kdvi.cpp:905
 msgid "Large text button set to shrink factor "
-msgstr "Stor tekstknap sat til krympe faktoren"
+msgstr "Stor tekstknap sat til krympefaktoren"
 
 #: kdvi.cpp:913
 msgid "Small text button set to shrink factor "
-msgstr "Lille tekstknap sat til krympe faktoren"
+msgstr "Lille tekstknap sat til krympefaktoren"
 
 #: kdvi.cpp:931
 #, c-format
@@ -501,7 +501,7 @@ msgstr "Fjern markeringer"
 
 #: prefs.cpp:45
 msgid "Preferences"
-msgstr "Præferencer"
+msgstr "Indstillinger"
 
 #: prefs.cpp:213
 msgid "Menu Bar"
@@ -521,7 +521,7 @@ msgstr "Sideliste"
 
 #: prefs.cpp:217
 msgid "Scroll Bars"
-msgstr "Rullefelt"
+msgstr "Rulleskakt"
 
 #: prefs.cpp:239
 msgid "Number of recent files"
@@ -589,7 +589,7 @@ msgstr "Kan ikke behandle denne dvi version!"
 
 #: print.cpp:241
 msgid "Invalid page range!"
-msgstr "Ugyldig side område!"
+msgstr "Ugyldig sideområde!"
 
 #: print.cpp:318 printSetup.cpp:73
 msgid "Default Printer"

@@ -8,7 +8,7 @@ msgstr ""
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
 "PO-Revision-Date: 1999-02-16 14:15+0200\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
-"Language-Team: da <LL@li.org>\n"
+"Language-Team: da <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: kiconedit.cpp:373
 msgid "Select All"
-msgstr "Marker alt"
+msgstr "Markér alt"
 
 #: kiconedit.cpp:391
 msgid "New &Window"
@@ -80,7 +80,7 @@ msgstr "&Ryd"
 
 #: kiconedit.cpp:447
 msgid "Select &all"
-msgstr "Marker &alt"
+msgstr "Markér &alt"
 
 #: kiconedit.cpp:454
 msgid "1:1"
@@ -776,7 +776,7 @@ msgstr "Ugyldig pixmap data i klippebordet!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr "Foldere:"
+msgstr "Mapper:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"

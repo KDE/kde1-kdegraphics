@@ -79,7 +79,7 @@ msgstr "&Omgør"
 
 #: viewer.cpp:326
 msgid "To &Desktop"
-msgstr "Til &arbejdsplads"
+msgstr "Til &skrivebord"
 
 #: viewer.cpp:328
 msgid "F&ilter"
@@ -111,7 +111,7 @@ msgstr "&Nulstil"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr "&Præferencer..."
+msgstr "&Indstillinger..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -290,7 +290,7 @@ msgstr "Start &lystbillede"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr "kView præferencer"
+msgstr "kView indstillingerger"
 
 #: prefdlg.cpp:36
 msgid "&Apply"

@@ -371,7 +371,7 @@ msgstr "Liniestil:"
 
 #: properties.cpp:289 properties.cpp:349
 msgid "Dashed"
-msgstr "Understreget"
+msgstr "Streg-streg"
 
 #: properties.cpp:290 properties.cpp:350
 msgid "Dotted"
