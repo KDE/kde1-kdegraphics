@@ -1,7 +1,0 @@
-# KDE Config File
-[KDE Desktop Entry]
-Type=Application
-Icon=kghostview.xpm
-Exec=kghostview %u
-DocPath=kghostview/kghostview.html
-Info=Previews PostScript documents

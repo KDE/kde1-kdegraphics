@@ -237,7 +237,7 @@ void MarkList::mouseMoveEvent ( QMouseEvent *e )
 
 void MarkList::select( int i )
 {
-	if ( i < 0 || i >= items.count() || i == sel )
+	if ( i < 0 || i >= (signed) items.count() || i == sel )
 		return;
 
 	MarkListItem *it = items.at( i );
@@ -256,7 +256,7 @@ void MarkList::select( int i )
 	emit selected( i );
 	emit selected( it->text() );
 	if ( ( i<=0 || rowIsVisible( i-1 ) ) &&
-	     ( i>=items.count()-1 || rowIsVisible( i+1 ) ) )
+	     ( i>= (signed) items.count()-1 || rowIsVisible( i+1 ) ) )
 		return;
 	setTopCell( QMAX( 0, i - viewHeight()/cellHeight()/2 ) );
 }
@@ -323,7 +323,7 @@ QStrList *MarkList::markList()
 {
 	QStrList *l = new QStrList;
 
-	for ( int i=0 ; i < items.count(); i++ )
+	for ( int i=0 ; i < (signed) items.count(); i++ )
 		if ( ( items.at( i ) )->mark() )
 			l->append( items.at( i )->text() );
 	return l;

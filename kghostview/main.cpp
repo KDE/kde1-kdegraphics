@@ -41,7 +41,7 @@ MyApp::MyApp( int &argc, char **argv, const QString &rAppName )
 
 MyApp::~MyApp()
 {
-	printf("MyApp::~MyApp()\n");
+	//printf("MyApp::~MyApp()\n");
 }
 
 
