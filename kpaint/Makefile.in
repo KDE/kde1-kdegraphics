@@ -13,6 +13,7 @@ KDE_RPATH = @KDE_RPATH@
 #
 topdir	=	@topdir@
 prefix 	= 	@prefix@
+exec_prefix =   @exec_prefix@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -L$(topdir)/kpaint/tools
 topdir  =       @topdir@

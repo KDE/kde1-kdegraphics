@@ -9,6 +9,7 @@ qt_libraries = @qt_libraries@
 top_builddir = ..
 LIBTOOL = @LIBTOOL@
 KDE_RPATH = @KDE_RPATH@
+exec_prefix = @exec_prefix@
 
 CXX = @CXX@
 MOC= @MOC@
