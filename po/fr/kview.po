@@ -327,4 +327,4 @@ msgstr "secondes entre chaque image"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr "&Clavier"
+msgstr "Raccourcis &clavier"

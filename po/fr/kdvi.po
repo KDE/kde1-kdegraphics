@@ -162,7 +162,7 @@ msgstr "&Préférences..."
 
 #: kdvi.cpp:216
 msgid "&Keys ..."
-msgstr "&Clavier..."
+msgstr "Raccourcis &clavier..."
 
 #: kdvi.cpp:218
 msgid "Make PK-&fonts"

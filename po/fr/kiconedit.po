@@ -1087,11 +1087,11 @@ msgstr "Afficher les règles"
 
 #: kiconconfig.cpp:593
 msgid "Keys"
-msgstr "Touches"
+msgstr "Raccourcis clavier"
 
 #: kiconconfig.cpp:598
 msgid "Configure keys"
-msgstr "Configurer le clavier"
+msgstr "Configurer les raccourcis"
 
 #: kiconconfig.cpp:605
 msgid "Templates"

@@ -458,7 +458,7 @@ msgstr "Configurer l'&interpréteur..."
 
 #: kghostview.cpp:578
 msgid "Configure &key bindings ..."
-msgstr "Configurer les raccourcis &clavier..."
+msgstr "Raccourcis &clavier..."
 
 #: kghostview.cpp:580
 msgid "&Save options"
