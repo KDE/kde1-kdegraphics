@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <qstring.h>
 #include "version.h"
 #include "app.h"

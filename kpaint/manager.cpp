@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <qobject.h>
 #include <stdio.h>
 #include <assert.h>
@@ -23,9 +24,7 @@ Manager::Manager(Canvas *c, QWidget *top) : QObject()
   assert(top != NULL);
   assert(!(c->isActive()));
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Manager:: Constructing...\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Manager:: Constructing...\n");
 
   canvas= c;
   toplevel= top;
@@ -86,9 +85,7 @@ int Manager::getCurrentTool(void)
 
 void Manager::setCurrentTool(int tool)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "got setCurrentTool %d\n", tool);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "got setCurrentTool %d\n", tool);
 
   if (currentTool != tool) {
     canvas->deactivate();
@@ -126,10 +123,8 @@ void Manager::initToolbar()
   for (i= 0, tool= list.first(); tool != NULL; i++, tool= list.next()) {
     tip= tool->tip();
     pix= tool->pixmap();
-#ifdef KPDEBUG
-    fprintf(stderr, "Adding Pix: %p  // %s\n", pix, tip);
-	fprintf(stderr, "Pix Size: %d, %d", pix->width(), pix->height());
-#endif
+KDEBUG2(KDEBUG_INFO, 3000, "Adding Pix: %p  // %s\n", pix, tip);
+KDEBUG2(KDEBUG_INFO, 3000, "Pix Size: %d, %d", pix->width(), pix->height());
     mytoolbar->insertButton(*pix, i, TRUE, tip, i);
   }
   connect(mytoolbar, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));

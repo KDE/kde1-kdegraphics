@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <qpen.h>
 #include <qbrush.h>
 #include <kcolordlg.h>
@@ -43,7 +44,7 @@ void paletteWidget::setPixmap(QPixmap *p)
   d= image->depth();
 
   if (d != 8) {
-    fprintf(stderr, "paletteWidget: Invalid pixmap depth\n");
+KDEBUG(KDEBUG_INFO, 3000, "paletteWidget: Invalid pixmap depth\n");
     numColours= 0;
     image= NULL;
     return;
@@ -89,9 +90,7 @@ void paletteWidget::mousePressEvent(QMouseEvent *e)
   // Convert coordinates to colour index
   i= findRow(e->y())*numCols()+findCol(e->x());
 
-#ifdef KPDEBUG
-  fprintf(stderr, "paletteWidget:: Colour Selected (%d)\n", i);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "paletteWidget:: Colour Selected (%d)\n", i);
 
   emit colourSelected(i);
 }

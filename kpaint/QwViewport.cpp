@@ -10,6 +10,7 @@
 **
 *****************************************************************************/
 
+#include <kdebug.h>
 #include "../config.h"
 #include <qwidget.h>
 #include <qscrbar.h>

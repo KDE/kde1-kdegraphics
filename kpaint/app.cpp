@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <stdio.h>
 #include <kapp.h>
 #include <klocale.h>
@@ -12,24 +13,25 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
 
   clipboard_= 0;
 
-  if (argc == 2) {
-    kp= new KPaint((const char *) (argv[1]));
-  }
-  else if (argc == 1) {
-    kp= new KPaint();
+  if (isRestored()) {
+    for (int i= 1; KTopLevelWidget::canBeRestored(i); i++) {
+      kp= new KPaint();
+      kp->restore(i);
+    }
   }
   else {
-    usage();
-    ::exit(1);
+    if (argc == 2) {
+      kp= new KPaint((const char *) (argv[1]));
+    }
+    else if (argc == 1) {
+      kp= new KPaint();
+    }
+    else {
+      usage();
+      ::exit(1);
+    }
+    kp->show();
   }
-
-
-   KConfig *config = KApplication::getKApplication()->getConfig();
-   config->setGroup( "Test" );
-   config->writeEntry( "TestString", QString(klocale->translate("This was a QString")) );
-
-   
-  kp->show();
 }
 
 void MyApp::usage()

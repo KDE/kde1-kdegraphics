@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
@@ -20,22 +21,17 @@ Ellipse::Ellipse() : Tool()
 
 void Ellipse::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Ellipse::activating() hook called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Ellipse::activating() hook called\n");
   canvas->setCursor(crossCursor);
 }
 
 void Ellipse::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Ellipse::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Ellipse::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "Ellipse: Warning Left Button press received when pressed\n");
+KDEBUG(KDEBUG_INFO, 3000, "Ellipse: Warning Left Button press received when pressed\n");
     }
     else {
       startx= (e->pos()).x();
@@ -46,7 +42,7 @@ void Ellipse::mousePressEvent(QMouseEvent *e)
     } 
   }
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -84,7 +80,7 @@ void Ellipse::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -94,9 +90,7 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
   QPainter paint;
   QWMatrix m;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Ellipse::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Ellipse::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == LeftButton) && drawing) {
     x= (e->pos()).x();
@@ -127,7 +121,7 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
     canvas->repaint(0);
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 

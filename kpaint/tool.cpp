@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <assert.h>
 #include <qpixmap.h>
@@ -43,17 +44,13 @@ bool Tool::isActive()
 
 void Tool::setPen(QPen *p)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Tool::setPen()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Tool::setPen()\n");
   pen= p;
 }
 
 void Tool::setBrush(QBrush *b)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Tool::setBrush()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Tool::setBrush()\n");
   brush= b;
 }
 

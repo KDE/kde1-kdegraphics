@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdlib.h>
 #include "canvassize.h"
 #include <klocale.h>

@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <qcursor.h>
 #include <qpainter.h>
@@ -21,22 +22,17 @@ Rectangle::Rectangle() : Tool()
 
 void Rectangle::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Rectangle::activating() hook called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Rectangle::activating() hook called\n");
   canvas->setCursor(crossCursor);
 }
 
 void Rectangle::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Rectangle::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Rectangle::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "RubberLine: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "RubberLine: Warning Left Button press received when pressed\n");
     }
     else {
       startx= (e->pos()).x();
@@ -47,7 +43,7 @@ void Rectangle::mousePressEvent(QMouseEvent *e)
     } 
   }
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -80,7 +76,7 @@ void Rectangle::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -90,9 +86,7 @@ void Rectangle::mouseReleaseEvent(QMouseEvent *e)
   QPainter paint;
   QWMatrix m;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Rectangle::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Rectangle::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == LeftButton)) {
     x= (e->pos()).x();
@@ -120,7 +114,7 @@ void Rectangle::mouseReleaseEvent(QMouseEvent *e)
     canvas->repaint(0);
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 

@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
@@ -21,9 +22,7 @@ Pen::Pen() : Tool()
 
 void Pen::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Pen::activating() hook called canvas=%p\n", canvas);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Pen::activating() hook called canvas=%p\n", canvas);
   drawing= FALSE;
 
   canvas->setCursor(crossCursor);
@@ -36,14 +35,11 @@ void Pen::mousePressEvent(QMouseEvent *e)
   QPainter painter2;
   QWMatrix m;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Pen::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Pen::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "Pen: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "Pen: Warning Left Button press received when pressed\n");
     }
     x= (e->pos()).x();
     y= (e->pos()).y();
@@ -68,7 +64,7 @@ void Pen::mousePressEvent(QMouseEvent *e)
     drawing= TRUE;
   } 
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -107,19 +103,17 @@ void Pen::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
 void Pen::mouseReleaseEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Pen::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Pen::mouseReleaseEvent() handler called\n");
   if (isActive() && (e->button() == LeftButton) && drawing)
     drawing= FALSE;
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 

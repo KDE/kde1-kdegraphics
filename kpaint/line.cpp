@@ -3,6 +3,7 @@
 // Note: When used to draw more than one line segment should use draw poly line
 // functions to avoid glitches at the joints.
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <qcursor.h>
 #include <qpainter.h>
@@ -24,9 +25,7 @@ Line::Line() : Tool()
 
 void Line::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Line::activating() hook called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Line::activating() hook called\n");
 
   canvas->setCursor(crossCursor);
 }
@@ -36,14 +35,11 @@ void Line::mousePressEvent(QMouseEvent *e)
   int x,y;
   QPainter paint;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "RubberLine::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "RubberLine::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
-	      "Line: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "Line: Warning Left Button press received when pressed\n");
     }
     else {
       startx= (e->pos()).x();
@@ -76,7 +72,7 @@ void Line::mousePressEvent(QMouseEvent *e)
   canvas->repaint(0);
   
   if (!isActive()) {
-    fprintf(stderr, "Line: Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Line: Warning event received when inactive (ignoring)\n");
   }
   
 }
@@ -110,7 +106,7 @@ void Line::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Line: Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Line: Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -120,9 +116,7 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
   QPainter paint;
   QWMatrix m;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Line::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
 
   if (isActive() && drawing && (e->button() == LeftButton)) {
     x= (e->pos()).x();
@@ -150,7 +144,7 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
     canvas->repaint(0);
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 

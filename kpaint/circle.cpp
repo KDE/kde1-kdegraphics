@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
@@ -22,23 +23,18 @@ Circle::Circle() : Tool()
 
 void Circle::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Circle::activating() hook called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Circle::activating() hook called\n");
 
   canvas->setCursor(crossCursor);
 }
 
 void Circle::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Circle::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Circle::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "Circle: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "Circle: Warning Left Button press received when pressed\n");
     }
     else {
       startx= (e->pos()).x();
@@ -49,7 +45,7 @@ void Circle::mousePressEvent(QMouseEvent *e)
     } 
   }
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -98,7 +94,7 @@ void Circle::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Warning move event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning move event received when inactive (ignoring)\n");
   }
 }
 
@@ -109,9 +105,7 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
   QWMatrix m;
   int bbx, bby, r;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Circle::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Circle::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == LeftButton) && drawing) {
     x= (e->pos()).x();

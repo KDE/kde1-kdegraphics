@@ -22,6 +22,7 @@
 // $Id$
 
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -111,7 +112,7 @@ void read_gif_file(QImageIO * imageio)
 	Height = GifFile->Image.Height;
 	if (GifFile->Image.Left + GifFile->Image.Width > GifFile->SWidth ||
 	    GifFile->Image.Top + GifFile->Image.Height > GifFile->SHeight) {
-	  fprintf(stderr, "Image is not confined to screen dimension, aborted.\n");
+KDEBUG(KDEBUG_INFO, 3000, "Image is not confined to screen dimension, aborted.\n");
 	  return;
 	}
 	if (GifFile->Image.Interlace) {
@@ -143,15 +144,11 @@ void read_gif_file(QImageIO * imageio)
 	}
 	if ( ExtCode == 249 )	// Graphic Control Ext
 	  {
-#ifdef KPDEBUG
-	    fprintf(stderr, "Found graphic control extension\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Found graphic control extension\n");
 	    // extract tranparent pixel stuff
 	    if (Extension[1] & 1) {
 	      trans= Extension[4];
-#ifdef KPDEBUG
-	      fprintf(stderr, "Set trans to %d\n", Extension[4]);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Set trans to %d\n", Extension[4]);
 	    }
 	  }
 	do {
@@ -162,15 +159,11 @@ void read_gif_file(QImageIO * imageio)
 	  if (Extension != NULL) {
 	    if ( ExtCode == 249 )	// Graphic Control Ext
 	    {
-#ifdef KPDEBUG
-	    fprintf(stderr, "Found graphic control extension in next\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Found graphic control extension in next\n");
 	    // extract tranparent pixel stuff
 	    if (Extension[1] & 1) {
 	      trans= Extension[4];
-#ifdef KPDEBUG
-	      fprintf(stderr, "Set trans to %d\n", Extension[4]);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Set trans to %d\n", Extension[4]);
 	    }
 	    }
 	  }
@@ -230,26 +223,21 @@ void write_gif_file(QImageIO *imageio)
   ColorMapObject *screenColourmap;
   ColorMapObject *imageColourmap;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "write_gif_file()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "write_gif_file()\n");
 
   imageColourmap= MakeMapObject(256, NULL);
   if (!imageColourmap) {
-    fprintf(stderr, "Could not create image colour map\n");
+KDEBUG(KDEBUG_INFO, 3000, "Could not create image colour map\n");
     return;
   }
 
   screenColourmap= MakeMapObject(256, NULL);
   if (!screenColourmap) {
-    fprintf(stderr, "Could not create screen colour map\n");
+KDEBUG(KDEBUG_INFO, 3000, "Could not create screen colour map\n");
     return;
   }
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Made Colourmap size 256, image colours= %d\n",
-	  imageio->image().numColors());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Made Colourmap size 256, image colours= %d\n", imageio->image().numColors());
 
   for (i= 0; i < 256; i++) {
     if (i <imageio->image().numColors()) {
@@ -281,13 +269,11 @@ void write_gif_file(QImageIO *imageio)
   if (!GifFile) {
     FreeMapObject(imageColourmap);
     FreeMapObject(screenColourmap);
-    fprintf(stderr, "Could not open file\n");
+KDEBUG(KDEBUG_INFO, 3000, "Could not open file\n");
     return;
   }
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Creating screen desc\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Creating screen desc\n");
 
   status= EGifPutScreenDesc(GifFile,
 			    imageio->image().width(),
@@ -298,13 +284,11 @@ void write_gif_file(QImageIO *imageio)
 
   if (status != GIF_OK) {
     EGifCloseFile(GifFile);
-    fprintf(stderr, "Could not create screen description\n");
+KDEBUG(KDEBUG_INFO, 3000, "Could not create screen description\n");
     return;
   }
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Creating image description\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Creating image description\n");
 
   status= EGifPutImageDesc(GifFile,
 			   0, 0,
@@ -318,9 +302,7 @@ void write_gif_file(QImageIO *imageio)
     return;
   }
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Writing image data\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Writing image data\n");
 
   for (i = 0; status && (i < imageio->image().height()); i++) {
     status= EGifPutLine(GifFile, 

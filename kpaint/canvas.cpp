@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -23,7 +24,7 @@ Canvas::Canvas(int width, int height,
   // Create pixmap
   pix= new QPixmap(width, height);
   if (!pix) {
-    fprintf(stderr, "Canvas::Canvas(): Cannot create pixmap\n");
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
 
@@ -47,7 +48,7 @@ Canvas::Canvas(const char *filename, QWidget *parent, const char *name)
   // Create pixmap
   pix= new QPixmap(filename);
   if (!pix) {
-    fprintf(stderr, "Canvas::Canvas(): Cannot create pixmap\n");
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::Canvas(): Cannot create pixmap\n");
     exit(1);
   }
 
@@ -202,9 +203,7 @@ void Canvas::paintEvent(QPaintEvent * /*e*/ )
 
 void Canvas::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::mousePressEvent() redirector called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::mousePressEvent() redirector called\n");
   if (isActive())
     currentTool->mousePressEvent(e);
 } 
@@ -217,9 +216,7 @@ void Canvas::mouseMoveEvent(QMouseEvent *e)
 
 void Canvas::mouseReleaseEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::mouseReleaseEvent() redirector called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::mouseReleaseEvent() redirector called\n");
   if (isActive())
     currentTool->mouseReleaseEvent(e);
 }
@@ -259,24 +256,18 @@ bool Canvas::save(const char *filename, const char *format)
 {
   bool s;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::save() file= %s, format= %s\n", filename, format);
-#endif	  
+KDEBUG2(KDEBUG_INFO, 3000, "Canvas::save() file= %s, format= %s\n", filename, format);
 
   s= pix->save(filename, format);
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::save() returning %d\n", s);
-#endif	  
+KDEBUG1(KDEBUG_INFO, 3000, "Canvas::save() returning %d\n", s);
 
   return s;
 }
 
 void Canvas::keyPressEvent(QKeyEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::keyPressEvent() redirector called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyPressEvent() redirector called\n");
   if (isActive())
     currentTool->keyPressEvent(e);
 }
@@ -284,9 +275,7 @@ void Canvas::keyPressEvent(QKeyEvent *e)
 
 void Canvas::keyReleaseEvent(QKeyEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "Canvas::keyReleaseEvent() redirector called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Canvas::keyReleaseEvent() redirector called\n");
   if (isActive())
     currentTool->keyReleaseEvent(e);
 }

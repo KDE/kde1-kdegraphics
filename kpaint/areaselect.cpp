@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <qcursor.h>
 #include <qpainter.h>
@@ -9,7 +10,6 @@
 #include "areaselect.h"
 #include "app.h"
 
-#define KPDEBUG
 
 extern MyApp *kpaintApp;
 
@@ -27,22 +27,17 @@ AreaSelect::~AreaSelect()
 
 void AreaSelect::activating()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "AreaSelect::activating() hook called\n");
-#endif
+  KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::activating() hook called\n");
   canvas->setCursor(crossCursor);
 }
 
 void AreaSelect::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "AreaSelect::mousePressEvent() handler called\n");
-#endif
+  KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "AreaSelect: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_WARN, 3000, "AreaSelect: Warning Left Button press received when pressed\n");
     }
     else {
       startx= (e->pos()).x();
@@ -53,7 +48,7 @@ void AreaSelect::mousePressEvent(QMouseEvent *e)
     } 
   }
   if (!isActive()) {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+    KDEBUG(KDEBUG_WARN, 3000, "AreaSelect: Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -86,7 +81,7 @@ void AreaSelect::mouseMoveEvent(QMouseEvent *e)
     }
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 
@@ -96,9 +91,7 @@ void AreaSelect::mouseReleaseEvent(QMouseEvent *e)
   QPainter paint;
   QWMatrix m;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "AreaSelect::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "AreaSelect::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == LeftButton)) {
     x= (e->pos()).x();
@@ -124,7 +117,7 @@ void AreaSelect::mouseReleaseEvent(QMouseEvent *e)
     canvas->repaint(0);
   }
   else {
-    fprintf(stderr, "Warning event received when inactive (ignoring)\n");
+KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }
 }
 

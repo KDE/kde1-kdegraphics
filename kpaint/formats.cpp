@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <qimage.h>
 #include "formats.h"
 #include "gif.h"

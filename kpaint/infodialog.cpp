@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <string.h>
 #include <qlabel.h>
 #include <qpushbt.h>

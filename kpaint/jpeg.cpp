@@ -7,6 +7,7 @@
 //
 // $Id$
 
+#include <kdebug.h>
 #include<stdio.h>
 #include<assert.h>
 
@@ -30,7 +31,7 @@ extern "C"
 
 void write_jpeg_jfif(QImageIO *)
 {
-    fprintf(stderr, "JPEG saving unimplemented.\n");
+KDEBUG(KDEBUG_INFO, 3000, "JPEG saving unimplemented.\n");
     return;
 }
 
@@ -237,11 +238,11 @@ int qimageio_fill_input_buffer(j_decompress_ptr cinfo)
     if (nbytes <= 0) {
 
 	if (ptr->start_of_file) {
-	    fprintf(stderr, "error: file empty.\n");
+KDEBUG(KDEBUG_ERROR, 3000, "error: file empty.\n");
 
 	    return FALSE;
 	}
-	fprintf(stderr, "warning: premature EOF in file.\n");
+KDEBUG(KDEBUG_WARN, 3000, "warning: premature EOF in file.\n");
 
 	/* Insert a fake EOI marker */
 	ptr->buffer[0] = (JOCTET) 0xFF;

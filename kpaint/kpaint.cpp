@@ -1,7 +1,7 @@
 // $Id$
 
-#define KPDEBUG
 
+#include <kdebug.h>
 #include <string.h>
 #include <qwidget.h>
 #include <qfiledlg.h>
@@ -27,9 +27,7 @@
 #include "formatdialog.h"
 #include "formats.h"
 
-#ifdef HAVE_UNISTD_H
 #include <unistd.h>
-#endif
 #include <time.h>
 
 extern MyApp *kpaintApp;
@@ -81,15 +79,11 @@ KPaint::KPaint(const char *url_) : KTopLevelWidget()
     int colon= u.find(':');
 
     if (colon != -1) {
-#ifdef KPDEBUG
-    fprintf(stderr, "KPaint:: initialising from URL %s\n", url_);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint:: initialising from URL %s\n", url_);
       loadRemote(url_);
     }
     else {
-#ifdef KPDEBUG
-    fprintf(stderr, "KPaint:: initialising from file %s\n", url_);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint:: initialising from file %s\n", url_);
       loadLocal(url_);
     }
   }
@@ -145,9 +139,7 @@ void KPaint::closeEvent(QCloseEvent *e)
       proto= u.protocol();
 
       if (proto != "file") {
-#ifdef KPDEBUG
-	fprintf(stderr, "KPaint: Deleting temp \'%s\'\n", filename.data());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp \'%s\'\n", filename.data());
 	unlink(filename);
       }
     }
@@ -438,13 +430,11 @@ bool KPaint::loadRemote(const char *url_)
 {
   KURL u(url_);
 
-#ifdef KPDEBUG
-  fprintf(stderr, "loadRemote: %s\n", url_);
-  fprintf(stderr, "loadRemote: KURL=\"%s\"\n", (const char *) u.url());
-  fprintf(stderr, "loadRemote: protocol=\"%s\"\n", u.protocol());
-  fprintf(stderr, "loadRemote: host=\"%s\"\n", u.host());
-  fprintf(stderr, "loadRemote: path=\"%s\"\n", u.path());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: %s\n", url_);
+KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: KURL=\"%s\"\n", (const char *) u.url());
+KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: protocol=\"%s\"\n", u.protocol());
+KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: host=\"%s\"\n", u.host());
+KDEBUG1(KDEBUG_INFO, 3000, "loadRemote: path=\"%s\"\n", u.path());
 
   if (u.isMalformed()) {
     KMsgBox::message(0, klocale->translate("KPaint: Malformed URL"),
@@ -457,9 +447,7 @@ bool KPaint::loadRemote(const char *url_)
 
   // Is it a local file?
   if (strcmp(u.protocol(), "file") == 0) {
-#ifdef KPDEBUG
-    fprintf(stderr, "Local file:%s\n",u.path());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Local file:%s\n",u.path());
 
     return loadLocal(u.path());
   }
@@ -523,10 +511,7 @@ void KPaint::KFMgetFinished()
   delete kfm;
   kfm= NULL;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "Fetch completed, loading %s as %s...\n", (const char *) filename,
-	  (const char *) url);
-#endif
+KDEBUG2(KDEBUG_INFO, 3000, "Fetch completed, loading %s as %s...\n", (const char *) filename, (const char *) url);
 
   filename_= filename;
   url_= url;
@@ -574,9 +559,7 @@ bool KPaint::saveRemote(const char *url_)
 
   // Is it a local file?
   if (strcmp(u.protocol(), "file") == 0) {
-#ifdef KPDEBUG
-    fprintf(stderr, "Save file:%s\n", u.path());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "Save file:%s\n", u.path());
 
     return saveLocal(u.path(), url_);
   }
@@ -625,9 +608,7 @@ void KPaint::fileNew()
   QString proto;
   canvasSizeDialog sz(0, klocale->translate("Canvas Size"));
 
-#ifdef KPDEBUG
-  fprintf(stderr, "File New\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "File New\n");
 
   if (sz.exec()) {
     if (!url.isEmpty()) {
@@ -637,9 +618,7 @@ void KPaint::fileNew()
 	proto= u.protocol();
 
 	if (proto != "file") {
-#ifdef KPDEBUG
-	  fprintf(stderr, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
 	  unlink(filename);
 	}
       }
@@ -669,9 +648,7 @@ void KPaint::fileOpen()
 {
   QString name;
 
-#ifdef KPDEBUG
-    fprintf(stderr, "fileOpen()\n");
-#endif	  
+KDEBUG(KDEBUG_INFO, 3000, "fileOpen()\n");
     //    name=QFileDialog::getOpenFileName(0, formatMngr->allImagesGlob(), this);
     name=QFileDialog::getOpenFileName(0, "*", this);
     if (!name.isNull()) {
@@ -697,9 +674,7 @@ void KPaint::fileSaveAs()
   QString newfilename;
   QString proto;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "fileSaveAsCommand");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "fileSaveAsCommand");
 
   // get the glob for the current format
   //  newfilename= QFileDialog::getSaveFileName(0,
@@ -709,9 +684,7 @@ void KPaint::fileSaveAs()
   					    "*",
   					    this);
 
-#ifdef KPDEBUG
-  fprintf(stderr, ": %s\n",  newfilename.data());
-#endif	  
+KDEBUG1(KDEBUG_INFO, 3000, ": %s\n",  newfilename.data());
 
   if (!newfilename.isNull()) {
     if (!url.isEmpty()) {
@@ -721,9 +694,7 @@ void KPaint::fileSaveAs()
 	proto= u.protocol();
 
 	if (proto != "file") {
-#ifdef KPDEBUG
-	  fprintf(stderr, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
 	  unlink(filename);
 	}
       }
@@ -743,13 +714,9 @@ void KPaint::fileSaveAs()
 void KPaint::fileFormat()
 {
   formatDialog dlg(format);
-#ifdef KPDEBUG
-    fprintf(stderr, "fileFormat() %s\n", (const char *) format);
-#endif	  
+KDEBUG1(KDEBUG_INFO, 3000, "fileFormat() %s\n", (const char *) format);
     if (dlg.exec()) {
-      fprintf(stderr, "Set format to %s\n",
-	      dlg.fileformat->text(dlg.fileformat->currentItem()));
-
+KDEBUG1(KDEBUG_INFO, 3000, "Set format to %s\n", dlg.fileformat->text(dlg.fileformat->currentItem()));
       
       format= dlg.fileformat->text(dlg.fileformat->currentItem());
       filename.replace(QRegExp("\\..+$"), "");
@@ -763,9 +730,7 @@ void KPaint::fileExit()
 {
   QString proto;
 
-#ifdef KPDEBUG
-    fprintf(stderr, "fileExit()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "fileExit()\n");
 
     if (exit()) {
       // Delete any temp files from the image
@@ -776,9 +741,7 @@ void KPaint::fileExit()
 	  proto= u.protocol();
 	  
 	  if (proto != "file") {
-#ifdef KPDEBUG
-	    fprintf(stderr, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
 	    unlink(filename);
 	  }
 	}
@@ -789,9 +752,7 @@ void KPaint::fileExit()
 
 void KPaint::newWindow()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "newWindow()\n");
-#endif	  
+KDEBUG(KDEBUG_INFO, 3000, "newWindow()\n");
    KPaint *kp;
    
    kp= new KPaint();
@@ -800,9 +761,7 @@ void KPaint::newWindow()
 
 void KPaint::closeWindow()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "closeWindow()\n");
-#endif	  
+KDEBUG(KDEBUG_INFO, 3000, "closeWindow()\n");
 
     close();
 }
@@ -811,9 +770,7 @@ void KPaint::fileOpenURL()
 {
   QString proto;
 
-#ifdef KPDEBUG
-  fprintf(stderr, "fileOpenURL()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "fileOpenURL()\n");
 
   // Get the URL to open
   DlgLocation l( klocale->translate("Open Location:"), url, this );
@@ -829,9 +786,7 @@ void KPaint::fileOpenURL()
 	proto= u.protocol();
 
 	if (proto != "file") {
-#ifdef KPDEBUG
-	  fprintf(stderr, "KPaint: Deleting temp file \'%s\'\n", filename.data());
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'\n", filename.data());
 	  unlink(filename);
 	}
       }
@@ -840,18 +795,14 @@ void KPaint::fileOpenURL()
     // If the request was sent ok
     if (loadRemote(n)) {
       // Lock this window
-#ifdef KPDEBUG
-      fprintf(stderr, "Lock the window!\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "Lock the window!\n");
     }
   }
 }
 
 void KPaint::fileSaveAsURL()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "fileSaveAsURL(): %s\n", (const char *) url);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "fileSaveAsURL(): %s\n", (const char *) url);
 
   // Get the URL to save to
   DlgLocation l( klocale->translate("Save to Location:"), url, this );
@@ -866,44 +817,39 @@ void KPaint::fileSaveAsURL()
 // Edit
 void KPaint::editCopy()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editCopy()\n");
-#endif	  
-    kpaintApp->clipboard_= c->selectionData();
+  KDEBUG(KDEBUG_INFO, 3000, "editCopy()\n");
+  kpaintApp->clipboard_= c->selectionData();
 }
 
 void KPaint::editCut()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editCut()\n");
-#endif	  
-    kpaintApp->clipboard_= c->selectionData();
+  KDEBUG(KDEBUG_INFO, 3000, "editCut()\n");
+  kpaintApp->clipboard_= c->selectionData();
 }
 
 void KPaint::editPaste()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editPaste()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "editPaste()\n");
 }
 
 void KPaint::editPasteImage()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "editPasteImage()\n");
-#endif
+  KDEBUG(KDEBUG_INFO, 3000, "editPasteImage()\n");
   KPaint *kp;
+  QPixmap *p;
 
-  kp= new KPaint();
-  kp->setPixmap(kpaintApp->clipboard_);
-  kp->show();
+  if ((kpaintApp->clipboard_) != 0) {
+    p= new QPixmap(*(kpaintApp->clipboard_));
+    CHECK_PTR(p);
+    kp= new KPaint();
+    kp->setPixmap(p);
+    kp->show();
+  }
 }
 
 void KPaint::editZoomIn()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editZoomIn()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "editZoomIn()\n");
   if (zoom >= 100) {
     zoom= zoom+100;
     if (zoom > 1000)
@@ -929,9 +875,7 @@ void KPaint::editZoomIn()
 
 void KPaint::editZoomOut()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "editZoomOut()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "editZoomOut()\n");
   if (zoom > 100) {
     zoom= zoom-100;
     c->setZoom(zoom);
@@ -957,16 +901,12 @@ void KPaint::editZoomOut()
 
 void KPaint::editMask()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editMask()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "editMask()\n");
 }
 
 void KPaint::editOptions()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "editOptions()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "editOptions()\n");
     kKeys->configureKeys(this);
 }
   
@@ -974,17 +914,13 @@ void KPaint::editOptions()
 void KPaint::imageInfo()
 {
   imageInfoDialog info(c, 0, "Image Information");
-#ifdef KPDEBUG
-  fprintf(stderr, "imageInfo()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "imageInfo()\n");
   info.exec();
 }
 
 void KPaint::imageEditPalette()
 {
-#ifdef KPDEBUG
-    fprintf(stderr, "imageEditPalette()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "imageEditPalette()\n");
     paletteDialog pal(c->pixmap());
 
     if (pal.exec()) {
@@ -995,17 +931,13 @@ void KPaint::imageEditPalette()
 
 void KPaint::imageChangeDepth()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "imageChangeDepth()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
 }
 
 // Tool
 void KPaint::setTool(int t)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "setTool(%d)\n", t);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "setTool(%d)\n", t);
   if (t > 0)
     man->setCurrentTool(t);
   else 
@@ -1014,9 +946,7 @@ void KPaint::setTool(int t)
 
 void KPaint::toolProperties()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "toolProperties()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "toolProperties()\n");
   man->showPropertiesDialog();
 }
 
@@ -1024,9 +954,7 @@ void KPaint::toolProperties()
 // Help
 void KPaint::helpAbout()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "helpAbout()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "helpAbout()\n");
   QString aMessageHeader( klocale->translate( "About" ) );
   aMessageHeader + APPNAME;
 
@@ -1038,9 +966,7 @@ void KPaint::helpContents()
 {
    QString filename(APPNAME "/" APPNAME ".html" );
    QString topic;
-#ifdef KPDEBUG
-    fprintf(stderr, "helpContents()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "helpContents()\n");
    kpaintApp->invokeHTMLHelp(filename, topic);
 }
 
@@ -1048,9 +974,7 @@ void KPaint::helpIndex()
 {
    QString filename(APPNAME "/" APPNAME ".html" );
    QString topic;
-#ifdef KPDEBUG
-    fprintf(stderr, "helpIndex()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "helpIndex()\n");
 
    kpaintApp->invokeHTMLHelp(filename, topic);
 }

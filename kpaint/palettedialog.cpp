@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <qpushbt.h>
 #include <klocale.h>
 #include <kapp.h>

@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <qcursor.h>
@@ -32,9 +33,7 @@ SprayCan::~SprayCan(void)
 
 void SprayCan::activating(void)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "SprayCan::activating() hook called canvas=%p\n", canvas);
-#endif
+KDEBUG1(KDEBUG_INFO, 3000, "SprayCan::activating() hook called canvas=%p\n", canvas);
   drawing= FALSE;
 
   canvas->setCursor(crossCursor);
@@ -50,14 +49,11 @@ void SprayCan::mouseMoveEvent(QMouseEvent *e)
 
 void SprayCan::mousePressEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "SprayCan::mousePressEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mousePressEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {
-      fprintf(stderr,
- 	      "SprayCan: Warning Left Button press received when pressed\n");
+      KDEBUG(KDEBUG_INFO, 3000, "SprayCan: Warning Left Button press received when pressed\n");
     }
     x= (e->pos()).x();
     y= (e->pos()).y();
@@ -72,9 +68,7 @@ void SprayCan::mousePressEvent(QMouseEvent *e)
 
 void SprayCan::mouseReleaseEvent(QMouseEvent *e)
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "SprayCan::mouseReleaseEvent() handler called\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mouseReleaseEvent() handler called\n");
   
   if (isActive() && (e->button() == LeftButton)) {
     if (drawing) {

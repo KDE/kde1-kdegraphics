@@ -1,5 +1,6 @@
 // $Id$
 
+#include <kdebug.h>
 #include <stdio.h>
 #include "kundo.h"
 
@@ -51,9 +52,7 @@ void KUndo::clear()
 
 void KUndo::checksize()
 {
-#ifdef KPDEBUG
-  fprintf(stderr, "KUndo::checksize()\n");
-#endif
+KDEBUG(KDEBUG_INFO, 3000, "KUndo::checksize()\n");
 
   if (infront+behind > maxsize) {
     if (behind > 0) {

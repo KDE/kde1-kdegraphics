@@ -1,3 +1,4 @@
+#include <kdebug.h>
 #include <qcolor.h>
 #include <qtabdlg.h>
 #include <qpushbt.h>
