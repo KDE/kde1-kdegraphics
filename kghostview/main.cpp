@@ -98,7 +98,9 @@ int main( int argc, char **argv )
 		int n = 1;
 		while (KTopLevelWidget::canBeRestored(n)) {
 	    	KGhostview *kg = new KGhostview ();
-			CHECK_PTR( kg );
+		CHECK_PTR( kg );
+		kg->restore(n);
+		n++;
 		}
     } else if (argc == 2) {
 		KGhostview *kg = new KGhostview ();
