@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 1.0\n"
-"POT-Creation-Date: 1998-02-25 18:08+0100\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-06-29 11:00+0200\n"
 "Last-Translator: Kerem ERZURUMLU <kerem@linux.org.tr>\n"
 "Language-Team: Hacettepe Linux Users Group <hacettepe@linux.org.tr>\n"
@@ -13,65 +13,220 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ISO 8859-9\n"
 
-#: app.cpp:45
+#: kpaint.cpp:76 kpaint.cpp:751
+msgid "untitled.gif"
+msgstr "resim.gif"
+
+#: kpaint.cpp:172
+msgid "Unsaved Changes"
+msgstr "Kaydedilmeyen Deðiþiklikler"
+
+#: kpaint.cpp:173
 msgid ""
-"\n"
-"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr "Pencereyi kapatýrsanýz, kaydedilmemiþ deðiþiklikleri kaybedeceksiniz."
+
+#: kpaint.cpp:210
+msgid "New Canvas"
+msgstr "Yeni Pano"
+
+#: kpaint.cpp:213
+msgid "Open File"
+msgstr "Dosya Aç"
+
+#: kpaint.cpp:216
+msgid "Save File"
+msgstr "Kaydet"
+
+#: kpaint.cpp:230 kpaint.cpp:450
+msgid "Zoom In"
+msgstr "Yakýnlaþ"
+
+#: kpaint.cpp:233 kpaint.cpp:451
+msgid "Zoom Out"
+msgstr "Uzaklaþ"
+
+#: kpaint.cpp:430
+msgid "Open Image..."
+msgstr "Resmi Aç ..."
+
+#: kpaint.cpp:431
+msgid "New Image..."
+msgstr "Yeni Resim..."
+
+#: kpaint.cpp:432
+msgid "Save Image"
+msgstr "Resmi Kaydet"
+
+#: kpaint.cpp:433
+msgid "Save Image As..."
+msgstr "Ýsimle Kaydet..."
+
+#: kpaint.cpp:434
+msgid "Image Format..."
+msgstr "Görüntü Türü..."
+
+#: kpaint.cpp:436
+msgid "Open from URL..."
+msgstr "URL'den Aç..."
+
+#: kpaint.cpp:437
+msgid "Save to URL..."
+msgstr "URL'ye Kaydet..."
+
+#: kpaint.cpp:439
+msgid "New Window"
+msgstr "Yeni Pencere"
+
+#: kpaint.cpp:440
+msgid "Close Window"
+msgstr "Pencereyi Kapa"
+
+#: kpaint.cpp:445
+msgid "Copy Region"
+msgstr "Bölgeyi Kopyala"
+
+#: kpaint.cpp:446
+msgid "Cut Region"
+msgstr "Bölgeyi Kes"
+
+#: kpaint.cpp:447
+msgid "Paste Region"
+msgstr "Bölgeyi Yapýþtýr"
+
+#: kpaint.cpp:448
+msgid "Paste As Image"
+msgstr "Görüntü gibi Yapýþtýr"
+
+#: kpaint.cpp:452
+msgid "Mask..."
+msgstr "Maske..."
+
+#: kpaint.cpp:455
+msgid "Information..."
+msgstr "Bilgi..."
+
+#: kpaint.cpp:456
+msgid "Resize..."
+msgstr "Boyutlandýr.."
+
+#: kpaint.cpp:457
+msgid "Edit Palette..."
+msgstr "Palet Ýle Oyna"
+
+#: kpaint.cpp:458
+msgid "Change Colour Depth..."
+msgstr "Renk Çözünürlüðünü Deðiþtir"
+
+#: kpaint.cpp:461
+msgid "Tool Properties..."
+msgstr "Araç Özellikleri..."
+
+#: kpaint.cpp:482
+msgid "Show Tools Toolbar"
+msgstr "Araç Çubuðunu Göster"
+
+#: kpaint.cpp:483
+msgid "Show Commands Toolbar"
+msgstr "Komutlar Çubuðunu Göster"
+
+#: kpaint.cpp:484
+msgid "Show Status Bar"
+msgstr "Durum Çubuðunu Göster"
+
+#: kpaint.cpp:485
+msgid "Save Options"
+msgstr "Seçenekleri Kaydet"
+
+#: kpaint.cpp:494
+msgid "KPaint"
+msgstr "KPaint"
+
+#: kpaint.cpp:495
+msgid " version "
+msgstr ""
+
+#: kpaint.cpp:496
+#, fuzzy
+msgid "(c) "
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 GPL altýndadýr.\n"
+"\n"
+"(c) "
 
-#: app.cpp:46
-msgid "Usage: "
-msgstr "Kullaným: "
+#: kpaint.cpp:505
+msgid "&Image"
+msgstr "&Görüntü"
 
-#: app.cpp:48
-msgid " [url | filename]\n"
-msgstr " [URL | dosya adý]\n"
+#: kpaint.cpp:506
+msgid "&Tool"
+msgstr "&Araç"
 
-#: areaselect.cpp:17
-msgid "Area Selection"
-msgstr "Alan Seçimi"
+#: kpaint.cpp:681
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Dosya açýlamýyor"
 
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Pano Boyu"
+#: kpaint.cpp:682
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Hata: Dosya açýlamadý\n"
+"KPaint belirtilen dosyayý açamadý."
 
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "En:"
+#: kpaint.cpp:690
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Bilinmeyen Tür"
 
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Boy:"
+#: kpaint.cpp:691
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Hata: Bilinmeyen Tür\n"
+"KPaint belirtilen dosyadaki türü anlayamadý yada dosya\n"
+"bozulmuþ."
 
-#: circle.cpp:18 kpaint.cpp:349
-msgid "Circle"
-msgstr "Daire"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Resim Derinliði:"
-
-#: depthdialog.cpp:24
-msgid "1 (Bitmap)"
-msgstr "1 (Bitmap)"
-
-#: depthdialog.cpp:25
-msgid "8 (256 Colour)"
-msgstr "8 (256 Renk)"
-
-#: depthdialog.cpp:26
-msgid "24 (True Colour)"
-msgstr "24 (Gerçek Renkler)"
-
-#: ellipse.cpp:16 kpaint.cpp:348
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
 msgstr "Elips"
 
-#: formatdialog.cpp:21
-msgid "File Format:"
-msgstr "Dosya Türü:"
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Daire"
+
+#: manager.cpp:69 pen.cpp:17
+msgid "Pen"
+msgstr "Kalem"
+
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Çizgi"
+
+#: manager.cpp:73 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Dikdörtgen"
+
+#: manager.cpp:75
+msgid "Round Angle"
+msgstr "Yuvarlak Açý"
+
+#: manager.cpp:77 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Püskürtme"
+
+#: manager.cpp:79
+msgid "Text"
+msgstr ""
+
+#: manager.cpp:81
+msgid "Area Select"
+msgstr "Alan Seçimi"
+
+#: manager.cpp:88
+msgid "Tool Properties"
+msgstr "Araç Özellikleri"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
@@ -89,224 +244,29 @@ msgstr "Görüntü Geniþliði:"
 msgid "Image Height:"
 msgstr "Görüntü Yüksekliði:"
 
-#: kpaint.cpp:52 kpaint.cpp:603
-msgid "untitled.gif"
-msgstr "resim.gif"
-
-#: kpaint.cpp:124
-msgid "Unsaved Changes"
-msgstr "Kaydedilmeyen Deðiþiklikler"
-
-#: kpaint.cpp:125
-msgid ""
-"You have unsaved changes, you will loose them if you close this window now."
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
 msgstr ""
-"Pencereyi kapatýrsanýz, kaydedilmemiþ deðiþiklikleri kaybedeceksiniz."
-
-
-#: kpaint.cpp:160
-msgid "New Canvas"
-msgstr "Yeni Pano"
-
-#: kpaint.cpp:163
-msgid "Open File"
-msgstr "Dosya Aç"
-
-#: kpaint.cpp:166
-msgid "Save File"
-msgstr "Kaydet"
-
-#: kpaint.cpp:180 kpaint.cpp:332
-msgid "Zoom In"
-msgstr "Yakýnlaþ"
-
-#: kpaint.cpp:183 kpaint.cpp:333
-msgid "Zoom Out"
-msgstr "Uzaklaþ"
-
-#: kpaint.cpp:312
-msgid "Open Image..."
-msgstr "Resmi Aç ..."
-
-#: kpaint.cpp:313
-msgid "New Image..."
-msgstr "Yeni Resim..."
-
-#: kpaint.cpp:314
-msgid "Save Image"
-msgstr "Resmi Kaydet"
-
-#: kpaint.cpp:315
-msgid "Save Image As..."
-msgstr "Ýsimle Kaydet..."
-
-#: kpaint.cpp:316
-msgid "Image Format..."
-msgstr "Görüntü Türü..."
-
-#: kpaint.cpp:318
-msgid "Open from URL..."
-msgstr "URL'den Aç..."
-
-#: kpaint.cpp:319
-msgid "Save to URL..."
-msgstr "URL'ye Kaydet..."
-
-#: kpaint.cpp:321
-msgid "New Window"
-msgstr "Yeni Pencere"
-
-#: kpaint.cpp:322
-msgid "Close Window"
-msgstr "Pencereyi Kapa"
-
-#: kpaint.cpp:324
-msgid "Exit"
-msgstr "Çýkýþ"
-
-#: kpaint.cpp:327
-msgid "Copy Region"
-msgstr "Bölgeyi Kopyala"
-
-#: kpaint.cpp:328
-msgid "Cut Region"
-msgstr "Bölgeyi Kes"
-
-#: kpaint.cpp:329
-msgid "Paste Region"
-msgstr "Bölgeyi Yapýþtýr"
-
-#: kpaint.cpp:330
-msgid "Paste As Image"
-msgstr "Görüntü gibi Yapýþtýr"
-
-#: kpaint.cpp:334
-msgid "Mask..."
-msgstr "Maske..."
-
-#: kpaint.cpp:337
-msgid "Information..."
-msgstr "Bilgi..."
-
-#: kpaint.cpp:338
-msgid "Resize..."
-msgstr "Boyutlandýr.."
-
-#: kpaint.cpp:339
-msgid "Edit Palette..."
-msgstr "Palet Ýle Oyna"
-
-#: kpaint.cpp:340
-msgid "Change Colour Depth..."
-msgstr "Renk Çözünürlüðünü Deðiþtir"
-
-#: kpaint.cpp:343
-msgid "Tool Properties..."
-msgstr "Araç Özellikleri..."
-
-#: kpaint.cpp:345 pen.cpp:17
-msgid "Pen"
-msgstr "Kalem"
-
-#: kpaint.cpp:346 line.cpp:19
-msgid "Line"
-msgstr "Çizgi"
-
-#: kpaint.cpp:347 rectangle.cpp:17
-msgid "Rectangle"
-msgstr "Dikdörtgen"
-
-#: kpaint.cpp:350 spraycan.cpp:19
-msgid "Spray Can"
-msgstr "Püskürtme"
-
-#: kpaint.cpp:351
-msgid "Area Select"
-msgstr "Alan Seçimi"
-
-#: kpaint.cpp:352
-msgid "Round Angle"
-msgstr "Yuvarlak Açý"
-
-#: kpaint.cpp:357
-msgid "Show Tools Toolbar"
-msgstr "Araç Çubuðunu Göster"
-
-#: kpaint.cpp:358
-msgid "Show Commands Toolbar"
-msgstr "Komutlar Çubuðunu Göster"
-
-#: kpaint.cpp:359
-msgid "Show Status Bar"
-msgstr "Durum Çubuðunu Göster"
-
-#: kpaint.cpp:360
-msgid "Save Options"
-msgstr "Seçenekleri Kaydet"
-
-#: kpaint.cpp:369
-msgid "KPaint"
-msgstr "KPaint"
-
-#: kpaint.cpp:371
-msgid ""
-"\n"
-"\n"
-"(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
-
-#: kpaint.cpp:380
-msgid "&Image"
-msgstr "&Görüntü"
-
-#: kpaint.cpp:381
-msgid "&Tool"
-msgstr "&Araç"
-
-#: kpaint.cpp:533
-msgid "KPaint: Could not open file"
-msgstr "KPaint: Dosya açýlamýyor"
-
-#: kpaint.cpp:534
-msgid ""
-"Error: Could not open file\n"
-"KPaint could not open the specified file."
-msgstr ""
-"Hata: Dosya açýlamadý\n"
-"KPaint belirtilen dosyayý açamadý."
-
-#: kpaint.cpp:542
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: Bilinmeyen Tür"
-
-#: kpaint.cpp:543
-msgid ""
-"Error: Unknown Format\n"
-"KPaint does not understand the format of the specified file\n"
-"or the file is corrupt."
-msgstr ""
-"Hata: Bilinmeyen Tür\n"
-"KPaint belirtilen dosyadaki türü anlayamadý yada dosya\n"
-"bozulmuþ."
-
-#: kpaint.cpp:745
-msgid "Open Location:"
-msgstr "Konumu Aç:"
-
-#: kpaint.cpp:769
-msgid "Save to Location:"
-msgstr "Konuma Kaydet:"
-
-#: manager.cpp:69
-msgid "Tool Properties"
-msgstr "Araç Özellikleri"
 
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Renkler Ýle Oyna"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Dosya Türü:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Pano Boyu"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "En:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Boy:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -319,6 +279,10 @@ msgstr "Doldurma Özellikleri"
 #: properties.cpp:70 properties.cpp:125
 msgid "Fill Pattern:"
 msgstr "Doldurma Deseni:"
+
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr ""
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"
@@ -400,6 +364,73 @@ msgstr "Birleþtirme Biçimi:"
 msgid "Set Line Colour..."
 msgstr "Çizgi Rengi..."
 
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Alan Seçimi"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Resim Derinliði:"
+
+#: depthdialog.cpp:24
+#, fuzzy
+msgid "1 (2 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:25
+#, fuzzy
+msgid "4 (16 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:26
+#, fuzzy
+msgid "8 (256 Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:27
+#, fuzzy
+msgid "15 (32k Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:28
+#, fuzzy
+msgid "16 (64k Colours)"
+msgstr "8 (256 Renk)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (Gerçek Renkler)"
+
+#: depthdialog.cpp:30
+#, fuzzy
+msgid "32 (True Colour)"
+msgstr "24 (Gerçek Renkler)"
+
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Yuvarlak açý"
+
+#~ msgid ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+#~ msgstr ""
+#~ "\n"
+#~ "(c) Richard J. Moore 1997 GPL altýndadýr.\n"
+
+#~ msgid "Usage: "
+#~ msgstr "Kullaným: "
+
+#~ msgid " [url | filename]\n"
+#~ msgstr " [URL | dosya adý]\n"
+
+#~ msgid "1 (Bitmap)"
+#~ msgstr "1 (Bitmap)"
+
+#~ msgid "Exit"
+#~ msgstr "Çýkýþ"
+
+#~ msgid "Open Location:"
+#~ msgstr "Konumu Aç:"
+
+#~ msgid "Save to Location:"
+#~ msgstr "Konuma Kaydet:"
