@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kview\n"
+"POT-Creation-Date: 1998-10-15 16:02+0200\n"
+"PO-Revision-Date: 1998-10-15 16:20+0200\n"
+"Last-Translator: Stephan Kulow <coolo@kde.org>\n"
+
+#: viewer.cpp:74
+msgid "no image loaded"
+msgstr "kein Bild geladen"
+
+#: viewer.cpp:82 viewer.cpp:518
+msgid "Ready"
+msgstr "Fertig"
+
+#: viewer.cpp:180
+msgid "Net saving not yet implemented"
+msgstr "Speichern über's Internet (noch) nicht implementiert"
+
+#: viewer.cpp:188
+#, c-format
+msgid "%s: written"
+msgstr "%s: geschrieben"
+
+#: viewer.cpp:264
+msgid "About KView"
+msgstr "Über KView"
+
+#: viewer.cpp:272 viewer.cpp:289
+msgid "&Zoom"
+msgstr "&Zoom"
+
+#: viewer.cpp:273 viewer.cpp:290
+msgid "&Transform"
+msgstr "&Transformieren"
+
+#: viewer.cpp:274 viewer.cpp:291
+msgid "To &Desktop"
+msgstr "Auf &Desktop"
+
+#: viewer.cpp:276
+msgid "Fi&lter"
+msgstr "Fi&lter"
+
+#: viewer.cpp:293
+msgid "F&ilter"
+msgstr "F&ilter"
+
+#: viewer.cpp:297
+msgid "&Images"
+msgstr "&Bilder"
+
+#: viewer.cpp:313
+msgid "&Save As..."
+msgstr "&Speichern unter"
+
+#: viewer.cpp:319
+msgid "&Full Screen"
+msgstr "&Voller Bildschirm"
+
+#: viewer.cpp:322
+#, c-format
+msgid "Zoom &in 10%"
+msgstr "10% ver&größern"
+
+#: viewer.cpp:323
+#, c-format
+msgid "Zoom &out 10%"
+msgstr "10% ver&kleinern"
+
+#: viewer.cpp:324
+#, c-format
+msgid "&Zoom in 50%"
+msgstr "50% verg&rößern"
+
+#: viewer.cpp:325
+#, c-format
+msgid "Zoo&m out 50%"
+msgstr "50% verk&leinern"
+
+#: viewer.cpp:327
+msgid "&Reset"
+msgstr "&Zurücksetzen"
+
+#: viewer.cpp:330
+msgid "Rotate &clockwise"
+msgstr "&Rechtsherum rotieren"
+
+#: viewer.cpp:332
+msgid "Rotate &anti-clockwise"
+msgstr "&Linksherum rotieren"
+
+#: viewer.cpp:335
+msgid "Flip &vertical"
+msgstr "&Vertikal spiegeln"
+
+#: viewer.cpp:337
+msgid "Flip &horizontal"
+msgstr "&Horizontal spiegeln"
+
+#: viewer.cpp:340
+msgid "&Tile"
+msgstr "&Teilen"
+
+#: viewer.cpp:341
+msgid "&Max"
+msgstr "&Maximum"
+
+#: viewer.cpp:342
+msgid "Max&pect"
+msgstr ""
+
+#: viewer.cpp:345
+msgid "&List..."
+msgstr "&Liste..."
+
+#: viewer.cpp:349
+msgid "&Previous"
+msgstr "&Voriger"
+
+#: viewer.cpp:350
+msgid "&Next"
+msgstr "&Nächster"
+
+#: viewer.cpp:352
+msgid "&Slideshow On/Off"
+msgstr "&Diashow An/Aus"
+
+#: viewer.cpp:357
+msgid "&About KView..."
+msgstr "&Über KView..."
+
+#: viewer.cpp:404 viewer.cpp:411
+msgid "Existing transfer not yet complete."
+msgstr "Angefangene Übertragung noch nicht abgeschlossen."
+
+#: viewer.cpp:425
+msgid "Couldn't get temporary transfer name."
+msgstr "Es konnte kein temporärer Dateiname gefunden werden."
+
+#: viewer.cpp:536
+msgid "Loading..."
+msgstr "Lade..."
+
+#: colour.cpp:25
+msgid "Brightening.."
+msgstr "Heller machen..."
+
+#: colour.cpp:39
+msgid "Intensity:Brighten"
+msgstr "Intensität:Heller"
+
+#: colour.cpp:55
+msgid "Darkening.."
+msgstr "Dunkler machen..."
+
+#: colour.cpp:68
+msgid "Intensity:Darken"
+msgstr "Intensität:Dunkler"
+
+#: colour.cpp:102
+msgid "Converting to Greyscale.."
+msgstr "Konvertierung in Grauskalierung..."
+
+#: colour.cpp:131
+msgid "Greyscale"
+msgstr "Grauskalierung"
+
+#: colour.cpp:145
+msgid "Smoothing.."
+msgstr "Glätten..."
+
+#: colour.cpp:211
+msgid "Smooth"
+msgstr "Glatt"
+
+#: ilistdlg.cpp:55
+msgid "Prev"
+msgstr "Voriger"
+
+#: ilistdlg.cpp:59
+msgid "Shu&ffle"
+msgstr "&Zufall"
+
+#: ilistdlg.cpp:64
+msgid "Next"
+msgstr "Nächster"
+
+#: ilistdlg.cpp:68
+msgid "Start slide"
+msgstr "Diashow starten"
+
+#: ilistdlg.cpp:73
+msgid "Interval.."
+msgstr "Intervall..."
+
+#: ilistdlg.cpp:78
+msgid "Loop"
+msgstr "Schleife"
+
+#: ilistdlg.cpp:86
+msgid "Image List"
+msgstr "Bilder-Liste"
+
+#: ilistdlg.cpp:263
+msgid "Stop &slide"
+msgstr "Diashow &stoppen"
+
+#: ilistdlg.cpp:271
+msgid "Start &slide"
+msgstr "Diashow &starten"
+
+#: ilistdlg.cpp:334
+msgid "Time between slides (sec):"
+msgstr "Zeit zwischen den Bildern (sec):"
