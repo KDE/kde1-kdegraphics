@@ -405,7 +405,8 @@ msgstr "Houve um erro ao remover os arquivos temporários da cópia de segurança\n
 msgid ""
 "We've got a KFM job running.\n"
 "Please wait."
-msgstr "Há uma tarefa  do gerente de arquivos KDE sendo executada.\"
+msgstr ""
+"Há uma tarefa  do gerente de arquivos KDE sendo executada.\n"
 "Por favor aguarde!"
 
 #: kicon.cpp:95
@@ -425,7 +426,9 @@ msgstr "O editor de ícones KDE encontrou um arquivo recuperado para:\n"
 msgid ""
 "\n"
 "Do you want to open this?"
-msgstr "Deseja abrir este arquivo?"
+msgstr ""
+"\n"
+"Deseja abrir este arquivo?"
 
 #: kicon.cpp:117 kicon.cpp:264 kicon.cpp:272
 msgid "Information"
@@ -439,8 +442,9 @@ msgstr "O arquivo:\n"
 msgid ""
 "The Icon Editor is already downloading a non-local file.\n"
 "Please wait.\n"
-msgstr "O Editor de Ícones está transferindo um arquivo de um site remoto.\n"
-"Por favor aguarde.\n
+msgstr ""
+"O Editor de Ícones está transferindo um arquivo de um site remoto.\n"
+"Por favor aguarde.\n"
 
 #: kicon.cpp:168
 msgid "Couldn't initiate KFM!"
