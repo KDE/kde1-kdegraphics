@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1999-04-12 02:16+0200\n"
+"POT-Creation-Date: 1999-01-25 01:42+0100\n"
 "PO-Revision-Date: 1998-05-06 12:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt\n"
@@ -35,6 +35,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 #: kfax.cpp:402
 msgid "Help page"
@@ -142,19 +148,19 @@ msgstr "Ir para a página ..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "w: 00000 h: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Res: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Tipo: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "P:XXXdeXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -261,33 +267,33 @@ msgstr "Precisa de abrir uma página de fax primeiro."
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "P.%s de %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "L: %s A: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Res: %s"
 
-#: kfax.cpp:2416 options.cpp:119
+#: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
 msgstr "Fina"
 
-#: kfax.cpp:2416 options.cpp:124
+#: kfax.cpp:2416 options.cpp:74
 msgid "Normal"
 msgstr "Normal"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Tipo: TIff "
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Tipo: Raw "
 
 #: kfax.cpp:2738
 msgid ""
@@ -364,50 +370,50 @@ msgstr ""
 "Tem de inserir um comando de impressão como \"lpr\"\n"
 " se deseja imprimir para uma impressora."
 
-#: options.cpp:56
+#: options.cpp:54
 msgid "KFax Options Dialog"
 msgstr "Diálogo de Opções do KFax"
 
-#: options.cpp:74
-msgid "Display Options:"
-msgstr "Opções de Visualização:"
-
-#: options.cpp:80
-msgid "Landscape"
-msgstr "Paisagem"
-
-#: options.cpp:85
-msgid "Upside Down"
-msgstr "Ao Contrário"
-
-#: options.cpp:90
-msgid "Invert"
-msgstr "Invertido"
-
-#: options.cpp:109
+#: options.cpp:64
 msgid "Raw Fax Resolution:"
 msgstr "Resolução do Fax:"
 
-#: options.cpp:114 options.cpp:222
+#: options.cpp:68 options.cpp:149
 msgid "Auto"
 msgstr "Auto"
 
-#: options.cpp:144
+#: options.cpp:81
+msgid "Display Options:"
+msgstr "Opções de Visualização:"
+
+#: options.cpp:85
+msgid "Landscape"
+msgstr "Paisagem"
+
+#: options.cpp:89
+msgid "Upside Down"
+msgstr "Ao Contrário"
+
+#: options.cpp:93
+msgid "Invert"
+msgstr "Invertido"
+
+#: options.cpp:102
 msgid "Raw Fax Data are:"
 msgstr "Dados do Fax são:"
 
-#: options.cpp:150
+#: options.cpp:106
 msgid "LS-Bit first"
 msgstr "LS-Bit primeiro"
 
-#: options.cpp:168
+#: options.cpp:114
 msgid "Raw Facsimili are:"
 msgstr "Fax são:"
 
-#: options.cpp:202
+#: options.cpp:135
 msgid "Raw Fax width:"
 msgstr "Largura do Fax:"
 
-#: options.cpp:212
+#: options.cpp:142
 msgid "height:"
 msgstr "altura:"
