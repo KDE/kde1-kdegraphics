@@ -59,7 +59,9 @@ WViewPort::WViewPort(const char *file=0, QWidget *parent=0,
 			     SLOT(fitWindowToPixmap()));
 	lb_popup->insertItem("Fit pixmap size to window size", this,
 			     SLOT(fitPixmapToWindow()));
-	installEventFilter( this );
+
+	pixcache.clear();
+	pixcache.setCacheLimit(1024);
 
 	image = new QPixmap();
 	imagefile="";
@@ -87,9 +89,28 @@ bool WViewPort::load(const char *filename)
 			QColor::destroyAllocContext( oldContext );
 
 		oldContext = QColor::enterAllocContext();
-
-		ret=image->load(filename);
-		setPixmap(*image);
+		
+		//ret = pixcache.find(filename);
+		//printf("%s %d\n",filename, (image==NULL)?0:1);
+		ret = FALSE;
+		if (ret==FALSE)
+		  {
+		    //printf("load forced\n");
+		    ret=image->load(filename);
+		    //if (ret==TRUE)
+		    //  pixcache.insert(filename,image);
+		  }
+		else
+		  {
+		    //ret=image->load(filename);
+		    //if (ret==TRUE)
+		    //  pixcache.insert(filename,image);
+		    //image = pixcache.find(filename);
+		    //image = newimage;
+		    //ret = TRUE;
+		  }
+		if (ret=TRUE)
+		  setPixmap(*image);
 
 		QColor::leaveAllocContext();
 		show();
@@ -105,42 +126,22 @@ bool WViewPort::load(const char *filename)
 	if(!ret)
 		imagefile = save;
 
+	
 	return ret;
 }
 
-void WViewPort::mousePressEvent(QMouseEvent *)
+void WViewPort::mousePressEvent(QMouseEvent *e)
 {
-	emit clicked();
-}
-
-bool WViewPort::eventFilter(QObject *o, QEvent *ev){
-
   static QPoint tmp_point;
-
-  (void) o;
-
-  if(ev->type() != Event_MouseButtonPress) 
-    return FALSE;
-    
-  QMouseEvent *e = (QMouseEvent *)ev;
-  /*
-    if(e->button() == RightButton) 
-    {
-      emit showDispManager();
-      return TRUE;
-    }
-  */
   if(e->button() == LeftButton) 
     {
       tmp_point = QCursor::pos();
       if(lb_popup)
 	lb_popup->popup(tmp_point);
-      return TRUE;
     }
-  
-  return FALSE;
-  
+  emit clicked();
 }
+
 
 void WViewPort::scale(float x, float y)
 {

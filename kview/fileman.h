@@ -12,11 +12,15 @@
 #include <qlabel.h>
 #include <qlined.h>
 #include <qpopmenu.h>
+#include <qcombo.h>
+#include <qstring.h>
 
 #include <ktopwidget.h>
 #include <kstatusbar.h>
 #include <ktoolbar.h>
 #include <kmenubar.h>
+
+#include "wview.h"
 
 //IDs for Statusbar entries
 #define ID_S_IMAGE  1
@@ -38,7 +42,7 @@
 #define ID_T_RESIZE     22
 #define ID_T_HELP       23
 
-class WView;
+//class WView;
 
 class Fileman : public KTopLevelWidget
 {
@@ -53,9 +57,10 @@ public:
   
 public slots:
   void listboxClicked(int);
+  void comboboxSelected(int); 
   void sliderChanged(int);
   void updateListbox(int);
-  
+  void updateCombobox();
 
   // toolbar1 action
   void slotNew();
@@ -99,9 +104,10 @@ private:
   //Window elements
   QWidget     *mainwidget;
   QListBox    *listbox;
+  QComboBox   *combobox;
   QSlider     *slider;
   QLineEdit   *lineEdit;
-  QLabel      *textSlow, *textFast;
+  QLabel      *textSlow, *textFast, *textOutput;
   KStatusBar  *statusbar;
   KToolBar    *ktoolbar1,*ktoolbar2;
   int         iktoolbar1,iktoolbar2;

@@ -12,6 +12,7 @@
 #include <qpixmap.h>
 #include <qwmatrix.h>
 #include <qpopmenu.h>
+#include <qpmcache.h>
 
 
 /// 
@@ -25,13 +26,16 @@ class WViewPort : public QLabel
 {
 	Q_OBJECT;
 private:
-		QString imagefile;
-		QPixmap *image;
-		QWMatrix matrix;
-		int	oldContext;
-		QPopupMenu *lb_popup;
-		
-		void fitToPixmap();
+	QString imagefile;
+	QPixmap *image;
+	QWMatrix matrix;
+	int	oldContext;
+	QPopupMenu *lb_popup;
+	
+	static QPixmapCache pixcache;
+
+	void fitToPixmap();
+
 public:
 	///
 	WViewPort(const char *imagefile=0, QWidget *parent=0, 
@@ -82,7 +86,6 @@ protected:
 	void registerFormats();
 	///
 	void mousePressEvent(QMouseEvent *);
-	bool eventFilter (QObject *, QEvent * );
 	
 };
 

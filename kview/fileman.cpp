@@ -9,17 +9,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <qstring.h>
 #include <qpixmap.h>
 
 #include <kurl.h>
 
 #include "fileman.h"
-#include "wview.h"
 #include "fileman.moc"
 
 #include "version.h"
+#include "toolpics.h"
 
+// global (shared) variables
 QStrList fileList;
 
 QList<Fileman> Fileman::manList;
@@ -27,6 +27,8 @@ int            Fileman::manCount;
 
 extern KApplication *theApp;
 extern QList<WView> windowList;
+
+
 
 Fileman::Fileman(const char *name, WView *)
     : KTopLevelWidget(name)
@@ -47,6 +49,7 @@ Fileman::Fileman(const char *name, WView *)
   initToolBar();
   initStatusBar();
   initMainWidget();
+  setFrameBorderWidth (1);
   setView(mainwidget, FALSE);
 
   // fill the listbox
@@ -66,6 +69,7 @@ Fileman::Fileman(const char *name, WView *)
   KDNDDropZone * dropZone = new KDNDDropZone( this , DndURL);
   connect(dropZone, SIGNAL( dropAction( KDNDDropZone *) ), 
 		this, SLOT( slotDropEvent( KDNDDropZone *) ) ); 
+
 }
 
 void Fileman::initMenuBar()
@@ -74,7 +78,7 @@ void Fileman::initMenuBar()
   file->insertItem("New Window",   this, SLOT(slotNew()));
   file->insertItem("Open...",      this, SLOT(slotOpen()));
   file->insertItem("Open URL...",  this, SLOT(slotOpenUrl()));
-  file->insertItem("Close Window", this, SLOT(closeWindow()));
+  file->insertItem("Quit",         this, SLOT(closeWindow()));
 
   help = new QPopupMenu ();
   help->insertItem("About KView",  this, SLOT(aboutKview()));
@@ -97,90 +101,92 @@ void Fileman::initToolBar()
 
   //------------- initialize the first toolbar
   pixmap.load(pixdir+"filenew.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_NEWWINDOW,
+  ktoolbar1->insertButton(pixmap, ID_T_NEWWINDOW,
 			SIGNAL(clicked()), this,
 			SLOT(slotNew()), TRUE,
 			"New Window");
 
   pixmap.load(pixdir+"fileopen.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_OPENFILE,
+  ktoolbar1->insertButton(pixmap, ID_T_OPENFILE,
 			SIGNAL(clicked()), this,
 			SLOT(slotOpen()), TRUE,
 			"open new file");
-  
+  /*
   pixmap.load(pixdir+"reload.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_RELOAD,
+  ktoolbar1->insertButton(pixmap, ID_T_RELOAD,
 			SIGNAL(clicked()), this,
 			SLOT(slotReload()), TRUE,
 			"reload file list");
+  */
+  
   ktoolbar1->insertSeparator();
   
   pixmap.load(pixdir+"viewmag-.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_MINIFY,
+  ktoolbar1->insertButton(pixmap, ID_T_MINIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMin()), TRUE,
 			"shrink -50%");
 
   pixmap.load(pixdir+"viewmag+.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_MAGNIFY,
+  ktoolbar1->insertButton(pixmap, ID_T_MAGNIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMax()), TRUE,
 			"magnify +50%");
   
-  pixmap.load(pixdir+"resize.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_RESIZE,
+  pixmap.loadFromData(resize_xpm_data, resize_xpm_len);
+  ktoolbar1->insertButton(pixmap, ID_T_RESIZE,
 			SIGNAL(clicked()), this,
 			SLOT(slotResize()), TRUE,
 			"size Window");
   ktoolbar1->insertSeparator();
 
   pixmap.load(pixdir+"help.xpm");
-  ktoolbar1->insertItem(pixmap, ID_T_HELP,
+  ktoolbar1->insertButton(pixmap, ID_T_HELP,
 			SIGNAL(clicked()), this,
 			SLOT(invokeHelp()), TRUE,
 			"launch help");
 
   //--------------- initialize the second toolbar
   pixmap.load(pixdir+"start.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_FIRSTPIC,
+  ktoolbar2->insertButton(pixmap, ID_T_FIRSTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(firstClicked()), TRUE,
 			"first pic");
 
   pixmap.load(pixdir+"finish.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_LASTPIC,
+  ktoolbar2->insertButton(pixmap, ID_T_LASTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(lastClicked()), TRUE,
 			"last pic");
   ktoolbar2->insertSeparator();
 
   pixmap.load(pixdir+"back.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_PREVPIC,
+  ktoolbar2->insertButton(pixmap, ID_T_PREVPIC,
 			SIGNAL(clicked()), this,
 			SLOT(prevClicked()), TRUE,
 			"prev pic");
 
   pixmap.load(pixdir+"forward.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_NEXTPIC,
+  ktoolbar2->insertButton(pixmap, ID_T_NEXTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(nextClicked()), TRUE,
 			"next pic");
   ktoolbar2->insertSeparator();
     
-  pixmap.load(pixdir+"diashow.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_STARTSHOW,
+  pixmap.loadFromData(diashow_xpm_data, diashow_xpm_len );
+  ktoolbar2->insertButton(pixmap, ID_T_STARTSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(startShow()), TRUE,
 			"start picture show");
 
-  pixmap.load(pixdir+"random.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_RANDOMSHOW,
+  pixmap.loadFromData(random_xpm_data, random_xpm_len );
+  ktoolbar2->insertButton(pixmap, ID_T_RANDOMSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(randomShow()), TRUE,
 			"stop picture show");
   
   pixmap.load(pixdir+"stop.xpm");
-  ktoolbar2->insertItem(pixmap, ID_T_STOPSHOW,
+  ktoolbar2->insertButton(pixmap, ID_T_STOPSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(stopShow()), TRUE,
 			"stop picture show");
@@ -230,7 +236,13 @@ void Fileman::initMainWidget()
   slider->setSteps(5,10);
   connect(slider,SIGNAL(valueChanged(int)),this,SLOT(sliderChanged(int)));
 
+  textOutput = new QLabel( mainwidget, "OutputDevice");
+  textOutput->setFont( QFont("times",10));
+  textOutput->setText("Output Device");
 
+  combobox = new QComboBox(FALSE, mainwidget, "read Combo");
+  updateCombobox();
+  connect(combobox,SIGNAL(activated(int)),this,SLOT(comboboxSelected(int)));
 }
 
 void Fileman::initStatusBar()
@@ -366,11 +378,18 @@ void Fileman::doPositioning()
 		      mheight-35,
 		      mwidth,
 		      20);
+  textOutput->move(textFast->x(), 
+		   textFast->y()-30);
 
+  combobox->setGeometry(slider->x()+30,
+			slider->y()-30,
+			slider->width(),
+			20);
+  
   listbox->setGeometry(10,
 		       10,
 		       mainwidget->width()-30,
-		       textSlow->y()-25);
+		       combobox->y()-25);
 }
 
 
@@ -440,6 +459,31 @@ void Fileman::updateListbox(int job)
   checkValidButtons();
 }
 
+void Fileman::updateCombobox()
+{
+  WView *window;
+  QString inserttext;
+  int i=0,active=0;
+  combobox->clear();
+  for (window=windowList.first();
+       window != 0;
+       window=windowList.next())
+    {
+      i++;
+      inserttext.sprintf("Window %d",i);
+      combobox->insertItem(inserttext.data(),-1);
+      if (window==imageWindow) 
+	active = i;
+    }
+  if(active>0)
+    combobox->setCurrentItem(active-1);
+  if(i==0) 
+    {
+      combobox->insertItem("(none)",-1);
+      combobox->setCurrentItem(0);
+    }
+}
+
 void Fileman::slotReload()
 {
   char * text;
@@ -471,9 +515,19 @@ void Fileman::sliderChanged(int val)
 
 void Fileman::slotNew()
 {
-  Fileman *man = new Fileman(0L,0L);
-  man->show();
-  man->firstClicked();
+  //Fileman *man = new Fileman(0L,0L);
+  //man->show();
+  //man->firstClicked();
+  imageWindow = new WView(0,0L,0);
+  connect(imageWindow,SIGNAL(doUpdate(int)),
+	  this,SLOT(updateListbox(int)));
+  connect(imageWindow,SIGNAL(closeClicked(int)),
+	  this,SLOT(WViewCloseClicked(int)));
+  connect(imageWindow,SIGNAL(windowClicked(int)),
+	      this,SLOT(comboboxSelected(int)));
+  imageWindow->show();
+  updateCombobox();
+  firstClicked();
 }
 
 void Fileman::slotOpen()
@@ -516,8 +570,8 @@ void Fileman::aboutKview()
   QString text;
   text.sprintf("kview %d.%d.%d \n",VERSIONNR,SUBVERSIONNR,PATCHLEVEL);
   text += "(c) 1996, 1997 by \n";
-  text += "Sirtaj Singh Kang  taj@kde.org\n";
-  text += "Martin Hartig  hartig@mathematik.uni-kl.de";
+  text += "Sirtaj Singh Kang  <taj@kde.org>\n";
+  text += "Martin Hartig  <hartig@mathematik.uni-kl.de>";
   QMessageBox::message("About kview", text.data(),
 			"Ok"); 
 }
@@ -613,6 +667,21 @@ void Fileman::listboxClicked(int item)
   checkValidButtons();
 }
 
+void Fileman::comboboxSelected(int item)
+{
+  if(strcmp(combobox->text(item),"(none)")==0)
+    {
+      imageWindow = 0L;
+    }
+  else
+    {
+      imageWindow = windowList.at(item);
+      updateListbox(1);
+      listbox->centerCurrentItem();
+    }
+  updateCombobox();
+}
+
 
 //---------------------------Show handling
 void Fileman::startShow()
@@ -694,10 +763,10 @@ void Fileman::closeEvent(QCloseEvent *)
 
 void Fileman::closeWindow()
 {
-  if(manCount > 1)
-    delete this;
-  else
-    qApp->quit();
+  //if(manCount > 1)
+  //  delete this;
+  //else
+    theApp->quit();
 }
 
 
@@ -795,19 +864,43 @@ void Fileman::slotLineEdit()
   }
 }
 
-void Fileman::WViewCloseClicked(int)
+void Fileman::WViewCloseClicked(int item)
 {
-  //kview 0.12.0  WView *imagewin;
-  //              printf("REC %d\n",item);
-  //              imagewin = windowList.at(item);
-  disconnect(imageWindow,SIGNAL(doUpdate(int)),
+  WView *window;
+  window = windowList.at(item);
+  
+  //diconnect all old connections
+  disconnect(window,SIGNAL(doUpdate(int)),
 	     this,SLOT(updateListbox(int)));
-  disconnect(imageWindow,SIGNAL(closeClicked(int)),
+  disconnect(window,SIGNAL(closeClicked(int)),
 	     this,SLOT(WViewCloseClicked(int)));
-  //              delete imagewin;
-  delete imageWindow;
-  imageWindow = 0L;
+  disconnect(imageWindow,SIGNAL(windowClicked(int)),
+	      this,SLOT(comboboxSelected(int)));
+
+  //special handling for the current output window
+  if (window == imageWindow)
+    {
+      imageWindow = 0L;
+    }
+
+  // delete imagewindow
+  delete window;
+
+  //notify all other windows to change number
+  for (window=windowList.first();
+       window != 0;
+       window=windowList.next())
+    window->redrawCaption();
+
+  //refill combobox
+  updateCombobox();
+
+  //choose first item in combobox, if there is 
+  //no current output window
+  if (imageWindow==0L)
+    comboboxSelected(0);
 }
+
 
 void Fileman::createWView()
 {
@@ -818,7 +911,10 @@ void Fileman::createWView()
 	      this,SLOT(updateListbox(int)));
       connect(imageWindow,SIGNAL(closeClicked(int)),
 	      this,SLOT(WViewCloseClicked(int)));
+      connect(imageWindow,SIGNAL(windowClicked(int)),
+	      this,SLOT(comboboxSelected(int)));
     }
+  updateCombobox();
 }
 
 void Fileman::slotDropEvent( KDNDDropZone * dropZone ){

@@ -39,4 +39,16 @@ void WViewPort::registerFormats()
 // Add new format handlers here
 //
 
+	QImageIO::defineIOHandler("PS","^%!PS-Adobe-[1-2]", 0,
+		read_ps_epsf, NULL);	
+
+	QImageIO::defineIOHandler("PCX","^\012", 0,
+		read_pcx, NULL);	
+	QImageIO::defineIOHandler("ILBM","^FORM....ILBM", 0,
+		read_ilbm, NULL);	
+
+	QImageIO::defineIOHandler("TGA","^\024", 0,
+		read_tga, NULL);	
+	QImageIO::defineIOHandler("TGA","^\001", 0,
+		read_tga, NULL);	
 }

@@ -2,12 +2,14 @@
 ##
 ## Makefile for the KView image viewer 
 ##
+## $Id$
 
 CXX = @CXX@
 MOC= @MOC@
 
-INCLUDE	= @all_includes@ -I.. 
-LDFLAGS	= @all_libraries@ -lkfm -lkdecore -lkdeui -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
+
+INCLUDE= @all_includes@ -I.. 
+LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
 CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
@@ -32,8 +34,8 @@ LNKPATH = $(prefix)/apps/Utilities
 
 ###### No need to edit below this line #############3
 
-FORMATSRC= jpeg.cpp gif.cpp kpng.cpp
-FORMATOBJ= jpeg.o gif.o kpng.o
+FORMATSRC= jpeg.cpp gif.cpp kpng.cpp eps.cpp netpbm.cpp
+FORMATOBJ= jpeg.o gif.o kpng.o eps.o netpbm.o
 
 ######
 
@@ -67,22 +69,20 @@ kpng.o: kpng.cpp
 
 Makefile: Makefile.in
 	cd .. && CONFIG_FILES=kview/$@ CONFIG_HEADERS= $(SHELL) ./config.status
- 
+
 clean::
 	-rm -f kview $(OBJS) *.moc
 
 install: kview
 	@INSTALL@ -m 755 kview $(BINPATH)
 	@INSTALL@ -d -m 755 $(LNKPATH)
-	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/kview
+	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/KView.kdelnk
 	(cd doc && $(MAKE) install)
-	(cd pics && $(MAKE) install)
 
 uninstall:
 	rm -f $(BINPATH)/kview
 	rm -f $(LNKPATH)/kview.kdelnk
 	(cd doc && $(MAKE) uninstall)
-	(cd pics && $(MAKE) uninstall)
 
 srcdoc:	
 	cd doc; doc++ -j -H -d $(SRCDOCPATH) ../wview.h ../viewport.h \

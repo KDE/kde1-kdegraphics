@@ -28,4 +28,7 @@
 // Include declaration headers for format handlers here (should 
 // only need 2 per format; I've got only one, since no writers yet).
 
+#include "eps.h"
+#include "netpbm.h"
+
 #endif

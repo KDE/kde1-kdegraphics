@@ -101,15 +101,16 @@ public:
 	~WView();
 
   
-  char * getCurrentFilename() { return currentFilename.data(); }
-  void   changeImageName(char * text)
-  {
-    currentFilename = text;
-    currentFilename.detach();
-    setCaption(QString("kview: ")+ currentFilename);
-  }
-  int    getImageWidth() { return imageWidth;}
-  int    getImageHeight() { return imageHeight; }
+	char * getCurrentFilename() { return currentFilename.data(); }
+	void   changeImageName(char * text)
+	  {
+	    currentFilename = text;
+	    currentFilename.detach();
+	    setCaption(QString("kview: ")+ currentFilename);
+	  }
+	void  redrawCaption();
+	int    getImageWidth() { return imageWidth;}
+	int    getImageHeight() { return imageHeight; }
         QString getImageType()  { return imageFormat; } 
 
   /**@name slots
@@ -145,8 +146,6 @@ Check <i>loadSuccess</i> to check image load status.
 
 ///
 	void launchHelp();
-///
-	void aboutBox();
 
 //@}
 
@@ -156,8 +155,6 @@ Check <i>loadSuccess</i> to check image load status.
 //@{
 ///
 	void toggleMenu();
-///
-	void newWindow();
 ///
 	void closeWindow();
 //@}
@@ -210,13 +207,15 @@ signals:
         void doUpdate(int);
 
         void closeClicked(int);
+
+	void windowClicked(int);
 //@}
 
 
 protected:
 
 	///
-	void mousePressEvent(QMouseEvent *);
+	//void mousePressEvent(QMouseEvent *);
 	///
 	void resizeEvent(QResizeEvent *);
   ///

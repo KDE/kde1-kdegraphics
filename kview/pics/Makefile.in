@@ -7,11 +7,6 @@ INSTALL_DATA = @INSTALL@ -m 644
 all:
 
 install:
-	$(INSTALL_DIR) $(PICSDIR)
-	@for i in $(FILES); do \
-	 echo "$(INSTALL_DATA) $$i $(PICSDIR)"; \
-	 $(INSTALL_DATA) "$$i" $(PICSDIR); \
-	done
 
 uninstall:
 	for i in $(FILES); do \

@@ -1,3 +1,4 @@
+
 /////////////////////
 //
 // wview.cpp -- Methods for kview application widget.
@@ -86,12 +87,11 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 	File->insertItem("&Open File..", this, SLOT(loadImage()), CTRL+Key_O);
 	File->insertItem("Open &URL..", this, SLOT(loadURL()), CTRL+Key_U);
 	File->insertSeparator();
-	File->insertItem("&New Window", this, SLOT(newWindow()), CTRL+Key_N);
 	File->insertSeparator();
 	File->insertItem("&Close",this, SLOT(closeWindow()),CTRL+Key_C);
 	File->insertItem("E&xit", qApp, SLOT(quit()), ALT + Key_Q );
-	// Image Menu
 
+	// Image Menu
 	Image->insertItem("&Zoom", ImageZoom);
 	Image->insertItem("&Rotate", ImageRotate);
 	Image->insertItem("To &Desktop", ImageRoot);
@@ -124,10 +124,6 @@ WView::WView(QWidget *parent=0, const char *name=0, WFlags f = 0)
 	// Help Menu
 
 	id= Help->insertItem("&Contents", this, SLOT(launchHelp()));
-//	Help->setItemEnabled(id,false);
-	
-	Help->insertSeparator();
-	Help->insertItem("&About..", this, SLOT(aboutBox()));
 
 
 	// Toggle menu if Image is clicked.
@@ -251,11 +247,6 @@ void WView::loadURL()
 		loadNetFile(result.data());
 }
 
-void WView::aboutBox()
-{
-	QMessageBox::message("About kview", "kview 0.10: Sirtaj Kang"
-			" 1996.", "Ok"); 
-}
 
 void WView::toggleMenu()
 {
@@ -271,6 +262,9 @@ void WView::toggleMenu()
 	  	Scroller->resize(width(),height()-Menu->height());
 		}
    */
+		
+		int item = windowList.findRef(this);
+		emit windowClicked(item);
 }
 
 void WView::sizeWindow()
@@ -280,11 +274,6 @@ void WView::sizeWindow()
 	resize(Viewport->width(), Viewport->height());
 }
 	
-
-void WView::mousePressEvent(QMouseEvent *)
-{
-	toggleMenu();
-}
 
 void WView::resizeEvent(QResizeEvent *)
 {
@@ -389,11 +378,6 @@ WView::~WView(){
 	--winCount;
 }
 
-void WView::newWindow(){
-	WView *w = new WView(0, 0L, 0);
-
-	w->show();
-}
 
 
 void WView::closeEvent( QCloseEvent *)
@@ -435,15 +419,14 @@ void WView::launchHelp(){
 }
 
 bool WView::load(const char *file){
-
 	if( !strchr(file,':') ) {
 		loadLocal(file);
 		
 		if(loadSuccess){
 			imagePath = file;
-			setCaption(QString("KView: ")+ imagePath);
 			currentFilename = imagePath; //Martin
 			currentFilename.detach();
+			redrawCaption();
 			QPixmap * image = Viewport->realPixmap();
 			imageWidth = image->width();
 			imageHeight= image->height();
@@ -502,18 +485,17 @@ bool WView::loadNetFile(const char *file) {
 	return TRUE;
 }
 
-void WView::slotKFMFinished()
-{
+void WView::slotKFMFinished(){
 	if ( kfmAction == WView::GET ) {
 
 	        KURL u( tmpFile.data() );
 	        loadLocal( u.path() );
 
 		if(loadSuccess) {
-			setCaption( QString("kview: ") + netFile );
-			imagePath = netFile.data();
+		        imagePath = netFile.data();
 			currentFilename = netFile;  //Martin
 			currentFilename.detach();
+			redrawCaption();
 			QPixmap * image = Viewport->realPixmap();
 			imageWidth = image->width();
 			imageHeight= image->height();
@@ -547,6 +529,14 @@ void WView::imageInfo()
                 imageFormat;
 
         QMessageBox::message("Image Info", Info, "Ok");
+}
+
+void WView::redrawCaption()
+{
+  QString windowname;
+  windowname.sprintf("KView(%d) ",windowList.findRef(this)+1);
+  windowname += currentFilename;
+  setCaption(windowname);
 }
 
 
