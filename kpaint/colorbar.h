@@ -45,8 +45,8 @@ class ColorBar : public QFrame
 {
 Q_OBJECT
 public:
-ColorBar(QWidget *parent=0, int fixheight=-1, const char *name=0);
-
+  ColorBar(QWidget *parent=0, int fixheight=-1, const char *name=0);
+  ~ColorBar();
 
   void addColor(const QColor &color);
   void addColor(const QRgb rgb);
