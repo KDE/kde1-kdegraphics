@@ -1,0 +1,80 @@
+# Icelandic translation.
+# Copyright (C) 1998 Bjarni R. Einarsson
+# Bjarni R. Einarsson, <bre@mmedia.is>, 1998
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 1998-11-30 01:40+0100\n"
+"Last-Translator: Bjarni R. Einarsson <bre@mmedia.is>\n"
+"Language-Team: is <kde-isl@mmedia.is>\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "skjámynd"
+
+#: ksnapshot.cpp:94
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+"Ýttu á 'Mynda' hnappinn, og smelltu\n"
+"svo á glugga til að ná mynd af honum.\n"
+"\n"
+"Höfundarrétt KSnapshot á Richard Moore (rich@kde.org),\n"
+"en KSnapshot er dreift skv. LGPL skilmálunum\n"
+"\n"
+"Útgáfa: "
+
+#: ksnapshot.cpp:129
+msgid "Filename:"
+msgstr "Skráarnafn:"
+
+#: ksnapshot.cpp:161
+msgid "Delay:"
+msgstr "Bið:"
+
+#: ksnapshot.cpp:170
+msgid "seconds."
+msgstr "sekúndur."
+
+#: ksnapshot.cpp:190
+msgid "Auto raise"
+msgstr "Hækka sjálfkrafa"
+
+#: ksnapshot.cpp:191
+msgid "Hide KSnapshot window"
+msgstr "Fela KSnapshot gluggann"
+
+#: ksnapshot.cpp:193
+msgid "Only grab the window containing the cursor"
+msgstr "Mynda aðeins gluggann sem inniheldur bendilinn"
+
+#: ksnapshot.cpp:224
+msgid "Grab"
+msgstr "Mynda"
+
+#: ksnapshot.cpp:454
+msgid "Error: Unable to save image"
+msgstr "Villa:  Gat ekki vistað myndina"
+
+#: ksnapshot.cpp:455
+msgid "Dismiss"
+msgstr "Í lagi"
+
+#: ksnapshot.cpp:459
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot gat ekki vistað myndina sem\n"
+"%s."
+
+#: ksnapshot.cpp:469
+msgid "KSnapshot preview"
+msgstr "KSnapshot forsýning"

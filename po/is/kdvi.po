@@ -2,7 +2,6 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Thorarinn R. Einarsson <thori@mindspring.com>, 1998.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
@@ -89,7 +88,7 @@ msgstr "Stillingar..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Nýtt"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -124,13 +123,12 @@ msgid "&Redraw page"
 msgstr "&Endurteikna síðu"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Fyrri síðu"
+msgstr "&Fyrri síðu"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Næsta síða"
 
 #: kdvi.cpp:207
 msgid "&First"
@@ -399,7 +397,6 @@ msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "PK-letur sem vantar verða skráð í 'missfont.log'"
 
 #: kdvi.cpp:732
-#, fuzzy
 msgid "Postcsript specials are rendered"
 msgstr "Postscript víðteiknað"
 

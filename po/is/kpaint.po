@@ -2,7 +2,6 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Thorarinn R. Einarsson <thori@mindspring.com>, 1998.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
@@ -39,38 +38,32 @@ msgid "Image Depth:"
 msgstr "Dýpt myndar:"
 
 #: depthdialog.cpp:24
-#, fuzzy
 msgid "1 (2 Colours)"
-msgstr "8 (256 litir)"
+msgstr "1 (2 litir)"
 
 #: depthdialog.cpp:25
-#, fuzzy
 msgid "4 (16 Colours)"
-msgstr "8 (256 litir)"
+msgstr "4 (16 litir)"
 
 #: depthdialog.cpp:26
-#, fuzzy
 msgid "8 (256 Colours)"
 msgstr "8 (256 litir)"
 
 #: depthdialog.cpp:27
-#, fuzzy
 msgid "15 (32k Colours)"
-msgstr "8 (256 litir)"
+msgstr "15 (32k litir)"
 
 #: depthdialog.cpp:28
-#, fuzzy
 msgid "16 (64k Colours)"
-msgstr "8 (256 litir)"
+msgstr "16 (64k litir)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
 msgstr "24 (Raunlitir)"
 
 #: depthdialog.cpp:30
-#, fuzzy
 msgid "32 (True Colour)"
-msgstr "24 (Raunlitir)"
+msgstr "32 (Raunlitir)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -233,15 +226,11 @@ msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " útgáfa "
 
 #: kpaint.cpp:496
-#, fuzzy
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c) "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -299,7 +288,7 @@ msgstr "Úðabrúsi"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Texti"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -412,28 +401,3 @@ msgstr "Stilla línulit..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Rúnnuð horn"
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) 1997 Richard J. Moore.  Útgefið skv. GPL.  Sjá höfundarleyfi.\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Notkun: "
-
-#~ msgid " [url | filename]\n"
-#~ msgstr " [slóð | skáarnafn]\n"
-
-#~ msgid "Exit"
-#~ msgstr "Hætta"
-
-#~ msgid "Open Location:"
-#~ msgstr "Opna slóð:"
-
-#~ msgid "Save to Location:"
-#~ msgstr "Vista slóð:"
-
-#~ msgid "1 (Bitmap)"
-#~ msgstr "1 (punktafylki)"

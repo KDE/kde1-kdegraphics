@@ -2,7 +2,6 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Thorarinn Einarsson <thori@mindspring.com>, 1998.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
@@ -24,39 +23,36 @@ msgstr "Tilbúin"
 
 #: viewer.cpp:241
 msgid "Net saving not yet implemented"
-msgstr ""
+msgstr "Vistun yfir net enn óútfærð"
 
 #: viewer.cpp:249
 #, c-format
 msgid "%s: written"
-msgstr ""
+msgstr "%s: skrifuð"
 
 #: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
-msgstr ""
+msgstr "Veldu rennslisstuðul (100 = 1x):"
 
 #: viewer.cpp:291
 msgid "Illegal zoom factor"
-msgstr ""
+msgstr "Ógildur renslisstuðull"
 
 #: viewer.cpp:340
 msgid "About KView"
 msgstr "Um KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
-msgstr "&Fá lista.."
+msgstr "&Listi..."
 
 #: viewer.cpp:368 viewer.cpp:469
-#, fuzzy
 msgid "&Previous"
-msgstr "Fyrri"
+msgstr "&Fyrri"
 
 #: viewer.cpp:370 viewer.cpp:471
-#, fuzzy
 msgid "&Next"
-msgstr "Næsta"
+msgstr "&Næsta"
 
 #: viewer.cpp:373 viewer.cpp:474
 msgid "&Slideshow On/Off"
@@ -83,13 +79,12 @@ msgid "&Images"
 msgstr "&Myndir"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
-msgstr "&Vista sem.."
+msgstr "&Vista sem..."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "&Loka glugga"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -97,14 +92,13 @@ msgstr "Útvíða &sýn"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Afmarka"
 
 #: viewer.cpp:427
 msgid "&Reset"
 msgstr "&Endurheimta"
 
 #: viewer.cpp:432
-#, fuzzy
 msgid "&Zoom..."
 msgstr "&Renna að/frá"
 
@@ -120,21 +114,19 @@ msgstr "Renna &frá 10%"
 
 #: viewer.cpp:438
 msgid "&Double size"
-msgstr ""
+msgstr "&Tvöfalda stærð"
 
 #: viewer.cpp:440
 msgid "&Half size"
-msgstr ""
+msgstr "H&elminga stærð"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
 msgstr "&Hámark"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Max&pect"
+msgstr "Hámark+&hlutföll"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
@@ -165,9 +157,8 @@ msgid "Max&pect"
 msgstr "Max&pect"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
-msgstr "&Um KView.."
+msgstr "&Um KView..."
 
 #: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
@@ -178,55 +169,49 @@ msgid "Couldn't get temporary transfer name."
 msgstr "Vantar nafn."
 
 #: viewer.cpp:581
-#, fuzzy
 msgid "Transfer error: "
-msgstr "&Umbreyta"
+msgstr "Flutningsvilla:"
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
-msgstr "Sæki.."
+msgstr "Sæki..."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Gat ekki lesið %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Birta.."
+msgstr "Prenta..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Veldu birtustuðul (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Birtustuðullinn á að vera jákvæður"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Breyti birtustigs..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
 msgstr "Styrkleiki:Birta"
 
 #: colour.cpp:100
-#, fuzzy
 msgid "Converting to Greyscale..."
-msgstr "Breyti í grátóna.."
+msgstr "Breyti í grátóna..."
 
 #: colour.cpp:129
 msgid "Greyscale"
 msgstr "Grátónar"
 
 #: colour.cpp:147
-#, fuzzy
 msgid "Smoothing..."
-msgstr "Mýki.."
+msgstr "Mýki..."
 
 #: colour.cpp:213
 msgid "Smooth"
@@ -234,24 +219,23 @@ msgstr "Mýkja"
 
 #: colour.cpp:234
 msgid "Enter gamma value ( >0 ):"
-msgstr ""
+msgstr "Veldu dekkingarstuðul ( >0 ):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Ógildur dekkingarstuðull"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
-msgstr ""
+msgstr "Dekking..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Styrkleiki:Dekkja"
+msgstr "Styrkleiki:Dekkja..."
 
 #: colour.cpp:310
 msgid "External.."
-msgstr ""
+msgstr "Utanaðkomandi..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -270,8 +254,9 @@ msgid "Start slide"
 msgstr "Byrja á glæru"
 
 #: ilistdlg.cpp:75
+#, fuzzy
 msgid "Interval.."
-msgstr ""
+msgstr "Bil..."
 
 #: ilistdlg.cpp:80
 msgid "Loop"
@@ -291,20 +276,4 @@ msgstr "Byrja á &glæru"
 
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
-msgstr ""
-
-#~ msgid "Fi&lter"
-#~ msgstr "Sí&a"
-
-#~ msgid "&Open.."
-#~ msgstr "&Opna.."
-
-#, fuzzy
-#~ msgid "Darkening..."
-#~ msgstr "Dekki.."
-
-#~ msgid "&Zoom in 50%"
-#~ msgstr "&Renna að 50%"
-
-#~ msgid "Zoo&m out 50%"
-#~ msgstr "Re&nna frá 50%"
+msgstr "Tími milli glæra (sek):"

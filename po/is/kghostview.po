@@ -2,7 +2,6 @@
 # Copyright (C) 1998 Free Software Foundation, Inc.
 # Thorarinn Einarsson <thori@mindspring.com>, 1998.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
@@ -277,7 +276,6 @@ msgid "Usage: "
 msgstr "Notkun: "
 
 #: main.cpp:27
-#, fuzzy
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
@@ -362,9 +360,8 @@ msgid "New"
 msgstr "Nýtt"
 
 #: kghostview.cpp:498
-#, fuzzy
 msgid "&New"
-msgstr "Nýtt"
+msgstr "&Nýtt"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
