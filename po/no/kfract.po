@@ -114,7 +114,7 @@ msgstr "1000 - 100000"
 
 #: kfractdlgs.C:144
 msgid "Bailout"
-msgstr ""
+msgstr "Bale"
 
 #: kfractdlgs.C:161
 msgid "Center of picture: Real part"
@@ -189,3 +189,5 @@ msgid ""
 "Fract::calcPoint() is an abstract method. You MUST\n"
 "re-write it!\n"
 msgstr ""
+"Fract::calcPoint() er en abstrakt metode. Du MÅ\n"
+"skrive den om!\n"
