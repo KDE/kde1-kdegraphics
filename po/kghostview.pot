@@ -16,7 +16,7 @@ msgstr ""
 
 #: copyright.cpp:28
 msgid "Copyright"
-msgstr "Copyright"
+msgstr ""
 
 #: copyright.cpp:42
 msgid ""
@@ -35,248 +35,229 @@ msgid ""
 "along with this program; if not, write to the Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 msgstr ""
-"\n"
-"Эта программа распространяется свободно; вы можете распространять и/или "
-"изменять\n"
-"ее в рамках соглашения GNU General Public License как опубликовано\n"
-"Free Software Foundation; либо во второй, либо в более поздней версии "
-"Лицензии\n"
-"\n"
-"Эта программа распространяется с надеждой, что она кому-нибудь пригодится, "
-"но\n"
-"БЕЗ ВСЯКИХ ГАРАНТИЙ; даже без гарантии, что оно работает :-). Подробнее\n"
-"смотрите GNU General Public License.\n"
-"\n"
-"Вы должны иметь копию GNU General Public License\n"
-"вместе с этой программой; если это не так, напишите в Free Software\n"
-"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: goto.cpp:59
 msgid "Section"
-msgstr "Секция"
+msgstr ""
 
 #: goto.cpp:80
 msgid "Page"
-msgstr "Страница"
+msgstr ""
 
 #: goto.cpp:164 goto.cpp:171 goto.cpp:188 kghostview.cpp:2188
 #: kghostview.cpp:2200 kghostview.cpp:2205 kghostview.cpp:2471
 #, c-format
 msgid "of %d"
-msgstr "из %d"
+msgstr ""
 
 #: info.cpp:58
 msgid "File :"
-msgstr "Файл :"
+msgstr ""
 
 #: info.cpp:67
 msgid "Title :"
-msgstr "Заголовок :"
+msgstr ""
 
 #: info.cpp:76
 msgid "Date :"
-msgstr "Дата :"
+msgstr ""
 
 #: interpreter.cpp:45
 msgid "General"
-msgstr "Главное"
+msgstr ""
 
 #: interpreter.cpp:74
 msgid "Interpreter name"
-msgstr "Имя интерпретатора"
+msgstr ""
 
 #: interpreter.cpp:93
 msgid "Antialiasing"
-msgstr "Сглаживание"
+msgstr ""
 
 #: interpreter.cpp:103
 msgid "Platform fonts"
-msgstr "Платформо-зависимые шрифты"
+msgstr ""
 
 #: interpreter.cpp:113
 msgid "Messages"
-msgstr "Сообщения"
+msgstr ""
 
 #: interpreter.cpp:136
 msgid "Palette"
-msgstr "Палитра"
+msgstr ""
 
 #: interpreter.cpp:159
 msgid "Color"
-msgstr "Цвет"
+msgstr ""
 
 #: interpreter.cpp:168
 msgid "Grayscale"
-msgstr "Полутоновое"
+msgstr ""
 
 #: interpreter.cpp:177
 msgid "Monochrome"
-msgstr "Черно-белое"
+msgstr ""
 
 #: interpreter.cpp:201
 msgid "Backing"
-msgstr "Поддержка"
+msgstr ""
 
 #: interpreter.cpp:224
 msgid "Pixmap"
-msgstr "Пиктограмма"
+msgstr ""
 
 #: interpreter.cpp:235
 msgid "Backing store"
-msgstr "Внешняя память"
+msgstr ""
 
 #: interpreter.cpp:255
 msgid "Defaults"
-msgstr "По умолчанию"
+msgstr ""
 
 #: interpreter.cpp:339
 msgid "gs"
-msgstr "gs"
+msgstr ""
 
 #: kghostview.cpp:191 kghostview.cpp:305 kghostview.cpp:361 kghostview.cpp:450
 msgid "View Control"
-msgstr "Просмотр управления"
+msgstr ""
 
 #: kghostview.cpp:303 kghostview.cpp:355 kghostview.cpp:443
 #: kghostview.cpp:1298 kghostview.cpp:1659
 msgid "Print"
-msgstr "Печать"
+msgstr ""
 
 #: kghostview.cpp:306 kghostview.cpp:364 kghostview.cpp:455
 msgid "Go To Page"
-msgstr "На страницу"
+msgstr ""
 
 #: kghostview.cpp:307 kghostview.cpp:367 kghostview.cpp:448
 msgid "Zoom In"
-msgstr "Увеличить"
+msgstr ""
 
 #: kghostview.cpp:308 kghostview.cpp:370 kghostview.cpp:449
 msgid "Zoom Out"
-msgstr "Уменьшить"
+msgstr ""
 
 #: kghostview.cpp:309 kghostview.cpp:373 kghostview.cpp:453
 msgid "Next Page"
-msgstr "Следующая страница"
+msgstr ""
 
 #: kghostview.cpp:310 kghostview.cpp:376 kghostview.cpp:454
 msgid "Prev Page"
-msgstr "Предыдущая страница"
+msgstr ""
 
 #: kghostview.cpp:311 kghostview.cpp:379
 msgid "Scroll Up"
-msgstr "Скроллировать вверх"
+msgstr ""
 
 #: kghostview.cpp:312 kghostview.cpp:382
 msgid "Scroll Down"
-msgstr "Скроллировать вниз"
+msgstr ""
 
 #: kghostview.cpp:313 kghostview.cpp:385
 msgid "Scroll Left"
-msgstr "Скроллировать влево"
+msgstr ""
 
 #: kghostview.cpp:314 kghostview.cpp:388
 msgid "Scroll Right"
-msgstr "Скроллировать вправо"
+msgstr ""
 
 #: kghostview.cpp:315 kghostview.cpp:391 kghostview.cpp:451
 msgid "Redisplay"
-msgstr "Перерисовать"
+msgstr ""
 
 #: kghostview.cpp:428
 msgid "Configure interpreter"
-msgstr "Настроить интерпретатор"
+msgstr ""
 
 #: kghostview.cpp:485
 msgid "&Open ..."
-msgstr "Открыть..."
+msgstr ""
 
 #: kghostview.cpp:488
 msgid "&Print ..."
-msgstr "Печатать..."
+msgstr ""
 
 #: kghostview.cpp:490
 msgid "&1."
-msgstr "&1."
+msgstr ""
 
 #: kghostview.cpp:491
 msgid "&2."
-msgstr "&2."
+msgstr ""
 
 #: kghostview.cpp:492
 msgid "&3."
-msgstr "&3."
+msgstr ""
 
 #: kghostview.cpp:493
 msgid "&4."
-msgstr "&4."
+msgstr ""
 
 #: kghostview.cpp:503
 msgid "Zoom &in"
-msgstr "Увеличить"
+msgstr ""
 
 #: kghostview.cpp:505
 msgid "Zoom &out"
-msgstr "Уменьшить"
+msgstr ""
 
 #: kghostview.cpp:507
 msgid "&View control ..."
-msgstr "Просмотр управления ..."
+msgstr ""
 
 #: kghostview.cpp:510
 msgid "&Shrink wrap"
-msgstr "Развернуть как можно больше"
+msgstr ""
 
 #: kghostview.cpp:512
 msgid "&Redisplay"
-msgstr "Перерисовать"
+msgstr ""
 
 #: kghostview.cpp:514
 msgid "&Info ..."
-msgstr "Информация ..."
+msgstr ""
 
 #: kghostview.cpp:519
 msgid "&Previous Page"
-msgstr "Предыдущая страница"
+msgstr ""
 
 #: kghostview.cpp:521
 msgid "&Next page"
-msgstr "Следующая страница"
+msgstr ""
 
 #: kghostview.cpp:523
 msgid "&Go to page ..."
-msgstr "На страницу ..."
+msgstr ""
 
 #: kghostview.cpp:526
 msgid "Go to &start"
-msgstr "На начало"
+msgstr ""
 
 #: kghostview.cpp:528
 msgid "Go to &end"
-msgstr "На конец"
+msgstr ""
 
 #: kghostview.cpp:530
 msgid "&Read down"
-msgstr "Расположить удобно"
+msgstr ""
 
 #: kghostview.cpp:535
-#, fuzzy
 msgid "Mark &current page"
-msgstr "Отметить страницу"
+msgstr ""
 
 #: kghostview.cpp:538
-#, fuzzy
 msgid "Mark &all pages"
-msgstr "Отметить страницу"
+msgstr ""
 
 #: kghostview.cpp:540
-#, fuzzy
 msgid "Mark &even pages"
-msgstr "Отметить страницу"
+msgstr ""
 
 #: kghostview.cpp:542
-#, fuzzy
 msgid "Mark &odd pages"
-msgstr "Отметить страницу"
+msgstr ""
 
 #: kghostview.cpp:545
 msgid "&Toggle page marks"
@@ -288,104 +269,100 @@ msgstr ""
 
 #: kghostview.cpp:559
 msgid "Show &tool bar"
-msgstr "Показать tool bar"
+msgstr ""
 
 #: kghostview.cpp:560
-#, fuzzy
 msgid "Show st&atus bar"
-msgstr "Показать строку состояния"
+msgstr ""
 
 #: kghostview.cpp:561
 msgid "Show &page list"
 msgstr ""
 
 #: kghostview.cpp:563
-#, fuzzy
 msgid "Configure &interpreter ..."
-msgstr "Настроить интерпретатор ..."
+msgstr ""
 
 #: kghostview.cpp:564
 msgid "Configure &key bindings ..."
-msgstr "Натроить клавиатуру ..."
+msgstr ""
 
 #: kghostview.cpp:566
-#, fuzzy
 msgid "&Save options"
-msgstr "Сохранить опции"
+msgstr ""
 
 #: kghostview.cpp:573
 msgid "&About this application"
-msgstr "О программе"
+msgstr ""
 
 #: kghostview.cpp:575
 msgid "&Help for this application"
-msgstr "Помощь"
+msgstr ""
 
 #: kghostview.cpp:577
 msgid "&Copyright"
-msgstr "&Copyright"
+msgstr ""
 
 #: kghostview.cpp:584
 msgid "&Go"
-msgstr "Идти"
+msgstr ""
 
 #: kghostview.cpp:585
-#, fuzzy
 msgid "&Pagemarks"
-msgstr "Страницы"
+msgstr ""
 
 #: kghostview.cpp:686
 msgid "Print document"
-msgstr "Напечатать документ"
+msgstr ""
 
 #: kghostview.cpp:691
 msgid "Change view ..."
-msgstr "Изменить вид ..."
+msgstr ""
 
 #: kghostview.cpp:696
 msgid "Go back"
-msgstr "Назад"
+msgstr ""
 
 #: kghostview.cpp:699
 msgid "Go forward"
-msgstr "Вперед"
+msgstr ""
 
 #: kghostview.cpp:702
 msgid "Go to page ..."
-msgstr "На страницу ..."
+msgstr ""
 
 #: kghostview.cpp:707
 msgid "Go to start"
-msgstr "На начало"
+msgstr ""
 
 #: kghostview.cpp:710
 msgid "Go to end"
-msgstr "На конец"
+msgstr ""
 
 #: kghostview.cpp:713
 msgid "Read down the page"
-msgstr "Удобно расположить страницу"
+msgstr ""
 
 #: kghostview.cpp:718
 msgid "Mark this page"
-msgstr "Отметить страницу"
+msgstr ""
 
 #: kghostview.cpp:740
 msgid "Sc.100 of 100  P.100 of 100"
-msgstr "Sc.100 of 100  P.100 of 100"
+msgstr ""
 
 #: kghostview.cpp:741
 #, c-format
 msgid "100 %"
-msgstr "100 %"
+msgstr ""
 
 #: kghostview.cpp:742
 msgid "Upside Down"
-msgstr "Вверх дном"
+msgstr ""
 
 #: kghostview.cpp:761
 msgid "Malformed URL."
-msgstr "Неправильный URL."
+msgstr ""
 
 #: kghostview.cpp:773
 msgid ""
@@ -394,83 +371,73 @@ msgid ""
 "Please wait until has finished.\n"
 "Alternatively stop the running one."
 msgstr ""
-"Уже ждем-с\n"
-"завершения сетевой задачи.\n"
-"Пожайлуста подождите.\n"
-"Или остановите задаче."
 
 #: kghostview.cpp:782
 msgid "Could not start or find KFM."
-msgstr "Не возможно найти или запустить KFM."
+msgstr ""
 
 #: kghostview.cpp:1233 kghostview.cpp:2277 viewcontrol.cpp:102
 msgid "Portrait"
-msgstr "Вертикально"
+msgstr ""
 
 #: kghostview.cpp:1235 kghostview.cpp:2283 viewcontrol.cpp:103
 msgid "Landscape"
-msgstr "Горизонтально"
+msgstr ""
 
 #: kghostview.cpp:1237 kghostview.cpp:2281 viewcontrol.cpp:104
 msgid "Seascape"
-msgstr "Seascape"
+msgstr ""
 
 #: kghostview.cpp:1239 kghostview.cpp:2279 viewcontrol.cpp:105
 msgid "Upside down"
-msgstr "Вверх дном"
+msgstr ""
 
 #: kghostview.cpp:1277
-#, fuzzy
 msgid "Go to ..."
-msgstr "На страницу ..."
+msgstr ""
 
 #: kghostview.cpp:1426
 msgid "Turn antialiasing on"
-msgstr "Включить сглаживание"
+msgstr ""
 
 #: kghostview.cpp:1428
 msgid "Turn antialiasing off"
-msgstr "Выключить сглаживание"
+msgstr ""
 
 #: kghostview.cpp:1439
 msgid "Show Ghostscript messages"
-msgstr "Показать сообщения Ghostscript'а"
+msgstr ""
 
 #: kghostview.cpp:1441
 msgid "Hide Ghostscript messages"
-msgstr "Скрыть сообщения Ghostscript'а"
+msgstr ""
 
 #: kghostview.cpp:1504
-#, fuzzy
 msgid "Version 0.6"
-msgstr "Версия 0.5"
+msgstr ""
 
 #: kghostview.cpp:1505
 msgid "Sorry, not ready yet"
-msgstr "Извините, еще не готово"
+msgstr ""
 
 #: kghostview.cpp:1512
 msgid "About kghostview"
-msgstr "О kghostview"
+msgstr ""
 
 #: kghostview.cpp:1513
-#, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 msgstr ""
-"Версия :\t0.5 alpha\n"
-"Автор  : Марк Донохо\n"
-"Mail : donohoe@kde.org"
 
 #: kghostview.cpp:1555 kghostview.cpp:1556 kghostview.cpp:1557
 msgid "Printer Name : "
-msgstr "Имя принтера :"
+msgstr ""
 
 #: kghostview.cpp:1620
 msgid "Print failure : lpr"
-msgstr "Печать не удалась: lpr"
+msgstr ""
 
 #: kghostview.cpp:1660
 msgid "No pages have been marked for printing."
@@ -479,65 +446,65 @@ msgstr ""
 #: kghostview.cpp:2182 kghostview.cpp:2194 kghostview.cpp:2442
 #: kghostview.cpp:2465
 msgid "of 1    "
-msgstr "из 1    "
+msgstr ""
 
 #: kghostview.cpp:2184 kghostview.cpp:2196 kghostview.cpp:2467
 #, c-format
 msgid "of %d    "
-msgstr "из %d    "
+msgstr ""
 
 #: kghostview.cpp:2186 kghostview.cpp:2198 kghostview.cpp:2469
 #: kghostview.cpp:2476
 #, c-format
 msgid "of %d  "
-msgstr "из %d  "
+msgstr ""
 
 #: kghostview.cpp:2301
 msgid "&1. "
-msgstr "&1."
+msgstr ""
 
 #: kghostview.cpp:2305
 msgid "&2. "
-msgstr "&2."
+msgstr ""
 
 #: kghostview.cpp:2309
 msgid "&3. "
-msgstr "&3."
+msgstr ""
 
 #: kghostview.cpp:2313
 msgid "&4. "
-msgstr "&4."
+msgstr ""
 
 #: kghostview.cpp:2441
 msgid "Sc.1 "
-msgstr "Sc.1 "
+msgstr ""
 
 #: kghostview.cpp:2444
 msgid "P.1 "
-msgstr "P.1 "
+msgstr ""
 
 #: kghostview.cpp:2446 kghostview.cpp:2459
 #, c-format
 msgid "P.%d "
-msgstr "P.%d "
+msgstr ""
 
 #: kghostview.cpp:2461
 #, c-format
 msgid "Sc.%d "
-msgstr "Sc.%d "
+msgstr ""
 
 #: main.cpp:27
 #, c-format
 msgid "Usage: %s\n"
-msgstr "Использование: %s\n"
+msgstr ""
 
 #: main.cpp:28
 msgid "[filename]\n"
-msgstr "[filename]\n"
+msgstr ""
 
 #: main.cpp:29
 msgid "See Qt documentation for command line options\n"
-msgstr "Помощь по опциям в документации по Qt\n"
+msgstr ""
 
 #: main.cpp:111
 #, c-format
@@ -546,92 +513,43 @@ msgid ""
 "\"%s\"\n"
 "could not be found."
 msgstr ""
-"Файл\n"
-"\"%s\"\n"
-"не существует."
 
 #: main.cpp:119
 msgid "Didn't recognise file\n"
-msgstr "Не могу распознать файл\n"
+msgstr ""
 
 #: messages.cpp:28
 msgid "Ghostscript messages"
-msgstr "Сообщения Ghostscript'а"
+msgstr ""
 
 #: print.cpp:63
 msgid "Printer name"
-msgstr "Имя принтера"
+msgstr ""
 
 #: print.cpp:79
 msgid "Pages"
-msgstr "Страницы"
+msgstr ""
 
 #: print.cpp:87
 msgid "All"
-msgstr "Все"
+msgstr ""
 
 #: print.cpp:90
 msgid "Marked"
-msgstr "Отмеченные"
+msgstr ""
 
 #: viewcontrol.cpp:44
-#, fuzzy
 msgid "Force changes to "
-msgstr "Принять изменения"
+msgstr ""
 
 #: viewcontrol.cpp:72
 msgid "Magnification"
-msgstr "Изменение масштаба"
+msgstr ""
 
 #: viewcontrol.cpp:82
 msgid "Media"
-msgstr "Бумага"
+msgstr ""
 
 #: viewcontrol.cpp:92
 msgid "Orientation"
-msgstr "Ориетнация"
-
-#~ msgid "Information"
-#~ msgstr "Информация"
-
-#~ msgid "New"
-#~ msgstr "Новый"
-
-#~ msgid "&New"
-#~ msgstr "Новый"
-
-#~ msgid "&Close"
-#~ msgstr "Закрыть"
-
-#~ msgid "E&xit"
-#~ msgstr "Выход"
-
-#~ msgid "&File"
-#~ msgstr "Файл"
-
-#~ msgid "&View"
-#~ msgstr "Просмотр"
-
-#~ msgid "&Options"
-#~ msgstr "Опции"
-
-#~ msgid "&Help"
-#~ msgstr "Помощь"
-
-#~ msgid "Sorry"
-#~ msgstr "Извините"
-
-#~ msgid "KGhostview: Version 0.5"
-#~ msgstr "KGhostview: Версии 0.5"
-
-#~ msgid "Go to"
-#~ msgstr "Идти"
-
-#~ msgid "Clear"
-#~ msgstr "Очистить"
-
-#~ msgid "Even"
-#~ msgstr "Четные"
-
-#~ msgid "Odd"
-#~ msgstr "Нечетные"
+msgstr ""

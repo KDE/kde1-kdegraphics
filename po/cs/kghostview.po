@@ -6,6 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
+"POT-Creation-Date: 1998-01-05 22:02+0100\n"
 "PO-Revision-Date: 1997-10-18 17:52 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: czech <LL@li.org>\n"
@@ -49,399 +50,336 @@ msgstr ""
 "programem; není-li tomu tak, napi¹te na adresu Free Software \n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
-#: copyright.cpp:59 kghostview.cpp:302 kghostview.cpp:351 kghostview.cpp:441
-msgid "Close"
-msgstr "Zavøít"
-
-#: goto.cpp:38
+#: goto.cpp:59
 msgid "Section"
 msgstr "Oddíl"
 
-#: goto.cpp:51
+#: goto.cpp:80
 msgid "Page"
 msgstr "Strana"
 
-#: goto.cpp:63 info.cpp:65 interpreter.cpp:102 print.cpp:62
-msgid "OK"
-msgstr ""
-
-#: goto.cpp:69 interpreter.cpp:108 messages.cpp:52 print.cpp:69
-#: viewcontrol.cpp:79
-msgid "Cancel"
-msgstr "Zru¹it"
-
-#: goto.cpp:95 goto.cpp:101 goto.cpp:117 kghostview.cpp:2186
-#: kghostview.cpp:2198 kghostview.cpp:2203 kghostview.cpp:2468
+#: goto.cpp:164 goto.cpp:171 goto.cpp:188 kghostview.cpp:2188
+#: kghostview.cpp:2200 kghostview.cpp:2205 kghostview.cpp:2471
+#, c-format
 msgid "of %d"
 msgstr "z %s"
 
-#: info.cpp:39
+#: info.cpp:58
 msgid "File :"
 msgstr "Soubor :"
 
-#: info.cpp:44
+#: info.cpp:67
 msgid "Title :"
 msgstr "Název :"
 
-#: info.cpp:49
+#: info.cpp:76
 msgid "Date :"
 msgstr "Datum :"
 
-#: interpreter.cpp:33
+#: interpreter.cpp:45
 msgid "General"
 msgstr "V¹eobecné"
 
-#: interpreter.cpp:39
+#: interpreter.cpp:74
 msgid "Interpreter name"
 msgstr "Jméno interpretru"
 
-#: interpreter.cpp:53
+#: interpreter.cpp:93
 msgid "Antialiasing"
 msgstr "Antialiasing"
 
-#: interpreter.cpp:58
+#: interpreter.cpp:103
 msgid "Platform fonts"
 msgstr "Znakové sady platformy"
 
-#: interpreter.cpp:63
+#: interpreter.cpp:113
 msgid "Messages"
 msgstr "Hlá¹ení"
 
-#: interpreter.cpp:70
+#: interpreter.cpp:136
 msgid "Palette"
 msgstr "Paleta"
 
-#: interpreter.cpp:75
+#: interpreter.cpp:159
 msgid "Color"
 msgstr "Barevná"
 
-#: interpreter.cpp:79
+#: interpreter.cpp:168
 msgid "Grayscale"
 msgstr "Odstíny ¹edi"
 
-#: interpreter.cpp:83
+#: interpreter.cpp:177
 msgid "Monochrome"
 msgstr "Monochromatická"
 
-#: interpreter.cpp:89
+#: interpreter.cpp:201
 msgid "Backing"
 msgstr "Backing"
 
-#: interpreter.cpp:94
+#: interpreter.cpp:224
 msgid "Pixmap"
 msgstr "Pixmapa"
 
-#: interpreter.cpp:98
+#: interpreter.cpp:235
 msgid "Backing store"
 msgstr "Zálo¾ní pamìt"
 
-#: interpreter.cpp:114
+#: interpreter.cpp:255
 msgid "Defaults"
 msgstr "Implicitní"
 
-#: interpreter.cpp:171
+#: interpreter.cpp:339
 msgid "gs"
 msgstr "gs"
 
-#: kghostview.cpp:177 kghostview.cpp:316 kghostview.cpp:393 kghostview.cpp:447
-msgid "Information"
-msgstr "Informace"
-
-#: kghostview.cpp:184 kghostview.cpp:303 kghostview.cpp:354 kghostview.cpp:438
-#: kghostview.cpp:1292 kghostview.cpp:1657
-msgid "Print"
-msgstr "Tisk"
-
-#: kghostview.cpp:191 kghostview.cpp:305 kghostview.cpp:360 kghostview.cpp:445
+#: kghostview.cpp:191 kghostview.cpp:305 kghostview.cpp:361 kghostview.cpp:450
 msgid "View Control"
 msgstr "Nastavení zobrazení"
 
-#: kghostview.cpp:299 kghostview.cpp:342 kghostview.cpp:442
-msgid "Quit"
-msgstr "Ukonèit"
+#: kghostview.cpp:303 kghostview.cpp:355 kghostview.cpp:443
+#: kghostview.cpp:1298 kghostview.cpp:1659
+msgid "Print"
+msgstr "Tisk"
 
-#: kghostview.cpp:300 kghostview.cpp:345 kghostview.cpp:439
-msgid "Open"
-msgstr "Otevøít"
-
-#: kghostview.cpp:301 kghostview.cpp:348 kghostview.cpp:440
-msgid "New"
-msgstr "Nový"
-
-#: kghostview.cpp:304 kghostview.cpp:357 kghostview.cpp:451
-msgid "Help"
-msgstr "Nápovìda"
-
-#: kghostview.cpp:306 kghostview.cpp:363 kghostview.cpp:450
+#: kghostview.cpp:306 kghostview.cpp:364 kghostview.cpp:455
 msgid "Go To Page"
 msgstr "Jdi na stranu"
 
-#: kghostview.cpp:307 kghostview.cpp:366 kghostview.cpp:443
+#: kghostview.cpp:307 kghostview.cpp:367 kghostview.cpp:448
 msgid "Zoom In"
 msgstr "Zvìt¹it"
 
-#: kghostview.cpp:308 kghostview.cpp:369 kghostview.cpp:444
+#: kghostview.cpp:308 kghostview.cpp:370 kghostview.cpp:449
 msgid "Zoom Out"
 msgstr "Zmen¹it"
 
-#: kghostview.cpp:309 kghostview.cpp:372 kghostview.cpp:448
+#: kghostview.cpp:309 kghostview.cpp:373 kghostview.cpp:453
 msgid "Next Page"
 msgstr "Následující strana"
 
-#: kghostview.cpp:310 kghostview.cpp:375 kghostview.cpp:449
+#: kghostview.cpp:310 kghostview.cpp:376 kghostview.cpp:454
 msgid "Prev Page"
 msgstr "Pøedcházející strana"
 
-#: kghostview.cpp:311 kghostview.cpp:378
+#: kghostview.cpp:311 kghostview.cpp:379
 msgid "Scroll Up"
 msgstr "Posunout nahoru"
 
-#: kghostview.cpp:312 kghostview.cpp:381
+#: kghostview.cpp:312 kghostview.cpp:382
 msgid "Scroll Down"
 msgstr "Posunout dolù"
 
-#: kghostview.cpp:313 kghostview.cpp:384
+#: kghostview.cpp:313 kghostview.cpp:385
 msgid "Scroll Left"
 msgstr "Posunout vlevo"
 
-#: kghostview.cpp:314 kghostview.cpp:387
+#: kghostview.cpp:314 kghostview.cpp:388
 msgid "Scroll Right"
 msgstr "Posunout vpravo"
 
-#: kghostview.cpp:315 kghostview.cpp:390 kghostview.cpp:446
+#: kghostview.cpp:315 kghostview.cpp:391 kghostview.cpp:451
 msgid "Redisplay"
 msgstr "Aktualizovat"
 
-#: kghostview.cpp:423
+#: kghostview.cpp:428
 msgid "Configure interpreter"
 msgstr "Nastav interpretr"
 
-#: kghostview.cpp:479
-msgid "&New"
-msgstr "&Nový"
-
-#: kghostview.cpp:480
+#: kghostview.cpp:485
 msgid "&Open ..."
 msgstr "&Otevøít ..."
 
-#: kghostview.cpp:481
-msgid "&Close"
-msgstr "&Zavøít"
-
-#: kghostview.cpp:483
+#: kghostview.cpp:488
 msgid "&Print ..."
 msgstr "&Tisknout ..."
 
-#: kghostview.cpp:485
+#: kghostview.cpp:490
 msgid "&1."
 msgstr "&1."
 
-#: kghostview.cpp:486
+#: kghostview.cpp:491
 msgid "&2."
 msgstr "&2."
 
-#: kghostview.cpp:487
+#: kghostview.cpp:492
 msgid "&3."
 msgstr "&3."
 
-#: kghostview.cpp:488
+#: kghostview.cpp:493
 msgid "&4."
 msgstr "&4."
 
-#: kghostview.cpp:490
-msgid "E&xit"
-msgstr "U&konèit"
-
-#: kghostview.cpp:498
+#: kghostview.cpp:503
 msgid "Zoom &in"
 msgstr "Z&vìt¹it"
 
-#: kghostview.cpp:500
+#: kghostview.cpp:505
 msgid "Zoom &out"
 msgstr "Z&men¹it"
 
-#: kghostview.cpp:502
+#: kghostview.cpp:507
 msgid "&View control ..."
 msgstr "&Nastavení zobrazení ..."
 
-#: kghostview.cpp:505
+#: kghostview.cpp:510
 msgid "&Shrink wrap"
 msgstr "&Stáhnout okraje"
 
-#: kghostview.cpp:507
+#: kghostview.cpp:512
 msgid "&Redisplay"
 msgstr "&Aktualizovat"
 
-#: kghostview.cpp:509
+#: kghostview.cpp:514
 msgid "&Info ..."
 msgstr "&Info ..."
 
-#: kghostview.cpp:514
+#: kghostview.cpp:519
 msgid "&Previous Page"
 msgstr "&Pøedchazející stranu"
 
-#: kghostview.cpp:516
+#: kghostview.cpp:521
 msgid "&Next page"
 msgstr "&Následující stranu"
 
-#: kghostview.cpp:518
+#: kghostview.cpp:523
 msgid "&Go to page ..."
 msgstr "&Jdi na stranu ..."
 
-#: kghostview.cpp:521
+#: kghostview.cpp:526
 msgid "Go to &start"
 msgstr "Jdi na &zaèátek"
 
-#: kghostview.cpp:523
+#: kghostview.cpp:528
 msgid "Go to &end"
 msgstr "Jdi na &konec"
 
-#: kghostview.cpp:525
+#: kghostview.cpp:530
 msgid "&Read down"
 msgstr "Posuò &dále"
 
-#: kghostview.cpp:530
+#: kghostview.cpp:535
 msgid "Mark &current page"
 msgstr "Oznaèit &tuto stranu"
 
-#: kghostview.cpp:533
+#: kghostview.cpp:538
 msgid "Mark &all pages"
 msgstr "Oznaèit &v¹echny strany"
 
-#: kghostview.cpp:535
+#: kghostview.cpp:540
 msgid "Mark &even pages"
 msgstr "Oznaèit &sudé strany"
 
-#: kghostview.cpp:537
+#: kghostview.cpp:542
 msgid "Mark &odd pages"
 msgstr "Oznaèit &liché strany"
 
-#: kghostview.cpp:540
+#: kghostview.cpp:545
 msgid "&Toggle page marks"
 msgstr "Prohoïit &znaèky"
 
-#: kghostview.cpp:543
+#: kghostview.cpp:548
 msgid "&Remove page marks"
 msgstr "&Odstranit znaèky"
 
-#: kghostview.cpp:554
+#: kghostview.cpp:559
 msgid "Show &tool bar"
 msgstr "Zobrazovat nás&trojovou li¹tu"
 
-#: kghostview.cpp:555
+#: kghostview.cpp:560
 msgid "Show st&atus bar"
 msgstr "Zobrazovat &statusbar"
 
 # ???
-#: kghostview.cpp:556
+#: kghostview.cpp:561
 msgid "Show &page list"
 msgstr "Zobrazovat seznam &stránek"
 
-#: kghostview.cpp:558
+#: kghostview.cpp:563
 msgid "Configure &interpreter ..."
 msgstr "&Nastavit interpretr ..."
 
-#: kghostview.cpp:559
+#: kghostview.cpp:564
 msgid "Configure &key bindings ..."
 msgstr "Nastav &klávesové akcelerátory ..."
 
-#: kghostview.cpp:561
+#: kghostview.cpp:566
 msgid "&Save options"
 msgstr "&Ulo¾it nastavení"
 
-#: kghostview.cpp:568
+#: kghostview.cpp:573
 msgid "&About this application"
 msgstr "&Informace o aplikaci"
 
-#: kghostview.cpp:570
+#: kghostview.cpp:575
 msgid "&Help for this application"
 msgstr "&Nápovìda k této aplikaci"
 
-#: kghostview.cpp:572
+#: kghostview.cpp:577
 msgid "&Copyright"
 msgstr "&Autorská práva"
 
-#: kghostview.cpp:577
-msgid "&File"
-msgstr "&Soubor"
-
-#: kghostview.cpp:578
-msgid "&View"
-msgstr "&Pohled"
-
-#: kghostview.cpp:579
+#: kghostview.cpp:584
 msgid "&Go"
 msgstr "&Jdi na"
 
-#: kghostview.cpp:580
+#: kghostview.cpp:585
 msgid "&Pagemarks"
 msgstr "&Znaèky na stranách"
 
-#: kghostview.cpp:581
-msgid "&Options"
-msgstr "&Mo¾nosti"
-
-#: kghostview.cpp:585
-msgid "&Help"
-msgstr "&Nápovìda"
-
-#: kghostview.cpp:681
+#: kghostview.cpp:686
 msgid "Print document"
 msgstr "Tisknout dokument"
 
-#: kghostview.cpp:686
+#: kghostview.cpp:691
 msgid "Change view ..."
 msgstr "Znìò nastavení zobrazení ..."
 
-#: kghostview.cpp:691
+#: kghostview.cpp:696
 msgid "Go back"
 msgstr "Jdi zpìt"
 
-#: kghostview.cpp:694
+#: kghostview.cpp:699
 msgid "Go forward"
 msgstr "Jdi dopøedu"
 
-#: kghostview.cpp:697
+#: kghostview.cpp:702
 msgid "Go to page ..."
 msgstr "Jdi na stranu ..."
 
-#: kghostview.cpp:702
+#: kghostview.cpp:707
 msgid "Go to start"
 msgstr "Jdi na zaèátek"
 
-#: kghostview.cpp:705
+#: kghostview.cpp:710
 msgid "Go to end"
 msgstr "Jdi na konec"
 
-#: kghostview.cpp:708
+#: kghostview.cpp:713
 msgid "Read down the page"
 msgstr "Posuò se dále na stranì"
 
-#: kghostview.cpp:713
+#: kghostview.cpp:718
 msgid "Mark this page"
 msgstr "Oznaè tuto stanu"
 
-#: kghostview.cpp:735
+#: kghostview.cpp:740
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "Odd.100 z 100 S.100 z 100"
 
-#: kghostview.cpp:736
+#: kghostview.cpp:741
+#, c-format
 msgid "100 %"
 msgstr "100%"
 
-#: kghostview.cpp:737
+#: kghostview.cpp:742
 msgid "Upside Down"
 msgstr "Vzhùru nohama"
 
-#: kghostview.cpp:756 kghostview.cpp:767 kghostview.cpp:777
-msgid "Sorry"
-msgstr "Sorry"
-
-#: kghostview.cpp:756
+#: kghostview.cpp:761
 msgid "Malformed URL."
 msgstr "Chybný formát URL."
 
-#: kghostview.cpp:768
+#: kghostview.cpp:773
 msgid ""
 "Already waiting\n"
 "for an internet job to finish.\n"
@@ -453,60 +391,61 @@ msgstr ""
 "Prosím èekej na její ukonèení\n"
 "nebo ji zastavte."
 
-#: kghostview.cpp:777
+#: kghostview.cpp:782
 msgid "Could not start or find KFM."
 msgstr "Nemohu spustit nebo nalézt KFM!"
 
-#: kghostview.cpp:1228 kghostview.cpp:2274 viewcontrol.cpp:40
+#: kghostview.cpp:1233 kghostview.cpp:2277 viewcontrol.cpp:102
 msgid "Portrait"
 msgstr "Na vý¹ku"
 
-#: kghostview.cpp:1230 kghostview.cpp:2280 viewcontrol.cpp:41
+#: kghostview.cpp:1235 kghostview.cpp:2283 viewcontrol.cpp:103
 msgid "Landscape"
 msgstr "Na ¹íøku"
 
-#: kghostview.cpp:1232 kghostview.cpp:2278 viewcontrol.cpp:42
+#: kghostview.cpp:1237 kghostview.cpp:2281 viewcontrol.cpp:104
 msgid "Seascape"
 msgstr "Na ¹íøku(zprava)"
 
-#: kghostview.cpp:1234 kghostview.cpp:2276 viewcontrol.cpp:43
+#: kghostview.cpp:1239 kghostview.cpp:2279 viewcontrol.cpp:105
 msgid "Upside down"
 msgstr "Vzhùru nohama"
 
-#: kghostview.cpp:1272
-msgid "Go to"
-msgstr "Jdi na"
+#: kghostview.cpp:1277
+#, fuzzy
+msgid "Go to ..."
+msgstr "Jdi na stranu ..."
 
-#: kghostview.cpp:1418
+#: kghostview.cpp:1426
 msgid "Turn antialiasing on"
 msgstr "Zapni antialiasing"
 
-#: kghostview.cpp:1420
+#: kghostview.cpp:1428
 msgid "Turn antialiasing off"
 msgstr "Vypni antialiasing"
 
-#: kghostview.cpp:1431
+#: kghostview.cpp:1439
 msgid "Show Ghostscript messages"
 msgstr "Zobrazuj hlá¹ení Ghostscriptu"
 
-#: kghostview.cpp:1433
+#: kghostview.cpp:1441
 msgid "Hide Ghostscript messages"
 msgstr "Nezobrazuj hlá¹ení Ghostscriptu"
 
-#: kghostview.cpp:1496
+#: kghostview.cpp:1504
 #, fuzzy
 msgid "Version 0.6"
 msgstr "Verze 0.6"
 
-#: kghostview.cpp:1497
+#: kghostview.cpp:1505
 msgid "Sorry, not ready yet"
 msgstr "Omlouvám se, je¹t¹ není hotové."
 
-#: kghostview.cpp:1504
+#: kghostview.cpp:1512
 msgid "About kghostview"
 msgstr "Informace o kghostview"
 
-#: kghostview.cpp:1505
+#: kghostview.cpp:1513
 #, fuzzy
 msgid ""
 "Version :\t0.6 alpha\n"
@@ -517,77 +456,83 @@ msgstr ""
 "Autor : Mark Donohoe\n"
 "Mail: donohoe@kde.org"
 
-#: kghostview.cpp:1552 kghostview.cpp:1553 kghostview.cpp:1554
+#: kghostview.cpp:1555 kghostview.cpp:1556 kghostview.cpp:1557
 msgid "Printer Name : "
 msgstr "Název tiskárny :"
 
-#: kghostview.cpp:1618
+#: kghostview.cpp:1620
 msgid "Print failure : lpr"
 msgstr "Neuspì¹ný tisk: lpr"
 
-#: kghostview.cpp:1658
+#: kghostview.cpp:1660
 msgid "No pages have been marked for printing."
 msgstr "Nebyly oznaèeny ¾ádné strany pro tisk."
 
-#: kghostview.cpp:2180 kghostview.cpp:2192 kghostview.cpp:2439
-#: kghostview.cpp:2462
+#: kghostview.cpp:2182 kghostview.cpp:2194 kghostview.cpp:2442
+#: kghostview.cpp:2465
 msgid "of 1    "
 msgstr "z 1     "
 
-#: kghostview.cpp:2182 kghostview.cpp:2194 kghostview.cpp:2464
+#: kghostview.cpp:2184 kghostview.cpp:2196 kghostview.cpp:2467
+#, c-format
 msgid "of %d    "
 msgstr "z %d     "
 
-#: kghostview.cpp:2184 kghostview.cpp:2196 kghostview.cpp:2466
-#: kghostview.cpp:2473
+#: kghostview.cpp:2186 kghostview.cpp:2198 kghostview.cpp:2469
+#: kghostview.cpp:2476
+#, c-format
 msgid "of %d  "
 msgstr "z %d   "
 
-#: kghostview.cpp:2298
+#: kghostview.cpp:2301
 msgid "&1. "
 msgstr "&1. "
 
-#: kghostview.cpp:2302
+#: kghostview.cpp:2305
 msgid "&2. "
 msgstr "&2. "
 
-#: kghostview.cpp:2306
+#: kghostview.cpp:2309
 msgid "&3. "
 msgstr "&3. "
 
-#: kghostview.cpp:2310
+#: kghostview.cpp:2313
 msgid "&4. "
 msgstr "&4. "
 
-#: kghostview.cpp:2438
+#: kghostview.cpp:2441
 msgid "Sc.1 "
 msgstr "Odd.1 "
 
-#: kghostview.cpp:2441
+#: kghostview.cpp:2444
 msgid "P.1 "
 msgstr "S.1 "
 
-#: kghostview.cpp:2443 kghostview.cpp:2456
+#: kghostview.cpp:2446 kghostview.cpp:2459
+#, c-format
 msgid "P.%d "
 msgstr "S.%d "
 
-#: kghostview.cpp:2458
+#: kghostview.cpp:2461
+#, c-format
 msgid "Sc.%d "
 msgstr "Odd.%d "
 
-#: main.cpp:26
+#: main.cpp:27
+#, c-format
 msgid "Usage: %s\n"
 msgstr "Pou¾ití: %s\n"
 
-#: main.cpp:27
+#: main.cpp:28
 msgid "[filename]\n"
 msgstr "[jméno souboru]\n"
 
-#: main.cpp:28
+#: main.cpp:29
 msgid "See Qt documentation for command line options\n"
 msgstr "Nahlédni do dokumentate ke Qt na parametry pøíkazové øádky\n"
 
-#: main.cpp:103
+#: main.cpp:111
+#, c-format
 msgid ""
 "The file\n"
 "\"%s\"\n"
@@ -597,11 +542,7 @@ msgstr ""
 "\"%s\"\n"
 "není mo¾né nalézt"
 
-#: main.cpp:105
-msgid "Error"
-msgstr "Chyba"
-
-#: main.cpp:110
+#: main.cpp:119
 msgid "Didn't recognise file\n"
 msgstr "Není mo¾né rozpoznat datový formát\n"
 
@@ -609,42 +550,92 @@ msgstr "Není mo¾né rozpoznat datový formát\n"
 msgid "Ghostscript messages"
 msgstr "Hlá¹ení Ghostscriptu"
 
-#: messages.cpp:46
-msgid "Clear"
-msgstr "Vymazat"
-
-#: print.cpp:38
+#: print.cpp:63
 msgid "Printer name"
 msgstr "Jméno tiskárny"
 
-#: print.cpp:49
+#: print.cpp:79
 msgid "Pages"
 msgstr "Strany"
 
-#: print.cpp:54
+#: print.cpp:87
 msgid "All"
 msgstr "V¹echny"
 
-#: print.cpp:57
+#: print.cpp:90
 msgid "Marked"
 msgstr "Oznaèené"
 
-#: viewcontrol.cpp:34
-msgid "Force changes"
+#: viewcontrol.cpp:44
+#, fuzzy
+msgid "Force changes to "
 msgstr "Vynutit zmìny"
 
-#: viewcontrol.cpp:56
+#: viewcontrol.cpp:72
 msgid "Magnification"
 msgstr "Zvìt¹ení"
 
-#: viewcontrol.cpp:61
-msgid "Orientation"
-msgstr "Orientace"
-
-#: viewcontrol.cpp:66
+#: viewcontrol.cpp:82
 msgid "Media"
 msgstr "Medium"
 
-#: viewcontrol.cpp:72
-msgid "Apply"
-msgstr "Pøevzít"
+#: viewcontrol.cpp:92
+msgid "Orientation"
+msgstr "Orientace"
+
+#~ msgid "Close"
+#~ msgstr "Zavøít"
+
+#~ msgid "Cancel"
+#~ msgstr "Zru¹it"
+
+#~ msgid "Information"
+#~ msgstr "Informace"
+
+#~ msgid "Quit"
+#~ msgstr "Ukonèit"
+
+#~ msgid "Open"
+#~ msgstr "Otevøít"
+
+#~ msgid "New"
+#~ msgstr "Nový"
+
+#~ msgid "Help"
+#~ msgstr "Nápovìda"
+
+#~ msgid "&New"
+#~ msgstr "&Nový"
+
+#~ msgid "&Close"
+#~ msgstr "&Zavøít"
+
+#~ msgid "E&xit"
+#~ msgstr "U&konèit"
+
+#~ msgid "&File"
+#~ msgstr "&Soubor"
+
+#~ msgid "&View"
+#~ msgstr "&Pohled"
+
+#~ msgid "&Options"
+#~ msgstr "&Mo¾nosti"
+
+#~ msgid "&Help"
+#~ msgstr "&Nápovìda"
+
+#~ msgid "Sorry"
+#~ msgstr "Sorry"
+
+#~ msgid "Go to"
+#~ msgstr "Jdi na"
+
+#~ msgid "Error"
+#~ msgstr "Chyba"
+
+#~ msgid "Clear"
+#~ msgstr "Vymazat"
+
+#~ msgid "Apply"
+#~ msgstr "Pøevzít"

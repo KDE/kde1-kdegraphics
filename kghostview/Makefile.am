@@ -73,3 +73,5 @@ uninstall-local:
 	rm -f $(kde_icondir)/kghostview.xpm
 	rm -f $(kde_minidir)/kghostview.xpm
 
+messages:
+	@XGETTEXT@ -C -ktranslate -ki18n -x ../../kdelibs/po/kde.pot *.cpp && mv messages.po ../po/kghostview.pot
