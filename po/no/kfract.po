@@ -27,7 +27,7 @@ msgstr "Lagre &bilde..."
 
 #: kfract.C:81
 msgid "Mandelbrot..."
-msgstr "Mandelbrød..."
+msgstr "Mandelbrot..."
 
 #: kfract.C:82
 msgid "Julia..."
