@@ -532,6 +532,9 @@ msgid ""
 "\n"
 "Smoothly resizes the icon while trying to preserve the contents"
 msgstr ""
+"Endre størrelse\n"
+"\n"
+"Endrer størrelsen på ikonet samtidig som man prøver å bevare innholdet"
 
 #: kiconedit.cpp:802
 msgid ""
@@ -540,6 +543,10 @@ msgid ""
 "Gray scale the current icon.\n"
 "(Warning: The result is likely to contain colors not in the icon palette"
 msgstr ""
+"Grå skala\n"
+"\n"
+"Gjør gjeldende ikon om til gråskala.\n"
+"(Varsel: Resultatet vil trolig inneholde farger som ikke er i ikonpalettet"
 
 #: kiconedit.cpp:806
 msgid ""
@@ -549,6 +556,12 @@ msgid ""
 "\n"
 "(Tip: Hold the button down for a few seconds to zoom to a predefined scale"
 msgstr ""
+"Forminsk\n"
+"\n"
+"Forminsk med én.\n"
+"\n"
+"(Tips: Hold knappen nede i et par sekunder for å forminske til en "
+"forhåndsdefinert stala"
 
 #: kiconedit.cpp:810
 msgid ""
