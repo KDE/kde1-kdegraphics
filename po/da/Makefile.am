@@ -3,7 +3,7 @@
 GMOFILES = kiconedit.gmo
 POFILES = $(GMOFILES:.gmo=.po)
 
-LANG = de
+LANG = da
 
 localedir = $(kde_locale)
 
