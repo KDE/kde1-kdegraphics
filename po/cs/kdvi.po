@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-06-16 14:19+0200\n"
-"PO-Revision-Date: 1998-03-12 16:41 MET\n"
+"PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -671,21 +671,3 @@ msgstr "n-up"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Zpùsob tisku"
-
-#~ msgid "&Previous"
-#~ msgstr "&Pøedchozí"
-
-#~ msgid "&Next"
-#~ msgstr "&Následující"
-
-#~ msgid "Appearance"
-#~ msgstr "Vzhled"
-
-#~ msgid "Fonts"
-#~ msgstr "Fonty"
-
-#~ msgid "Print"
-#~ msgstr "Tisknout"
-
-#~ msgid "&Remove"
-#~ msgstr "Odst&ranit"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-06-16 14:19+0200\n"
-"PO-Revision-Date: 1998-05-14 17:41 MET DST\n"
+"PO-Revision-Date: 1998-06-18 09:50 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -402,9 +402,3 @@ msgstr "Nastav barvu èáry ..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Oblé rohy"
-
-#~ msgid "Continue"
-#~ msgstr "Pokraèovat"
-
-#~ msgid "None"
-#~ msgstr "Nic"
