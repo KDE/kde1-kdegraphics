@@ -46,7 +46,8 @@ msgstr ""
 msgid ""
 "The change in resolution will be effective\n"
 "only after you start kdvi again!"
-msgstr "Ændring i opløsning begynder først når du starter kdvi igen!"
+msgstr ""
+"Ændring i opløsning begynder først når du starter kdvi igen!"
 
 #: dviwin.cpp:300
 msgid ""
