@@ -1,0 +1,413 @@
+# Icelandic translation of kpaint.po
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Thorarinn R. Einarsson <thori@mindspring.com>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kpaint\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"PO-Revision-Date: 1998-11-04 10:00-0500\n"
+"Last-Translator: Thorarinn R. Einarsson <thori@mindspring.com>\n"
+"Language-Team: is <kde-isl@mmedia.is>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: app.cpp:45
+msgid ""
+"\n"
+"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+msgstr ""
+"\n"
+"(c) 1997 Richard J. Moore.  Útgefið skv. GPL.  Sjá höfundarleyfi.\n"
+
+#: app.cpp:46
+msgid "Usage: "
+msgstr "Notkun: "
+
+#: app.cpp:48
+msgid " [url | filename]\n"
+msgstr " [slóð | skáarnafn]\n"
+
+#: kpaint.cpp:53 kpaint.cpp:606
+msgid "untitled.gif"
+msgstr "nafnlaus.gif"
+
+#: kpaint.cpp:127
+msgid "Unsaved Changes"
+msgstr "Vista breytingar?"
+
+#: kpaint.cpp:128
+msgid ""
+"You have unsaved changes, you will loose them if you close this window now."
+msgstr ""
+"Breytingar hafa ekki verið vistaðar.  Þú tapar þeim ef þú lokar þessum glugga."
+
+#: kpaint.cpp:163
+msgid "New Canvas"
+msgstr "Nýjann striga"
+
+#: kpaint.cpp:166
+msgid "Open File"
+msgstr "Opna skjal"
+
+#: kpaint.cpp:169
+msgid "Save File"
+msgstr "Vista skjal"
+
+#: kpaint.cpp:183 kpaint.cpp:335
+msgid "Zoom In"
+msgstr "Renna að"
+
+#: kpaint.cpp:186 kpaint.cpp:336
+msgid "Zoom Out"
+msgstr "Renna frá"
+
+#: kpaint.cpp:315
+msgid "Open Image..."
+msgstr "Opna mynd..."
+
+#: kpaint.cpp:316
+msgid "New Image..."
+msgstr "Nýja mynd..."
+
+#: kpaint.cpp:317
+msgid "Save Image"
+msgstr "Vista mynd"
+
+#: kpaint.cpp:318
+msgid "Save Image As..."
+msgstr "Vista mynd sem..."
+
+#: kpaint.cpp:319
+msgid "Image Format..."
+msgstr "Myndsnið..."
+
+#: kpaint.cpp:321
+msgid "Open from URL..."
+msgstr "Opna slóð..."
+
+#: kpaint.cpp:322
+msgid "Save to URL..."
+msgstr "Vista slóð..."
+
+#: kpaint.cpp:324
+msgid "New Window"
+msgstr "Nýjann glugga"
+
+#: kpaint.cpp:325
+msgid "Close Window"
+msgstr "Loka glugga"
+
+#: kpaint.cpp:327
+msgid "Exit"
+msgstr "Hætta"
+
+#: kpaint.cpp:330
+msgid "Copy Region"
+msgstr "Afrita svæði"
+
+#: kpaint.cpp:331
+msgid "Cut Region"
+msgstr "Klippa svæði"
+
+#: kpaint.cpp:332
+msgid "Paste Region"
+msgstr "Líma svæði"
+
+#: kpaint.cpp:333
+msgid "Paste As Image"
+msgstr "Líma sem mynd"
+
+#: kpaint.cpp:337
+msgid "Mask..."
+msgstr "Maska..."
+
+#: kpaint.cpp:340
+msgid "Information..."
+msgstr "Upplýsingar..."
+
+#: kpaint.cpp:341
+msgid "Resize..."
+msgstr "Breyta stærð..."
+
+#: kpaint.cpp:342
+msgid "Edit Palette..."
+msgstr "Breyta litaspjaldi..."
+
+#: kpaint.cpp:343
+msgid "Change Colour Depth..."
+msgstr "Breyta litadýpt..."
+
+#: kpaint.cpp:346
+msgid "Tool Properties..."
+msgstr "Tækjastillingar..."
+
+#: kpaint.cpp:348 pen.cpp:17
+msgid "Pen"
+msgstr "Penni"
+
+#: kpaint.cpp:349 line.cpp:19
+msgid "Line"
+msgstr "Lína"
+
+#: kpaint.cpp:350 rectangle.cpp:17
+msgid "Rectangle"
+msgstr "Rétthyrningur"
+
+#: ellipse.cpp:16 kpaint.cpp:351
+msgid "Ellipse"
+msgstr "Sporbaugur"
+
+#: circle.cpp:18 kpaint.cpp:352
+msgid "Circle"
+msgstr "Hringur"
+
+#: kpaint.cpp:353 spraycan.cpp:19
+msgid "Spray Can"
+msgstr "Úðabrúsi"
+
+#: kpaint.cpp:354
+msgid "Area Select"
+msgstr "Velja svæði"
+
+#: kpaint.cpp:355
+msgid "Round Angle"
+msgstr "Rúnnað horn"
+
+#: kpaint.cpp:360
+msgid "Show Tools Toolbar"
+msgstr "Sýna tækjaslá"
+
+#: kpaint.cpp:361
+msgid "Show Commands Toolbar"
+msgstr "Sýna skipanaslá"
+
+#: kpaint.cpp:362
+msgid "Show Status Bar"
+msgstr "Sýna stöðuslá"
+
+#: kpaint.cpp:363
+msgid "Save Options"
+msgstr "Vistunarstillingar"
+
+#: kpaint.cpp:372
+msgid "KPaint"
+msgstr "KPaint"
+
+#: kpaint.cpp:374
+msgid ""
+"\n"
+"\n"
+"(c) "
+msgstr ""
+"\n"
+"\n"
+"(c) "
+
+#: kpaint.cpp:383
+msgid "&Image"
+msgstr "&Mynd"
+
+#: kpaint.cpp:384
+msgid "&Tool"
+msgstr "&Tæki"
+
+#: kpaint.cpp:536
+msgid "KPaint: Could not open file"
+msgstr "KPaint: Gat ekki opnað skrána"
+
+#: kpaint.cpp:537
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"Villa: Gat ekki opnað skrá\n"
+"KPaint gat ekki opnað umbeðna skrá."
+
+#: kpaint.cpp:545
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: Óþekkt snið"
+
+#: kpaint.cpp:546
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"Villa: Óþekkt snið\n"
+"KPaint skilur ekki sniðið á þessari skrá\n"
+"eða skráin er einfaldlega skemmd"
+
+#: kpaint.cpp:748
+msgid "Open Location:"
+msgstr "Opna slóð:"
+
+#: kpaint.cpp:772
+msgid "Save to Location:"
+msgstr "Vista slóð:"
+
+#: manager.cpp:69
+msgid "Tool Properties"
+msgstr "Tækjaskillingar"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Litadýpt:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Notaðir litir:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Breidd myndar:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Hæð myndar:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Hætta við"
+
+#: palette.cpp:100
+msgid "Edit Colour"
+msgstr "Breyta lit"
+
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "Skráarsnið:"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Strigastærð"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Breidd:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Hæð:"
+
+#: properties.cpp:21
+msgid "Line Properties"
+msgstr "Línustillingar"
+
+#: properties.cpp:23
+msgid "Fill Properties"
+msgstr "Fyllingar"
+
+#: properties.cpp:70 properties.cpp:125
+msgid "Fill Pattern:"
+msgstr "Munstur:"
+
+#: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
+msgid "None"
+msgstr "Ekkert"
+
+#: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
+msgid "Solid"
+msgstr "Heilt"
+
+#: properties.cpp:78 properties.cpp:132
+msgid "Vertical Lines"
+msgstr "Lóðréttar línur"
+
+#: properties.cpp:79 properties.cpp:133
+msgid "Horizontal Lines"
+msgstr "Láréttar línur"
+
+#: properties.cpp:80 properties.cpp:134
+msgid "Grid"
+msgstr "Möskvar"
+
+#: properties.cpp:81 properties.cpp:135
+msgid "Diagonal Lines //"
+msgstr "Skálínur //"
+
+#: properties.cpp:82 properties.cpp:136
+msgid "Diagonal Lines \\"
+msgstr "Skálínur \\"
+
+#: properties.cpp:83 properties.cpp:137
+msgid "Diagonal Grid"
+msgstr "Skámöskvi"
+
+#: properties.cpp:93
+msgid "Custom"
+msgstr "Heimsmíðað"
+
+#: properties.cpp:96 properties.cpp:149
+msgid "Pattern Filename:"
+msgstr "Munstursskrá:"
+
+#: properties.cpp:106
+msgid "Set Fill Colour..."
+msgstr "Stilla fyllilit..."
+
+#: properties.cpp:283 properties.cpp:344
+msgid "Line Style:"
+msgstr "Tegund línu:"
+
+#: properties.cpp:289 properties.cpp:349
+msgid "Dashed"
+msgstr "Brotin"
+
+#: properties.cpp:290 properties.cpp:350
+msgid "Dotted"
+msgstr "Puntka"
+
+#: properties.cpp:291 properties.cpp:351
+msgid "Dash Dot"
+msgstr " - * "
+
+#: properties.cpp:292 properties.cpp:352
+msgid "Dash Dot Dot"
+msgstr " - * * "
+
+#: properties.cpp:297 properties.cpp:356
+msgid "Line Width:"
+msgstr "Línuþykkt:"
+
+#: properties.cpp:307 properties.cpp:366
+msgid "End style:"
+msgstr "Enda stílsnið:"
+
+#: properties.cpp:312 properties.cpp:325 properties.cpp:370 properties.cpp:377
+msgid "Not Yet"
+msgstr "Ekki enn"
+
+#: properties.cpp:319 properties.cpp:373
+msgid "Join style:"
+msgstr "Tengja stílsnið:"
+
+#: properties.cpp:331
+msgid "Set Line Colour..."
+msgstr "Stilla línulit..."
+
+#: areaselect.cpp:17
+msgid "Area Selection"
+msgstr "Valið svæði"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Dýpt myndar:"
+
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr "1 (punktafylki)"
+
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr "8 (256 litir)"
+
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr "24 (Raunlitir)"
+
+#: roundangle.cpp:19
+msgid "Roundangle"
+msgstr "Rúnnuð horn"

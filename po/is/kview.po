@@ -1,0 +1,203 @@
+# Icelandic translation of kview.po
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Thorarinn Einarsson <thori@mindspring.com>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kview\n"
+"POT-Creation-Date: 1998-10-08 17:03+0200\n"
+"PO-Revision-Date: 1998-11-04 10:55-0500\n"
+"Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
+"Language-Team: is <kde-isl@mmedia.is>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-1\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: viewer.cpp:74
+msgid "no image loaded"
+msgstr "engin mynd hlaðin"
+
+#: viewer.cpp:82 viewer.cpp:491
+msgid "Ready"
+msgstr "Tilbúin"
+
+#: viewer.cpp:237
+msgid "About KView"
+msgstr "Um KView"
+
+#: viewer.cpp:245 viewer.cpp:262
+msgid "&Zoom"
+msgstr "&Renna að/frá"
+
+#: viewer.cpp:246 viewer.cpp:263
+msgid "&Transform"
+msgstr "&Umbreyta"
+
+#: viewer.cpp:247 viewer.cpp:264
+msgid "To &Desktop"
+msgstr "Yfir á skjá&borð"
+
+#: viewer.cpp:249
+msgid "Fi&lter"
+msgstr "Sí&a"
+
+#: viewer.cpp:266
+msgid "F&ilter"
+msgstr "&Sía"
+
+#: viewer.cpp:270
+msgid "&Images"
+msgstr "&Myndir"
+
+#: viewer.cpp:285
+msgid "&Open.."
+msgstr "&Opna.."
+
+#: viewer.cpp:286
+msgid "&Save As.."
+msgstr "&Vista sem.."
+
+#: viewer.cpp:292
+msgid "&Full Screen"
+msgstr "Útvíða &sýn"
+
+#: viewer.cpp:295
+#, c-format
+msgid "Zoom &in 10%"
+msgstr "Renna &að 10%"
+
+#: viewer.cpp:296
+#, c-format
+msgid "Zoom &out 10%"
+msgstr "Renna &frá 10%"
+
+#: viewer.cpp:297
+#, c-format
+msgid "&Zoom in 50%"
+msgstr "&Renna að 50%"
+
+#: viewer.cpp:298
+#, c-format
+msgid "Zoo&m out 50%"
+msgstr "Re&nna frá 50%"
+
+#: viewer.cpp:300
+msgid "&Reset"
+msgstr "&Endurheimta"
+
+#: viewer.cpp:303
+msgid "Rotate &clockwise"
+msgstr "Snúa ré&ttsælis"
+
+#: viewer.cpp:305
+msgid "Rotate &anti-clockwise"
+msgstr "Snúa r&angsælis"
+
+#: viewer.cpp:308
+msgid "Flip &vertical"
+msgstr "Snúa á hvol&f"
+
+#: viewer.cpp:310
+msgid "Flip &horizontal"
+msgstr "Snúa á hli&ð"
+
+#: viewer.cpp:313
+msgid "&Tile"
+msgstr "&Flísaleggja"
+
+#: viewer.cpp:314
+msgid "&Max"
+msgstr "&Hámark"
+
+#: viewer.cpp:315
+msgid "Max&pect"
+msgstr "Max&pect"
+
+#: viewer.cpp:318
+msgid "&List.."
+msgstr "&Fá lista.."
+
+#: viewer.cpp:325
+msgid "&Slideshow On/Off"
+msgstr "&Skyggnusýning af/á"
+
+#: viewer.cpp:330
+msgid "&About KView.."
+msgstr "&Um KView.."
+
+#: viewer.cpp:377 viewer.cpp:384
+msgid "Existing transfer not yet complete."
+msgstr "Færslan er ekki búin"
+
+#: viewer.cpp:398
+msgid "Couldn't get temporary transfer name."
+msgstr "Vantar nafn."
+
+#: viewer.cpp:503
+msgid "Loading.."
+msgstr "Sæki.."
+
+#: colour.cpp:23
+msgid "Brightening.."
+msgstr "Birta.."
+
+#: colour.cpp:37
+msgid "Intensity:Brighten"
+msgstr "Styrkleiki:Birta"
+
+#: colour.cpp:53
+msgid "Darkening.."
+msgstr "Dekki.."
+
+#: colour.cpp:66
+msgid "Intensity:Darken"
+msgstr "Styrkleiki:Dekkja"
+
+#: colour.cpp:100
+msgid "Converting to Greyscale.."
+msgstr "Breyti í grátóna.."
+
+#: colour.cpp:129
+msgid "Greyscale"
+msgstr "Grátónar"
+
+#: colour.cpp:143
+msgid "Smoothing.."
+msgstr "Mýki.."
+
+#: colour.cpp:209
+msgid "Smooth"
+msgstr "Mýkja"
+
+#: ilistdlg.cpp:53
+msgid "Prev"
+msgstr "Fyrri"
+
+#: ilistdlg.cpp:57
+msgid "Shu&ffle"
+msgstr "Sto&kka"
+
+#: ilistdlg.cpp:62
+msgid "Next"
+msgstr "Næsta"
+
+#: ilistdlg.cpp:66
+msgid "Start slide"
+msgstr "Byrja á glæru"
+
+#: ilistdlg.cpp:71
+msgid "Loop"
+msgstr "Í hring"
+
+#: ilistdlg.cpp:79
+msgid "Image List"
+msgstr "Myndalisti"
+
+#: ilistdlg.cpp:256
+msgid "Stop &slide"
+msgstr "Stöðva glæru"
+
+#: ilistdlg.cpp:264
+msgid "Start &slide"
+msgstr "Byrja á &glæru"
