@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-16 15:20+0200\n"
+"POT-Creation-Date: 1998-12-13 13:55+0100\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -14,204 +14,241 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:86
 msgid "no image loaded"
 msgstr "nenhuma imagem carregada"
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:94 viewer.cpp:644
 msgid "Ready"
 msgstr "Pronto"
 
-#: viewer.cpp:186
+#: viewer.cpp:241
 msgid "Net saving not yet implemented"
 msgstr "Salvamento incremental ainda não implementado"
 
-#: viewer.cpp:194
+#: viewer.cpp:249
 #, c-format
 msgid "%s: written"
 msgstr "%s: gravado"
 
-#: viewer.cpp:232
+#: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Entre fator de ampliação (100 = 1x):"
 
-#: viewer.cpp:236
+#: viewer.cpp:291
 msgid "Illegal zoom factor"
 msgstr "Fator de ampliação ilegal"
 
-#: viewer.cpp:285
+#: viewer.cpp:340
 msgid "About KView"
 msgstr "Sobre KView"
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:365 viewer.cpp:465
+#, fuzzy
+msgid "&List..."
+msgstr "&Lista..."
+
+#: viewer.cpp:368 viewer.cpp:469
+msgid "&Previous"
+msgstr "&Anterior"
+
+#: viewer.cpp:370 viewer.cpp:471
+msgid "&Next"
+msgstr "&Próxima"
+
+#: viewer.cpp:373 viewer.cpp:474
+msgid "&Slideshow On/Off"
+msgstr "&Show de slides Liga/Desliga"
+
+#: viewer.cpp:382
 msgid "&Zoom"
 msgstr "&Aproximar"
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:383
 msgid "&Transform"
 msgstr "&Transformar"
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:384
 msgid "To &Desktop"
 msgstr "para a &Área de Trabalho"
 
-#: viewer.cpp:297
-msgid "Fi&lter"
-msgstr "Fi&ltro"
-
-#: viewer.cpp:314
+#: viewer.cpp:386
 msgid "F&ilter"
 msgstr "F&iltro"
 
-#: viewer.cpp:318
+#: viewer.cpp:390
 msgid "&Images"
 msgstr "&Imagens"
 
-#: viewer.cpp:333
-msgid "&Open.."
-msgstr "&Abrir..."
-
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:409
+#, fuzzy
+msgid "&Save As..."
 msgstr "&Salvar como..."
 
-#: viewer.cpp:340
+#: viewer.cpp:415
+#, fuzzy
+msgid "&Close Window"
+msgstr "tamanho da janela"
+
+#: viewer.cpp:421
 msgid "&Full Screen"
 msgstr "Te&la Cheia"
 
-#: viewer.cpp:343
+#: viewer.cpp:424
+msgid "&Crop"
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&Reset"
+msgstr "&Reiniciar"
+
+#: viewer.cpp:432
 msgid "&Zoom..."
 msgstr "&Ampliação..."
 
-#: viewer.cpp:344
+#: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "A&mpliar 10%"
 
-#: viewer.cpp:345
+#: viewer.cpp:436
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Redu&zir 10%"
 
-#: viewer.cpp:346
+#: viewer.cpp:438
 msgid "&Double size"
 msgstr "&Duplicar tamanho"
 
-#: viewer.cpp:347
+#: viewer.cpp:440
 msgid "&Half size"
 msgstr "Diminuir à &Metade"
 
-#: viewer.cpp:349
-msgid "&Reset"
-msgstr "&Reiniciar"
+#: viewer.cpp:442
+#, fuzzy
+msgid "&Max size"
+msgstr "Tamanho Máximo"
 
-#: viewer.cpp:352
+#: viewer.cpp:444
+#, fuzzy
+msgid "Max/&aspect"
+msgstr "Má&ximo"
+
+#: viewer.cpp:449
 msgid "Rotate &clockwise"
 msgstr "&Sentido horário"
 
-#: viewer.cpp:354
+#: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
 msgstr "&Anti-horário"
 
-#: viewer.cpp:357
+#: viewer.cpp:453
 msgid "Flip &vertical"
 msgstr "Virar &Verticalmente"
 
-#: viewer.cpp:359
+#: viewer.cpp:455
 msgid "Flip &horizontal"
 msgstr "Virar &Horizontalmente"
 
-#: viewer.cpp:362
+#: viewer.cpp:460
 msgid "&Tile"
 msgstr "&Mosaico"
 
-#: viewer.cpp:363
+#: viewer.cpp:461
 msgid "&Max"
 msgstr "&Máximo"
 
-#: viewer.cpp:364
+#: viewer.cpp:462
 msgid "Max&pect"
 msgstr "Má&ximo"
 
-#: viewer.cpp:367
-msgid "&List.."
-msgstr "&Lista..."
-
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr "&Anterior"
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr "&Próxima"
-
-#: viewer.cpp:374
-msgid "&Slideshow On/Off"
-msgstr "&Show de slides Liga/Desliga"
-
-#: viewer.cpp:379
-msgid "&About KView.."
+#: viewer.cpp:479
+#, fuzzy
+msgid "&About KView..."
 msgstr "&Sobre o KView..."
 
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
 msgstr "Transferência ainda não completada"
 
-#: viewer.cpp:447
+#: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
 msgstr "Impossível obter nome temporário para transferência"
 
-#: viewer.cpp:486
+#: viewer.cpp:581
 msgid "Transfer error: "
 msgstr "Erro de transferência: "
 
-#: viewer.cpp:558
-msgid "Loading.."
+#: viewer.cpp:662
+#, fuzzy
+msgid "Loading..."
 msgstr "Carregando..."
 
-#: colour.cpp:29
-msgid "Brightening..."
+#: viewer.cpp:671
+#, c-format
+msgid "Couldn't load %s"
+msgstr ""
+
+#: viewer.cpp:860
+#, fuzzy
+msgid "Printing..."
 msgstr "Clareando..."
 
-#: colour.cpp:43
-msgid "Intensity:Brighten"
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
+msgstr ""
+
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
+msgstr ""
+
+#: colour.cpp:44
+msgid "Changing brightness..."
+msgstr ""
+
+#: colour.cpp:58
+#, fuzzy
+msgid "Intensity:Brightness"
 msgstr "Intensidade:Clarear"
 
-#: colour.cpp:63
-msgid "Darkening..."
-msgstr "Escurecendo..."
-
-#: colour.cpp:76
-msgid "Intensity:Darken"
-msgstr "Intensidade:Escurecer"
-
-#: colour.cpp:114
+#: colour.cpp:100
 msgid "Converting to Greyscale..."
 msgstr "Convertendo para Escala de Cinzas..."
 
-#: colour.cpp:143
+#: colour.cpp:129
 msgid "Greyscale"
 msgstr "Escala de cinzas"
 
-#: colour.cpp:161
+#: colour.cpp:147
 msgid "Smoothing..."
 msgstr "Suavizando..."
 
-#: colour.cpp:227
+#: colour.cpp:213
 msgid "Smooth"
 msgstr "Suavizar"
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
+#: colour.cpp:234
+#, fuzzy
+msgid "Enter gamma value ( >0 ):"
 msgstr "Entre valor de gama (0..1):"
 
-#: colour.cpp:254
+#: colour.cpp:237
+msgid "Bad Gamma value"
+msgstr ""
+
+#: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Corrigindo gama..."
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
+#: colour.cpp:296
+#, fuzzy
+msgid "Intensity:Gamma Correct..."
 msgstr "Correção de Gama..."
+
+#: colour.cpp:310
+#, fuzzy
+msgid "External.."
+msgstr "Intervalo..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -252,6 +289,18 @@ msgstr "Iniciar &slide"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Tempo entre slides (seg):"
+
+#~ msgid "Fi&lter"
+#~ msgstr "Fi&ltro"
+
+#~ msgid "&Open.."
+#~ msgstr "&Abrir..."
+
+#~ msgid "Darkening..."
+#~ msgstr "Escurecendo..."
+
+#~ msgid "Intensity:Darken"
+#~ msgstr "Intensidade:Escurecer"
 
 #~ msgid "&Zoom in 50%"
 #~ msgstr "A&mpliar 50%"
@@ -295,9 +344,6 @@ msgstr "Tempo entre slides (seg):"
 #~ msgid "Mirror Y"
 #~ msgstr "Espelho Y"
 
-#~ msgid "Max Size"
-#~ msgstr "Tamanho Máximo"
-
 #~ msgid "Zoom"
 #~ msgstr "Aproximar"
 
@@ -339,9 +385,6 @@ msgstr "Tempo entre slides (seg):"
 
 #~ msgid "magnify +50%"
 #~ msgstr "aumentar +50%"
-
-#~ msgid "size Window"
-#~ msgstr "tamanho da janela"
 
 #~ msgid "launch help"
 #~ msgstr "inicia a ajuda"

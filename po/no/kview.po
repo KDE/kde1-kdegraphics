@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kview\n"
-"POT-Creation-Date: 1998-10-16 15:20+0200\n"
+"POT-Creation-Date: 1998-12-13 13:55+0100\n"
 "PO-Revision-Date: 1998-08-09 14:50+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -13,204 +13,229 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO_8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:86
 msgid "no image loaded"
 msgstr "intet bilde lastet"
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:94 viewer.cpp:644
 msgid "Ready"
 msgstr "Klar"
 
-#: viewer.cpp:186
+#: viewer.cpp:241
 msgid "Net saving not yet implemented"
 msgstr "Nettlagring foreløbig ikke implementert"
 
-#: viewer.cpp:194
+#: viewer.cpp:249
 #, c-format
 msgid "%s: written"
 msgstr "%s: skrevet"
 
-#: viewer.cpp:232
+#: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Skriv inn forstørringsfaktor (100 = 1x):"
 
-#: viewer.cpp:236
+#: viewer.cpp:291
 msgid "Illegal zoom factor"
 msgstr "Ulogliv forstørringsfaktor"
 
-#: viewer.cpp:285
+#: viewer.cpp:340
 msgid "About KView"
 msgstr "Om KView"
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:365 viewer.cpp:465
+msgid "&List..."
+msgstr "&Liste..."
+
+#: viewer.cpp:368 viewer.cpp:469
+msgid "&Previous"
+msgstr "&Forrige"
+
+#: viewer.cpp:370 viewer.cpp:471
+msgid "&Next"
+msgstr "&Neste"
+
+#: viewer.cpp:373 viewer.cpp:474
+msgid "&Slideshow On/Off"
+msgstr "&Lysbildefremvisning av/på"
+
+#: viewer.cpp:382
 msgid "&Zoom"
 msgstr "&Forstørr"
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:383
 msgid "&Transform"
 msgstr "&Omgjør"
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:384
 msgid "To &Desktop"
 msgstr "Til &skrivebord"
 
-#: viewer.cpp:297
-msgid "Fi&lter"
-msgstr "Fi&lter"
-
-#: viewer.cpp:314
+#: viewer.cpp:386
 msgid "F&ilter"
 msgstr "F&ilter"
 
-#: viewer.cpp:318
+#: viewer.cpp:390
 msgid "&Images"
 msgstr "&Bilder"
 
-#: viewer.cpp:333
-msgid "&Open.."
-msgstr "Å&pne..."
-
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:409
+msgid "&Save As..."
 msgstr "&Lagre som..."
 
-#: viewer.cpp:340
+#: viewer.cpp:415
+msgid "&Close Window"
+msgstr "&Lukk vindu"
+
+#: viewer.cpp:421
 msgid "&Full Screen"
 msgstr "&Fullskjerm"
 
-#: viewer.cpp:343
+#: viewer.cpp:424
+msgid "&Crop"
+msgstr "&Beskjær"
+
+#: viewer.cpp:427
+msgid "&Reset"
+msgstr "&Nullstill"
+
+#: viewer.cpp:432
 msgid "&Zoom..."
 msgstr "&Forstørr..."
 
-#: viewer.cpp:344
+#: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "&Forstørr 10%"
 
-#: viewer.cpp:345
+#: viewer.cpp:436
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "F&orminsk 10%"
 
-#: viewer.cpp:346
+#: viewer.cpp:438
 msgid "&Double size"
 msgstr "&Doble størrelse"
 
-#: viewer.cpp:347
+#: viewer.cpp:440
 msgid "&Half size"
 msgstr "&Halver størrelse"
 
-#: viewer.cpp:349
-msgid "&Reset"
-msgstr "&Nullstill"
+#: viewer.cpp:442
+msgid "&Max size"
+msgstr "&Maks størrelse"
 
-#: viewer.cpp:352
+#: viewer.cpp:444
+msgid "Max/&aspect"
+msgstr "Maks/&aspekt"
+
+#: viewer.cpp:449
 msgid "Rotate &clockwise"
 msgstr "Roter &klokkevis"
 
-#: viewer.cpp:354
+#: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
 msgstr "Roter &Mot klokken"
 
-#: viewer.cpp:357
+#: viewer.cpp:453
 msgid "Flip &vertical"
 msgstr "Drei &vertikalt"
 
-#: viewer.cpp:359
+#: viewer.cpp:455
 msgid "Flip &horizontal"
 msgstr "Drei &horisontalt"
 
-#: viewer.cpp:362
+#: viewer.cpp:460
 msgid "&Tile"
 msgstr "&Side ved side"
 
-#: viewer.cpp:363
+#: viewer.cpp:461
 msgid "&Max"
 msgstr "&Maks"
 
-#: viewer.cpp:364
+#: viewer.cpp:462
 msgid "Max&pect"
 msgstr "Maks&pekt"
 
-#: viewer.cpp:367
-msgid "&List.."
-msgstr "&Liste.."
+#: viewer.cpp:479
+msgid "&About KView..."
+msgstr "&Om KView..."
 
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr "&Forrige"
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr "&Neste"
-
-#: viewer.cpp:374
-msgid "&Slideshow On/Off"
-msgstr "&Lysbildefremvisning av/på"
-
-#: viewer.cpp:379
-msgid "&About KView.."
-msgstr "&Om KView.."
-
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
 msgstr "Eksisterende overføring ikke fullført."
 
-#: viewer.cpp:447
+#: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
 msgstr "Kunne ikke få midlertidig overføringsnavn."
 
-#: viewer.cpp:486
+#: viewer.cpp:581
 msgid "Transfer error: "
 msgstr "Overføringsfeil: "
 
-#: viewer.cpp:558
-msgid "Loading.."
-msgstr "Laster.."
+#: viewer.cpp:662
+msgid "Loading..."
+msgstr "Laster..."
 
-#: colour.cpp:29
-msgid "Brightening..."
-msgstr "Lysner..."
+#: viewer.cpp:671
+#, c-format
+msgid "Couldn't load %s"
+msgstr "Kunne ikke laste %s"
 
-#: colour.cpp:43
-msgid "Intensity:Brighten"
-msgstr "Intensitet:Lys"
+#: viewer.cpp:860
+msgid "Printing..."
+msgstr "Skriver ut..."
 
-#: colour.cpp:63
-msgid "Darkening..."
-msgstr "Mørkner"
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
+msgstr "Oppgi lyshetsfaktor (%):"
 
-#: colour.cpp:76
-msgid "Intensity:Darken"
-msgstr "Intensitet:Mørk"
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
+msgstr "Lyshetsfaktor må være positiv"
 
-#: colour.cpp:114
+#: colour.cpp:44
+msgid "Changing brightness..."
+msgstr "Endrer lyshet..."
+
+#: colour.cpp:58
+msgid "Intensity:Brightness"
+msgstr "Intensitet:Lyshet"
+
+#: colour.cpp:100
 msgid "Converting to Greyscale..."
 msgstr "Konverterer til gråskala..."
 
-#: colour.cpp:143
+#: colour.cpp:129
 msgid "Greyscale"
 msgstr "Gråskala"
 
-#: colour.cpp:161
+#: colour.cpp:147
 msgid "Smoothing..."
 msgstr "Jevner..."
 
-#: colour.cpp:227
+#: colour.cpp:213
 msgid "Smooth"
 msgstr "Jevn"
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
-msgstr "Skriv inn gamma-verdi (0...1):"
+#: colour.cpp:234
+msgid "Enter gamma value ( >0 ):"
+msgstr "Skriv inn gamma-verdi ( >0 ):"
 
-#: colour.cpp:254
+#: colour.cpp:237
+msgid "Bad Gamma value"
+msgstr "Ugyldig gamma-verdi"
+
+#: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Gamma-korrigering..."
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
-msgstr "Gamma-korrekt..."
+#: colour.cpp:296
+msgid "Intensity:Gamma Correct..."
+msgstr "Intensitet:Gamma-korreksjon..."
+
+#: colour.cpp:310
+msgid "External.."
+msgstr "Ekstern.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -251,3 +276,15 @@ msgstr "Start &lystbilde"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Tid mellom lydbilder (sek):"
+
+#~ msgid "Fi&lter"
+#~ msgstr "Fi&lter"
+
+#~ msgid "&Open.."
+#~ msgstr "Å&pne..."
+
+#~ msgid "Darkening..."
+#~ msgstr "Mørkner"
+
+#~ msgid "Intensity:Darken"
+#~ msgstr "Intensitet:Mørk"

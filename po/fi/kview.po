@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KVIEW\n"
-"POT-Creation-Date: 1998-10-16 15:20+0200\n"
+"POT-Creation-Date: 1998-12-13 13:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kim Enkovaara <kim.enkovaara@iki.fi>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,204 +14,240 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:86
 msgid "no image loaded"
 msgstr "ei ladattua kuvaa"
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:94 viewer.cpp:644
 msgid "Ready"
 msgstr "Valmis"
 
-#: viewer.cpp:186
+#: viewer.cpp:241
 msgid "Net saving not yet implemented"
 msgstr "Verkkotalennusta ei ole vielä toteutettu"
 
-#: viewer.cpp:194
+#: viewer.cpp:249
 #, c-format
 msgid "%s: written"
 msgstr "%s: kirjoitettut"
 
-#: viewer.cpp:232
+#: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Anna suurennuskerroin (100 = 1x):"
 
-#: viewer.cpp:236
+#: viewer.cpp:291
 msgid "Illegal zoom factor"
 msgstr "Virheellinen suurennuskerroin"
 
-#: viewer.cpp:285
+#: viewer.cpp:340
 msgid "About KView"
 msgstr "Tietoja KView:tä"
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:365 viewer.cpp:465
+#, fuzzy
+msgid "&List..."
+msgstr "&Lista..."
+
+#: viewer.cpp:368 viewer.cpp:469
+msgid "&Previous"
+msgstr "&Edellinen"
+
+#: viewer.cpp:370 viewer.cpp:471
+msgid "&Next"
+msgstr "&Seuraava"
+
+#: viewer.cpp:373 viewer.cpp:474
+msgid "&Slideshow On/Off"
+msgstr "&Diashow Päällä/Pois"
+
+#: viewer.cpp:382
 msgid "&Zoom"
 msgstr "&Suurennus"
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:383
 msgid "&Transform"
 msgstr "&Muuta"
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:384
 msgid "To &Desktop"
 msgstr "&Työpöydälle"
 
-#: viewer.cpp:297
-msgid "Fi&lter"
-msgstr "&Suodatin"
-
-#: viewer.cpp:314
+#: viewer.cpp:386
 msgid "F&ilter"
 msgstr "&Suodatin"
 
-#: viewer.cpp:318
+#: viewer.cpp:390
 msgid "&Images"
 msgstr "&Kuvat"
 
-#: viewer.cpp:333
-msgid "&Open.."
-msgstr "&Avaa.."
-
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:409
+#, fuzzy
+msgid "&Save As..."
 msgstr "Tallenna &nimellä.."
 
-#: viewer.cpp:340
+#: viewer.cpp:415
+msgid "&Close Window"
+msgstr ""
+
+#: viewer.cpp:421
 msgid "&Full Screen"
 msgstr "&Koko ruutu"
 
-#: viewer.cpp:343
+#: viewer.cpp:424
+msgid "&Crop"
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&Reset"
+msgstr "&Oletus"
+
+#: viewer.cpp:432
 msgid "&Zoom..."
 msgstr "&Suurenna..."
 
-#: viewer.cpp:344
+#: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "Pienennä 10%"
 
-#: viewer.cpp:345
+#: viewer.cpp:436
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "Suurenna 10%"
 
-#: viewer.cpp:346
+#: viewer.cpp:438
 msgid "&Double size"
 msgstr "&Tuplakoko"
 
-#: viewer.cpp:347
+#: viewer.cpp:440
 msgid "&Half size"
 msgstr "&Puolikoko"
 
-#: viewer.cpp:349
-msgid "&Reset"
-msgstr "&Oletus"
+#: viewer.cpp:442
+#, fuzzy
+msgid "&Max size"
+msgstr "&Puolikoko"
 
-#: viewer.cpp:352
+#: viewer.cpp:444
+#, fuzzy
+msgid "Max/&aspect"
+msgstr "Maksimipect"
+
+#: viewer.cpp:449
 msgid "Rotate &clockwise"
 msgstr "Kierrä &myötäpäivään"
 
-#: viewer.cpp:354
+#: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
 msgstr "Kierrä &vastapäivään"
 
-#: viewer.cpp:357
+#: viewer.cpp:453
 msgid "Flip &vertical"
 msgstr "Käännä pystysuunnassa"
 
-#: viewer.cpp:359
+#: viewer.cpp:455
 msgid "Flip &horizontal"
 msgstr "Käännä vaakasuunnassa"
 
-#: viewer.cpp:362
+#: viewer.cpp:460
 msgid "&Tile"
 msgstr "&Sarjoita"
 
-#: viewer.cpp:363
+#: viewer.cpp:461
 msgid "&Max"
 msgstr "&Maksimikoko"
 
-#: viewer.cpp:364
+#: viewer.cpp:462
 msgid "Max&pect"
 msgstr "Maksimipect"
 
-#: viewer.cpp:367
-msgid "&List.."
-msgstr "&Lista..."
-
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr "&Edellinen"
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr "&Seuraava"
-
-#: viewer.cpp:374
-msgid "&Slideshow On/Off"
-msgstr "&Diashow Päällä/Pois"
-
-#: viewer.cpp:379
-msgid "&About KView.."
+#: viewer.cpp:479
+#, fuzzy
+msgid "&About KView..."
 msgstr "&Tietoja KView:tä"
 
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
 msgstr "Nykyyinen siirto ei ole vielä valmis."
 
-#: viewer.cpp:447
+#: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
 msgstr "En saanut väliaikaista siirtonimeä."
 
-#: viewer.cpp:486
+#: viewer.cpp:581
 msgid "Transfer error: "
 msgstr "Siirtovirhe: "
 
-#: viewer.cpp:558
-msgid "Loading.."
+#: viewer.cpp:662
+#, fuzzy
+msgid "Loading..."
 msgstr "Lataan.."
 
-#: colour.cpp:29
-msgid "Brightening..."
+#: viewer.cpp:671
+#, c-format
+msgid "Couldn't load %s"
+msgstr ""
+
+#: viewer.cpp:860
+#, fuzzy
+msgid "Printing..."
 msgstr "Kirkastan..."
 
-#: colour.cpp:43
-msgid "Intensity:Brighten"
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
+msgstr ""
+
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
+msgstr ""
+
+#: colour.cpp:44
+msgid "Changing brightness..."
+msgstr ""
+
+#: colour.cpp:58
+#, fuzzy
+msgid "Intensity:Brightness"
 msgstr "Intensiteetti:Kirkasta"
 
-#: colour.cpp:63
-msgid "Darkening..."
-msgstr "Tummennan..."
-
-#: colour.cpp:76
-msgid "Intensity:Darken"
-msgstr "Intensiteetti:Tummenna"
-
-#: colour.cpp:114
+#: colour.cpp:100
 msgid "Converting to Greyscale..."
 msgstr "Muunnan harmaasävyihin..."
 
-#: colour.cpp:143
+#: colour.cpp:129
 msgid "Greyscale"
 msgstr "Harmaasävy"
 
-#: colour.cpp:161
+#: colour.cpp:147
 msgid "Smoothing..."
 msgstr "Pehmennys..."
 
-#: colour.cpp:227
+#: colour.cpp:213
 msgid "Smooth"
 msgstr "Pehmennä"
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
+#: colour.cpp:234
+#, fuzzy
+msgid "Enter gamma value ( >0 ):"
 msgstr "Anna gamma-arvo (0...1):"
 
-#: colour.cpp:254
+#: colour.cpp:237
+msgid "Bad Gamma value"
+msgstr ""
+
+#: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Gammakorjaan..."
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
+#: colour.cpp:296
+#, fuzzy
+msgid "Intensity:Gamma Correct..."
 msgstr "Gammakorjattu..."
+
+#: colour.cpp:310
+#, fuzzy
+msgid "External.."
+msgstr "Kestoaika.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -252,6 +288,18 @@ msgstr "Aloita kuva"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Aika kuvien välillä (sek):"
+
+#~ msgid "Fi&lter"
+#~ msgstr "&Suodatin"
+
+#~ msgid "&Open.."
+#~ msgstr "&Avaa.."
+
+#~ msgid "Darkening..."
+#~ msgstr "Tummennan..."
+
+#~ msgid "Intensity:Darken"
+#~ msgstr "Intensiteetti:Tummenna"
 
 #~ msgid "&Zoom in 50%"
 #~ msgstr "Pienennä 50%"

@@ -1,209 +1,245 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
-"POT-Creation-Date: 1998-10-16 15:20+0200\n"
+"POT-Creation-Date: 1998-12-13 13:55+0100\n"
 "PO-Revision-Date: 1998-11-15 12:20+0100\n"
 "Last-Translator: Thomas Diehl <th_diehl@csi.com>\n"
 "Translator: Stephan Kulow <coolo@kde.org>\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:86
 msgid "no image loaded"
 msgstr "Kein Bild geladen"
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:94 viewer.cpp:644
 msgid "Ready"
 msgstr "Fertig"
 
-#: viewer.cpp:186
+#: viewer.cpp:241
 msgid "Net saving not yet implemented"
 msgstr "Speichern über's Internet noch nicht implementiert"
 
-#: viewer.cpp:194
+#: viewer.cpp:249
 #, c-format
 msgid "%s: written"
 msgstr "%s: geschrieben"
 
-#: viewer.cpp:232
+#: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr "Zoom-Faktor (100 = 1x):"
 
-#: viewer.cpp:236
+#: viewer.cpp:291
 msgid "Illegal zoom factor"
 msgstr "Unzulässiger Zoom-Faktor"
 
-#: viewer.cpp:285
+#: viewer.cpp:340
 msgid "About KView"
 msgstr "Über KView"
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:365 viewer.cpp:465
+#, fuzzy
+msgid "&List..."
+msgstr "&Liste..."
+
+#: viewer.cpp:368 viewer.cpp:469
+msgid "&Previous"
+msgstr "&Voriger"
+
+#: viewer.cpp:370 viewer.cpp:471
+msgid "&Next"
+msgstr "&Nächster"
+
+#: viewer.cpp:373 viewer.cpp:474
+msgid "&Slideshow On/Off"
+msgstr "&Diashow An/Aus"
+
+#: viewer.cpp:382
 msgid "&Zoom"
 msgstr "&Zoom"
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:383
 msgid "&Transform"
 msgstr "&Transformieren"
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:384
 msgid "To &Desktop"
 msgstr "Auf &Desktop"
 
-#: viewer.cpp:297
-msgid "Fi&lter"
-msgstr "Fi&lter"
-
-#: viewer.cpp:314
+#: viewer.cpp:386
 msgid "F&ilter"
 msgstr "F&ilter"
 
-#: viewer.cpp:318
+#: viewer.cpp:390
 msgid "&Images"
 msgstr "&Bilder"
 
-#: viewer.cpp:333
-msgid "&Open.."
-msgstr "&Öffnen"
-
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:409
+#, fuzzy
+msgid "&Save As..."
 msgstr "&Speichern unter"
 
-#: viewer.cpp:340
+#: viewer.cpp:415
+msgid "&Close Window"
+msgstr ""
+
+#: viewer.cpp:421
 msgid "&Full Screen"
 msgstr "&Ganzer Bildschirm"
 
-#: viewer.cpp:343
+#: viewer.cpp:424
+msgid "&Crop"
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&Reset"
+msgstr "&Zurücksetzen"
+
+#: viewer.cpp:432
 msgid "&Zoom..."
 msgstr "&Zoom..."
 
-#: viewer.cpp:344
+#: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
 msgstr "10% ver&größern"
 
-#: viewer.cpp:345
+#: viewer.cpp:436
 #, c-format
 msgid "Zoom &out 10%"
 msgstr "10% ver&kleinern"
 
-#: viewer.cpp:346
+#: viewer.cpp:438
 msgid "&Double size"
 msgstr "&Doppelt so groß"
 
-#: viewer.cpp:347
+#: viewer.cpp:440
 msgid "&Half size"
 msgstr "&Halb so groß"
 
-#: viewer.cpp:349
-msgid "&Reset"
-msgstr "&Zurücksetzen"
+#: viewer.cpp:442
+#, fuzzy
+msgid "&Max size"
+msgstr "&Halb so groß"
 
-#: viewer.cpp:352
+#: viewer.cpp:444
+#, fuzzy
+msgid "Max/&aspect"
+msgstr "Max&pekt"
+
+#: viewer.cpp:449
 msgid "Rotate &clockwise"
 msgstr "&Rechtsherum rotieren"
 
-#: viewer.cpp:354
+#: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
 msgstr "&Linksherum rotieren"
 
-#: viewer.cpp:357
+#: viewer.cpp:453
 msgid "Flip &vertical"
 msgstr "&Vertikal spiegeln"
 
-#: viewer.cpp:359
+#: viewer.cpp:455
 msgid "Flip &horizontal"
 msgstr "&Horizontal spiegeln"
 
-#: viewer.cpp:362
+#: viewer.cpp:460
 msgid "&Tile"
 msgstr "&Teilen"
 
-#: viewer.cpp:363
+#: viewer.cpp:461
 msgid "&Max"
 msgstr "&Maximum"
 
-#: viewer.cpp:364
+#: viewer.cpp:462
 msgid "Max&pect"
 msgstr "Max&pekt"
 
-#: viewer.cpp:367
-msgid "&List.."
-msgstr "&Liste..."
-
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr "&Voriger"
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr "&Nächster"
-
-#: viewer.cpp:374
-msgid "&Slideshow On/Off"
-msgstr "&Diashow An/Aus"
-
-#: viewer.cpp:379
-msgid "&About KView.."
+#: viewer.cpp:479
+#, fuzzy
+msgid "&About KView..."
 msgstr "&Über KView..."
 
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
 msgstr "Angefangene Übertragung noch nicht abgeschlossen."
 
-#: viewer.cpp:447
+#: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
 msgstr "Es konnte kein temporärer Dateiname gefunden werden."
 
-#: viewer.cpp:486
+#: viewer.cpp:581
 msgid "Transfer error: "
 msgstr "Übertragungsfehler: "
 
-#: viewer.cpp:558
-msgid "Loading.."
+#: viewer.cpp:662
+#, fuzzy
+msgid "Loading..."
 msgstr "Lade..."
 
-#: colour.cpp:29
-msgid "Brightening..."
+#: viewer.cpp:671
+#, c-format
+msgid "Couldn't load %s"
+msgstr ""
+
+#: viewer.cpp:860
+#, fuzzy
+msgid "Printing..."
 msgstr "Aufhellen..."
 
-#: colour.cpp:43
-msgid "Intensity:Brighten"
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
+msgstr ""
+
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
+msgstr ""
+
+#: colour.cpp:44
+msgid "Changing brightness..."
+msgstr ""
+
+#: colour.cpp:58
+#, fuzzy
+msgid "Intensity:Brightness"
 msgstr "Intensität:Heller"
 
-#: colour.cpp:63
-msgid "Darkening..."
-msgstr "Abdunkeln..."
-
-#: colour.cpp:76
-msgid "Intensity:Darken"
-msgstr "Intensität:Dunkler"
-
-#: colour.cpp:114
+#: colour.cpp:100
 msgid "Converting to Greyscale..."
 msgstr "Konvertierung in Graustufen..."
 
-#: colour.cpp:143
+#: colour.cpp:129
 msgid "Greyscale"
 msgstr "Graustufen"
 
-#: colour.cpp:161
+#: colour.cpp:147
 msgid "Smoothing..."
 msgstr "Glättung..."
 
-#: colour.cpp:227
+#: colour.cpp:213
 msgid "Smooth"
 msgstr "Geglättet"
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
+#: colour.cpp:234
+#, fuzzy
+msgid "Enter gamma value ( >0 ):"
 msgstr "Gamma-Wert (0...1):"
 
-#: colour.cpp:254
+#: colour.cpp:237
+msgid "Bad Gamma value"
+msgstr ""
+
+#: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Gamma-Korrektur..."
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
+#: colour.cpp:296
+#, fuzzy
+msgid "Intensity:Gamma Correct..."
 msgstr "Korrigiere Gamma..."
+
+#: colour.cpp:310
+#, fuzzy
+msgid "External.."
+msgstr "Intervall..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -244,3 +280,15 @@ msgstr "Diashow &starten"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Zeit zwischen Dias (sec):"
+
+#~ msgid "Fi&lter"
+#~ msgstr "Fi&lter"
+
+#~ msgid "&Open.."
+#~ msgstr "&Öffnen"
+
+#~ msgid "Darkening..."
+#~ msgstr "Abdunkeln..."
+
+#~ msgid "Intensity:Darken"
+#~ msgstr "Intensität:Dunkler"

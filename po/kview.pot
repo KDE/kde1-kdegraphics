@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-10-16 15:20+0200\n"
+"POT-Creation-Date: 1998-12-13 13:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,203 +14,228 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: viewer.cpp:77
+#: viewer.cpp:86
 msgid "no image loaded"
 msgstr ""
 
-#: viewer.cpp:85 viewer.cpp:540
+#: viewer.cpp:94 viewer.cpp:644
 msgid "Ready"
 msgstr ""
 
-#: viewer.cpp:186
+#: viewer.cpp:241
 msgid "Net saving not yet implemented"
 msgstr ""
 
-#: viewer.cpp:194
+#: viewer.cpp:249
 #, c-format
 msgid "%s: written"
 msgstr ""
 
-#: viewer.cpp:232
+#: viewer.cpp:287
 msgid "Enter Zoom factor (100 = 1x):"
 msgstr ""
 
-#: viewer.cpp:236
+#: viewer.cpp:291
 msgid "Illegal zoom factor"
 msgstr ""
 
-#: viewer.cpp:285
+#: viewer.cpp:340
 msgid "About KView"
 msgstr ""
 
-#: viewer.cpp:293 viewer.cpp:310
+#: viewer.cpp:365 viewer.cpp:465
+msgid "&List..."
+msgstr ""
+
+#: viewer.cpp:368 viewer.cpp:469
+msgid "&Previous"
+msgstr ""
+
+#: viewer.cpp:370 viewer.cpp:471
+msgid "&Next"
+msgstr ""
+
+#: viewer.cpp:373 viewer.cpp:474
+msgid "&Slideshow On/Off"
+msgstr ""
+
+#: viewer.cpp:382
 msgid "&Zoom"
 msgstr ""
 
-#: viewer.cpp:294 viewer.cpp:311
+#: viewer.cpp:383
 msgid "&Transform"
 msgstr ""
 
-#: viewer.cpp:295 viewer.cpp:312
+#: viewer.cpp:384
 msgid "To &Desktop"
 msgstr ""
 
-#: viewer.cpp:297
-msgid "Fi&lter"
-msgstr ""
-
-#: viewer.cpp:314
+#: viewer.cpp:386
 msgid "F&ilter"
 msgstr ""
 
-#: viewer.cpp:318
+#: viewer.cpp:390
 msgid "&Images"
 msgstr ""
 
-#: viewer.cpp:333
-msgid "&Open.."
+#: viewer.cpp:409
+msgid "&Save As..."
 msgstr ""
 
-#: viewer.cpp:334
-msgid "&Save As.."
+#: viewer.cpp:415
+msgid "&Close Window"
 msgstr ""
 
-#: viewer.cpp:340
+#: viewer.cpp:421
 msgid "&Full Screen"
 msgstr ""
 
-#: viewer.cpp:343
+#: viewer.cpp:424
+msgid "&Crop"
+msgstr ""
+
+#: viewer.cpp:427
+msgid "&Reset"
+msgstr ""
+
+#: viewer.cpp:432
 msgid "&Zoom..."
 msgstr ""
 
-#: viewer.cpp:344
+#: viewer.cpp:434
 #, c-format
 msgid "Zoom &in 10%"
 msgstr ""
 
-#: viewer.cpp:345
+#: viewer.cpp:436
 #, c-format
 msgid "Zoom &out 10%"
 msgstr ""
 
-#: viewer.cpp:346
+#: viewer.cpp:438
 msgid "&Double size"
 msgstr ""
 
-#: viewer.cpp:347
+#: viewer.cpp:440
 msgid "&Half size"
 msgstr ""
 
-#: viewer.cpp:349
-msgid "&Reset"
+#: viewer.cpp:442
+msgid "&Max size"
 msgstr ""
 
-#: viewer.cpp:352
+#: viewer.cpp:444
+msgid "Max/&aspect"
+msgstr ""
+
+#: viewer.cpp:449
 msgid "Rotate &clockwise"
 msgstr ""
 
-#: viewer.cpp:354
+#: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
 msgstr ""
 
-#: viewer.cpp:357
+#: viewer.cpp:453
 msgid "Flip &vertical"
 msgstr ""
 
-#: viewer.cpp:359
+#: viewer.cpp:455
 msgid "Flip &horizontal"
 msgstr ""
 
-#: viewer.cpp:362
+#: viewer.cpp:460
 msgid "&Tile"
 msgstr ""
 
-#: viewer.cpp:363
+#: viewer.cpp:461
 msgid "&Max"
 msgstr ""
 
-#: viewer.cpp:364
+#: viewer.cpp:462
 msgid "Max&pect"
 msgstr ""
 
-#: viewer.cpp:367
-msgid "&List.."
+#: viewer.cpp:479
+msgid "&About KView..."
 msgstr ""
 
-#: viewer.cpp:371
-msgid "&Previous"
-msgstr ""
-
-#: viewer.cpp:372
-msgid "&Next"
-msgstr ""
-
-#: viewer.cpp:374
-msgid "&Slideshow On/Off"
-msgstr ""
-
-#: viewer.cpp:379
-msgid "&About KView.."
-msgstr ""
-
-#: viewer.cpp:426 viewer.cpp:433
+#: viewer.cpp:521 viewer.cpp:528
 msgid "Existing transfer not yet complete."
 msgstr ""
 
-#: viewer.cpp:447
+#: viewer.cpp:542
 msgid "Couldn't get temporary transfer name."
 msgstr ""
 
-#: viewer.cpp:486
+#: viewer.cpp:581
 msgid "Transfer error: "
 msgstr ""
 
-#: viewer.cpp:558
-msgid "Loading.."
+#: viewer.cpp:662
+msgid "Loading..."
 msgstr ""
 
-#: colour.cpp:29
-msgid "Brightening..."
+#: viewer.cpp:671
+#, c-format
+msgid "Couldn't load %s"
 msgstr ""
 
-#: colour.cpp:43
-msgid "Intensity:Brighten"
+#: viewer.cpp:860
+msgid "Printing..."
 msgstr ""
 
-#: colour.cpp:63
-msgid "Darkening..."
+#: colour.cpp:32
+msgid "Enter brightness factor (%):"
 msgstr ""
 
-#: colour.cpp:76
-msgid "Intensity:Darken"
+#: colour.cpp:37
+msgid "Brightness factor must be positive"
 msgstr ""
 
-#: colour.cpp:114
+#: colour.cpp:44
+msgid "Changing brightness..."
+msgstr ""
+
+#: colour.cpp:58
+msgid "Intensity:Brightness"
+msgstr ""
+
+#: colour.cpp:100
 msgid "Converting to Greyscale..."
 msgstr ""
 
-#: colour.cpp:143
+#: colour.cpp:129
 msgid "Greyscale"
 msgstr ""
 
-#: colour.cpp:161
+#: colour.cpp:147
 msgid "Smoothing..."
 msgstr ""
 
-#: colour.cpp:227
+#: colour.cpp:213
 msgid "Smooth"
 msgstr ""
 
-#: colour.cpp:248
-msgid "Enter gamma value (0...1):"
+#: colour.cpp:234
+msgid "Enter gamma value ( >0 ):"
 msgstr ""
 
-#: colour.cpp:254
+#: colour.cpp:237
+msgid "Bad Gamma value"
+msgstr ""
+
+#: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr ""
 
-#: colour.cpp:305
-msgid "Gamma Correct..."
+#: colour.cpp:296
+msgid "Intensity:Gamma Correct..."
+msgstr ""
+
+#: colour.cpp:310
+msgid "External.."
 msgstr ""
 
 #: ilistdlg.cpp:57
