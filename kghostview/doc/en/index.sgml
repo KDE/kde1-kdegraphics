@@ -1,0 +1,469 @@
+<!doctype linuxdoc system>
+
+<!-- The KGhostview Handbook.
+
+	 This could be considered a template for producing online help files for
+	 the K Desktop Environment.
+ -->
+
+<article>
+
+<!-- Title information -->
+
+<title>The PostScript Viewer Handbook
+<author>Mark Donohoe, <tt/donohoe@kde.org/
+<date>v1.2, 26 September 1997
+
+<!-- Table of contents -->
+<toc>
+
+<!-- Begin the document -->
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Introduction
+
+<p>
+
+KGhostview is the PostScript viewer for the K Desktop Environment. It is a
+port of Tim Theisen's Ghostview program which is used to view documents
+prepared in <bf/Adobe/'s PostScript page description language. PostScript is
+the major page description language for printing on UNIX systems and this
+application is used to preview material intended for printing or for reading
+documents online.
+
+<p>
+
+KGhostview is just a front end to <bf/Alladin/'s Ghostcript package which
+renders the documents. You can use the viewer with all recent versions of
+Ghostscript. Newer versions offer much improved performance which you can
+take advantage of with KGhostview. It future, it will be possible to view
+Portable Document Format files.
+
+<p>
+
+
+If a document does not conform to the <bf/Adobe/ document structuring convention
+the functionality of the PostScript viewer is limited. If there is no table of
+contents, skipping around the document and marking pages is not possible.
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Tutorial
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Fundamentals
+
+
+
+<p>
+
+This section desribes what you see in the main PostScript viewer window, the
+actions of the toolbar buttons and how to use the page list.
+
+You can open multiple PostScript viewer windows to view multiple documents. The
+window title bar shows you the name of the document in that window.  The
+tools and text fields that help you to navigate a document may be hidden in
+order to give more space on the screen to the content area. 
+
+<sect1>Window summary
+
+<p>
+<descrip>
+
+	<tag/Window title bar/
+
+	The name of a document is displayed in the window title bar.
+
+	<tag/Page display/
+
+	The content area displays a page of the current document. If the page is
+	too large to fit inside the window, scroll bars are automatically added to
+	the sides of the display.
+
+	<tag/Tool bar/
+
+	Tool bar buttons activate the PostScript viewer features you'll most commonly
+	use. Click on the buttons to move through the document, to change the
+	view and to mark and print pages. You can choose to have the toolbar on
+	any side of the contents area. Click with the right mouse button on the
+	toolbar handle to select the position you want. You can also hide the
+	toolbar from the options menu.
+
+	<tag/Status bar /
+    
+	The status bar has four fields showing the current page, magnification
+	factor, orientation and file name of the document. You can choose to hide the
+	status bar from the options menu.
+	
+	<tag/Page list /
+	
+	A page list can be shown down the left side of the page display. This list
+	has three columns: the first may contain a flag indicating that the page
+	has been marked; the second shows the page shape; and the third contains
+	the page number. You may use this page list to navigate the document or to
+	select pages for printing.
+</descrip>
+
+<sect1>Tool bar
+<p>
+<descrip>
+	<tag/Back/
+	
+	Moves one page back in the document.
+	
+	<tag/Forward/
+	
+	Moves one page forward in the document.
+	
+	<tag/Go to page/
+	
+	Lets you choose which page to display.
+	
+	<tag/View control/
+	
+	Lets you set the magnification, orientation and page size for the view of
+	your document.
+	
+	<tag/Print/
+	
+	Lets you print the document previewed in this PostScript viewer window.
+	
+	<tag/Mark/
+	
+	Marks (Unmarks) the current page. Used to select individual pages for
+	printing.
+	
+	<tag/Go to start/
+	
+	Goes to start of the document.
+	
+	<tag/Go to end/
+	
+	Goes to end of the document.
+	
+	<tag/Read down/
+	
+	Scrolls up the current page for convenient reading
+	of the document in chunks.
+</descrip>
+
+<sect1>Page list
+<p>
+	
+	The page list is useful for navigating the document and selecting pages
+	for printing. To view a page simply click on the page number in the list
+	with the left mouse button.
+	
+	If you want to mark a page, click on it with the middle mouse button.
+	A flag will be displayed in the first column of the page list to show
+	that the page has been marked. You can clear or change your page
+	marks using the menu of choices that is activated
+	with the right mouse button. The choices available are
+
+	<itemize>
+	<item>Mark current
+	<item>Mark all
+	<item>Mark even
+	<item>Mark odd
+	<item>Toggle marks
+	<item>Remove marks
+	</itemize>
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Primary menu items
+
+<sect1>File
+<p>
+<descrip>
+	
+	<tag/New/
+	
+	Creates a new PostScript viewer window.
+	
+	<tag/Open .../
+	
+	Lets you select a file to open.
+	
+	<tag/Close/
+	
+	Closes the current PostScript viewer window.
+	
+	<tag/Print .../
+	
+	Lets you print the document previewed in this PostScript viewer window.
+
+	<tag/Entries 1. - 4./
+	
+	The last four opened documents are stored in these menu entries. Simply
+	select one of these to reopen that document.
+
+	<tag/Quit/
+	
+	Exits PostScript viewer, closing all the windows.
+</descrip>
+
+<sect1>View
+<p>
+<descrip>
+	<tag/Zoom in/
+	
+	Increases the magnification of the view of your document.
+	
+	<tag/Zoom out/
+	
+	Decreases the magnification of the view of your document.
+	
+	<tag/View control .../
+	
+	Lets you set the magnification, orientation and page size for the view of
+	your document.
+
+	<tag/Shrink wrap/
+	
+	Resizes the PostScript viewer window to neatly fit the width of the document. If
+	the document is too wide to fit on the screen then the PostScript viewer window
+	is stretched to the maximum possible width.
+
+	<tag/Redisplay/
+	
+	Renders the current page of your document again.
+	
+	<tag/Info .../
+	
+	Displays some basic information about your document.
+
+</descrip>
+
+<sect1>Go
+<p>
+
+<descrip>
+	<tag/Next page/
+	
+	Moves one page forward in the document.
+	
+	<tag/Previous page/
+	
+	Moves one page back in the document.
+	
+	<tag/Go to page .../
+	
+	Lets you choose which page to display.
+	
+	<tag/Go to start/
+	
+	Goes to the start of the document.
+	
+	<tag/Go to end/
+	
+	Goes to the end of the document.
+	
+	<tag/Read down/
+	
+	Scrolls up the current page for convenient reading
+	of the document in chunks.
+</descrip>
+
+<sect1>Options
+<p>
+<descrip>
+	<tag/Configure interpreter ... /
+	
+	Lets you choose a few options about how the Ghostscript driver should
+	work.
+
+	<tag/Show tool bar/
+	
+	Toggle the toolbar on and off.
+	
+	<tag/Show status bar/
+	
+	Toggle the statusbar on and off.
+	
+	<tag/Show page list/
+	
+	Toggle the page list on and off.
+	
+	<tag/Configure key bindings ... /
+	
+	Lets you choose your own key bindings for the actions that PostScript viewer can
+	perform.
+
+	<tag/Save Options/
+	
+	Writes your set of preferences including the size of the PostScript viewer
+	window and the location of the toolbar to a configuration file. 
+
+</descrip>
+
+<sect1>Help
+<p>
+<descrip>
+	<tag/About PostScript viewer/
+	
+	Simply tells you the program name, version number and address of the
+	author
+
+	<tag/Help for PostScript viewer/
+	
+	Starts the KDE online help and loads in this handbook.
+	
+	<tag/Copyright/
+	
+	Displays copyright information for PostScript viewer.
+
+</descrip>
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Dialog boxes
+<p>
+<sect1>Print
+
+<p>
+
+The <bf/Printer Name/ can be entered in the appropriate text field to choose
+the destination to send your document. The <bf/Pages/ to be printed can be
+selected from the combo box. The options are
+
+<itemize>
+	<item>All
+	<item>Marked
+</itemize>
+
+<sect1>View control
+
+<p>
+
+This dialog allows you to set the magnification factor, orientaion and media
+used for the view of your document. You can leave the dialog open and apply
+changes repeatedly.
+
+<descrip>
+	<tag/Magstep/
+
+	Select the magnification of the document from the combo box. Your can
+	scale a page from 20% to 300% from its default size.
+	
+	<tag/Orientation/
+	
+	The options are
+	
+	<itemize>
+	<item>Portrait
+	<item>Landscape
+	<item>Upside down
+	<item>Seascape
+	</itemize>
+	
+	<tag/Media/
+	
+	Media defined in the document appear at the start of the list.
+</descrip>
+
+<sect1>Info
+<p>
+
+Shows the file name, title and creation date of the document.
+
+<sect1>Go to page
+<p>
+
+Allows you to select the section and page number of the page you want to
+display.
+
+<sect1>Configure key bindings
+<p>
+
+Allows you to change the keys that are bound to PostScript viewer actions.
+
+<sect1>Configure interpreter
+<p>
+
+The Configure interpreter dialog is comprised of three sections:
+
+<enum>
+<item>The <bf>General</bf> section.
+<item>The <bf>Palette</bf> options.
+<item>The <bf>Backing</bf> style.
+</enum>
+
+<sect2>General
+
+<p>
+
+One may edit the interpreter name which is by default set to gs suitable for
+most systems. One may also check any combination of three options.
+
+<p>
+
+Set <em>Antialiasing</em> for smoothly rendered text. Performing antialiasing
+is memory intensive and slower than a straightforward rendering of fonts. If
+short of memory or time you may wish to turn this option off. Early versions
+of Ghostscript could not perform antialiasing.
+
+<p>
+
+Check <em>Platform fonts</em> if you wish to use your native window system
+fonts rather than the fonts that come with your PostScript interpreter.
+Recent versions of Ghostscript come with good quality fonts.
+
+<p>
+
+Turn <em>Messages</em> on if you want to be informed of any output or error
+messages generated by your PostScript interpreter.
+
+<sect2>Palette
+<p>
+
+You may choose the palette to be used to render your PostScript document. The
+options are
+
+<itemize>
+<item>Color
+<item>Grayscale
+<item>Monochrome
+</itemize>
+
+<sect2>Backing
+<p>
+
+You have the choice of two methods to maintain the contents of a page in the
+viewer once it has been rendered by your PostScript interpreter. These are
+
+<itemize>
+<item>Pixmap
+<item>Backing store
+</itemize>
+
+One method may be faster on your X server than the other. Also, some X servers do
+not offer a backing store.
+
+<sect1>Ghostscript messages
+<p>
+
+Displays error or general output messages from Ghostscript.
+
+
+<!-- NEW SECTION	NEW SECTION		NEW SECTION		NEW SECTION		 -->
+
+
+<sect>Questions and answers
+
+<sect1>How do I get the best quality rendering ?
+<p>
+Hmm, Later.
+</article>

@@ -1,0 +1,10 @@
+# KDE Config File 
+[KDE Desktop Entry]
+Name=PS Viewer
+Exec=kghostview %u
+Icon=kghostview.xpm
+Type=Application
+DocPath=kghostview/index.html
+Comment=PostScript document viewer
+Terminal=0
+MiniIcon=kghostview.xpm
