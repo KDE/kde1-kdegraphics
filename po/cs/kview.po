@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1998-10-16 15:20+0200\n"
-"PO-Revision-Date: 1998-10-28 19:41 CET\n"
+"PO-Revision-Date: 1998-11-03 14:54+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,6 @@ msgid "&Open.."
 msgstr "&Otevøít.."
 
 #: viewer.cpp:334
-#, fuzzy
 msgid "&Save As.."
 msgstr "&Ulo¾it jako.."
 
@@ -134,7 +133,6 @@ msgid "Max&pect"
 msgstr "Max&pect"
 
 #: viewer.cpp:367
-#, fuzzy
 msgid "&List.."
 msgstr "&Seznam..."
 
@@ -151,7 +149,6 @@ msgid "&Slideshow On/Off"
 msgstr "&Promítání Zapnout/Vypnout"
 
 #: viewer.cpp:379
-#, fuzzy
 msgid "&About KView.."
 msgstr "&Informace o aplikaci KView"
 
@@ -168,7 +165,6 @@ msgid "Transfer error: "
 msgstr "Chyba pøenosu: "
 
 #: viewer.cpp:558
-#, fuzzy
 msgid "Loading.."
 msgstr "Nahrávám..."
 
@@ -205,18 +201,16 @@ msgid "Smooth"
 msgstr "Vyhladit"
 
 #: colour.cpp:248
-#, fuzzy
 msgid "Enter gamma value (0...1):"
-msgstr "Zadajte hodnotu gamma ( >0 ):"
+msgstr "Zadejte hodnotu gamma (0...1):"
 
 #: colour.cpp:254
 msgid "Gamma-correcting..."
 msgstr "Koriguji gamma faktor..."
 
 #: colour.cpp:305
-#, fuzzy
 msgid "Gamma Correct..."
-msgstr "Koriguji gamma faktor..."
+msgstr "Gamma faktor korektni..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -257,30 +251,3 @@ msgstr "&Spustit promítání"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Èas mezi políèky (sek):"
-
-#~ msgid "&Crop"
-#~ msgstr "&Oøíznout"
-
-#~ msgid "&Max size"
-#~ msgstr "&Maximální velikost"
-
-#~ msgid "Max/&aspect"
-#~ msgstr "Max/a&spect"
-
-#~ msgid "Printing..."
-#~ msgstr "Tisknu..."
-
-#~ msgid "Enter brightness factor (%):"
-#~ msgstr "Vlo¾te faktor zesvìtlení (%):"
-
-#~ msgid "Brightness factor must be positive"
-#~ msgstr "Faktor zesvìtlení musí být kladný"
-
-#~ msgid "Bad Gamma value"
-#~ msgstr "Chybna hodnota Gamma"
-
-#~ msgid "Intensity:Gamma Correct..."
-#~ msgstr "Intenzita:Gamma korekce"
-
-#~ msgid "External.."
-#~ msgstr "Externí.."

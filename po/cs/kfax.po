@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1998-11-03 09:55+0100\n"
-"PO-Revision-Date: 1998-10-24 22:10 CEST\n"
+"PO-Revision-Date: 1998-11-03 14:58+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -90,9 +90,8 @@ msgid "Zoom &out"
 msgstr "Z&men¹it"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "Nastavení &faxu"
+msgstr "Nastavení &faxu ..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -251,6 +250,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Není mo¾né otevøít:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

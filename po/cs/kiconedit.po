@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1998-11-03 09:55+0100\n"
-"PO-Revision-Date: 1998-10-28 19:46 CET\n"
+"PO-Revision-Date: 1998-11-03 14:57+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -746,36 +746,35 @@ msgstr "Chybné data pixmapy ve schránce!\n"
 
 #: kiconcombiview.cpp:81
 msgid "Folders:"
-msgstr ""
+msgstr "Adresáøe:"
 
 #: kiconcombiview.cpp:82
 msgid "Contents:"
-msgstr ""
+msgstr "Obsah:"
 
 #: kicondetaillist.cpp:50
 msgid "Name"
-msgstr ""
+msgstr "Jméno"
 
 #: kicondetaillist.cpp:52
-#, fuzzy
 msgid "Size"
-msgstr "Velikost:"
+msgstr "Velikost"
 
 #: kicondetaillist.cpp:55
 msgid "Permissions"
-msgstr ""
+msgstr "Práva"
 
 #: kicondetaillist.cpp:57
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: kicondetaillist.cpp:60
 msgid "Owner"
-msgstr ""
+msgstr "Vlastník"
 
 #: kicondetaillist.cpp:62
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
@@ -1074,9 +1073,3 @@ msgstr "&Panely nástrojù"
 #: kiconconfig.cpp:642
 msgid "Icon grid"
 msgstr "Møí¾ka ikony"
-
-#~ msgid "Open image"
-#~ msgstr "Otevøít obrázek"
-
-#~ msgid "Save image As"
-#~ msgstr "Ulo¾it obrázek jako"

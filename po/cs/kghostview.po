@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1998-11-03 09:55+0100\n"
-"PO-Revision-Date: 1998-10-24 22:07 CEST\n"
+"PO-Revision-Date: 1998-11-03 14:57+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -700,84 +700,3 @@ msgstr "Odd.%d "
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Zvìt¹ení"
-
-#~ msgid "&Defaults"
-#~ msgstr "Impli&citní"
-
-#~ msgid "CTRL+O"
-#~ msgstr "CTRL+O"
-
-#~ msgid "CTRL+N"
-#~ msgstr "CTRL+N"
-
-#~ msgid "CTRL+W"
-#~ msgstr "CTRL+W"
-
-#~ msgid "CTRL+S"
-#~ msgstr "CTRL+S"
-
-#~ msgid "CTRL+P"
-#~ msgstr "CTRL+P"
-
-#~ msgid "CTRL+Q"
-#~ msgstr "CTRL+Q"
-
-#~ msgid "CTRL+X"
-#~ msgstr "CTRL+X"
-
-#~ msgid "CTRL+C"
-#~ msgstr "CTRL+C"
-
-#~ msgid "CTRL+V"
-#~ msgstr "CTRL+V"
-
-#~ msgid "CTRL+Z"
-#~ msgstr "CTRL+Z"
-
-#~ msgid "CTRL+F"
-#~ msgstr "CTRL+F"
-
-#~ msgid "CTRL+R"
-#~ msgstr "CTRL+R"
-
-#~ msgid "Insert"
-#~ msgstr "Insert"
-
-#~ msgid "CTRL+Insert"
-#~ msgstr "CTRL+Insert"
-
-#~ msgid "CTRL+Home"
-#~ msgstr "CTRL+Home"
-
-#~ msgid "End"
-#~ msgstr "End"
-
-#~ msgid "CTRL+End"
-#~ msgstr "CTRL+End"
-
-#~ msgid "Prior"
-#~ msgstr "Prior"
-
-#~ msgid "Next"
-#~ msgstr "Next"
-
-#~ msgid "F1"
-#~ msgstr "F1"
-
-#~ msgid "Zoom"
-#~ msgstr "Zvìt¹ení"
-
-#~ msgid "Current key"
-#~ msgstr "Aktuální klávesa"
-
-#~ msgid "&Action"
-#~ msgstr "&Akce"
-
-#~ msgid "&No key"
-#~ msgstr "®ád&ná klávesa"
-
-#~ msgid "&Default key"
-#~ msgstr "Impli&citní klávesa"
-
-#~ msgid "&Custom key"
-#~ msgstr "&Vlastní kláveka"
