@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-05-07 18:22+0200\n"
-"PO-Revision-Date: 1998-04-17 15:42 MET DST\n"
+"PO-Revision-Date: 1998-05-14 17:41 MET DST\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,14 +39,12 @@ msgid "Canvas Size"
 msgstr "Velikost kreslící plochy"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "©íøka"
+msgstr "©íøka:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Vý¹ka"
+msgstr "Vý¹ka:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -103,7 +101,7 @@ msgstr "Neulo¾eny zmìny"
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr ""
+msgstr "Máte neulo¾ené zmìny, které ztratíte, pokud nyní uzavøete toto okno."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -134,9 +132,8 @@ msgid "New Image..."
 msgstr "Nový obrázek..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Ulo¾it obrazek..."
+msgstr "Ulo¾it obrázek..."
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
@@ -192,7 +189,7 @@ msgstr "Informace..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Zmìna velikosti..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -228,7 +225,7 @@ msgstr "Výbìr oblasti"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Oblé rohy"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -248,7 +245,7 @@ msgstr "Ulo¾it nastavení"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -256,6 +253,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c)"
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -408,43 +408,5 @@ msgid "Set Line Colour..."
 msgstr "Nastav barvu èáry ..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Obdélník"
-
-#~ msgid "Dismiss"
-#~ msgstr "Zavøít"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: chybný formát URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Chyba: chybný formát URL\n"
-#~ "KPaint nerozumí specifikovanému URL, zkontrolujte zda-li je správné."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint právì pøistupuje ke vzdálenému souboru, musíte tuto èinnost\n"
-#~ "pøeru¹it nebo poèkat na její dokonèení."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KFM: Není mo¾né spustit nebo nalézt KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Chyba: KPaint nemù¾e nalézt bì¾ící KFM nebo si ho sám spustit."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Nahrávání po síti selhalo"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr "Chyba: Nahrávání po síti selhalo"
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Není mo¾né spustit nebo nalézt KFM"
+msgstr "Oblé rohy"
