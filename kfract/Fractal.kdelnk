@@ -1,0 +1,7 @@
+[KDE Desktop Entry]
+Exec=kfract
+Icon=kfract.xpm
+DocPath=kfract/kfract.html
+Type=Game
+Info=KDE Fractal Generator
+
