@@ -6,7 +6,10 @@
 #include <qcombo.h>
 #include <stdio.h>
 #include <kcolordlg.h>
+#include <klocale.h>
 #include "properties.h"
+
+#define klocale KLocale::klocale()
 
 propertiesDialog::propertiesDialog(int pages,
 				   QWidget *parent= 0, const char *name= 0)
@@ -14,9 +17,9 @@ propertiesDialog::propertiesDialog(int pages,
 {
   // Create the pages
   lineProps= new linePropertiesWidget(this);
-  addTab(lineProps, "Line Properties");
+  addTab(lineProps, klocale->translate("Line Properties"));
   fillProps= new fillPropertiesWidget(this);
-  addTab(fillProps, "Fill Properties");
+  addTab(fillProps, klocale->translate("Fill Properties"));
 
   setCancelButton();
   setApplyButton();
@@ -62,20 +65,20 @@ fillPropertiesWidget::fillPropertiesWidget(QWidget *parent)
   // Now create the contents
   //
 
-  patternLabel= new QLabel("Fill Pattern:", this);
+  patternLabel= new QLabel(klocale->translate("Fill Pattern:"), this);
   patternLabel->move(40, 40);
 
   // Need to use an item that can display a sample of each one
   patternBox= new QComboBox(FALSE, this, 0);
   patternBox->resize(130, patternBox->height());
-  patternBox->insertItem("None");
-  patternBox->insertItem("Solid");
-  patternBox->insertItem("Vertical Lines");
-  patternBox->insertItem("Horizontal Lines");
-  patternBox->insertItem("Grid");
-  patternBox->insertItem("Diagonal Lines //");
-  patternBox->insertItem("Diagonal Lines \\");
-  patternBox->insertItem("Diagonal Grid");
+  patternBox->insertItem(klocale->translate("None"));
+  patternBox->insertItem(klocale->translate("Solid"));
+  patternBox->insertItem(klocale->translate("Vertical Lines"));
+  patternBox->insertItem(klocale->translate("Horizontal Lines"));
+  patternBox->insertItem(klocale->translate("Grid"));
+  patternBox->insertItem(klocale->translate("Diagonal Lines //"));
+  patternBox->insertItem(klocale->translate("Diagonal Lines \\"));
+  patternBox->insertItem(klocale->translate("Diagonal Grid"));
 
   patternBox->insertItem("94%");
   patternBox->insertItem("88%");
@@ -85,20 +88,20 @@ fillPropertiesWidget::fillPropertiesWidget(QWidget *parent)
   patternBox->insertItem("12%");
   patternBox->insertItem("6%");
 
-  patternBox->insertItem("Custom");
+  patternBox->insertItem(klocale->translate("Custom"));
   patternBox->move(150, 40);
 
-  customPatternLabel= new QLabel("Pattern Filename:", this);
+  customPatternLabel= new QLabel(klocale->translate("Pattern Filename:"), this);
   customPatternLabel->move(40, 100);
 
   customPatternField= new QLineEdit(this);
   customPatternField->move(150, 100);
   customPatternField->resize(130, customPatternField->height());
 
-  browseButton= new QPushButton("Browse...", this);
+  browseButton= new QPushButton(klocale->translate("Browse..."), this);
   browseButton->move(150, 150);
 
-  setFillColourButton= new QPushButton("Set Fill Colour...", this);
+  setFillColourButton= new QPushButton(klocale->translate("Set Fill Colour..."), this);
   setFillColourButton->move(40, 200);
 
      pattern= new QPixmap();
@@ -224,21 +227,21 @@ linePropertiesWidget::linePropertiesWidget(QWidget *parent)
   // Now create the contents
   //
 
-  styleLabel= new QLabel("Line Style:", this);
+  styleLabel= new QLabel(klocale->translate("Line Style:"), this);
   styleLabel->move(40, 40);
 
   // These should have a picture
   styleBox= new QComboBox(FALSE, this, 0);
-  styleBox->insertItem("Solid");
-  styleBox->insertItem("Dashed");
-  styleBox->insertItem("Dotted");
-  styleBox->insertItem("Dash Dot");
-  styleBox->insertItem("Dash Dot Dot");
-  styleBox->insertItem("None");
+  styleBox->insertItem(klocale->translate("Solid"));
+  styleBox->insertItem(klocale->translate("Dashed"));
+  styleBox->insertItem(klocale->translate("Dotted"));
+  styleBox->insertItem(klocale->translate("Dash Dot"));
+  styleBox->insertItem(klocale->translate("Dash Dot Dot"));
+  styleBox->insertItem(klocale->translate("None"));
   styleBox->move(150, 40);
 
   
-  widthLabel= new QLabel("Line Width:", this);
+  widthLabel= new QLabel(klocale->translate("Line Width:"), this);
   widthLabel->move(40, 100);
 
   widthBox= new QComboBox(TRUE, this, 0);
@@ -248,31 +251,31 @@ linePropertiesWidget::linePropertiesWidget(QWidget *parent)
   widthBox->insertItem("4");
   widthBox->move(150, 100);
 
-  endTypeLabel= new QLabel("End style:", this);
+  endTypeLabel= new QLabel(klocale->translate("End style:"), this);
   endTypeLabel->setEnabled(FALSE);
   endTypeLabel->move(40, 150);
 
   endTypeBox= new QComboBox(FALSE, this, 0);
-  endTypeBox->insertItem("Not Yet");
-  //  endTypeBox->insertItem("Rounded");
-  //  endTypeBox->insertItem("Arrow");
-  //  endTypeBox->insertItem("Flat");
+  endTypeBox->insertItem(klocale->translate("Not Yet"));
+  //  endTypeBox->insertItem(klocale->translate("Rounded"));
+  //  endTypeBox->insertItem(klocale->translate("Arrow"));
+  //  endTypeBox->insertItem(klocale->translate("Flat"));
   endTypeBox->setEnabled(FALSE);
   endTypeBox->move(150, 150);
 
-  joinStyleLabel= new QLabel("Join style:", this);
+  joinStyleLabel= new QLabel(klocale->translate("Join style:"), this);
   joinStyleLabel->setEnabled(FALSE);
   joinStyleLabel->move(40, 200);
 
   joinStyleBox= new QComboBox(FALSE, this, 0);
   joinStyleBox->setEnabled(FALSE);
-  joinStyleBox->insertItem("Not Yet");
-  //  joinStyleBox->insertItem("Rounded");
-  //  joinStyleBox->insertItem("Straight");
+  joinStyleBox->insertItem(klocale->translate("Not Yet"));
+  //  joinStyleBox->insertItem(klocale->translate("Rounded"));
+  //  joinStyleBox->insertItem(klocale->translate("Straight"));
   joinStyleBox->move(150, 200);
 
 
-  setLineColourButton= new QPushButton("Set Line Colour...", this);
+  setLineColourButton= new QPushButton(klocale->translate("Set Line Colour..."), this);
   setLineColourButton->move(40, 240);
   connect(setLineColourButton, SIGNAL(clicked()), this, SLOT(setLineColour()) );
 

@@ -6,15 +6,18 @@
 #include <qstring.h>
 #include <qpainter.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "pen.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
 Pen::Pen() : Tool()
 {
   drawing= FALSE;
-  tooltip= "Pen";
+  tooltip= klocale->translate("Pen");
   props= Tool::HasLineProperties;
 }
 

@@ -1,5 +1,8 @@
 #include <qpushbt.h>
+#include <klocale.h>
 #include "palettedialog.h"
+
+#define klocale KLocale::klocale()
 
 paletteDialog::paletteDialog(QPixmap *p, QWidget *parent= 0, const char *name= 0)
   : QDialog(parent, name, TRUE)
@@ -8,7 +11,7 @@ paletteDialog::paletteDialog(QPixmap *p, QWidget *parent= 0, const char *name= 0
   pal= new paletteWidget(p, this);
 
   resize(340, 280);
-  dismiss = new QPushButton( "Dismiss", this );
+  dismiss = new QPushButton( klocale->translate("Dismiss"), this );
   dismiss->setAutoResize(TRUE);
   pal->move(10, 10);
   pal->resize(320, 240);

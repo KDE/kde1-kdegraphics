@@ -1,8 +1,11 @@
 #include <qpen.h>
 #include <qbrush.h>
 #include <kcolordlg.h>
+#include <klocale.h>
 #include <stdio.h>
 #include "palette.h"
+
+#define klocale KLocale::klocale()
 
 paletteWidget::paletteWidget(QPixmap *p, QWidget *parent= 0, const char *name= 0)
   : QTableView(parent, name)
@@ -96,7 +99,7 @@ void paletteWidget::mousePressEvent(QMouseEvent *e)
 
 void paletteWidget::editColour(int index)
 {
-  KColorDialog dlg(this, "Edit Colour", TRUE);
+  KColorDialog dlg(this, klocale->translate("Edit Colour"), TRUE);
 
   dlg.setColor(img->color(index));
   dlg.exec();

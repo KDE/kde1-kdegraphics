@@ -40,7 +40,6 @@
 #include <kmsgbox.h>
 
 #include <klocale.h>
-#define klocale KLocale::klocale()
 #define i18n(X) klocale->translate(X)
 #define i18nC(X) ((char*)klocale->translate(X))
 

@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <qlist.h>
 #include <qpixmap.h>
+#include <klocale.h>
 #include "manager.h"
 #include "app.h"
 
@@ -14,6 +15,8 @@
 #include "tools/circle.h"
 #include "tools/rectangle.h"
 #include "tools/spraycan.h"
+
+#define klocale KLocale::klocale()
 
 Manager::Manager(Canvas *c, QWidget *top) : QObject()
 {
@@ -56,7 +59,7 @@ void Manager::createTools(void)
   list.append(new SprayCan);
 
   // Create the properties dialog
-  props= new propertiesDialog(1, 0, "Tool Properties");
+  props= new propertiesDialog(1, 0, klocale->translate("Tool Properties"));
   connect(props, SIGNAL(applyButtonPressed()),
 	  this, SLOT(updateProperties()) );
 }

@@ -6,16 +6,19 @@
 #include <qstring.h>
 #include <qpainter.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "math.h"
 #include "circle.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
 Circle::Circle() : Tool()
 {
   drawing= FALSE;
-  tooltip= "Circle";
+  tooltip= klocale->translate("Circle");
   props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 

@@ -8,8 +8,11 @@
 #include <qpainter.h>
 #include <qstring.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "line.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
@@ -17,7 +20,7 @@ extern MyApp *kpaintApp;
 Line::Line() : Tool()
 {
   drawing= FALSE;
-  tooltip= "Line";
+  tooltip= klocale->translate("Line");
   props= Tool::HasLineProperties;
 }
 

@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <kapp.h>
 #include <kkeyconf.h>
+#include <klocale.h>
 #include "kpaint.h"
 #include "version.h"
 #include "app.h"
+
+#define klocale KLocale::klocale()
 
 MyApp::MyApp( int &argc, char **argv, const QString appname)
   : KApplication( argc, argv, appname)
@@ -22,40 +25,40 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
   }
 
   /* KKeyCode initialization */
-  kKeys->addKey("Quit", "CTRL+Q");
-  kKeys->addKey("Close Window", "CTRL+C");
-  kKeys->addKey("New Window", "CTRL+C");
-  kKeys->addKey("Open File", "CTRL+O");
-  kKeys->addKey("Save File", "CTRL+S");
-  kKeys->addKey("Save File As", "CTRL+A");
-  kKeys->addKey("Help", "F1");
-  kKeys->addKey("Pen", "P");
-  kKeys->addKey("Line", "L");
-  kKeys->addKey("Rectangle", "R");
-  kKeys->addKey("Ellipse", "E");
-  kKeys->addKey("Circle", "C");
-  kKeys->addKey("Spray Can", "S");
+  kKeys->addKey(klocale->translate("Quit"), "CTRL+Q");
+  kKeys->addKey(klocale->translate("Close Window"), "CTRL+C");
+  kKeys->addKey(klocale->translate("New Window"), "CTRL+C");
+  kKeys->addKey(klocale->translate("Open File"), "CTRL+O");
+  kKeys->addKey(klocale->translate("Save File"), "CTRL+S");
+  kKeys->addKey(klocale->translate("Save File As"), "CTRL+A");
+  kKeys->addKey(klocale->translate("Help"), "F1");
+  kKeys->addKey(klocale->translate("Pen"), "P");
+  kKeys->addKey(klocale->translate("Line"), "L");
+  kKeys->addKey(klocale->translate("Rectangle"), "R");
+  kKeys->addKey(klocale->translate("Ellipse"), "E");
+  kKeys->addKey(klocale->translate("Circle"), "C");
+  kKeys->addKey(klocale->translate("Spray Can"), "S");
 
   /* connections for kpaint */
   kKeys->registerWidget("kpaint", kp);
-  kKeys->connectFunction("kpaint", "Quit", kp, SLOT(fileQuit()));
-  kKeys->connectFunction("kpaint", "New Window", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Close Window", kp, SLOT(closeWindow()));
-  kKeys->connectFunction("kpaint", "Open File", kp, SLOT(fileOpen()));
-  kKeys->connectFunction("kpaint", "Save File", kp, SLOT(fileSave()));
-  kKeys->connectFunction("kpaint", "Save File As", kp, SLOT(fileSaveAs()));
-  kKeys->connectFunction("kpaint", "Help", kp, SLOT(helpContents()));
-  /*  kKeys->connectFunction("kpaint", "Pen", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Line", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Rectangle", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Ellipse", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Circle", kp, SLOT(newWindow()));
-  kKeys->connectFunction("kpaint", "Spray Can", kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Quit"), kp, SLOT(fileQuit()));
+  kKeys->connectFunction("kpaint", klocale->translate("New Window"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Close Window"), kp, SLOT(closeWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Open File"), kp, SLOT(fileOpen()));
+  kKeys->connectFunction("kpaint", klocale->translate("Save File"), kp, SLOT(fileSave()));
+  kKeys->connectFunction("kpaint", klocale->translate("Save File As"), kp, SLOT(fileSaveAs()));
+  kKeys->connectFunction("kpaint", klocale->translate("Help"), kp, SLOT(helpContents()));
+  /*  kKeys->connectFunction("kpaint", klocale->translate("Pen"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Line"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Rectangle"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Ellipse"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Circle"), kp, SLOT(newWindow()));
+  kKeys->connectFunction("kpaint", klocale->translate("Spray Can"), kp, SLOT(newWindow()));
   */
 
    KConfig *config = KApplication::getKApplication()->getConfig();
    config->setGroup( "Test" );
-   config->writeEntry( "TestString", QString("This was a QString") );
+   config->writeEntry( "TestString", QString(klocale->translate("This was a QString")) );
 
    
   kp->show();
@@ -64,9 +67,11 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
 void MyApp::usage()
 {
   printf("kpaint " APPVERSTR " " APPAUTHOREMAIL);
-  printf( "\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n");
-  printf("Usage: ");
-  printf(APPNAME " [url | filename]\n");
+  printf( klocale->translate("\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"));
+  printf(klocale->translate("Usage: "));
+  QString aParameter( APPNAME );
+  aParameter += klocale->translate(" [url | filename]\n");
+  printf(aParameter.data());
 }
 
 #include "app.moc"

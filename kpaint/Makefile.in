@@ -10,6 +10,7 @@ topdir	=	@topdir@
 prefix 	= 	@prefix@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
+topdir  =       @topdir@
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H

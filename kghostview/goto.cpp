@@ -7,7 +7,7 @@
 #include <qaccel.h>
 
 #include <klocale.h>
-#define klocale KLocale::klocale()
+#include <kapp.h>
 #define i18n(X) klocale->translate(X)
 
 GoTo::GoTo( QWidget *parent, const char *name )

@@ -5,8 +5,11 @@
 #include <qpainter.h>
 #include <qstring.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "rectangle.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
@@ -14,7 +17,7 @@ Rectangle::Rectangle() : Tool()
 {
   drawing= FALSE;
 
-  tooltip= "Rectangle";
+  tooltip= klocale->translate("Rectangle");
   props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 

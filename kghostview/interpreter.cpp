@@ -6,7 +6,7 @@
 #include <qapp.h>
 
 #include <klocale.h>
-#define klocale KLocale::klocale()
+#include <kapp.h>
 #define i18n(X) klocale->translate(X)
 
 InterpreterDialog::InterpreterDialog ( QWidget* parent, const char* name )

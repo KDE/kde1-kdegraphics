@@ -5,15 +5,18 @@
 #include <qcursor.h>
 #include <qstring.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "ellipse.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
 Ellipse::Ellipse() : Tool()
 {
   drawing= FALSE;
-  tooltip= "Ellipse";
+  tooltip= klocale->translate("Ellipse");
   props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 

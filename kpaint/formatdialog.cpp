@@ -1,8 +1,11 @@
 // $Id$
 
 #include <qpushbt.h>
+#include <klocale.h>
 #include "formatdialog.h"
 #include "formats.h"
+
+#define klocale KLocale::klocale()
 
 extern FormatManager *formatMngr;
 
@@ -15,7 +18,7 @@ formatDialog::formatDialog(const char *format, QWidget* parent= 0, const char* n
 
   tmpLabel = new QLabel( this, "Label_7" );
   tmpLabel->setGeometry( 10, 10, 80, 30 );
-  tmpLabel->setText( "File Format:" );
+  tmpLabel->setText( klocale->translate("File Format:") );
 
   fileformat = new QComboBox( FALSE, this, "ComboBox_1" );
   fileformat->setGeometry( 100, 10, 130, 30 );
@@ -24,8 +27,8 @@ formatDialog::formatDialog(const char *format, QWidget* parent= 0, const char* n
   fileformat->insertStrList(formatMngr->formats());
   fileformat->setCurrentItem(formatMngr->formats()->find(format));
 
-  okButton= new QPushButton("Ok", this);
-  cancelButton= new QPushButton("Cancel", this);
+  okButton= new QPushButton(klocale->translate("Ok"), this);
+  cancelButton= new QPushButton(klocale->translate("Cancel"), this);
 
   okButton->move(20, 50);
   cancelButton->move(140, 50);

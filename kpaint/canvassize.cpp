@@ -2,16 +2,19 @@
 
 #include <stdlib.h>
 #include "canvassize.h"
+#include <klocale.h>
+
+#define klocale KLocale::klocale()
 
 canvasSizeDialog::canvasSizeDialog(QWidget *parent= 0, const char *name= 0)
  : QDialog (parent, name, TRUE)
 {
-   widthLabel= new QLabel("Width", this);
-   heightLabel= new QLabel("Height", this);
+   widthLabel= new QLabel(klocale->translate("Width"), this);
+   heightLabel= new QLabel(klocale->translate("Height"), this);
    widthEdit= new QLineEdit(this);
    heightEdit= new QLineEdit(this);
-   okButton= new QPushButton("Ok", this);
-   cancelButton= new QPushButton("Cancel", this);
+   okButton= new QPushButton(klocale->translate("Ok"), this);
+   cancelButton= new QPushButton(klocale->translate("Cancel"), this);
  
    connect(okButton, SIGNAL(clicked()), SLOT(accept()) );
    connect(cancelButton, SIGNAL(clicked()), SLOT(reject()) );

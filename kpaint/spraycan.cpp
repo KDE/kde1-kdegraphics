@@ -6,8 +6,11 @@
 #include <qstring.h>
 #include <qpainter.h>
 #include <qwmatrix.h>
+#include <klocale.h>
 #include "spraycan.h"
 #include "../app.h"
+
+#define klocale KLocale::klocale()
 
 extern MyApp *kpaintApp;
 
@@ -17,7 +20,7 @@ SprayCan::SprayCan() : Tool()
   drawing= FALSE;
   brushsize= 10;
   density= 100;
-  tooltip= "Spray Can";
+  tooltip= klocale->translate("Spray Can");
   props= Tool::HasLineProperties | Tool::HasCustomProperties;
 
   timer= new QTimer(this);

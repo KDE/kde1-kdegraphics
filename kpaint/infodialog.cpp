@@ -5,8 +5,11 @@
 #include <qpushbt.h>
 #include <qlined.h>
 #include <qimage.h>
+#include <klocale.h>
 #include "infodialog.h"
 #include "formats.h"
+
+#define klocale KLocale::klocale()
 
 extern FormatManager *formatMngr;
 
@@ -33,7 +36,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   tmpQLabel = new QLabel( this, "Label_5" );
   tmpQLabel->setGeometry( 30, 40, 100, 30 );
-  tmpQLabel->setText( "Colours Used:" );
+  tmpQLabel->setText( klocale->translate("Colours Used:") );
   tmpQLabel->setAlignment( 289 );
   tmpQLabel->setMargin( -1 );
 
@@ -46,7 +49,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   //  tmpQLabel = new QLabel( this, "Label_8" );
   //  tmpQLabel->setGeometry( 30, 70, 120, 30 );
-  //  tmpQLabel->setText( "Transparent Colour:" );
+  //  tmpQLabel->setText( klocale->translate("Transparent Colour:") );
   //  tmpQLabel->setAlignment( 289 );
   //  tmpQLabel->setMargin( -1 );
 
@@ -76,7 +79,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
 
   tmpQLabel = new QLabel( this, "Label_11" );
   tmpQLabel->setGeometry( 30, 160, 100, 30 );
-  tmpQLabel->setText( "Image Height:" );
+  tmpQLabel->setText( ("Image Height:") );
   tmpQLabel->setAlignment( 289 );
   tmpQLabel->setMargin( -1 );
 
@@ -88,7 +91,7 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent= 0, const char* name
   height->setAlignment(289);
   height->setMargin(-1);
 
-  okButton= new QPushButton("Dismiss", this);
+  okButton= new QPushButton(("Dismiss"), this);
 
   okButton->move(200, 200);
   resize( 360, 250 );
