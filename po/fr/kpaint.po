@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1998-05-07 18:22+0200\n"
 "PO-Revision-Date: 1998-01-28 22:55 CET\n"
-"Last-Translator: Bertrand Leconte <B.Leconte@mail.dotcom.fr>\n"
+"Last-Translator: Serge \"sergio\" Tellène <tells@mygale.org>\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; \n"
@@ -19,8 +19,8 @@ msgid ""
 "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
 msgstr ""
 "\n"
-"(c) Richard J. Moore 1997 Distribué sous la GPL. \n"
-"Regarder le fichier LICENSE pour plus de détails\n"
+"(c) Richard J. Moore 1997. Distribué sous la GPL. \n"
+"Regardez le fichier LICENSE pour plus de détails\n"
 
 #: app.cpp:46
 msgid "Usage: "
@@ -39,35 +39,32 @@ msgid "Canvas Size"
 msgstr "Taille de la feuille"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Largeur"
+msgstr "Largeur :"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Hauteur"
+msgstr "Hauteur :"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
 msgstr "Cercle"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Largeur de l'image :"
+msgstr "Nombre de plans de couleurs :"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "1 (Bitmap)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "8 (256 couleurs)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "24 (couleurs réelles)"
 
 #: ellipse.cpp:16 kpaint.cpp:348
 msgid "Ellipse"
@@ -79,7 +76,7 @@ msgstr "Format du fichier :"
 
 #: infodialog.cpp:24
 msgid "Colour Depth:"
-msgstr "Nombre de couleurs :"
+msgstr "Nombre de plans de couleur :"
 
 #: infodialog.cpp:39
 msgid "Colours Used:"
@@ -95,16 +92,18 @@ msgstr "Hauteur de l'image :"
 
 #: kpaint.cpp:52 kpaint.cpp:603
 msgid "untitled.gif"
-msgstr "sansnom.gif"
+msgstr "sans_nom.gif"
 
 #: kpaint.cpp:124
 msgid "Unsaved Changes"
-msgstr "Modifications non-enregistrées"
+msgstr "Modifications non enregistrées"
 
 #: kpaint.cpp:125
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Si vous fermez cette fenêtre, vous perdrez les modifications\n"
+"que vous avez faites, et que vous n'avez pas enregistrées."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -112,7 +111,7 @@ msgstr "Nouvelle feuille"
 
 #: kpaint.cpp:163
 msgid "Open File"
-msgstr "Ouvrir fichier"
+msgstr "Ouvrir un fichier"
 
 #: kpaint.cpp:166
 msgid "Save File"
@@ -128,32 +127,31 @@ msgstr "Zoom arrière"
 
 #: kpaint.cpp:312
 msgid "Open Image..."
-msgstr "Ouvrir image..."
+msgstr "Ouvrir une image ..."
 
 #: kpaint.cpp:313
 msgid "New Image..."
-msgstr "Nouvelle image..."
+msgstr "Nouvelle image ..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Enregistrer image..."
+msgstr "Enregistrer l'image..."
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
-msgstr "Enregistrer image sous..."
+msgstr "Enregistrer l'image sous ..."
 
 #: kpaint.cpp:316
 msgid "Image Format..."
-msgstr "Format de l'image..."
+msgstr "Format de l'image ..."
 
 #: kpaint.cpp:318
 msgid "Open from URL..."
-msgstr "Ouvrir avec l'URL..."
+msgstr "Ouvrir avec l'URL ..."
 
 #: kpaint.cpp:319
 msgid "Save to URL..."
-msgstr "Enregistrer à l'URL..."
+msgstr "Enregistrer à l'URL ..."
 
 #: kpaint.cpp:321
 msgid "New Window"
@@ -185,27 +183,27 @@ msgstr "Coller en tant qu'image"
 
 #: kpaint.cpp:334
 msgid "Mask..."
-msgstr "Masque..."
+msgstr "Masque ..."
 
 #: kpaint.cpp:337
 msgid "Information..."
-msgstr "Informations..."
+msgstr "Informations ..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Redimensionner ..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
-msgstr "Modifier la palette..."
+msgstr "Modifier la palette ..."
 
 #: kpaint.cpp:340
 msgid "Change Colour Depth..."
-msgstr "Changer le nombre de couleurs..."
+msgstr "Changer le nombre de plans de couleurs ..."
 
 #: kpaint.cpp:343
 msgid "Tool Properties..."
-msgstr "Propriétés des outils..."
+msgstr "Propriétés des outils ..."
 
 #: kpaint.cpp:345 pen.cpp:17
 msgid "Pen"
@@ -229,17 +227,15 @@ msgstr "Sélectionner une zone"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Angle arrondi"
 
 #: kpaint.cpp:357
-#, fuzzy
 msgid "Show Tools Toolbar"
 msgstr "Afficher la barre d'outils"
 
 #: kpaint.cpp:358
-#, fuzzy
 msgid "Show Commands Toolbar"
-msgstr "Afficher la barre d'outils"
+msgstr "Afficher la barre de commande"
 
 #: kpaint.cpp:359
 msgid "Show Status Bar"
@@ -251,7 +247,7 @@ msgstr "Enregistrer les options"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "KPaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -259,6 +255,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c) "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -266,18 +265,18 @@ msgstr "&Image"
 
 #: kpaint.cpp:381
 msgid "&Tool"
-msgstr "Ou&tils"
+msgstr "Ou&til"
 
 #: kpaint.cpp:533
 msgid "KPaint: Could not open file"
-msgstr "KPaint: impossible d'ouvrir le fichier"
+msgstr "KPaint : impossible d'ouvrir le fichier"
 
 #: kpaint.cpp:534
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
 msgstr ""
-"Erreur: impossible d'ouvrir le fichier\n"
+"Erreur : impossible d'ouvrir le fichier.\n"
 "KPaint n'a pas pu ouvrir le fichier spécifié."
 
 #: kpaint.cpp:537 kpaint.cpp:547
@@ -286,17 +285,16 @@ msgstr "Continuer"
 
 #: kpaint.cpp:542
 msgid "KPaint: Unknown Format"
-msgstr "KPaint: Format inconnu"
+msgstr "KPaint : format inconnu"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
-"Error: Format inconnu\n"
-"KPaint n'a pas pu reconnaitre le format du fichier spécifié."
+"Erreur : format inconnu\n"
+"KPaint n'a pas pu reconnaître le format du fichier spécifié."
 
 #: kpaint.cpp:745
 msgid "Open Location:"
@@ -364,11 +362,11 @@ msgstr "Personnalisé"
 
 #: properties.cpp:96 properties.cpp:149
 msgid "Pattern Filename:"
-msgstr "Nom de fichier du schéma :"
+msgstr "Nom du fichier schéma :"
 
 #: properties.cpp:106
 msgid "Set Fill Colour..."
-msgstr "Définir la couleur de remplissage..."
+msgstr "Définir la couleur de remplissage ..."
 
 #: properties.cpp:283 properties.cpp:344
 msgid "Line Style:"
@@ -408,10 +406,9 @@ msgstr "Style de connexion :"
 
 #: properties.cpp:331
 msgid "Set Line Colour..."
-msgstr "Définir la couleur des lignes..."
+msgstr "Définir la couleur des lignes ..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
 msgstr "Rectangle"
 
