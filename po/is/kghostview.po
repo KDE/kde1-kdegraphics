@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1998-11-10 02:07+0100\n"
+"POT-Creation-Date: 1998-11-11 01:47+0100\n"
 "PO-Revision-Date: 1998-11-04 10:50-0500\n"
 "Last-Translator: Thorarinn Einarsson <thori@mindspring.com>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
