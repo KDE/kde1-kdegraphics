@@ -27,7 +27,6 @@ msgstr ""
 "De verandering van het gebruikte lettertype zal pas\n"
 "zichtbaar zijn nadat u kdvi opnieuw opstart !"
 
-
 #: dviwin.cpp:233
 msgid ""
 "The change in font path will be effective\n"
@@ -35,7 +34,6 @@ msgid ""
 msgstr ""
 "De verandering van het lettertype pad zal pas\n"
 "zichtbaar zijn nadat u kdvi opnieuw opstart !"
-
 
 #: dviwin.cpp:247
 msgid ""
@@ -60,7 +58,6 @@ msgid ""
 msgstr ""
 "De verandering van de gamma modus zal pas\n"
 "zichtbaar zijn nadat u kdvi opnieuw opstart !"
-
 
 #: dviwin.cpp:424 dviwin.cpp:458
 msgid "HEY"
