@@ -44,7 +44,6 @@ msgid "About KView"
 msgstr "Sobre KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Lista..."
 
@@ -81,14 +80,12 @@ msgid "&Images"
 msgstr "&Imagens"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
 msgstr "&Salvar como..."
 
 #: viewer.cpp:415
-#, fuzzy
 msgid "&Close Window"
-msgstr "tamanho da janela"
+msgstr "&Fechar janela"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -96,7 +93,7 @@ msgstr "Te&la Cheia"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Enquadrar"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -125,14 +122,12 @@ msgid "&Half size"
 msgstr "Diminuir à &Metade"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "Tamanho Máximo"
+msgstr "Tamanho &Máximo"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Má&ximo"
+msgstr "Máx/&aspecto"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
@@ -163,7 +158,6 @@ msgid "Max&pect"
 msgstr "Má&ximo"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
 msgstr "&Sobre o KView..."
 
@@ -180,36 +174,33 @@ msgid "Transfer error: "
 msgstr "Erro de transferência: "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
 msgstr "Carregando..."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Impossível carregar %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Clareando..."
+msgstr "Imprimindo..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Digite fator de brilho (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Fator de brilho deve ser positivo"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Mudando brilho..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
-msgstr "Intensidade:Clarear"
+msgstr "Intensidade:Brilho"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -228,27 +219,24 @@ msgid "Smooth"
 msgstr "Suavizar"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
-msgstr "Entre valor de gama (0..1):"
+msgstr "Entre valor de gama ( >0 ):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Valor de Gama inválido"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Corrigindo gama..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Correção de Gama..."
+msgstr "Intensidade:Correção de Gama..."
 
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Intervalo..."
+msgstr "Externo..."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
