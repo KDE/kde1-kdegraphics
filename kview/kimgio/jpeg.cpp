@@ -7,6 +7,12 @@
 //
 // $Id$
 
+#ifdef HAVE_CONFIG_H
+#include"config.h"
+#endif
+
+#ifdef HAVE_LIBJPEG
+
 #include<stdio.h>
 #include<assert.h>
 
@@ -124,7 +130,8 @@ void read_jpeg_jfif(QImageIO * iio)
 
 	// Read colourmap
 
-	for (col = 0; col < cinfo.actual_number_of_colors; col++) {
+	for ( col = 0; col < (unsigned)cinfo.actual_number_of_colors; 
+			col++ ) {
 	    image.setColor(col, qRgb(cinfo.colormap[0][col],
 				     cinfo.colormap[1][col],
 				     cinfo.colormap[2][col]));
@@ -133,7 +140,7 @@ void read_jpeg_jfif(QImageIO * iio)
     } else if (cinfo.out_color_space == JCS_GRAYSCALE) {
 
 	image.create(cinfo.output_width, cinfo.output_height,
-      8, 256, QImage::LittleEndian);
+		      8, 256, QImage::LittleEndian);
 
 	// Read colourmap
 
@@ -325,3 +332,5 @@ void qimageio_term_source(j_decompress_ptr)
 {
     return;
 }
+
+#endif
