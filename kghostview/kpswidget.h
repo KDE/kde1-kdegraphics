@@ -81,11 +81,14 @@ struct record_list {
     struct record_list *next;
 };
 
+enum KPSOrientation {KPSPortrait=1, KPSUpsideDown=2, 
+		     KPSLandscape=3, KPSSeascape=4};
+
 class KPSWidget : public QWidget
 {
     Q_OBJECT
-
 public:
+
 	KPSWidget(QWidget *parent);
 	~KPSWidget();
 	

@@ -1,6 +1,13 @@
 #ifndef KGHOSTVIEW_H
 #define KGHOSTVIEW_H
 
+
+#include <stdlib.h>
+#include <math.h>
+
+#include <kaccel.h>
+#include <ktopwidget.h>
+
 #include "kpswidget.h"
 #include "info.h"
 #include "viewcontrol.h"
@@ -8,12 +15,7 @@
 #include "print.h"
 #include "copyright.h"
 #include "marklist.h"
-#include <kaccel.h>
-#include <ktopwidget.h>
-
-#include <stdlib.h>
-#include <math.h>
-
+#include "zoom.h"
 #include <signal.h>
 #ifdef SIGNALRETURNSINT
 #define SIGVAL int
@@ -102,6 +104,7 @@ public:
 	KPSWidget *page;
 	
 	ViewControl *vc;
+	Zoom *zoomdlg;
 	PrintDialog *pd;
 	InfoDialog *infoDialog;
 	
@@ -143,6 +146,7 @@ public slots:
 	//void pageActivated( const char * text); // Dutta 16/3/98
 	void pageActivated( int pg );	// Dutta 16/3/98
 	void applyViewChanges();
+	void applyZoomDlgChange();
 	void scrollDown();
 	void scrollUp();
 	void scrollLeft();

@@ -63,8 +63,8 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	orientComboBox = new QComboBox( FALSE, vcGroupBox );
 	orientComboBox->insertItem(i18n("Portrait"));
 	orientComboBox->insertItem(i18n("Landscape"));
-	orientComboBox->insertItem(i18n("Seascape"));
 	orientComboBox->insertItem(i18n("Upside down"));
+	orientComboBox->insertItem(i18n("Seascape"));
 	orientComboBox->setFixedHeight( magComboBox->sizeHint().height() );
 					
 	grid->addWidget( orientComboBox, 1, 1 );
@@ -114,11 +114,11 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	KButtonBox *bbox = new KButtonBox( this );
 	bbox->addStretch( 10 );
 
-	QPushButton *ok = bbox->addButton( i18n("&Apply") );
-	connect( ok, SIGNAL(clicked()), SLOT(okClicked()) );
+	QPushButton *apply = bbox->addButton( i18n("&Apply") );
+	connect( apply, SIGNAL(clicked()), SLOT(slotApplyClicked()) );
 
-	QPushButton *apply = bbox->addButton( i18n("&Close") );
-	connect( apply, SIGNAL(clicked()), SLOT(reject()) );
+	QPushButton *close = bbox->addButton( i18n("&Close") );
+	connect( close, SIGNAL(clicked()), SLOT(reject()) );
 
 
 	bbox->layout();
@@ -129,7 +129,14 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	resize( 250 ,0);
 }
 
-void ViewControl::okClicked()
+void
+ViewControl::slotApplyClicked()
 {
 	emit applyChanges();
+}
+
+void
+ViewControl::updateOrientation(int orientation)
+{
+  orientComboBox->setCurrentItem (orientation);
 }

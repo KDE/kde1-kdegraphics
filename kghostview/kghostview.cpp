@@ -91,13 +91,13 @@ KGhostview::KGhostview( QWidget *, char *name )
     
     kfm = 0L;
 	
-	isNetFile = false;
+    isNetFile = false;
     
     oldfilename.sprintf("");
-	filename.sprintf("");
-	psfile=0;
-	doc=0;
-	olddoc=0;
+    filename.sprintf("");
+    psfile=0;
+    doc=0;
+    olddoc=0;
     
     current_page=0;
     num_parts=0;
@@ -184,17 +184,17 @@ KGhostview::KGhostview( QWidget *, char *name )
     //
     
     createStatusbar();
-	
-	// Register with KTopLevelWidget geometry manager
     
-	setMenu( menubar );
-	toolbar1 = addToolBar( toolbar );
-	//printf("Registered with ktopwidget\n");
-	//toolbar->setBarPos( KToolBar::Top );
-	//toolbar->show();
+    // Register with KTopLevelWidget geometry manager
+    
+    setMenu( menubar );
+    toolbar1 = addToolBar( toolbar );
+    //printf("Registered with ktopwidget\n");
+    //toolbar->setBarPos( KToolBar::Top );
+    //toolbar->show();
     setStatusBar( statusbar );
-	statusbar->show();
-	setView( mainFrame, FALSE );
+    statusbar->show();
+    setView( mainFrame, FALSE );
     
     //
   	//	INFO DIALOG
@@ -236,6 +236,17 @@ KGhostview::KGhostview( QWidget *, char *name )
 		vc->magComboBox->insertItem(buf);
 	}
 	
+
+	//
+	//      ZOOM DIALOG
+	//
+
+	zoomdlg = new Zoom;
+	zoomdlg->updateZoom ( magstep );
+      
+	connect (zoomdlg, SIGNAL (applyChange()),
+		 SLOT (applyZoomDlgChange()) );
+
 	//
 	//	READ SETTINGS AND SET OPTIONS MENU, SET LAST OPENED FILES
 	//
@@ -357,7 +368,7 @@ void KGhostview::bindKeys()
 	//keys->insertItem(i18n("Close"), "CTRL+W");
 	//keys->insertItem(i18n("Print"), "CTRL+P");
 	//keys->insertItem(i18n("Help"), "F1");
-	keys->insertItem(i18n("View Control"), "View Control", "CTRL+L");
+	keys->insertItem(i18n("Page Setup"), "Page Setup", "CTRL+L");
 	keys->insertItem(i18n("Go To Page"), "Go To Page", "CTRL+G");
 	keys->insertItem(i18n("Zoom In"), "Zoom In","Plus");     
 	keys->insertItem(i18n("Zoom Out"), "Zoom Out","Minus"); 
@@ -378,7 +389,7 @@ void KGhostview::bindKeys()
 	keys->connectItem( keys->stdAction( KAccel::Close ), this, SLOT( closeWindow() ) );
 	keys->connectItem( keys->stdAction( KAccel::Print ), this, SLOT( print() ) );
 	keys->connectItem( keys->stdAction( KAccel::Help ), this, SLOT( help() ) );
-	keys->connectItem( "View Control", this, SLOT( viewControl() ) );
+	keys->connectItem( "Page Setup", this, SLOT( viewControl() ) );
 	keys->connectItem( "Go To Page", this, SLOT( goToPage() ) );
 	keys->connectItem( "Zoom In", this, SLOT( zoomIn() ) );
 	keys->connectItem( "Zoom Out", this, SLOT( zoomOut() ) );
@@ -446,7 +457,7 @@ void KGhostview::updateMenuAccel()
 	changeMenuAccel( m_file, quitID, i18n("Quit") );
 	changeMenuAccel( m_view, zoomInID, i18n("Zoom In") );
 	changeMenuAccel( m_view, zoomOutID, i18n("Zoom Out") );
-	changeMenuAccel( m_view, viewControlID, i18n("View Control") );
+	changeMenuAccel( m_view, viewControlID, i18n("Page Setup") );
 	changeMenuAccel( m_view, redisplayID, i18n("Redisplay") );
 	changeMenuAccel( m_view, infoID, i18n("Information") );
 	changeMenuAccel( m_go, nextID, i18n("Next Page") );
@@ -945,24 +956,55 @@ void KGhostview::readSettings()
 
 void KGhostview::shrinkWrap()
 {
-	int new_width=0;
-	
-	if ( !psfile ) return;
-	
-	new_width=page->fullView->width()+(x()+width()-view_right)+(view_left-x())+2;
-	
-	if( page->vertScrollBar->isVisible() )
-		new_width+=page->vertScrollBar->width();
-		
-	if( marklist->isVisible() )
-		new_width+=PAGELIST_WIDTH+3;
-		
-	QWidget *d = QApplication::desktop();
-    int w=d->width()-10; 	
-	if( new_width > w )
-		new_width = w;
-			
-	resize( new_width, height() );
+  
+  if ( !psfile ) return;
+
+#define SHRINK_WRAP_MARGIN 10
+  
+
+  //If the menubar/toolbars get taller/shorter _after_ the resize,
+  //  then the new size becomes incorrect.  To remedy this
+  //  we'll loop through this next bit until the size doesn't change
+  //  or until we've iterated maxits (to avoid an unforseen
+  //  many-/infinite- loop problem).
+
+  const unsigned int maxits = 4;
+  unsigned int i;
+
+  int new_width=0, new_height=0;
+  int prevwidth=-1, prevheight=-1;
+
+  for (i=0; prevwidth!=new_width && prevheight!=new_height && i<maxits; i++)
+    {
+      prevwidth = new_width;
+      prevheight = new_height;
+
+      new_width=page->fullView->width()+ width() - 
+	(view_right - view_left) + SHRINK_WRAP_MARGIN;
+      
+      new_height=page->fullView->height()+ height() -
+	(view_bottom - view_top) + SHRINK_WRAP_MARGIN;
+      
+      //  if( page->vertScrollBar->isVisible() )    new_width+=page->vertScrollBar->width();
+      
+      if( marklist->isVisible() )
+	new_width+=PAGELIST_WIDTH+3;
+      
+      QWidget *d = QApplication::desktop();
+      
+      // (KDE2.0) We should overload resize to move over so we don't spill off the
+      //  screen;  height should take kpanel into account (via KWM?)
+      
+      int w=d->width();
+      int h=d->width(); 	
+      if( new_width > w )
+	new_width = w;
+      if( new_height > h )
+	new_width = h;
+
+      if (prevwidth!=new_width || prevheight!=new_height)
+	resize( new_width, new_height );
+    }
 }
 
 void KGhostview::paletteChange( const QPalette & )
@@ -971,7 +1013,7 @@ void KGhostview::paletteChange( const QPalette & )
 	marklist->selectTextColor = kapp->selectTextColor;
 	
 	if( psfile )
-		redisplay();
+	  redisplay();
 }
 
 void KGhostview::setName()
@@ -1218,24 +1260,31 @@ void KGhostview::applyViewChanges()
 	int selection;
 	Bool layout_changed=False;
 	
-	selection = vc->orientComboBox->currentItem()+1;
-	switch(selection) {
-		case 1:	orient=1;
-				statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
-				break;
-		case 2:	orient=4;statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
-				break;
-		case 3:	orient=3;statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
-				break;
-		case 4:	orient=2;statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
-				break;
+	selection = vc->orientComboBox->currentItem();
+
+	switch(selection)
+	  {
+	  case VCPortrait:
+	    orient=KPSPortrait;
+	    statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
+	    break;
+	  case VCLandscape:
+	    orient=KPSLandscape;
+	    statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
+	    break;
+	  case VCUpsideDown:
+	    orient=KPSUpsideDown;
+	    statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
+	    break;
+	  case VCSeascape:
+	    orient=KPSSeascape;
+	    statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
+	    break;
 	}
 	force_orientation = True;
 	orientation = orient;
-		
-	selection = vc->magComboBox->currentItem()+1;
-	magstep = selection;
-	
+
+
 	selection = vc->mediaComboBox->currentItem()+1;
 	if(doc->epsf && selection ==1) {
 		force_pagemedia = False;
@@ -1307,39 +1356,52 @@ void KGhostview::print()
 
 void KGhostview::viewControl()
 {
-    //printf("KGhostview::viewControl\n");
-
-	
-	vc->magComboBox->setCurrentItem(magstep-1);
-	
-	if( !vc->isVisible() ) {
-		vc->show();
-		//vc->orientComboBox->setFocus();
-	}
+  //printf("KGhostview::viewControl\n");
+  
+  
+  vc->magComboBox->setCurrentItem(magstep-1);
+  
+  if( !vc->isVisible() )
+    {
+      vc->show();
+      //vc->orientComboBox->setFocus();
+    }
 }
 
 void KGhostview::zoomIn()
 {
-	int i;
-
-    i = magstep + 1;
-    if (i <= shrink_magsteps+expand_magsteps) {
-		set_magstep(i);
-	}
+  int i;
+  
+  i = magstep + 1;
+  if (i <= shrink_magsteps+expand_magsteps)
+    {
+      set_magstep(i);
+    }
 }
 
 void KGhostview::zoomOut()
 {
-	int i;
-
-    i = magstep - 1;
-    if (i >= 1) {
-		set_magstep(i);
-	}
+  int i;
+  
+  i = magstep - 1;
+    if (i >= 1)
+      {
+	set_magstep(i);
+      }
 }
 
-void KGhostview::zoom()
+void
+KGhostview::zoom()
 {
+  zoomdlg->show();
+}
+
+void
+KGhostview::applyZoomDlgChange ()
+{
+  
+  magstep = zoomdlg->zoomFactor ();
+  set_magstep (magstep);
 }
 
 void KGhostview::nextPage()
@@ -1916,6 +1978,23 @@ Bool KGhostview::set_new_orientation(int number)
     	//fprintf(stderr, "No new orientation\n");
     }
     
+    
+    if (changed)
+      switch (orientation)
+	{
+	case (KPSPortrait):
+	  vc->updateOrientation (VCPortrait);
+	  break;
+	case (KPSLandscape):
+	  vc->updateOrientation (VCLandscape);
+	  break;
+	case (KPSUpsideDown):
+	  vc->updateOrientation (VCUpsideDown);
+	  break;
+	case (KPSSeascape):
+	  vc->updateOrientation (VCSeascape);
+	  break;
+	}
     return changed;
 }
 
@@ -2570,54 +2649,65 @@ void KGhostview::set_magstep(int i)
 {
     //printf("KGhostview::set_magstep\n");
 
-	char temp_text[20];
-   
-    magstep = i;
-    if (set_new_magstep()) {
-		page->layout();
-		page->resize(page->width(), page->height());
-		page->repaint();
-		sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-		statusbar->changeItem( temp_text, ID_MAGSTEP );
-		show_page(current_page);
-		shrinkWrap();
+  char temp_text[20];
+  
+  magstep = i;
+  if (set_new_magstep())
+    {
+      page->layout();
+      //page->resize(page->width(), page->height());
+      //page->repaint();
+      sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
+      statusbar->changeItem( temp_text, ID_MAGSTEP );
+      show_page(current_page);
+      shrinkWrap();
+      page->repaint();
     }
 }
 
 Bool KGhostview::set_new_magstep()
 {
-    //printf("KGhostview::set_new_magstep\n");
-
-    int new_magstep;
-    Bool changed = False;
-    float xdpi, ydpi;
-    
-    new_magstep = magstep;
-    
-    if (new_magstep != current_magstep) {
-    	//printf("	new_magstep != current_magstep\n");
-		page->disableInterpreter();
-		changed = True;
-		xdpi = default_xdpi;
-		ydpi = default_ydpi;
-		magnify(&xdpi, new_magstep);
-		magnify(&ydpi, new_magstep);
-		page->xdpi=xdpi;
-		page->ydpi=ydpi;
-		current_magstep = new_magstep;
-	}
-	return changed;
+  //printf("KGhostview::set_new_magstep\n");
+  
+  int new_magstep;
+  Bool changed = False;
+  float xdpi, ydpi;
+  
+  new_magstep = magstep;
+  
+  if (new_magstep != current_magstep)
+    {
+      //printf("	new_magstep != current_magstep\n");
+      page->disableInterpreter();
+      changed = True;
+      xdpi = default_xdpi;
+      ydpi = default_ydpi;
+      magnify(&xdpi, new_magstep);
+      magnify(&ydpi, new_magstep);
+      page->xdpi=xdpi;
+      page->ydpi=ydpi;
+      current_magstep = new_magstep;
+      
+      zoomdlg->updateZoom ( magstep );
+    }
+  return changed;
 }
 
 void KGhostview::magnify(float *dpi, int magstep)
 {
     //printf("KGhostview::magnify\n");
 
-    if (magstep < shrink_magsteps) {
-		*dpi = (int)((* dpi)*magstep/(shrink_magsteps));
-    } else {
-		*dpi = (int)((* dpi)+2*(* dpi)*(magstep-shrink_magsteps)/(expand_magsteps));
-    }
+    if (magstep < shrink_magsteps)
+      {
+	*dpi = (int)((* dpi) *
+		     ((double)magstep/shrink_magsteps));
+      }
+    else
+      {
+	*dpi = (int)((*dpi) + 
+		     2*(*dpi)*
+		     ( (double) (magstep-shrink_magsteps)/expand_magsteps) );
+      }
 }
 
 

@@ -119,7 +119,7 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	interpreter_input_id = None;
 	interpreter_output_id = None;
 	interpreter_error_id = None;
-	orientation = 1;
+	orientation = KPSPortrait;
 	changed = False;
 	busy = False;
 	fullView->setCursor( arrowCursor );
@@ -487,36 +487,32 @@ Bool KPSWidget::computeSize()
 	int newWidth=0, newHeight=0;
 	Bool change = FALSE;
 	
-	switch (orientation) {
-	case 1: //PORTRAIT
-		orient_angle=0;
-		newWidth = (int) ((urx - llx) / 72.0 * xdpi + 0.5);
-	    newHeight = (int) ((ury - lly) / 72.0 * ydpi + 0.5);
-	    break;
-	case 2: //UPSIDEDOWN
-		orient_angle=180;
+	switch (orientation)
+	  {
+	  case KPSPortrait: //PORTRAIT
+	    orient_angle=0;
 	    newWidth = (int) ((urx - llx) / 72.0 * xdpi + 0.5);
 	    newHeight = (int) ((ury - lly) / 72.0 * ydpi + 0.5);
 	    break;
-	case 3: //LANDSCAPE
-		orient_angle=90;
-		newWidth = (int) ((ury - lly) / 72.0 * xdpi + 0.5);
-	    newHeight = (int) ((urx - llx) / 72.0 * ydpi + 0.5);
+	  case KPSUpsideDown: //UPSIDEDOWN
+	    orient_angle=180;
+	    newWidth = (int) ((urx - llx) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((ury - lly) / 72.0 * ydpi + 0.5);
 	    break;
-	case 4: //SEASCAPE
-		orient_angle=270;
+	  case KPSLandscape: //LANDSCAPE
+	    orient_angle=90;
 	    newWidth = (int) ((ury - lly) / 72.0 * xdpi + 0.5);
 	    newHeight = (int) ((urx - llx) / 72.0 * ydpi + 0.5);
 	    break;
-	}
-	
-	//printf("x offset %d, width %d, y offset %d, height %d\n", llx, urx, lly,
-	//ury);
-	
-	//printf(" newWidth = %d, new Height = %d\n", newWidth, newHeight );
+	  case KPSSeascape: //SEASCAPE
+	    orient_angle=270;
+	    newWidth = (int) ((ury - lly) / 72.0 * xdpi + 0.5);
+	    newHeight = (int) ((urx - llx) / 72.0 * ydpi + 0.5);
+	    break;
+	  }
 	
 	if((newWidth != fullWidth) || (newHeight != fullHeight))
-		change = TRUE;
+	  change = TRUE;
 	
 	
 	fullWidth = newWidth;
