@@ -19,7 +19,7 @@ msgid "snapshot"
 msgstr "capture d'écran"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -30,12 +30,12 @@ msgid ""
 "Version: %s"
 msgstr ""
 "Appuyer sur le bouton 'Capturer', ensuite cliquer\n"
-"sur la fenêtre à capturer\n"
+"sur la fenêtre à capturer.\n"
 "\n"
 "KSnapshot est sous copyright de Richard Moore (rich@kde.org)\n"
 "et est distribué sous licence LGPL\n"
 "\n"
-"Version : "
+"Version : %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
@@ -51,7 +51,7 @@ msgstr "secondes."
 
 #: ksnapshot.cpp:190
 msgid "Auto raise"
-msgstr "Mise en avant-plan automatique"
+msgstr "Placer dessus automatiquement"
 
 #: ksnapshot.cpp:191
 msgid "Hide KSnapshot window"

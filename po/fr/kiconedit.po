@@ -202,6 +202,14 @@ msgid ""
 "tanghus@kde.org\n"
 "http://w1.1358.telia.com/~u135800018"
 msgstr ""
+"Editeur d'Icône de KDE\n"
+"\n"
+"Un programme de dessin graphique pour créer\n"
+"des icônes utilisant la palette d'icône KDE\n"
+"\n"
+"Copyright 1998 par Thomas Tanghus\n"
+"tanghus@kde.org\n"
+"http://w1.1358.telia.com/~u135800018"
 
 #: kiconedit.cpp:570
 msgid "What is ...?"
@@ -209,7 +217,7 @@ msgstr "Qu'est-ce que c'est ?"
 
 #: kiconedit.cpp:579
 msgid "Drag source"
-msgstr ""
+msgstr "Glisser la source"
 
 #: kiconedit.cpp:584
 msgid "New File"
@@ -494,6 +502,9 @@ msgid ""
 "\n"
 "Smoothly resizes the icon while trying to preserve the contents"
 msgstr ""
+"Redimensionner\n"
+"\n"
+"Redimensionne l'icône en essayant de préserver le contenu"
 
 #: kiconedit.cpp:851
 msgid ""
@@ -702,11 +713,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "largeur"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "hauteur"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"

@@ -497,6 +497,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - le visualiseur de document PostScript pour\n"
+"l'Environnement de Bureau KDE.\n"
+"\n"
+"Ecrit par Mark Donohoe <donohoe@kde.org>, basé sur le travail original\n"
+"de Tim Theisen.\n"
+"\n"
+"Incorpore du code du gv de Johanes Plass. Ceci ajoute le support des fichiers\n"
+"compressés et PDF.\n"
+"\n"
+"Voir http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -633,6 +643,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Définissez la variable Environment (à PRINTER ou LPDEST, par exemple ) pour prendre "
+"en compte le nom de l'imprimante."
 
 #: kghostview.cpp:1661
 #, c-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KView 1.8\n"
 "POT-Creation-Date: 1998-12-13 13:55+0100\n"
-"PO-Revision-Date: 1998-12-07 22:00+0001\n"
+"PO-Revision-Date: 1998-01-16 15:45+0001\n"
 "Last-Translator: Francois-Xavier DURANCEAU "
 "<Francois-Xavier.Duranceau@loria.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
@@ -93,7 +93,7 @@ msgstr "&Plein écran"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "R&ogner"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -127,15 +127,15 @@ msgstr "Taille &maximale"
 
 #: viewer.cpp:444
 msgid "Max/&aspect"
-msgstr ""
+msgstr "Taille/&Aspect max"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
-msgstr "&Rotation +90° (droite)"
+msgstr "Rotation 90° à &droite"
 
 #: viewer.cpp:451
 msgid "Rotate &anti-clockwise"
-msgstr "R&otation -90° (gauche)"
+msgstr "Rotation 90° à &gauche"
 
 #: viewer.cpp:453
 msgid "Flip &vertical"
@@ -151,11 +151,11 @@ msgstr "M&osaïque"
 
 #: viewer.cpp:461
 msgid "&Max"
-msgstr "&Max"
+msgstr "Taille &Max"
 
 #: viewer.cpp:462
 msgid "Max&pect"
-msgstr ""
+msgstr "Taille/As&pect max"
 
 #: viewer.cpp:479
 msgid "&About KView..."
@@ -175,7 +175,7 @@ msgstr "Erreur de transfert : "
 
 #: viewer.cpp:662
 msgid "Loading..."
-msgstr "Chargement.."
+msgstr "Chargement..."
 
 #: viewer.cpp:671
 #, c-format
@@ -196,11 +196,11 @@ msgstr "Le facteur de luminosité doit être positif"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr "Modification de la luminosité"
+msgstr "Modification de la luminosité..."
 
 #: colour.cpp:58
 msgid "Intensity:Brightness"
-msgstr "Intensité:Luminosité"
+msgstr "Intensité:Luminosité..."
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
