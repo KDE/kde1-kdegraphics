@@ -399,4 +399,3 @@ msgstr "Viivan väri..."
 #: roundangle.cpp:19
 msgid "Roundangle"
 msgstr "Monikulmio"
-
