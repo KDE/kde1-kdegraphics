@@ -117,14 +117,16 @@ int main( int argc, char **argv )
 			    if ( ( kg->psfile = fopen( argv[1], "r") ) == 0 ) {
 					QString s;
 					s.sprintf( i18n("The document named\n%s\n"\
-									"could not be opened.\n"\
-									"No document has been loaded.\n\n" ),
-					   			argv[1] );
+							"could not be opened.\n"\
+							"No document has been loaded.\n\n%s" ),
+						   argv[1], strerror(errno) );
 
-					if (errno <= sys_nerr) {
-						s.append( "Error:\n" );
-						s.append( sys_errlist[errno] );
-					}	   
+					/* Stephan: this is highly unportable 
+					   if (errno <= sys_nerr) {
+					   s.append( "Error:\n" );
+					   s.append( sys_errlist[errno] );
+					   }	   
+					*/
 
  					QMessageBox::warning(0, i18n("Open file error"), s );
 			    }
