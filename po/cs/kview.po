@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1998-12-18 11:30+01:00\n"
+"PO-Revision-Date: 1999-02-04 09:59+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- Prohlí¾eè obrázkù. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -108,7 +111,7 @@ msgstr "&Obnovit"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Preference..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -158,25 +161,23 @@ msgstr "Pøevrátit &horizontálnì"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "&Vydlá¾dit plochu"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "Na &plochu"
+msgstr "Roztáhnout na &celou plochu"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Max&pect"
+msgstr "Vydlá¾dit &maximální velikostí"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Jak udìlat..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "&Coje ..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -289,33 +290,31 @@ msgstr "&Spustit promítání"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "Preference kview"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Aplikovat"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Pøi nahrání"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "&Zavøít okno"
+msgstr "Zmìnit velikost okna"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Zmìnit velkost obrázku"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Nemìnit velikost"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "&Promítání Zapnout/Vypnout"
+msgstr "Promítání"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -323,20 +322,8 @@ msgstr "Smyèka"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Æasový interval pro promítání (sec)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
-
-#~ msgid "&Tile"
-#~ msgstr "Vytapetov&at"
-
-#~ msgid "&Max"
-#~ msgstr "&Max"
-
-#~ msgid "Interval.."
-#~ msgstr "Interval.."
-
-#~ msgid "Time between slides (sec):"
-#~ msgstr "Èas mezi políèky (sek):"
+msgstr "&Klávesy"

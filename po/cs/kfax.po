@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1998-11-03 14:58+01:00\n"
+"PO-Revision-Date: 1999-02-04 10:13+01:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,6 +39,12 @@ msgid ""
 "Bernd Johannes Wuebben\n"
 "wuebben@kde.org"
 msgstr ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
 
 #: kfax.cpp:402
 msgid "Help page"
@@ -146,19 +152,19 @@ msgstr "Jdi na stranu ..."
 
 #: kfax.cpp:554
 msgid "w: 00000 h: 00000"
-msgstr ""
+msgstr "w: 00000 h: 00000"
 
 #: kfax.cpp:555
 msgid "Res: XXXXX"
-msgstr ""
+msgstr "Rozl.: XXXXX"
 
 #: kfax.cpp:556
 msgid "Type: XXXXXXX"
-msgstr ""
+msgstr "Typ: XXXXXXX"
 
 #: kfax.cpp:557
 msgid "P:XXXofXXX"
-msgstr ""
+msgstr "S:XXXzXXX"
 
 #: kfax.cpp:582
 msgid "Open Location:"
@@ -265,17 +271,17 @@ msgstr "Musíte nejdø9ve otevøít stranu faxu."
 #: kfax.cpp:2400
 #, c-format
 msgid "P.%d of %d"
-msgstr ""
+msgstr "S.%d z %d"
 
 #: kfax.cpp:2411
 #, c-format
 msgid "W: %d H: %d"
-msgstr ""
+msgstr "©: %d V: %d"
 
 #: kfax.cpp:2416
 #, c-format
 msgid "Res: %s"
-msgstr ""
+msgstr "Rozl.: %s"
 
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
@@ -287,11 +293,11 @@ msgstr "Normální"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
-msgstr ""
+msgstr "Typ: Tiff"
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr ""
+msgstr "Typ: Raw"
 
 #: kfax.cpp:2738
 msgid ""
