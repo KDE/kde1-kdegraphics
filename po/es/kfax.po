@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics \n"
 "POT-Creation-Date: 1998-11-16 01:58+0100\n"
-"PO-Revision-Date: 1998-06-17 +0200\n"
-"Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
+"PO-Revision-Date: 1998-12-07 +0200\n"
+"Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
 
 #: kfax.cpp:233 kfax.cpp:828
 msgid "Show &Tool Bar"
@@ -82,9 +82,8 @@ msgid "Zoom &out"
 msgstr "Alejar"
 
 #: kfax.cpp:433
-#, fuzzy
 msgid "&Fax Options..."
-msgstr "&Preferencias"
+msgstr "Opciones de &Fax..."
 
 #: kfax.cpp:435
 msgid "&Tool Bar"
@@ -206,7 +205,7 @@ msgstr "Cargando '%s'"
 
 #: kfax.cpp:1195
 msgid "Done"
-msgstr ""
+msgstr "Hecho"
 
 #: kfax.cpp:1209
 msgid "Calling KFM"
@@ -244,6 +243,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Imposible abrir:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"
@@ -319,11 +320,11 @@ msgstr "Fino"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: options.cpp:81
 msgid "Display Options:"
-msgstr "Opciones pantalla"
+msgstr "Opciones de pantalla:"
 
 #: options.cpp:85
 msgid "Landscape"

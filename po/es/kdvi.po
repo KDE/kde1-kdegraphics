@@ -2,9 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
 "POT-Creation-Date: 1998-10-13 13:31+0200\n"
-"PO-Revision-Date: 1998-06-17 22:08+0200\n"
-"Last-Translator: Boris Wesslowski <bwess@gmx.net>\n"
-"First-Translator: Ismael Ripoll <iripoll@dsica.upv.es>\n"
+"PO-Revision-Date: 1998-12-07 22:08+0200\n"
+"Last-Translator: Alonso Lara <jlaram@nexo.es>\n"
 
 #: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
 #: kdvi.cpp:516
@@ -73,7 +72,7 @@ msgstr "Marcar página"
 
 #: kdvi.cpp:115
 msgid "Redraw"
-msgstr "Repintar página"
+msgstr "Repintar"
 
 #: kdvi.cpp:117
 msgid "Preferences ..."
@@ -81,7 +80,7 @@ msgstr "Preferencias ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Nuevo"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -116,13 +115,12 @@ msgid "&Redraw page"
 msgstr "Repintar página"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Página anterior"
+msgstr "&Anterior"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Siguiente"
 
 #: kdvi.cpp:207
 msgid "&First"
