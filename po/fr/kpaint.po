@@ -205,7 +205,7 @@ msgstr "&Fichier"
 
 #: kpaint.cpp:242
 msgid "&Edit"
-msgstr "$Editer"
+msgstr "&Editer"
 
 #: kpaint.cpp:243
 msgid "&Image"
