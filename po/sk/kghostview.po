@@ -220,9 +220,8 @@ msgid "Document information"
 msgstr "Informácie o dokumente"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Nastavenie tlaèiarne"
+msgstr "Nastavenie stránky"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -286,12 +285,11 @@ msgstr "Otvo&ri» nedávne..."
 
 #: kghostview.cpp:500
 msgid "&Reload"
-msgstr ""
+msgstr "&Znovu naèíta»"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Otvori» ..."
+msgstr "Nastavenie stránky ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -306,9 +304,8 @@ msgid "Zoom &out"
 msgstr "Z&men¹i»"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Zväèenie ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -509,7 +506,6 @@ msgid "Go to ..."
 msgstr "Choï na stranu ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
 msgstr "Zväè¹i»"
 
@@ -756,55 +752,22 @@ msgstr ""
 "Preèítajte si stavový riadok pre túto informáciu.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
 msgstr "Zväè¹enie"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "Médium"
+msgstr "&Médium"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "Orientácia"
+msgstr "&Orientácia"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Aplikova»"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "Zväè¹enie"
+msgstr "&Zväè¹enie"
 
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Nastavenie zobrazenia ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "Natesna» na ¹írku strany"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Aktualizova»"
-
-#~ msgid "Change view ..."
-#~ msgstr "Zmeò nastavenie zobrazenia ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Zapni antialiasing"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Vypni antialiasing"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Zobrazuj správy Ghostscriptu"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Nezobrazuj správy Ghostscriptu"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Vynúti» zmeny "
