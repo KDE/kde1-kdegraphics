@@ -1076,9 +1076,3 @@ msgstr "Verktøy"
 #: kiconconfig.cpp:642
 msgid "Icon grid"
 msgstr "Ikon-grind"
-
-#~ msgid "Open image"
-#~ msgstr "Åpne bilde"
-
-#~ msgid "Save image As"
-#~ msgstr "Lagre bilde som"

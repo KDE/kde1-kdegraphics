@@ -276,15 +276,3 @@ msgstr "Start &lystbilde"
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Tid mellom lydbilder (sek):"
-
-#~ msgid "Fi&lter"
-#~ msgstr "Fi&lter"
-
-#~ msgid "&Open.."
-#~ msgstr "Å&pne..."
-
-#~ msgid "Darkening..."
-#~ msgstr "Mørkner"
-
-#~ msgid "Intensity:Darken"
-#~ msgstr "Intensitet:Mørk"

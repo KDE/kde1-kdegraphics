@@ -365,21 +365,3 @@ msgstr "Råfaksbredde:"
 #: options.cpp:142
 msgid "height:"
 msgstr "høyde:"
-
-#~ msgid "About KFax"
-#~ msgstr "Om KFax"
-
-#~ msgid "Version "
-#~ msgstr "Versjon "
-
-#~ msgid "&About..."
-#~ msgstr "&Om..."
-
-#~ msgid "KFax &Help "
-#~ msgstr "KFax &Hjelp"
-
-#~ msgid "Select Facsimile to Open"
-#~ msgstr "Velg faksimile å åpne"
-
-#~ msgid "Select Facsimile to Add"
-#~ msgstr "Velg faksimile å legge til"

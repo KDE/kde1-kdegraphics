@@ -702,6 +702,3 @@ msgstr "Sk.%d "
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Forstørrelse"
-
-#~ msgid "&Defaults"
-#~ msgstr "&Standard"
