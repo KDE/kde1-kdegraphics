@@ -24,10 +24,10 @@ void Syntax(char *call)
 {
 	QString s( i18n( "Usage: " ) );
 	s.append( call );
-	s.append( i18n( " [filename] <siwtches>\n\n" ) );
+	s.append( i18n( " [filename] [siwtches]\n\n" ) );
 	s.append( i18n( "See KDE and Qt documentation for\n"\
 					"command line options.\n" ) );
-	QMessageBox::warning( 0, i18n( "Command line error" ), s );
+	QMessageBox::warning( 0, i18n( "Error on command line" ), s );
 }
 
 class MyApp : public KApplication
@@ -101,36 +101,18 @@ int main( int argc, char **argv )
 			CHECK_PTR( kg );
 		}
     } else if (argc == 2) {
-	
 		KGhostview *kg = new KGhostview ();
 		CHECK_PTR( kg );
-	
-		kg->filename = argv[1];
-		if (strcmp(kg->filename, "-")) {
-		        KURL u( kg->filename );
-			if ( strcmp( u.protocol(), "file" ) != 0 || u.hasSubProtocol() )
-			{
-			    kg->openNetFile( kg->filename );
-			}
-			else
-			{
-			    if ( ( kg->psfile = fopen( argv[1], "r") ) == 0 ) {
-					QString s;
-					s.sprintf( i18n("The document named\n%s\n"\
-							"could not be opened.\n"\
-							"No document has been loaded.\n\nError: %s" ),
-						   argv[1], strerror(errno) );
-
-					/* Stephan: this is highly unportable 
-					   if (errno <= sys_nerr) {
-					   s.append( "Error:\n" );
-					   s.append( sys_errlist[errno] );
-					   }	   
-					*/
-
- 					QMessageBox::warning(0, i18n("Open file error"), s );
-			    }
-			    stat(kg->filename, &sbuf);
+		
+		QString name( argv[1] );
+		if ( strcmp( name, "-" ) ) {
+			KURL u( name );
+			if ( strcmp( u.protocol(), "file" ) != 0 ||
+					u.hasSubProtocol() ) {
+			    kg->openNetFile( name );
+			} else {
+				kg->openFile( u.path() );
+				stat( kg->filename.data(), &sbuf );
 			    kg->mtime = sbuf.st_mtime;
 			}
 		}

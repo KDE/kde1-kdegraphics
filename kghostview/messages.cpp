@@ -28,7 +28,7 @@ MessagesDialog::MessagesDialog( QWidget *parent, const char *name )
 	setFocusPolicy(QWidget::StrongFocus);
 	setCaption(i18n("Ghostscript messages"));
 	
-	QBoxLayout *topLayout = new QVBoxLayout( this, 10 );
+	QBoxLayout *topLayout = new QVBoxLayout( this, 0, 10 );
 
 	frame = new QFrame ( this );
 	if ( style() == WindowsStyle ) {
@@ -42,10 +42,10 @@ MessagesDialog::MessagesDialog( QWidget *parent, const char *name )
 	
 	messageBox = new QMultiLineEdit( frame );
 	messageBox->setFrameStyle( QFrame::NoFrame );
-	messageBox->setFont( QFont("fixed", 12) );
+	messageBox->setFont( kapp->fixedFont );
 	messageBox->setReadOnly( TRUE );
 	
-	QFontMetrics fm( QFont("fixed", 12) );
+	QFontMetrics fm( kapp->fixedFont );
 	frame->setMinimumWidth( 80*fm.width(" ") );
 	
 	// CREATE BUTTONS
@@ -60,11 +60,18 @@ MessagesDialog::MessagesDialog( QWidget *parent, const char *name )
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
 
 	bbox->layout();
-	topLayout->addWidget( bbox, 0 );
+	
+	QBoxLayout *pushLayout = new QHBoxLayout( 10 );
+	topLayout->addLayout( pushLayout, 0 );
+	topLayout->addSpacing( 10 );
+	
+	pushLayout->addWidget( bbox, 0 );
+	pushLayout->addSpacing( 10 );
+	
 	
 	topLayout->activate();
 	
-	resize( 250, 150 );
+	resize( 250, 250 );
 }
 
 void MessagesDialog::clear() {

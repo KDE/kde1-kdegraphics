@@ -134,7 +134,7 @@ public:
 	struct 		document *doc;	
 	struct 		document *olddoc;
 	
-	QString lastOpened[4];
+	QStrList lastOpened;
 	
 public slots:
 	//void pageActivated( const char * text); // Dutta 16/3/98
@@ -159,7 +159,6 @@ public slots:
 	void zoomIn();
 	void zoomOut();
 	void optionsMenuActivated( int item );
-	void fileMenuActivated( int item );
 	void toolbarClicked( int item );
 	void markPage();
 	void configureKeybindings();
@@ -170,6 +169,7 @@ public slots:
 	void info();
 	void copyright();
 	void configureGhostscript();
+	void openRecent( int id );
 	
 	void slotDropEvent( KDNDDropZone * _dropZone );
 	void slotKFMFinished();
@@ -186,6 +186,7 @@ private:
 
 	KMenuBar *menubar;
 	QPopupMenu *m_file;
+	QPopupMenu *m_recent;
 	QPopupMenu *m_view;
 	QPopupMenu *m_go;
 	QPopupMenu *m_pagemarks;
@@ -200,8 +201,8 @@ private:
 	int viewControlID;
 	int printID;
 	int openID;
-	int newWindowID;
-	int closeWindowID;
+	int newID;
+	int closeID;
 	int quitID;
 	int zoomInID;
 	int zoomOutID;
@@ -216,10 +217,6 @@ private:
 	int shrinkWrapID;
 	int redisplayID;
 	int infoID;
-	int file1ID;
-	int file2ID;
-	int file3ID;
-	int file4ID;
 	int markCurrentID;
 	int markAllID;
 	int markEvenID;
@@ -229,6 +226,7 @@ private:
 
 	QString printerName;
 	int printSelection;
+	bool isNetFile;
 	Bool hide_toolbar;
 	Bool hide_statusbar;
 	Bool hide_pagelist;
@@ -259,14 +257,14 @@ private:
 	
 	 /// KFM client
     /**
-      Only one KFM connection should be opened at once. Otherwise kedit could get
+      Only one KFM connection should be opened at once. Otherwise kgv could get
       confused. If this is 0L, you may create a new connection to kfm.
       */
     KFM * kfm;
     
     /// Temporary file for internet purposes
     /**
-      If KEdit is waiting for some internet task to finish, this is the
+      If kgv is waiting for some internet task to finish, this is the
       file that is involved. Mention that it is a complete URL like
       "file:/tmp/mist.txt".
       */
@@ -284,7 +282,7 @@ private:
     
     /// The open mode for a net file
     /**
-      If KEdit is waiting for an internet file, this is the mode in which
+      If kgv is waiting for an internet file, this is the mode in which
       it should open the file.
       */
     int openMode;

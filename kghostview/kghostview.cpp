@@ -36,15 +36,10 @@
 #define ID_SAVE 6
 #define ID_PAGELIST 7
 
-#define ID_NEW_WINDOW 0
-#define ID_CLOSE_WINDOW 1
-#define ID_OPEN_FILE 2
-
 #define ID_FILE_A 5
 #define ID_FILE_B 6
 #define ID_FILE_C 7
 #define ID_FILE_D 8
-#define ID_FILE_QUIT 9
 
 #define PAGELIST_WIDTH 75
 
@@ -85,16 +80,14 @@ KGhostview::KGhostview( QWidget *, char *name )
     // I ususally forget to do a few resulting in nasty seg. faults !
     
     kfm = 0L;
+	
+	isNetFile = false;
     
     oldfilename.sprintf("");
 	filename.sprintf("");
 	psfile=0;
 	doc=0;
 	olddoc=0;
-    
-    for(int file_count=0;file_count<4;file_count++) {
-    	lastOpened[file_count].sprintf("");
-    }
     
     current_page=0;
     num_parts=0;
@@ -118,6 +111,13 @@ KGhostview::KGhostview( QWidget *, char *name )
 	current_ury = 0;
 	hide_toolbar = FALSE;
 	hide_statusbar = FALSE;
+	
+	int nRecent = 5;
+	QString s;
+	for( int i = 1; i <= nRecent; i++ ) {
+		s.sprintf( "              ", i);
+		lastOpened.append( s );
+	}
 	
 	//
     // MAIN WINDOW
@@ -480,11 +480,11 @@ void KGhostview::configureKeybindings()
 
 void KGhostview::updateMenuAccel()
 {
-	changeMenuAccel( m_file, ID_PRINT, i18n("Print") );
-	changeMenuAccel( m_file, ID_OPEN_FILE, i18n("Open") );
-	changeMenuAccel( m_file, ID_NEW_WINDOW, i18n("New") );
-	changeMenuAccel( m_file, ID_CLOSE_WINDOW, i18n("Close") );
-	changeMenuAccel( m_file, ID_FILE_QUIT, i18n("Quit") );
+	changeMenuAccel( m_file, printID, i18n("Print") );
+	changeMenuAccel( m_file, openID, i18n("Open") );
+	changeMenuAccel( m_file, newID, i18n("New") );
+	changeMenuAccel( m_file, closeID, i18n("Close") );
+	changeMenuAccel( m_file, quitID, i18n("Quit") );
 	changeMenuAccel( m_view, zoomInID, i18n("Zoom In") );
 	changeMenuAccel( m_view, zoomOutID, i18n("Zoom Out") );
 	changeMenuAccel( m_view, viewControlID, i18n("View Control") );
@@ -519,23 +519,35 @@ void KGhostview::changeMenuAccel ( QPopupMenu *menu, int id,
 
 void KGhostview::createMenubar()
 {
+	m_recent = new QPopupMenu;
+	CHECK_PTR( m_recent );
+	
+	int i = 0;
+	
+	QStrListIterator it( lastOpened );
+	for( ; it.current(); ++it ) {
+		m_recent->insertItem( it.current(), i );
+		i++;
+	}
+	
+	connect( m_recent, SIGNAL( activated( int ) ),
+			 SLOT( openRecent( int ) ) );
+
  	m_file = new QPopupMenu;
     CHECK_PTR( m_file );
-    m_file->insertItem( i18n("&New"), ID_NEW_WINDOW );
-    m_file->insertItem( i18n("&Open ..."), ID_OPEN_FILE);
-    m_file->insertItem( i18n("&Close"), ID_CLOSE_WINDOW);
+	newID =
+    m_file->insertItem( i18n("&New"), this, SLOT( newWindow() ) );
+	openID =
+    m_file->insertItem( i18n("&Open ..."), this, SLOT( openNewFile() ) );
+	m_file->insertItem( i18n("Open &recent"),	m_recent );
+	closeID =
+    m_file->insertItem( i18n("&Close"), this, SLOT( closeWindow() ) );
     m_file->insertSeparator();
-    m_file->insertItem( i18n("&Print ..."), ID_PRINT );
+	printID =
+    m_file->insertItem( i18n("&Print ..."), this, SLOT( print() ) );
     m_file->insertSeparator();
-    m_file->insertItem( i18n("&1."), ID_FILE_A );
-    m_file->insertItem( i18n("&2."), ID_FILE_B );
-    m_file->insertItem( i18n("&3."), ID_FILE_C );
-    m_file->insertItem( i18n("&4."), ID_FILE_D );
-    m_file->insertSeparator();
-    m_file->insertItem( i18n("E&xit"), ID_FILE_QUIT );
-    
-    connect( m_file, SIGNAL( activated( int ) ), this, 
-    	SLOT( fileMenuActivated( int ) ) );
+	quitID =
+    m_file->insertItem( i18n("E&xit"), qApp, SLOT( quit() ) );
     
 	m_view = new QPopupMenu;
     CHECK_PTR( m_view );
@@ -547,7 +559,7 @@ void KGhostview::createMenubar()
 	m_view->insertItem( i18n("&View control ..."), this, SLOT( viewControl() ) );
 	m_view->insertSeparator();
 	shrinkWrapID = 
-	m_view->insertItem( i18n("&Shrink wrap"), this, SLOT( shrinkWrap() ) );
+	m_view->insertItem( i18n("&Fit to page width"), this, SLOT( shrinkWrap() ) );
 	redisplayID =
 	m_view->insertItem( i18n("&Redisplay"), this, SLOT( redisplay() ) );
 	infoID =
@@ -659,7 +671,7 @@ void KGhostview::createMenubar()
 		)
 	);
 	
-	m_file->setItemEnabled(ID_PRINT, FALSE);
+	m_file->setItemEnabled(printID, FALSE);
 	m_go->setItemEnabled(nextID, FALSE);
 	m_go->setItemEnabled(prevID, FALSE);
 	m_go->setItemEnabled(goToPageID, FALSE);
@@ -678,46 +690,6 @@ void KGhostview::createMenubar()
 	m_view->setItemEnabled(shrinkWrapID, FALSE);
 	m_view->setItemEnabled(redisplayID, FALSE);
 	m_view->setItemEnabled(infoID, FALSE);	
-}
-
-void KGhostview::fileMenuActivated( int item )
-{
-	switch( item ) {
-		case ID_NEW_WINDOW:
-			newWindow();
-			break;
-			
-		case ID_CLOSE_WINDOW:
-			closeWindow();
-			break;
-			
-		case ID_OPEN_FILE:
-			openNewFile();
-			break;
-			
-		case ID_PRINT:
-			print();
-			break;
-			
-		case ID_FILE_A:
-			openFile( lastOpened[0] );
-			break;
-			
-		case ID_FILE_B:
-			openFile( lastOpened[1] );
-			break;
-			
-		case ID_FILE_C:
-			openFile( lastOpened[2] );
-			break;
-			
-		case ID_FILE_D:
-			openFile( lastOpened[3] );
-			break;
-			
-		case ID_FILE_QUIT:
-			qApp->quit();
-	}
 }
 
 void KGhostview::createToolbar()
@@ -868,6 +840,7 @@ void KGhostview::slotKFMFinished()
 {
 	if ( kfmAction == KGhostview::GET ) {
 		KURL u( tmpFile.data() );
+		isNetFile = true;
 		openFile( u.path() );
 		
 		// Clean up
@@ -1012,29 +985,7 @@ void KGhostview::readSettings()
 	}
 		
 	config->setGroup( "Last Opened" );
-	str = config->readEntry( "File 1" );
-	if ( !str.isNull() )
-		lastOpened[0].sprintf( str );
-	else
-		lastOpened[0].sprintf("");
-		
-	str = config->readEntry( "File 2" );
-	if ( !str.isNull() )
-		lastOpened[1].sprintf( str );
-	else
-		lastOpened[1].sprintf("");
-		
-	str = config->readEntry( "File 3" );
-	if ( !str.isNull() )
-		lastOpened[2].sprintf( str );
-	else
-		lastOpened[2].sprintf("");
-		
-	str = config->readEntry( "File 4" );
-	if ( !str.isNull() )
-		lastOpened[3].sprintf( str );
-	else
-		lastOpened[3].sprintf("");
+	config->readListEntry( "FileList", lastOpened );
 }
 
 void KGhostview::shrinkWrap()
@@ -1074,11 +1025,16 @@ void KGhostview::setName()
 	
 	if( psfile ) {	
 		s += " - ";
-		s += QFileInfo( filename ).fileName();
-	} else {
-//		s += " - Version 0.6";
+		if ( isNetFile ) {
+			int cutoff = netFile.findRev( "/", netFile.length() );
+			if ( cutoff != -1 ) 
+				s += netFile.right( netFile.length() - 1 - cutoff );
+			else
+				s += netFile;
+		} else
+			s += QFileInfo( filename ).fileName();
 	}
-	QWidget::setCaption(s);
+	QWidget::setCaption( s );
 }
 
 void KGhostview::newWindow()
@@ -1132,13 +1088,8 @@ void KGhostview::writeFileSettings()
 	//printf("KGhostview::writeFileSettings\n");
 
 	KConfig *config = KApplication::getKApplication()->getConfig();
-	
 	config->setGroup( "Last Opened" );
-
-	config->writeEntry( "File 1", lastOpened[0] );
-	config->writeEntry( "File 2", lastOpened[1] );
-	config->writeEntry( "File 3", lastOpened[2] );
-	config->writeEntry( "File 4", lastOpened[3] );
+	config->writeEntry( "FileList", lastOpened );
 }
 
 void KGhostview::writeSettings()
@@ -1358,15 +1309,15 @@ void KGhostview::applyViewChanges()
 
 void KGhostview::goToPage()
 {
-    printf("KGhostview::goToPage\n");
+    //printf("KGhostview::goToPage\n");
 
 	GoTo gt(this, "Go to");
 	gt.setCaption(i18n("Go to ..."));
 	gt.current_page=current_page;
 	gt.num_parts=num_parts;
-	for( int i=0;i<10;i++) {
+	for( int j=0; j < 10; j++ ) {
 	
-		gt.pages_in_part[i]=pages_in_part[i];
+		gt.pages_in_part[j]=pages_in_part[j];
 	}
 	gt.init();
 	if( gt.exec() ) {
@@ -1501,6 +1452,7 @@ void KGhostview::openNewFile()
 	if ( s.isNull() )
 		return;
     
+	isNetFile = false;
     openFile(s);
 }
 
@@ -1630,11 +1582,11 @@ void KGhostview::printStart( int mode, bool reverseOrder,
 				
 		case PrintDialog::Range:
 			if ( pgStart <= pgEnd )
-				for( int i = pgStart-1; i< pgEnd; i++ )
-					ml->append( marklist->text( i ) );
+				for( int j = pgStart-1; j< pgEnd; j++ )
+					ml->append( marklist->text( j ) );
 			else 
-				for( int i = pgEnd-1; i< pgStart; i++ )
-					ml->append( marklist->text( i ) );
+				for( int j = pgEnd-1; j< pgStart; j++ )
+					ml->append( marklist->text( j ) );
 			break;
 	}
 	
@@ -1655,7 +1607,7 @@ void KGhostview::printStart( int mode, bool reverseOrder,
 						( mode == PrintDialog::All ), ml );
 	}
 	
-	if ( error ) QMessageBox::warning( 0, i18n( "Printing error" ), error );
+	if ( error ) QMessageBox::warning( 0, i18n( "Error printing" ), error );
 	
 	delete ml;
 }
@@ -1685,7 +1637,8 @@ QString KGhostview::printToFile( bool allMode, QStrList *ml )
 	
     if ( ( pswrite = fopen( s.data(), "w" ) ) == 0L ) {
 		QString buf;
-		buf.sprintf( "Attempt to open file for writing failed.\n%s", strerror(errno));
+		buf.sprintf( "Attempt to open file for writing failed.\n\n"\
+						"Error: %s\n", strerror( errno ) );
 		return buf;
     } else {
 		psCopyDoc( pswrite, ml );
@@ -1770,7 +1723,7 @@ void KGhostview::psCopyDoc( FILE *fp, QStrList *ml )
 
 	pages = ml->count();
     if ( pages == 0 ) {
-		KMsgBox::message( 0, i18n( "Printing error" ),
+		KMsgBox::message( 0, i18n( "Error printing" ),
 			i18n(	"Printing failed because the list of\n"\
 					"pages to be printed was empty.\n" ) );
 		return;
@@ -1884,8 +1837,8 @@ void KGhostview::openFile( QString name )
     struct stat sbuf;
 
 	if ( name.isNull() ) {
-		QMessageBox::warning(0, "File open error", 
-			"No file name was specified\n"\
+		QMessageBox::warning(0, "Error opening file", 
+			"No file name was specified.\n"\
 			"No document was loaded.\n" );
 		return;
 	}
@@ -1894,14 +1847,14 @@ void KGhostview::openFile( QString name )
     
 		if ( ( fp = fopen(name, "r") ) == 0 ) {
 	    	
-		    QString s;
-		    s.sprintf( "The document \n%s\ncould not be opened.\n"\
-			       "No document has been loaded.\n\n"
-			       "Error:%s", name.data(), strerror(errno) );
-		    
-		    QMessageBox::warning(0, "File open error", s );
-		    return ;
-		    
+	    	QString s;
+			s.sprintf( "The document could not be opened.\n"\
+						"No document has been loaded.\n\n"\
+						"%s\nError: %s", name.data(), strerror( errno ) );
+ 			
+			QMessageBox::warning(0, "Error opening file", s );
+	    	return ;
+	    	
 		} else {
 
 	    	oldfilename.sprintf( filename.data() );
@@ -2367,7 +2320,7 @@ if (filename_uncP) {
 	toolbar->setItemEnabled(ID_RELOAD, TRUE);
     toolbar->setItemEnabled(ID_PRINT, TRUE);
     toolbar->setItemEnabled(ID_MARK, TRUE);
-    m_file->setItemEnabled(ID_PRINT, TRUE);
+    m_file->setItemEnabled(printID, TRUE);
     
 	if(toc_text) {
 		if( (unsigned int)current_page+1<doc->numpages ) {
@@ -2426,43 +2379,57 @@ void KGhostview::changeFileRecord()
 {
 	QString s;
 	
-	s.sprintf(i18n("&1. "));
-	s+=lastOpened[0];
-	m_file->changeItem(s, ID_FILE_A);
+	int i = 1;
 	
-	s.sprintf(i18n("&2. "));
-	s+=lastOpened[1];
-	m_file->changeItem(s, ID_FILE_B);
+	QStrListIterator it( lastOpened );
 	
-	s.sprintf(i18n("&3. "));
-	s+=lastOpened[2];
-	m_file->changeItem(s, ID_FILE_C);
-	
-	s.sprintf(i18n("&4. "));
-	s+=lastOpened[3];
-	m_file->changeItem(s, ID_FILE_D);
-}
-	
+	for( ; it.current(); ++it ) {
+		s.sprintf("&%d. ", i);
+		s += it.current();
+		m_recent->changeItem(s, i-1);
 
-void KGhostview::new_file(int number)
+		i++;
+	}
+}
+
+void KGhostview::openRecent( int id )
+{
+	KURL u( lastOpened.at( id ) );
+	
+	if ( strcmp( u.protocol(), "file" ) != 0 ||
+					u.hasSubProtocol() )
+		openNetFile( lastOpened.at( id ) );
+	else {
+		isNetFile = false;
+		openFile( u.path() );
+	}
+}
+
+void KGhostview::new_file( int number )
 {
     //printf("KGhostview::new_file\n");
 	
-	Bool ADD_THIS = TRUE;
-	int file_count;
+	Bool ADD_THIS = TRUE;	
+	QStrListIterator it( lastOpened );
 	
-	for(file_count=0;file_count<4;file_count++) {
-		if( filename == lastOpened[file_count] ) {
+	QString s;
+	
+	if ( isNetFile ) {
+		KURL u( netFile );
+		if ( strcmp( u.protocol(), "file" ) == 0 )
+			s = u.path();
+		else s = netFile;
+	} else s = filename;
+		
+	for( ; it.current(); ++it ) {
+		if( s == it.current() ) {
 			ADD_THIS = FALSE;
 		}
 	}
 	
 	if( ADD_THIS) {
-	
-		for(file_count=3;file_count>0;file_count--) {
-			lastOpened[file_count].sprintf(lastOpened[file_count-1]);
-		}
-		lastOpened[0].sprintf(filename);
+		lastOpened.removeLast();
+		lastOpened.insert( 0, s );
 		changeFileRecord();
 		writeFileSettings();
 	}
