@@ -72,16 +72,18 @@ all:	kplib kpaint
 install: all
 	$(INSTALL_DIR) $(prefix)/bin
 	$(INSTALL_BIN) kpaint $(prefix)/bin
-	$(INSTALL_DIR) $(prefix)/lib/pics/toolbar
+	$(INSTALL_DIR) $(prefix)/share/icons
 	(cd doc ; $(MAKE) install)
 	(cd toolpics ; $(MAKE) install)
-	$(INSTALL_DIR) $(prefix)/apps/Applications
-	$(INSTALL_DATA) Paint.kdelnk $(prefix)/apps/Applications 
+	$(INSTALL_DIR) $(prefix)/share/applnk/Graphics
+	$(INSTALL_DATA) Paint.kdelnk $(prefix)/share/applnk/Graphics 
+	$(INSTALL_DATA) kpaint.xpm $(prefix)/share/icons
 
 uninstall:
 	-rm -f $(prefix)/bin/kpaint
-	-rm -rf $(prefix)/doc/HTML/kpaint
-	-rm -f $(prefix)/apps/Applications/Paint.kdelnk
+	-rm -rf $(prefix)/share/doc/HTML/kpaint
+	-rm -f $(prefix)/share/applnk/Graphics/Paint.kdelnk
+	-rm -f $(prefix)/share/icons/kpaint.xpm
 
 Makefile:	Makefile.in
 	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status

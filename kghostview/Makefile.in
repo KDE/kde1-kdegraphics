@@ -23,7 +23,8 @@ BINDIR = $(prefix)/bin
 LIBDIR = $(prefix)/lib
 SHAREDIR=$(prefix)/share
 ICONDIR = $(SHAREDIR)/icons
-DOCSDIR = $(SHAREDIR)/doc/default/HTML/kghostview
+TOOLPICSDIR = $(SHAREDIR)/apps/kghostview
+DOCSDIR = $(SHAREDIR)/doc/HTML/kghostview
 KDELNKDIR = $(SHAREDIR)/applnk/Graphics
 
 
@@ -62,13 +63,13 @@ install: all
 	[ -d $(DOCSDIR) ] || $(INSTALL_DIR) $(DOCSDIR)
 	(cd doc && $(MAKE) install)
 	$(INSTALL_DIR) $(KDELNKDIR)
-	$(INSTALL_DATA) kghostview.kdelnk $(KDELNKDIR)
+	$(INSTALL_DATA) apps/Graphics/KGhostview.kdelnk $(KDELNKDIR)
 
 
 uninstall:
 	rm -f $(BINDIR)/$(TARGET)
 	(cd doc && $(MAKE) uninstall)
-	rm -f $(KDELNKDIR)/kghostview.kdelnk
+	rm -f $(KDELNKDIR)/KGhostview.kdelnk
 
 clean:
 	rm -f core *~ *.bak *.BAK $(SRCMETA) $(OBJS) $(TARGET)
@@ -81,7 +82,7 @@ depend: $(SRCS)
 
 messages:
 	@XGETTEXT@ -C --keyword=i18n -x ../../kdelibs/po/kde.po *.cpp
-	
+
 ########## Meta objects ##########
 
 %.moc: %.h
