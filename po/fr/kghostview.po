@@ -264,7 +264,7 @@ msgstr "Lire &bas"
 
 #: kghostview.cpp:459
 msgid "&Configure interpreter ..."
-msgstr "&Configurer l'interpréteur ...""
+msgstr "&Configurer l'interpréteur ..."
 
 #: kghostview.cpp:461
 msgid "Show &tool bar"
@@ -352,7 +352,7 @@ msgstr "Lire la fin de la page"
 
 #: kghostview.cpp:626
 msgid "Sc.100 of 100  P.100 of 100"
-msgstr "Sc.100 of 100  P.100 of 100""
+msgstr "Sc.100 of 100  P.100 of 100"
 
 #: kghostview.cpp:627
 #, c-format
@@ -380,7 +380,7 @@ msgid ""
 msgstr ""
 "Déja en attente\n"
 "pour la finition d'une application de réseau.\n"
-"Veuillez attendre ou terminez l'autre application.\n"
+"Veuillez attendre ou terminez l'autre application."
 
 #: kghostview.cpp:674
 msgid "Could not start or find KFM."
@@ -459,12 +459,12 @@ msgstr "Impossibled'imprimer: lpr"
 #: kghostview.cpp:1974 kghostview.cpp:1986 kghostview.cpp:2223
 #: kghostview.cpp:2246
 msgid "of 1    "
-msgstr "de 1    ""
+msgstr "de 1    "
 
 #: kghostview.cpp:1976 kghostview.cpp:1988 kghostview.cpp:2248
 #, c-format
 msgid "of %d    "
-msgstr "de %d    ""
+msgstr "de %d    "
 
 #: kghostview.cpp:1978 kghostview.cpp:1990 kghostview.cpp:2250
 #: kghostview.cpp:2257
@@ -517,7 +517,7 @@ msgstr "[fichier]\n"
 
 #: main.cpp:21
 msgid "See Qt documentation for command line options\n"
-msgstr "Veuillez voir la documentation sur Qt pour les options"
+msgstr "Veuillez voir la documentation sur Qt pour les options\n"
 
 #: main.cpp:89
 #, c-format
