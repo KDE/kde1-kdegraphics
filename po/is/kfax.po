@@ -250,6 +250,8 @@ msgid ""
 "Unable to open:\n"
 "%s\n"
 msgstr ""
+"Ekki tókst að opna:\n"
+"%s\n"
 
 #: print.cpp:51
 msgid "KFax Print Dialog"

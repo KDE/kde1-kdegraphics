@@ -254,9 +254,8 @@ msgid "Start slide"
 msgstr "Byrja á glæru"
 
 #: ilistdlg.cpp:75
-#, fuzzy
 msgid "Interval.."
-msgstr "Bil..."
+msgstr "Bil.."
 
 #: ilistdlg.cpp:80
 msgid "Loop"

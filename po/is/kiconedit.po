@@ -79,15 +79,15 @@ msgstr "&Velja allt"
 
 #: kiconedit.cpp:454
 msgid "1:1"
-msgstr ""
+msgstr "1:1"
 
 #: kiconedit.cpp:455
 msgid "1:5"
-msgstr ""
+msgstr "1:5"
 
 #: kiconedit.cpp:456
 msgid "1:10"
-msgstr ""
+msgstr "1:10"
 
 #: kiconedit.cpp:461
 msgid "Zoom &in"

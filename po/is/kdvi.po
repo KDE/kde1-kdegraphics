@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdvi\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1998-11-04 10:38-0500\n"
+"PO-Revision-Date: 1999-01-01 23:10+0100\n"
 "Last-Translator: Thorarinn R. Einarsson <thori@mindspring.com>\n"
 "Language-Team: Icelandic <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -68,12 +68,11 @@ msgstr "Hvað er þetta? DVI vandamál!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Staða skráar breytt."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
-msgstr "Skjal endurhlaðið"
+msgstr "Skjal endurhlaðið."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -470,9 +469,8 @@ msgid "Small text button set to shrink factor "
 msgstr "Smækkunarstuðull smærri texta"
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
 msgid "Shrink: %d"
-msgstr "Smækka: xx"
+msgstr "Smækka: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"
