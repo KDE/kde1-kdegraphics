@@ -34,38 +34,38 @@ msgid "Image Depth:"
 msgstr "Numero Colori Immagine:"
 
 #: depthdialog.cpp:24
-#, fuzzy
+#,
 msgid "1 (2 Colours)"
-msgstr "256 Colori (8 bit)"
+msgstr "1 (2 Colori)"
 
 #: depthdialog.cpp:25
-#, fuzzy
+#
 msgid "4 (16 Colours)"
-msgstr "256 Colori (8 bit)"
+msgstr "4 (16 Colori)"
 
 #: depthdialog.cpp:26
-#, fuzzy
+#
 msgid "8 (256 Colours)"
-msgstr "256 Colori (8 bit)"
+msgstr "8 (256 Colori)"
 
 #: depthdialog.cpp:27
-#, fuzzy
+#
 msgid "15 (32k Colours)"
-msgstr "256 Colori (8 bit)"
+msgstr "15 (32k Colori)"
 
 #: depthdialog.cpp:28
-#, fuzzy
+#
 msgid "16 (64k Colours)"
-msgstr "256 Colori (8 bit)"
+msgstr "16 (64k Colori)"
 
 #: depthdialog.cpp:29
 msgid "24 (True Colour)"
-msgstr "True Colour (24 bit)"
+msgstr "24 (True Colour)"
 
 #: depthdialog.cpp:30
-#, fuzzy
+#
 msgid "32 (True Colour)"
-msgstr "True Colour (24 bit)"
+msgstr "32 (True Colour)"
 
 #: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
 msgid "Ellipse"
@@ -93,7 +93,7 @@ msgstr "Altezza Immagine:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Annulla"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -232,15 +232,12 @@ msgstr "Kpaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " versione "
 
 #: kpaint.cpp:496
-#, fuzzy
+#,
 msgid "(c) "
-msgstr ""
-"\n"
-"\n"
-"(c)  "
+msgstr "(c) "
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -298,7 +295,7 @@ msgstr "Bombola Spray"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr ""
+msgstr "Testo"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -326,7 +323,7 @@ msgstr "Motivo Riempimento:"
 
 #: properties.cpp:76 properties.cpp:130 properties.cpp:293 properties.cpp:353
 msgid "None"
-msgstr ""
+msgstr "Nessuno"
 
 #: properties.cpp:77 properties.cpp:131 properties.cpp:288 properties.cpp:348
 msgid "Solid"

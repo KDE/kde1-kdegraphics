@@ -64,12 +64,12 @@ msgstr "Cosa succede? Problema di DVI\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Stato file cambiato."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
+#, 
 msgid "File reloaded."
-msgstr "File riaperto"
+msgstr "File ricaricato."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -93,7 +93,7 @@ msgstr "Preferenze ..."
 
 #: kdvi.cpp:173
 msgid "&New"
-msgstr ""
+msgstr "&Nuovo"
 
 #: kdvi.cpp:174
 msgid "&Open ..."
@@ -128,13 +128,13 @@ msgid "&Redraw page"
 msgstr "&Aggiorna pagina"
 
 #: kdvi.cpp:203
-#, fuzzy
+#, 
 msgid "&Previous"
-msgstr "Pagina precedente"
+msgstr "&Precedente"
 
 #: kdvi.cpp:204
 msgid "&Next"
-msgstr ""
+msgstr "&Successiva"
 
 #: kdvi.cpp:205
 msgid "&First"
@@ -467,9 +467,9 @@ msgid "Small text button set to shrink factor "
 msgstr "Pulsanti con testo piccolo settati a fattore esatto"
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, , c-format
 msgid "Shrink: %d"
-msgstr "Riduzione: xx"
+msgstr "Riduzione: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"

@@ -34,9 +34,9 @@ msgid "Remove page marks"
 msgstr "Rimuovi i segni delle pagine"
 
 #: marklist.cpp:367
-#, fuzzy
+#,
 msgid "Page"
-msgstr "&Pagina"
+msgstr "Pagina"
 
 #: copyright.cpp:27
 msgid "Copyright"
@@ -355,11 +355,11 @@ msgstr "Configura l'interprete"
 
 #: kghostview.cpp:444
 msgid "New"
-msgstr ""
+msgstr "Nuovo"
 
 #: kghostview.cpp:498
 msgid "&New"
-msgstr ""
+msgstr "&Nuovo"
 
 #: kghostview.cpp:500
 msgid "&Open ..."
@@ -498,6 +498,16 @@ msgid ""
 "\n"
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
+" - Visualizzatore documenti PostScript per\n"
+"il K Desktop Enviroment.\n"
+"\n"
+"Scritto da Mark Donohoe <donohoe@kde.org>, basato sul lavoro\n"
+"originale di Tim Theisen.\n"
+"\n"
+"Contiene codice di gv di Johanes Plass. Questo aggiunge il supporto\n"
+"per file compressi e PDF.\n"
+"\n"
+"Vedi http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
 #: kghostview.cpp:665
 msgid "New window ..."
@@ -635,6 +645,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
+"Imposta la variabile d'ambiente (per esempio PRINTER o LPDEST) per il nome della "
+"stampante di cui tener conto."
 
 #: kghostview.cpp:1661
 #, c-format
