@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkpanel\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"PO-Revision-Date: 1998-02-21 05:04+0800\n"
+"Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
+"Language-Team: zh_CN ( gb2312 )\n"
+
+msgid "&About..."
+msgstr "有关[&A]..."
+
+msgid "&Status Bar"
+msgstr "状态行[&S]"
+
+msgid "&Tool Bar"
+msgstr "工具条[&T]"
+
+msgid "Browse"
+msgstr "浏览"
+
+msgid "Calling KFM"
+msgstr "正在调用 KFM"
+
+msgid "Connected"
+msgstr "连接上"
+
+msgid "Go back"
+msgstr "往后"
+
+msgid "Go forward"
+msgstr "往前"
+
+msgid "Go to end"
+msgstr "跳至最后"
+
+msgid "Go to page ..."
+msgstr "跳至...页"
+
+msgid "Go to start"
+msgstr "跳至开头"
+
+msgid "Hide &Status Bar"
+msgstr "隐藏状态行[&S]"
+
+msgid "Hide &Tool Bar"
+msgstr "隐藏工具条[&T]"
+
+msgid "Loading '%s'"
+msgstr "正在载入'%s'"
+
+msgid "Loading ..."
+msgstr "正在载入..."
+
+msgid "Open &URL..."
+msgstr "打开 &URL"
+
+msgid "Open Location:"
+msgstr "打开位置:"
+
+msgid "Print Command:"
+msgstr "打印命令:"
+
+msgid "Print document"
+msgstr "打印文件"
+
+msgid "Save to Location:"
+msgstr "保存到位置:"
+
+msgid "Save to U&RL..."
+msgstr "保存到 U&RL"
+
+msgid "Saving ..."
+msgstr "保存中..."
+
+msgid "Show &Status Bar"
+msgstr "显示状态行[&S]"
+
+msgid "Show &Tool Bar"
+msgstr "显示工具条[&T]"
+
+msgid "Starting Job"
+msgstr "开始任务中"
+
+msgid "Version "
+msgstr "版本 "
+
+msgid "Waiting..."
+msgstr "等待中..."
+
+msgid "Zoom &in"
+msgstr "放大[&I]"
+
+msgid "Zoom &out"
+msgstr "缩小[&O]"

@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmkpanel\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
+"PO-Revision-Date: 1998-02-21 05:04+0800\n"
+"Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
+"Language-Team: zh_CN ( gb2312 )\n"
+
+msgid " [url | filename]\n"
+msgstr " [url | filename]\n"
+
+msgid "&Image"
+msgstr "图像[&I]"
+
+msgid "&Tool"
+msgstr "工具[&T]"
+
+msgid "Area Select"
+msgstr "区域选择"
+
+msgid "Area Selection"
+msgstr "区域选择"
+
+msgid "Canvas Size"
+msgstr "画布大小"
+
+msgid "Change Colour Depth..."
+msgstr "改变颜色深度..."
+
+msgid "Circle"
+msgstr "圆形"
+
+msgid "Close Window"
+msgstr "关闭窗口"
+
+msgid "Colour Depth:"
+msgstr "颜色深度"
+
+msgid "Colours Used:"
+msgstr "使用颜色数:"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Copy Region"
+msgstr "区域拷贝"
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "Cut Region"
+msgstr "区域剪下"
+
+msgid "Dash Dot"
+msgstr "点划线"
+
+msgid "Dash Dot Dot"
+msgstr "双点划线"
+
+msgid "Dashed"
+msgstr "长划线"
+
+msgid "Diagonal Grid"
+msgstr "对角格线"
+
+msgid "Diagonal Lines //"
+msgstr "对角线 //"
+
+msgid "Diagonal Lines \\"
+msgstr "对角线 \\"
+
+msgid "Dismiss"
+msgstr "取消"
+
+msgid "Dotted"
+msgstr "点线"
+
+msgid "Edit Colour"
+msgstr "编辑颜色"
+
+msgid "Edit Palette..."
+msgstr "编辑调色盘..."
+
+msgid "Ellipse"
+msgstr "椭圆"
+
+msgid "End style:"
+msgstr "末端类型:"
+
+msgid ""
+"Error: Could not open file\n"
+"KPaint could not open the specified file."
+msgstr ""
+"错误: 无法打开文件\n"
+"KPaint  无法打开指定的文件."
+
+msgid "Error: KPaint could not find a running KFM or start one itself."
+msgstr "错误: KPaint 找不到运行中的 KFM 或无法运行 KFM."
+
+msgid ""
+"Error: Malformed URL\n"
+"KPaint does not understand the specifed URL, check it's correct."
+msgstr ""
+"错误: 不正确的 URL\n"
+"KPaint 无法解释指定的 URL, 请确认是否正确."
+
+msgid "Exit"
+msgstr "结束"
+
+msgid "File Format:"
+msgstr "文件格式:"
+
+msgid "Fill Pattern:"
+msgstr "填充花样"
+
+msgid "Fill Properties"
+msgstr "填充特性"
+
+msgid "Grid"
+msgstr "格线"
+
+msgid "Height"
+msgstr "高度"
+
+msgid "Horizontal Lines"
+msgstr "水平线段"
+
+msgid "Image Format..."
+msgstr "图象格式..."
+
+msgid "Image Height:"
+msgstr "图象高度"
+
+msgid "Image Width:"
+msgstr "图象宽度"
+
+msgid "Information..."
+msgstr "信息..."
+
+msgid "Join style:"
+msgstr "线段交点类型:"
+
+msgid ""
+"KPaint is already accessing a remote file, you must\n"
+"cancel the current remote job or wait for it to complete."
+msgstr ""
+"KPaint 已在读取一个远程文件,你必须取消当前的\n"
+"远程任务或等待它完成"
+
+msgid "KPaint: Could not find KFM"
+msgstr "KPaint: 找不到 KFM"
+
+msgid "KPaint: Could not open file"
+msgstr "KPaint: 无法打开文件"
+
+msgid "KPaint: Could not start KFM"
+msgstr "KPaint: 无法打开 KFM"
+
+msgid "KPaint: Malformed URL"
+msgstr "KPaint: 不正确的 URL"
+
+msgid "KPaint: Network Load Failed"
+msgstr "KPaint: 网络读取失败"
+
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: 未知的格式"
+
+msgid "Line"
+msgstr "线段"
+
+msgid "Line Properties"
+msgstr "线段属性"
+
+msgid "Line Style:"
+msgstr "线段类型:"
+
+msgid "Line Width:"
+msgstr "线段宽度:"
+
+msgid "Mask..."
+msgstr "Mask..."
+
+msgid "New Canvas"
+msgstr "新画布"
+
+msgid "New Image..."
+msgstr "新图象..."
+
+msgid "New Window"
+msgstr "新窗口"
+
+msgid "None"
+msgstr "无"
+
+msgid "Not Yet"
+msgstr "尚未完成"
+
+msgid "Open File"
+msgstr "打开文件"
+
+msgid "Open Image..."
+msgstr "打开图象..."
+
+msgid "Open Location:"
+msgstr "打开位置:"
+
+msgid "Open from URL..."
+msgstr "打开 URL..."
+
+msgid "Paste As Image"
+msgstr "贴成新图象"
+
+msgid "Paste Region"
+msgstr "区域粘贴"
+
+msgid "Pattern Filename:"
+msgstr "花样文件名:"
+
+msgid "Pen"
+msgstr "画笔"
+
+msgid "Rectangle"
+msgstr "矩形"
+
+msgid "Save File"
+msgstr "保存文件"
+
+msgid "Save Image As..."
+msgstr "保存图象至..."
+
+msgid "Save Image..."
+msgstr "保存图象..."
+
+msgid "Save Options"
+msgstr "保存选项"
+
+msgid "Save to Location:"
+msgstr "保存到位置:"
+
+msgid "Save to URL..."
+msgstr "保存到 URL..."
+
+msgid "Set Fill Colour..."
+msgstr "设定填充颜色..."
+
+msgid "Set Line Colour..."
+msgstr "设定线段颜色..."
+
+msgid "Show Status Bar"
+msgstr "显示状态行"
+
+msgid "Solid"
+msgstr "实心"
+
+msgid "Spray Can"
+msgstr "喷嘴"
+
+msgid "Tool Properties"
+msgstr "工具特性"
+
+msgid "Tool Properties..."
+msgstr "工具特性..."
+
+msgid "Unsaved Changes"
+msgstr "未保存修改"
+
+msgid "Usage: "
+msgstr "用法: "
+
+msgid "Vertical Lines"
+msgstr "垂直线段"
+
+msgid "Width"
+msgstr "宽度"
+
+msgid "Zoom In"
+msgstr "放大"
+
+msgid "Zoom Out"
+msgstr "缩小"
+
+msgid "untitled.gif"
+msgstr "untitled.gif"
