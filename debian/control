@@ -2,7 +2,7 @@ Source: kdegraphics
 Section: contrib/x11
 Priority: extra
 Maintainer: Stephan Kulow <coolo@kde.org>
-Standards-Version: 2.1.2.2
+Standards-Version: 2.5.0
 
 Package: kdegraphics
 Architecture: any
