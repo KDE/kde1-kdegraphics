@@ -12,6 +12,8 @@ LDFLAGS= $(all_libraries) $(KDE_RPATH)
 
 LDADD = -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext $(LIBJPEG) $(LIBSOCKET) $(LIBPNG)
 
+DISTCLEANFILES = *.moc
+
 # uncomment this if you like to use the unsecure filename changer
 #LINEEDIT =-DLINEEDIT 
 
@@ -38,10 +40,32 @@ install-local-data:
 	$(INSTALL_DATA) ./mini-kview.xpm $(kde_minidir)/kview.xpm
 
 uninstall-local:
-	rm -f $(kde_minidir)/kview.xpm
+	-rm -f $(kde_minidir)/kview.xpm
 
 backup:
 	(cd .. ; tar zcvf kview-project.tgz kview)
 	mv ../kview-project.tgz /mount/lan/PROJBAK 
+
+QwViewport.cpp:QwViewport.moc
+QwViewport.moc: QwViewport.h
+	$(MOC) QwViewport.h -o QwViewport.moc
+
+fileman.cpp:fileman.moc
+fileman.moc: fileman.h
+	$(MOC) fileman.h -o fileman.moc
+
+kerror.cpp:kerror.moc
+kerror.moc: kerror.h
+	$(MOC) kerror.h -o kerror.moc
+
+viewport.cpp:viewport.moc
+viewport.moc: viewport.h
+	$(MOC) viewport.h -o viewport.moc
+
+wview.cpp:wview.moc
+wview.moc: wview.h
+	$(MOC) wview.h -o wview.moc
+
+
 
 
