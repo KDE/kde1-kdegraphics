@@ -1,0 +1,670 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: 1998-08-23 00:07+SET\n"
+"Last-Translator: Christer Gustavsson <f93-cgn@sm.luth.se>\n"
+"Language-Team: SWEDISH <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:514
+msgid "Notice"
+msgstr "Observera"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Du måste starta om kdvi för att ändringen för\n"
+"generation av typsnitt ska genomföras!"
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Du måste starta om kdvi för att ändringen av\n"
+"sökvägen för typsnitt ska genomföras!"
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Du måste starta om kdvi för att ändringen av\n"
+"metatypsnitt ska genomföras!"
+""
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Du måste starta om kdvi för att ändringen av\n"
+"upplösning ska genomföras!"
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Du måste starta om kdvi för att ändringen av\n"
+"gamma korrektion ska genomföras!"
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "Oj då"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "Vad är detta? DVI problem!\n"
+
+#: kdvi.cpp:92
+msgid "No document"
+msgstr "Inget dokument"
+
+#: kdvi.cpp:108
+msgid "Toggle Menubar"
+msgstr "Menyrad på/av"
+
+#: kdvi.cpp:110
+msgid "Mark page"
+msgstr "Markera sida"
+
+#: kdvi.cpp:112
+msgid "Redraw"
+msgstr "Uppdatera"
+
+#: kdvi.cpp:114
+msgid "Preferences ..."
+msgstr "Inställningar ..."
+
+#: kdvi.cpp:173
+msgid "&Open ..."
+msgstr "&Öppna ..."
+
+#: kdvi.cpp:180
+msgid "Open &recent"
+msgstr "Öppna &senaste"
+
+#: kdvi.cpp:182
+msgid "&Print ..."
+msgstr "S&kriv ut ..."
+
+#: kdvi.cpp:190
+msgid "Zoom &in"
+msgstr "Zooma &in"
+
+#: kdvi.cpp:191
+msgid "Zoom &out"
+msgstr "Zooma &ut"
+
+#: kdvi.cpp:192
+msgid "&Fit to page"
+msgstr "&Anpassa till sida"
+
+#: kdvi.cpp:193
+msgid "Fit to page &width"
+msgstr "Anpassa till sid&bredd"
+
+#: kdvi.cpp:195
+msgid "&Redraw page"
+msgstr "U&ppdatera sida"
+
+#: kdvi.cpp:204
+msgid "&First"
+msgstr "&Första"
+
+#: kdvi.cpp:205
+msgid "&Last"
+msgstr "&Sista"
+
+#: kdvi.cpp:206
+msgid "&Go to ..."
+msgstr "&Gå till ..."
+
+#: kdvi.cpp:209
+msgid "&Page"
+msgstr "&Sida"
+
+#: kdvi.cpp:214
+msgid "&Preferences ..."
+msgstr "&Inställningar ..."
+
+#: kdvi.cpp:215
+msgid "&Keys ..."
+msgstr "&Tangenter ..."
+
+#: kdvi.cpp:217
+msgid "Make PK-&fonts"
+msgstr "Gör PK-t&ypsnitt"
+
+#: kdvi.cpp:219
+msgid "Show PS"
+msgstr "Visa PS"
+
+#: kdvi.cpp:221
+msgid "Show &Menubar"
+msgstr "Visa &menyrad"
+
+#: kdvi.cpp:223
+msgid "Show &Buttons"
+msgstr "Visa &verktygsrad"
+
+#: kdvi.cpp:225
+msgid "Show Page Lis&t"
+msgstr "Visa sid&lista"
+
+#: kdvi.cpp:227
+msgid "Show &Statusbar"
+msgstr "Visa &statusrad"
+
+#: kdvi.cpp:229
+msgid "Show Scro&llbars"
+msgstr "Visa &rullningslist"
+
+#: kdvi.cpp:238
+msgid "DVI Viewer"
+msgstr "DVI Visare"
+
+#: kdvi.cpp:240
+msgid ""
+"\n"
+"\n"
+"by Markku Hihnala"
+msgstr ""
+"\n"
+"\n"
+"av Markku Hihnala"
+
+#: kdvi.cpp:260
+msgid "Open document ..."
+msgstr "Öppna dokument ..."
+
+#: kdvi.cpp:261
+msgid "Reload document"
+msgstr "Uppdatera document"
+
+#: kdvi.cpp:262
+msgid "Print ..."
+msgstr "Skriv ut ..."
+
+#: kdvi.cpp:264
+msgid "Go to first page"
+msgstr "Gå till första sidan"
+
+#: kdvi.cpp:265
+msgid "Go to previous page"
+msgstr "Gå till föregående sida"
+
+#: kdvi.cpp:266
+msgid "Go down then top of next page"
+msgstr "Gå ned och därefter till toppen av nästa sida"
+
+#: kdvi.cpp:267
+msgid "Go to next page"
+msgstr "Gå till nästa sida"
+
+#: kdvi.cpp:268
+msgid "Go to last page"
+msgstr "Gå till sista sidan"
+
+#: kdvi.cpp:270
+msgid "Decrease magnification"
+msgstr "Öka förstoring"
+
+#: kdvi.cpp:271
+msgid "Small text"
+msgstr "Liten text"
+
+#: kdvi.cpp:272
+msgid "Large text"
+msgstr "Stor text"
+
+#: kdvi.cpp:273
+msgid "Increase magnification"
+msgstr "Minska förstoring"
+
+#: kdvi.cpp:298
+msgid "Scroll window and switch the page"
+msgstr "Panorera och byt sida"
+
+#: kdvi.cpp:307
+msgid "Select page and mark pages for printing"
+msgstr "Välj sida och markera sidor för utskrift"
+
+#: kdvi.cpp:322
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:324
+msgid "Shrink: xx"
+msgstr "Krymp: xx"
+
+#: kdvi.cpp:326
+msgid "Page: xxxx / xxxx"
+msgstr "Sida: xxxx / xxxx"
+
+#: kdvi.cpp:343 kdvi.cpp:395
+msgid "New window"
+msgstr "Nytt fönster"
+
+#: kdvi.cpp:344 kdvi.cpp:396
+msgid "Open file"
+msgstr "Öppna fil"
+
+#: kdvi.cpp:345 kdvi.cpp:397
+msgid "Print dialog"
+msgstr "Utskrifts dialog"
+
+#: kdvi.cpp:347 kdvi.cpp:399
+msgid "Zoom in"
+msgstr "Zooma in"
+
+#: kdvi.cpp:348 kdvi.cpp:400
+msgid "Zoom out"
+msgstr "Zooma ut"
+
+#: kdvi.cpp:349 kdvi.cpp:401
+msgid "Fit window"
+msgstr "Tillpassa fönster"
+
+#: kdvi.cpp:350 kdvi.cpp:402
+msgid "Fit width"
+msgstr "Tillpassa bredd"
+
+#: kdvi.cpp:351 kdvi.cpp:403
+msgid "Redraw page"
+msgstr "Uppdatera sida"
+
+#: kdvi.cpp:352 kdvi.cpp:405
+msgid "Next page"
+msgstr "Nästa sida"
+
+#: kdvi.cpp:353 kdvi.cpp:404
+msgid "Previous page"
+msgstr "Föregående sida"
+
+#: kdvi.cpp:354 kdvi.cpp:407
+msgid "Last page"
+msgstr "Sista sidan"
+
+#: kdvi.cpp:355 kdvi.cpp:406
+msgid "First page"
+msgstr "Första sidan"
+
+#: kdvi.cpp:356 kdvi.cpp:408
+msgid "Goto page"
+msgstr "Gå till sida"
+
+#: kdvi.cpp:357
+msgid "Configure keys"
+msgstr "Konfigurera tangenter"
+
+#: kdvi.cpp:358 kdvi.cpp:409
+msgid "Toggle show PS"
+msgstr "Visa PS på/av"
+
+#: kdvi.cpp:359 kdvi.cpp:410
+msgid "Toggle menu bar"
+msgstr "Visa menyrad på/av"
+
+#: kdvi.cpp:360 kdvi.cpp:411
+msgid "Toggle button bar"
+msgstr "Visa verktygsrad på/av"
+
+#: kdvi.cpp:361 kdvi.cpp:412
+msgid "Toggle page list"
+msgstr "Sidlista på/av"
+
+#: kdvi.cpp:362 kdvi.cpp:413
+msgid "Toggle status bar"
+msgstr "Statusfält på/av"
+
+#: kdvi.cpp:363 kdvi.cpp:414
+msgid "Toggle scroll bars"
+msgstr "Rullningslist på/av"
+
+#: kdvi.cpp:466
+msgid "File open dialog is open"
+msgstr "Dialogrutan för öppna fil är öppen"
+
+#: kdvi.cpp:515
+msgid "Can't read file:\n"
+msgstr "Kan inte skapa fil:\n"
+
+#: kdvi.cpp:521
+msgid "Opening "
+msgstr "Öppnar"
+
+#: kdvi.cpp:546
+msgid "Opened "
+msgstr "Öppnade"
+
+#: kdvi.cpp:556
+msgid "Print dialog is open"
+msgstr "Dialogrutan för utskrift är öppen"
+
+#: kdvi.cpp:571
+msgid "View size fits page"
+msgstr "Visa storlek tillpassar sidan"
+
+#: kdvi.cpp:580
+msgid "View width fits page"
+msgstr "Visa bredd tillpassar sidan"
+
+#: kdvi.cpp:672
+msgid "Preferences applied"
+msgstr "Inställningar aktiverade"
+
+#: kdvi.cpp:676
+msgid " Page "
+msgstr " Sida"
+
+#: kdvi.cpp:678
+msgid "Go to page"
+msgstr "Gå till sida"
+
+#: kdvi.cpp:692
+msgid "Go to"
+msgstr "Gå till"
+
+#: kdvi.cpp:713
+msgid "Missing PK-fonts will be generated"
+msgstr "Saknade PK-typsnitt kommer att genereras"
+
+#: kdvi.cpp:714
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "Saknade PK-typsnitt kommer att loggas till 'missfont.log'"
+
+#: kdvi.cpp:730
+msgid "Postcsript specials are rendered"
+msgstr "Postscript specialiteter är tolkade"
+
+#: kdvi.cpp:731
+msgid "Postscript specials are not rendered"
+msgstr "Postscript specialiteter är inte tolkade"
+
+#: kdvi.cpp:747
+msgid "No menu bar"
+msgstr "Ingen menyrad"
+
+#: kdvi.cpp:747
+msgid "Menu bar is shown"
+msgstr "Menyrad är synlig"
+
+#: kdvi.cpp:765
+msgid "No button bar"
+msgstr "Ingen verktygsrad"
+
+#: kdvi.cpp:765
+msgid "Button bar is shown"
+msgstr "Verktygsrad är synlig"
+
+#: kdvi.cpp:779
+msgid "Tool bar is shown"
+msgstr "Sidlista är synlig"
+
+#: kdvi.cpp:779
+msgid "No tool bar"
+msgstr "Ingen sidlista"
+
+#: kdvi.cpp:803
+msgid "No status bar"
+msgstr "Ingen statusrad"
+
+#: kdvi.cpp:803
+msgid "Status bar is shown"
+msgstr "Statusrad är synlig"
+
+#: kdvi.cpp:817
+msgid "Scroll bars are shown"
+msgstr "Rullningslist är synlig"
+
+#: kdvi.cpp:817
+msgid "No scroll bars"
+msgstr "Ingen rullningslist"
+
+#: kdvi.cpp:874
+msgid "Page: "
+msgstr "Sida: "
+
+#: kdvi.cpp:874
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:905
+msgid "Large text button set to shrink factor "
+msgstr "Knappen för stor text satt att förstora"
+
+#: kdvi.cpp:913
+msgid "Small text button set to shrink factor "
+msgstr "Knappen för liten text satt att förminska"
+
+#: kdvi.cpp:937
+msgid "File reloaded"
+msgstr "Uppdaterad fil"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Markera nuvarande"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Avmarkera nuvarande"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Markera alla"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Markera jämna"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Markera udda"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Markering på/av"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Ta bort markeringar"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Menyrad"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Verktygsrad"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Statusrad"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Sidlista"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Rullningslist"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Antal senaste filer"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Generera saknade typsnitt"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Upplösning"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Metatypsnitt"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "Sökväg för PK-typsnitt"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Krympfaktor för knappen Liten text"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Förstoringsfaktor för knappen Stor text"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Visa postscript scecialiteter"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Antialiased postcript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Återgivning"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Papper"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Skriv ut"
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "Kan inte öppna dvi fil!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Kan inte öppna output-dvi fil!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "Kan inte hantera denna dvi-version!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Ogiltigt sidintervall!"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Standardskrivare"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "&Fil namn:"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&Alla"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "&Nuvarande"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Markerade"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "&Sidintervall"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "Om&vänd"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 sida per ark"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 sidor per ark"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 sidor per ark"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Fyll rader"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Fyll kolumner"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "&Inställningar"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Sidordning"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Sidor"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Skriv till"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Skrivarinställning"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Skrivare"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "&Intern"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "Använd ps&nup"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "Använd &mpage"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "&Lägg till"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "&Spooler-kommando:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n-upp"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Utskriftsmetod"
