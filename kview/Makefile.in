@@ -6,10 +6,10 @@
 
 CXX = @CXX@
 MOC= @MOC@
-
+topdir = @topdir@
 
 INCLUDE= @all_includes@ -I.. 
-LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ 
+LDFLAGS= @all_libraries@ -lkfm -lkdeui -lkdecore -lqt -lX11 -lXext -lgif @LIBJPEG@ @LIBSOCKET@ 
 CXXFLAGS= @CXXFLAGS@ -DHAVE_CONFIG_H
 
 # Define if you have libpng.
