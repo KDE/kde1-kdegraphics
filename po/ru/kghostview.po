@@ -1,13 +1,13 @@
 # Перевод kghostview.
-# Copyright (C) 1998 Free Software Foundation, Inc.
-# Denis Pershin <dyp@inetlab.com>, 1998.
+# Copyright (C) 1998, 1999 Free Software Foundation, Inc.
+# Denis Pershin <dyp@inetlab.com>, 1998, 1999.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1999-04-23 02:23+0200\n"
-"PO-Revision-Date: 1998-12-29 00:46+0600\n"
+"PO-Revision-Date: 1999-05-01 00:46+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -473,7 +473,7 @@ msgstr "Настроить интерпретатор ..."
 
 #: kghostview.cpp:589
 msgid "Configure &key bindings ..."
-msgstr "Натроить клавиатуру ..."
+msgstr "Настроить клавиатуру ..."
 
 #: kghostview.cpp:591
 msgid "&Save options"
@@ -711,7 +711,7 @@ msgstr "Sc.%d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
+msgstr "Коэффициент увеличения"
 
 #~ msgid "View Control"
 #~ msgstr "Просмотр управления"

@@ -1,12 +1,12 @@
 # Перевод kview.
-# Copyright (C) 1998 Free Software Foundation, Inc.
-# Denis Pershin <dyp@inetlab.com>, 1998.
+# Copyright (C) 1998, 1999 Free Software Foundation, Inc.
+# Denis Pershin <dyp@inetlab.com>, 1998, 1999.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1998-12-28 01:24+0600\n"
+"PO-Revision-Date: 1999-05-01 01:24+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,6 +45,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- Просмотрщик изображений. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -108,7 +111,7 @@ msgstr "Сбросить"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "Настройки..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -158,25 +161,23 @@ msgstr "Перевернуть горизонтально"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "На рабочий стол черепицей"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "На рабочий стол"
+msgstr "На рабочий стол и растянуть"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Макс с сохранением осей"
+msgstr "На рабочий стол и растянуть с сохранением осей"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "Как я могу..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "Что такое..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -197,7 +198,7 @@ msgstr "Ошибка передачи: "
 #: viewer.cpp:618
 msgid "Loading..."
 msgstr "Загружаю..."
-
+	
 #: viewer.cpp:632
 #, c-format
 msgid "Couldn't load %s"
@@ -289,33 +290,31 @@ msgstr "Показывать слайды"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "Настройки KView"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "Применить"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "При загрузке"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "Закрыть окно"
+msgstr "Изменять размер окна"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Изменить размер изображения"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Не изменять размер изображения"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "Показывать слайды вкл./выкл."
+msgstr "Показ слайдов"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -323,11 +322,11 @@ msgstr "По циклу"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "Итервал между слайдами (сек)"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
+msgstr "Клавиши"
 
 #~ msgid "&Tile"
 #~ msgstr "Черепицей"

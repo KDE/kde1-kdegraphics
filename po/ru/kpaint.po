@@ -1,12 +1,12 @@
 # Перевод kpaint.
-# Copyright (C) 1998 Free Software Foundation, Inc.
-# Denis Pershin <dyp@inetlab.com>, 1998.
+# Copyright (C) 1998, 1999 Free Software Foundation, Inc.
+# Denis Pershin <dyp@inetlab.com>, 1998, 1999.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
 "POT-Creation-Date: 1999-04-09 02:04+0200\n"
-"PO-Revision-Date: 1998-12-29 01:14+0600\n"
+"PO-Revision-Date: 1999-05-01 01:14+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -232,6 +232,13 @@ msgid ""
 "see the online documentation\n"
 "for details."
 msgstr ""
+"KPaint версии %s\n"
+"\n"
+"(c) %s\n"
+"\n"
+"KPaint выпущен на условиях\n"
+"общественного лицензионного соглашения GNU,\n"
+"см. документацию."
 
 #: kpaint.cpp:508
 msgid "&Image"

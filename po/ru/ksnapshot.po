@@ -1,12 +1,12 @@
 # Перевод ksnapshot.
-# Copyright (C) 1998 Free Software Foundation, Inc.
-# Denis Pershin <dyp@inetlab.com>, 1998.
+# Copyright (C) 1998, 1999 Free Software Foundation, Inc.
+# Denis Pershin <dyp@inetlab.com>, 1998, 1999.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksnapshot\n"
 "POT-Creation-Date: 1999-03-05 01:49+0100\n"
-"PO-Revision-Date: 1998-12-28 01:24+0600\n"
+"PO-Revision-Date: 1999-05-01 01:24+0600\n"
 "Last-Translator: Denis Pershin <dyp@inetlab.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgid "snapshot"
 msgstr "снимок"
 
 #: ksnapshot.cpp:95
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -34,7 +34,7 @@ msgstr ""
 "KSnapshot написан Ричардом Муром (rich@kde.org)\n"
 "и выпущен под LGPL\n"
 "\n"
-"Версия: "
+"Версия: %s"
 
 #: ksnapshot.cpp:130
 msgid "Filename:"
