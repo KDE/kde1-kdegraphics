@@ -398,22 +398,24 @@ msgstr "Lagre bilde som"
 
 #: kicon.cpp:46
 msgid "There was an error removing temporary backup file:\n"
-msgstr ""
+msgstr "Det oppsto en feil under fjerning av midlertidig sikkerhetskopifil."
 
 #: kicon.cpp:72 kicon.cpp:240 kicon.cpp:319 kicon.cpp:408
 msgid ""
 "We've got a KFM job running.\n"
 "Please wait."
 msgstr ""
+"Jeg har en KFM-jobb som kjører.\n"
+"Vennligst vent."
 
 #: kicon.cpp:95
 msgid "The URL:\n"
-msgstr ""
+msgstr "URLen:\n"
 
 #: kicon.cpp:98 kicon.cpp:144 kicon.cpp:167 kicon.cpp:179 kicon.cpp:192
 #: kicon.cpp:205 kicon.cpp:216 kicon.cpp:362 kicon.cpp:395
 msgid "ERROR"
-msgstr ""
+msgstr "FEIL"
 
 #: kicon.cpp:114
 msgid "The KDE Icon Editor has found a recover file for:\n"
@@ -424,6 +426,8 @@ msgid ""
 "\n"
 "Do you want to open this?"
 msgstr ""
+"\n"
+"Ønsker du å åpne denne?"
 
 #: kicon.cpp:117 kicon.cpp:264 kicon.cpp:272
 msgid "Information"
