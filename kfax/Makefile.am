@@ -30,6 +30,9 @@ install-local-data: mini-kfax.xpm
 	$(mkinstalldirs) $(kde_minidir)
 	$(INSTALL_DATA)  mini-kfax.xpm $(kde_minidir)/kfax.xpm
 
+messages:
+	@XGETTEXT@ -C -ki18n *.cpp -x../../kdelibs/po/kde.pot && mv messages.po ../po/kfax.pot
+
 uninstall:
 	rm -f $(kde_minidir)/kfax.xpm
 

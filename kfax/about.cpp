@@ -27,6 +27,7 @@
 #include <qlabel.h>
 #include <qpixmap.h>
 #include <kapp.h>
+#include <klocale.h>
 
 extern KApplication *mykapp;
 
@@ -35,7 +36,7 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
   resize(350, 250);
   setFixedSize(size());
 
-  setCaption("About KFax");
+  setCaption(i18n("About KFax"));
 
   QString pixdir = mykapp->kde_datadir().copy();
   pixdir +=  "/kfax/pics/";
@@ -54,7 +55,8 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
 		 l->sizeHint().height());
 
   QString s;
-  s = "Version " KFAXVERSION \
+  s = i18n("Version ");
+  s += KFAXVERSION \
   "\nCopyright (C) 1997\nBernd Johannes Wuebben\n"\
   "wuebben@kde.org\n\n";
 
@@ -62,7 +64,7 @@ About::About(QWidget *parent) : QDialog(parent, "About KFax", TRUE) {
   l->setGeometry(145,100, 250, 200);
   l->setAlignment(WordBreak|ExpandTabs);
 
-  QPushButton *b_ok = new QPushButton("Ok", this);
+  QPushButton *b_ok = new QPushButton(i18n("Ok"), this);
   b_ok->setGeometry(width()/2-40, height() - 48, 80, 32);
   /*  b_ok->setDefault(TRUE);*/
   b_ok->setAutoDefault(TRUE);

@@ -134,6 +134,7 @@ int faxpagecounter = 0;
 bool buttondown;
 
 
+
 MyApp::MyApp(int &argc, char **argv , const QString& rAppName):
   KApplication(argc, argv, rAppName){
 }
@@ -218,14 +219,14 @@ TopLevel::TopLevel (QWidget *, const char *name)
   set_colors();
 
   if ( hide_toolbar )	
-    options->changeItem( "Show &Tool Bar", toolID );
+    options->changeItem( i18n("Show &Tool Bar"), toolID );
   else
-    options->changeItem( "Hide &Tool Bar", toolID );
+    options->changeItem(i18n( "Hide &Tool Bar"), toolID );
 
   if ( hide_statusbar )
-    options->changeItem( "Show &Status Bar", statusID );
+    options->changeItem(i18n( "Show &Status Bar"), statusID );
   else
-    options->changeItem( "Hide &Status Bar", statusID );
+    options->changeItem( i18n("Hide &Status Bar"), statusID );
 
   setCaption("KFax "KFAXVERSION);
 
@@ -376,50 +377,50 @@ void TopLevel::setupMenuBar(){
   view =        new QPopupMenu ();
   options = 	new QPopupMenu ();
 
-  help->insertItem ("&About...",	this, 	SLOT(about()));
-  help->insertItem ("Help page", 		this, 	SLOT(helpshort()));
-  help->insertItem ("KFax &Help ", 		this, 	SLOT(helpselected()));
+  help->insertItem (i18n("&About..."),	this, 	SLOT(about()));
+  help->insertItem (i18n("Help page"), 		this, 	SLOT(helpshort()));
+  help->insertItem (i18n("KFax &Help "), 		this, 	SLOT(helpselected()));
   
-  file->insertItem ("&Open Fax...",		this, 	SLOT(file_open()));
-  file->insertItem ("&Add Fax...",		this, 	SLOT(addFax()));
+  file->insertItem (i18n("&Open Fax..."),		this, 	SLOT(file_open()));
+  file->insertItem (i18n("&Add Fax..."),		this, 	SLOT(addFax()));
   //  file->insertItem ("&Save As...",		this, 	SLOT(dummy()));
   file->insertSeparator (-1);
-  file->insertItem ("Open &URL...",	this,	SLOT(file_open_url()));
-  file->insertItem ("Save to U&RL...",	this,	SLOT(file_save_url()));
-  file->insertItem ("&Close Fax",		this,	SLOT(closeFax()));
+  file->insertItem (i18n("Open &URL..."),	this,	SLOT(file_open_url()));
+  file->insertItem (i18n("Save to U&RL..."),	this,	SLOT(file_save_url()));
+  file->insertItem (i18n("&Close Fax"),		this,	SLOT(closeFax()));
   file->insertSeparator (-1);
-  file->insertItem ("&Print...",	this,	SLOT(print()) );
+  file->insertItem (i18n("&Print..."),	this,	SLOT(print()) );
   
   file->insertSeparator (-1);
-  file->insertItem ("E&xit", 		this,	SLOT(quiteditor()));
+  file->insertItem (i18n("E&xit"), 		this,	SLOT(quiteditor()));
 
-  view->insertItem("&Next Page",this,SLOT(nextPage()));
-  view->insertItem("&Prev Page",this,SLOT(prevPage()));
-  view->insertItem("&First Page",this,SLOT(goToStart()));
-  view->insertItem("&Last Page",this,SLOT(goToEnd()));
+  view->insertItem(i18n("&Next Page"),this,SLOT(nextPage()));
+  view->insertItem(i18n("&Prev Page"),this,SLOT(prevPage()));
+  view->insertItem(i18n("&First Page"),this,SLOT(goToStart()));
+  view->insertItem(i18n("&Last Page"),this,SLOT(goToEnd()));
   view->insertSeparator(-1);
-  view->insertItem("&Rotate Page",this,SLOT(rotatePage()));
-  view->insertItem("&Mirror Page",this,SLOT(mirrorPage()));
-  view->insertItem("&Flip Page",this,SLOT(flipPage()));
+  view->insertItem(i18n("&Rotate Page"),this,SLOT(rotatePage()));
+  view->insertItem(i18n("&Mirror Page"),this,SLOT(mirrorPage()));
+  view->insertItem(i18n("&Flip Page"),this,SLOT(flipPage()));
   view->insertSeparator(-1);
-  view->insertItem("Zoom &in",this,SLOT(zoomin()));
-  view->insertItem("Zoom &out",this,SLOT(zoomout()));
+  view->insertItem(i18n("Zoom &in"),this,SLOT(zoomin()));
+  view->insertItem(i18n("Zoom &out"),this,SLOT(zoomout()));
 
 
 
   options->setCheckable(TRUE);
-  options->insertItem("&Fax Options",this,SLOT(faxoptions()));
+  options->insertItem(i18n("&Fax Options"),this,SLOT(faxoptions()));
   options->insertSeparator(-1);
-  toolID   = options->insertItem("&Tool Bar",this,SLOT(toggleToolBar()));
-  statusID = options->insertItem("&Status Bar",this,SLOT(toggleStatusBar()));	
+  toolID   = options->insertItem(i18n("&Tool Bar"),this,SLOT(toggleToolBar()));
+  statusID = options->insertItem(i18n("&Status Bar"),this,SLOT(toggleStatusBar()));	
 
 
   menubar = new KMenuBar (this, "menubar");
-  menubar->insertItem ("&File", file);
-  menubar->insertItem ("&View", view);
-  menubar->insertItem ("&Options", options);
+  menubar->insertItem (i18n("&File"), file);
+  menubar->insertItem (i18n("&View"), view);
+  menubar->insertItem (i18n("&Options"), options);
   menubar->insertSeparator(-1);
-  menubar->insertItem ("&Help", help);
+  menubar->insertItem (i18n("&Help"), help);
 
   setMenu(menubar);
   
@@ -438,32 +439,32 @@ void TopLevel::setupToolBar(){
   toolbar = new KToolBar( this );
 
   pixmap.load(PIXDIR + "back.xpm");
-  toolbar->insertButton(pixmap, ID_PREV, TRUE, "Go back");
+  toolbar->insertButton(pixmap, ID_PREV, TRUE, i18n("Go back"));
   
   pixmap.load(PIXDIR + "forward.xpm");
-  toolbar->insertButton(pixmap, ID_NEXT, TRUE, "Go forward");
+  toolbar->insertButton(pixmap, ID_NEXT, TRUE, i18n("Go forward"));
   
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "start.xpm");
-  toolbar->insertButton(pixmap, ID_START, TRUE, "Go to start");
+  toolbar->insertButton(pixmap, ID_START, TRUE, i18n("Go to start"));
   
   pixmap.load(PIXDIR + "finish.xpm");
-  toolbar->insertButton(pixmap, ID_END, TRUE, "Go to end");
+  toolbar->insertButton(pixmap, ID_END, TRUE, i18n("Go to end"));
 
 
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "viewmag+.xpm");
-  toolbar->insertButton(pixmap, ID_ZOOM_IN, TRUE, "Zoom in");
+  toolbar->insertButton(pixmap, ID_ZOOM_IN, TRUE,i18n( "Zoom in"));
 
   pixmap.load(PIXDIR + "viewmag-.xpm");
-  toolbar->insertButton(pixmap, ID_ZOOM_OUT, TRUE, "Zoom out");
+  toolbar->insertButton(pixmap, ID_ZOOM_OUT, TRUE, i18n("Zoom out"));
   
   toolbar->insertSeparator();
   
   pixmap.load(PIXDIR + "fileprint.xpm");
-  toolbar->insertButton(pixmap, ID_PRINT, TRUE, "Print document");
+  toolbar->insertButton(pixmap, ID_PRINT, TRUE, i18n("Print document"));
 
   /*  
   pixmap.load(PIXDIR + "tick.xpm");
@@ -472,7 +473,7 @@ void TopLevel::setupToolBar(){
     toolbar->insertSeparator();
 
   pixmap.load(PIXDIR + "page.xpm");
-  toolbar->insertButton(pixmap, ID_PAGE, TRUE, "Go to page ...");
+  toolbar->insertButton(pixmap, ID_PAGE, TRUE, i18n("Go to page ..."));
   
 
   toolbar1 = addToolBar( toolbar );
@@ -558,7 +559,7 @@ void TopLevel::setupStatusBar(){
 
 void TopLevel::file_open_url(){
 
-  DlgLocation l( "Open Location:", "ftp://localhost/welcome", this );
+  DlgLocation l( i18n("Open Location:"), "ftp://localhost/welcome", this );
 
   if ( l.exec() )
     {
@@ -574,13 +575,13 @@ void TopLevel::file_open_url(){
 void TopLevel::file_save_url(){
 
   if(!thispage || !thispage->pathname){
-    QMessageBox::information(this,"Sorry","You need to open a Fax first");
+    QMessageBox::information(this,"KFax",i18n("You need to open a Fax first"));
     return;
   }
 
   if(thispage && thispage->pathname){
 
-    DlgLocation l( "Save to Location:", thispage->pathname, this );
+    DlgLocation l( i18n("Save to Location:"), thispage->pathname, this );
 
     if ( l.exec() )
       {
@@ -621,7 +622,7 @@ void TopLevel::file_open(){
   QString newfile;
 
   QFileDialog *box;
-  box= getFileDialog("Select Facsimile to Open");
+  box= getFileDialog(i18n("Select Facsimile to Open"));
     
   box->show();
   
@@ -658,7 +659,7 @@ void TopLevel::addFax(){
   QString newfile;
 
   QFileDialog *box;
-  box= getFileDialog("Select Facsimile to Add");
+  box= getFileDialog(i18n("Select Facsimile to Add"));
     
   box->show();
   
@@ -782,14 +783,14 @@ void TopLevel::toggleStatusBar(){
   
     hide_statusbar=FALSE;
     enableStatusBar( KStatusBar::Show );
-    options->changeItem("Hide &Status Bar", statusID);
+    options->changeItem(i18n("Hide &Status Bar"), statusID);
   
   } 
   else {
 
     hide_statusbar=TRUE;
     enableStatusBar( KStatusBar::Hide );
-    options->changeItem("Show &Status Bar", statusID);
+    options->changeItem(i18n("Show &Status Bar"), statusID);
     
   }
   resizeView();
@@ -800,7 +801,7 @@ void TopLevel::toggleStatusBar(){
 void TopLevel::dummy(){
 
 
-  QMessageBox::information(this,"Sorry","Not yet implemented");
+  QMessageBox::information(this,"KFax",i18n("Not yet implemented"));
 }
 
 void TopLevel::toggleToolBar(){
@@ -809,14 +810,14 @@ void TopLevel::toggleToolBar(){
 
     hide_toolbar=FALSE;
     enableToolBar( KToolBar::Show, toolbar1 );
-    options->changeItem("Hide &Tool Bar", toolID);
+    options->changeItem(i18n("Hide &Tool Bar"), toolID);
 
   } 
   else {
   
     hide_toolbar=TRUE;
     enableToolBar( KToolBar::Hide, toolbar1 );
-    options->changeItem("Show &Tool Bar", toolID);
+    options->changeItem(i18n("Show &Tool Bar"), toolID);
 
   }  
   
@@ -850,7 +851,7 @@ void TopLevel::print(){
 
 
   if(!thispage){
-    QMessageBox::information(this,"Sorry","     There is no document active      ");
+    QMessageBox::information(this,"KFax",i18n("     There is no document active      "));
     return;
   }
 
@@ -984,8 +985,9 @@ void TopLevel::printIt(){
   if(width <= 0.0 || height <=0.0 ){
 
     QString str;
-    str.sprintf("Invalid page dimensions:\nWidth %.2f Height %.2f\n",width,height);
-    QMessageBox::warning(this, "Sorry",str.data(), "OK",0);
+    str.sprintf(i18n("Invalid page dimensions:\nWidth %.2f Height %.2f\n"),
+		width,height);
+    QMessageBox::warning(this, "KFax",str.data(), "OK",0);
 
     return;
   }
@@ -999,8 +1001,8 @@ void TopLevel::printIt(){
 
     if(psfile == NULL){
       QString str;
-      str.sprintf("Can't print to \"%s\"\n",pi.cmd.data());
-      QMessageBox::warning(this, "Sorry",str.data(), "OK",0);
+      str.sprintf(i18n("Can't print to \"%s\"\n"),pi.cmd.data());
+      QMessageBox::warning(this, "KFax",str.data(), i18n("OK"),0);
       return;
     }
 
@@ -1010,8 +1012,8 @@ void TopLevel::printIt(){
     psfile = fopen(pi.file.data(),"w");
     if(psfile == NULL){
       QString str;
-      str.sprintf("Couldn't create %s\n",pi.file.data());
-      QMessageBox::warning(this,"Sorry",str.data(), "OK",0);
+      str.sprintf(i18n("Couldn't create %s\n"),pi.file.data());
+      QMessageBox::warning(this,"KFax",str.data(), i18n("OK"),0);
       return;
     }
   }
@@ -1080,14 +1082,14 @@ void TopLevel::setSensitivity (){
 
 void TopLevel::saving_slot(){
 
-  setGeneralStatusField("Saving ...");
+  setGeneralStatusField(i18n("Saving ..."));
 
 }
 
 
 void TopLevel::loading_slot(){
 
-  setGeneralStatusField("Loading ...");
+  setGeneralStatusField(i18n("Loading ..."));
 
 }
 
@@ -1101,7 +1103,7 @@ void TopLevel::saveNetFile( const char * _url)
     KURL u( netFile.data() );
     if ( u.isMalformed() )
     {
-	QMessageBox::warning(this,"Sorry", "Malformed URL", "Ok",0);
+	QMessageBox::warning(this,"KFax", i18n("Malformed URL"), i18n("Ok"),0);
 	return;
     }
     
@@ -1114,30 +1116,32 @@ void TopLevel::saveNetFile( const char * _url)
 	setGeneralStatusField(string);
 	res = copyfile(u.path(),thispage->pathname);
 	if (res==0) {
-	  QMessageBox::warning(this, "Sorry", "Failure in 'copy file()'\n"\
-				"Couldn't save file!", "Ok",0);
+	  QMessageBox::warning(this, "KFax", i18n("Failure in 'copy file()'\n"\
+				"Couldn't save file!"),i18n( "Ok"),0);
 	  return;
 	} 
 
 
-	setGeneralStatusField("Saved");
+	setGeneralStatusField(i18n("Saved"));
 	return;
       }
     
     if ( kfm != 0L )
       {
-	QMessageBox::warning(this,"Sorry", 
-			      "KFax is already waiting\n"\
+	QMessageBox::warning(this,"KFax", 
+			      i18n("KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
-			      "Please wait until has finished\n", 
-			      "Ok",0);
+			      "Please wait until has finished\n"), 
+			      i18n("Ok"),0);
 	return;
     }
 
     kfm = new KFM;
     if ( !kfm->isOK() )
     {
-	QMessageBox::warning(this,"Sorry", "Could not communicate with KFM", "Ok",0);
+	QMessageBox::warning(this,"KFax", 
+			     i18n("Could not communicate with KFM"),
+			     i18n("Ok"),0);
 	delete kfm;
 	kfm = 0L;
 	return;
@@ -1147,8 +1151,10 @@ void TopLevel::saveNetFile( const char * _url)
 
     res = copyfile(tmpFile.data(),thispage->pathname );
     if (res==0) {
-      QMessageBox::warning(this,"Sorry", "Failure in 'copy file()'\n"\
-			    "Couldn't save file!", "Ok",0);
+      QMessageBox::warning(this,"KFax", 
+			   i18n("Failure in 'copy file()'\n"\
+			    "Couldn't save file!"), 
+			   i18n("Ok"),0);
       return;
     } 
 
@@ -1167,7 +1173,7 @@ void TopLevel::openNetFile( const char * _url)
   KURL u( netFile.data() );
   if ( u.isMalformed() )
     {
-	QMessageBox::warning(this, "Sorry", "Malformed URL", "Ok",0);
+	QMessageBox::warning(this, "KFax", i18n("Malformed URL"), i18n("Ok"),0);
 	return;
     }
 
@@ -1175,40 +1181,42 @@ void TopLevel::openNetFile( const char * _url)
     if ( strcmp( u.protocol(), "file" ) == 0 )
     {
       QString string;
-      string.sprintf("Loading '%s'",u.path() );
+      string.sprintf(i18n("Loading '%s'"),u.path() );
       setGeneralStatusField(string);
       openadd( u.path());
-      setGeneralStatusField("Done");
+      setGeneralStatusField(i18n("Done"));
       return;
     }
     
     if ( kfm != 0L )
     {
-	QMessageBox::warning(this, "Sorry", 
-			      "KFax is already waiting\n"\
+	QMessageBox::warning(this, "KFax", 
+			      i18n("KFax is already waiting\n"\
 			      "for an internet job to finish\n"\
-			      "Please wait until has finished\n", 
-			      "Ok",0);
+			      "Please wait until has finished\n"), 
+			      i18n("Ok"),0);
 	return;
     }
 
-    setGeneralStatusField("Calling KFM");
+    setGeneralStatusField(i18n("Calling KFM"));
     
     kfm = new KFM;
     if ( !kfm->isOK() )
     {
-	QMessageBox::warning(this, "Sorry", "Could not communicate with KFM", "Ok",0);
+	QMessageBox::warning(this, "KFax", 
+			     i18n("Could not communicate with KFM"), 
+			     i18n("Ok"),0);
 	delete kfm;
 	kfm = 0L;
 	return;
     }
     
-    setGeneralStatusField("Starting Job");
+    setGeneralStatusField(i18n("Starting Job"));
     tmpFile.sprintf( "file:/tmp/kfax%i", time( 0L ) );
     connect( kfm, SIGNAL( finished() ), this, SLOT( slotKFMFinished() ) );
-    setGeneralStatusField("Connected");
+    setGeneralStatusField(i18n("Connected"));
     kfm->copy( netFile.data(), tmpFile.data() );
-    setGeneralStatusField("Waiting...");
+    setGeneralStatusField(i18n("Waiting..."));
     kfmAction = TopLevel::GET;
 
 
@@ -2059,7 +2067,8 @@ void TopLevel::helptiff(){
 
   if(!thispage){
     
-    QMessageBox::warning(this, "Sorry","You need to open a fax page first.","OK",0);
+    QMessageBox::warning(this, "KFax",i18n("You need to open a fax page first."),
+			 i18n("OK"),0);
     return;
   }
 
@@ -2727,10 +2736,10 @@ int copyfile(const char* toname,char* fromname){
   FILE*  tofile;
 
   if (QFile::exists(toname)) {
-    if(QMessageBox::warning( 0, "Warning:",
-			      "A file with this name already exists\n"
-			      "Do you want to overwrite it?\n\n",
-			      "Yes", "No",
+    if(QMessageBox::warning( 0, "KFax:",
+			      i18n("A file with this name already exists\n"
+			      "Do you want to overwrite it?\n\n"),
+			      i18n("Yes"), i18n("No"),
 			      0, 1 ))
       return 1;                    
   }

@@ -51,7 +51,7 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
     : QDialog( parent, name,TRUE)
 {
 
-  setCaption("Fax Options Dialog");
+  setCaption(i18n("KFax Options Dialog"));
 
   this->setFocusPolicy(QWidget::StrongFocus);
   
@@ -61,36 +61,36 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   resgroup = new QButtonGroup(this,"resgroup");
   resgroup->setGeometry(20,60,370,30);
   resgroup->setFrameStyle(QFrame::NoFrame);
-  reslabel = new QLabel("Raw Fax Resolution:",resgroup,"relabel");
+  reslabel = new QLabel(i18n("Raw Fax Resolution:"),resgroup,"relabel");
   reslabel->move(5,10);
   reslabel->adjustSize();
 
-  resauto = new QRadioButton("Auto",resgroup,"resauto");
+  resauto = new QRadioButton(i18n("Auto"),resgroup,"resauto");
   resauto->move(130,2);
 
-  fine = new QRadioButton("Fine",resgroup,"fine");
+  fine = new QRadioButton(i18n("Fine"),resgroup,"fine");
   fine->move(215,2);
 
-  normal = new QRadioButton("Normal",resgroup,"normal");
+  normal = new QRadioButton(i18n("Normal"),resgroup,"normal");
   normal->move(290,2);
 
   /*  displaygroup = new QButtonGroup(this,"displaygroup");
   displaygroup->setGeometry(20,60,370,30);
   displaygroup->setFrameStyle(QFrame::NoFrame);*/
 
-  displaylabel = new QLabel("Display Options:",this,"displaylabel");
+  displaylabel = new QLabel(i18n("Display Options:"),this,"displaylabel");
   displaylabel->move(25,30);
   displaylabel->adjustSize();
 
-  landscape = new QCheckBox("Landscape",this,"Landscape");
+  landscape = new QCheckBox(i18n("Landscape"),this,"Landscape");
   landscape->move(150,30);
   landscape->adjustSize();
 
-  flip = new QCheckBox("Upside Down",this,"upsidedown");
+  flip = new QCheckBox(i18n("Upside Down"),this,"upsidedown");
   flip->move(238,30);
   flip->adjustSize();
 
-  invert = new QCheckBox("Invert",this,"invert");
+  invert = new QCheckBox(i18n("Invert"),this,"invert");
   invert->move(340,30);
   invert->adjustSize();
 
@@ -99,11 +99,11 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   lsbgroup->setFrameStyle(QFrame::NoFrame);
 
 
-  lsblabel = new QLabel("Raw Fax Data are:",lsbgroup,"lsblabel");
+  lsblabel = new QLabel(i18n("Raw Fax Data are:"),lsbgroup,"lsblabel");
   lsblabel->move(5,10);
   lsblabel->adjustSize();
   
-  lsb = new QCheckBox("LS-Bit first",lsbgroup,"lsbitfirst");
+  lsb = new QCheckBox(i18n("LS-Bit first"),lsbgroup,"lsbitfirst");
   lsb->move(130,10);
   lsb->adjustSize();
 
@@ -111,7 +111,7 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   rawgroup->setGeometry(20,140,370,30);
   rawgroup->setFrameStyle(QFrame::NoFrame);
 
-  rawlabel = new QLabel("Raw Facsimili are:",rawgroup,"rawlabel");
+  rawlabel = new QLabel(i18n("Raw Facsimili are:"),rawgroup,"rawlabel");
   rawlabel->move(5,10);
   rawlabel->adjustSize();
   
@@ -132,34 +132,34 @@ OptionsDialog::OptionsDialog( QWidget *parent, const char *name)
   connect(g4,SIGNAL(clicked()),this,SLOT(g4toggled()));
 
   
-  widthlabel = new QLabel("Raw Fax width:",this,"widthlabel");
+  widthlabel = new QLabel(i18n("Raw Fax width:"),this,"widthlabel");
   widthlabel->move(25,190);
   widthlabel->adjustSize();
 
   widthedit = new KIntLineEdit(this,"widthedit");
   widthedit->setGeometry(135,185,60,22);
 
-  heightlabel = new QLabel("height:",this,"heightlabel");
+  heightlabel = new QLabel(i18n("height:"),this,"heightlabel");
   heightlabel->move(210,190);
   heightlabel->adjustSize();
 
   heightedit = new KIntLineEdit(this,"heightedit");
   heightedit->setGeometry(260,185,60,22);
 
-  geomauto = new QCheckBox("Auto",this,"geomauto");
+  geomauto = new QCheckBox(i18n("Auto"),this,"geomauto");
   geomauto->setGeometry(340,185,50,22);
   connect(geomauto,SIGNAL(clicked()),this,SLOT(geomtoggled()));
   
-  cancel_button = new QPushButton("Cancel",this);
+  cancel_button = new QPushButton(i18n("Cancel"),this);
 
   cancel_button->setGeometry( 3*XOFFSET +100, 240, 80, BUTTONHEIGHT );
   connect( cancel_button, SIGNAL( clicked() ), SLOT( reject() ) );
 
-  ok_button = new QPushButton( "Ok", this );
+  ok_button = new QPushButton( i18n("Ok"), this );
   ok_button->setGeometry( 3*XOFFSET, 240, 80, BUTTONHEIGHT );
   connect( ok_button, SIGNAL( clicked() ), SLOT( ready() ) );	
 
-  helpbutton = new QPushButton( "Help", this );
+  helpbutton = new QPushButton(i18n( "Help"), this );
   helpbutton->setGeometry( 410  - 80, 240, 80, BUTTONHEIGHT );
   connect( helpbutton, SIGNAL( clicked() ), SLOT( help() ) );	
 

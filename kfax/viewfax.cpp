@@ -37,6 +37,9 @@
 #include <sys/time.h>
 #include <unistd.h>
 
+//#include <kapp.h>
+//#include <klocale.h>
+
 /* NewImage() needs to fiddle with the Display structure */
 #define XLIB_ILLEGAL_ACCESS
 #include <X11/Xlib.h>
@@ -50,7 +53,11 @@
 #include "faxexpand.h"
 #include "version.h"
 
-#define VERSION "2.3"
+
+
+//#define i18n klocale->translate
+
+#define VIEWFAXVERSION "2.3"
 
 
 /* If moving the image around with the middle mouse button is jerky or
@@ -141,21 +148,20 @@ static char Banner[] =
 "KFax comes with ABSOLUTELY NO WARRANTY; for details see the\n"
 "file \"COPYING\" in the distribution directory.\n";*/
 
-static char Usage[] =
-"usage: %s <flags> file ...\n"
-"\t-f\tfine resolution\n"
-"\t-n\tnormal resolution\n"
-"\t-h\theight (number of fax lines)\n"
-"\t-w\twidth (dots per fax line)\n"
-"\t-l\tturn image 90 degrees (landscape mode)\n"
-"\t-u\tturn image upside down\n"
-"\t-i\tinvert (black/white)\n"
-"\t-m\tmemory usage limit in bytes (M m mega, K k kilo) default:8 megs\n"
-"\t-r\tfax data is packed ls-bit first in input bytes\n"
-"\t-v\tversion information\n"
-/*"\t-z\tinitial zoom factor\n"*/
-"\t-2\traw files are g3-2d\n"
+static char Usage[] = "usage: %s <flags> file ...\n"\
+"\t-f\tfine resolution\n"\
+"\t-n\tnormal resolution\n"\
+"\t-h\theight (number of fax lines)\n"\
+"\t-w\twidth (dots per fax line)\n"\
+"\t-l\tturn image 90 degrees (landscape mode)\n"\
+"\t-u\tturn image upside down\n"\
+"\t-i\tinvert (black/white)\n"\
+"\t-m\tmemory usage limit in bytes (M m mega, K k kilo) default:8 megs\n"\
+"\t-r\tfax data is packed ls-bit first in input bytes\n"\
+"\t-v\tversion information\n"\
+"\t-2\traw files are g3-2d\n"\
 "\t-4\traw files are g4\n";
+
 
 
 extern "C"{
@@ -180,6 +186,7 @@ int viewfaxmain(int argc, char **argv){
     int err  =0;
     int banner = 0;
     int have_height = 0;
+
 
     bo.i = 1;
     defaultpage.vres = -1;

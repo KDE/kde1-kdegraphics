@@ -26,6 +26,8 @@
 #include "print.h"
 #include "stdio.h"
 
+#include "kfax.h"
+
 #define YOFFSET  5
 #define XOFFSET  5
 #define LABLE_LENGTH  40
@@ -46,18 +48,18 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
     : QDialog( parent, name,FALSE)
 {
 
-  setCaption("Print Dialog");
+  setCaption(i18n("KFax Print Dialog"));
 
   this->setFocusPolicy(QWidget::StrongFocus);
   
   bg = new QButtonGroup(this,"bg");
 
-  lprbutton = new QRadioButton("Print as Postscript to Printer",bg,"rawbutton");
+  lprbutton = new QRadioButton(i18n("Print as Postscript to Printer"),bg,"rawbutton");
   lprbutton->setGeometry(15,20,250,25);
   lprbutton->setChecked(TRUE);
   connect(lprbutton,SIGNAL(clicked()),this,SLOT(filebuttontoggled()));
   
-  cmdlabel = new QLabel ("Print Command:",this);
+  cmdlabel = new QLabel (i18n("Print Command:"),this);
   cmdlabel->setGeometry(45,60,90,BUTTONHEIGHT);
   cmdlabel->setEnabled(TRUE);
 
@@ -66,12 +68,13 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   cmdedit->setEnabled(TRUE);
   cmdedit->setText("lpr");
 
-  filebutton = new QRadioButton("Print as Postscript to File:",bg,"commandbutton");
+  filebutton = new QRadioButton(i18n("Print as Postscript to File:")
+				,bg,"commandbutton");
   filebutton->setGeometry(15,90,250,25);
   connect(filebutton,SIGNAL(clicked()),this,SLOT(filebuttontoggled()));
 
 
-  selectfile = new QPushButton ("Browse",this);
+  selectfile = new QPushButton (i18n("Browse"),this);
   selectfile->setGeometry(25,140,60,BUTTONHEIGHT);
   selectfile->setEnabled(FALSE);
 
@@ -80,7 +83,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   filename->setGeometry(85,130,255,25);
   filename->setEnabled(FALSE);  
 
-  pagesizelabel = new QLabel ("Page Size:",bg);
+  pagesizelabel = new QLabel (i18n("Page Size:"),bg);
   pagesizelabel->setGeometry(15,175,60,25);
   pagesizelabel->setEnabled(TRUE);
 
@@ -99,19 +102,21 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   papercombo->insertItem(JAP_LEGAL);
 
 
-  scalebutton = new QCheckBox("Scale fax to page size",this,"scalebutton");
+  scalebutton = new QCheckBox(i18n("Scale fax to page size")
+			      ,this,"scalebutton");
   scalebutton->setGeometry(25,225,220,25);
   scalebutton->setChecked(FALSE);
 
   marginbutton = 
-    new QCheckBox("Add Printer Margins (measured in cm):",this,"marginbutton");
+    new QCheckBox(i18n("Add Printer Margins (measured in cm):")
+		  ,this,"marginbutton");
 
   marginbutton->setGeometry(25,255,300,25);
   marginbutton->setChecked(FALSE);
   connect(marginbutton,SIGNAL(toggled(bool)),SLOT(margins_toggled(bool)));
 
   xmarginlabel = new QLabel(this);
-  xmarginlabel->setText("Horizontal:");
+  xmarginlabel->setText(i18n("Horizontal:"));
   xmarginlabel->setGeometry(45,285,70,25);
   xmarginlabel->setEnabled(FALSE);
 
@@ -120,7 +125,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
   xmarginedit->setEnabled(FALSE);
 
   ymarginlabel = new QLabel(this);
-  ymarginlabel->setText("Vertical:");
+  ymarginlabel->setText(i18n("Vertical:"));
   ymarginlabel->setGeometry(185,285,50,25);
   ymarginlabel->setEnabled(FALSE);
 
@@ -130,16 +135,16 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name,  bool )
 
   bg->setGeometry(10,10,380,320);
   
-  cancel_button = new QPushButton("Cancel",this);
+  cancel_button = new QPushButton(i18n("Cancel"),this);
 
   cancel_button->setGeometry( 3*XOFFSET +100, 340, 80, BUTTONHEIGHT );
   connect( cancel_button, SIGNAL( clicked() ), SLOT( cancel() ) );
 
-  ok_button = new QPushButton( "Ok", this );
+  ok_button = new QPushButton( i18n("Ok"), this );
   ok_button->setGeometry( 3*XOFFSET, 340, 80, BUTTONHEIGHT );
   connect( ok_button, SIGNAL( clicked() ), SLOT( ready() ) );	
 
-  help_button = new QPushButton( "Help", this );
+  help_button = new QPushButton(i18n( "Help"), this );
   help_button->setGeometry( 300, 340, 80, BUTTONHEIGHT );
   connect( help_button, SIGNAL( clicked() ), SLOT( help() ) );	
 
@@ -250,7 +255,7 @@ void PrintDialog::choosefile(){
 
 
   QFileDialog* box = new QFileDialog(this,"printfiledialog",TRUE);
-  box->setCaption("Select Filename");
+  box->setCaption(i18n("Select Filename"));
 
   if (!box->exec()) {
     return;
@@ -271,8 +276,9 @@ void PrintDialog::ready(){
 
   if(filebutton->isChecked() && QString(filename->text()).isEmpty()){
 
-    QMessageBox::warning(this,"Sorry","You must enter a file name if you wish to "\
-			 "print to a file.","OK",0);
+    QMessageBox::warning(this,"KFax",
+			 i18n("You must enter a file name if you wish to "\
+			 "print to a file."),i18n("OK"),0);
     return;
 
 
@@ -280,9 +286,10 @@ void PrintDialog::ready(){
 
   if(lprbutton->isChecked() && QString(cmdedit->text()).isEmpty()){
 
-    QMessageBox::warning(this,"Sorry","You must enter a print command such as \"lpr\"\n "\
+    QMessageBox::warning(this,"KFax",
+			 i18n("You must enter a print command such as \"lpr\"\n "\
 			 "if you wish to "\
-			 "print to a printer.","OK",0);
+			 "print to a printer."),i18n("OK"),0);
     return;
 
 

@@ -66,6 +66,7 @@
 
 #include <kfm.h>
 #include <kapp.h>
+#include <klocale.h>
 #include <kurl.h>
 #include <kconfig.h>
 #include <ktoolbar.h>
