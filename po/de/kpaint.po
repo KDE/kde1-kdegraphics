@@ -268,7 +268,7 @@ msgstr "Bildhöhe:"
 
 #: infodialog.cpp:94 palettedialog.cpp:14
 msgid "Dismiss"
-msgstr ""
+msgstr "Schliessen"
 
 #: palette.cpp:100
 msgid "Edit Colour"
