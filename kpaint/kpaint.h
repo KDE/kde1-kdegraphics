@@ -1,5 +1,8 @@
 // -*- c++ -*-
 
+/* modified by jha (j.habenicht@usa.net)
+ */
+
 // $Id$
 
 #ifndef KPAINT_H
@@ -7,7 +10,8 @@
 
 #include <qwidget.h>
 #include "QwViewport.h"
-#include <kaccel.h>
+/* obsolet (jha)
+   #include <kaccel.h> */
 #include <ktopwidget.h>
 #include <ktoolbar.h>
 #include <kmenubar.h>
@@ -138,7 +142,8 @@ private:
   KToolBar *commandsToolbar;
   KStatusBar *statusbar;
   KMenuBar *menu;
-  KAccel *keys;
+/* obsolet (jha)
+   KAccel *keys; */
 };
 
 #endif

@@ -10,6 +10,15 @@
 #include <qlabel.h>
 #include "canvas.h"
 
+// Tags for Colordepth
+#define ID_COLOR_1 0
+#define ID_COLOR_4 1
+#define ID_COLOR_8 2
+#define ID_COLOR_15 3
+#define ID_COLOR_16 4
+#define ID_COLOR_24 5
+#define ID_COLOR_32 6
+
 class depthDialog : public QDialog
 {
     Q_OBJECT

@@ -14,6 +14,16 @@ Tool::Tool()
   tooltip= 0;
 }
 
+Tool::Tool(const char *toolname)
+  : name(toolname)
+{
+  active= false;
+  canvas= 0;
+  props= 0;
+  tooltip= 0;
+}
+
+
 int Tool::getPages()
 {
   return props;

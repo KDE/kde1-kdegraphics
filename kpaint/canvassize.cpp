@@ -25,6 +25,7 @@ canvasSizeDialog::canvasSizeDialog(QWidget *parent, const char *name)
   widthLabel= new QLabel(klocale->translate("Width:"), this);
   heightLabel= new QLabel(klocale->translate("Height:"), this);
   widthEdit= new QLineEdit(this);
+  widthEdit->setFocus();
   heightEdit= new QLineEdit(this);
   connect(widthEdit, SIGNAL(returnPressed()), SLOT(accept()) );
   connect(heightEdit, SIGNAL(returnPressed()), SLOT(accept()) );
@@ -45,7 +46,9 @@ canvasSizeDialog::canvasSizeDialog(QWidget *parent, const char *name)
   okButton= new QPushButton(klocale->translate("OK"), this);
   cancelButton= new QPushButton(klocale->translate("Cancel"), this);
   okButton->setFixedHeight(okButton->sizeHint().height());
+  okButton->setMinimumWidth(okButton->sizeHint().width());
   cancelButton->setFixedHeight(cancelButton->sizeHint().height());
+  cancelButton->setMinimumWidth(okButton->sizeHint().width());
 
   buttonLayout->addStretch();
   buttonLayout->addWidget(okButton);

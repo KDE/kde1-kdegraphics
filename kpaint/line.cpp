@@ -13,7 +13,7 @@
 #include "line.h"
 #include "app.h"
 
-Line::Line() : Tool()
+Line::Line(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
   tooltip= i18n("Line");

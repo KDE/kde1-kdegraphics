@@ -1,3 +1,4 @@
+// -*- c++ -*-
 // $Id$
 
 #ifndef ELLIPSE_H
@@ -12,6 +13,7 @@ class Ellipse : public Tool
   Q_OBJECT
 public:
   Ellipse();
+  Ellipse(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 // Line class
 // This class is a subclass of Tool and provides a rubber line drawing tool.
 
@@ -13,7 +15,7 @@ class Line : public Tool
 {
   Q_OBJECT
 public:
-  Line();
+  Line(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

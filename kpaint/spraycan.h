@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 // $Id$
 
 #ifndef SPRAYCAN_H
@@ -12,7 +14,7 @@ class SprayCan : public Tool
 {
   Q_OBJECT
 public:
-  SprayCan();
+  SprayCan(const char *toolname);
   ~SprayCan();
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);

@@ -11,7 +11,7 @@
 #include "spraycan.h"
 #include "app.h"
 
-SprayCan::SprayCan() : Tool()
+SprayCan::SprayCan(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
   brushsize= 10;

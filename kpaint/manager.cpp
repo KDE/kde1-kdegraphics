@@ -7,8 +7,10 @@
 #include <qlist.h>
 #include <qpixmap.h>
 #include <klocale.h>
+#include <kstatusbar.h>
 #include "manager.h"
 #include "app.h"
+#include "commands.h"
 
 #include "pen.h"
 #include "line.h"
@@ -19,8 +21,10 @@
 #include "spraycan.h"
 #include "areaselect.h"
 
-Manager::Manager(Canvas *c) : QObject()
+Manager::Manager(Canvas *c)
+ : QObject(), toolsToolBar(0L), statusBar(0L)
 {
+  
   assert(c != 0);
   assert(!(c->isActive()));
 
@@ -28,7 +32,7 @@ Manager::Manager(Canvas *c) : QObject()
 
   canvas= c;
   createTools();
-  currentTool= 0;
+  currentToolID= 0;
   list.first()->activate(c);
 
   lmbCol= red;
@@ -56,14 +60,22 @@ void Manager::createTools()
 {
   // Create the Tools
   list.setAutoDelete(TRUE);
-  list.append(new Ellipse);
-  list.append(new Circle);
-  list.append(new Pen);
-  list.append(new Rectangle);
-  list.append(new Line);
-  list.append(new SprayCan);
-  list.append(new AreaSelect);
-  list.append(new Roundangle);
+  list.append(new Ellipse( i18n("Ellipse")));
+  list.last()->id = 0;
+  list.append(new Circle( i18n("Circle")));
+  list.last()->id = 1;
+  list.append(new Pen( i18n("Pen")));
+  list.last()->id = 2;
+  list.append(new Rectangle( i18n("Rectangle")));
+  list.last()->id = 3;
+  list.append(new Line( i18n("Line")));
+  list.last()->id = 4;
+  list.append(new SprayCan( i18n("Spray Can")));
+  list.last()->id = 5;
+  list.append(new AreaSelect( i18n("Area Select")));
+  list.last()->id = 6;
+  list.append(new Roundangle( i18n("Round Angle")));
+  list.last()->id = 7;
 
   // Create the properties dialog
   props= new propertiesDialog(1, 0, i18n("Tool Properties"));
@@ -78,12 +90,12 @@ void Manager::updateProperties()
 
   p.setColor(lmbCol);
   b.setColor(lmbCol);
-  list.at(currentTool)->setLeftPen(p);
-  list.at(currentTool)->setLeftBrush(b);
+  list.at(currentToolID)->setLeftPen(p);
+  list.at(currentToolID)->setLeftBrush(b);
   p.setColor(rmbCol);
   b.setColor(rmbCol);
-  list.at(currentTool)->setRightPen(p);
-  list.at(currentTool)->setRightBrush(b);
+  list.at(currentToolID)->setRightPen(p);
+  list.at(currentToolID)->setRightBrush(b);
 }
 
 void Manager::setLMBcolour(const QColor &c)
@@ -100,43 +112,41 @@ warning("setRMBcolour\n");
   updateProperties();
 }
 
-const QColor &Manager::lmbColour()
-{
-  return lmbCol;
-}
-
-const QColor &Manager::rmbColour()
-{
-  return rmbCol;
-}
-
-int Manager::getCurrentTool()
-{
-  return currentTool;
-}
-
 void Manager::setCurrentTool(int tool)
 {
-  KDEBUG1(KDEBUG_INFO, 3000, "got setCurrentTool %d\n", tool);
+  KDEBUG1(KDEBUG_INFO, 3000,
+	  "got setCurrentTool %d\n", tool);
+  KDEBUG1(KDEBUG_INFO, 3000,
+	  " old Tool is %d\n", currentToolID);
+  Tool *t;
 
-  if (currentTool != tool) {
+  if (currentToolID != tool) {
+    /* change appearence of Toolbar */
+    toolsToolBar->setButton(currentToolID, false);
+    toolsToolBar->setButton(tool, true);
+
     canvas->deactivate();
-    list.at(currentTool)->deactivate();
-    currentTool= tool;
-    list.at(tool)->activate(canvas);
+    list.at(currentToolID)->deactivate();
+    currentToolID= tool;
+    t= list.at(tool);
+    t->activate(canvas);
 
     p.setColor(lmbCol);
     b.setColor(lmbCol);
-    list.at(tool)->setLeftPen(p);
-    list.at(tool)->setLeftBrush(b);
+    t->setLeftPen(p);
+    t->setLeftBrush(b);
     p.setColor(rmbCol);
     b.setColor(rmbCol);
-    list.at(tool)->setRightPen(p);
-    list.at(tool)->setRightBrush(b);
+    t->setRightPen(p);
+    t->setRightBrush(b);
 
-    canvas->activate(list.at(tool));
-    props->setPages(list.at(tool)->getPages());
+    canvas->activate(t);
+    props->setPages(t->getPages());
     props->repaint(0);
+
+    if (NULL != statusBar) {
+      statusBar->changeItem(t->getName(), ID_TOOL_NAME);
+    }
     emit toolChanged(tool);
   }
 }
@@ -153,12 +163,20 @@ void Manager::populateToolbar(KToolBar *t)
   QPixmap *pix;
   int i;
   const char *tip;
-  for (i= 0, tool= list.first(); tool != 0; i++, tool= list.next()) {
+
+  toolsToolBar = t;
+
+  for (i= 0, tool= list.first();
+       tool != 0;
+       i++, tool= list.next()) {
     tip= tool->tip();
     pix= tool->pixmap();
     t->insertButton(*pix, i, TRUE, tip, i);
-    connect(tool, SIGNAL(modified()), this, SIGNAL(modified()));
+    tool->id= i;
+    /* ????????
+       connect(tool, SIGNAL(modified()), this, SIGNAL(modified())); */
   }
+  t->setButton(currentToolID, true);
   connect(t, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));
 }
 

@@ -15,8 +15,9 @@
 #include <qmsgbox.h>
 #include <qlayout.h>
 #include "QwViewport.h"
-#include <kaccel.h>
-#include <kkeydialog.h>
+/* obsolet (jha)
+   #include <kaccel.h>
+   #include <kkeydialog.h> */
 #include <ktopwidget.h>
 #include <ktoolbar.h>
 #include <kmsgbox.h>
@@ -42,6 +43,9 @@
 #include <unistd.h>
 #include <time.h>
 
+#define max(x,y) (x>y?x:y)
+
+
 extern FormatManager *formatMngr;
 extern int openwins;
 
@@ -56,7 +60,8 @@ KPaint::KPaint(const char *url) : KTopLevelWidget()
   w= 300;
   h= 200;
 
-  keys = new KAccel(this);
+/* obsolet (jha)
+   keys = new KAccel(this); */
 
   View *view= new View(this, "view container");
   v= new QwViewport(view);
@@ -157,7 +162,7 @@ void KPaint::initToolbars()
 
   // Create command toolbar
   commandsToolbar= new KToolBar(this);
-  //  commandsToolbar= toolBar(ID_COMMANDSTOOLBAR);
+  //  commandsToolbar= toolBar(ID_COMMANDS_TOOLBAR);
 
   pixmap= Icon( "filenew.xpm" );
   commandsToolbar->insertButton(pixmap, ID_NEW, true, i18n("New Canvas"));
@@ -180,13 +185,13 @@ void KPaint::initToolbars()
   commandsToolbar->insertSeparator();
 
   pixmap= Icon( "viewmag+.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_ZOOMIN, true, i18n("Zoom In"));
+  commandsToolbar->insertButton(pixmap, ID_ZOOM_IN, true, i18n("Zoom In"));
 
   pixmap= Icon( "viewmag-.xpm" );
-  commandsToolbar->insertButton(pixmap, ID_ZOOMOUT, true, i18n("Zoom Out"));
+  commandsToolbar->insertButton(pixmap, ID_ZOOM_OUT, true, i18n("Zoom Out"));
 
   commandsToolbar->show();
-  addToolBar(commandsToolbar, ID_COMMANDSTOOLBAR);
+  addToolBar(commandsToolbar, ID_COMMANDS_TOOLBAR);
   commandsToolbar->setFullWidth(false);
 
   connect (commandsToolbar, SIGNAL (clicked (int)),
@@ -198,7 +203,7 @@ void KPaint::initToolbars()
   toolsToolbar= new KToolBar(this);
   man->populateToolbar(toolsToolbar);
   toolsToolbar->show();
-  addToolBar(toolsToolbar, ID_TOOLSTOOLBAR);
+  addToolBar(toolsToolbar, ID_TOOLS_TOOLBAR);
   toolsToolbar->setFullWidth(false);
 
   connect (toolsToolbar, SIGNAL (clicked (int)),
@@ -252,30 +257,30 @@ void KPaint::writeOptions()
 void KPaint::updateControls()
 {
   if (showToolsToolBar) {
-    enableToolBar(KToolBar::Show, ID_TOOLSTOOLBAR);
-    menu->setItemChecked(ID_SHOWTOOLSTOOLBAR, true);
+    enableToolBar(KToolBar::Show, ID_TOOLS_TOOLBAR);
+    menu->setItemChecked(ID_SHOW_TOOLS_TOOLBAR, true);
   }
   else {
-    enableToolBar(KToolBar::Hide, ID_TOOLSTOOLBAR);
-    menu->setItemChecked(ID_SHOWTOOLSTOOLBAR, false);
+    enableToolBar(KToolBar::Hide, ID_TOOLS_TOOLBAR);
+    menu->setItemChecked(ID_SHOW_TOOLS_TOOLBAR, false);
   }
 
   if (showCommandsToolBar) {
-    enableToolBar(KToolBar::Show, ID_COMMANDSTOOLBAR);
-    menu->setItemChecked(ID_SHOWCOMMANDSTOOLBAR, true);
+    enableToolBar(KToolBar::Show, ID_COMMANDS_TOOLBAR);
+    menu->setItemChecked(ID_SHOW_COMMANDS_TOOLBAR, true);
   }
   else {
-    enableToolBar(KToolBar::Hide, ID_COMMANDSTOOLBAR);
-    menu->setItemChecked(ID_SHOWCOMMANDSTOOLBAR, false);
+    enableToolBar(KToolBar::Hide, ID_COMMANDS_TOOLBAR);
+    menu->setItemChecked(ID_SHOW_COMMANDS_TOOLBAR, false);
   }
 
   if (showStatusBar) {
     enableStatusBar(KStatusBar::Show);
-    menu->setItemChecked(ID_SHOWSTATUSBAR, true);
+    menu->setItemChecked(ID_SHOW_STATUSBAR, true);
   }
   else {
     enableStatusBar(KStatusBar::Hide);
-    menu->setItemChecked(ID_SHOWSTATUSBAR, false);
+    menu->setItemChecked(ID_SHOW_STATUSBAR, false);
   }
 }
 
@@ -284,30 +289,65 @@ void KPaint::canvasSizeChanged()
   QString size;
 
   size.sprintf("%d x %d", c->width(), c->height());
-  statusbar->changeItem(size, ID_FILESIZE);
+  statusbar->changeItem(size, ID_FILE_SIZE);
 }
 
 void KPaint::initStatus()
 {
   QString size;
+  //  QFontMetrics fm; (below)
+  ToolList tl;
+  Tool *t, *maxt;
+  uint maxtlen= 0, tmp;
 
   statusbar= new KStatusBar(this);
   setStatusBar(statusbar);
 
+  /* write the image size */
   size.sprintf("%d x %d", c->width(), c->height());
-  statusbar->insertItem(size, ID_FILESIZE);
-  statusbar->insertItem("100%", ID_ZOOMFACTOR);
+  statusbar->insertItem(size, ID_FILE_SIZE);
 
+  /* write the color depth */
+  size.sprintf(" %d bpp", c->getDepth());
+  statusbar->insertItem(size, ID_COLOR_DEPTH);
+
+  /* write the zoomfactor */
+  statusbar->insertItem("100%", ID_ZOOM_FACTOR);
+
+  /* write the toolname */
+  /* get the max. font length of the toolnames */
+  tl = man->getToolList();
+  QFontMetrics fm = statusbar->fontMetrics();
+  for (t= tl.first(); t != NULL; t= tl.next()) {
+    tmp = fm.width(t->getName());
+    /* check the tool with the max. name len */
+    if ( maxtlen < tmp ) {
+      maxtlen = tmp;
+      maxt = t;
+    }
+  }
+  /* write the maxlen toolname */
+  size = "";
+  size += maxt->getName();
+  statusbar->insertItem(size, ID_TOOL_NAME);
+
+  /* write the filename */
   if (url.isEmpty())
-    statusbar->insertItem(filename, ID_FILENAME);
+    statusbar->insertItem(filename, ID_FILE_NAME);
   else
-    statusbar->insertItem(url, ID_FILENAME);
+    statusbar->insertItem(url, ID_FILE_NAME);
+
+  /* update to the current toolname */
+  statusbar->changeItem(man->getCurrentTool().getName(), ID_TOOL_NAME);
+  man->setStatusBar(statusbar);
 
   statusbar->show();
 }
 
 void KPaint::initMenus()
 {
+  ToolList tl;
+  Tool *t;
   QPopupMenu *file;
   
   file = new QPopupMenu;
@@ -315,52 +355,59 @@ void KPaint::initMenus()
   file->insertItem(i18n("Open Image..."), ID_OPEN);
   file->insertItem(i18n("New Image..."), ID_NEW);
   file->insertItem(i18n("Save Image"), ID_SAVE);
-  file->insertItem(i18n("Save Image As..."), ID_SAVEAS);
+  file->insertItem(i18n("Save Image As..."), ID_SAVE_AS);
   file->insertItem(i18n("Image Format..."), ID_FORMAT);
   file->insertSeparator();
-  file->insertItem(i18n("Open from URL..."), ID_OPENURL);
-  file->insertItem(i18n("Save to URL..."), ID_SAVEURL);
+  file->insertItem(i18n("Open from URL..."), ID_OPEN_URL);
+  file->insertItem(i18n("Save to URL..."), ID_SAVE_URL);
   file->insertSeparator();
-  file->insertItem(i18n("New Window"), ID_NEWWINDOW);
-  file->insertItem(i18n("Close Window"), ID_CLOSEWINDOW);
+  file->insertItem(i18n("New Window"), ID_NEW_WINDOW);
+  file->insertItem(i18n("Close Window"), ID_CLOSE_WINDOW);
   file->insertSeparator();
-  file->insertItem(i18n("Exit"), ID_EXIT);
+  file->insertItem(i18n("E&xit"), ID_EXIT);
 
   QPopupMenu *edit= new QPopupMenu;
   edit->insertItem(i18n("Copy Region"), ID_COPY);
   edit->insertItem(i18n("Cut Region"), ID_CUT);
   edit->insertItem(i18n("Paste Region"), ID_PASTE);
-  edit->insertItem(i18n("Paste As Image"), ID_PASTEIMAGE);
+  edit->insertItem(i18n("Paste As Image"), ID_PASTE_IMAGE);
   edit->insertSeparator();
-  edit->insertItem(i18n("Zoom In"), ID_ZOOMIN);
-  edit->insertItem(i18n("Zoom Out"), ID_ZOOMOUT);
+  edit->insertItem(i18n("Zoom In"), ID_ZOOM_IN);
+  edit->insertItem(i18n("Zoom Out"), ID_ZOOM_OUT);
   edit->insertItem(i18n("Mask..."), ID_MASK);
 
   QPopupMenu *image= new QPopupMenu;
   image->insertItem(i18n("Information..."), ID_INFO);
-  image->insertItem(i18n("Resize..."), ID_RESIZEIMAGE);
+  image->insertItem(i18n("Resize..."), ID_RESIZE_IMAGE);
   image->insertItem(i18n("Edit Palette..."), ID_PALETTE);
   image->insertItem(i18n("Change Colour Depth..."), ID_DEPTH);
 
   QPopupMenu *tool= new QPopupMenu;
-  tool->insertItem( i18n("Tool Properties..."), -1);
+  tool->insertItem( i18n("Tool Properties..."), -2);
   tool->insertSeparator();
-  tool->insertItem( i18n("Pen"), 2);
-  tool->insertItem( i18n("Line"), 4);
-  tool->insertItem( i18n("Rectangle"), 3);
-  tool->insertItem( i18n("Ellipse"), 0 );
-  tool->insertItem( i18n("Circle"), 1 );
-  tool->insertItem( i18n("Spray Can"), 5);
-  tool->insertItem( i18n("Area Select"), 6);
+  /* insert Tools */
+  tl = man->getToolList();
+  for (t= tl.first(); t != NULL; t= tl.next()) {
+    tool->insertItem(t->getName(), t->id);
+  }
+  /*  
+  tool->insertItem( , 2);
+  tool->insertItem(, 4);
+  tool->insertItem(, 3);
+  tool->insertItem(, 0 );
+  tool->insertItem(, 1 );
+  tool->insertItem(, 5);
+  tool->insertItem( , 6);
   tool->insertItem( i18n("Round Angle"), 7);
+  */
   connect(tool, SIGNAL(activated(int)), SLOT(setTool(int)));
 
   QPopupMenu *options = new QPopupMenu;
   options->setCheckable(true);
-  options->insertItem( i18n("Show Tools Toolbar"), ID_SHOWTOOLSTOOLBAR);
-  options->insertItem( i18n("Show Commands Toolbar"), ID_SHOWCOMMANDSTOOLBAR);
-  options->insertItem( i18n("Show Status Bar"), ID_SHOWSTATUSBAR);
-  options->insertItem( i18n("Save Options"), ID_SAVEOPTIONS);
+  options->insertItem( i18n("Show Tools Toolbar"), ID_SHOW_TOOLS_TOOLBAR);
+  options->insertItem( i18n("Show Commands Toolbar"), ID_SHOW_COMMANDS_TOOLBAR);
+  options->insertItem( i18n("Show Status Bar"), ID_SHOW_STATUSBAR);
+  options->insertItem( i18n("Save Options"), ID_SAVE_OPTIONS);
 
 /*
   QPopupMenu *help = new QPopupMenu;
@@ -408,22 +455,22 @@ void KPaint::handleCommand(int command)
   case ID_SAVE:
     fileSave();
     break;
-  case ID_SAVEAS:
+  case ID_SAVE_AS:
     fileSaveAs();
     break;
   case ID_FORMAT:
     fileFormat();
     break;
-  case ID_OPENURL:
+  case ID_OPEN_URL:
     fileOpenURL();
     break;
-  case ID_SAVEURL:
+  case ID_SAVE_URL:
     fileSaveAsURL();
     break;
-  case ID_NEWWINDOW:
+  case ID_NEW_WINDOW:
     newWindow();
     break;
-  case ID_CLOSEWINDOW:
+  case ID_CLOSE_WINDOW:
     closeWindow();
     break;
   case ID_EXIT:
@@ -440,14 +487,14 @@ void KPaint::handleCommand(int command)
   case ID_PASTE:
     editPaste();
     break;
-  case ID_PASTEIMAGE:
+  case ID_PASTE_IMAGE:
     editPasteImage();
     break;
     // Image
-  case ID_ZOOMIN:
+  case ID_ZOOM_IN:
     editZoomIn();
     break;
-  case ID_ZOOMOUT:
+  case ID_ZOOM_OUT:
     editZoomOut();
     break;
   case ID_MASK:
@@ -461,7 +508,7 @@ void KPaint::handleCommand(int command)
   case ID_INFO:
     imageInfo();
     break;
-  case ID_RESIZEIMAGE:
+  case ID_RESIZE_IMAGE:
     imageResize();
     break;
   case ID_PALETTE:
@@ -472,21 +519,21 @@ void KPaint::handleCommand(int command)
     break;
 
     // Options
-  case ID_SHOWTOOLSTOOLBAR:
+  case ID_SHOW_TOOLS_TOOLBAR:
     showToolsToolBar= !showToolsToolBar;
     updateControls();
     break;
-  case ID_SHOWCOMMANDSTOOLBAR:
+  case ID_SHOW_COMMANDS_TOOLBAR:
     showCommandsToolBar= !showCommandsToolBar;
     updateControls();
     break;
-  case ID_SHOWMENUBAR:
+  case ID_SHOW_MENUBAR:
     break;
-  case ID_SHOWSTATUSBAR:
+  case ID_SHOW_STATUSBAR:
     showStatusBar= !showStatusBar;
     updateControls();
     break;
-  case ID_SAVEOPTIONS:
+  case ID_SAVE_OPTIONS:
     writeOptions();
     break;
 
@@ -524,11 +571,11 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
 
       if (url_ == 0) {
 	url= "";
-	statusbar->changeItem(filename.data(), ID_FILENAME);
+	statusbar->changeItem(filename.data(), ID_FILE_NAME);
       }
       else {
 	url= url_;
-	statusbar->changeItem(url.data(), ID_FILENAME);
+	statusbar->changeItem(url.data(), ID_FILE_NAME);
       }
       canvasSizeChanged();
     }
@@ -581,7 +628,7 @@ bool KPaint::saveLocal(const char *filename_, const char *url_)
 }
 
 // Save As Network file
-bool KPaint::saveRemote(const char *url_)
+bool KPaint::saveRemote(const char * /*url_ (temporarily unused) */ )
 {
   // Temporarily removed waiting for kfmlib changes
   return false;
@@ -607,7 +654,7 @@ void KPaint::fileNew()
     url= "";
     format= "GIF";
 
-    statusbar->changeItem(filename.data(), ID_FILENAME);
+    statusbar->changeItem(filename.data(), ID_FILE_NAME);
 
     canvasSizeChanged();
 
@@ -679,7 +726,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "KPaint: Deleting temp file \'%s\'", filename.data())
 
 
       c->save(newfilename, format);
-      statusbar->changeItem(newfilename.data(), ID_FILENAME);
+      statusbar->changeItem(newfilename.data(), ID_FILE_NAME);
 
       filename= newfilename;
       url= "";
@@ -700,7 +747,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Set format to %s", dlg.fileformat->text(dlg.fileform
       if (i > 0)
 	filename = filename.left(i+1);
       filename= filename+formatMngr->suffix(format);
-      statusbar->changeItem(filename, ID_FILENAME);
+      statusbar->changeItem(filename, ID_FILE_NAME);
     }
 
 }
@@ -816,52 +863,52 @@ void KPaint::editZoomIn()
 {
 KDEBUG(KDEBUG_INFO, 3000, "editZoomIn()\n");
   if (zoom >= 100) {
-    zoom= zoom+100;
+    zoom += 100;
     if (zoom > 1000)
       zoom= 1000;
-    c->setZoom(zoom);
   }
-  else if (zoom < 100) {
-    zoom= zoom+10;
-    c->setZoom(zoom);
+  else { // if (zoom < 100)
+    zoom += 10;
   }
+  c->setZoom(zoom);
 
   QString zoomstr;
-  char *s;
+  //  char *s;
 
   zoomstr.setNum(zoom);
-  zoomstr.append("%");
-  s= strdup(zoomstr);
+  zoomstr += '%';
+  //  zoomstr.append("%");
+  //  s= strdup(zoomstr);
 
-  statusbar->changeItem(s, ID_ZOOMFACTOR);
+  statusbar->changeItem((const char *)zoomstr, ID_ZOOM_FACTOR);
 
-  free(s);
+  //  free(s);
 }
 
 void KPaint::editZoomOut()
 {
 KDEBUG(KDEBUG_INFO, 3000, "editZoomOut()\n");
   if (zoom > 100) {
-    zoom= zoom-100;
-    c->setZoom(zoom);
+    zoom -= 100;
   }
-  else if (zoom <= 100) {
-    zoom= zoom-10;
+  else { // if (zoom <= 100)
+    zoom -= 10;
     if (zoom == 0)
       zoom= 10;
-    c->setZoom(zoom);
   }
+  c->setZoom(zoom);
 
   QString zoomstr;
-  char *s;
+  //  char *s;
 
   zoomstr.setNum(zoom);
-  zoomstr.append("%");
-  s= strdup(zoomstr);
+  zoomstr += '%';
+  //  zoomstr.append("%");
+  //  s= strdup(zoomstr);
 
-  statusbar->changeItem(s, ID_ZOOMFACTOR);
+  statusbar->changeItem((const char *)zoomstr, ID_ZOOM_FACTOR);
 
-  free(s);
+  //  free(s);
 }
 
 void KPaint::editMask()
@@ -872,7 +919,8 @@ KDEBUG(KDEBUG_INFO, 3000, "editMask()\n");
 void KPaint::editOptions()
 {
 KDEBUG(KDEBUG_INFO, 3000, "editOptions()\n");
-    KKeyDialog::configureKeys(keys);
+/* obsolet (jha)
+    KKeyDialog::configureKeys(keys); */
 }
   
 // Image
@@ -908,23 +956,60 @@ KDEBUG(KDEBUG_INFO, 3000, "imageEditPalette()\n");
 
 void KPaint::imageChangeDepth()
 {
+  QString depthstr;
+  KStatusBar *sb = statusBar();
   depthDialog d(c);
+
   KDEBUG(KDEBUG_INFO, 3000, "imageChangeDepth()\n");
   if (d.exec()) {
     switch (d.depthBox->currentItem()) {
-    case 0:
+    case ID_COLOR_1:
       KDEBUG(KDEBUG_INFO, 3000, "setDepth to 1\n");
       c->setDepth(1);
+      depthstr.sprintf(" %d bpp", 1);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
-    case 1:
+    case ID_COLOR_4:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 4\n");
+      c->setDepth(4);
+      depthstr.sprintf(" %d bpp", 4);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
+      allowEditPalette= false;
+      break;
+    case ID_COLOR_8:
       KDEBUG(KDEBUG_INFO, 3000, "setDepth to 8\n");
       c->setDepth(8);
+      depthstr.sprintf(" %d bpp", 8);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= true;
       break;
-    case 2:
+    case ID_COLOR_15:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 15\n");
+      c->setDepth(15);
+      depthstr.sprintf(" %d bpp", 15);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
+      allowEditPalette= false;
+      break;
+    case ID_COLOR_16:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 16\n");
+      c->setDepth(16);
+      depthstr.sprintf(" %d bpp", 16);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
+      allowEditPalette= false;
+      break;
+    case ID_COLOR_24:
+      KDEBUG(KDEBUG_INFO, 3000, "setDepth to 24\n");
+      c->setDepth(24);
+      depthstr.sprintf(" %d bpp", 24);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
+      allowEditPalette= false;
+      break;
+    case ID_COLOR_32:
       KDEBUG(KDEBUG_INFO, 3000, "setDepth to 32\n");
       c->setDepth(32);
+      depthstr.sprintf("%d bpp", 32);
+      sb->changeItem(depthstr, ID_COLOR_DEPTH);
       allowEditPalette= false;
       break;
     default:
@@ -939,7 +1024,7 @@ void KPaint::imageChangeDepth()
 void KPaint::setTool(int t)
 {
 KDEBUG1(KDEBUG_INFO, 3000, "setTool(%d)\n", t);
-  if (t > 0)
+  if (t >= 0)
     man->setCurrentTool(t);
   else 
     man->showPropertiesDialog();

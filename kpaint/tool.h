@@ -45,7 +45,7 @@ public:
   };
 
   Tool();
-
+  Tool(const char *toolname);
   /**
    * Make the tool active for canvas c
    */
@@ -79,6 +79,9 @@ public:
   virtual void enterEvent(QEvent *) {};
   virtual void leaveEvent(QEvent *) {};
 
+  int id;
+  inline const char *getName() const;
+
 signals:
   void modified();
 
@@ -87,6 +90,7 @@ private:
 
 protected:
   QPixmap *pix;
+  QString name;
   const char *tooltip;
 
   /**
@@ -114,6 +118,12 @@ protected:
    */
   unsigned int props;
 };
+
+const char *
+Tool::getName() const
+{
+  return (const char *)name;
+}
 
 #endif // TOOL_H
 

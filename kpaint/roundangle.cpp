@@ -12,7 +12,7 @@
 
 #define ROUNDNESS (40)
 
-Roundangle::Roundangle() : Tool()
+Roundangle::Roundangle(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
 

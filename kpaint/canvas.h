@@ -26,6 +26,7 @@ public:
   QPixmap *pixmap();
   void setPixmap(QPixmap *);
   void setDepth(int);
+  inline int getDepth();
 
   const QRect &selection();
   void setSelection(const QRect&);
@@ -99,6 +100,9 @@ protected:
   QRect selection_;
   bool haveSelection_;
 };
+
+int Canvas::getDepth()
+{ return pix->depth(); }
 
 #endif // CANVAS_H
 

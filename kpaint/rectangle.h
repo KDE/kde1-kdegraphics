@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
@@ -8,7 +10,7 @@ class Rectangle : public Tool
 {
   Q_OBJECT
 public:
-  Rectangle();
+  Rectangle(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

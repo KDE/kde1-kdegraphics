@@ -223,7 +223,9 @@ void Canvas::setDepth(int d)
   QImage i;
   QPixmap *px;
 
-  assert((d == 1) || (d == 8) || (d == 32));
+  assert((d == 1) || (d == 4) || (d == 8) || 
+	 (d == 15) || (d == 16) ||
+	 (d == 24) || (d == 32));
 
   if (d != pix->depth()) {
     i= pix->convertToImage();

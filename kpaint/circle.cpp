@@ -19,6 +19,13 @@ Circle::Circle() : Tool()
   props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
+Circle::Circle(const char *toolname) : Tool(toolname)
+{
+  drawing= FALSE;
+  tooltip= i18n("Circle");
+  props= Tool::HasLineProperties | Tool::HasFillProperties;
+}
+
 void Circle::activating()
 {
 KDEBUG(KDEBUG_INFO, 3000, "Circle::activating() hook called\n");

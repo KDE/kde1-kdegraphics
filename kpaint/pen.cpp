@@ -11,7 +11,7 @@
 #include "pen.h"
 #include "app.h"
 
-Pen::Pen() : Tool()
+Pen::Pen(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
   tooltip= i18n("Pen");

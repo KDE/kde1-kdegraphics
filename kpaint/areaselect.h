@@ -9,7 +9,7 @@
 class AreaSelect : public Tool
 {
 public:
-  AreaSelect();
+  AreaSelect(const char *toolname);
   ~AreaSelect();
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);

@@ -10,7 +10,7 @@
 #include "rectangle.h"
 #include "app.h"
 
-Rectangle::Rectangle() : Tool()
+Rectangle::Rectangle(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
 

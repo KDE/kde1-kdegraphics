@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 #ifndef ROUNDANGLE_H
 #define ROUNDANGLE_H
 
@@ -8,7 +10,7 @@ class Roundangle : public Tool
 {
   Q_OBJECT
 public:
-  Roundangle();
+  Roundangle(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

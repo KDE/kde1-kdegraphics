@@ -1,3 +1,4 @@
+// -*- c++ -*-
 // $Id$
 
 #ifndef CIRCLE_H
@@ -10,6 +11,7 @@ class Circle : public Tool
   Q_OBJECT
 public:
   Circle();
+  Circle(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

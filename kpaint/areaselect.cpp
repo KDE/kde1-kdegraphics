@@ -10,7 +10,7 @@
 #include "areaselect.h"
 #include "app.h"
 
-AreaSelect::AreaSelect() : Tool()
+AreaSelect::AreaSelect(const char *toolname) : Tool(toolname)
 {
   drawing= FALSE;
 

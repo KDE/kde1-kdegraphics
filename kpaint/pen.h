@@ -1,3 +1,4 @@
+// -*- c++ -*-
 // $Id$
 
 #ifndef PEN_H
@@ -11,7 +12,7 @@ class Pen : public Tool
 {
   Q_OBJECT
 public:
-  Pen();
+  Pen(const char *toolname);
   void mousePressEvent(QMouseEvent *e);
   void mouseMoveEvent(QMouseEvent *e);
   void mouseReleaseEvent(QMouseEvent *e);

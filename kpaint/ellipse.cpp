@@ -17,6 +17,13 @@ Ellipse::Ellipse() : Tool()
   props= Tool::HasLineProperties | Tool::HasFillProperties;
 }
 
+Ellipse::Ellipse(const char *toolname) : Tool(toolname)
+{
+  drawing= FALSE;
+  tooltip= i18n("Ellipse");
+  props= Tool::HasLineProperties | Tool::HasFillProperties;
+}
+
 void Ellipse::activating()
 {
 KDEBUG(KDEBUG_INFO, 3000, "Ellipse::activating() hook called\n");

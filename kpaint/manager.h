@@ -1,3 +1,4 @@
+// -*- c++ -*-
 // $Id$
 
 #ifndef MANAGER_H
@@ -13,6 +14,9 @@
 #include "properties.h"
 #include "tool.h"
 
+typedef QList<Tool> ToolList;
+class KStatusBar;
+
 /**
  * @short Manager Class
  * This class holds all the tools that can operate on a canvas, it
@@ -27,11 +31,14 @@ public:
   Manager(Canvas *c);
   ~Manager();
 
-  int getCurrentTool();
+  inline int getCurrentToolID();
+  inline const Tool &getCurrentTool();
+  inline const ToolList &getToolList();
   void showPropertiesDialog();
   void populateToolbar(KToolBar *);
-  const QColor &lmbColour();
-  const QColor &rmbColour();
+  inline void setStatusBar(KStatusBar *);
+  inline const QColor &lmbColour();
+  inline const QColor &rmbColour();
 
 public slots:
   void setCurrentTool(int);
@@ -47,15 +54,54 @@ protected:
   void createTools();
 
 private:
-  QList<Tool> list;
+  ToolList list;
   Canvas *canvas;
   propertiesDialog *props;
-  int currentTool;
+  int currentToolID;
 
   QPen p;
   QBrush b;
   QColor lmbCol;
   QColor rmbCol;
+  KToolBar *toolsToolBar;
+  KStatusBar *statusBar;
 };
+
+
+const QColor &
+Manager::lmbColour()
+{
+  return lmbCol;
+}
+
+const QColor &
+Manager::rmbColour()
+{
+  return rmbCol;
+}
+
+int 
+Manager::getCurrentToolID()
+{
+  return currentToolID;
+}
+
+const Tool & 
+Manager::getCurrentTool()
+{
+  return *list.at(currentToolID);
+}
+
+const ToolList & 
+Manager::getToolList()
+{
+  return list;
+}
+
+void 
+Manager::setStatusBar(KStatusBar *sb)
+{
+  statusBar = sb;
+}
 
 #endif // MANAGER_H
