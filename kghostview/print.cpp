@@ -9,6 +9,8 @@
 PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name, TRUE )
 {
+	setFocusPolicy(QWidget::StrongFocus);
+	
 	QFrame* tmpQFrame;
 	tmpQFrame = new QFrame( this );
 	tmpQFrame->setGeometry( 5, 5, 250, 100 );
@@ -25,25 +27,12 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	nameLineEdit = new QLineEdit( this );
 	nameLineEdit->setGeometry( 115, 25, 100, 25 );
 	nameLineEdit->setText( "lp" );
+	nameLineEdit->setFocus();
 
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 30, 60, 75, 25 );
 	tmpQLabel->setText( "Pages" );
 	tmpQLabel->setAlignment( 290 );
-
-	QPushButton* ok;
-	ok = new QPushButton( this );
-	ok->setGeometry( 125, 110, 65, 30 );
-	ok->setText( "OK" );
-	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
-
-	QPushButton* cancel;
-	cancel = new QPushButton( this );
-	cancel->setGeometry( 195, 110, 60, 30 );
-	cancel->setText( "Cancel" );
-	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
-
-
 	
 	modeComboBox = new QComboBox( this );
 	modeComboBox->setGeometry( 115, 60, 100, 25 );
@@ -52,7 +41,23 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	modeComboBox->insertItem( "Odd" );
 	modeComboBox->insertItem( "Marked" );
 
-	resize( 260, 145 );	
+	QPushButton* ok;
+	ok = new QPushButton( this );
+	ok->setGeometry( 115, 115, 65, 30 );
+	ok->setText( "OK" );
+	ok->setAutoDefault(TRUE);
+	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
+
+	QPushButton* cancel;
+	cancel = new QPushButton( this );
+	cancel->setGeometry( 190, 115, 60, 30 );
+	cancel->setText( "Cancel" );
+	cancel->setAutoDefault(TRUE);
+	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
+
+	resize( 260, 150 );
+	setMaximumSize( 260, 150 );
+	setMinimumSize( 260, 150 );
 	
 }
 

@@ -1021,6 +1021,7 @@ psfree(doc)
 	//printf("PS::psfree\n");
 
     if (doc) {
+    printf("This document exists\n");
 	for (i=0; i<doc->numpages; i++) {
 	    if (doc->pages[i].label) free(doc->pages[i].label);
 	}

@@ -18,6 +18,7 @@
 #include <X11/Xatom.h>
 #include <ctype.h>
 
+#include "messages.h"
 
 #define SCROLLBAR_SIZE 16
 
@@ -70,24 +71,6 @@ extern int errno;
 #define BUFSIZ 512;
 #endif
 
-extern int  num_ghosts;
-extern FILE *psfile;
-extern QString filename;  
-extern QString  oldfilename;   
-extern int  current_page;  
-extern time_t  mtime; 	  
-extern struct document *doc;  
-extern struct document *olddoc;
-extern Atom gs_colors, ghostview, next, gs_page, done;
-extern Bool busy;
-extern int  interpreter_input;
-
-extern Display *gs_display;
-extern Window gs_window;
-extern Window clipWindow;
-extern Window mwin;
-
-
 struct record_list {
     FILE *fp;
     long begin;
@@ -105,6 +88,14 @@ public:
 	KPSWidget(QWidget *parent);
 	~KPSWidget();
 	
+	
+	Atom 		gs_colors, ghostview, next, gs_page, done;
+	Display 	*gs_display;
+	Window 		gs_window;
+	Bool 		busy;
+	Window 		mwin;
+	
+	
 	Bool sendPS(FILE *fp, long begin,unsigned int len,Bool close);
 	void layout();
 	void disableInterpreter();
@@ -113,15 +104,25 @@ public:
 	Bool isInterpreterRunning();
 	Bool nextPage();
 	
+	QWidget *fullView;
+	QScrollBar *vertScrollBar;
+	QScrollBar *horScrollBar;
+	QWidget *patch;
+	
+	MessagesDialog *messages;
+	
 	void scrollLeft();
 	void scrollRight();
 	void scrollUp();
 	void scrollDown();
 	void scrollTop();
 	
+	void movePage();
+	
 	int orient_angle;
 	int orientation;
 	Bool	antialias;
+	Bool show_messages;
 	Bool	changed;
 	Bool disable_start;
 	QString filename;
@@ -131,14 +132,13 @@ public:
 	float xdpi, ydpi;
 		
 public slots:
-  void gs_input();
-  void slotVertScroll( int value );
-  void slotHorScroll( int value );
+	void gs_input();
+	void gs_output(int source);
+	void slotVertScroll( int value );
+	void slotHorScroll( int value );
   
 protected:
-	void paintEvent(QPaintEvent *);
 	void resizeEvent(QResizeEvent *);
-	void timerEvent(QTimerEvent *);
 	
 	void setup();
 	void startInterpreter();
@@ -147,10 +147,11 @@ protected:
 	Bool computeSize();
 	
 private:
-	QSocketNotifier *sn;
-	QScrollBar *vertScrollBar;
-	QScrollBar *horScrollBar;
-	QWidget *fullView;
+	QSocketNotifier *sn_input;
+	QSocketNotifier *sn_output;
+	QSocketNotifier *sn_error;
+	
+	
 	
 	int clip_x, clip_y, clip_width, clip_height;
 	int scroll_x_offset, scroll_y_offset;

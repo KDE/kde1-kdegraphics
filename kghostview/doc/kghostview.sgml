@@ -1,0 +1,361 @@
+<!doctype linuxdoc system>
+
+<!-- The KGhostview Handbook.
+
+	 This could be considered a template for producing online help files for
+	 the K Desktop Environment.
+ -->
+
+<article>
+
+<!-- Title information -->
+
+<title>The KGhostview Handbook
+<author>Mark Donohoe, <tt/donohoe@kde.org/
+<date>v1.0, 22 May 1997
+
+<!-- Table of contents -->
+<toc>
+
+<!-- Begin the document -->
+
+
+<sect>Introduction
+
+<p>
+
+KGhostview is a port of Tim Theisen's Ghostview program for the K Desktop
+Environment. It is used to view documents that have been prepared in
+<bf/Adobe's/ PostScript page description language.  Documents are rendered
+by  <bf/Alladin's/ Ghostcript package and KGhostview simply displays the
+results of this rendering, allowing you to control the way the driver works.
+
+<p>
+
+PostScript is <bf/the/ page description language for printing on UNIX systems.
+KGhostview can be used to preview material intended for printing or for
+reading documents online.
+
+<p>
+
+If the document does not begin with &dquot ! &num PS-Adobe- &dquot , it does not claim conformance
+to the document structuring convention. When these documents are encountered,
+the functionality of KGhostview is limited to giving you scrollbars and a
+next page capability. Because there is no table of contents, skipping around
+the document and marking pages is impossible.
+
+<sect>Tutorial
+
+<sect>Onscreen Fundamentals
+
+<sect1>The KGhostview window
+
+<p>
+
+This section on onscreen fundamentals describes what you see in the main
+KGhostview window. The tools and text fields that help you to navigate a
+document may be hidden in order to give more space on the screen to the
+content area. 
+
+The next section describes a window's graphical elements. The subsequent section
+goes into more detail on button actions.
+
+You can open multiple KGhostview windows to view multiple documents. The
+window titlebar shows you the name of the document in that window.
+
+<sect1>Window Summary
+
+<p>
+<descrip>
+
+	<tag/Window title bar/
+
+	The name of a docuement is displayed in the window title bar.
+
+	<tag/Page display/
+
+	The content area displays a page of the current document. If the page is
+	too large to fit inside the window, scroll bars are automatically added to
+	the sides of the display.
+
+	<tag/Toolbar buttons/
+
+	Toolbar buttons activate the KGhostview features you'll most commonly
+	use. Click on the buttons to move through the document, to change the
+	view and to mark and print pages. You can choose to have the toolbar on
+	any side of the contents area. Click with the right mouse button on the
+	toolbar handle to select the position you want. You can also hide the
+	toolbar from the options menu.
+
+	<tag/Status bar /
+    
+	The status bar has four fields showing the current page, magnification
+	factor, orientation and file name of the document. You can choose to hide the
+	status bar from the options menu.
+</descrip>
+
+<sect1>Toolbar
+<p>
+<descrip>
+	<tag/Back/
+	
+	Moves one page back in the document.
+	
+	<tag/Forward/
+	
+	Moves one page forward in the document.
+	
+	<tag/Go to page/
+	
+	Lets you choose which page to display.
+	
+	<tag/View control/
+	
+	Lets you set the magnification, orientation and page size for the view of
+	your document.
+	
+	<tag/Print/
+	
+	Lets you print the document previewed in this KGhostview window.
+	
+	<tag/Mark/
+	
+	Marks (Unmarks) the current page. Used to select individual pages for
+	printing.
+	
+	<tag/Go to start/
+	
+	Goes to start of the document.
+	
+	<tag/Go to end/
+	
+	Goes to end of the document.
+	
+	<tag/Read down/
+	
+	Scrolls up the current page for convenient reading
+	of the document in chunks.
+	
+</descrip>
+
+<sect>Primary menu items
+
+<sect1>File
+<p>
+<descrip>
+	
+	<tag/New/
+	
+	Creates a new KGhostview window.
+	
+	<tag/Open .../
+	
+	Lets you select a file to open.
+	
+	<tag/Close/
+	
+	Closes the current KGhostview window.
+	
+	<tag/Print .../
+	
+	Lets you print the document previewed in this KGhostview window.
+
+	<tag/Entries 1. - 4./
+	
+	The last four opened documents are stored in these menu entries. Simply
+	select one of these to reopen that document.
+
+	<tag/Quit/
+	
+	Exits KGhostview, closing all the windows.
+</descrip>
+
+<sect1>View
+<p>
+<descrip>
+	<tag/Zoom in/
+	
+	Increases the magnification of the view of your document.
+	
+	<tag/Zoom out/
+	
+	Decreases the magnification of the view of your document.
+	
+	<tag/View control .../
+	
+	Lets you set the magnification, orientation and page size for the view of
+	your document.
+
+	<tag/Shrink wrap/
+	
+	Resizes the KGhostview window to neatly fit the width of the document. If
+	the document is too wide to fit on the screen then the KGhostview window
+	is stretched to the maximum possible width.
+
+	<tag/Redisplay/
+	
+	Renders the current page of your document again.
+	
+	<tag/Info .../
+	
+	Displays some basic information about your document.
+
+</descrip>
+
+<sect1>Go
+<p>
+
+<descrip>
+	<tag/Next page/
+	
+	Moves one page forward in the document.
+	
+	<tag/Previous page/
+	
+	Moves one page back in the document.
+	
+	<tag/Go to page .../
+	
+	Lets you choose which page to display.
+	
+	<tag/Go to start/
+	
+	Goes to the start of the document.
+	
+	<tag/Go to end/
+	
+	Goes to the end of the document.
+	
+	<tag/Read down/
+	
+	Scrolls up the current page for convenient reading
+	of the document in chunks.
+</descrip>
+
+<sect1>Options
+<p>
+<descrip>
+	<tag/Turn antialias off (on)/
+	
+	Antialiasing is a rendering technique that improves the appearance of
+	material to be viewed on low resolution devices like computer monitors.
+	Only recent versions of Ghostscript can do antialiasing. It is memory
+	intensive and if little memory is available the results are poor. 
+
+	<tag/Hide (Show) Ghostscript messages/
+	
+	Error messages or general output messages from Ghostscript can be
+	displayed by KGhostview. Select your preference here.
+
+	<tag/Hide (Show) toolbar/
+	
+	Toggle the toolbar on and off.
+	
+	<tag/Hide (Show) statusbar/
+	
+	Toggle the statusbar on and off.
+	
+	<tag/Configure key bindings ... /
+	
+	Lets you choose your own key bindings for the actions that KGhostview can
+	perform.
+
+	<tag/Configure drivers ... /
+	
+	Lets you choose a few options about how the Ghostscript driver should
+	work.
+
+	<tag/Save Options/
+	
+	Writes your set of preferences including the size of the KGhostview
+	window and the location of the toolbar to a configuration file. 
+
+</descrip>
+
+<sect1>Help
+<p>
+<descrip>
+	<tag/About kghostview/
+	
+	Simply tells you the program name, version number and address of the
+	author
+
+	<tag/Help for kghostview/
+	
+	Starts the KDE online help and loads in this handbook.
+
+</descrip>
+
+<sect>Dialog Boxes
+<p>
+<sect1>Print
+
+<p>
+
+The <bf/Printer Name/ can be entered in the appropriate text field to choose
+the destination to send your document. The <bf/Pages/ to be printed can be
+selected from the combo box. The options are
+
+<itemize>
+	<item>All
+	<item>Even
+	<item>Odd
+	<item>Marked
+</itemize>
+
+<sect1>View control
+
+<p>
+
+This dialog allows you to set the magnification factor, orientaion and media
+used for the view of your document. You can leave the dialog open and apply
+changes repeatedly.
+
+<descrip>
+	<tag/Magstep/
+
+	Select the magnification of the document from the combo box. Your can
+	scale a page from 20% to 300% from its default size.
+	
+	<tag/Orientation/
+	
+	The options are
+	
+	<itemize>
+	<item>Portrait
+	<item>Landscape
+	<item>Upside down
+	<item>Seascape
+	</itemize>
+	
+	<tag/Media/
+	
+	Media defined in the document appear at the start of the list.
+</descrip>
+
+<sect1>Info
+<p>
+
+Shows the file name, title and creation date of the document.
+
+<sect1>Go to page
+<p>
+
+Allows you to select the section and page number of the page you want to
+display.
+
+<sect1>Configure key bindings
+<p>
+
+Allows you to change the keys that are bound to KGhostview actions.
+
+<sect1>Configure Ghostscript
+
+<sect1>Gostscript messages
+<p>
+
+Displays error or general output messages from Ghostscript.
+
+<sect>Questions and answers
+<p>
+</article>

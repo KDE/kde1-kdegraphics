@@ -8,7 +8,7 @@
 #include "viewcontrol.moc"
 
 ViewControl::ViewControl( QWidget *parent, const char *name )
-	: QDialog( parent, name, TRUE )
+	: QDialog( parent, name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
 	
@@ -59,17 +59,25 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 
 	QPushButton* ok;
 	ok = new QPushButton( this );
-	ok->setGeometry( 130, 180, 60, 30 );
+	ok->setGeometry( 120, 180, 60, 30 );
 	ok->setText( "Apply" );
-	ok->setDefault(TRUE);
-	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
+	ok->setAutoDefault(TRUE);
+	connect( ok, SIGNAL(clicked()), SLOT(okClicked()) );
 
 	QPushButton* apply;
 	apply = new QPushButton( this );
-	apply->setGeometry( 195, 180, 60, 30 );
+	apply->setGeometry( 190, 180, 60, 30 );
 	apply->setText( "Cancel" );
+	apply->setAutoDefault(TRUE);
 	connect( apply, SIGNAL(clicked()), SLOT(reject()) );
 
 
 	resize( 260, 215 );
+	setMaximumSize( 260, 215 );
+	setMinimumSize( 260, 215 );
+}
+
+void ViewControl::okClicked()
+{
+	emit applyChanges();
 }

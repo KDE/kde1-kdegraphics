@@ -2,9 +2,11 @@
 #define KGHOSTVIEW_H
 
 #include "kpswidget.h"
+#include "info.h"
 #include "viewcontrol.h"
 #include "goto.h"
 #include "print.h"
+#include "ktopwidget.h"
 
 #include <stdlib.h>
 #include <math.h>
@@ -17,7 +19,6 @@
 #endif
 
 #include <qwidget.h>
-#include <qmenubar.h>
 #include <qlabel.h>
 #include <qstring.h>
 #include <qframe.h>
@@ -26,8 +27,6 @@
 #include <qbttngrp.h>
 #include <qgrpbox.h>
 #include <qaccel.h>
-
-#include <kpixmap.h>
 
 #define TOOLBAR_HEIGHT 26
 #define TOOLBAR_X_OFFSET 10
@@ -50,27 +49,15 @@
 
 enum {OPEN, PRINT_WHOLE, PRINT_MARKED, SAVE};
 
-extern FILE		*psfile;
-extern QString 	filename;	
-extern QString	oldfilename;	
-extern int		current_page;
-extern int pages_in_part[10];
-extern int num_parts;	
-extern time_t	mtime;		
-extern struct 	document *doc;	
-extern struct 	document *olddoc;
-extern Atom 	gs_colors, ghostview, next, gs_page, done;    
-extern Display 	*gs_display;
-extern Window 	gs_window;
-extern Window 	mwin;
-extern Bool busy;
-
-class KGhostview : public QWidget
+class KGhostview : public KTopLevelWidget
 {
     Q_OBJECT
 
 public:
-	KGhostview();
+	KGhostview( QWidget *parent=0, char *name=0 );
+	~KGhostview();
+
+	static QList <KGhostview> windowList;
 
 	Bool setup();
 	void show_page(int number);
@@ -83,19 +70,20 @@ public:
 	Bool set_new_orientation(int number);
 	Bool set_new_pagemedia( int number );
 	Bool set_new_magstep();
-	
+
 	void writeSettings();
+	void writeFileSettings();
 	void readSettings();
 	
-	void changeFonts(const QFont &newFont);
-	
-	void enableToolbarButton( int id, bool enable, QButtonGroup *toolbar );
-	void initToolBar();
+	void createToolbar();
+	void createMenubar();
+	void createStatusbar();
 	
 	KPSWidget *page;
 	
 	ViewControl *vc;
 	PrintDialog *pd;
+	InfoDialog *infoDialog;
 	
 	Bool force_pagemedia;
 	Bool force_orientation;
@@ -106,55 +94,95 @@ public:
 	void pscopydoc(FILE *fp);
 	void printStart();
 	
+	void bindKeys();
+	void changeMenuAccel( QPopupMenu *menu, int id, char *functionName );
+	void updateMenuAccel();
+	void changeFileRecord();
+	
+	FILE		*psfile;
+	QString 	filename;	
+	QString		oldfilename;	
+	int			current_page;
+	int 		pages_in_part[10];
+	int 		num_parts;
+	time_t		mtime;	
+	struct 		document *doc;	
+	struct 		document *olddoc;
+	
+	QString lastOpened[4];
+	
 public slots:
-	void apply_view_changes();
-	void scroll_down();
-	void scroll_up();
-	void scroll_left();
-	void scroll_right();
+
+	void applyViewChanges();
+	void scrollDown();
+	void scrollUp();
+	void scrollLeft();
+	void scrollRight();
 	void about();
 	void help();
-   void dummy();
-   void view_control();			
-   void next_page();
-   void prev_page();
-   void go_to_page();
-   void print();
-   void open_new_file();
-   void zoom_in();
-   void zoom_out();
-   void options_menu_activated(int item);
+	void dummy();
+	void viewControl();			
+	void nextPage();
+	void prevPage();
+	void goToPage();
+	void goToStart();
+	void goToEnd();
+	void print();
+	void openNewFile();
+	void zoomIn();
+	void zoomOut();
+	void optionsMenuActivated( int item );
+	void fileMenuActivated( int item );
+	void toolbarClicked( int item );
+	void configureKeybindings();
+	void shrinkWrap();
+	void redisplay();
+	void newWindow();
+	void closeWindow();
+	void info();
+	void configureGhostscript();
      
 protected:
-   void resizeEvent( QResizeEvent * );
+	void paletteChange( const QPalette & );
+   
 	
 private:
-	QMenuBar *menubar;
+
+	KMenuBar *menubar;
 	QPopupMenu *m_file;
 	QPopupMenu *m_view;
 	QPopupMenu *m_go;
 	QPopupMenu *m_options;
 	QPopupMenu *m_help;
 	
-	QButtonGroup *toolbar;
-	KPixmap toolbarPixmaps[18];
+	KToolBar *toolbar;
+	KStatusBar *statusbar;
 	
 	int topOffset, bottomOffset;
 	
-	int viewID;
+	int viewControlID;
 	int printID;
+	int openID;
+	int newWindowID;
+	int closeWindowID;
+	int quitID;
+	int zoomInID;
+	int zoomOutID;
 	int nextID;
 	int prevID;
-	int goID;
+	int goToPageID;
+	int goToStartID;
+	int goToEndID;
+	int readDownID;
 	int messagesID;
-	
-	
-	QFrame *frame;
-
-	QLabel *statusPageLabel;
-	QLabel *statusZoomLabel;
-	QLabel *statusOrientLabel;
-	QLabel *statusMiscLabel;
+	int helpID;
+	int shrinkWrapID;
+	int redisplayID;
+	int infoID;
+	int file1ID;
+	int file2ID;
+	int file3ID;
+	int file4ID;
 
 	Bool hide_toolbar;
 	Bool hide_statusbar;

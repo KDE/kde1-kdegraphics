@@ -1,0 +1,5 @@
+[KDE Desktop Entry]
+Type=Application
+Exec=kghostview %u
+DocPath=kghostview/kghostview.html
+Info=Previews PostScript documents

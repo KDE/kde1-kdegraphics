@@ -11,6 +11,10 @@ public:
 	QComboBox* mediaComboBox;
 	QComboBox* magComboBox;
 	QComboBox* orientComboBox;
+public slots:
+	void okClicked();
+signals:
+	void applyChanges();
 };
 
 #endif

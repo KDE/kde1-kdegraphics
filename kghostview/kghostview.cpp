@@ -1,10 +1,44 @@
+#define ID_NEXT 0
+#define ID_PREV 1
+#define ID_PAGE 2
+#define ID_ZOOM 3
+#define ID_PRINT 4
+#define ID_MARK 5
+#define ID_START 6
+#define ID_END 7
+#define ID_READ 8
 
-#include "kghostview.h"
-#include "kpushbt.h"
-#include <kapp.h>
+#define ID_LOCATION 0
+#define ID_MAGSTEP 1
+#define ID_ORIENTATION 2
+#define ID_FILENAME 3
+
+#define ID_ANTIALIAS 0
+#define ID_MESSAGES 1
+#define ID_TOOLBAR 2
+#define ID_STATUSBAR 3
+#define ID_CONFIGURE 4
+#define ID_GHOSTSCRIPT 5
+#define ID_SAVE 6
+
+#define ID_NEW_WINDOW 0
+#define ID_CLOSE_WINDOW 1
+#define ID_OPEN_FILE 2
+
+#define ID_FILE_A 5
+#define ID_FILE_B 6
+#define ID_FILE_C 7
+#define ID_FILE_D 8
+#define ID_FILE_QUIT 9
+
+
 #include <kmisc.h>
+#include "kghostview.h"
 
-#include <qmsgbox.h>
+#include <kkeyconf.h>
+#include <kapp.h>
+
+#include <kmsgbox.h>
 
 extern "C" {
 	#include "ps.h"
@@ -12,150 +46,112 @@ extern "C" {
 
 #include "kghostview.moc"
 
-KGhostview::KGhostview()
+int toolbar1;
+
+QList <KGhostview> KGhostview::windowList;
+
+KGhostview::KGhostview( QWidget *parent, char *name )
+	: KTopLevelWidget( name )
 {   
     //printf("KGhostview::KGhostview\n");
     
-    shrink_magsteps=5;
-	current_magstep=magstep=5;
-	expand_magsteps=5;
-	default_xdpi=75.0; default_ydpi=75.0;
-	default_pagemedia=0;
-	orientation=1;
-	force_orientation=False;
-	force_pagemedia=False;
-	current_llx=0;
-	current_lly=0;
-	current_urx=0;
-	current_ury=0;
-	
-	hide_toolbar=False;
-	hide_statusbar=False;
+    windowList.setAutoDelete( FALSE );
+    
+    // Initialise all the variables declared in this class.
+    // I ususally forget to do a few resulting in nasty seg. faults !
+    
+    oldfilename.sprintf("");
+	filename.sprintf("");
+	psfile=NULL;
+	doc=NULL;
+	olddoc=NULL;
+    
+    for(int file_count=0;file_count<4;file_count++) {
+    	lastOpened[file_count].sprintf("");
+    }
+    
+    current_page=0;
+    num_parts=0;
+    for(int part_count=0;part_count<10;part_count++) {
+    	pages_in_part[part_count]=0;
+    }
+    
+    shrink_magsteps = 10;
+	current_magstep = magstep = 10;
+	expand_magsteps = 10;
+	default_xdpi = 75.0;
+	default_ydpi = 75.0;
+	default_pagemedia = 1;
+	base_papersize=0;
+	orientation = 1;
+	force_orientation = FALSE;
+	force_pagemedia = FALSE;
+	current_llx = 0;
+	current_lly = 0;
+	current_urx = 0;
+	current_ury = 0;
+	hide_toolbar = FALSE;
+	hide_statusbar = FALSE;
     
     //
     // MENUBAR
     //
     
-    m_file = new QPopupMenu;
-    CHECK_PTR( m_file );
-    m_file->insertItem( "Open ...",  	this, SLOT(open_new_file()) );
-    printID = m_file->insertItem( "Print ...",  	this, SLOT(print()) );
-    m_file->insertItem( "Quit",  		qApp, SLOT(quit()) );
-    
-	m_view = new QPopupMenu;
-    CHECK_PTR( m_view );
-	m_view->insertItem( "Zoom in", 			this, SLOT(zoom_in()) );
-	m_view->insertItem( "Zoom out", 		this, SLOT(zoom_out()) );
-	viewID = m_view->insertItem( "View control ...", this, SLOT(view_control()) );
-	m_view->insertItem( "Redisplay", 		this, SLOT(dummy()) );
-	m_view->insertItem( "Info ...", 		this, SLOT(dummy()) );
-
-    m_go = new QPopupMenu;
-    CHECK_PTR( m_go );
-    nextID = m_go->insertItem( "Next page", 		this, SLOT(next_page()) );
-    prevID = m_go->insertItem( "Previous Page", 	this, SLOT(prev_page()) );
-    goID = m_go->insertItem( "Go to page ...", this, SLOT(go_to_page()) );
-    
-    m_options = new QPopupMenu;
-    CHECK_PTR( m_options );
-    
-    m_options->insertItem("");
-    messagesID = m_options->insertItem( "Show Ghostscript messages" );
-    m_options->insertItem("");
-    m_options->insertItem("");
-    m_options->insertItem("");
-    
-    m_options->insertSeparator();
-    m_options->insertItem("Save Options");
-    
-    connect(m_options, SIGNAL(activated(int)), SLOT(options_menu_activated(int)));
-    
-    m_help = new QPopupMenu;
-    CHECK_PTR( m_help );
-	m_help->insertItem( "About this ...", this, SLOT(about()) );
-	m_help->insertItem( "Kghostview help", this, SLOT(help()) );
-	
-    menubar = new QMenuBar( this );
-    CHECK_PTR( menubar );
-    
-    /*  
-    
-    menubar->setFrameStyle( QFrame::Box | QFrame::Sunken );
-    menubar->setMidLineWidth(0);
-    menubar->setLineWidth(1);
-    
-    No more Office 97 style menubar
-    
-    */
-    
-    menubar->insertItem( "&File", m_file );
-    menubar->insertItem( "&View", m_view );
-    menubar->insertItem( "&Go", m_go );
-    menubar->insertItem( "&Options", m_options);
-    menubar->insertSeparator();
-    menubar->insertItem( "&Help", m_help);
-	
-	m_file->setItemEnabled(printID, False);
-	m_go->setItemEnabled(nextID, False);
-	m_go->setItemEnabled(prevID, False);
-	m_go->setItemEnabled(goID, False);
-	m_view->setItemEnabled(viewID, False);
-	
+	createMenubar();
 	
 	//
 	// TOOLBAR
 	//
 	
-	initToolBar();
+	createToolbar();
 	
 	//
     // MAIN WINDOW
     //
-	
-	frame = new QFrame( this );
-	CHECK_PTR( frame );
-    frame ->setFrameStyle( QFrame::Panel | QFrame::Sunken);
-    frame ->setLineWidth(2);
     
-    page = new KPSWidget(this);
+    //printf("Done toolbar - Create KPSWidget\n");
+    
+    page = new KPSWidget( this );
     CHECK_PTR( page );
-    		
+    
+    // Register page widget with KTopLevelWidget
+    
+    setView( page );
+    
+    //printf("Done pswidget - Create statusbar\n");
+    
     //
     // STATUSBAR
     //
     
+    createStatusbar();
     
-    statusPageLabel = new QLabel( this, "statusPageLabel" );
-    CHECK_PTR( statusPageLabel );
-    statusPageLabel->setFrameStyle( QFrame::Panel | QFrame::Sunken );
-    statusPageLabel->setAlignment( AlignLeft|AlignVCenter );
-    
-    statusZoomLabel = new QLabel( this, "statusZoomLabel" );
-    CHECK_PTR( statusZoomLabel );
-    statusZoomLabel->setFrameStyle( QFrame::Panel | QFrame::Sunken );
-    statusZoomLabel->setAlignment( AlignLeft|AlignVCenter );
-    
-    statusOrientLabel = new QLabel( this, "statusOrientLabel" );
-    CHECK_PTR( statusOrientLabel );
-    statusOrientLabel->setFrameStyle( QFrame::Panel | QFrame::Sunken );
-    statusOrientLabel->setAlignment( AlignLeft|AlignVCenter );
-    
-    statusMiscLabel = new QLabel( this, "statusMiscLabel" );
-    CHECK_PTR( statusMiscLabel );
-    statusMiscLabel->setFrameStyle( QFrame::Panel | QFrame::Sunken );
-    statusMiscLabel->setAlignment( AlignLeft|AlignVCenter );
+    //
+  	//	INFO DIALOG
+  	//
   
+  	//printf("Do info dialog\n");
+  
+  	infoDialog = new InfoDialog( 0, "info dialog" );
+  	infoDialog->setCaption("Information");
+  	
   	//
   	//	PRINTING DIALOG
   	//
   
 	pd = new PrintDialog( 0, "print dialog" );
+	pd->setCaption("Print");
 	
 	//
 	//	VIEWCONTROL DIALOG
 	//
 	
-	vc = new ViewControl( 0, "view control" );
+	vc = new ViewControl( 0 , "view control" );
+	vc->setCaption("View control");
+	connect(vc, SIGNAL( applyChanges() ), this, SLOT( applyViewChanges() ));
+	
+	// Build the combo box menu for magnification steps.
+	
 	int i;
 	for (i = 1; i <= shrink_magsteps; i++) {
 		char buf[16];
@@ -171,54 +167,465 @@ KGhostview::KGhostview()
 	}
 	
 	//
-	//	READ SETTINGS AND SET OPTIONS MENU
+	//	READ SETTINGS AND SET OPTIONS MENU, SET LAST OPENED FILES
 	//
 	
 	readSettings();
 	
 	if ( page->antialias )
-    	m_options->changeItem( "Turn antialiasing off", 0 );
+    	m_options->changeItem( "Turn antialiasing off", ID_ANTIALIAS );
     else
-    	m_options->changeItem( "Turn antialiasing on", 0 );
-    
-    if ( fitWindow )
-    	m_options->changeItem( "Allow window resizing", 2 );
-    else
-    	m_options->changeItem( "Fit window to page", 2 );
+    	m_options->changeItem( "Turn antialiasing on", ID_ANTIALIAS );
     	
     if ( hide_toolbar )	
-    	m_options->changeItem( "Show tool bar", 3 );
+    	m_options->changeItem( "Show tool bar", ID_TOOLBAR );
     else
-    	m_options->changeItem( "Hide tool bar", 3 );
+    	m_options->changeItem( "Hide tool bar", ID_TOOLBAR );
     	
     if ( hide_statusbar )
-    	m_options->changeItem( "Show status bar", 4 );
+    	m_options->changeItem( "Show status bar", ID_STATUSBAR );
     else
-    	m_options->changeItem( "Hide status bar", 4 );
+    	m_options->changeItem( "Hide status bar", ID_STATUSBAR );
+    	
+    if ( page->show_messages )
+    	m_options->changeItem( "Hide Ghostscript messages", ID_MESSAGES );
+    else
+    	m_options->changeItem( "Show Ghostscript messages", ID_MESSAGES );
+    	
+    changeFileRecord();
 	
 	//
-	//	HARDCODE KEYBOARD ACCELERATORS
+	//	RESIZE AND DISPLAY
 	//
-	
-	 QAccel *a = new QAccel( this );
-	     
-     a->connectItem( a->insertItem(Key_Q+CTRL), qApp, SLOT( quit() ) );
-     a->connectItem( a->insertItem(Key_G+CTRL), this, SLOT( go_to_page() ) );
-     a->connectItem( a->insertItem(Key_Plus), this, SLOT( zoom_in() ) );
-     a->connectItem( a->insertItem(Key_Minus), this, SLOT( zoom_out() ) );
-     a->connectItem( a->insertItem(Key_Next), this, SLOT( next_page() ) );
-     a->connectItem( a->insertItem(Key_Prior), this, SLOT( prev_page() ) );
-     a->connectItem( a->insertItem(Key_Up), this, SLOT( scroll_up() ) );
-     a->connectItem( a->insertItem(Key_Down), this, SLOT( scroll_down() ) );
-     a->connectItem( a->insertItem(Key_Left), this, SLOT( scroll_left() ) );
-     a->connectItem( a->insertItem(Key_Right), this, SLOT( scroll_right() ) );
-     
-     //
-     //	RESIZE
-     //
-     
-     resize( options_width, options_height );
+
+	resize( options_width, options_height );
+	show();
 }
+
+KGhostview::~KGhostview()
+{
+	windowList.removeRef(this);
+}
+
+void KGhostview::bindKeys()
+{    
+    // create the KKeyCode object
+    
+    if(  this == KGhostview::windowList.first() ) {
+    
+	initKKeyConfig( kapp->getConfig() );
+
+	// create functionName/keyCode association
+	
+	kKeys->addKey("Quit", "CTRL+Q");
+	kKeys->addKey("Open", "CTRL+O");
+	kKeys->addKey("New", "CTRL+N");
+	kKeys->addKey("Close", "CTRL+W");
+	kKeys->addKey("Print", "CTRL+P");
+	kKeys->addKey("Help", "F1");
+	kKeys->addKey("View Control", "CTRL+L");
+	kKeys->addKey("Go To Page", "CTRL+G");
+	kKeys->addKey("Zoom In", "Plus");     
+	kKeys->addKey("Zoom Out", "Minus"); 
+	kKeys->addKey("Next Page", "Next");
+	kKeys->addKey("Prev Page", "Prior");
+	kKeys->addKey("Scroll Up", "Up");
+	kKeys->addKey("Scroll Down", "Down");
+	kKeys->addKey("Scroll Left", "Left");
+	kKeys->addKey("Scroll Right", "Right");
+	kKeys->addKey("Redisplay", "CTRL+R");
+	kKeys->addKey("Information", "CTRL+I");  
+	
+	}    
+
+	// Register the main widget
+	
+	int window_count=0;
+	QString widgetName;
+	for ( KGhostview *kg_temp = KGhostview::windowList.first(); kg_temp!=NULL;
+		kg_temp=KGhostview::windowList.next() )
+	{
+	
+	window_count++;
+	if( kg_temp == this )
+		break;
+	
+	}
+
+	widgetName.sprintf( "kg%d", window_count);
+	
+	kKeys->registerWidget(widgetName.data(), this);
+
+	KGhostview *kg_temp = this;
+	
+	// define the connection for the main widget
+	
+	kKeys->connectFunction( widgetName.data(), "Quit",
+							qApp, SLOT( quit() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Open",
+								kg_temp, SLOT( openNewFile() ) );
+	
+	kKeys->connectFunction( widgetName.data(), "New",
+								kg_temp, SLOT( newWindow() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Close",
+								kg_temp, SLOT( closeWindow() ) );
+	
+	kKeys->connectFunction( widgetName.data(), "Print",
+								kg_temp, SLOT( print() ) );
+	
+	kKeys->connectFunction( widgetName.data(), "Help",
+								kg_temp, SLOT( help() ) );
+	
+	kKeys->connectFunction( widgetName.data(), "View Control",
+								kg_temp, SLOT( viewControl() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Go To Page",
+								kg_temp, SLOT( goToPage() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Zoom In",
+								kg_temp, SLOT( zoomIn() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Zoom Out",
+								kg_temp, SLOT( zoomOut() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Next Page",
+								kg_temp, SLOT( nextPage() ) );
+	
+	kKeys->connectFunction( widgetName.data(), "Prev Page",
+								kg_temp, SLOT( prevPage() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Scroll Up",
+								kg_temp, SLOT( scrollUp() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Scroll Down",
+								kg_temp, SLOT( scrollDown() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Scroll Left",
+								kg_temp, SLOT( scrollLeft() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Scroll Right",
+								kg_temp, SLOT( scrollRight() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Redisplay",
+								kg_temp, SLOT( redisplay() ) );
+								
+	kKeys->connectFunction( widgetName.data(), "Information",
+								kg_temp, SLOT( info() ) );
+								
+}
+
+void KGhostview::info()
+{
+	infoDialog->fileLabel->setText(filename);
+	if( doc ) {
+		infoDialog->titleLabel->setText(doc->title);
+		infoDialog->dateLabel->setText(doc->date);
+	} else {
+		infoDialog->titleLabel->setText("");
+		infoDialog->dateLabel->setText("");
+	}
+		
+	if( !infoDialog->isVisible() ) {
+		infoDialog->show();
+		infoDialog->ok->setFocus();
+	}
+}
+
+void KGhostview::configureGhostscript()
+{}
+
+void KGhostview::configureKeybindings()
+{
+	kKeys->configureKeys( this );
+	updateMenuAccel();
+}
+
+void KGhostview::updateMenuAccel()
+{
+	changeMenuAccel( m_file, ID_PRINT, "Print" );
+	changeMenuAccel( m_file, ID_OPEN_FILE, "Open" );
+	changeMenuAccel( m_file, ID_NEW_WINDOW, "New" );
+	changeMenuAccel( m_file, ID_CLOSE_WINDOW, "Close" );
+	changeMenuAccel( m_file, ID_FILE_QUIT, "Quit" );
+	changeMenuAccel( m_view, zoomInID, "Zoom In" );
+	changeMenuAccel( m_view, zoomOutID, "Zoom Out" );
+	changeMenuAccel( m_view, viewControlID, "View Control" );
+	changeMenuAccel( m_view, redisplayID, "Redisplay" );
+	changeMenuAccel( m_view, infoID, "Information" );
+	changeMenuAccel( m_go, nextID, "Next Page" );
+	changeMenuAccel( m_go, prevID, "Prev Page" );
+	changeMenuAccel( m_go, goToPageID, "Go To Page" );
+	changeMenuAccel( m_help, helpID, "Help" );
+}
+
+void KGhostview::changeMenuAccel ( QPopupMenu *menu, int id,
+	char *functionName )
+{
+	QString s = menu->text( id );
+	if ( !s ) return;
+	
+	int i = s.find('\t');
+	
+	QString k = keyToString( kKeys->readCurrentKey( functionName ) );
+	if( !k ) return;
+	
+	if ( i >= 0 )
+		s.replace( i+1, s.length()-i, k );
+	else {
+		s += '\t';
+		s += k;
+	}
+	
+	menu->changeItem( s, id );
+}
+
+void KGhostview::createMenubar()
+{
+ 	m_file = new QPopupMenu;
+    CHECK_PTR( m_file );
+    m_file->insertItem( "New", ID_NEW_WINDOW );
+    m_file->insertItem( "Open ...", ID_OPEN_FILE);
+    m_file->insertItem( "Close", ID_CLOSE_WINDOW);
+    m_file->insertSeparator();
+    m_file->insertItem( "Print ...", ID_PRINT );
+    m_file->insertSeparator();
+    m_file->insertItem( "1.", ID_FILE_A );
+    m_file->insertItem( "2.", ID_FILE_B );
+    m_file->insertItem( "3.", ID_FILE_C );
+    m_file->insertItem( "4.", ID_FILE_D );
+    m_file->insertSeparator();
+    m_file->insertItem( "Quit", ID_FILE_QUIT );
+    
+    connect( m_file, SIGNAL( activated( int ) ), this, 
+    	SLOT( fileMenuActivated( int ) ) );
+    
+	m_view = new QPopupMenu;
+    CHECK_PTR( m_view );
+    zoomInID =
+	m_view->insertItem( "Zoom in", this, SLOT( zoomIn()) );
+	zoomOutID =
+	m_view->insertItem( "Zoom out", this, SLOT( zoomOut() ) );
+	viewControlID =
+	m_view->insertItem( "View control ...", this, SLOT( viewControl() ) );
+	m_view->insertSeparator();
+	shrinkWrapID = 
+	m_view->insertItem( "Shrink wrap", this, SLOT( shrinkWrap() ) );
+	redisplayID =
+	m_view->insertItem( "Redisplay", this, SLOT( redisplay() ) );
+	infoID =
+	m_view->insertItem( "Info ...", this, SLOT( info() ) );
+
+    m_go = new QPopupMenu;
+    CHECK_PTR( m_go );
+    nextID =
+    m_go->insertItem( "Next page", this, SLOT( nextPage() ) );
+    prevID =
+    m_go->insertItem( "Previous Page", this, SLOT( prevPage() ) );
+    goToPageID =
+    m_go->insertItem( "Go to page ...", this, SLOT( goToPage() ) );
+    m_go->insertSeparator();
+    goToStartID =
+    m_go->insertItem( "Go to start", this, SLOT( goToStart() ) );
+    goToEndID =
+    m_go->insertItem( "Go to end", this, SLOT( goToEnd() ) );
+    readDownID =
+    m_go->insertItem( "Read down", this, SLOT( dummy() ) );
+    
+  
+    m_options = new QPopupMenu;
+    CHECK_PTR( m_options );
+    
+    // I make the options menu here but don't set the entries until
+    // I've read the config file.
+    
+    m_options->insertItem("", ID_ANTIALIAS);
+    m_options->insertItem( "Show Ghostscript messages", ID_MESSAGES );
+    m_options->insertItem("", ID_TOOLBAR);
+    m_options->insertItem("", ID_STATUSBAR);
+    m_options->insertItem("Configure key bindings ...", ID_CONFIGURE);
+    m_options->insertItem("Configure Ghostscript ...", ID_GHOSTSCRIPT);
+    m_options->insertSeparator();
+    m_options->insertItem("Save Options", ID_SAVE);
+    
+    connect( m_options, SIGNAL( activated(int) ),
+    			SLOT( optionsMenuActivated(int) ) );
+    
+    m_help = new QPopupMenu;
+    CHECK_PTR( m_help );
+	m_help->insertItem( "About kghostview", this, SLOT( about() ) );
+	helpID = 
+	m_help->insertItem( "Help for kghostview", this, SLOT( help() ) );
+	
+    menubar = new KMenuBar( this );
+    CHECK_PTR( menubar );
+    
+    menubar->insertItem( "&File", m_file );
+    menubar->insertItem( "&View", m_view );
+    menubar->insertItem( "&Go", m_go );
+    menubar->insertItem( "&Options", m_options);
+    menubar->insertSeparator();
+    menubar->insertItem( "&Help", m_help);
+	
+	m_file->setItemEnabled(ID_PRINT, FALSE);
+	//m_file->setItemEnabled(ID_NEW_WINDOW, FALSE);
+	//m_file->setItemEnabled(ID_CLOSE_WINDOW, FALSE);
+	m_go->setItemEnabled(nextID, FALSE);
+	m_go->setItemEnabled(prevID, FALSE);
+	m_go->setItemEnabled(goToPageID, FALSE);
+	m_go->setItemEnabled(goToStartID, FALSE);
+	m_go->setItemEnabled(goToEndID, FALSE);
+	m_go->setItemEnabled(readDownID, FALSE);
+	m_view->setItemEnabled(viewControlID, FALSE);
+	m_view->setItemEnabled(zoomInID, FALSE);
+	m_view->setItemEnabled(zoomOutID, FALSE);
+	m_view->setItemEnabled(shrinkWrapID, FALSE);
+	m_view->setItemEnabled(redisplayID, FALSE);
+	m_view->setItemEnabled(infoID, FALSE);
+	
+	// Register menubar with KTopLevelWidget layout manager
+	
+	setMenu( menubar );
+}
+
+void KGhostview::fileMenuActivated( int item )
+{
+	switch( item ) {
+		case ID_NEW_WINDOW:
+			newWindow();
+			break;
+			
+		case ID_CLOSE_WINDOW:
+			closeWindow();
+			break;
+			
+		case ID_OPEN_FILE:
+			openNewFile();
+			break;
+			
+		case ID_PRINT:
+			print();
+			break;
+			
+		case ID_FILE_A:
+			open_file( lastOpened[0] );
+			break;
+			
+		case ID_FILE_B:
+			open_file( lastOpened[1] );
+			break;
+			
+		case ID_FILE_C:
+			open_file( lastOpened[2] );
+			break;
+			
+		case ID_FILE_D:
+			open_file( lastOpened[3] );
+			break;
+			
+		case ID_FILE_QUIT:
+			qApp->quit();
+	}
+}
+
+void KGhostview::createToolbar()
+{
+	//printf("KGhostview::createToolbar\n");
+
+	// Read environment for location of KDE and set pixmap directory
+
+	QString PIXDIR = "";
+	char *kdedir = getenv("KDEDIR");
+	if(kdedir)
+		PIXDIR.append(kdedir);
+	else
+		PIXDIR.append("/usr/local/kde");
+	PIXDIR.append("/lib/pics/toolbar/");
+
+	//printf("Read environemnt\n");
+
+	// Create the toolbar
+
+	KPixmap pixmap;
+	toolbar = new KToolBar( this );
+
+	pixmap.load(PIXDIR + "back.xpm");
+	toolbar->insertItem(pixmap, ID_PREV, FALSE, "Go back");
+
+	pixmap.load(PIXDIR + "forward.xpm");
+	toolbar->insertItem(pixmap, ID_NEXT, FALSE, "Go forward");
+
+	pixmap.load(PIXDIR + "page.xpm");
+	toolbar->insertItem(pixmap, ID_PAGE, FALSE, "Go to page ...");
+
+	toolbar->insertSeparator();
+
+	pixmap.load(PIXDIR + "viewzoom.xpm");
+	toolbar->insertItem(pixmap, ID_ZOOM, FALSE, "Change view ...");
+
+	toolbar->insertSeparator();
+
+	pixmap.load(PIXDIR + "fileprint.xpm");
+	toolbar->insertItem(pixmap, ID_PRINT, FALSE, "Print document");
+
+	pixmap.load(PIXDIR + "tick.xpm");
+	toolbar->insertItem(pixmap, ID_MARK, FALSE, "Mark this page");
+
+	toolbar->insertSeparator();
+
+	pixmap.load(PIXDIR + "start.xpm");
+	toolbar->insertItem(pixmap, ID_START, FALSE, "Go to start");
+
+	pixmap.load(PIXDIR + "finish.xpm");
+	toolbar->insertItem(pixmap, ID_END, FALSE, "Go to end");
+
+	pixmap.load(PIXDIR + "next.xpm");
+	toolbar->insertItem(pixmap, ID_READ, FALSE, "Read down the page");
+
+	// Register toolbar with KTopLevelWidget layout manager
+	
+	//printf("Inserted all buttons\n");
+
+	toolbar1 = addToolbar( toolbar );
+	
+	//printf("Registered with ktopwidget\n");
+	
+	toolbar->setPos( KToolBar::Top );
+	toolbar->show();
+	
+	//printf("Connect toolbar\n");
+	
+	connect(toolbar, SIGNAL( clicked( int ) ), this,
+						SLOT( toolbarClicked( int ) ) );
+						
+	//printf("Done\n");
+}
+
+
+void KGhostview::createStatusbar()
+{   
+    //printf("KGhostview::createStatusbar\n");
+    
+    statusbar = new KStatusBar( this );
+    statusbar->insertItem("Sc.100 of 100  P.100 of 100", ID_LOCATION);
+    statusbar->insertItem("100 %", ID_MAGSTEP);
+    statusbar->insertItem("Upside Down", ID_ORIENTATION);
+    statusbar->insertItem("", ID_FILENAME);
+    
+    statusbar->changeItem("", ID_LOCATION);
+    statusbar->changeItem("", ID_MAGSTEP);
+    statusbar->changeItem("", ID_ORIENTATION);
+    
+    statusbar->show();
+    
+    // Register status bar with KTopLevelWidget layout manager
+    
+    setStatusBar( statusbar );
+    
+    //printf("done\n");
+}
+
 
 void KGhostview::readSettings()
 {
@@ -236,26 +643,23 @@ void KGhostview::readSettings()
 	else
 		page->antialias = FALSE;
 		
-	str = config->readEntry( "Fit to window" );
-	if ( !str.isNull() && str.find( "yes" ) == 0 )
-		fitWindow = TRUE;
+	str = config->readEntry( "Messages" );
+	if ( !str.isNull() && str.find( "on" ) == 0 )
+		page->show_messages = TRUE;
 	else
-		fitWindow = FALSE;
+		page->show_messages = FALSE;
 	
 	str = config->readEntry( "Statusbar" );
 	if ( !str.isNull() && str.find( "off" ) == 0 ) {
 		hide_statusbar = TRUE;
-		statusPageLabel->hide();
-		statusZoomLabel->hide();
-		statusOrientLabel->hide();
-		statusMiscLabel->hide();
+		enableStatusBar( KStatusBar::Toggle );
 	} else
 		hide_statusbar = FALSE;
 	
 	str = config->readEntry( "Toolbar" );
 	if ( !str.isNull() && str.find( "off" ) == 0 ) {
 		hide_toolbar = TRUE;
-		toolbar->hide();
+		enableToolBar( KToolBar::Toggle, toolbar1 );
 	} else
 		hide_toolbar = FALSE;
 	
@@ -270,22 +674,129 @@ void KGhostview::readSettings()
 		options_height = atoi( str );
 	else
 		options_height = 400;
-	
-	/*
-	
-	if ( !str.isNull() )
-		saverLocation = str;
-	else
-	{
-		char *pKDE = getenv( "KDEDIR" );
-		if ( pKDE )
-		{
-			saverLocation = pKDE;
-			saverLocation += "/bin";
+		
+	str = config->readEntry( "Magstep" );
+	if ( !str.isNull() ) {
+		int i = atoi( str );
+		if( i<20 && i>0 ) { 
+			//printf("Set new magstep in read Settings\n");
+			magstep = i;
+			set_new_magstep( );
 		}
 	}
 	
-	*/
+	str = config->readEntry( "Orientation" );
+	if ( !str.isNull() ) {
+		int i = atoi( str );
+		if( i<4 && i>0 ) { 
+			set_new_orientation(i);
+		}
+	}
+	
+	str = config->readEntry( "Toolbar position" );
+	if ( !str.isNull() ) {
+		if( str == "Left" ) {
+			toolbar->setPos( KToolBar::Left );
+		} else if( str == "Right" ) {
+			toolbar->setPos( KToolBar::Right );
+		} else if( str == "Bottom" ) {
+			toolbar->setPos( KToolBar::Bottom );
+		} else
+			toolbar->setPos( KToolBar::Top );
+	}
+		
+	config->setGroup( "Last Opened" );
+	str = config->readEntry( "File 1" );
+	if ( !str.isNull() )
+		lastOpened[0].sprintf( str );
+	else
+		lastOpened[0].sprintf("");
+		
+	str = config->readEntry( "File 2" );
+	if ( !str.isNull() )
+		lastOpened[1].sprintf( str );
+	else
+		lastOpened[1].sprintf("");
+		
+	str = config->readEntry( "File 3" );
+	if ( !str.isNull() )
+		lastOpened[2].sprintf( str );
+	else
+		lastOpened[2].sprintf("");
+		
+	str = config->readEntry( "File 4" );
+	if ( !str.isNull() )
+		lastOpened[3].sprintf( str );
+	else
+		lastOpened[3].sprintf("");
+}
+
+void KGhostview::shrinkWrap()
+{
+	int new_width=0;
+	
+	if ( !psfile ) return;
+	
+	new_width=page->fullView->width()+(x()+width()-view_right)+(view_left-x())+6;
+	if( page->vertScrollBar->isVisible() )
+		new_width+=page->vertScrollBar->width();
+		
+	QWidget *d = QApplication::desktop();
+    int w=d->width()-10; 	
+	if( new_width > w )
+		new_width = w;
+			
+	resize( new_width, height() );
+}
+
+void KGhostview::paletteChange( const QPalette & )
+{
+	if( psfile )
+		redisplay();
+}
+
+void KGhostview::newWindow()
+{
+	KGhostview *kg = new KGhostview ();
+	kg->resize(width(), height());
+	
+	windowList.append( kg );
+
+	kg->setMinimumSize( 250, 250 );
+	kg->setCaption( "KGhostview: Version 0.4" );
+	kg->bindKeys();
+	kg->updateMenuAccel();
+}
+
+void KGhostview::closeWindow()
+{
+	if ( windowList.count() > 1 ) {
+		close( TRUE );
+		for ( KGhostview *kg = windowList.first(); kg!=NULL;
+				kg = windowList.next() )
+			kg->page->disableInterpreter();
+	} else
+		qApp->quit();
+}
+
+void KGhostview::redisplay()
+{
+	page->disableInterpreter();
+	show_page( current_page );
+}
+
+void KGhostview::writeFileSettings()
+{
+	//printf("KGhostview::writeFileSettings\n");
+
+	KConfig *config = KApplication::getKApplication()->getConfig();
+	
+	config->setGroup( "Last Opened" );
+
+	config->writeEntry( "File 1", lastOpened[0] );
+	config->writeEntry( "File 2", lastOpened[1] );
+	config->writeEntry( "File 3", lastOpened[2] );
+	config->writeEntry( "File 4", lastOpened[3] );
 }
 
 void KGhostview::writeSettings()
@@ -300,262 +811,88 @@ void KGhostview::writeSettings()
 	
 	config->setGroup( "General" );
 	
-	QString str1;
-	str1.setNum( width() );
-	config->writeEntry( "Width", str1 );
-	QString str2;
-	str2.setNum( height() );
-	config->writeEntry( "Height", str2 );
+	QString s;
+	s.setNum( width() );
+	config->writeEntry( "Width", s );
+	s.setNum( height() );
+	config->writeEntry( "Height", s );
+	config->writeEntry( "Antialiasing", page->antialias ? "on" : "off" );
+	config->writeEntry( "Statusbar", hide_statusbar ? "off" : "on" );
+	config->writeEntry( "Toolbar", hide_toolbar ? "off" : "on" );
+	config->writeEntry( "Messages", page->show_messages ? "on" : "off" );
+	s.setNum( magstep );
+	config->writeEntry( "Magstep", s );
+	s.setNum( orientation );
+	config->writeEntry( "Orientation", s );
+	
+	if ( toolbar->Pos() == KToolBar::Left )
+		s.sprintf("Left");
+	else if ( toolbar->Pos() == KToolBar::Right )
+		s.sprintf("Right");
+	else if ( toolbar->Pos() == KToolBar::Bottom )
+		s.sprintf("Bottom");
+	else
+		s.sprintf("Top");
 
-	config->writeEntry( "Antialiasing", 
-						page->antialias ? QString( "on" ) : QString( "off" ) );
-	config->writeEntry( "Fit to window", 
-						fitWindow ? QString( "yes" ) : QString( "no" ) );
-	config->writeEntry( "Statusbar", 
-						hide_statusbar ? QString( "off" ) : QString( "on" ) );
-	config->writeEntry( "Toolbar", 
-						hide_toolbar ? QString( "off" ) : QString( "on" ) );
+	config->writeEntry( "Toolbar position", s );
 
 	changed = FALSE;
 }
 
-void KGhostview::changeFonts(const QFont &newFont)
-{
-    //printf("KGhostview::changeFonts\n");
 
-	m_file->setFont(newFont);
-	m_view->setFont(newFont);
-	m_go->setFont(newFont);
-	m_options->setFont(newFont);
-	m_help->setFont(newFont);
-	menubar->setFont(newFont);
-}
-
-void KGhostview::enableToolbarButton(  int id, bool enable, QButtonGroup *toolbar )
-{
-    //printf("KGhostview::enableToolbarButton\n");
-
-    if ( toolbar == 0L )
-	return;
-    
-    //printf("+++++++++++++++++ 2\n");
-
-    if ( !toolbar->isA( "QButtonGroup" ) )
-	return;
-    
-    //printf("+++++++++++++++++ 1\n");
-    
-    QButtonGroup *grp = (QButtonGroup*) toolbar;
-    QButton *b = grp->find( id );
-
-        
-    b->setEnabled( enable );
-    b->setPixmap( toolbarPixmaps[ id*2 + (enable ? 0 : 1) ] );
-}
-
-void KGhostview::initToolBar()
-{
-    //printf("KGhostview::initToolBar\n");
-   
-	QString PIXDIR( PICS_PATH );
-   
-    toolbarPixmaps[0].load( PIXDIR+"back.xpm" );
-    toolbarPixmaps[1].load( PIXDIR+"back_gray.xpm" );
-    toolbarPixmaps[2].load( PIXDIR+"forward.xpm" );
-    toolbarPixmaps[3].load( PIXDIR+"forward_gray.xpm" );
-    toolbarPixmaps[4].load( PIXDIR+"page.xpm" );
-    toolbarPixmaps[5].load( PIXDIR+"page_gray.xpm" );
-    toolbarPixmaps[6].load( PIXDIR+"viewzoom.xpm" );
-    toolbarPixmaps[7].load( PIXDIR+"viewzoom_gray.xpm" );
-    toolbarPixmaps[8].load( PIXDIR+"fileprint.xpm" );
-    toolbarPixmaps[9].load( PIXDIR+"fileprint_gray.xpm" );
-    toolbarPixmaps[10].load( PIXDIR+"tick.xpm" );
-    toolbarPixmaps[11].load( PIXDIR+"tick.xpm" );
-    toolbarPixmaps[12].load( PIXDIR+"start.xpm" );
-    toolbarPixmaps[13].load( PIXDIR+"start_gray.xpm" );
-    toolbarPixmaps[14].load( PIXDIR+"finish.xpm" );
-    toolbarPixmaps[15].load( PIXDIR+"finish_gray.xpm" );
-    toolbarPixmaps[16].load( PIXDIR+"next.xpm" );
-    toolbarPixmaps[17].load( PIXDIR+"next_gray.xpm" );
- 
-    int	pos = 3, buttonWidth, buttonHeight;
-    KPushButton *pb;
-
-    buttonWidth = BUTTON_WIDTH;
-    buttonHeight = BUTTON_HEIGHT;
-
-    toolbar = new QButtonGroup( this );
-    	
-    toolbar->setGeometry( 0, menubar->frameGeometry().height()-1,
-    	20+9*buttonWidth+3*BUTTON_SEPARATION, 32 );
-    toolbar->setFrameStyle( QFrame::Panel | QFrame::Raised );
-    toolbar->setLineWidth(2);
-    
-    QFrame *decoration;
-    decoration = new QFrame(  toolbar );
-    decoration->setFrameStyle( QFrame::VLine | QFrame::Raised );
-    decoration->setMidLineWidth(1);
-    decoration->setGeometry( pos, 3, 4, toolbar->height()-8 );
-    pos+=4;
-    
-    decoration = new QFrame(  toolbar );;
-    decoration->setFrameStyle( QFrame::VLine | QFrame::Raised );
-    decoration->setMidLineWidth(1);
-    decoration->setGeometry( pos, 3, 4, toolbar->height()-8 );
-    pos+=9;
-    
-    int y_off;
-    y_off=(toolbar->height()-buttonHeight)/2;
-    
-    pb = new KPushButton( "Prev", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( prev_page() ) );
-    pos += buttonWidth ;
-    
-    pb = new KPushButton( "Next", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( next_page() ) );
-    pos += buttonWidth ;
-
-    pb = new KPushButton( "Page", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( go_to_page() ) );
-    pos += buttonWidth + BUTTON_SEPARATION ;
-
-	decoration = new QFrame(  toolbar );
-	decoration->setFrameStyle( QFrame::VLine | QFrame::Sunken );
-    decoration->setMidLineWidth(0);
-    decoration->setGeometry( pos-4, 2, 2, toolbar->height()-4 );
-
-    pb = new KPushButton( "View", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( view_control() ) );
-    pos += buttonWidth + BUTTON_SEPARATION;
-    
-    decoration = new QFrame(  toolbar );
-	decoration->setFrameStyle( QFrame::VLine | QFrame::Sunken );
-    decoration->setMidLineWidth(0);
-    decoration->setGeometry( pos-4, 2, 2, toolbar->height()-4 );
-    
-    pb = new KPushButton( "Print", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( print() ) );
-    pos += buttonWidth;
-    
-    pb = new KPushButton( "Mark", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( dummy() ) );
-    pos += buttonWidth+ BUTTON_SEPARATION;
-    
-    decoration = new QFrame(  toolbar );
-	decoration->setFrameStyle( QFrame::VLine | QFrame::Sunken );
-    decoration->setMidLineWidth(0);
-    decoration->setGeometry( pos-4, 2, 2, toolbar->height()-4 );
-    
-    pb = new KPushButton( "Prev", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( prev_page() ) );
-    pos += buttonWidth ;
-    
-    pb = new KPushButton( "Next", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( next_page() ) );
-    pos += buttonWidth ;
-
-    pb = new KPushButton( "Page", toolbar );
-    pb->setGeometry( pos, y_off, buttonWidth, buttonHeight );
-    connect( pb, SIGNAL( clicked() ), SLOT( go_to_page() ) );
-    pos += buttonWidth + BUTTON_SEPARATION ;
-    
-    enableToolbarButton( 0, FALSE, toolbar );
-    enableToolbarButton( 1, FALSE, toolbar );
-    enableToolbarButton( 2, FALSE, toolbar );
-    enableToolbarButton( 3, FALSE, toolbar );
-    enableToolbarButton( 4, FALSE, toolbar );
-    enableToolbarButton( 5, FALSE, toolbar );
-    enableToolbarButton( 6, FALSE, toolbar );
-    enableToolbarButton( 7, FALSE, toolbar  );
-    enableToolbarButton( 8, FALSE, toolbar  );
-
-    topOffset =
-    	menubar->frameGeometry().height() + toolbar->frameGeometry().height()
-    	+ 5;
-    
-}
-
-
-void KGhostview::resizeEvent(QResizeEvent *)
-{
-    //printf("KGhostview::resizeEvent\n");
-    
-    toolbar->setGeometry( 0, menubar->frameGeometry().height(),
-    20+9*BUTTON_WIDTH+3*BUTTON_SEPARATION, toolbar->height() );
-    
-    if(hide_toolbar)
-    	topOffset = menubar->frameGeometry().height()-2;
-    else
-    	topOffset =
-    		menubar->frameGeometry().height() +
-    		toolbar->frameGeometry().height()-2;
-
-	if(hide_statusbar)
-		bottomOffset =  0;
-	else
-		bottomOffset =  STATUSBAR_HEIGHT;
-		
-    frame->setGeometry(0, 
-    	topOffset,
-    	width(), height()-
-    	(topOffset+bottomOffset));
-    
-    page->setGeometry(frame->x()+2,frame->y()+2,frame->width()-4,frame->height()-4);
-    
-    statusPageLabel->setGeometry( PAGE_X_OFFSET,
-    	height()-STATUSBAR_HEIGHT, 
-    			STATUSBAR_PAGE_WIDTH, STATUSBAR_HEIGHT );
-    			
-    statusZoomLabel->setGeometry( 2*PAGE_X_OFFSET+STATUSBAR_PAGE_WIDTH,
-    	height()-STATUSBAR_HEIGHT,
-    			STATUSBAR_ZOOM_WIDTH, STATUSBAR_HEIGHT );
-    			
-   statusOrientLabel->setGeometry(
-   		3*PAGE_X_OFFSET+STATUSBAR_PAGE_WIDTH+STATUSBAR_ZOOM_WIDTH,
-    	height()-STATUSBAR_HEIGHT,
-    			STATUSBAR_ORIENT_WIDTH, STATUSBAR_HEIGHT ); 
-    	
-    statusMiscLabel->setGeometry(
-    	4*PAGE_X_OFFSET+
-    		STATUSBAR_PAGE_WIDTH+STATUSBAR_ZOOM_WIDTH+STATUSBAR_ORIENT_WIDTH,
-    	height()-STATUSBAR_HEIGHT, 
-    			width()-
-    				(4*PAGE_X_OFFSET+
-    					STATUSBAR_PAGE_WIDTH+
-    					STATUSBAR_ZOOM_WIDTH+STATUSBAR_ORIENT_WIDTH),
-    				STATUSBAR_HEIGHT );
-}
-
-//*********************************************************************************
 //
-//	SLOTS
+//	SLOTS UP NEXT
 //
-//*********************************************************************************
 
-void KGhostview::scroll_up()
+void KGhostview::toolbarClicked( int item )
+{
+	
+	//printf("toolbar callback\n");
+	switch ( item ) {
+  		case ID_PREV:
+  			prevPage();
+  			break;
+  		case ID_NEXT:
+  			nextPage();
+  			break;
+  		case ID_PAGE:
+  			goToPage();
+  			break;
+  		case ID_ZOOM:
+  			viewControl();
+  			break;
+  		case ID_PRINT:
+  			print();
+  			break;
+  		case ID_MARK:
+  			break;
+  		case ID_START:
+  			goToStart();
+  			break;
+  		case ID_END:
+  			goToEnd();
+  			break;
+  		case ID_READ:
+  			break;
+  	}
+}
+
+void KGhostview::scrollUp()
 {
 	page->scrollUp();
 }
 
-void KGhostview::scroll_down()
+void KGhostview::scrollDown()
 {
 	page->scrollDown();
 }
 
-void KGhostview::scroll_left()
+void KGhostview::scrollLeft()
 {
 	page->scrollLeft();
 }
 
-void KGhostview::scroll_right()
+void KGhostview::scrollRight()
 {
 	page->scrollRight();
 }
@@ -564,17 +901,24 @@ void KGhostview::help()
 {
 	if ( fork() == 0 )
 	{
-		QString path = DOCS_PATH;
-		path += "/kghostview.html";
+		QString path = "";
+		char* kdedir = getenv("KDEDIR");
+      	if (kdedir)
+			path.append(kdedir);
+     	 else
+		path.append("/usr/local/kde");
+      	path.append("/doc/HTML/kghostview");
+		path.append("/kghostview.html");
+		
 		execlp( "kdehelp", "kdehelp", path.data(), 0 );
 		exit( 1 );
 	}
 }
 
 
-void KGhostview::apply_view_changes()
+void KGhostview::applyViewChanges()
 {
-    //printf("KGhostview::apply_view_changes\n");
+    //printf("KGhostview::applyViewChanges\n");
 
 	int orient=1;
 	int selection;
@@ -583,15 +927,13 @@ void KGhostview::apply_view_changes()
 	selection = vc->orientComboBox->currentItem()+1;
 	switch(selection) {
 		case 1:	orient=1;
+				statusbar->changeItem( "Portrait", ID_ORIENTATION );
 				break;
-		case 2:	orient=4;
-				statusOrientLabel->setText( "Landscape" );
+		case 2:	orient=4;statusbar->changeItem( "Landscape", ID_ORIENTATION );
 				break;
-		case 3:	orient=3;
-				statusOrientLabel->setText( "Seascape" );
+		case 3:	orient=3;statusbar->changeItem( "Seascape", ID_ORIENTATION );
 				break;
-		case 4:	orient=2;
-				statusOrientLabel->setText( "Upside down" );
+		case 4:	orient=2;statusbar->changeItem( "Upside down", ID_ORIENTATION );
 				break;
 	}
 	force_orientation = True;
@@ -624,14 +966,21 @@ void KGhostview::apply_view_changes()
 	}
 }
 
-void KGhostview::go_to_page()
+void KGhostview::goToPage()
 {
-    //printf("KGhostview::go_to_page\n");
+    //printf("KGhostview::goToPage\n");
 
 	GoTo gt(0, "Go to");
 	gt.setCaption("Go to");
+	gt.current_page=current_page;
+	gt.num_parts=num_parts;
+	for( int i=0;i<10;i++) {
 	
+		gt.pages_in_part[i]=pages_in_part[i];
+	}
+	gt.init();
 	if( gt.exec() ) {
+		current_page=gt.current_page;
 		show_page(current_page);
 	}
 }
@@ -648,18 +997,20 @@ void KGhostview::print()
 }
 
 
-void KGhostview::view_control()
+void KGhostview::viewControl()
 {
-    //printf("KGhostview::view_control\n");
+    //printf("KGhostview::viewControl\n");
 
-	vc->setCaption("View control");
+	
 	vc->magComboBox->setCurrentItem(magstep-1);
 	
-	if( vc->exec() && doc )
-		apply_view_changes();
+	if( !vc->isVisible() ) {
+		vc->show();
+		vc->orientComboBox->setFocus();
+	}
 }
 
-void KGhostview::zoom_in()
+void KGhostview::zoomIn()
 {
 	int i;
 
@@ -669,7 +1020,7 @@ void KGhostview::zoom_in()
 	}
 }
 
-void KGhostview::zoom_out()
+void KGhostview::zoomOut()
 {
 	int i;
 
@@ -679,9 +1030,9 @@ void KGhostview::zoom_out()
 	}
 }
 
-void KGhostview::next_page()
+void KGhostview::nextPage()
 {
-    //printf("KGhostview::next_page\n");
+    //printf("KGhostview::nextPage\n");
 
     int new_page = 0;
 
@@ -694,9 +1045,34 @@ void KGhostview::next_page()
     page->scrollTop();
 }
 
-void KGhostview::prev_page()
+void KGhostview::goToStart()
 {
-    //printf("KGhostview::prev_page\n");
+    //printf("KGhostview::goToStart\n");
+
+    int new_page = 0;
+    
+    show_page(new_page);
+    page->scrollTop();
+}
+
+void KGhostview::goToEnd()
+{
+    //printf("KGhostview::goToEnd\n");
+
+    int new_page = 0;
+
+    if (toc_text) {
+	    new_page = doc->numpages;
+    }
+    
+    show_page(new_page);
+    page->scrollTop();
+}
+
+
+void KGhostview::prevPage()
+{
+    //printf("KGhostview::prevPage\n");
 
     int new_page = 0;
 	
@@ -709,9 +1085,9 @@ void KGhostview::prev_page()
     page->scrollTop();
 }
 
-void KGhostview::open_new_file()
+void KGhostview::openNewFile()
 {
-    printf("KGhostview::open_new_file\n");
+    //printf("KGhostview::openNewFile\n");
 	
 	QString dir;
 	if ( filename )
@@ -725,13 +1101,13 @@ void KGhostview::open_new_file()
 }
 
 
-void KGhostview::options_menu_activated(int item)
+void KGhostview::optionsMenuActivated( int item )
 {
-    //printf("KGhostview::options_menu_activated\n");
+    //printf("KGhostview::optionsMenuActivated\n");
     //printf("item= %d\n", item);
 
 	switch (item){
-  		case 0:
+  		case ID_ANTIALIAS:
   			if(page->antialias) {
   				page->antialias = FALSE;
   				m_options->changeItem("Turn antialiasing on", item);
@@ -740,46 +1116,57 @@ void KGhostview::options_menu_activated(int item)
   				page->antialias = TRUE;
   			}
 			page->disableInterpreter();
-			show_page(current_page);
+			if( psfile )
+				show_page(current_page);
 			break;
 
-		case 1:
-		case 2:
-			QMessageBox::message("Version 0.3", "Sorry, not ready yet" );
+		case ID_MESSAGES:
+			if(page->show_messages) {
+  				page->show_messages = FALSE;
+  				m_options->changeItem("Show Ghostscript messages", item);
+  			} else {
+  				m_options->changeItem("Hide Ghostscript messages", item);
+  				page->show_messages = TRUE;
+  			}
 			break;
-		case 3:
+			
+		case ID_TOOLBAR:
 			if(hide_toolbar) {
 				hide_toolbar=False;
-				toolbar->show();
-				resize( width(), height() );
+				enableToolBar( KToolBar::Toggle, toolbar1 );
+				//resize( width(), height() );
 				m_options->changeItem("Hide tool bar", item);
 			} else {
 				hide_toolbar=True;
-				toolbar->hide();
-				resize( width(), height() );
+				enableToolBar( KToolBar::Toggle, toolbar1 );
+				//resize( width(), height() );
 				m_options->changeItem("Show tool bar", item);
 			}
 			break;
-		case 4:
+			
+		case ID_STATUSBAR:
 			if(hide_statusbar) {
 				hide_statusbar=False;
-				statusPageLabel->show();
-				statusZoomLabel->show();
-				statusOrientLabel->show();
-				statusMiscLabel->show();
-				resize( width(), height() );
+				enableStatusBar( KStatusBar::Toggle );
+				//resize( width(), height() );
 				m_options->changeItem("Hide status bar", item);
 			} else {
 				hide_statusbar=True;
-				statusPageLabel->hide();
-				statusZoomLabel->hide();
-				statusOrientLabel->hide();
-				statusMiscLabel->hide();
-				resize( width(), height() );
+				enableStatusBar( KStatusBar::Toggle );
+				//resize( width(), height() );
 				m_options->changeItem("Show status bar", item);
 			}
 			break;
-		case 6:
+			
+		case ID_CONFIGURE:
+			configureKeybindings();
+			break;
+			
+		case ID_GHOSTSCRIPT:
+			configureGhostscript();
+			break;
+			
+		case ID_SAVE:
 			writeSettings();
 	}
 }		
@@ -787,18 +1174,16 @@ void KGhostview::options_menu_activated(int item)
 
 void KGhostview::dummy()
 {
-	 QMessageBox::message( "Version 0.3", 
-                             "Sorry, not ready yet", 
-                             "OK" );
+	 KMsgBox::message(0, "Version 0.4", 
+                             "Sorry, not ready yet" );
 
 
 }
 
 void KGhostview::about()
 {
-	 QMessageBox::message( "About this ...", 
-                             "Version :	0.3 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org", 
-                             "OK" );
+	 KMsgBox::message(0, "About kghostview", 
+                             "Version :	0.4 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org" );
 
 
 }
@@ -827,19 +1212,16 @@ void KGhostview::printStart()
 				for(i=1;i<1000;i+=2) {
 					mark_page_list[i]=1;
 				}
-				//fprintf(stderr, "Even\n");
 				break;
 				
 		case 3:	mode=PRINT_MARKED;
 				for(i=0;i<1000;i+=2)
 					mark_page_list[i]=1;
-				//fprintf(stderr, "Odd\n");
 				break;
 				
 		case 4:	mode=PRINT_MARKED;
 				for(i=0;i<1000;i++)
 					mark_page_list[i]=copy_marked_list[i];
-				//fprintf(stderr, "Marked\n");
 				break;
 	}
 	
@@ -849,7 +1231,7 @@ void KGhostview::printStart()
 	    char *buf = (char *)malloc(strlen(error) +
 				 strlen("Printer Name : ") + 2);
 	    sprintf(buf, "%s\n%s", error.data(), "Printer Name : ");
-	    //fprintf(stderr, "%s\n%s\n", error.data(), "Printer Name : "); //prompt
+	    fprintf(stderr, "%s\n%s\n", error.data(), "Printer Name : "); //prompt
 	    free(error);
 	    free(buf);
 	}
@@ -1041,16 +1423,14 @@ Bool KGhostview::same_document_media()
 
 QString KGhostview::open_file( QString name )
 {
-    printf("KGhostview::open_file\n");
+    //printf("KGhostview::open_file\n");
 
     FILE *fp;
     struct stat sbuf;
 
 	if ( name.data() == '\0' )	
 		return( NULL );
-		
 	
-   
     if (strcmp(name, "-")) {
     
 		if ((fp = fopen(name, "r")) == NULL) {
@@ -1066,30 +1446,33 @@ QString KGhostview::open_file( QString name )
 	    	
 	    	// Error report on failure to open file not handled.
 	    	
-	    	printf("Open file failed\n");
+	    	//printf("Open file failed\n");
+	    	
+	    	QString s;
+			s.sprintf( "The file\n\"%s\"\ncould not be found.", name.data());
+ 			KMsgBox::message(0, "Error", s, 2 );
+	    	
 	    	return( NULL );
 	    	
 		} else {
 
-		 filename.sprintf( name.data() );
 	    	oldfilename.sprintf( filename.data() );
-	    	if (psfile) fclose(psfile);
+	    	//printf("oldfilename = %s\n", oldfilename.data() );
+	    	filename.sprintf( name.data() );
+	    	//printf("filename = %s\n", filename.data() );
+	    	if ( psfile ) {
+	    		//printf("existing file -closing\n");
+	    		fclose( psfile );
+	    	}
 	    	psfile = fp;
-	    	stat(filename, &sbuf);
+	    	stat( filename, &sbuf );
 	    	mtime = sbuf.st_mtime;
 	    	
 	    	new_file(0);
 	    	
-	    	if (doc) {
-	    		if(doc->title) {
-	    			/*
-	    			
-	    			 You can add the document title to the window title if
-	    			 you feel like it
-	    			 
-	    			 */
-      			}
-      		}
+	    	QString s( "KGhostview : " );
+	    	s += QFileInfo( filename ).fileName();
+	    	setCaption( s );
       		
 	    	show_page(0);
 	    	return( NULL );
@@ -1099,20 +1482,14 @@ QString KGhostview::open_file( QString name )
     
 		oldfilename.sprintf( filename.data() );
 		filename.sprintf( name.data() );
-		if (psfile) fclose(psfile);
+		if ( psfile ) fclose( psfile );
 		psfile = NULL;
 		
 		new_file(0);
 		
-		if(doc) {
-      		if(doc->title) {
-	    		/*
-
-	    		Put doc->title in the window title if you like
-
-	    		*/
-      		}
-      	}
+		QString s( "KGhostview : " );
+	    s += QFileInfo( filename ).fileName();
+	    setCaption( s );
       	
 		return(NULL);
     }
@@ -1181,11 +1558,11 @@ Bool KGhostview::set_new_pagemedia( int number )
 {
     //printf("KGhostview::set_new_pagemedia\n");
 
-    int new_pagemedia;
-    int new_llx;
-    int new_lly;
-    int new_urx;
-    int new_ury;
+    int new_pagemedia=0;
+    int new_llx=0;
+    int new_lly=0;
+    int new_urx=0;
+    int new_ury=0;
     Bool changed = False;
     Bool from_doc = False;
 
@@ -1236,6 +1613,8 @@ Bool KGhostview::set_new_pagemedia( int number )
 		//text=XmStringCreateLtoR("EPS box", XmFONTLIST_DEFAULT_TAG);
 		//printf("EPS box\n");
     } else {
+    	//printf("Trying to compute size ! base papersize = %d\n",
+    	//base_papersize);
 		new_llx = new_lly = 0;
 		if (new_pagemedia < base_papersize) {
 	    	new_urx = doc->media[new_pagemedia].width;
@@ -1345,11 +1724,12 @@ Bool	KGhostview::setup()
 	char temp_text[20];
     
     
-    if(! filename) return False;
+    if ( ! filename ) return False;
     
     //printf("Gone into setup\n");
     // Reset to a known state.
-    psfree(olddoc);
+    psfree( olddoc );
+    //printf("Freed olddoc\n");
     olddoc = doc;
     doc = NULL;
     current_page = -1;
@@ -1364,7 +1744,7 @@ Bool	KGhostview::setup()
     if (psfile) {
     	//printf ("Scan file -");
     	doc = psscan(psfile);
-    	//if (doc == NULL) printf(" NULL FILE - ");
+    	//if (doc == NULL) //printf(" NULL FILE - ");
     	//printf ("scanned\n");
     }
     
@@ -1487,47 +1867,97 @@ Bool	KGhostview::setup()
 	
 	if(current_page==-1) current_page=0;
 	
-    enableToolbarButton( 3, TRUE, toolbar  );
-    enableToolbarButton( 4, TRUE, toolbar   );
-    enableToolbarButton( 5, TRUE, toolbar   );
-    m_file->setItemEnabled(printID, TRUE);
+    toolbar->setItemEnabled(ID_ZOOM, TRUE);
+    toolbar->setItemEnabled(ID_PRINT, TRUE);
+    toolbar->setItemEnabled(ID_MARK, TRUE);
+    m_file->setItemEnabled(ID_PRINT, TRUE);
+    
 	if(toc_text) {
 		if( (unsigned int)current_page+1<doc->numpages ) {
 			m_go->setItemEnabled(nextID, TRUE);
-			enableToolbarButton( 1, TRUE, toolbar   );
+			toolbar->setItemEnabled(ID_NEXT, TRUE);
 		}
 		if( current_page-1>=0 ) {
 			m_go->setItemEnabled(prevID, TRUE);
-			enableToolbarButton( 0, TRUE, toolbar   );
+			toolbar->setItemEnabled(ID_PREV, TRUE);
 		}
-		m_go->setItemEnabled(goID, TRUE);
-		enableToolbarButton( 2, TRUE, toolbar   );
+		m_go->setItemEnabled(goToPageID, TRUE);
+		m_go->setItemEnabled(goToStartID, TRUE);
+		m_go->setItemEnabled(goToEndID, TRUE);
+		toolbar->setItemEnabled(ID_PAGE, TRUE);
+		toolbar->setItemEnabled(ID_START, TRUE);
+		toolbar->setItemEnabled(ID_END, TRUE);
 	}
-	m_view->setItemEnabled(viewID, TRUE);
+	m_view->setItemEnabled(viewControlID, TRUE);
+	m_view->setItemEnabled(zoomInID, TRUE);
+	m_view->setItemEnabled(zoomOutID, TRUE);
+	m_view->setItemEnabled(shrinkWrapID, TRUE);
+	m_view->setItemEnabled(redisplayID, TRUE);
+	m_view->setItemEnabled(infoID, TRUE);
 	
-	statusMiscLabel->setText(filename);
+	statusbar->changeItem( filename.data(), ID_FILENAME );
 	switch(orientation) {
-		case 1:	statusOrientLabel->setText( "Portrait" );
+		case 1:	statusbar->changeItem( "Portrait", ID_ORIENTATION );
 				break;
-		case 2:	statusOrientLabel->setText( "Upside down" );
+		case 2:	statusbar->changeItem( "Upside down", ID_ORIENTATION );
 				break;
-		case 3:	statusOrientLabel->setText( "Seascape" );
+		case 3:	statusbar->changeItem( "Seascape", ID_ORIENTATION );
 				break;
-		case 4:	statusOrientLabel->setText( "Landscape" );
+		case 4:	statusbar->changeItem( "Landscape", ID_ORIENTATION );
 				break;
 	}
 	sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-	statusZoomLabel->setText(temp_text);
+	statusbar->changeItem( temp_text, ID_MAGSTEP );
 
     //printf("Setup finished\n");
     return oldtoc_entry_length != toc_entry_length;
 }
 
+void KGhostview::changeFileRecord()
+{
+	QString s;
+	
+	s.sprintf("1. ");
+	s+=lastOpened[0];
+	m_file->changeItem(s, ID_FILE_A);
+	
+	s.sprintf("2. ");
+	s+=lastOpened[1];
+	m_file->changeItem(s, ID_FILE_B);
+	
+	s.sprintf("3. ");
+	s+=lastOpened[2];
+	m_file->changeItem(s, ID_FILE_C);
+	
+	s.sprintf("4. ");
+	s+=lastOpened[3];
+	m_file->changeItem(s, ID_FILE_D);
+}
+	
 
 void KGhostview::new_file(int number)
 {
     //printf("KGhostview::new_file\n");
-
+	
+	Bool ADD_THIS = TRUE;
+	int file_count;
+	
+	for(file_count=0;file_count<4;file_count++) {
+		if( filename == lastOpened[file_count] ) {
+			ADD_THIS = FALSE;
+		}
+	}
+	
+	if( ADD_THIS) {
+	
+		for(file_count=3;file_count>0;file_count--) {
+			lastOpened[file_count].sprintf(lastOpened[file_count-1]);
+		}
+		lastOpened[0].sprintf(filename);
+		changeFileRecord();
+		writeFileSettings();
+	}
+	
 	Bool layout_changed = False;
 	
 	//page->disableInterpreter();
@@ -1555,12 +1985,13 @@ void KGhostview::show_page(int number)
     struct stat sbuf;
     Bool new_orient = FALSE, new_media = FALSE;
 
-    if (!filename) {
-    	printf("No file !\n");
+    if ( ! filename ) {
+    	//printf("No file !\n");
     	return;
     }
 
     if (psfile) {
+    	//printf("Oh does it go into psfile ?\n");
     	if (!stat(filename, &sbuf) && mtime != sbuf.st_mtime) {
 			fclose(psfile);
 			psfile = fopen(filename, "r");
@@ -1575,6 +2006,8 @@ void KGhostview::show_page(int number)
 		if ((unsigned int)number >= doc->numpages) number = doc->numpages - 1;
 		if (number < 0) number = 0;
     }
+    
+    //printf("Hmm shouldn't this whole thing be inside the if(psfile) ?\n");
     
     new_orient=set_new_orientation(number);
     new_media=set_new_pagemedia(number);
@@ -1665,24 +2098,26 @@ void KGhostview::show_page(int number)
 		part_label_text=operator+(part_string, part_total_label);
 		page_label_text=operator+(page_string, page_total_label);
 		position_label=operator+(part_label_text, page_label_text);
-		statusPageLabel->setText( position_label );
+		statusbar->changeItem( position_label.data(), ID_LOCATION );
 
 		if (current_page-1< 0) {
-			enableToolbarButton(0, FALSE, toolbar  );
+			toolbar->setItemEnabled(ID_PREV, FALSE);
 			m_go->setItemEnabled(prevID, FALSE);
 		} else {
-			enableToolbarButton(0, TRUE, toolbar  );
+			toolbar->setItemEnabled(ID_PREV, TRUE);
 			m_go->setItemEnabled(prevID, TRUE);
 		}
 		if ((unsigned int)current_page+1 >= doc->numpages) {
-			enableToolbarButton(1, FALSE, toolbar  );
+			toolbar->setItemEnabled(ID_NEXT, FALSE);
 			m_go->setItemEnabled(nextID, FALSE);
 		} else {
-			enableToolbarButton(1, TRUE, toolbar  );
+			toolbar->setItemEnabled(ID_NEXT, TRUE);
 			m_go->setItemEnabled(nextID, TRUE);
 		}
 	}
-	else statusPageLabel->setText( "" );
+	else {
+		statusbar->changeItem( "", ID_LOCATION );
+	}
 }
 
 void KGhostview::set_magstep(int i)
@@ -1694,10 +2129,10 @@ void KGhostview::set_magstep(int i)
     magstep = i;
     if (set_new_magstep()) {
 		page->layout();
-		page->setGeometry(frame->x()+2,frame->y()+2,frame->width()-4,frame->height()-4);
+		page->resize(page->width(), page->height());
 		page->repaint();
 		sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
-		statusZoomLabel->setText(temp_text);
+		statusbar->changeItem( temp_text, ID_MAGSTEP );
 		show_page(current_page);
     }
 }
@@ -1713,6 +2148,7 @@ Bool KGhostview::set_new_magstep()
     new_magstep = magstep;
     
     if (new_magstep != current_magstep) {
+    	//printf("	new_magstep != current_magstep\n");
 		page->disableInterpreter();
 		changed = True;
 		xdpi = default_xdpi;

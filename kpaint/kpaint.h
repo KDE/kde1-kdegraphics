@@ -23,7 +23,7 @@ public slots:
 private:
   QwViewport *v;
   Canvas *c;
-  KToolbar *toolbar;
+  KToolBar *toolbar;
   Manager *man;
   void initToolbar(void);
   void initMenus();

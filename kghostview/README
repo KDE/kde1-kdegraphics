@@ -1,5 +1,9 @@
 
-KGhostview 0.3.3 - Alpha release
+22/4/97
+Mark Donohoe
+Please direct any bug reports to me (donohoe@kde.org).
+
+KGHOSTVIEW 0.4 - Alpha release
 
 This is Tim Theisen's Ghostview program ported to the K
 Desktop Environment. Ghostview is used to view PostScript
@@ -7,49 +11,72 @@ documents on Unix X11 systems. It requires Alladin
 Ghostcript to actually perform rendering. KGhostview also
 uses the Qt toolkit.
 
-This version is for demonstration of a method for setting
-desktop wide resources in KDE. It works in conjunction with
-Kdisplay-0.5.1.
+REQUIREMENTS
 
-SETTING FONTS ETC.
-
-Get yourself Kdisplay-0.5.1 if you want to try out setting
-fonts and colors for Kghostview-0.3.3. This version isn't really
-for users. It is still in development. There is nothing fancy
-about the communication method - no daemons etc. just
-XAtoms. What is being tested here is the possibility of
-changing fonts etc. in running programs.
-
-The verdict ? It works OK but there are some problems with
-setPalette()  and setStyle() often doesn't change the
-ComboBox style.
-
-I don't feel confident enough to put this in libkde myself.
-I would be glad if one of the core programmers would try
-it out and adapt it for the library if they think it is up
-to the job.
+1. Alladin ghostscript
+2. Qt 1.2+
+3. kdelibs-0.8+
 
 INSTALL
 
-1. Install ktoolpics-0.2
-
-2. Set QTDIR and KDEDIR environment variables
-	
-	Eg. I use bash shell and type
-	
-	QTDIR="/usr/lib/qt"; export QTDIR
-	KDEDIR="/usr/local/kde"; export KDEDIR
-	
-3. Have a quick look in the Makefile
-4. make
-5. make install
+1.   ./configure
+2. make
+3. make install
 
 If Ghostview works for you then so should KGhostview.
 However, all VMS support has been removed and it has only
 been tested on Linux. Printer support for SYSV, SVR4 and USG
 is missing from this release.
 
-CHNAGES V0.3.3
+TODO
+
+- Drag and drop
+- Last few UI features
+- PDF support
+- Standardise kdvi and kghostview
+
+CHANGES V0.4
+
+- Autoconf support
+	
+- KKeyconf support
+	- keyconf is nice but we should have a way of setting keybings for the
+	whole desktop too.
+
+- KWidget support
+	- KWidget revised and extended
+		- KToolBar visual changes
+		- KStatusBar class fleshed out
+		- new KMenuBar may be needed later
+		- code clean ups and geometry setting changes. (Not Windows style
+			compatible.)
+			
+- Lots of code reorganisation
+	- Proper encapsulation has made multiple instances possible.
+	- New display method has simplified things considerably. Hopefully no
+		more display problems.
+	- I took some care about intialising data. Hopefully no more start up
+		crashes.
+	
+- Filled out UI
+	- Shows ghostscript messages
+	- Shows document info ( just a start )
+	- Shrink wrap option
+	- Redisplay activated
+	- Last 4 files
+	- New and Close
+	- Go to start and end implimented
+	
+- Full KConfig support
+
+- .kdelnk file
+
+- SGML help template
+	- Follows the handbook style of Netscape help
+	- HTML generated help included nad installed
+	- PS generated help included
+
+CHANGES V0.3.3
 - Repainting bug is hopefully fixed. It shouldn't eat resources when the
 	window is bigger than the page anymore. Please test.
 - Other bug fixes.
@@ -88,18 +115,5 @@ CHANGES V0.2
 		Arrow keys and page up, page down.
 		
 	Will use keyconfig eventually.
+	
 
-TODO
-
-- Page marking
-- Info dialog
-- Use KConfig
-- PDF support
-- Handling of Ghostscript messages
-- Standardise kdvi and kghostview
-- Fix that nasty bug which which results in window events
-being eaten if the window is bigger than the page.
-
-5/4/97
-Mark Donohoe
-donohoe@kde.org

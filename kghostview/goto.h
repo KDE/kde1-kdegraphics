@@ -8,10 +8,6 @@
 #include <qpushbt.h>
 #include <qkeycode.h>
 
-extern int		current_page;
-extern int 		pages_in_part[10];
-extern int 		num_parts;	
-
 class GoTo : public QDialog {
 	Q_OBJECT
 public:
@@ -19,12 +15,18 @@ public:
 	GoTo( QWidget *parent, const char *name );
 	int page, part, pages, i, cumulative_pages;
 	
+	int 	 current_page;
+	int 	 pages_in_part[10];
+	int 	 num_parts;  
+	
 	QLineEdit* partLine;
 	QLineEdit* pageLine;
 	QLabel *pageLabel;
 	QLabel *partLabel;
 	QPushButton* ok;
 	QPushButton* cancel;
+	
+	void init();
 	
 public slots:
 

@@ -1,0 +1,21 @@
+HELPFILES = kghostview.html kghostview-1.html kghostview-2.html \
+			kghostview-3.html kghostview-4.html kghostview-5.html \
+			kghostview-6.html next.gif prev.gif toc.gif
+
+DOCSDIR = @prefix@/doc/HTML/kghostview
+INSTALL_DIR = @INSTALL@ -d -m 0755
+INSTALL_DATA = @INSTALL@ -m 644
+
+all:
+
+install:
+	$(INSTALL_DIR) $(DOCSDIR)
+	@for i in $(HELPFILES); do \
+	 echo "$(INSTALL_DATA) $$i $(DOCSDIR)"; \
+	 $(INSTALL_DATA) "$$i" $(DOCSDIR); \
+	done
+
+uninstall:
+	for i in $(HELPFILES); do \
+	 rm -f $(DOCSDIR)/"$$i"; \
+	done

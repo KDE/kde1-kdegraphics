@@ -1,7 +1,6 @@
-
+#include <kmisc.h>
 #include "kpswidget.h"
 #include "kpswidget.moc"
-#include <kmisc.h>
 
 static Bool broken_pipe = False;
 
@@ -13,8 +12,6 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	CHECK_PTR( fullView );
 	gs_window = fullView->winId();
 	gs_display = fullView->x11Display();
-	fullView->hide();
-	fullView->resize(0,0);
 	
 	horScrollBar = new QScrollBar( QScrollBar::Horizontal, this );
 	CHECK_PTR( horScrollBar );
@@ -25,9 +22,20 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	CHECK_PTR( vertScrollBar );
 	connect( vertScrollBar, SIGNAL(valueChanged(int)),
 		SLOT( slotVertScroll(int) ) );
+		
+	patch = new QWidget( this );
+	
+	//
+	//	MESSAGES DIALOG
+	//
+	
+	messages = new MessagesDialog( 0, "messages" );
+	show_messages = FALSE;
 
-	// Initialise
+	// Initialise class variables
+	// I usually forget a few important ones resulting in nasty seg. faults.
 
+	busy=FALSE;
 	llx = 0;
 	lly = 0;
 	urx = 0;
@@ -44,6 +52,7 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	scroll_x_offset=0;
 	scroll_y_offset=0;
 	antialias=False;
+	show_messages=False;
 	xdpi=75.0;
 	ydpi=75.0;
 	disable_start = False;
@@ -62,7 +71,7 @@ KPSWidget::KPSWidget( QWidget *parent ) : QWidget( parent )
 	orientation = 1;
 	changed = False;
 	busy = False;
-	setCursor( arrowCursor );
+	fullView->setCursor( arrowCursor );
 
 	// Compute fullView widget size
 
@@ -83,7 +92,7 @@ KPSWidget::~KPSWidget()
 
 void KPSWidget::disableInterpreter()
 {
-	//printf("KPSWidget::disableInterpreter\n");
+	////printf("KPSWidget::disableInterpreter\n");
 
 	disable_start = True;
 	stopInterpreter();
@@ -125,8 +134,8 @@ Bool KPSWidget::nextPage()
 
     if (!busy) {
 		busy = True;
-		startTimer(200);
-		setCursor( waitCursor );
+		//startTimer(200);
+		fullView->setCursor( waitCursor );
 		
 		ev.xclient.type = ClientMessage;
 		ev.xclient.display = gs_display;
@@ -146,7 +155,7 @@ Bool KPSWidget::nextPage()
     }
 }
 
-Bool KPSWidget::sendPS(FILE *fp, long begin,unsigned int len,Bool close)
+Bool KPSWidget::sendPS( FILE *fp, long begin, unsigned int len, Bool close )
 {
 	//printf("KPSWidget::sendPS\n");
 
@@ -174,7 +183,7 @@ Bool KPSWidget::sendPS(FILE *fp, long begin,unsigned int len,Bool close)
 		buffer_bytes_left = 0;
 		ps_input = ps_new;
 		interpreter_input_id = 1;
-		sn->setEnabled(True);
+		sn_input->setEnabled(True);
 		
 		//printf("enabled INPUT\n");
 
@@ -195,76 +204,6 @@ Bool KPSWidget::sendPS(FILE *fp, long begin,unsigned int len,Bool close)
 //
 //*********************************************************************************
 
-
-void KPSWidget::timerEvent(QTimerEvent *)
-{
-	/* bitBlt(this, clip_x, clip_y,
-		fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-		CopyROP); */
-	
-	if ( fullView->width() > clip_width && fullView->height() > clip_height ) {
-		
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-			CopyROP);
-
-	} else if ( fullView->width() > clip_width && fullView->height() < clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width,
-			fullView->height(),
-			CopyROP);
-
-	} else if ( fullView->width() < clip_width && fullView->height() > clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(), clip_height,
-			CopyROP);
-
-	} else {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(),
-			fullView->height(),
-			CopyROP);
-
-	}	
-}
-
-void KPSWidget::paintEvent(QPaintEvent *)
-{
-	if(!busy && psfile) {
-		if ( fullView->width() > clip_width && fullView->height() > clip_height ) {
-
-			bitBlt(this, clip_x, clip_y,
-				fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-				CopyROP);
-
-		} else if ( fullView->width() > clip_width && fullView->height() < clip_height ) {
-
-			bitBlt(this, clip_x, clip_y,
-				fullView, scroll_x_offset, scroll_y_offset, clip_width,
-				fullView->height(),
-				CopyROP);
-
-		} else if ( fullView->width() < clip_width && fullView->height() > clip_height ) {
-
-			bitBlt(this, clip_x, clip_y,
-				fullView, scroll_x_offset, scroll_y_offset, fullView->width(), clip_height,
-				CopyROP);
-
-		} else {
-
-			bitBlt(this, clip_x, clip_y,
-				fullView, scroll_x_offset, scroll_y_offset, fullView->width(),
-				fullView->height(),
-				CopyROP);
-
-		}
-	}
-	
-	//debug( "paint event " );	
-}
 
 void KPSWidget::resizeEvent(QResizeEvent *)
 {
@@ -308,7 +247,11 @@ void KPSWidget::resizeEvent(QResizeEvent *)
     horScrollBar->setGeometry( 0, height()-SCROLLBAR_SIZE,
     	clip_width, SCROLLBAR_SIZE);
     if(fullView->width()- width() > 0) {
-		horScrollBar->setRange( 0, fullView->width()- width() );
+    	if( vertScrollBar->isVisible() )
+			horScrollBar->setRange( 0, fullView->width() - width() +
+				vertScrollBar->width() );
+		else
+			horScrollBar->setRange( 0, fullView->width() - width() );
 	} else {
 		horScrollBar->setRange( 0, 0 );
 	}
@@ -317,11 +260,25 @@ void KPSWidget::resizeEvent(QResizeEvent *)
 	vertScrollBar->setGeometry(width()-SCROLLBAR_SIZE, 0,
 		SCROLLBAR_SIZE, clip_height);
 	if( fullView->height()- height() > 0 ) {
-		vertScrollBar->setRange( 0,  fullView->height()- height() );
+		if( horScrollBar->isVisible() )
+			vertScrollBar->setRange( 0,  fullView->height() - height() +
+				horScrollBar->height());
+		else
+			vertScrollBar->setRange( 0,  fullView->height() - height() );
 	} else {
 		vertScrollBar->setRange( 0,  0 );
 	}
-	vertScrollBar->setSteps( (int)( fullView->height()/50),  height() );	 
+	vertScrollBar->setSteps( (int)( fullView->height()/50),  height() );
+	
+	if ( vertScrollBar->isVisible() && horScrollBar->isVisible() ) {
+		patch->show();
+		patch->setGeometry( vertScrollBar->x(),
+		vertScrollBar->y()+vertScrollBar->height(),
+			vertScrollBar->width(), horScrollBar->height() );
+	} else
+		patch->hide();
+	
+	movePage(); 
 }
 
 void KPSWidget::layout()
@@ -334,6 +291,7 @@ void KPSWidget::layout()
     	//printf("Changed  layout %d, %d\n", fullWidth, fullHeight);
     	
     	fullView->setGeometry(0, 0, fullWidth, fullHeight);
+    	//fullView->resize(fullWidth, fullHeight);
     	resize(width(), height());
     	repaint();
     	setup();
@@ -396,78 +354,24 @@ void KPSWidget::scrollTop()
 	vertScrollBar->setValue( vertScrollBar->minValue() );
 }
 
+void KPSWidget::movePage()
+{
+	fullView->setGeometry(-scroll_x_offset+clip_x, 
+		-scroll_y_offset+clip_y, fullView->width(),
+		fullView->height());
+}
+	
+	
 void KPSWidget::slotVertScroll(int value)
 {
 	scroll_y_offset =  value;
-	
-	/* bitBlt(this, clip_x, clip_y,
-		fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-		CopyROP);	 */
-		
-	if ( fullView->width() > clip_width && fullView->height() > clip_height ) {
-		
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-			CopyROP);
-
-	} else if ( fullView->width() > clip_width && fullView->height() < clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width,
-			fullView->height(),
-			CopyROP);
-
-	} else if ( fullView->width() < clip_width && fullView->height() > clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(), clip_height,
-			CopyROP);
-
-	} else {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(),
-			fullView->height(),
-			CopyROP);
-
-	}
+	movePage();
 }
 
 void KPSWidget::slotHorScroll(int value)
 {
 	scroll_x_offset = value;
-	
-	/* bitBlt(this, clip_x, clip_y,
-		fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-		CopyROP); */
-		
-	if ( fullView->width() > clip_width && fullView->height() > clip_height ) {
-		
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width, clip_height,
-			CopyROP);
-
-	} else if ( fullView->width() > clip_width && fullView->height() < clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, clip_width,
-			fullView->height(),
-			CopyROP);
-
-	} else if ( fullView->width() < clip_width && fullView->height() > clip_height ) {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(), clip_height,
-			CopyROP);
-
-	} else {
-
-		bitBlt(this, clip_x, clip_y,
-			fullView, scroll_x_offset, scroll_y_offset, fullView->width(),
-			fullView->height(),
-			CopyROP);
-
-	}
+	movePage();
 }
 
 //*********************************************************************************
@@ -482,7 +386,7 @@ Bool KPSWidget::computeSize()
 	//printf("KPSWidget::computeSize\n");
 
 	int newWidth=0, newHeight=0;
-	Bool change;
+	Bool change = FALSE;
 	
 	switch (orientation) {
 	case 1: //PORTRAIT
@@ -509,13 +413,13 @@ Bool KPSWidget::computeSize()
 	
 	//printf(" newWidth = %d, new Height = %d\n", newWidth, newHeight );
 	
-	change = (newWidth != fullWidth) || (newHeight != fullHeight);
+	if((newWidth != fullWidth) || (newHeight != fullHeight))
+		change = TRUE;
 	
-	//if (change) printf("Layout has changed\n");
 	
 	fullWidth = newWidth;
 	fullHeight = newHeight;
-	return( change );
+	return change;
 }
 
 void KPSWidget::setup()
@@ -610,8 +514,8 @@ void KPSWidget::startInterpreter()
 	
 	changed = False;
 	busy = True;
-	startTimer(200);
-	setCursor( waitCursor );
+	//startTimer(200);
+	fullView->setCursor( waitCursor );
 	
     interpreter_pid = vfork();
     if (interpreter_pid == 0) {
@@ -651,21 +555,33 @@ void KPSWidget::startInterpreter()
 			interpreter_input = std_in[1];
 			interpreter_input_id = None;
 
-			sn = new QSocketNotifier( interpreter_input, QSocketNotifier::Write );
-			sn->setEnabled(False);
-			QObject::connect( sn, SIGNAL( activated(int) ),
+			sn_input = new QSocketNotifier( interpreter_input, QSocketNotifier::Write );
+			sn_input->setEnabled(False);
+			QObject::connect( sn_input, SIGNAL( activated(int) ),
 				this, SLOT( gs_input() ) );
 				
 		} else if (strcmp(filename, "-")) {
+			//printf("Should close stdin[0]\n");
 	    	::close(std_in[0]);
 		}
 		
-	
+		//printf("Now connecting output and error channels\n");
+		
 		::close(std_out[1]);
 		interpreter_output = std_out[0];
+		sn_output = new QSocketNotifier( interpreter_output,
+		QSocketNotifier::Read );
+		QObject::connect( sn_output, SIGNAL( activated(int) ),
+				this, SLOT( gs_output(int) ) );
 
 		::close(std_err[1]);
 		interpreter_error = std_err[0];
+		sn_error = new QSocketNotifier( interpreter_error,
+		QSocketNotifier::Read );
+		QObject::connect( sn_error, SIGNAL( activated(int) ),
+				this, SLOT( gs_output(int) ) );
+				
+		//printf("These connected\n");
     }
     XClearArea(gs_display, gs_window,
 	       0, 0, fullWidth, fullHeight, False);
@@ -687,7 +603,7 @@ void KPSWidget::stopInterpreter()
 		//printf("closing interpreter_input\n");
 		interpreter_input = -1;
 		if (interpreter_input_id != None) {
-			sn->~QSocketNotifier();
+			sn_input->~QSocketNotifier();
 			//printf("Destroy socket notifier\n");
 			interpreter_input_id = None;
 		}
@@ -700,21 +616,19 @@ void KPSWidget::stopInterpreter()
 	}
     
     busy=False;
-    killTimers();
-    setCursor( arrowCursor );
+    //killTimers();
+    fullView->setCursor( arrowCursor );
     
-    /*********************************************
 	if (interpreter_output >= 0) {
-		close(interpreter_output);
+		::close(interpreter_output);
 		interpreter_output = -1;
-		XtRemovegs_input(interpreter_output_id);
+		sn_output->~QSocketNotifier();
 	}
 	if (interpreter_error >= 0) {
-		close(interpreter_error);
+		::close(interpreter_error);
 		interpreter_error = -1;
-		XtRemovegs_input(interpreter_error_id);
+		sn_error->~QSocketNotifier();
 	}
-    **********************************************/
     
 }
 
@@ -731,6 +645,52 @@ SIGVAL catchPipe(int)
     return 0;
 #endif
 }
+
+/* Output - receive I/O from ghostscript's stdout and stderr.
+ * Pass this to the application via the output_callback. */
+ 
+void KPSWidget::gs_output( int source )
+{
+    char buf[BUFSIZ+1];
+    int bytes = 0;
+
+    if (source == interpreter_output) {
+		bytes = read(interpreter_output, buf, BUFSIZ);
+		if (bytes == 0) { /* EOF occurred */
+	    	::close(interpreter_output);
+	    	interpreter_output = -1;
+	    	//printf("Try to destroy sn_output EOF\n");
+	    	sn_output->~QSocketNotifier();
+	    	return;
+		} else if (bytes == -1) {
+	    	interpreterFailed();		/* Something bad happened */
+	    	return;
+		}
+    } else if (source == interpreter_error) {
+		bytes = read(interpreter_error, buf, BUFSIZ);
+		if (bytes == 0) { /* EOF occurred */
+	    	::close(interpreter_error);
+	    	interpreter_error = -1;
+	    	sn_error->~QSocketNotifier();
+	    	//printf("Try to destroy sn_output EOF error\n");
+	    	return;
+		} else if (bytes == -1) {
+	    	interpreterFailed();		/* Something bad happened */
+	    	return;
+		}
+    }
+    
+    if (bytes > 0) {
+		buf[bytes] = '\0';
+		if( show_messages ) {
+			messages->show();
+			messages->cancel->setFocus();
+			messages->messageBox->append( buf );
+			//messages->setCursorPosition( messages->numRows(), 0 );
+		}
+    }
+}
+
 
 void KPSWidget::gs_input()
 {
@@ -799,8 +759,8 @@ void KPSWidget::gs_input()
 	
 	if (ps_input == NULL && buffer_bytes_left == 0) {
 		if (interpreter_input_id != None) {
-			 sn->setEnabled(False);
-			 setCursor( arrowCursor );
+			 sn_input->setEnabled(False);
+			 fullView->setCursor( arrowCursor );
 			 //printf("Disabled INPUT\n");
 			 interpreter_input_id = None;
 		}

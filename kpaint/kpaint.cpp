@@ -42,7 +42,7 @@ void KPaint::initToolbar(void)
   QString pixdir("/usr/local/kde/lib/pics/toolbar/");
   KPixmap pixmap;
 
-  toolbar= new KToolbar(this);
+  toolbar= new KToolBar(this);
  
   pixmap.load(pixdir + "filenew.xpm");
   toolbar->insertItem(pixmap, fileNewCommand, TRUE, "New Canvas");
@@ -84,7 +84,7 @@ void KPaint::initMenus(void)
   connect (help, SIGNAL (activated (int)), SLOT (handleCommand(int)));
   connect (tool, SIGNAL (activated (int)), SLOT (handleCommand(int)));
 
-  QMenuBar *menu = new QMenuBar( this );
+  KMenuBar *menu = new KMenuBar( this );
   menu->insertItem( "&File", file );
   menu->insertItem( "&Tool", tool );
   menu->insertSeparator();
