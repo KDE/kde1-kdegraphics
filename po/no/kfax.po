@@ -315,7 +315,7 @@ msgstr "Skarp"
 
 #: options.cpp:74
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: options.cpp:81
 msgid "Display Options:"

@@ -44,14 +44,12 @@ msgstr ""
 "Vil du lagre den?"
 
 #: kiconedit.cpp:384
-#, fuzzy
 msgid "Select All"
-msgstr "Merk &alle"
+msgstr "Merk alle"
 
 #: kiconedit.cpp:402
-#, fuzzy
 msgid "New &window"
-msgstr "&Nytt vindu"
+msgstr "Nytt &vindu"
 
 #: kiconedit.cpp:407
 msgid "&New..."
@@ -155,7 +153,7 @@ msgstr "&Gråskala"
 
 #: kiconedit.cpp:485
 msgid "&Map to KDE palette"
-msgstr ""
+msgstr "&Bind til KDE-palett"
 
 #: kiconedit.cpp:488
 msgid "&Icon"
@@ -246,7 +244,6 @@ msgid "What is ...?"
 msgstr "Hva er ...?"
 
 #: kiconedit.cpp:588
-#, fuzzy
 msgid "Drag source"
 msgstr "Tegne sirkel"
 
@@ -355,6 +352,13 @@ msgid ""
 "(Tip: Hold the magnify button down for a few seconds to zoom to a predefined "
 "scale"
 msgstr ""
+"Ikontegnegrind\n"
+"\n"
+"Ikongrinden er et område hvor du tegner ikonene.\n"
+"Du kan forstørre og forminske ved hjelp av forsørrelsesglasset på"
+"verktøylinjen.\n"
+"(Tips: Hold forstørrelses-knappen nede noen sekunder for å forstørre til\n"
+"en forhåndsdefinert størrelse"
 
 #: kiconedit.cpp:744
 msgid ""
@@ -362,6 +366,9 @@ msgid ""
 "\n"
 "This is a visual represantation of the current cursor position"
 msgstr ""
+"Linjaler\n"
+"\n"
+"Disse er visuelle representanter for den gjeldende cursor-posisjonen"
 
 #: kiconedit.cpp:748
 msgid ""
@@ -376,6 +383,16 @@ msgid ""
 "\t- Number of colors\n"
 "\t- Application messages"
 msgstr ""
+"Statuslinje\n"
+"\n"
+"Statuslinjen gir informasjon om statusen av det gjeldende ikonet. "
+"feltene er:\n"
+"\n"
+"\t- kursorposisjon\n"
+"\t- størrelse\n"
+"\t- forstørringsfaktor\n"
+"\t- antall farger\n"
+"\t- applikasjonsmelding"
 
 #: kiconedit.cpp:757
 msgid ""
@@ -383,6 +400,9 @@ msgid ""
 "\n"
 "This is a 1:1 preview of the current icon"
 msgstr ""
+"Forhåndsvisning\n"
+"\n"
+"Dette er en 1:1-forhåndsvisning av det gjeldende ikonet"
 
 #: kiconedit.cpp:760
 msgid ""
@@ -390,6 +410,9 @@ msgid ""
 "\n"
 "Here you can select colors from the KDE Icon Palette."
 msgstr ""
+"Systemfarger\n"
+"\n"
+"her kan du velge farger fra KDE-ikonpalettet."
 
 #: kiconedit.cpp:763
 msgid ""
@@ -545,52 +568,64 @@ msgid ""
 msgstr ""
 
 #: kiconedit.cpp:837
-#, fuzzy
 msgid ""
 "Rectangle\n"
 "\n"
 "Draw a rectangle"
-msgstr "Tegne rektangel"
+msgstr ""
+"Rektangel\n"
+"\n"
+"Tegn et rektangel"
 
 #: kiconedit.cpp:840
-#, fuzzy
 msgid ""
 "Filled rectangle\n"
 "\n"
 "Draw a filled rectangle"
-msgstr "Tegne fyllt rektangl"
+msgstr ""
+"Fyllt rektangel\n"
+"\n"
+"Tegn et fyllt rektangel"
 
 #: kiconedit.cpp:843
-#, fuzzy
 msgid ""
 "Circle\n"
 "\n"
 "Draw a circle"
-msgstr "Tegne sirkel"
+msgstr ""
+"Sirkel\n"
+"\n"
+"Tegne en sirkel"
 
 #: kiconedit.cpp:846
-#, fuzzy
 msgid ""
 "Filled circle\n"
 "\n"
 "Draw a filled circle"
-msgstr "Tegne fyllt sirkel"
+msgstr ""
+"Fyllt sirkel"
+"\n"
+"Tegne en fyllt sirkel"
 
 #: kiconedit.cpp:849
-#, fuzzy
 msgid ""
 "Ellipse\n"
 "\n"
 "Draw an ellipse"
-msgstr "Tegne elipse"
+msgstr ""
+"Elipse\n"
+"\n"
+"Tegn en elipse"
 
 #: kiconedit.cpp:852
-#, fuzzy
 msgid ""
 "Filled ellipse\n"
 "\n"
 "Draw a filled ellipse"
-msgstr "Tegne fyllt elipse"
+msgstr ""
+"Fyllt elipse\n"
+"\n"
+"Tegne en fyllt elipse"
 
 #: kiconedit.cpp:855
 msgid ""
@@ -598,6 +633,10 @@ msgid ""
 "\n"
 "Draw a straight line vertically, horizontically or in 45 dgr. angles"
 msgstr ""
+"Linje\n"
+"\n"
+"Tegn en rett linje vertikalt, horisontalt eller i 45 grader"
+
 
 #: kiconedit.cpp:858
 msgid ""
@@ -846,90 +885,84 @@ msgid "Colors: %u"
 msgstr "Farger: %u"
 
 #: kiconconfig.cpp:29
-#, fuzzy
 msgid "Template"
 msgstr "Maler:"
 
 #: kiconconfig.cpp:30
 msgid "Description:"
-msgstr ""
+msgstr "Beskrivelse:"
 
 #: kiconconfig.cpp:32
 msgid "Path:"
-msgstr ""
+msgstr "Sti:"
 
 #: kiconconfig.cpp:62
 msgid "&Browse..."
-msgstr ""
+msgstr "&Bla gjennom..."
 
 #: kiconconfig.cpp:134
 msgid "&Add"
-msgstr ""
+msgstr "&Legg til"
 
 #: kiconconfig.cpp:141
 msgid "&Remove"
-msgstr ""
+msgstr "&Fjern"
 
 #: kiconconfig.cpp:246
 msgid "Color or pixmap"
-msgstr ""
+msgstr "Varge eller pixmap"
 
 #: kiconconfig.cpp:254
 msgid "Colored background"
-msgstr ""
+msgstr "Farget bakgrunn"
 
 #: kiconconfig.cpp:259
 msgid "Pixmap background"
-msgstr ""
+msgstr "Pixmap-bakgrunn"
 
 #: kiconconfig.cpp:274
 msgid "&Color..."
-msgstr ""
+msgstr "&Farge..."
 
 #: kiconconfig.cpp:277
-#, fuzzy
 msgid "&Pixmap..."
-msgstr "Skriv &ut..."
+msgstr "&Pixmap..."
 
 #: kiconconfig.cpp:285
 msgid "&Built-in"
-msgstr ""
+msgstr "&Innebygget"
 
 #: kiconconfig.cpp:289
 msgid "Example"
 msgstr ""
 
 #: kiconconfig.cpp:397
-#, fuzzy
 msgid "Paste mode"
-msgstr "Lim inn"
+msgstr "Lim inn-modus"
 
 #: kiconconfig.cpp:399
-#, fuzzy
 msgid "Paste transparent pixels"
-msgstr "Sletter (Gjennomsiktig)"
+msgstr "Lim inn gjennomsikte punkter"
 
 #: kiconconfig.cpp:403
 msgid "Show rulers"
-msgstr ""
+msgstr "Vis linjaler"
 
 #: kiconconfig.cpp:485
 msgid "Keys"
-msgstr ""
+msgstr "Taster"
 
 #: kiconconfig.cpp:490
 msgid "Configure keys"
-msgstr ""
+msgstr "Konfigurer taster"
 
 #: kiconconfig.cpp:497
-#, fuzzy
 msgid "Templates"
-msgstr "Maler:"
+msgstr "Maler"
 
 #: kiconconfig.cpp:502
-#, fuzzy
 msgid "Configure Icon templates"
-msgstr "Opprett fra mal"
+msgstr "Konfigurer ikon-mal"
 
 #: kiconconfig.cpp:509
 msgid "Appearance"
@@ -937,18 +970,12 @@ msgstr ""
 
 #: kiconconfig.cpp:514
 msgid "Configure background"
-msgstr ""
+msgstr "Konfigurer bakgrunn"
 
 #: kiconconfig.cpp:521
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Forskjellig"
 
 #: kiconconfig.cpp:526
 msgid "Icon grid"
-msgstr ""
-
-#~ msgid "Selected area cutted"
-#~ msgstr "Valgt område klippet ut"
-
-#~ msgid "Selected area copied"
-#~ msgstr "Valgt område kopiert"
+msgstr "Ikon-grind"
