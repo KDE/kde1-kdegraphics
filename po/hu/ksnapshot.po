@@ -1,0 +1,95 @@
+# KTranslator Generated File
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.2.7\n"
+"POT-Creation-Date: 1999-01-10 01:46+0100\n"
+"PO-Revision-Date: Tue Mar 2 1999 10:39:37+0100\n"
+"Last-Translator: Marcell Lengyel <miketkf@yahoo.com>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"X-Generator: KTranslator v 0.4.0"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "pillanatkép"
+
+#: ksnapshot.cpp:94
+#, c-format
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: %s"
+msgstr ""
+"Nyomja meg a 'Felvétel' gombot, utána\n"
+"klikkeljen egy ablakra.\n"
+"\n"
+"A KSnapshot Richard Moore (rich@kde.org) mûve,\n"
+"és LGPL vonatkozik rá.\n"
+"\n"
+"%s verzió"
+
+#: ksnapshot.cpp:129
+msgid "Filename:"
+msgstr "Fájlnév:"
+
+#: ksnapshot.cpp:161
+msgid "Delay:"
+msgstr "Késleltetés:"
+
+#: ksnapshot.cpp:170
+msgid "seconds."
+msgstr "másodperc."
+
+#: ksnapshot.cpp:190
+msgid "Auto raise"
+msgstr "Autómatikusan fölülre"
+
+#: ksnapshot.cpp:191
+msgid "Hide KSnapshot window"
+msgstr "KSnapshot ablak elrejtése"
+
+#: ksnapshot.cpp:193
+msgid "Only grab the window containing the cursor"
+msgstr "Csak a kurzort tartalmazó ablakot fényképezze"
+
+#: ksnapshot.cpp:224
+msgid "Grab"
+msgstr "Felvétel"
+
+#: ksnapshot.cpp:454
+msgid "Error: Unable to save image"
+msgstr "Hiba: Nem lehetett elmenteni a képet"
+
+#: ksnapshot.cpp:455
+msgid "Dismiss"
+msgstr "Elvet"
+
+#: ksnapshot.cpp:459
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot nem tudta elmenteni a képet ide:\n"
+"%s."
+
+#: ksnapshot.cpp:469
+msgid "KSnapshot preview"
+msgstr "KSnapshot bemutató"
