@@ -1,6 +1,5 @@
 # KTranslator Generated File
 
-
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,15 +7,15 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1999-01-11 01:50+0100\n"
-"PO-Revision-Date: 1999-Feb-03 00:00+0900\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1999-04-09 02:04+0200\n"
+"PO-Revision-Date: Thu Jun 17 1999 00:44:45+0200\n"
 "Last-Translator: 堀江 信之 <horie@smail.u-shizuoka-ken.ac.jp>\n"
-"Language-Team: 日本語 <kde-jp@albert.nikkeibp.co.jp>\n"
+"Language-Team: Japanese <kde-jp@albert.nikkeibp.co.jp>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=euc-jp\n"
-"Content-Transfer-Encoding: 8bit\n"
-
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"X-Generator: KTranslator v 0.4.0"
 
 #: areaselect.cpp:20
 msgid "Area Selection"
@@ -38,35 +37,35 @@ msgstr "高さ:"
 msgid "Circle"
 msgstr "円"
 
-#: depthdialog.cpp:18
+#: depthdialog.cpp:23
 msgid "Image Depth:"
 msgstr "画像の色数(bit):"
 
-#: depthdialog.cpp:24
+#: depthdialog.cpp:30
 msgid "1 (2 Colours)"
 msgstr "1 (2 色)"
 
-#: depthdialog.cpp:25
+#: depthdialog.cpp:31
 msgid "4 (16 Colours)"
 msgstr "4 (16 色)"
 
-#: depthdialog.cpp:26
+#: depthdialog.cpp:32
 msgid "8 (256 Colours)"
 msgstr "8 (256 色)"
 
-#: depthdialog.cpp:27
+#: depthdialog.cpp:33
 msgid "15 (32k Colours)"
 msgstr "15 (32k 色)"
 
-#: depthdialog.cpp:28
+#: depthdialog.cpp:34
 msgid "16 (64k Colours)"
 msgstr "16 (64k 色)"
 
-#: depthdialog.cpp:29
+#: depthdialog.cpp:35
 msgid "24 (True Colour)"
 msgstr "24(True Colour)"
 
-#: depthdialog.cpp:30
+#: depthdialog.cpp:36
 msgid "32 (True Colour)"
 msgstr "32 (True Colour)"
 
@@ -78,23 +77,23 @@ msgstr "楕円"
 msgid "File Format:"
 msgstr "フォーマット:"
 
-#: infodialog.cpp:24
+#: infodialog.cpp:34
 msgid "Colour Depth:"
 msgstr "色数(bit):"
 
-#: infodialog.cpp:39
+#: infodialog.cpp:55
 msgid "Colours Used:"
 msgstr "使われている色:"
 
-#: infodialog.cpp:66
+#: infodialog.cpp:89
 msgid "Image Width:"
 msgstr "画像の幅:"
 
-#: infodialog.cpp:82
+#: infodialog.cpp:111
 msgid "Image Height:"
 msgstr "画像の高さ:"
 
-#: infodialog.cpp:94 palettedialog.cpp:14
+#: infodialog.cpp:130 palettedialog.cpp:14
 msgid "Dismiss"
 msgstr "キャンセル"
 
@@ -109,7 +108,8 @@ msgstr "変更は保存されませんでした。"
 #: kpaint.cpp:173
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
-msgstr "変更が保存されていません。今終了すると変更が失われます。"
+msgstr ""
+"変更が保存されていません。今終了すると変更が失われます。"
 
 #: kpaint.cpp:210
 msgid "New Canvas"
@@ -280,7 +280,7 @@ msgstr ""
 
 #: line.cpp:19 manager.cpp:71
 msgid "Line"
-msgstr "行"
+msgstr "直線"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
@@ -300,7 +300,7 @@ msgstr "スプレー"
 
 #: manager.cpp:79
 msgid "Text"
-msgstr "文字列"
+msgstr "文字"
 
 #: manager.cpp:81
 msgid "Area Select"
@@ -352,7 +352,7 @@ msgstr "斜線//"
 
 #: properties.cpp:82 properties.cpp:136
 msgid "Diagonal Lines \\"
-msgstr "斜線\\"
+msgstr "Diagonal Lines \\"
 
 #: properties.cpp:83 properties.cpp:137
 msgid "Diagonal Grid"

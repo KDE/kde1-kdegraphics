@@ -1,7 +1,5 @@
 # KTranslator Generated File
 
-# KTranslator Generated File
-
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -11,12 +9,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: Thu Apr 22 1999 16:15:01+0200\n"
+"PO-Revision-Date: Wed Jul 7 1999 15:48:06+0200\n"
 "Last-Translator: Kimiyasu Tomiyama <tomy@truga.com>\n"
 "Language-Team: Japanese <kde-jp@albert.nikkeibp.co.jp>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=euc-jp\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KTranslator v 0.4.0"
 
 #: viewer.cpp:95
@@ -51,7 +49,7 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
-"KView -- イメージビューワ. %s\n"
+"KView -- グラフィックス ビューワ %s\n"
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 
@@ -89,7 +87,7 @@ msgstr "デスクトップに張る(&D)"
 
 #: viewer.cpp:328
 msgid "F&ilter"
-msgstr "フィルタ(&i)"
+msgstr "フィルタ(&I)"
 
 #: viewer.cpp:332
 msgid "&Images"
@@ -126,12 +124,12 @@ msgstr "ズーム(&Z)"
 #: viewer.cpp:376
 #, c-format
 msgid "Zoom &in 10%"
-msgstr "10%拡大(&i)"
+msgstr "10%拡大(&I)"
 
 #: viewer.cpp:378
 #, c-format
 msgid "Zoom &out 10%"
-msgstr "10%縮小(&o)"
+msgstr "10%縮小(&O)"
 
 #: viewer.cpp:380
 msgid "&Double size"
@@ -147,43 +145,43 @@ msgstr "最大の大きさ(&M)"
 
 #: viewer.cpp:386
 msgid "Max/&aspect"
-msgstr "最大/縦横比固定(&a)"
+msgstr "最大/縦横比固定(&A)"
 
 #: viewer.cpp:392
 msgid "Rotate &clockwise"
-msgstr "時計回りに回転(&c)"
+msgstr "時計回りに回転(&C)"
 
 #: viewer.cpp:394
 msgid "Rotate &anti-clockwise"
-msgstr "反時計回りに回転(&a)"
+msgstr "反時計回りに回転(&A)"
 
 #: viewer.cpp:396
 msgid "Flip &vertical"
-msgstr "垂直方向に反転(&v)"
+msgstr "垂直方向に反転(&V)"
 
 #: viewer.cpp:398
 msgid "Flip &horizontal"
-msgstr "水平方向に反転(&h)"
+msgstr "水平方向に反転(&H)"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr "デスクトップに敷き詰める (&t)"
+msgstr "デスクトップに敷き詰める (&T)"
 
 #: viewer.cpp:405
 msgid "Desktop &Max"
-msgstr "デスクトップに最大に張る (&m)"
+msgstr "デスクトップに最大に張る (&M)"
 
 #: viewer.cpp:407
 msgid "Desktop Max&pect"
-msgstr "デスクトップに最大に張る(縦横比固定) (&p)"
+msgstr "デスクトップに最大に張る(縦横比固定) (&P)"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr "何をすべきか... (&h)"
+msgstr "何をすべきか... (&H)"
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr "これは何か...(&w)"
+msgstr "これは何か...(&W)"
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -191,7 +189,7 @@ msgstr "KView は...(&A)"
 
 #: viewer.cpp:471 viewer.cpp:478
 msgid "Existing transfer not yet complete."
-msgstr "変換が終了していませ"
+msgstr "変換が終了していません"
 
 #: viewer.cpp:493
 msgid "Couldn't get temporary transfer name."
@@ -228,7 +226,7 @@ msgstr "明るさを変更しています..."
 
 #: colour.cpp:58
 msgid "Intensity:Brightness"
-msgstr "光量:明るさ"
+msgstr "光量 : 明るさ"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -236,7 +234,7 @@ msgstr "モノクロに変換しています..."
 
 #: colour.cpp:129
 msgid "Greyscale"
-msgstr "モノクロ"
+msgstr "グレイスケール"
 
 #: colour.cpp:147
 msgid "Smoothing..."
@@ -260,7 +258,7 @@ msgstr "ガンマ補正中..."
 
 #: colour.cpp:296
 msgid "Intensity:Gamma Correct..."
-msgstr "光量:ガンマ補正..."
+msgstr "光量 : ガンマ補正..."
 
 #: colour.cpp:310
 msgid "External.."
@@ -272,7 +270,7 @@ msgstr "前"
 
 #: ilistdlg.cpp:60
 msgid "Shu&ffle"
-msgstr "シャッフル(&f)"
+msgstr "シャッフル(&F)"
 
 #: ilistdlg.cpp:65
 msgid "Next"
@@ -288,11 +286,11 @@ msgstr "イメージリスト"
 
 #: ilistdlg.cpp:259
 msgid "Stop &slide"
-msgstr "スライドの停止(&s)"
+msgstr "スライドの停止(&S)"
 
 #: ilistdlg.cpp:267
 msgid "Start &slide"
-msgstr "スライドの開始(&s)"
+msgstr "スライドの開始(&S)"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
