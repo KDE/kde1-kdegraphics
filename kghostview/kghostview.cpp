@@ -1037,15 +1037,15 @@ void KGhostview::setName()
 
 void KGhostview::newWindow()
 {
-	KGhostview *kg = new KGhostview ();
-	//kg->resize(width(), height());
-	
-	//windowList.append( kg );
-
-	//kg->setMinimumSize( 250, 250 );
-	//kg->setName();
-	//kg->bindKeys();
-	//kg->updateMenuAccel();
+  //	KGhostview *kg = new KGhostview ();
+  //kg->resize(width(), height());
+  
+  //windowList.append( kg );
+  
+  //kg->setMinimumSize( 250, 250 );
+  //kg->setName();
+  //kg->bindKeys();
+  //kg->updateMenuAccel();
 }
 
 void KGhostview::closeEvent( QCloseEvent * )
@@ -1253,62 +1253,67 @@ void KGhostview::help()
 }
 
 
-void KGhostview::applyViewChanges()
+void
+KGhostview::applyViewChanges()
 {
-    //printf("KGhostview::applyViewChanges\n");
-
-	int orient=1;
-	int selection;
-	Bool layout_changed=False;
-	
-	selection = vc->orientComboBox->currentItem();
-
-	switch(selection)
-	  {
-	  case VCPortrait:
-	    orient=KPSPortrait;
-	    statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
-	    break;
-	  case VCLandscape:
-	    orient=KPSLandscape;
-	    statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
-	    break;
-	  case VCUpsideDown:
-	    orient=KPSUpsideDown;
-	    statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
-	    break;
-	  case VCSeascape:
-	    orient=KPSSeascape;
-	    statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
-	    break;
-	}
-	force_orientation = True;
-	orientation = orient;
-
-
-	selection = vc->mediaComboBox->currentItem()+1;
-	if(doc->epsf && selection ==1) {
-		force_pagemedia = False;
-		force_document_media = False;
-	} else if (selection >= base_papersize) {
-		default_pagemedia = selection;
-		force_pagemedia = True;
-    } else {
-		document_media = selection;
-		force_document_media = True;
+  //printf("KGhostview::applyViewChanges\n");
+  
+  int orient=1;
+  int selection;
+  Bool layout_changed=False;
+  
+  selection = vc->orientComboBox->currentItem();
+  
+  switch(selection)
+    {
+    case VCPortrait:
+      orient=KPSPortrait;
+      statusbar->changeItem( i18n("Portrait"), ID_ORIENTATION );
+      break;
+    case VCLandscape:
+      orient=KPSLandscape;
+      statusbar->changeItem( i18n("Landscape"), ID_ORIENTATION );
+      break;
+    case VCUpsideDown:
+      orient=KPSUpsideDown;
+      statusbar->changeItem( i18n("Upside down"), ID_ORIENTATION );
+      break;
+    case VCSeascape:
+      orient=KPSSeascape;
+      statusbar->changeItem( i18n("Seascape"), ID_ORIENTATION );
+      break;
     }
-	
-	if (set_new_magstep()) layout_changed = True;
-
-	if (set_new_orientation(current_page)) layout_changed = True;
-
-    if (set_new_pagemedia(current_page)) layout_changed = True;
-    	
-    if (layout_changed) {
-		page->layout();
-		show_page(current_page);
-		shrinkWrap();
-	}
+  force_orientation = True;
+  orientation = orient;
+  
+  
+  selection = vc->mediaComboBox->currentItem()+1;
+  if(doc->epsf && selection ==1) {
+    force_pagemedia = False;
+    force_document_media = False;
+  } else if (selection >= base_papersize) {
+    default_pagemedia = selection;
+    force_pagemedia = True;
+  } else {
+    document_media = selection;
+    force_document_media = True;
+  }
+  
+  if (set_new_magstep())
+    layout_changed = True;
+  
+  if (set_new_orientation(current_page))
+    layout_changed = True;
+  
+  if (set_new_pagemedia(current_page))
+    layout_changed = True;
+  
+  if (layout_changed)
+    {
+      page->layout();
+      show_page(current_page);
+      shrinkWrap();
+    }
 }
 
 void KGhostview::goToPage()
@@ -1926,37 +1931,55 @@ void KGhostview::openFile( QString name )
 }
 
 
-Bool KGhostview::set_new_orientation(int number)
+Bool
+KGhostview::set_new_orientation(int number)
 {
-    //printf("KGhostview::set_new_orientation\n");
+  //printf("KGhostview::set_new_orientation\n");
+  
+  Bool changed = False;
+  Bool from_doc = False;
+  int new_orientation;
+  
+  //printf("******	Set new orientation\n");
 
-    Bool changed = False;
-    Bool from_doc = False;
-    int new_orientation;
+  if (doc)
+    printf ("Current orientation: (%d)\n Default: (%d)\n",
+	    orientation, doc->default_page_orientation);
 
-	//printf("******	Set new orientation\n");
-
-    if (force_orientation) {
-	new_orientation = orientation;
-    } else {
-	if (doc) {
-	    if (toc_text && doc->pages[number].orientation != NONE) {
-		new_orientation = doc->pages[number].orientation;
-		from_doc = True;
-	    } else if (doc->default_page_orientation != NONE) {
-		new_orientation = doc->default_page_orientation;
-		from_doc = True;
-	    } else if (doc->orientation != NONE) {
-		new_orientation = doc->orientation;
-		from_doc = True;
-	    } else {
-		new_orientation = orientation;
+  if (force_orientation)
+    {
+      new_orientation = orientation;
+    }
+  else
+    {
+      if (doc)
+	{
+	  if (toc_text && doc->pages[number].orientation != NONE)
+	    {
+	      new_orientation = doc->pages[number].orientation;
+	      from_doc = True;
 	    }
-	} else {
-	    new_orientation = orientation;
+	  else if (doc->default_page_orientation != NONE)
+	    {
+	      new_orientation = doc->default_page_orientation;
+	      from_doc = True;
+	    }
+	  else if (doc->orientation != NONE)
+	    {
+	      new_orientation = doc->orientation;
+	      from_doc = True;
+	    }
+	  else
+	    {
+	      new_orientation = orientation;
+	    }
+	} 
+      else
+	{
+	  new_orientation = orientation;
 	}
     }
-
+  
     /* If orientation changed,
      * stop interpreter and setup for new orientation. */
     if (new_orientation != current_orientation) {
