@@ -29,6 +29,9 @@ install-data-local:
 uninstall:
 	rm -f $(kde_minidir)/kfract.xpm
 
+messages:
+	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kfract_SOURCES) && mv messages.po ../po/kfract.pot
+
 kfract.C:kfract.moc
 kfract.moc: kfract.h
 	$(MOC) kfract.h -o kfract.moc
@@ -36,5 +39,4 @@ kfract.moc: kfract.h
 kfractdlgs.C:kfractdlgs.moc
 kfractdlgs.moc: kfractdlgs.h
 	$(MOC) kfractdlgs.h -o kfractdlgs.moc
-
 

@@ -26,6 +26,7 @@
 #include <qradiobt.h>
 #include <qbttngrp.h>
 #include <qlabel.h>
+#include <kapp.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -92,7 +93,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_iter );
   text_iter->setGeometry( D_LM, my_y, 95, D_INPUTH );
   text_iter->setAlignment( AlignLeft );
-  text_iter->setText( "Iterations:" );
+  text_iter->setText( i18n("Iterations:") );
   num_iter = new QLabel( this );
   CHECK_PTR( num_iter );
   num_iter->setFrameStyle( QFrame::Panel | QFrame::Sunken );
@@ -103,7 +104,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_iter_1 );
   text_iter_1->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_iter_1->setAlignment( AlignLeft );
-  text_iter_1->setText( "0 - 999" );
+  text_iter_1->setText( i18n("0 - 999") );
   my_y += D_TEXTINCR;
   if ( my_iter < 1000 )
     { 
@@ -125,7 +126,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   text_iter_1000 = new QLabel( this );
   text_iter_1000->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_iter_1000->setAlignment( AlignLeft );
-  text_iter_1000->setText( "1000 - 100000" );
+  text_iter_1000->setText( i18n("1000 - 100000") );
   my_y += D_TEXTINCR;
   bar_iter_1000 = new QScrollBar( 0, 100, 1, 1,
                                   ( my_iter - ( my_iter % 1000 ) ) / 1000,
@@ -140,7 +141,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_bailout );
   text_bailout->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_bailout->setAlignment( AlignLeft );
-  text_bailout->setText( "Bailout" );
+  text_bailout->setText( i18n("Bailout") );
   my_y += D_TEXTINCR;
   bailout_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( bailout_input );
@@ -157,7 +158,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_center_x );
   text_center_x->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_center_x->setAlignment( AlignLeft );
-  text_center_x->setText( "Center of picture: Real part" );
+  text_center_x->setText( i18n("Center of picture: Real part") );
   my_y += D_TEXTINCR;
   center_x_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( center_x_input );
@@ -172,7 +173,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_center_y );
   text_center_y->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_center_y->setAlignment( AlignLeft );
-  text_center_y->setText( "Center of picture: Imaginary part" );
+  text_center_y->setText( i18n("Center of picture: Imaginary part") );
   my_y += D_TEXTINCR;
   center_y_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( center_y_input );
@@ -188,7 +189,7 @@ TypeDlg::TypeDlg( int number_of_headers,
   CHECK_PTR( text_width );
   text_width->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_width->setAlignment( AlignLeft );
-  text_width->setText( "Width of picture:" );
+  text_width->setText( i18n("Width of picture:") );
   my_y += D_TEXTINCR;
   width_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( width_input );
@@ -211,17 +212,17 @@ TypeDlg::TypeDlg( int number_of_headers,
                + D_BETWEEN;
   ok = new QPushButton( this );
   CHECK_PTR( ok );
-  ok->setText( "OK" );
+  ok->setText( i18n("OK") );
   ok->setGeometry( D_LM, b_pos, 60, 30 );
   connect( ok, SIGNAL( clicked() ), SLOT( typeAccept() ) );
   defaultb = new QPushButton( this );
   CHECK_PTR( defaultb );
-  defaultb->setText( "Defaults" );
+  defaultb->setText( i18n("Defaults") );
   defaultb->setGeometry( 70, b_pos, 60, 30 );
   connect( defaultb, SIGNAL( clicked() ), SLOT( typeDefaults() ) );
   cancel = new QPushButton( this );
   CHECK_PTR( cancel );
-  cancel->setText( "Cancel" );
+  cancel->setText( i18n("Cancel") );
   cancel->setGeometry( 135, b_pos, 60, 30 );
   connect( cancel, SIGNAL( clicked() ), SLOT( reject() ) );
 
@@ -404,16 +405,16 @@ MandelDlg::MandelDlg( int iter, int iter_default,
   CHECK_PTR( header1 );
   header1->setGeometry( D_LM, D_TM, D_RM, D_INPUTH );
   header1->setAlignment( AlignCenter );
-  header1->setText( "z(0) = c = pixel" );
+  header1->setText( i18n("z(0) = c = pixel") );
   header2 = new QLabel( this );
   CHECK_PTR( header2 );
   header2->setGeometry( D_LM, D_TM + D_TEXTLABINCR, D_RM, D_INPUTH );
   header2->setAlignment( AlignCenter );
-  header2->setText( "z(n+1) = z(n)^2 + c" );
+  header2->setText( i18n("z(n+1) = z(n)^2 + c") );
 
   connect( this, SIGNAL( changedType() ),
            this, SLOT( typeHasChanged() ) );
-  setCaption( "Mandelbrot" );
+  setCaption( i18n("Mandelbrot") );
   adjustSize();
   setFixedSize( width(), height() );
   }
@@ -472,7 +473,7 @@ JuliaDlg::JuliaDlg( int iter, int iter_default,
   CHECK_PTR( text_extra_x );
   text_extra_x->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_extra_x->setAlignment( AlignLeft );
-  text_extra_x->setText( "Extra parameter: Real part" );
+  text_extra_x->setText( i18n("Extra parameter: Real part") );
   my_y += D_TEXTINCR;
   extra_x_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( extra_x_input );
@@ -488,7 +489,7 @@ JuliaDlg::JuliaDlg( int iter, int iter_default,
   CHECK_PTR( text_extra_y );
   text_extra_y->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_extra_y->setAlignment( AlignLeft );
-  text_extra_y->setText( "Extra parameter: Imaginary part" );
+  text_extra_y->setText( i18n("Extra parameter: Imaginary part") );
   my_y += D_TEXTINCR;
   extra_y_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( extra_y_input );
@@ -501,7 +502,7 @@ JuliaDlg::JuliaDlg( int iter, int iter_default,
 
   connect( this, SIGNAL( changedType() ),
            this, SLOT( typeHasChanged() ) );
-  setCaption( "Julia" );
+  setCaption( i18n("Julia") );
   adjustSize();
   setFixedSize( width(), height() );
 
@@ -593,14 +594,14 @@ IterDlg::IterDlg( int iter, int iter_default,
 
   my_iter = iter;
   my_iter_default = iter_default;
-  setCaption( "Max. Iterations" );
+  setCaption( i18n("Max. Iterations") );
   my_y = D_TM;
   
   text_iter = new QLabel( this );
   CHECK_PTR( text_iter );
   text_iter->setGeometry( D_LM, my_y, 95, D_INPUTH );
   text_iter->setAlignment( AlignLeft );
-  text_iter->setText( "Iterations:" );
+  text_iter->setText( i18n("Iterations:") );
   num_iter = new QLabel( this );
   CHECK_PTR( num_iter );
   num_iter->setFrameStyle( QFrame::Panel | QFrame::Sunken );
@@ -611,7 +612,7 @@ IterDlg::IterDlg( int iter, int iter_default,
   CHECK_PTR( text_iter_1 );
   text_iter_1->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_iter_1->setAlignment( AlignLeft );
-  text_iter_1->setText( "0 - 999" );
+  text_iter_1->setText( i18n("0 - 999") );
   my_y += D_TEXTINCR;
   if ( my_iter < 1000 )
     { 
@@ -633,7 +634,7 @@ IterDlg::IterDlg( int iter, int iter_default,
   text_iter_1000 = new QLabel( this );
   text_iter_1000->setGeometry( D_LM, my_y, D_RM, D_TEXTH );
   text_iter_1000->setAlignment( AlignLeft );
-  text_iter_1000->setText( "1000 - 100000" );
+  text_iter_1000->setText( i18n("1000 - 100000") );
   my_y += D_TEXTINCR;
   bar_iter_1000 = new QScrollBar( 0, 100, 1, 1,
                                   ( my_iter - ( my_iter % 1000 ) ) / 1000,
@@ -646,17 +647,17 @@ IterDlg::IterDlg( int iter, int iter_default,
 
   ok = new QPushButton( this );
   CHECK_PTR( ok );
-  ok->setText( "OK" );
+  ok->setText( i18n("OK") );
   ok->setGeometry( D_LM, my_y, 60, 30 );
   connect( ok, SIGNAL( clicked() ), SLOT( iterAccept() ) );
   defaultb = new QPushButton( this );
   CHECK_PTR( defaultb );
-  defaultb->setText( "Defaults" );
+  defaultb->setText( i18n("Defaults") );
   defaultb->setGeometry( 70, my_y, 60, 30 );
   connect( defaultb, SIGNAL( clicked() ), SLOT( iterDefaults() ) );
   cancel = new QPushButton( this );
   CHECK_PTR( cancel );
-  cancel->setText( "Cancel" );
+  cancel->setText( i18n("Cancel") );
   cancel->setGeometry( 135, my_y, 60, 30 );
   connect( cancel, SIGNAL( clicked() ), SLOT( reject() ) );
 
@@ -729,10 +730,10 @@ ColorDlg::ColorDlg( DrawView::ColorScheme scheme,
   QButtonGroup *bg;
   QPushButton *ok, *cancel;
 
-  hsv_button = new QRadioButton( "Less colours", this );
+  hsv_button = new QRadioButton( i18n("Less colours"), this );
   CHECK_PTR( hsv_button );
   hsv_button->setGeometry( D_LM + 40, D_TM, 155, 20 );
-  rgb_button = new QRadioButton( "More colours", this );
+  rgb_button = new QRadioButton( i18n("More colours"), this );
   CHECK_PTR( rgb_button );
   rgb_button->setGeometry( D_LM + 40, D_TM + 30, 155, 20 );
   if ( scheme == DrawView::Rgb )
@@ -752,15 +753,15 @@ ColorDlg::ColorDlg( DrawView::ColorScheme scheme,
 
   ok = new QPushButton( this );
   CHECK_PTR( ok );
-  ok->setText( "OK" );
+  ok->setText( i18n("OK") );
   ok->setGeometry( D_LM, D_TM + 60, 60, 30 );
   connect( ok, SIGNAL( clicked() ), SLOT( colorAccept() ) );
   cancel = new QPushButton( this );
   CHECK_PTR( cancel );
-  cancel->setText( "Cancel" );
+  cancel->setText( i18n("Cancel") );
   cancel->setGeometry( 135, D_TM + 60, 60, 30 );
   connect( cancel, SIGNAL( clicked() ), SLOT( reject() ) );
-  setCaption( "Colour schemes" );
+  setCaption( i18n("Colour schemes") );
   adjustSize();
   setFixedSize( width(), height() );
   }
@@ -802,7 +803,7 @@ ZoomDlg::ZoomDlg( double zoom_in, double zoom_in_default,
   CHECK_PTR( text_zoom_in );
   text_zoom_in->setGeometry( D_LM, my_y, 95, D_INPUTH );
   text_zoom_in->setAlignment( AlignLeft );
-  text_zoom_in->setText( "Zoom in factor:" );
+  text_zoom_in->setText( i18n("Zoom in factor:") );
   zoom_in_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( zoom_in_input );
   zoom_in_input->setGeometry( 100, my_y, 95, D_INPUTH );
@@ -818,7 +819,7 @@ ZoomDlg::ZoomDlg( double zoom_in, double zoom_in_default,
   CHECK_PTR( text_zoom_out );
   text_zoom_out->setGeometry( D_LM, my_y, 95, D_INPUTH );
   text_zoom_out->setAlignment( AlignLeft );
-  text_zoom_out->setText( "Zoom out factor:" );
+  text_zoom_out->setText( i18n("Zoom out factor:") );
   zoom_out_input = new KRestrictedLine( this, NULL, "0123456789.-+" );
   CHECK_PTR( zoom_out_input );
   zoom_out_input->setGeometry( 100, my_y, 95, D_INPUTH );
@@ -831,21 +832,21 @@ ZoomDlg::ZoomDlg( double zoom_in, double zoom_in_default,
  
   ok = new QPushButton( this );
   CHECK_PTR( ok );
-  ok->setText( "OK" );
+  ok->setText( i18n("OK") );
   ok->setGeometry( D_LM, my_y, 60, 30 );
   connect( ok, SIGNAL( clicked() ), SLOT( zoomAccept() ) );
   defaultb = new QPushButton( this );
   CHECK_PTR( defaultb );
-  defaultb->setText( "Defaults" );
+  defaultb->setText( i18n("Defaults") );
   defaultb->setGeometry( 70, my_y, 60, 30 );
   connect( defaultb, SIGNAL( clicked() ), SLOT( zoomDefaults() ) );
   cancel = new QPushButton( this );
   CHECK_PTR( cancel );
-  cancel->setText( "Cancel" );
+  cancel->setText( i18n("Cancel") );
   cancel->setGeometry( 135, my_y, 60, 30 );
   connect( cancel, SIGNAL( clicked() ), SLOT( reject() ) );
 
-  setCaption( "Zoom factors" );
+  setCaption( i18n("Zoom factors") );
   adjustSize();
   setFixedSize( width(), height() ); 
   }

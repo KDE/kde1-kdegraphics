@@ -70,23 +70,23 @@ void KFract::setupMenuBar()
   {
   QPopupMenu *file = new QPopupMenu();
   CHECK_PTR( file );
-  file->insertItem( "&Load params...", this, SLOT( loadParam() ) );
-  file->insertItem( "&Save params...", this, SLOT( saveParam() ) );
-  file->insertItem( "Save &pic...", this, SLOT( savePic() ) );
+  file->insertItem( i18n("&Load params..."), this, SLOT( loadParam() ) );
+  file->insertItem( i18n("&Save params..."), this, SLOT( saveParam() ) );
+  file->insertItem( i18n("Save &pic..."), this, SLOT( savePic() ) );
   file->insertSeparator();
-  file->insertItem( "&Quit", this, SLOT( my_quit() ), ALT+Key_Q );
+  file->insertItem( i18n("&Quit"), this, SLOT( my_quit() ), ALT+Key_Q );
 
   QPopupMenu *types = new QPopupMenu();
   CHECK_PTR( types );
-  types->insertItem( "Mandelbrot...", this, SIGNAL( mandel() ) );
-  types->insertItem( "Julia...", this, SIGNAL( julia() ) );
+  types->insertItem( i18n("Mandelbrot..."), this, SIGNAL( mandel() ) );
+  types->insertItem( i18n("Julia..."), this, SIGNAL( julia() ) );
 
   QPopupMenu *options = new QPopupMenu();
   CHECK_PTR( options );
-  options->insertItem( "Max. Iterations...", this, SIGNAL( iterations() ) );
-  options->insertItem( "Colour scheme...", this, SIGNAL( colorScheme() ) );
-  options->insertItem( "Colour cycling...", this, SIGNAL( colorCycling() ) );
-  options->insertItem( "Zoom factor...", this, SIGNAL( zoomFactor() ) );
+  options->insertItem( i18n("Max. Iterations..."), this, SIGNAL( iterations() ) );
+  options->insertItem( i18n("Colour scheme..."), this, SIGNAL( colorScheme() ) );
+  options->insertItem( i18n("Colour cycling..."), this, SIGNAL( colorCycling() ) );
+  options->insertItem( i18n("Zoom factor..."), this, SIGNAL( zoomFactor() ) );
 
   QPopupMenu *help = kapp->getHelpMenu(true, QString(i18n("Fractals Generator"))
                                          + " " + KFRACT_VERSION
@@ -95,11 +95,11 @@ void KFract::setupMenuBar()
   CHECK_PTR( help );
 
 
-  m->insertItem( "&File", file );
-  m->insertItem( "&Types", types);
-  m->insertItem( "&Options", options );
+  m->insertItem( i18n("&File"), file );
+  m->insertItem( i18n("&Types"), types);
+  m->insertItem( i18n("&Options"), options );
   m->insertSeparator();
-  m->insertItem( "&Help", help );
+  m->insertItem( i18n("&Help"), help );
 
   connect( this, SIGNAL( mandel() ), this, SLOT( mandelFract() ) );
   connect( this, SIGNAL( julia() ), this, SLOT( juliaFract() ) );
@@ -120,34 +120,34 @@ void KFract::setupToolBar()
   pixmap.load( pixdir + "fileopen.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( loadParam() ), TRUE, "Open parameters" );
+                   SLOT( loadParam() ), TRUE, i18n("Open parameters") );
   pixmap.load( pixdir + "filefloppy.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( saveParam() ), TRUE, "Save parameters" );
+                   SLOT( saveParam() ), TRUE, i18n("Save parameters") );
   pixmap.load( pixdir + "filefloppy.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( savePic() ), TRUE, "Save picture" );
+                   SLOT( savePic() ), TRUE, i18n("Save picture") );
   t->insertSeparator();
   pixmap.load( pixdir + "viewmag+.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( doZoomIn() ), TRUE, "Zoom in" );
+                   SLOT( doZoomIn() ), TRUE, i18n("Zoom in") );
   pixmap.load( pixdir + "viewmag-.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( doZoomOut() ), TRUE, "Zoom out" );
+                   SLOT( doZoomOut() ), TRUE, i18n("Zoom out") );
   t->insertSeparator();
   pixmap.load( pixdir + "home.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( goHome() ), TRUE, "Defaults for this type" );
+                   SLOT( goHome() ), TRUE, i18n("Defaults for this type") );
   t->insertSeparator();
   pixmap.load( pixdir + "help.xpm" );
   t->insertButton( pixmap, 0,
                    SIGNAL( clicked() ), this,
-                   SLOT( helpFract() ), TRUE, "Help" );
+                   SLOT( helpFract() ), TRUE, i18n("Help") );
 
   t->setBarPos( KToolBar::Top );
   }
@@ -277,8 +277,8 @@ void KFract::getColorScheme( DrawView::ColorScheme scheme )
 
 void KFract::notImplemented()
   {
-  KMsgBox::message( w, "Oops!", "Oops! Not implemented yet.",
-                    KMsgBox::INFORMATION, "OK" );
+  KMsgBox::message( w, i18n("Oops!"), i18n("Oops! Not implemented yet."),
+                    KMsgBox::INFORMATION, i18n("OK") );
   }
 
 /*

@@ -23,6 +23,7 @@
     */
 
 
+#include <kapp.h>
 #include <stdio.h>
 
 #include "fract.h"
@@ -69,8 +70,8 @@ int Fract::calcPoint( int x, int y )
   a += x;
   b += y;
 
-  fprintf( stderr, "Fract::calcPoint() is an abstract method. You MUST\n\
-re-write it!\n");
+  fprintf( stderr, i18n("Fract::calcPoint() is an abstract method. You MUST\n\
+re-write it!\n"));
 
   return 0;
   }
