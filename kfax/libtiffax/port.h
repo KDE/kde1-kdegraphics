@@ -23,7 +23,11 @@ typedef double dblparam_t;
 #ifdef __STRICT_ANSI__
 #define	INLINE	__inline__
 #else
+#ifdef __SUNPRO_C
+#define INLINE
+#else
 #define	INLINE	inline
+#endif
 #endif
 #define GLOBALDATA(TYPE,NAME)	extern TYPE NAME
 #ifdef __cplusplus

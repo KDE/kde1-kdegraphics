@@ -10,7 +10,6 @@ RANLIB	= @RANLIB@
 INSTALL	= @INSTALL@
 
 IPATH	= -I. 
-CFLAGS	=  -O2
 SRCDIR  = 
 
 SRCS	= \

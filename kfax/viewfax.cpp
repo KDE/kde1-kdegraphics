@@ -45,6 +45,8 @@
 #include <X11/keysym.h>
 #include <X11/keysymdef.h>
 #include <X11/cursorfont.h>
+
+#include <qglobal.h>
 #include "faxexpand.h"
 #include "version.h"
 
@@ -108,7 +110,7 @@ int verbose = 0;
 int abell = 1;			/* audio bell */
 int vbell = 0;			/* visual bell */
 int zfactor = 0;			/* zoom factor */
-bool have_cmd_opt = false;
+bool have_cmd_opt = FALSE;
 
 size_t Memused = 0;		/* image memory usage */
 static size_t Memlimit = 8*1024*1024;	/* try not to exceed */
@@ -181,7 +183,7 @@ int viewfaxmain(int argc, char **argv){
 
     bo.i = 1;
     defaultpage.vres = -1;
-    have_no_fax = true;
+    have_no_fax = TRUE;
 
     /* TODO Do I need to know this: */
     defaultpage.expander = g31expand;
@@ -197,49 +199,49 @@ int viewfaxmain(int argc, char **argv){
 	    defaultpage.expander = g32expand;
 	    if(!have_height)
 	      defaultpage.height = 2339;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'h':               /* user thinks this is the height */
 	  have_height = 1;
 	  defaultpage.height = atoi(optarg);
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	  break;
 	case 'i':		/* invert black/white */
 	    defaultpage.inverse = 1;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'l':		/* landscape */
 	    defaultpage.orient |= TURN_L;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'f':		/* fine resolution */
 	    defaultpage.vres = 1;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'n':		/* normal resolution */
 	    defaultpage.vres = 0;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'r':		/* reverse input bits */
 	    defaultpage.lsbfirst = 1;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'u':		/* upside down */
 	    defaultpage.orient |= TURN_U;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case 'v':		/*version*/
 	    banner = 1;
 	    break;
 	case 'w':		/* user thinks this is the width */
 	    defaultpage.width = atoi(optarg);
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	case '4':
 	    defaultpage.expander = g4expand;
 	    if(!have_height)
 	      defaultpage.height = 2155;
-	    have_cmd_opt = true;
+	    have_cmd_opt = TRUE;
 	    break;
 	    /*	case 'z':	
 	    c = atoi(optarg);
@@ -303,10 +305,10 @@ int viewfaxmain(int argc, char **argv){
     }
 
     if ( firstpage == NULL) {
-      have_no_fax = true;
+      have_no_fax = TRUE;
     }
     else{
-      have_no_fax = false;
+      have_no_fax = FALSE;
     }
 
     Disp = qtdisplay;
