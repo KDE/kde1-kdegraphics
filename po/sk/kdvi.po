@@ -88,7 +88,7 @@ msgstr "&Nastavenie ..."
 
 #: kdvi.cpp:175
 msgid "&New"
-msgstr ""
+msgstr "&Nový"
 
 #: kdvi.cpp:176
 msgid "&Open ..."
@@ -123,13 +123,12 @@ msgid "&Redraw page"
 msgstr "Prek&resli» stránku"
 
 #: kdvi.cpp:205
-#, fuzzy
 msgid "&Previous"
-msgstr "Predchádzajúca strana"
+msgstr "&Predchádzajúca"
 
 #: kdvi.cpp:206
 msgid "&Next"
-msgstr ""
+msgstr "&Nasledujúca"
 
 #: kdvi.cpp:207
 msgid "&First"

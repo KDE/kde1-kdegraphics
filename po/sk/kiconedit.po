@@ -41,9 +41,8 @@ msgid "Select All"
 msgstr "Oznaèi» v¹etko"
 
 #: kiconedit.cpp:385
-#, fuzzy
 msgid "New &Window"
-msgstr "Nové okno"
+msgstr "Nové &okno"
 
 #: kiconedit.cpp:390
 msgid "&New..."
@@ -430,7 +429,6 @@ msgstr ""
 "(Tip: Mô¾ete robi» aj pravouholníkové aj kru¾nicové oznaèenia)"
 
 #: kiconedit.cpp:830
-#, fuzzy
 msgid ""
 "Paste\n"
 "\n"
@@ -447,6 +445,9 @@ msgstr ""
 "Vlo¾í obsah schránky do aktuálnej ikonky.\n"
 "\n"
 "Ak je obsah väè¹í ako aktuálna ikonka, mô¾ete ju vlo¾i» do nového okna."
+"\n"
+"(Tip: Zvoµte \"Vlo¾i» transparentné body\" v konfiguraènom dialógu, ak chcete "
+"tie¾ vklada» transparentne)"
 
 #: kiconedit.cpp:837
 msgid ""
@@ -701,14 +702,12 @@ msgid "Cleared"
 msgstr "Zmazané"
 
 #: kicongrid.cpp:842
-#, fuzzy
 msgid "Selected area cutted"
-msgstr "Oznaèi» oblas»"
+msgstr "Oznaèená oblas» vystrihnutá"
 
 #: kicongrid.cpp:845
-#, fuzzy
 msgid "Selected area copied"
-msgstr "Oznaèi» oblas»"
+msgstr "Oznaèená oblas» skopírovaná"
 
 #: kicongrid.cpp:923
 msgid ""
@@ -945,32 +944,32 @@ msgid "Example"
 msgstr "Príklad"
 
 #: kiconconfig.cpp:398
-#, fuzzy
 msgid "Main Toolbar"
-msgstr "Mini prieèinok"
+msgstr "Mini panel nástrojov"
 
 #: kiconconfig.cpp:401
-#, fuzzy
 msgid "Drawing tools"
-msgstr "Zobrazi»/nezobrazi» &kresliace nástroje"
+msgstr "&Kresliace nástroje"
 
 #: kiconconfig.cpp:405
 msgid ""
 "Note: Other settings of the toolbars can be reached\n"
 "from the toolbar \"handle\" or from the \"Options\" menu"
 msgstr ""
+"Poznámka: Zvy¹ok nastavenia panelu nástrojov nájdete\n"
+"v paneli \"handle\" alebo z menu \"Nastavenie\""
 
 #: kiconconfig.cpp:424 kiconconfig.cpp:437
 msgid "Show Icon"
-msgstr ""
+msgstr "Ukáza» ikonku"
 
 #: kiconconfig.cpp:429 kiconconfig.cpp:442
 msgid "Show Icon and Text"
-msgstr ""
+msgstr "Ukáza» ikonku a text"
 
 #: kiconconfig.cpp:433 kiconconfig.cpp:446
 msgid "Show Text"
-msgstr ""
+msgstr "Ukáza» text"
 
 #: kiconconfig.cpp:504
 msgid "Paste mode"
@@ -1005,88 +1004,10 @@ msgid "Configure background"
 msgstr "Nastavi» pozadie"
 
 #: kiconconfig.cpp:629
-#, fuzzy
 msgid "Toolbars"
-msgstr "&Pomôcky"
+msgstr "&Panely nástrojov"
 
 #: kiconconfig.cpp:641
 msgid "Icon grid"
 msgstr "Mrie¾ka ikonky"
 
-#~ msgid "&Map to KDE palette"
-#~ msgstr "Na&mapova» do KDE palety"
-
-#~ msgid "Warning"
-#~ msgstr "Varovanie"
-
-#~ msgid "New &window"
-#~ msgstr "Nové o&kno"
-
-#~ msgid "&Open..."
-#~ msgstr "&Otvori»..."
-
-#~ msgid "&Save"
-#~ msgstr "&Ulo¾i»"
-
-#~ msgid "Save &as..."
-#~ msgstr "Ulo¾i» &ako..."
-
-#~ msgid "&Print..."
-#~ msgstr "&Tlaèi»..."
-
-#~ msgid "&Close"
-#~ msgstr "&Zavrie»"
-
-#~ msgid "&File"
-#~ msgstr "&Súbor"
-
-#~ msgid "&Copy"
-#~ msgstr "&Kopírova»"
-
-#~ msgid "&Paste"
-#~ msgstr "&Vlo¾i»"
-
-#~ msgid "&Edit"
-#~ msgstr "Ú&pravy"
-
-#~ msgid "&View"
-#~ msgstr "&Zobrazi»"
-
-#~ msgid "&Options"
-#~ msgstr "&Mo¾nosti"
-
-#~ msgid "&Help"
-#~ msgstr "P&omocník"
-
-#~ msgid "Open a file"
-#~ msgstr "Otvori» súbor"
-
-#~ msgid "Cut"
-#~ msgstr "Vystrihnú»"
-
-#~ msgid "Copy"
-#~ msgstr "Kopírova»"
-
-#~ msgid "Paste"
-#~ msgstr "Vlo¾i»"
-
-#~ msgid "Error"
-#~ msgstr "Chyba"
-
-#~ msgid "Information"
-#~ msgstr "Informácia"
-
-#~ msgid "&Ok"
-#~ msgstr "&Ok"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Zru¹i»"
-
-#~ msgid "&Remove"
-#~ msgstr "Odob&ra»"
-
-#~ msgid "Appearance"
-#~ msgstr "Vzhµad"
-
-#~ msgid "Miscellaneous"
-#~ msgstr "Rôzne"
