@@ -1,5 +1,11 @@
 # $Id$
 
+kde_libraries = @kde_libraries@
+qt_libraries = @qt_libraries@
+top_builddir = ..
+LIBTOOL = @LIBTOOL@
+KDE_RPATH = @KDE_RPATH@
+
 prefix  = @prefix@
 BINDIR  = $(prefix)/bin
 LIBDIR  = $(prefix)/lib
@@ -59,7 +65,7 @@ Makefile: Makefile.in
 	cd .. && CONFIG_FILES=kfax/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 $(TARGET): $(SOURCES) $(SRCMETA) $(OBJECTS) $(HEADER)
-	$(CXX) $(OBJECTS) -o $(TARGET) $(LDFLAGS)
+	$(LIBTOOL) --mode=link $(CXX) $(OBJECTS) -o $(TARGET) $(LDFLAGS) $(KDE_RPATH)
 
 libtiff:
 	(cd libtiffax && $(MAKE) all)
@@ -67,6 +73,7 @@ libtiff:
 depend:
 	@makedepend -I$(INCDIR) $(SOURCES) 2> /dev/null
 clean:
+	(cd libtiffax && $(MAKE) clean)
 	-rm -f *.o *.bak *~ *% #*
 	-rm -f $(SRCMETA) $(TARGET)
 

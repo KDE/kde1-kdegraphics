@@ -4,6 +4,12 @@
 ##
 ## $Id$
 
+kde_libraries = @kde_libraries@
+qt_libraries = @qt_libraries@
+top_builddir = ..
+LIBTOOL = @LIBTOOL@
+KDE_RPATH = @KDE_RPATH@
+
 CXX = @CXX@
 MOC= @MOC@
 topdir = @topdir@
@@ -53,7 +59,7 @@ all: kview
 	$(MOC) $< -o $@
 
 kview: $(OBJS)
-	$(CXX) -o $@ $(OBJS) $(FORMATLIBS) $(LDFLAGS)
+	$(LIBTOOL) --mode=link $(CXX) -o $@ $(OBJS) $(FORMATLIBS) $(LDFLAGS) $(KDE_RPATH)
 
 main.o: main.cpp wview.moc
 wview.o: wview.cpp wview.moc viewport.h fileman.moc

@@ -3,13 +3,18 @@
 ## Makefile for kpaint
 ##
 
+kde_libraries = @kde_libraries@
+qt_libraries = @qt_libraries@
+top_builddir = ..
+LIBTOOL = @LIBTOOL@
+KDE_RPATH = @KDE_RPATH@
 #
 # Configuration
 #
 topdir	=	@topdir@
 prefix 	= 	@prefix@
 INCDIRS	=	@all_includes@ -I.. -I../kview
-LIBDIR	=	@all_libraries@ -Ltools
+LIBDIR	=	@all_libraries@ -L$(topdir)/kpaint/tools
 topdir  =       @topdir@
 MOC	=	@MOC@
 CXX	= 	@CXX@
@@ -92,7 +97,7 @@ kplib:
 	(cd tools; $(MAKE) all)
 
 kpaint: $(METAS) $(OBJS)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS)
+	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS) $(KDE_RPATH)
 
 clean:
 	$(MAKE) -C tools clean
