@@ -7,21 +7,6 @@
 #include <qstring.h>
 #include <qstrlist.h>
 
-class KURLDrag: public QStoredDrag {
-    Q_OBJECT
-public:
-    KURLDrag( QStrList urls,
-	       QWidget * dragSource = 0, const char * name = 0 );
-    KURLDrag( QWidget * dragSource = 0, const char * name = 0 );
-    ~KURLDrag();
-
-    void setURL( QStrList urls );
-
-    static bool canDecode( QDragMoveEvent* e );
-    static bool decode( QDropEvent* e, QString& s );
-    static bool decode( QDropEvent* e, QStrList urls );
-};
-
 class KDragSource: public QLabel
 {
   Q_OBJECT

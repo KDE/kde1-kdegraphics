@@ -12,7 +12,6 @@ class KDropSite: public QObject, QDropSite
     Q_OBJECT
 public:
     KDropSite( QWidget * parent = 0);
-    ~KDropSite();
 
 signals:
     void dropAction(QDropEvent*);
@@ -25,12 +24,6 @@ protected:
     void dragMoveEvent( QDragMoveEvent * );
     void dragLeaveEvent( QDragLeaveEvent * );
     void dropEvent( QDropEvent * );
-
-    void createCursors();
-
-    QCursor cursorImage, cursorText;
-    // this is a normal even
-    //void mousePressEvent( QMouseEvent * );
 };
 
 

@@ -229,7 +229,7 @@ void KIconEdit::closeEvent(QCloseEvent *e)
   if (grid->isModified()) 
   {
     KWM::activate(winId());
-    int r = KMsgBox::yesNoCancel(this, i18n("Warning"), 
+    int r = KMsgBox::yesNoCancel(this, i18n("Warning"),
 		i18n("The current file has been modified.\nDo you want to save it?"));
     switch(r)
     {
@@ -282,7 +282,12 @@ void KIconEdit::saveGoingDownStatus()
 {
   debug("KIconEdit::saveGoingDownStatus");
   if( grid->isModified() )
+  {
+    debug("Saving backup for modified file %s", icon->url().data());
     icon->saveBackup(&grid->image());
+  }
+  else
+    icon->cleanup();
   debug("KIconEdit::saveGoingDownStatus - done");
 }
 
@@ -301,8 +306,7 @@ void KIconEdit::readProperties(KConfig *config)
   QString entry = config->readEntry("Name", ""); // no default
   if (entry.isEmpty())
     return;
-#warning Need to fix session management opening
-  //readGoingDownStatus(entry);
+  icon->open(&grid->image(), entry.data());
 }
 
 // this is for normal exits or request from "Options->Save options".

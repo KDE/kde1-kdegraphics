@@ -19,6 +19,7 @@
 */  
 
 #include <qdragobject.h>
+#include <qstrlist.h>
 #include "debug.h"
 #include "kiconedit.h"
 #include "pics/logo.xpm"
@@ -543,6 +544,10 @@ void KIconEdit::slotQDropEvent( QDropEvent *e )
 {
   debug("Got QDropEvent!");
   QImage image;
+  QStrList list;
+  char *s;
+  bool loadedinthis = false;
+  
   if ( QImageDrag::decode( e, image ) )
   {
     debug("Image decoded");
@@ -561,14 +566,31 @@ void KIconEdit::slotQDropEvent( QDropEvent *e )
           }
         }
       }
-
-
       grid->load(&image);
     }
     else
       debug("Image is invalid");
-    return;
   }
+#if QT_VERSION > 140
+  else if(QUrlDrag::decode( e, list ) )
+  {
+    for ( s = list.first(); s != 0L; s = list.next() )
+    {
+      // Load the first file in this window
+      debug("KIconEdit:slotQDropEvent - %s", s);
+      //s == list.getFirst();
+      if (!grid->isModified() && !loadedinthis) 
+      {
+        icon->open( &grid->image(), s );
+        loadedinthis = true;
+      }
+      else 
+      {
+        slotNewWin(s);
+      }
+    }
+  } 
+#endif   
 }
 
 void KIconEdit::slotQDragLeaveEvent( QDragLeaveEvent * /*e*/ )
@@ -580,10 +602,11 @@ void KIconEdit::slotQDragEnterEvent( QDragEnterEvent *e )
 {
   debug("Got QDragEnterEvent!");
   if( QImageDrag::canDecode( e ) )
-  {
-    debug("  an image");
     e->accept();
-  }
+#if QT_VERSION > 140
+  else if( QUrlDrag::canDecode( e ) )
+    e->accept();
+#endif
   else
     e->ignore();
 }
