@@ -225,7 +225,7 @@ msgstr "Områdevalg"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Avrunnet firkant"
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
