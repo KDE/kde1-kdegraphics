@@ -67,12 +67,11 @@ msgstr "©to je to? DVI problem!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Status datoteke promjenjen."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
-msgstr "Datoteka je ponovno uèitana"
+msgstr "Datoteka je ponovno uèitana."
 
 #: kdvi.cpp:93
 msgid "No document"
@@ -469,9 +468,9 @@ msgid "Small text button set to shrink factor "
 msgstr "Male gumbe s tekstom podesi prema faktoru su¾enja"
 
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Smanji: xx"
+msgstr "Smanji: %d"
 
 #: marklist.cpp:37
 msgid "Mark current"
