@@ -40,38 +40,13 @@ AC_SUBST(LIBCRYPT)
 LIBKHTMLW="-lkhtmlw -ljscript" dnl this is somewhat historical, since jscript is ways needed
 AC_SUBST(LIBKHTMLW)
 
+dnl Image readers/writers
+
 AC_FIND_GIF
 AC_FIND_JPEG
-
-dnl Stephan: when we need it somewhere else, we can move it 
-dnl back to acinclude.m4.in
-AC_DEFUN(AC_FIND_TIFF,
-   [AC_MSG_CHECKING([for libtiff])
-AC_CACHE_VAL(ac_cv_lib_tiff,
-[ac_save_LIBS="$LIBS"
-LIBS="$all_libraries -ltiff -lX11 $LIBSOCKET"
-AC_TRY_LINK(dnl
-[
-#include<tiff.h>
-],
-            [return (TIFFOpen( "", "r") == 0); ],
-            eval "ac_cv_lib_tiff=-ltiff",
-            eval "ac_cv_lib_tiff=no")
-LIBS="$ac_save_LIBS"
-])dnl
-if eval "test ! \"`echo $ac_cv_lib_tiff`\" = no"; then
-  AC_DEFINE_UNQUOTED(HAVE_LIBTIFF)
-  LIBTIFF="$ac_cv_lib_tiff"
-  AC_SUBST(LIBTIFF)
-  AC_MSG_RESULT($ac_cv_lib_tiff)
-else
-  AC_MSG_RESULT(no)
-  LIBTIFF=""
-  AC_SUBST(LIBTIFF)
-fi
-])
-
 AC_FIND_TIFF
+KIMGIO_LIBS="\$(LIB_JPEG) \$(LIB_TIFF)"
+AC_SUBST(KIMGIO_LIBS)
 
 # AC_CHECK_LIB(png, main, 
 # [ LIBPNG="-lpng -lz"

@@ -3,20 +3,20 @@
 ##    Copyright (C) 1997 Janos Farkas (chexum@shadow.banki.hu)
 ##              (C) 1997 Stephan Kulow (coolo@kde.org)
 
-##   This program is free software; you can redistribute it and/or modify
-##   it under the terms of the GNU General Public License as published by
-##   the Free Software Foundation; either version 2 of the License, or
-##   (at your option) any later version.
-##
-##   This program is distributed in the hope that it will be useful,
-##   but WITHOUT ANY WARRANTY; without even the implied warranty of
-##   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##   GNU General Public License for more details.
-##
-##   You should have received a copy of the GNU General Public License
-##   along with this program; if not, write to the Free Software
-##   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-##
+##    This file is free software; you can redistribute it and/or
+##    modify it under the terms of the GNU Library General Public
+##    License as published by the Free Software Foundation; either
+##    version 2 of the License, or (at your option) any later version.
+
+##    This library is distributed in the hope that it will be useful,
+##    but WITHOUT ANY WARRANTY; without even the implied warranty of
+##    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+##    Library General Public License for more details.
+
+##    You should have received a copy of the GNU Library General Public License
+##    along with this library; see the file COPYING.LIB.  If not, write to
+##    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+##    Boston, MA 02111-1307, USA.        
 
 ## IMPORTANT NOTE:
 ## Please do not modify this file unless you expect your modifications to be
@@ -996,6 +996,33 @@ if eval "test ! \"`echo $ac_cv_lib_jpeg`\" = no"; then
   AC_DEFINE_UNQUOTED(HAVE_LIBJPEG)
 fi
 ])
+
+AC_DEFUN(AC_FIND_TIFF,
+   [AC_MSG_CHECKING([for libtiff])
+AC_CACHE_VAL(ac_cv_lib_tiff,
+[ac_save_LIBS="$LIBS"
+LIBS="$all_libraries -ltiff -lX11 $LIBSOCKET"
+AC_TRY_LINK(dnl
+[
+#include<tiff.h>
+],
+            [return (TIFFOpen( "", "r") == 0); ],
+            eval "ac_cv_lib_tiff=-ltiff",
+            eval "ac_cv_lib_tiff=no")
+LIBS="$ac_save_LIBS"
+])dnl
+if eval "test ! \"`echo $ac_cv_lib_tiff`\" = no"; then
+  AC_DEFINE_UNQUOTED(HAVE_LIBTIFF)
+  LIBTIFF="$ac_cv_lib_tiff"
+  AC_SUBST(LIBTIFF)
+  AC_MSG_RESULT($ac_cv_lib_tiff)
+else
+  AC_MSG_RESULT(no)
+  LIBTIFF=""
+  AC_SUBST(LIBTIFF)
+fi
+])
+
 
 AC_DEFUN(AC_CHECK_BOOL,
 [
