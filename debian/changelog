@@ -1,3 +1,11 @@
+kdegraphics (2:980312-3) frozen; urgency=low
+
+  * add man page for undocumented
+  * compile with fixed kdelibs. This time from CVS
+  * use debhelper now
+
+ -- Stephan Kulow <coolo@kde.org>  Fri,  3 Apr 1998 19:39:55 +0200
+
 kdegraphics (2:980312-2) frozen; urgency=low
 
   * new compile cycle with qt-1.33 and libstdc++-2.8
