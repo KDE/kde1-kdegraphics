@@ -6,6 +6,10 @@
 
 #include <qaccel.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name )
 {
@@ -21,17 +25,17 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 10, 10, 40, 30 );
 	tmpQLabel->setAlignment( AlignRight|AlignVCenter );
-	tmpQLabel->setText("File :");
+	tmpQLabel->setText(i18n("File :"));
 	
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 10, 40, 40, 30 );
 	tmpQLabel->setAlignment( AlignRight|AlignVCenter );
-	tmpQLabel->setText("Title :");
+	tmpQLabel->setText(i18n("Title :"));
 	
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 10, 70, 40, 30 );
 	tmpQLabel->setAlignment( AlignRight|AlignVCenter );
-	tmpQLabel->setText("Date :");
+	tmpQLabel->setText(i18n("Date :"));
 	
 	fileLabel = new QLabel( this );
 	fileLabel->setGeometry( 55, 10, 170, 30 );
@@ -47,7 +51,7 @@ InfoDialog::InfoDialog( QWidget *parent, const char *name )
 	
 	ok = new QPushButton( this );
 	ok->setGeometry( 190, 115, 60, 30 );
-	ok->setText( "OK" );
+	ok->setText( i18n("OK") );
 	ok->setAutoDefault(TRUE);
 	ok->setFocus();
 	connect( ok, SIGNAL(clicked()), SLOT(reject()) );

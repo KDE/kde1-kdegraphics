@@ -5,6 +5,10 @@
 #include <qlabel.h>
 #include <qapp.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 InterpreterDialog::InterpreterDialog ( QWidget* parent, const char* name )
 	: QDialog( parent, name, TRUE )
 {
@@ -15,13 +19,13 @@ InterpreterDialog::InterpreterDialog ( QWidget* parent, const char* name )
 	generalBox = new QGroupBox( this, "generalBox" );
 	generalBox->setGeometry( 5, 10, 430, 100 );
 	generalBox->setFrameStyle( 49 );
-	generalBox->setTitle( "General" );
+	generalBox->setTitle( i18n("General") );
 	generalBox->setAlignment( 1 );
 
 	QLabel* tmpQLabel;
 	tmpQLabel = new QLabel( this, "intLabel" );
 	tmpQLabel->setGeometry( 20, 30, 100, 30 );
-	tmpQLabel->setText( "Interpreter name" );
+	tmpQLabel->setText( i18n("Interpreter name") );
 	tmpQLabel->setAlignment( 290 );
 	tmpQLabel->setMargin( -1 );
 
@@ -35,68 +39,68 @@ InterpreterDialog::InterpreterDialog ( QWidget* parent, const char* name )
 
 	antialiasBox = new QCheckBox( this, "antialiasBox" );
 	antialiasBox->setGeometry( 30, 70, 100, 30 );
-	antialiasBox->setText( "Antialiasing" );
+	antialiasBox->setText( i18n("Antialiasing") );
 	antialiasBox->setFocusPolicy(QWidget::StrongFocus);
 	
 	fontsBox = new QCheckBox( this, "fontsBox" );
 	fontsBox->setGeometry( 160, 70, 100, 30 );
-	fontsBox->setText( "Platform fonts" );
+	fontsBox->setText( i18n("Platform fonts") );
 	fontsBox->setFocusPolicy(QWidget::StrongFocus);
 
 	messageBox = new QCheckBox( this, "messageBox" );
 	messageBox->setGeometry( 310, 70, 80, 30 );
-	messageBox->setText( "Messages" );
+	messageBox->setText( i18n("Messages") );
 	messageBox->setFocusPolicy(QWidget::StrongFocus);
 
 	paletteGroup = new QButtonGroup( this, "paletteGroup" );
 	paletteGroup->setExclusive( TRUE );
 	paletteGroup->setGeometry( 5, 120, 430, 60 );
 	paletteGroup->setFrameStyle( 49 );
-	paletteGroup->setTitle( "Palette" );
+	paletteGroup->setTitle( i18n("Palette") );
 	paletteGroup->setAlignment( 1 );
 
 	colorButton = new QRadioButton( paletteGroup, "colorButton" );
 	colorButton->setGeometry( 20, 20, 100, 30 );
-	colorButton->setText( "Color" );
+	colorButton->setText( i18n("Color") );
 
 	grayButton = new QRadioButton( paletteGroup, "grayButton" );
 	grayButton->setGeometry( 150, 20, 100, 30 );
-	grayButton->setText( "Grayscale" );
+	grayButton->setText( i18n("Grayscale") );
 
 	monoButton = new QRadioButton( paletteGroup, "monoButton" );
 	monoButton->setGeometry( 300, 20, 100, 30 );
-	monoButton->setText( "Monochrome" );
+	monoButton->setText( i18n("Monochrome") );
 
 	backingGroup = new QButtonGroup( this, "backGroup" );
 	backingGroup->setGeometry( 5, 190, 430, 60 );
 	backingGroup->setExclusive( TRUE );
 	backingGroup->setFrameStyle( 49 );
-	backingGroup->setTitle( "Backing" );
+	backingGroup->setTitle( i18n("Backing") );
 	backingGroup->setAlignment( 1 );
 
 	pixButton = new QRadioButton( backingGroup, "pixButton" );
 	pixButton->setGeometry( 100, 20, 100, 30 );
-	pixButton->setText( "Pixmap" );
+	pixButton->setText( i18n("Pixmap") );
 
 	storeButton = new QRadioButton( backingGroup, "storeButton" );
 	storeButton->setGeometry( 220, 20, 100, 30 );
-	storeButton->setText( "Backing store" );
+	storeButton->setText( i18n("Backing store") );
 
 	okButton = new QPushButton( this, "okButton" );
 	okButton->setGeometry( 225, 260, 60, 30 );
-	okButton->setText( "OK" );
+	okButton->setText( i18n("OK") );
 	okButton->setAutoDefault( TRUE );
 	connect( okButton, SIGNAL(clicked()), SLOT(setValues()) );
 
 	cancelButton = new QPushButton( this, "cancelButton" );
 	cancelButton->setGeometry( 295, 260, 60, 30 );
-	cancelButton->setText( "Cancel" );
+	cancelButton->setText( i18n("Cancel") );
 	cancelButton->setAutoDefault( TRUE );
 	connect( cancelButton, SIGNAL(clicked()), SLOT( reject() ) );
 
 	defaultButton = new QPushButton( this, "defaultButton" );
 	defaultButton->setGeometry( 365, 260, 60, 30 );
-	defaultButton->setText( "Defaults" );
+	defaultButton->setText( i18n("Defaults") );
 	defaultButton->setAutoDefault( TRUE );
 	connect( defaultButton, SIGNAL( clicked() ), SLOT( setDefaults() ) );
 
@@ -153,7 +157,7 @@ void InterpreterDialog::setValues()
 void InterpreterDialog::init()
 {
 	
-	intEdit->setText( "gs" );
+	intEdit->setText( i18n("gs") );
 	
 	if( antialias )
 		antialiasBox->setChecked( TRUE );

@@ -39,6 +39,11 @@
 
 #include <kmsgbox.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+#define i18nC(X) ((char*)klocale->translate(X))
+
 extern "C" {
 	#include "ps.h"
 }
@@ -134,21 +139,21 @@ KGhostview::KGhostview( QWidget *, char *name )
   	//printf("Do info dialog\n");
   
   	infoDialog = new InfoDialog( 0, "info dialog" );
-  	infoDialog->setCaption("Information");
+  	infoDialog->setCaption(i18n("Information"));
   	
   	//
   	//	PRINTING DIALOG
   	//
   
 	pd = new PrintDialog( 0, "print dialog" );
-	pd->setCaption("Print");
+	pd->setCaption(i18n("Print"));
 	
 	//
 	//	VIEWCONTROL DIALOG
 	//
 	
 	vc = new ViewControl( 0 , "view control" );
-	vc->setCaption("View control");
+	vc->setCaption(i18n("View Control"));
 	connect(vc, SIGNAL( applyChanges() ), this, SLOT( applyViewChanges() ));
 	
 	// Build the combo box menu for magnification steps.
@@ -217,24 +222,24 @@ void KGhostview::bindKeys()
 
 	// create functionName/keyCode association
 	
-	kKeys->addKey("Quit", "CTRL+Q");
-	kKeys->addKey("Open", "CTRL+O");
-	kKeys->addKey("New", "CTRL+N");
-	kKeys->addKey("Close", "CTRL+W");
-	kKeys->addKey("Print", "CTRL+P");
-	kKeys->addKey("Help", "F1");
-	kKeys->addKey("View Control", "CTRL+L");
-	kKeys->addKey("Go To Page", "CTRL+G");
-	kKeys->addKey("Zoom In", "Plus");     
-	kKeys->addKey("Zoom Out", "Minus"); 
-	kKeys->addKey("Next Page", "Next");
-	kKeys->addKey("Prev Page", "Prior");
-	kKeys->addKey("Scroll Up", "Up");
-	kKeys->addKey("Scroll Down", "Down");
-	kKeys->addKey("Scroll Left", "Left");
-	kKeys->addKey("Scroll Right", "Right");
-	kKeys->addKey("Redisplay", "CTRL+R");
-	kKeys->addKey("Information", "CTRL+I");  
+	kKeys->addKey(i18n("Quit"), "CTRL+Q");
+	kKeys->addKey(i18n("Open"), "CTRL+O");
+	kKeys->addKey(i18n("New"), "CTRL+N");
+	kKeys->addKey(i18n("Close"), "CTRL+W");
+	kKeys->addKey(i18n("Print"), "CTRL+P");
+	kKeys->addKey(i18n("Help"), "F1");
+	kKeys->addKey(i18n("View Control"), "CTRL+L");
+	kKeys->addKey(i18n("Go To Page"), "CTRL+G");
+	kKeys->addKey(i18n("Zoom In"), "Plus");     
+	kKeys->addKey(i18n("Zoom Out"), "Minus"); 
+	kKeys->addKey(i18n("Next Page"), "Next");
+	kKeys->addKey(i18n("Prev Page"), "Prior");
+	kKeys->addKey(i18n("Scroll Up"), "Up");
+	kKeys->addKey(i18n("Scroll Down"), "Down");
+	kKeys->addKey(i18n("Scroll Left"), "Left");
+	kKeys->addKey(i18n("Scroll Right"), "Right");
+	kKeys->addKey(i18n("Redisplay"), "CTRL+R");
+	kKeys->addKey(i18n("Information"), "CTRL+I");  
 	
 	}    
 
@@ -260,58 +265,58 @@ void KGhostview::bindKeys()
 	
 	// define the connection for the main widget
 	
-	kKeys->connectFunction( widgetName.data(), "Quit",
+	kKeys->connectFunction( widgetName.data(), i18n("Quit"),
 							qApp, SLOT( quit() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Open",
+	kKeys->connectFunction( widgetName.data(), i18n("Open"),
 								kg_temp, SLOT( openNewFile() ) );
 	
-	kKeys->connectFunction( widgetName.data(), "New",
+	kKeys->connectFunction( widgetName.data(), i18n("New"),
 								kg_temp, SLOT( newWindow() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Close",
+	kKeys->connectFunction( widgetName.data(), i18n("Close"),
 								kg_temp, SLOT( closeWindow() ) );
 	
-	kKeys->connectFunction( widgetName.data(), "Print",
+	kKeys->connectFunction( widgetName.data(), i18n("Print"),
 								kg_temp, SLOT( print() ) );
 	
-	kKeys->connectFunction( widgetName.data(), "Help",
+	kKeys->connectFunction( widgetName.data(), i18n("Help"),
 								kg_temp, SLOT( help() ) );
 	
-	kKeys->connectFunction( widgetName.data(), "View Control",
+	kKeys->connectFunction( widgetName.data(), i18n("View Control"),
 								kg_temp, SLOT( viewControl() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Go To Page",
+	kKeys->connectFunction( widgetName.data(), i18n("Go To Page"),
 								kg_temp, SLOT( goToPage() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Zoom In",
+	kKeys->connectFunction( widgetName.data(), i18n("Zoom In"),
 								kg_temp, SLOT( zoomIn() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Zoom Out",
+	kKeys->connectFunction( widgetName.data(), i18n("Zoom Out"),
 								kg_temp, SLOT( zoomOut() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Next Page",
+	kKeys->connectFunction( widgetName.data(), i18n("Next Page"),
 								kg_temp, SLOT( nextPage() ) );
 	
-	kKeys->connectFunction( widgetName.data(), "Prev Page",
+	kKeys->connectFunction( widgetName.data(), i18n("Prev Page"),
 								kg_temp, SLOT( prevPage() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Scroll Up",
+	kKeys->connectFunction( widgetName.data(), i18n("Scroll Up"),
 								kg_temp, SLOT( scrollUp() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Scroll Down",
+	kKeys->connectFunction( widgetName.data(), i18n("Scroll Down"),
 								kg_temp, SLOT( scrollDown() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Scroll Left",
+	kKeys->connectFunction( widgetName.data(), i18n("Scroll Left"),
 								kg_temp, SLOT( scrollLeft() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Scroll Right",
+	kKeys->connectFunction( widgetName.data(), i18n("Scroll Right"),
 								kg_temp, SLOT( scrollRight() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Redisplay",
+	kKeys->connectFunction( widgetName.data(), i18n("Redisplay"),
 								kg_temp, SLOT( redisplay() ) );
 								
-	kKeys->connectFunction( widgetName.data(), "Information",
+	kKeys->connectFunction( widgetName.data(), i18n("Information"),
 								kg_temp, SLOT( info() ) );
 								
 }
@@ -341,7 +346,7 @@ void KGhostview::info()
 
 void KGhostview::configureGhostscript()
 {
-	page->intConfig->setCaption("Configure interpreter");
+	page->intConfig->setCaption(i18n("Configure interpreter"));
 	page->intConfig->init();
 	
 	if( page->intConfig->exec() ) {
@@ -356,24 +361,24 @@ void KGhostview::configureKeybindings()
 
 void KGhostview::updateMenuAccel()
 {
-	changeMenuAccel( m_file, ID_PRINT, "Print" );
-	changeMenuAccel( m_file, ID_OPEN_FILE, "Open" );
-	changeMenuAccel( m_file, ID_NEW_WINDOW, "New" );
-	changeMenuAccel( m_file, ID_CLOSE_WINDOW, "Close" );
-	changeMenuAccel( m_file, ID_FILE_QUIT, "Quit" );
-	changeMenuAccel( m_view, zoomInID, "Zoom In" );
-	changeMenuAccel( m_view, zoomOutID, "Zoom Out" );
-	changeMenuAccel( m_view, viewControlID, "View Control" );
-	changeMenuAccel( m_view, redisplayID, "Redisplay" );
-	changeMenuAccel( m_view, infoID, "Information" );
-	changeMenuAccel( m_go, nextID, "Next Page" );
-	changeMenuAccel( m_go, prevID, "Prev Page" );
-	changeMenuAccel( m_go, goToPageID, "Go To Page" );
-	changeMenuAccel( m_help, helpID, "Help" );
+	changeMenuAccel( m_file, ID_PRINT, i18n("Print") );
+	changeMenuAccel( m_file, ID_OPEN_FILE, i18n("Open") );
+	changeMenuAccel( m_file, ID_NEW_WINDOW, i18n("New") );
+	changeMenuAccel( m_file, ID_CLOSE_WINDOW, i18n("Close") );
+	changeMenuAccel( m_file, ID_FILE_QUIT, i18n("Quit") );
+	changeMenuAccel( m_view, zoomInID, i18n("Zoom In") );
+	changeMenuAccel( m_view, zoomOutID, i18n("Zoom Out") );
+	changeMenuAccel( m_view, viewControlID, i18n("View Control") );
+	changeMenuAccel( m_view, redisplayID, i18n("Redisplay") );
+	changeMenuAccel( m_view, infoID, i18n("Information") );
+	changeMenuAccel( m_go, nextID, i18n("Next Page") );
+	changeMenuAccel( m_go, prevID, i18n("Prev Page") );
+	changeMenuAccel( m_go, goToPageID, i18n("Go To Page") );
+	changeMenuAccel( m_help, helpID, i18n("Help") );
 }
 
 void KGhostview::changeMenuAccel ( QPopupMenu *menu, int id,
-	char *functionName )
+	const char *functionName )
 {
 	QString s = menu->text( id );
 	if ( !s ) return;
@@ -397,18 +402,18 @@ void KGhostview::createMenubar()
 {
  	m_file = new QPopupMenu;
     CHECK_PTR( m_file );
-    m_file->insertItem( "&New", ID_NEW_WINDOW );
-    m_file->insertItem( "&Open ...", ID_OPEN_FILE);
-    m_file->insertItem( "&Close", ID_CLOSE_WINDOW);
+    m_file->insertItem( i18n("&New"), ID_NEW_WINDOW );
+    m_file->insertItem( i18n("&Open ..."), ID_OPEN_FILE);
+    m_file->insertItem( i18n("&Close"), ID_CLOSE_WINDOW);
     m_file->insertSeparator();
-    m_file->insertItem( "&Print ...", ID_PRINT );
+    m_file->insertItem( i18n("&Print ..."), ID_PRINT );
     m_file->insertSeparator();
-    m_file->insertItem( "&1.", ID_FILE_A );
-    m_file->insertItem( "&2.", ID_FILE_B );
-    m_file->insertItem( "&3.", ID_FILE_C );
-    m_file->insertItem( "&4.", ID_FILE_D );
+    m_file->insertItem( i18n("&1."), ID_FILE_A );
+    m_file->insertItem( i18n("&2."), ID_FILE_B );
+    m_file->insertItem( i18n("&3."), ID_FILE_C );
+    m_file->insertItem( i18n("&4."), ID_FILE_D );
     m_file->insertSeparator();
-    m_file->insertItem( "E&xit", ID_FILE_QUIT );
+    m_file->insertItem( i18n("E&xit"), ID_FILE_QUIT );
     
     connect( m_file, SIGNAL( activated( int ) ), this, 
     	SLOT( fileMenuActivated( int ) ) );
@@ -416,34 +421,34 @@ void KGhostview::createMenubar()
 	m_view = new QPopupMenu;
     CHECK_PTR( m_view );
     zoomInID =
-	m_view->insertItem( "Zoom &in", this, SLOT( zoomIn()) );
+	m_view->insertItem( i18n("Zoom &in"), this, SLOT( zoomIn()) );
 	zoomOutID =
-	m_view->insertItem( "Zoom &out", this, SLOT( zoomOut() ) );
+	m_view->insertItem( i18n("Zoom &out"), this, SLOT( zoomOut() ) );
 	viewControlID =
-	m_view->insertItem( "&View control ...", this, SLOT( viewControl() ) );
+	m_view->insertItem( i18n("&View control ..."), this, SLOT( viewControl() ) );
 	m_view->insertSeparator();
 	shrinkWrapID = 
-	m_view->insertItem( "&Shrink wrap", this, SLOT( shrinkWrap() ) );
+	m_view->insertItem( i18n("&Shrink wrap"), this, SLOT( shrinkWrap() ) );
 	redisplayID =
-	m_view->insertItem( "&Redisplay", this, SLOT( redisplay() ) );
+	m_view->insertItem( i18n("&Redisplay"), this, SLOT( redisplay() ) );
 	infoID =
-	m_view->insertItem( "&Info ...", this, SLOT( info() ) );
+	m_view->insertItem( i18n("&Info ..."), this, SLOT( info() ) );
 
     m_go = new QPopupMenu;
     CHECK_PTR( m_go );
     nextID =
-    m_go->insertItem( "&Next page", this, SLOT( nextPage() ) );
+    m_go->insertItem( i18n("&Next page"), this, SLOT( nextPage() ) );
     prevID =
-    m_go->insertItem( "&Previous Page", this, SLOT( prevPage() ) );
+    m_go->insertItem( i18n("&Previous Page"), this, SLOT( prevPage() ) );
     goToPageID =
-    m_go->insertItem( "&Go to page ...", this, SLOT( goToPage() ) );
+    m_go->insertItem( i18n("&Go to page ..."), this, SLOT( goToPage() ) );
     m_go->insertSeparator();
     goToStartID =
-    m_go->insertItem( "Go to &start", this, SLOT( goToStart() ) );
+    m_go->insertItem( i18n("Go to &start"), this, SLOT( goToStart() ) );
     goToEndID =
-    m_go->insertItem( "Go to &end", this, SLOT( goToEnd() ) );
+    m_go->insertItem( i18n("Go to &end"), this, SLOT( goToEnd() ) );
     readDownID =
-    m_go->insertItem( "&Read down", this, SLOT( dummy() ) );
+    m_go->insertItem( i18n("&Read down"), this, SLOT( dummy() ) );
     
   
     m_options = new QPopupMenu;
@@ -453,34 +458,34 @@ void KGhostview::createMenubar()
     // I've read the config file.
     
 	m_options->setCheckable( TRUE );
-	m_options->insertItem("&Configure interpreter ...", ID_GHOSTSCRIPT);
+	m_options->insertItem(i18n("&Configure interpreter ..."), ID_GHOSTSCRIPT);
 	m_options->insertSeparator();
-    m_options->insertItem("Show &tool bar", ID_TOOLBAR);
-    m_options->insertItem("Show &status bar", ID_STATUSBAR);
-    m_options->insertItem("Configure &key bindings ...", ID_CONFIGURE);
+    m_options->insertItem(i18n("Show &tool bar"), ID_TOOLBAR);
+    m_options->insertItem(i18n("Show &status bar"), ID_STATUSBAR);
+    m_options->insertItem(i18n("Configure &key bindings ..."), ID_CONFIGURE);
     m_options->insertSeparator();
-    m_options->insertItem("&Save Options", ID_SAVE);
+    m_options->insertItem(i18n("&Save Options"), ID_SAVE);
     
     connect( m_options, SIGNAL( activated(int) ),
     			SLOT( optionsMenuActivated(int) ) );
     
     m_help = new QPopupMenu;
     CHECK_PTR( m_help );
-	m_help->insertItem( "&About this application", this, SLOT( about() ) );
+	m_help->insertItem( i18n("&About this application"), this, SLOT( about() ) );
 	helpID = 
-	m_help->insertItem( "&Help for this application", this, SLOT( help() ) );
+	m_help->insertItem( i18n("&Help for this application"), this, SLOT( help() ) );
 	m_help->insertSeparator();
-	m_help->insertItem( "&Copyright", this, SLOT( copyright() ) );
+	m_help->insertItem( i18n("&Copyright"), this, SLOT( copyright() ) );
 	
     menubar = new KMenuBar( this );
     CHECK_PTR( menubar );
     
-    menubar->insertItem( "&File", m_file );
-    menubar->insertItem( "&View", m_view );
-    menubar->insertItem( "&Go", m_go );
-    menubar->insertItem( "&Options", m_options);
+    menubar->insertItem( i18n("&File"), m_file );
+    menubar->insertItem( i18n("&View"), m_view );
+    menubar->insertItem( i18n("&Go"), m_go );
+    menubar->insertItem( i18n("&Options"), m_options);
     menubar->insertSeparator();
-    menubar->insertItem( "&Help", m_help);
+    menubar->insertItem( i18n("&Help"), m_help);
 	
 	m_file->setItemEnabled(ID_PRINT, FALSE);
 	m_go->setItemEnabled(nextID, FALSE);
@@ -563,37 +568,37 @@ void KGhostview::createToolbar()
 	toolbar = new KToolBar( this );
 
 	pixmap.load(PIXDIR + "back.xpm");
-	toolbar->insertItem(pixmap, ID_PREV, FALSE, "Go back");
+	toolbar->insertButton(pixmap, ID_PREV, FALSE, i18nC("Go back"));
 
 	pixmap.load(PIXDIR + "forward.xpm");
-	toolbar->insertItem(pixmap, ID_NEXT, FALSE, "Go forward");
+	toolbar->insertButton(pixmap, ID_NEXT, FALSE, i18nC("Go forward"));
 
 	pixmap.load(PIXDIR + "page.xpm");
-	toolbar->insertItem(pixmap, ID_PAGE, FALSE, "Go to page ...");
+	toolbar->insertButton(pixmap, ID_PAGE, FALSE, i18nC("Go to page ..."));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "viewzoom.xpm");
-	toolbar->insertItem(pixmap, ID_ZOOM, FALSE, "Change view ...");
+	toolbar->insertButton(pixmap, ID_ZOOM, FALSE, i18nC("Change view ..."));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "fileprint.xpm");
-	toolbar->insertItem(pixmap, ID_PRINT, FALSE, "Print document");
+	toolbar->insertButton(pixmap, ID_PRINT, FALSE, i18nC("Print document"));
 
 	pixmap.load(PIXDIR + "flag.xpm");
-	toolbar->insertItem(pixmap, ID_MARK, FALSE, "Mark this page");
+	toolbar->insertButton(pixmap, ID_MARK, FALSE, i18nC("Mark this page"));
 
 	toolbar->insertSeparator();
 
 	pixmap.load(PIXDIR + "start.xpm");
-	toolbar->insertItem(pixmap, ID_START, FALSE, "Go to start");
+	toolbar->insertButton(pixmap, ID_START, FALSE, i18nC("Go to start"));
 
 	pixmap.load(PIXDIR + "finish.xpm");
-	toolbar->insertItem(pixmap, ID_END, FALSE, "Go to end");
+	toolbar->insertButton(pixmap, ID_END, FALSE, i18nC("Go to end"));
 
 	pixmap.load(PIXDIR + "next.xpm");
-	toolbar->insertItem(pixmap, ID_READ, FALSE, "Read down the page");
+	toolbar->insertButton(pixmap, ID_READ, FALSE, i18nC("Read down the page"));
 
 	// Register toolbar with KTopLevelWidget layout manager
 	
@@ -620,9 +625,9 @@ void KGhostview::createStatusbar()
     //printf("KGhostview::createStatusbar\n");
     
     statusbar = new KStatusBar( this );
-    statusbar->insertItem("Sc.100 of 100  P.100 of 100", ID_LOCATION);
-    statusbar->insertItem("100 %", ID_MAGSTEP);
-    statusbar->insertItem("Upside Down", ID_ORIENTATION);
+    statusbar->insertItem(i18nC("Sc.100 of 100  P.100 of 100"), ID_LOCATION);
+    statusbar->insertItem(i18nC("100 %"), ID_MAGSTEP);
+    statusbar->insertItem(i18nC("Upside Down"), ID_ORIENTATION);
     statusbar->insertItem("", ID_FILENAME);
     
     statusbar->changeItem("", ID_LOCATION);
@@ -647,7 +652,7 @@ void KGhostview::openNetFile( const char *_url )
 	KURL u( netFile.data() );
 
 	if ( u.isMalformed() ) {
-		KMsgBox::message (0, "Sorry", "Malformed URL.");
+		KMsgBox::message (0, i18n("Sorry"), i18n("Malformed URL."));
 		return;
 	}
 
@@ -658,17 +663,17 @@ void KGhostview::openNetFile( const char *_url )
 	}
 
 	if ( kfm != 0L ) {
-		KMsgBox::message (0,"Sorry", 
-				  "Already waiting\n"\
+		KMsgBox::message (0,i18n("Sorry"), 
+				  i18n("Already waiting\n"\
 				  "for an internet job to finish.\n"\
 				  "Please wait until has finished.\n"\
-				  "Alternatively stop the running one.");
+				  "Alternatively stop the running one."));
 		return;
 	}
 
 	kfm = new KFM;
 	if ( !kfm->isOK() ) {
-		KMsgBox::message (0,"Sorry", "Could not start or find KFM.");
+		KMsgBox::message (0,i18n("Sorry"), i18n("Could not start or find KFM."));
 		delete kfm;
 		kfm = 0L;
 		return;
@@ -873,7 +878,7 @@ void KGhostview::newWindow()
 	windowList.append( kg );
 
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( "KGhostview: Version 0.5" );
+	kg->setCaption( i18n("KGhostview: Version 0.5") );
 	kg->bindKeys();
 	kg->updateMenuAccel();
 }
@@ -1068,13 +1073,13 @@ void KGhostview::applyViewChanges()
 	selection = vc->orientComboBox->currentItem()+1;
 	switch(selection) {
 		case 1:	orient=1;
-				statusbar->changeItem( "Portrait", ID_ORIENTATION );
+				statusbar->changeItem( i18nC("Portrait"), ID_ORIENTATION );
 				break;
-		case 2:	orient=4;statusbar->changeItem( "Landscape", ID_ORIENTATION );
+		case 2:	orient=4;statusbar->changeItem( i18nC("Landscape"), ID_ORIENTATION );
 				break;
-		case 3:	orient=3;statusbar->changeItem( "Seascape", ID_ORIENTATION );
+		case 3:	orient=3;statusbar->changeItem( i18nC("Seascape"), ID_ORIENTATION );
 				break;
-		case 4:	orient=2;statusbar->changeItem( "Upside down", ID_ORIENTATION );
+		case 4:	orient=2;statusbar->changeItem( i18nC("Upside down"), ID_ORIENTATION );
 				break;
 	}
 	force_orientation = True;
@@ -1112,7 +1117,7 @@ void KGhostview::goToPage()
     //printf("KGhostview::goToPage\n");
 
 	GoTo gt(0, "Go to");
-	gt.setCaption("Go to");
+	gt.setCaption(i18n("Go to"));
 	gt.current_page=current_page;
 	gt.num_parts=num_parts;
 	for( int i=0;i<10;i++) {
@@ -1130,7 +1135,7 @@ void KGhostview::print()
 {
     //printf("KGhostview::print\n");
 
-	pd->setCaption("Print");
+	pd->setCaption(i18n("Print"));
 	
 	if( pd->exec() ) {
 		printStart();
@@ -1251,9 +1256,9 @@ void KGhostview::optionsMenuActivated( int item )
   		case ID_ANTIALIAS:
   			if(page->intConfig->antialias) {
   				page->intConfig->antialias = FALSE;
-  				m_options->changeItem("Turn antialiasing on", item);
+  				m_options->changeItem(i18n("Turn antialiasing on"), item);
   			} else {
-  				m_options->changeItem("Turn antialiasing off", item);
+  				m_options->changeItem(i18n("Turn antialiasing off"), item);
   				page->intConfig->antialias = TRUE;
   			}
 			page->disableInterpreter();
@@ -1264,9 +1269,9 @@ void KGhostview::optionsMenuActivated( int item )
 		case ID_MESSAGES:
 			if(page->intConfig->show_messages) {
   				page->intConfig->show_messages = FALSE;
-  				m_options->changeItem("Show Ghostscript messages", item);
+  				m_options->changeItem(i18n("Show Ghostscript messages"), item);
   			} else {
-  				m_options->changeItem("Hide Ghostscript messages", item);
+  				m_options->changeItem(i18n("Hide Ghostscript messages"), item);
   				page->intConfig->show_messages = TRUE;
   			}
 			break;
@@ -1315,16 +1320,16 @@ void KGhostview::optionsMenuActivated( int item )
 
 void KGhostview::dummy()
 {
-	 KMsgBox::message(0, "Version 0.5", 
-                             "Sorry, not ready yet" );
+	 KMsgBox::message(0, i18n("Version 0.5"), 
+                             i18n("Sorry, not ready yet") );
 
 
 }
 
 void KGhostview::about()
 {
-	 KMsgBox::message(0, "About kghostview", 
-                             "Version :	0.5 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org" );
+	 KMsgBox::message(0, i18n("About kghostview"), 
+                             i18n("Version :	0.5 alpha\nAuthor : Mark Donohoe\nMail : donohoe@kde.org") );
 
 
 }
@@ -1370,9 +1375,9 @@ void KGhostview::printStart()
 
 	if (error = print_file(name, (mode == PRINT_WHOLE))) {
 	    char *buf = (char *)malloc(strlen(error) +
-				 strlen("Printer Name : ") + 2);
-	    sprintf(buf, "%s\n%s", error.data(), "Printer Name : ");
-	    fprintf(stderr, "%s\n%s\n", error.data(), "Printer Name : "); //prompt
+				 strlen(i18n("Printer Name : ")) + 2);
+	    sprintf(buf, "%s\n%s", error.data(), i18n("Printer Name : "));
+	    fprintf(stderr, "%s\n%s\n", error.data(), i18n("Printer Name : ")); //prompt
 	    free(error);
 	    free(buf);
 	}
@@ -1436,7 +1441,7 @@ QString KGhostview::print_file(QString name, Bool whole_mode)
     failed = (pclose(printer) != 0);
 	
     if (failed) {
-		sprintf(buf, "Print failure : lpr"); // print error, command
+		sprintf(buf, i18n("Print failure : lpr")); // print error, command
 		ret_val = QString(buf);
     } else {
 		ret_val = NULL;
@@ -1968,30 +1973,30 @@ Bool	KGhostview::setup()
 		}
 		if(num_parts==0) {
 			if(doc->numpages==0) {
-				sprintf(page_total_label, "of 1    ");
+				sprintf(page_total_label, i18n("of 1    "));
 			} else if(doc->numpages>0 && doc->numpages<10) {
-				sprintf(page_total_label, "of %d    ", doc->numpages);
+				sprintf(page_total_label, i18n("of %d    "), doc->numpages);
 			} else if (doc->numpages<100) {
-				sprintf(page_total_label, "of %d  ", doc->numpages);
+				sprintf(page_total_label, i18n("of %d  "), doc->numpages);
 			} else if (doc) {
-				sprintf(page_total_label, "of %d", doc->numpages);
+				sprintf(page_total_label, i18n("of %d"), doc->numpages);
 			} else {
 				sprintf(page_total_label, "         ");
 			}
 		} else {
 			if(pages_in_part[0]==0) {
-				sprintf(page_total_label, "of 1    ");
+				sprintf(page_total_label, i18n("of 1    "));
 			} else if(pages_in_part[0]>0 && pages_in_part[0]<10) {
-				sprintf(page_total_label, "of %d    ", pages_in_part[0]);
+				sprintf(page_total_label, i18n("of %d    "), pages_in_part[0]);
 			} else if (pages_in_part[0]<100) {
-				sprintf(page_total_label, "of %d  ", pages_in_part[0]);
+				sprintf(page_total_label, i18n("of %d  "), pages_in_part[0]);
 			} else if (doc) {
-				sprintf(page_total_label, "of %d", pages_in_part[0]);
+				sprintf(page_total_label, i18n("of %d"), pages_in_part[0]);
 			} else {
 				sprintf(page_total_label, "         ");
 			}
 
-			sprintf(part_total_label, "of %d", num_parts+1);
+			sprintf(part_total_label, i18n("of %d"), num_parts+1);
 		}
 	}
 	//printf("Made table of contents\n");
@@ -2056,13 +2061,13 @@ Bool	KGhostview::setup()
 	
 	statusbar->changeItem( filename.data(), ID_FILENAME );
 	switch(orientation) {
-		case 1:	statusbar->changeItem( "Portrait", ID_ORIENTATION );
+		case 1:	statusbar->changeItem( i18nC("Portrait"), ID_ORIENTATION );
 				break;
-		case 2:	statusbar->changeItem( "Upside down", ID_ORIENTATION );
+		case 2:	statusbar->changeItem( i18nC("Upside down"), ID_ORIENTATION );
 				break;
-		case 3:	statusbar->changeItem( "Seascape", ID_ORIENTATION );
+		case 3:	statusbar->changeItem( i18nC("Seascape"), ID_ORIENTATION );
 				break;
-		case 4:	statusbar->changeItem( "Landscape", ID_ORIENTATION );
+		case 4:	statusbar->changeItem( i18nC("Landscape"), ID_ORIENTATION );
 				break;
 	}
 	sprintf(temp_text, "%d%%", (int)(100*page->xdpi/default_xdpi));
@@ -2076,19 +2081,19 @@ void KGhostview::changeFileRecord()
 {
 	QString s;
 	
-	s.sprintf("&1. ");
+	s.sprintf(i18n("&1. "));
 	s+=lastOpened[0];
 	m_file->changeItem(s, ID_FILE_A);
 	
-	s.sprintf("&2. ");
+	s.sprintf(i18n("&2. "));
 	s+=lastOpened[1];
 	m_file->changeItem(s, ID_FILE_B);
 	
-	s.sprintf("&3. ");
+	s.sprintf(i18n("&3. "));
 	s+=lastOpened[2];
 	m_file->changeItem(s, ID_FILE_C);
 	
-	s.sprintf("&4. ");
+	s.sprintf(i18n("&4. "));
 	s+=lastOpened[3];
 	m_file->changeItem(s, ID_FILE_D);
 }
@@ -2216,12 +2221,12 @@ void KGhostview::show_page(int number)
   
   if(toc_text) {
 		if(num_parts==0) {
-			part_string.sprintf( "Sc.1 " );
-			sprintf(part_total_label, "of 1    ");
+			part_string.sprintf( i18n("Sc.1 ") );
+			sprintf(part_total_label, i18n("of 1    "));
 			if(number==-1)
-				page_string.sprintf("P.1 ");
+				page_string.sprintf(i18n("P.1 "));
 			else
-				page_string.sprintf("P.%d ", number+1);
+				page_string.sprintf(i18n("P.%d "), number+1);
 		} else {
 			int cumulative_pages=0;
 			int k, part;
@@ -2234,24 +2239,24 @@ void KGhostview::show_page(int number)
 			cumulative_pages-=pages_in_part[k];
 			part=k-1;
 
-			page_string.sprintf( "P.%d ", number+1-cumulative_pages);
+			page_string.sprintf( i18n("P.%d "), number+1-cumulative_pages);
 
-			part_string.sprintf( "Sc.%d ", part+2);
+			part_string.sprintf( i18n("Sc.%d "), part+2);
 
 			part=k;
 			if(pages_in_part[part]==0) {
-				sprintf(page_total_label, "of 1    ");
+				sprintf(page_total_label, i18n("of 1    "));
 			} else if(pages_in_part[part]>0 && pages_in_part[part]<10) {
-				sprintf(page_total_label, "of %d    ", pages_in_part[part]);
+				sprintf(page_total_label, i18n("of %d    "), pages_in_part[part]);
 			} else if (pages_in_part[part]<100) {
-				sprintf(page_total_label, "of %d  ", pages_in_part[part]);
+				sprintf(page_total_label, i18n("of %d  "), pages_in_part[part]);
 			} else if (doc) {
-				sprintf(page_total_label, "of %d", pages_in_part[part]);
+				sprintf(page_total_label, i18n("of %d"), pages_in_part[part]);
 			} else {
 				sprintf(page_total_label, "         ");
 			}
 
-			sprintf(part_total_label, "of %d  ", num_parts+1);
+			sprintf(part_total_label, i18n("of %d  "), num_parts+1);
 		}
 
 		part_label_text=operator+(part_string, part_total_label);

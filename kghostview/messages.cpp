@@ -6,11 +6,15 @@
 
 #include <qaccel.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 MessagesDialog::MessagesDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
-	setCaption("Ghostscript messages");
+	setCaption(i18n("Ghostscript messages"));
 
 	QFrame *frame = new QFrame ( this );
 	frame->setGeometry( 0, 15, 505, 285 );
@@ -28,13 +32,13 @@ MessagesDialog::MessagesDialog( QWidget *parent, const char *name )
 	QPushButton* clear;
 	clear = new QPushButton( this );
 	clear->setGeometry( 365, 315, 65, 30 );
-	clear->setText( "Clear" );
+	clear->setText( i18n("Clear") );
 	clear->setAutoDefault(TRUE);
 	connect( clear, SIGNAL(clicked()), SLOT(clear()) );
 
 	cancel = new QPushButton( this );
 	cancel->setGeometry( 440, 315, 60, 30 );
-	cancel->setText( "Cancel" );
+	cancel->setText( i18n("Cancel") );
 	cancel->setAutoDefault(TRUE);
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
 

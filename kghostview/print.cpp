@@ -6,6 +6,10 @@
 
 #include <qaccel.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name, TRUE )
 {
@@ -20,7 +24,7 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 	QLabel* tmpQLabel;
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 25, 25, 80, 25 );
-	tmpQLabel->setText( "Printer name" );
+	tmpQLabel->setText( i18n("Printer name") );
 	tmpQLabel->setAlignment( 290 );
 
 	
@@ -31,27 +35,27 @@ PrintDialog::PrintDialog( QWidget *parent, const char *name )
 
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 30, 60, 75, 25 );
-	tmpQLabel->setText( "Pages" );
+	tmpQLabel->setText( i18n("Pages") );
 	tmpQLabel->setAlignment( 290 );
 	
 	modeComboBox = new QComboBox( this );
 	modeComboBox->setGeometry( 115, 60, 100, 25 );
-	modeComboBox->insertItem( "All" );
-	modeComboBox->insertItem( "Even" );
-	modeComboBox->insertItem( "Odd" );
-	modeComboBox->insertItem( "Marked" );
+	modeComboBox->insertItem( i18n("All") );
+	modeComboBox->insertItem( i18n("Even") );
+	modeComboBox->insertItem( i18n("Odd") );
+	modeComboBox->insertItem( i18n("Marked") );
 
 	QPushButton* ok;
 	ok = new QPushButton( this );
 	ok->setGeometry( 115, 115, 65, 30 );
-	ok->setText( "OK" );
+	ok->setText( i18n("OK") );
 	ok->setAutoDefault(TRUE);
 	connect( ok, SIGNAL(clicked()), SLOT(accept()) );
 
 	QPushButton* cancel;
 	cancel = new QPushButton( this );
 	cancel->setGeometry( 190, 115, 60, 30 );
-	cancel->setText( "Cancel" );
+	cancel->setText( i18n("Cancel") );
 	cancel->setAutoDefault(TRUE);
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
 

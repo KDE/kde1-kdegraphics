@@ -104,7 +104,7 @@ public:
 	void printStart();
 	
 	void bindKeys();
-	void changeMenuAccel( QPopupMenu *menu, int id, char *functionName );
+	void changeMenuAccel( QPopupMenu *menu, int id, const char *functionName );
 	void updateMenuAccel();
 	void changeFileRecord();
 	

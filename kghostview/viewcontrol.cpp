@@ -7,6 +7,10 @@
 #include "viewcontrol.h"
 #include "viewcontrol.moc"
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 ViewControl::ViewControl( QWidget *parent, const char *name )
 	: QDialog( parent, name )
 {
@@ -16,16 +20,16 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	vcGroupBox = new QGroupBox(  this );
 	vcGroupBox->setGeometry( 5, 10, 250, 150 );
 	vcGroupBox->setFrameStyle( 49 );
-	vcGroupBox->setTitle( "Force changes" );
+	vcGroupBox->setTitle( i18n("Force changes") );
 	vcGroupBox->setAlignment( 1 );
 
 	
 	orientComboBox = new QComboBox( this );
 	orientComboBox->setGeometry( 120, 45, 110, 25 );
-	orientComboBox->insertItem("Portrait");
-	orientComboBox->insertItem("Landscape");
-	orientComboBox->insertItem("Seascape");
-	orientComboBox->insertItem("Upside down");
+	orientComboBox->insertItem(i18n("Portrait"));
+	orientComboBox->insertItem(i18n("Landscape"));
+	orientComboBox->insertItem(i18n("Seascape"));
+	orientComboBox->insertItem(i18n("Upside down"));
 	orientComboBox->setFocus();
 					
 	
@@ -38,30 +42,30 @@ ViewControl::ViewControl( QWidget *parent, const char *name )
 	QLabel* vcLabel;
 	vcLabel = new QLabel( this );
 	vcLabel->setGeometry( 20, 75, 90, 30 );
-	vcLabel->setText( "Magnification" );
+	vcLabel->setText( i18n("Magnification") );
 	vcLabel->setAlignment( 290 );
 
 	vcLabel = new QLabel( this );
 	vcLabel->setGeometry( 35, 40, 75, 30 );
-	vcLabel->setText( "Orientation" );
+	vcLabel->setText( i18n("Orientation") );
 	vcLabel->setAlignment( 290 );
 
 	vcLabel = new QLabel( this );
 	vcLabel->setGeometry( 35, 110, 75, 30 );
-	vcLabel->setText( "Media" );
+	vcLabel->setText( i18n("Media") );
 	vcLabel->setAlignment( 290 );
 
 	QPushButton* ok;
 	ok = new QPushButton( this );
 	ok->setGeometry( 120, 170, 60, 30 );
-	ok->setText( "Apply" );
+	ok->setText( i18n("Apply") );
 	ok->setAutoDefault(TRUE);
 	connect( ok, SIGNAL(clicked()), SLOT(okClicked()) );
 
 	QPushButton* apply;
 	apply = new QPushButton( this );
 	apply->setGeometry( 190, 170, 60, 30 );
-	apply->setText( "Cancel" );
+	apply->setText( i18n("Cancel") );
 	apply->setAutoDefault(TRUE);
 	connect( apply, SIGNAL(clicked()), SLOT(reject()) );
 

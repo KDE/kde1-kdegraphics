@@ -6,6 +6,10 @@
 
 #include <qaccel.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 GoTo::GoTo( QWidget *parent, const char *name )
 	: QDialog( parent, name, TRUE )
 {
@@ -20,7 +24,7 @@ GoTo::GoTo( QWidget *parent, const char *name )
 	QLabel* tmpQLabel;
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 15, 25, 55, 25 );
-	tmpQLabel->setText( "Section" );
+	tmpQLabel->setText( i18n("Section") );
 	tmpQLabel->setAlignment( 290 );
 
 	partLine = new QLineEdit( this );
@@ -33,7 +37,7 @@ GoTo::GoTo( QWidget *parent, const char *name )
 	
 	tmpQLabel = new QLabel( this );
 	tmpQLabel->setGeometry( 15, 60, 55, 25 );
-	tmpQLabel->setText( "Page" );
+	tmpQLabel->setText( i18n("Page") );
 	tmpQLabel->setAlignment( 290 );
 
 	pageLine = new QLineEdit( this );
@@ -45,13 +49,13 @@ GoTo::GoTo( QWidget *parent, const char *name )
 	
 	ok = new QPushButton( this );
 	ok->setGeometry( 115, 115, 65, 30 );
-	ok->setText( "OK" );
+	ok->setText( i18n("OK") );
 	ok->setAutoDefault(TRUE);
 	connect( ok, SIGNAL(clicked()), SLOT(setCurrentPage()) );
 
 	cancel = new QPushButton( this );
 	cancel->setGeometry( 190, 115, 60, 30 );
-	cancel->setText( "Cancel" );
+	cancel->setText( i18n("Cancel") );
 	cancel->setAutoDefault(TRUE);
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
 
@@ -77,13 +81,13 @@ void GoTo::init()
 	temp.sprintf( "%d", part+1);
 	partLine->setText( temp );
 	
-	temp.sprintf( "of %d", num_parts+1);
+	temp.sprintf( i18n("of %d"), num_parts+1);
 	partLabel->setText( temp );
 	
 	temp.sprintf( "%d", page+1);
 	pageLine->setText( temp );
 	
-	temp.sprintf( "of %d", pages);
+	temp.sprintf( i18n("of %d"), pages);
 	pageLabel->setText( temp );	
 }
 
@@ -99,7 +103,7 @@ void GoTo::partChange()
 		pages=pages_in_part[part];
 		temp.sprintf( "%d", page+1);
 		pageLine->setText( temp );
-		temp.sprintf( "of %d", pages);
+		temp.sprintf( i18n("of %d"), pages);
 		pageLabel->setText( temp );
 	} else {
 		temp.sprintf( "%d", part+1);

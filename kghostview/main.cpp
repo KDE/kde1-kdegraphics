@@ -8,14 +8,19 @@
 
 #include "kghostview.h"
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
 
 Display 	*kde_display;
 
+KLocale local("kghostview");
+
 void Syntax(char *call)
 {
-    printf("Usage: %s\n", call);
-    printf("[filename]\n");
-    printf("See Qt documentation for command line options\n");
+    printf(i18n("Usage: %s\n"), call);
+    printf(i18n("[filename]\n"));
+    printf(i18n("See Qt documentation for command line options\n"));
     exit(1);
 }
 
@@ -83,19 +88,19 @@ int main( int argc, char **argv )
 		if (strcmp(kg->filename, "-")) {
 			if ((kg->psfile = fopen(argv[1], "r")) == NULL) {
 				QString s;
-				s.sprintf( "The file\n\"%s\"\ncould not be found.", argv[1]);
- 				KMsgBox::message(0, "Error", 
+				s.sprintf( i18n("The file\n\"%s\"\ncould not be found."), argv[1]);
+ 				KMsgBox::message(0, i18n("Error"), 
                              s, 2 );
 			}
 			stat(kg->filename, &sbuf);
 			kg->mtime = sbuf.st_mtime;
 		} else {
-			printf("Didn't recognise file\n");
+			printf(i18n("Didn't recognise file\n"));
 		}
 	}
 	
 	kg->setMinimumSize( 250, 250 );
-	kg->setCaption( "KGhostview: Version 0.5" );
+	kg->setCaption( i18n("KGhostview: Version 0.5") );
 	kg->bindKeys();
 	kg->updateMenuAccel();
 	kg->show();	

@@ -6,11 +6,15 @@
 
 #include <qaccel.h>
 
+#include <klocale.h>
+#define klocale KLocale::klocale()
+#define i18n(X) klocale->translate(X)
+
 CopyrightDialog::CopyrightDialog( QWidget *parent, const char *name )
 	: QDialog( parent, name )
 {
 	setFocusPolicy(QWidget::StrongFocus);
-	setCaption("Copyright");
+	setCaption(i18n("Copyright"));
 
 	QFrame *frame = new QFrame ( this );
 	frame->setGeometry( 0, 15, 505, 285 );
@@ -24,7 +28,7 @@ CopyrightDialog::CopyrightDialog( QWidget *parent, const char *name )
 	copyrightBox->setFont( QFont("courier", 12) );
 	copyrightBox->setReadOnly( TRUE );
 	
-	copyrightBox->setText("\n"
+	copyrightBox->setText(i18n("\n"
 	"This program is free software; you can redistribute it and/or modify\n"\
 	"it under the terms of the GNU General Public License as published by\n"\
 	"the Free Software Foundation; either version 2 of the License, or\n"\
@@ -37,11 +41,11 @@ CopyrightDialog::CopyrightDialog( QWidget *parent, const char *name )
 	"\n"\
 	"You should have received a copy of the GNU General Public License\n"\
 	"along with this program; if not, write to the Free Software\n"\
-	"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.");
+	"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."));
 
 	cancel = new QPushButton( this );
 	cancel->setGeometry( 440, 315, 60, 30 );
-	cancel->setText( "Cancel" );
+	cancel->setText( i18n("Close") );
 	cancel->setAutoDefault(TRUE);
 	cancel->setFocus();
 	connect( cancel, SIGNAL(clicked()), SLOT(reject()) );
