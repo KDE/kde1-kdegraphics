@@ -1,0 +1,693 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdvi \n"
+"POT-Creation-Date: 1998-01-05 22:04+0100\n"
+"PO-Revision-Date: 1998-01-22 23:13+0100\n"
+"Last-Translator: Piotr Roszatycki <dexter@fnet.com.pl>\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:515
+msgid "Notice"
+msgstr "Uwaga"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmiana przy generowaniu czcionek zadzia³a\n"
+"dopiero przy nastêpnym uruchomieniu kdvi!"
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmiana ¶cie¿ki czcionek zadzia³a\n"
+"dopiero przy nastêpnym uruchomieniu kdvi!"
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmiana trybu Metafont zadzia³a\n"
+"dopiero przy nastêpnym uruchomieniu kdvi!"
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmiana rozdzielczo¶ci zadzia³a\n"
+"dopiero przy nastêpnym uruchomieniu kdvi!"
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmiana parametru gamma zadzia³a\n"
+"dopiero przy nastêpnym uruchomieniu kdvi!"
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "HEJ"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "A to co? Problem DVI!\n"
+
+#: kdvi.cpp:91
+msgid "No document"
+msgstr "Brak dokumentu"
+
+#: kdvi.cpp:172
+msgid "&Open ..."
+msgstr "&Otwórz..."
+
+#: kdvi.cpp:179
+msgid "Open &recent"
+msgstr "Otwórz poprz&edni"
+
+#: kdvi.cpp:181
+msgid "&Print ..."
+msgstr "&Drukuj..."
+
+#: kdvi.cpp:189
+msgid "Zoom &in"
+msgstr "Powiê&ksz"
+
+#: kdvi.cpp:190
+msgid "Zoom &out"
+msgstr "Pomnie&jsz"
+
+#: kdvi.cpp:191
+msgid "&Fit to page"
+msgstr "Dopasuj do s&trony"
+
+#: kdvi.cpp:192
+msgid "Fit to page &width"
+msgstr "Dopasuj do sze&roko¶ci strony"
+
+#: kdvi.cpp:194
+msgid "&Redraw page"
+msgstr "Przery&suj stronê"
+
+#: kdvi.cpp:201
+msgid "&Previous"
+msgstr "&Poprzedni"
+
+#: kdvi.cpp:202
+msgid "&Next"
+msgstr "&Nastêpny"
+
+#: kdvi.cpp:203
+msgid "&First"
+msgstr "Pie&rwszy"
+
+#: kdvi.cpp:204
+msgid "&Last"
+msgstr "Os&tatni"
+
+#: kdvi.cpp:205
+msgid "&Go to ..."
+msgstr "&Id¼ do..."
+
+#: kdvi.cpp:208
+msgid "&Page"
+msgstr "&Strona"
+
+#: kdvi.cpp:213
+msgid "&Preferences ..."
+msgstr "&W³a¶ciwo¶ci..."
+
+#: kdvi.cpp:214
+msgid "&Keys ..."
+msgstr "&Klawisze..."
+
+#: kdvi.cpp:216
+msgid "Make PK-&fonts"
+msgstr "Utwórz PK-&czcionki"
+
+#: kdvi.cpp:218
+msgid "Show PS"
+msgstr "Poka¿ PS"
+
+#: kdvi.cpp:220
+msgid "Show &Menubar"
+msgstr "Poka¿ pasek &menu"
+
+#: kdvi.cpp:222
+msgid "Show &Buttons"
+msgstr "Poka¿ pasek &przycisków"
+
+#: kdvi.cpp:224
+msgid "Show Page Lis&t"
+msgstr "Poka¿ lis&tê stron"
+
+#: kdvi.cpp:226
+msgid "Show &Statusbar"
+msgstr "Poka¿ pasek &stanu"
+
+#: kdvi.cpp:228
+msgid "Show Scro&llbars"
+msgstr "Poka¿ paski prze&wijania"
+
+#: kdvi.cpp:239
+msgid "&Contents"
+msgstr "Pomo&c"
+
+#: kdvi.cpp:242
+msgid "About &Qt"
+msgstr "Informacje o &Qt"
+
+#: kdvi.cpp:261
+msgid "Open document ..."
+msgstr "Otwórz dokument..."
+
+#: kdvi.cpp:262
+msgid "Reload document"
+msgstr "Prze³aduj dokument"
+
+#: kdvi.cpp:263
+msgid "Print ..."
+msgstr "Drukuj..."
+
+#: kdvi.cpp:265
+msgid "Go to first page"
+msgstr "Id¼ do pierwszej strony"
+
+#: kdvi.cpp:266
+msgid "Go to previous page"
+msgstr "Id¼ do poprzedniej strony"
+
+#: kdvi.cpp:267
+msgid "Go down then top of next page"
+msgstr "Id¼ do pocz±tku nastêpnej strony"
+
+#: kdvi.cpp:268
+msgid "Go to next page"
+msgstr "Id¼ do nastêpnej strony"
+
+#: kdvi.cpp:269
+msgid "Go to last page"
+msgstr "Id¼ do ostatniej strony"
+
+#: kdvi.cpp:271
+msgid "Decrease magnification"
+msgstr "Zmniejsz powiêkszenie"
+
+#: kdvi.cpp:272
+msgid "Small text"
+msgstr "Ma³y tekst"
+
+#: kdvi.cpp:273
+msgid "Large text"
+msgstr "Du¿y tekst"
+
+#: kdvi.cpp:274
+msgid "Increase magnification"
+msgstr "Zwiêksz powiêkszenie"
+
+#: kdvi.cpp:299
+msgid "Scroll window and switch the page"
+msgstr "Przewiñ okno i prze³±cz stronê"
+
+#: kdvi.cpp:308
+msgid "Select page and mark pages for printing"
+msgstr "Wybierz stronê i zaznacz strony do druku"
+
+#: kdvi.cpp:323
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:325
+msgid "Shrink: xx"
+msgstr "Powiêkszenie: xx"
+
+#: kdvi.cpp:327
+msgid "Page: xxxx / xxxx"
+msgstr "Strona: xxxx / xxxx"
+
+#: kdvi.cpp:344 kdvi.cpp:396
+msgid "New window"
+msgstr "Nowe okno"
+
+#: kdvi.cpp:345 kdvi.cpp:397
+msgid "Open file"
+msgstr "Otwórz plik"
+
+#: kdvi.cpp:346 kdvi.cpp:398
+msgid "Print dialog"
+msgstr "Opcje wydruku"
+
+#: kdvi.cpp:348 kdvi.cpp:400
+msgid "Zoom in"
+msgstr "Powiêksz"
+
+#: kdvi.cpp:349 kdvi.cpp:401
+msgid "Zoom out"
+msgstr "Pomniejsz"
+
+#: kdvi.cpp:350 kdvi.cpp:402
+msgid "Fit window"
+msgstr "Dopasuj okno"
+
+#: kdvi.cpp:351 kdvi.cpp:403
+msgid "Fit width"
+msgstr "Dopasuj szeroko¶æ"
+
+#: kdvi.cpp:352 kdvi.cpp:404
+msgid "Redraw page"
+msgstr "Przerysuj stronê"
+
+#: kdvi.cpp:353 kdvi.cpp:406
+msgid "Next page"
+msgstr "Nastêpna strona"
+
+#: kdvi.cpp:354 kdvi.cpp:405
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+#: kdvi.cpp:355 kdvi.cpp:408
+msgid "Last page"
+msgstr "Ostatnia strona"
+
+#: kdvi.cpp:356 kdvi.cpp:407
+msgid "First page"
+msgstr "Pierwsza strona"
+
+#: kdvi.cpp:357 kdvi.cpp:409
+msgid "Goto page"
+msgstr "Id¼ do strony"
+
+#: kdvi.cpp:358
+msgid "Configure keys"
+msgstr "Skonfiguruj klawisze"
+
+#: kdvi.cpp:359 kdvi.cpp:410
+msgid "Toggle show PS"
+msgstr "Prze³±cz widok PS "
+
+#: kdvi.cpp:360 kdvi.cpp:411
+msgid "Toggle menu bar"
+msgstr "Prze³±cz pasek menu"
+
+#: kdvi.cpp:361 kdvi.cpp:412
+msgid "Toggle button bar"
+msgstr "Prze³±cz pasek przycisków"
+
+#: kdvi.cpp:362 kdvi.cpp:413
+msgid "Toggle page list"
+msgstr "Prze³±cz listê stron"
+
+#: kdvi.cpp:363 kdvi.cpp:414
+msgid "Toggle status bar"
+msgstr "Prze³±cz pasek stanu"
+
+#: kdvi.cpp:364 kdvi.cpp:415
+msgid "Toggle scroll bars"
+msgstr "Prze³±cz paski &przewijania"
+
+#: kdvi.cpp:467
+msgid "File open dialog is open"
+msgstr "Okno dialogowe pliku jest otwarte"
+
+#: kdvi.cpp:516
+msgid "Can't read file:\n"
+msgstr "Nie mo¿na odczytaæ pliku:\n"
+
+#: kdvi.cpp:522
+msgid "Opening "
+msgstr "Otwieranie "
+
+#: kdvi.cpp:547
+msgid "Opened "
+msgstr "Otwarty "
+
+#: kdvi.cpp:557
+msgid "Print dialog is open"
+msgstr "Okno dialogowe drukowania jest otwarte"
+
+#: kdvi.cpp:572
+msgid "View size fits page"
+msgstr "Poka¿ rozmiar dopasowanej strony"
+
+#: kdvi.cpp:581
+msgid "View width fits page"
+msgstr "Poka¿ d³ugo¶æ dopasowanej strony"
+
+#: kdvi.cpp:673
+msgid "Preferences applied"
+msgstr "W³a¶ciwo¶ci zastosowane"
+
+#: kdvi.cpp:677
+msgid " Page "
+msgstr " Strona "
+
+#: kdvi.cpp:679
+msgid "Go to page"
+msgstr "Id¼ do strony"
+
+#: kdvi.cpp:693
+msgid "Go to"
+msgstr "Id¼ do"
+
+#: kdvi.cpp:714
+msgid "Missing PK-fonts will be generated"
+msgstr "Brakuj±ce PK-czcionki bêd± wygenerowane"
+
+#: kdvi.cpp:715
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "Informacje o brakuj±cych PK-czcionkach bêd± zapisane do 'missfont.log'"
+
+#: kdvi.cpp:731
+msgid "Postcsript specials are rendered"
+msgstr "Specjalne dane Postcript s± renderowane"
+
+#: kdvi.cpp:732
+msgid "Postscript specials are not rendered"
+msgstr "Specjalne dane Postscript nie s± renderowane"
+
+#: kdvi.cpp:748
+msgid "No menu bar"
+msgstr "Brak paska menu"
+
+#: kdvi.cpp:748
+msgid "Menu bar is shown"
+msgstr "Pasek menu jest pokazany"
+
+#: kdvi.cpp:766
+msgid "No button bar"
+msgstr "Brak paska przycisków"
+
+#: kdvi.cpp:766
+msgid "Button bar is shown"
+msgstr "Pasek przycisków jest pokazany"
+
+#: kdvi.cpp:780
+msgid "Tool bar is shown"
+msgstr "Pasek narzêdzi"
+
+#: kdvi.cpp:780
+msgid "No tool bar"
+msgstr "Brak paska przycisków"
+
+#: kdvi.cpp:804
+msgid "No status bar"
+msgstr "Brak paska stanu"
+
+#: kdvi.cpp:804
+msgid "Status bar is shown"
+msgstr "Pasek stanu jest pokazany"
+
+#: kdvi.cpp:818
+msgid "Scroll bars are shown"
+msgstr "Paski przewijania s± pokazane"
+
+#: kdvi.cpp:818
+msgid "No scroll bars"
+msgstr "Brak pasków przewijania"
+
+#: kdvi.cpp:835
+msgid "About Kdvi"
+msgstr "Informacje o Kdvi"
+
+#: kdvi.cpp:836
+msgid ""
+"kdvi - TeX DVI viewer\n"
+"Version "
+msgstr ""
+"kdvi - przegl±darka TeX DVI\n"
+"Wersja "
+
+#: kdvi.cpp:838
+msgid ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
+"\n"
+"Polskie t³umaczenie\n"
+"(C) 1997 Piotr Roszatycki"
+
+#: kdvi.cpp:874
+msgid "Page: "
+msgstr "Strona: "
+
+#: kdvi.cpp:874
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:905
+msgid "Large text button set to shrink factor "
+msgstr "Przycisk du¿ego tekstu ustawia wspó³czynnik powiêkszenia "
+
+#: kdvi.cpp:913
+msgid "Small text button set to shrink factor "
+msgstr "Przycisk ma³ego tekstu ustawia wspó³czynnik powiêkszenia "
+
+#: kdvi.cpp:937
+msgid "File reloaded"
+msgstr "Plik prze³adowany"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Zaznacz aktualn±"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Odeznacz aktualn±"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Zaznacz wszystkie"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Zaznacz parzyste"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Zaznacz nieparzyste"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Zamieñ zaznaczenie"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Usuñ znaznaczenia"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "W³a¶ciwo¶ci"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Pasek menu"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Pasek przycisków"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Pasek stanu"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Lista stron"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Paski przewijania"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Liczba powi±zanych stron"
+
+#: prefs.cpp:252
+msgid "Appearance"
+msgstr "Wygl±d"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Generuj brakuj±ce czcionki"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Rozdzielczo¶æ"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Tryb Metafont"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "¦cie¿ka PK Czcionek"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Wspó³czynnik powiêkszenia dla ma³ego tekstu"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Wspó³czynnik powiêkszenia dla du¿ego tekstu"
+
+#: prefs.cpp:319
+msgid "Fonts"
+msgstr "Czcionki"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Poka¿ specjalne dane postscript"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Wyg³adzany postscript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Renderowanie"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Papier"
+
+#: print.cpp:44
+msgid "Print"
+msgstr "Drukuj"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Drukuj "
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "Nie mo¿na otworzyæ dvi pliku!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Nie mo¿na zapisaæ pliku dvi!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "Brak obs³ugi tej wersji dvi!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Niew³a¶ciwy zakres stron!"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Domy¶lna drukarka"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "Nazwa &pliku:"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&Wszystkie"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "&Bie¿±ca"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Zaznaczone"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "Za&kres"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "Odw&róæ"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 strona na kartce"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 strony na kartce"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 strony na kartce"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Wype³ñ wiersze"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Wype³ñ kolumny"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "&Ustawienia"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Kolejno¶æ stron"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Strony"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Drukuj na"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Ustawienia drukarki"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Drukarki"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "&Wewnêtrzne"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "U¿yj ps&nup"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "U¿yj &mpage"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "&Dodaj"
+
+#: printSetupData.cpp:99
+msgid "&Remove"
+msgstr "&Usuñ"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "Polecenie &spoolera:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n-up"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Metoda wydruku"
