@@ -923,8 +923,6 @@ void KImageViewer::helpWhat()
 void KImageViewer::makeAccel()
 {
 	// keyboard scrolling
-	_paccel = new QAccel( this );
-
 	_paccel->connectItem( _paccel->insertItem( Key_Down ),
 			_canvas, SLOT(lineDown()) );
 
