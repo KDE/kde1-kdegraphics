@@ -1,24 +1,25 @@
 /* XPM */
-static char *mini-gv[] = {
-/* width height num_colors chars_per_pixel */
-"    16    14       3            1",
-/* colors */
-"  c None s None",
-". c Black",
-"# c White",
+static char *magick[] = {
+/* columns rows colors chars-per-pixel */
+"16 14 5 1",
+"  c #000000",
+". c #a0a0a4",
+"X c #c0c0c0",
+"o c #ffffff",
+"O c None",
 /* pixels */
-"     ....       ",
-"    .####.      ",
-"   .######.     ",
-"   .######.     ",
-"  ..#.##.#...   ",
-" .###.##.#.##.  ",
-" .###########.  ",
-"  .#########.   ",
-"   .#######.    ",
-"   .#######.    ",
-"   .#######.    ",
-"  .#########.   ",
-" .###.###.###.  ",
-"  .... ... ..   "
+"OOOOO    OOOOOOO",
+"OOOO oooo OOOOOO",
+"OOO oooooo OOOOO",
+"OOO oooooo OOOOO",
+"OO  o oo o   OOO",
+"O ooo oo o oo OO",
+"O ooooooooooo OO",
+"OO ooooooooo OOO",
+"OOO ooooooo OOOO",
+"OOO ooooooo OOOO",
+"OOO ooooooo OOOO",
+"OO ooooooooo OOO",
+"O ooo ooo ooo OO",
+"OO    O   O  OOO"
 };
