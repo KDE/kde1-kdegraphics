@@ -432,6 +432,8 @@ void TopLevel::setupToolBar(){
 
   QString PIXDIR = "";
   PIXDIR = mykapp->kdedir();
+  PIXDIR.detach();
+   
   /*
   char *kdedir = getenv("KDEDIR");
   if(kdedir)
@@ -2079,6 +2081,7 @@ void TopLevel::helptiff(){
   if (helppage == NULL) {
     QString file;
     file = mykapp->kdedir();
+    file.detach();
     file += "/share/apps/kfax/pics/kfax.tif";
     if (!notetiff(file.data())){
       return;
