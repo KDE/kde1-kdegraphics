@@ -255,6 +255,11 @@ private:
 	void makePopupMenus();
 
 	/**
+	* Resize the window to fit the image.
+	*/
+	void rzWinToImg();
+
+	/**
 	* Do-it-all function that operates on _kaccel and the current
 	* menu set in the _watcher:
 	*

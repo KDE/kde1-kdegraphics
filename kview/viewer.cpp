@@ -49,8 +49,7 @@ const int MessageDelay = 3000;
 KImageViewer::KImageViewer()
 	: KTopLevelWidget(),
 	_imageLoaded( false ),
-	_barFilterID( 0 ),
-	_popFilterID( 0 ),
+
 
 	_kaccel( new KAccel( this ) ),
 	_paccel( new QAccel( this ) ),
@@ -63,6 +62,9 @@ KImageViewer::KImageViewer()
 	_desktop( 0 ),
 	_aggreg( 0 ),
 	_help( 0 ),
+
+	_barFilterID( 0 ),
+	_popFilterID( 0 ),
 
 	_kfm( 0 ),
 	_transSrc( 0 ),
@@ -365,7 +367,7 @@ void KImageViewer::makePopupMenus()
 	conn( i18n( "&Reset"), "Reset", this, SLOT(reset()), CTRL + Key_R );
 	_edit->insertSeparator();
 	conn( i18n( "&Preferences..."), "Prefs", this, SLOT(prefs()), 
-		CTRL + Key_P );
+		CTRL + Key_E );
 
 	// zoom pulldown
 
@@ -399,9 +401,11 @@ void KImageViewer::makePopupMenus()
 	// desktop pulldown
 
 	_watcher->setMenu( _desktop );
-	conn( i18n( "&Tile" ), "Tile", this, SLOT(tile()) );
-	conn( i18n( "&Max" ),  "Max", this, SLOT(max())   );
-	conn( i18n("Max&pect"), "Maxpect", this, SLOT(maxpect()) );
+	conn( i18n( "Desktop &Tile" ), "TileToDesktop", this, SLOT(tile()) );
+	conn( i18n( "Desktop &Max" ),  "MaxpectToDesktop", 
+		this, SLOT(max()) );
+	conn( i18n("Desktop Max&pect"), "MaxpToDesktop", 
+		this, SLOT(maxpect()) );
 
 	_watcher->setMenu( _aggreg );
 
@@ -616,21 +620,7 @@ void KImageViewer::loadFile( const char *file, const char *url )
 	// load the image
 	_canvas->load( file, 0, _loadMode == ResizeImage );
 
-	if( _loadMode == ResizeWindow ) {
-		// FIXME: we are NOT including the window frame yet.
 
-		int iw = _canvas->contentsWidth();
-		int ih = _canvas->contentsHeight();
-
-		int xextra = width() - _canvas->width();
-		int yextra = height() - _canvas->height();
-
-		int xmax = kapp->desktop()->width()  - ( xextra + x() );
-		int ymax = kapp->desktop()->height() - ( yextra + y() );
-
-		resize( QMIN( iw, xmax ) + xextra,
-			QMIN( ih, ymax ) + yextra );
-	}
 
 	// update state
 
@@ -643,6 +633,11 @@ void KImageViewer::loadFile( const char *file, const char *url )
 		message( msg );
 	}
 	else {
+		// resize window to screen
+		if( _loadMode == ResizeWindow && _statusbar->isVisible() ) {
+			rzWinToImg();	
+		}
+
 		// set caption
 		QString cap = url;
 		cap += " (";
@@ -958,7 +953,14 @@ int KImageViewer::conn( const char *text, const char *action,
 	QPopupMenu *menu = _watcher->currentMenu();
 	assert( menu );
 
-	_kaccel->insertItem( text, action, key );
+	QString desc;
+	for( const char *t = text; *t; t++ ) {
+		if( *t == '&' )
+			continue;
+		desc += *t;
+	}
+
+	_kaccel->insertItem( desc, action, key );
 	_kaccel->connectItem( action, receiver, method );
 
 	int id = menu->insertItem( text, receiver, method );
@@ -973,11 +975,42 @@ int KImageViewer::conn( const char *text, KAccel::StdAccel action,
 	QPopupMenu *menu = _watcher->currentMenu();
 	assert( menu );
 
-	_kaccel->insertStdItem( action, text );
+	QString desc;
+	for( const char *t = text; *t; t++ ) {
+		if( *t == '&' )
+			continue;
+		desc += *t;
+	}
+
+	_kaccel->insertStdItem( action, desc );
 	_kaccel->connectItem( action, receiver, method );
 	int id = menu->insertItem( text, receiver, method );
 
 	_watcher->connectAccel( id, action );
 
 	return id;
+}
+
+void KImageViewer::rzWinToImg()
+{
+/*
+plan: to make the client area of the KTW == area of canvas contents.
+	pending:	image will fit on screen
+				size + extra 
+			move allowed (TODO)
+*/
+	int iw = _canvas->contentsWidth();
+	int ih = _canvas->contentsHeight();
+	QRect geom = frameGeometry();
+	QRect desk = kapp->desktop()->geometry();
+
+	int xextra = width() - _canvas->width();
+	int yextra = height() - _canvas->height();
+
+	int xmax = desk.width()  - ( xextra + geom.x() );
+	int ymax = desk.height() - ( yextra + geom.y() );
+
+	setGeometry( geom.x(), geom.y(), 
+		QMIN( iw, xmax ) + xextra, 
+		QMIN( ih, ymax ) + yextra );
 }

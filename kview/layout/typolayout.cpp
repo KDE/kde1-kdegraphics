@@ -146,6 +146,8 @@ QButtonGroup *KTypoLayout::startGroup()
 {
 	_group = new QButtonGroup( _parent );
 	_group->hide();
+
+	return _group;
 }
 
 void KTypoLayout::endGroup()
