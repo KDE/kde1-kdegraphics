@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kdvi\n"
 "POT-Creation-Date: 1998-12-28 15:35+0100\n"
-"PO-Revision-Date: 1999-01-26 13:22-0500\n"
+"PO-Revision-Date: 1999-02-16 13:22-0500\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgid ""
 "The change in font generation will be effective\n"
 "only after you start kdvi again!"
 msgstr ""
-"Ændringen af skrift konstruktionen begynder først\n"
+"Ændringen af skriftkonstruktionen begynder først\n"
 "når du starter kdvi igen!"
 
 #: dviwin.cpp:232
@@ -54,7 +54,7 @@ msgid ""
 "only after you start kdvi again!"
 msgstr ""
 "Ændring af gamma begynder først\n"
-"når du starter kdvi igjen!"
+"når du starter kdvi igen!"
 
 #: dviwin.cpp:423 dviwin.cpp:457
 msgid "HEY"
@@ -126,7 +126,7 @@ msgstr "Tilpas til side&bredden"
 
 #: kdvi.cpp:196
 msgid "&Redraw page"
-msgstr "&Tegne siden påny"
+msgstr "&Tegn siden igen"
 
 #: kdvi.cpp:203
 msgid "&Previous"
@@ -300,7 +300,7 @@ msgstr "Tilpas bredde"
 
 #: kdvi.cpp:350 kdvi.cpp:403
 msgid "Redraw page"
-msgstr "Tegne siden påny"
+msgstr "Tegn siden igen"
 
 #: kdvi.cpp:351 kdvi.cpp:405
 msgid "Next page"
@@ -396,7 +396,7 @@ msgstr "Gå til"
 
 #: kdvi.cpp:713
 msgid "Missing PK-fonts will be generated"
-msgstr "Manglende PK-skrifttyper vil bli genereret"
+msgstr "Manglende PK-skrifttyper vil blive genereret"
 
 #: kdvi.cpp:714
 msgid "Missing PK-fonts will be logged to 'missfont.log'"
@@ -404,7 +404,7 @@ msgstr "Manglende PK-skrifttyper vil blive logget til 'missfont.log'"
 
 #: kdvi.cpp:730
 msgid "Postcsript specials are rendered"
-msgstr "Postscript specialle er gengivet"
+msgstr "Postscript specielle er gengivet"
 
 #: kdvi.cpp:731
 msgid "Postscript specials are not rendered"
@@ -481,7 +481,7 @@ msgstr "Ophæv markering af nuværende"
 
 #: marklist.cpp:39
 msgid "Mark all"
-msgstr "Marker alle"
+msgstr "Marker alt"
 
 #: marklist.cpp:40
 msgid "Mark even"
@@ -593,7 +593,7 @@ msgstr "Ugyldig side område!"
 
 #: print.cpp:318 printSetup.cpp:73
 msgid "Default Printer"
-msgstr "Standardskriver"
+msgstr "Standardudskriver"
 
 #: printData.cpp:31
 msgid "&File Name:"
@@ -605,11 +605,11 @@ msgstr "&Alle"
 
 #: printData.cpp:65
 msgid "&Current"
-msgstr "&Nåværende"
+msgstr "&Nuværende"
 
 #: printData.cpp:71
 msgid "&Marked"
-msgstr "&Marketet"
+msgstr "&Markeret"
 
 #: printData.cpp:78
 msgid "&Range"
@@ -657,7 +657,7 @@ msgstr "Skriv til"
 
 #: printSetup.cpp:23
 msgid "Print Setup"
-msgstr "Skriveroppsætning"
+msgstr "Skriveropsætning"
 
 #: printSetupData.cpp:42
 msgid "Printers"

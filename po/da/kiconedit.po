@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
-"PO-Revision-Date: 1999-01-22 14:15+0200\n"
+"PO-Revision-Date: 1999-02-16 14:15+0200\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -353,7 +353,7 @@ msgstr ""
 "\t- Størrelse\n"
 "\t- Zoom faktor\n"
 "\t- Antal farver\n"
-"\t- Applikations beskeder"
+"\t- Anvendelsesbeskeder"
 
 #: kiconedit.cpp:804
 msgid ""
@@ -680,7 +680,7 @@ msgid ""
 msgstr ""
 "Linie\n"
 "\n"
-"Tegn en lige linie vertikalt, horisontalt eller i en 45 graders vinkel"
+"Tegn en lige linie lodret, vandret eller i en 45 graders vinkel"
 
 #: kiconedit.cpp:907
 msgid ""
@@ -808,7 +808,7 @@ msgstr "Gruppe"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
-msgstr "Kunne ikke fjerne temporær sikkerhedsfil:\n"
+msgstr "Kunne ikke fjerne midlertidig sikkerhedsfil:\n"
 
 #: kicon.cpp:74 kicon.cpp:258 kicon.cpp:342 kicon.cpp:445
 msgid ""
@@ -1066,7 +1066,7 @@ msgstr "Vis Tekst"
 
 #: kiconconfig.cpp:505
 msgid "Paste mode"
-msgstr "Indsætnings modus"
+msgstr "Indsætningsmodus"
 
 #: kiconconfig.cpp:507
 msgid "Paste transparent pixels"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kghostview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-01-27 22:12-0100\n"
+"PO-Revision-Date: 1999-02-16 22:12-0100\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -64,17 +64,17 @@ msgid ""
 msgstr ""
 "\n"
 "Dette program er fri programvare; du kan distribuere det videre og/eller "
-"endre\n"
-"det under betingelsene i GNU-licensen som er publiceret arfv \n"
+"ændre\n"
+"det under betingelserne i GNU-licensen som er publiceret af \n"
 "Free Software Foundation; enten version 2 af licensen, eller\n"
 "(dit valg) hvilken som helst senere version.\n"
 "\n"
-"Dette program er utgivet i det håb at det vil være nyttigt,\n"
+"Dette program er udgivet i det håb at det vil være nyttigt,\n"
 "men UDEN NOGEN GARANTI, til og med uden den underforståede garanti om\n"
 "SALGBARHED eller EGNETHED TIL ET SPECIELT FORMÅL.  Se \n"
 "GNU-licensen for flere detaljer.\n"
 "\n"
-"Du bør have mottaget en kopi af GNU-lisencen\n"
+"Du bør have modtaget en kopi af GNU-licensen\n"
 "sammen med dette program; hvis ikke, skriv til Free Software\n"
 "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
 
@@ -224,7 +224,7 @@ msgstr ""
 "\n"
 "Området som gives må ligge indenfor sideområdet\n"
 "for denne del af dokumentet.\n"
-"Undersøg statuslinien for denne information.\n"
+"Undersøg statusbjælken for denne information.\n"
 
 #: goto.cpp:54
 msgid "&Section"
@@ -270,7 +270,7 @@ msgstr "&Orientering"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
-msgstr "&Brug"
+msgstr "&Anvend"
 
 #: main.cpp:25
 msgid "Usage: "
@@ -306,7 +306,7 @@ msgstr "Sideopsætning"
 
 #: kghostview.cpp:360 kghostview.cpp:449
 msgid "View Control"
-msgstr "Fremisningskontrol"
+msgstr "Fremvisningskontrol"
 
 #: kghostview.cpp:361 kghostview.cpp:454
 msgid "Go To Page"
@@ -585,7 +585,7 @@ msgid ""
 "Alternatively stop the running one."
 msgstr ""
 "Venter allerede\n"
-"for at et internet job skal afsluttes.\n"
+"på at et internet job skal afsluttes.\n"
 "Vent venligst til det er afsluttet.\n"
 "Alternativt stop nuværende job."
 
@@ -621,7 +621,7 @@ msgstr ""
 
 #: kghostview.cpp:1576 kghostview.cpp:1696
 msgid "Error printing"
-msgstr "Fejl ved skriving"
+msgstr "Fejl ved skrivning"
 
 #: kghostview.cpp:1586
 msgid ""

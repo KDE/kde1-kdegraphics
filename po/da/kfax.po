@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1999-01-23 26:43-0500\n"
+"PO-Revision-Date: 1999-02-16 26:43-0500\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -232,7 +232,7 @@ msgid ""
 "Please wait until has finished\n"
 msgstr ""
 "KFax venter på at et\n"
-"internet job skal overstås\n"
+"internet job skal overståes\n"
 "Vent venligst til det er færdigt\n"
 
 #: kfax.cpp:1150 kfax.cpp:1214
@@ -305,7 +305,7 @@ msgid ""
 "Do you want to overwrite it?\n"
 "\n"
 msgstr ""
-"En fil med dette navn eksisterer alle rede\n"
+"En fil med dette navn eksisterer allerede\n"
 "Ønsker du at overskrive den?\n"
 "\n"
 
@@ -364,7 +364,7 @@ msgstr "Vælg filnavn"
 
 #: print.cpp:280
 msgid "You must enter a file name if you wish to print to a file."
-msgstr "Du må indkrive et filnavn hvis du ønsker at utskrive til en fil."
+msgstr "Du må indkrive et filnavn hvis du ønsker at udskrive til en fil."
 
 #: print.cpp:290
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE GRAPHICS/kview\n"
 "POT-Creation-Date: 1999-01-31 01:52+0100\n"
-"PO-Revision-Date: 1999-01-28 14:50+0200\n"
+"PO-Revision-Date: 1999-02-16 14:50+0200\n"
 "Last-Translator: Erik Kjær Pedersen <erik@binghamton.edu>\n"
 "Language-Team: da <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -214,7 +214,7 @@ msgstr "Opgiv skarphedsfaktor (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr "Skarphedsfaktor må være positiv"
+msgstr "Skarphedsfaktor skal være positiv"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
