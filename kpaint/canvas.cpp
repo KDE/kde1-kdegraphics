@@ -184,7 +184,7 @@ Canvas::copy()
 void
 Canvas::paste()
 {
-#warning "paste not implemented"
+// #warning "paste not implemented"
   warning("paste from clipboard not implemented");
   
   clearSelection();

@@ -13,7 +13,7 @@
 #include <qpushbutton.h>
 
 
-ColorButton::ColorButton(QWidget *parent=0, const char *name=0)
+ColorButton::ColorButton(QWidget *parent, const char *name)
   : QToolButton(parent, name)
 {}
 

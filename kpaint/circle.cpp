@@ -72,7 +72,7 @@ void Circle::mouseMoveEvent(QMouseEvent *e)
 	// than 2 by 2 pixels. (It leaves a point behind as the circle
 	// grows).
 
-	r= (int) sqrt( (startx-lastx)*(startx-lastx) +
+	r= (int) sqrt( (double)(startx-lastx)*(startx-lastx) +
 		       (starty-lasty)*(starty-lasty) );
 
 	bbx= startx-r;
@@ -91,7 +91,7 @@ void Circle::mouseMoveEvent(QMouseEvent *e)
 	  paint.drawEllipse(bbx, bby, 2*r, 2*r);
 
 	// Draw new circle
-	r= (int) sqrt( (startx-x)*(startx-x)+(starty-y)*(starty-y) );
+	r= (int) sqrt( (double)(startx-x)*(startx-x)+(starty-y)*(starty-y) );
 
 	bbx= startx-r;
 	bby= starty-r;
@@ -153,7 +153,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Circle::mouseReleaseEvent() handler called\n");
     paint.end();
 
     // Draw new circle
-    r= (int) sqrt( (startx-x)*(startx-x)+(starty-y)*(starty-y) );
+    r= (int) sqrt( (double)(startx-x)*(startx-x)+(starty-y)*(starty-y) );
 
     bbx= startx-r;
     bby= starty-r;

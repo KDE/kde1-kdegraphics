@@ -351,7 +351,7 @@ QStrList *MarkListTable::markList()
 
 //------------------------------------------------------------------
 
-MarkList::MarkList( QWidget * parent = 0, const char * name = 0 )
+MarkList::MarkList( QWidget * parent, const char * name)
 	: QWidget( parent, name )
 {
 	listTable = new MarkListTable ( this );
@@ -396,7 +396,7 @@ void MarkList::resizeEvent( QResizeEvent * )
 	
 }
 
-void MarkList::insertItem ( const char *text, int index=-1)
+void MarkList::insertItem ( const char *text, int index)
 {
 	listTable->insertItem(text,index);
 }
