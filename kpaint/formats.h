@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 #ifndef FORMATS_H
 #define FORMATS_H
 
@@ -14,6 +16,7 @@ public:
   unsigned int flags; // Internal? / Read? / Write?
   char *magic; // NULL for formats kpaint should not register
   char *glob;
+  char *suffix; // Default suffix for this type
   image_io_handler read_format; // NULL for internal formats
   image_io_handler write_format; // NULL for internal formats
 
@@ -29,8 +32,9 @@ class FormatManager {
    virtual ~FormatManager();
    
    const char *allImagesGlob(void);
-   const QStrList *formats(void);
+   QStrList *formats(void);
    const char *glob(const char *format);
+   const char *suffix(const char *format);
    // const char *description(const char *format);
    // const unsigned int flags(const char *format);
    

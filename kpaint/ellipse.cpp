@@ -27,8 +27,6 @@ void Ellipse::activating(void)
 
 void Ellipse::mousePressEvent(QMouseEvent *e)
 {
-  int x,y;
-
 #ifdef KPDEBUG
   fprintf(stderr, "Ellipse::mousePressEvent() handler called\n");
 #endif

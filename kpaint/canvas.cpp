@@ -5,10 +5,9 @@
 #include <assert.h>
 #include <strings.h>
 #include <qpainter.h>
+#include <math.h>
 #include "canvas.h"
 #include "tools/tool.h"
-
-#include "canvas.moc"
 
 Canvas::Canvas(int width, int height,
 	       QWidget *parent= 0, const char *name=0)
@@ -40,7 +39,7 @@ Canvas::Canvas(const char *filename, QWidget *parent= 0, const char *name=0)
 {
   currentTool= 0;
   s= INACTIVE;
-  zoomFactor= 100;
+  zoomed= NULL;
   matrix= new QWMatrix;
 
   // Create pixmap
@@ -50,12 +49,10 @@ Canvas::Canvas(const char *filename, QWidget *parent= 0, const char *name=0)
     exit(1);
   }
 
-  currfilename= filename;
-
-  // Get the format
-  
-
   resize(pix->width(), pix->height());
+
+  setZoom(100);
+
   emit sizeChanged();
 
   // Set keyboard focus policy
@@ -71,10 +68,11 @@ void Canvas::setZoom(int z)
   matrix->reset();
   matrix->scale((float) z/100, (float) z/100);
 
-  delete zoomed;
+  if (zoomed != NULL)
+    delete zoomed;
 
-  w= pix->width()* ((float) zoomFactor/100);
-  h= pix->height()*((float) zoomFactor/100);
+  w= (int) (pix->width()* ((float) zoomFactor/100));
+  h= (int) (pix->height()*((float) zoomFactor/100));
 
   zoomed= new QPixmap(w, h);
   zoomed->fill(QColor("white"));
@@ -144,8 +142,8 @@ void Canvas::setPixmap(QPixmap *px)
 
   delete zoomed;
 
-  w= px->width()*zoomFactor/100;
-  h= px->height()*zoomFactor/100;
+  w= (int) (px->width()* ((float) zoomFactor/100));
+  h= (int) (px->height()*((float) zoomFactor/100));
 
   zoomed= new QPixmap(w, h);
 
@@ -201,16 +199,22 @@ bool Canvas::isActive()
     return false;
 }
 
-bool Canvas::load(const char *filename= 0, char *format= 0)
+bool Canvas::load(const char *filename= 0, const char *format= 0)
 {
   bool s;
   QPixmap p;
+  QPixmap q; // Fix UMR when reading transparent pixels (they hold junk)
 
-  s= p.load(filename, format);
+  if (!format)
+    s= p.load(filename);
+  else
+    s= p.load(filename, format);
 
   if (s) {
-    currfilename= filename;
-    setPixmap(&p);
+    q.resize(p.size());
+    q.fill(QColor("white"));
+    bitBlt(&q, 0, 0, &p);
+    setPixmap(&q);
   }
 
   repaint(0);
@@ -218,7 +222,7 @@ bool Canvas::load(const char *filename= 0, char *format= 0)
   return s;
 }
 
-bool Canvas::save(const char *filename=0, char *format= 0)
+bool Canvas::save(const char *filename=0, const char *format= 0)
 {
   bool s;
 
@@ -227,7 +231,6 @@ bool Canvas::save(const char *filename=0, char *format= 0)
 #endif	  
 
   s= pix->save(filename, format);
-  currfilename= filename;
 
 #ifdef KPDEBUG
   fprintf(stderr, "Canvas::save() returning %d\n", s);
@@ -256,15 +259,4 @@ void Canvas::keyReleaseEvent(QKeyEvent *e)
 }
 
 
-
-const char *Canvas::filename(void)
-{
-  return currfilename;
-}
-
-void Canvas::setFilename(char *name)
-{
-  currfilename= name;
-}
-
-
+#include "canvas.moc"

@@ -7,13 +7,13 @@
 # Configuration
 #
 prefix 	= 	@prefix@
-topdir	= 	@topdir@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H
-LDLIBS	=	-lkptools -lkdeui -lkdecore -lgif -lqt -lXext -lm -lX11 @LIBJPEG@
+LDLIBS	=	-lkfm -lkdecore -lkdeui -lkptools -lgif @LIBJPEG@ -lqt -lXext @LIBSOCKET@ -lm
+METADIR	=	metas
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
 INSTALL_DATA= @INSTALL@ -m 644
@@ -35,6 +35,7 @@ OBJS=	main.o \
 	infodialog.o \
 	palette.o \
 	palettedialog.o \
+	formatdialog.o \
 	canvassize.o \
 	properties.o \
 	gif.o \
@@ -47,6 +48,7 @@ METAS=	canvas.moc \
 	manager.moc \
 	infodialog.moc \
 	properties.moc \
+	formatdialog.moc \
 	palette.moc \
 	palettedialog.moc \
 	QwViewport.moc
@@ -65,24 +67,20 @@ METAS=	canvas.moc \
 
 all:	kplib kpaint
 
-Makefile: Makefile.in
-	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status
-
 install: all
 	$(INSTALL_DIR) $(prefix)/bin
-	$(INSTALL_DIR) $(prefix)/doc/HTML/kpaint
 	$(INSTALL_BIN) kpaint $(prefix)/bin
-	$(INSTALL_DATA) doc/HTML/kpaint.html $(prefix)/doc/HTML/kpaint
+	$(INSTALL_DIR) $(prefix)/lib/pics/toolbar
+	(cd doc ; $(MAKE) install)
+	(cd toolpics ; $(MAKE) install)
 	$(INSTALL_DIR) $(prefix)/apps/Applications
 	$(INSTALL_DATA) Paint.kdelnk $(prefix)/apps/Applications 
-	(cd toolpics && $(MAKE) install)
 
 uninstall:
-	rm -f $(prefix)/bin/kpaint
-	rm -rf $(prefix)/doc/HTML/kpaint
-	rm -f $(prefix)/apps/Applications/Paint.kdelnk
-	(cd toolpics && $(MAKE) uninstall)
-	
+	-rm -f $(prefix)/bin/kpaint
+	-rm -rf $(prefix)/doc/HTML/kpaint
+	-rm -f $(prefix)/apps/Applications/Paint.kdelnk
+
 kplib:
 	(cd tools; $(MAKE) all)
 

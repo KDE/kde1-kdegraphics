@@ -2,32 +2,24 @@
 #include <kapp.h>
 #include <kkeyconf.h>
 #include "kpaint.h"
+#include "version.h"
 #include "app.h"
 
 MyApp::MyApp( int &argc, char **argv, const QString appname)
   : KApplication( argc, argv, appname)
 {
-#ifdef KPDEBUG
-  switch (getConfigState()) {
-  case APPCONFIG_READONLY:
-    fprintf(stderr, "Opened config: RO\n");
-    break;
-  case APPCONFIG_READWRITE:
-    fprintf(stderr, "Opened config: RW\n");
-    break;
-  case APPCONFIG_NONE:
-    fprintf(stderr, "Opened config: NONE\n");
-    break;
-  default:
-    fprintf(stderr, "Opened config: ??\n");
-    break;
+  KPaint *kp;
+
+  if (argc == 2) {
+    kp= new KPaint(argv[1]);
   }
-#endif
-
-  QObject::connect(this, SIGNAL(lastWindowClosed()), this, SLOT(quit()));
-
-  kp= new KPaint();
-
+  else if (argc == 1) {
+    kp= new KPaint();
+  }
+  else {
+    usage();
+    ::exit(1);
+  }
 
   /* KKeyCode initialization */
   kKeys->addKey("Quit", "CTRL+Q");
@@ -61,7 +53,20 @@ MyApp::MyApp( int &argc, char **argv, const QString appname)
   kKeys->connectFunction("kpaint", "Spray Can", kp, SLOT(newWindow()));
   */
 
+   KConfig *config = KApplication::getKApplication()->getConfig();
+   config->setGroup( "Test" );
+   config->writeEntry( "TestString", QString("This was a QString") );
+
+   
   kp->show();
+}
+
+void MyApp::usage()
+{
+  printf("kpaint " APPVERSTR " " APPAUTHOREMAIL);
+  printf( "\n(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n");
+  printf("Usage: ");
+  printf(APPNAME " [url | filename]\n");
 }
 
 #include "app.moc"

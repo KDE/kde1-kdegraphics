@@ -1,95 +1,13 @@
+README for KPaint 0.3
+=====================
 
-   [INLINE]
-   
-                           KPaint - Help Contents
-                                      
-   
-   
-   KPaint is a simple bitmap paint program. KPaint is currently _alpha_
-   quality software (ie. I make no promises that it won't crash and
-   therby ruin your life, or at least your image). There is of course _no
-   warranty_ as this is free software. For details of the license see the
-   file LICENSE in the distribution. KPaint is part of the KDE Desktop
-   Environment look on [1]www.kde.org for more information.
-   
-   KPaint requires version 1.2 of the Qt library from Troll Tech and
-   libkde available from [2]ftp.kde.org.
-   
-   If you have any suggestions or bug reports my mail address is
-   [3]moorer@cs.man.ac.uk, please mention kpaint in the subject line of
-   your message. More general dicussions about KDE should take place on
-   the KDE mailing lists (link). If you are reporting bugs then please
-   provide as much information as possible (including a stack trace if
-   possible).
-   
-   Currently there is no documentation but I'm starting to work on that,
-   I've included an [4]outline of how the help should look.
-   Differences from kpaint version 0.1
-   
-  What's changed?
-  
-   
-   
-   I've made a lot of internal changes in this release to make kpaint
-   more of a kde application. The code is also now much cleaner and the
-   basic framework is now all present. The visible changes are:
-     * toolbar to select the current tool
-     * a palette editor
-     * kpaint now uses KKeyconf to handle key bindings
-     * Gif write support and transparency support
-     * No more hard coded paths
-     * Multiple instance support
-     * A spraycan
-       
-   
-   
-  What works?
-  
-   
-   
-   This is the second release of kpaint and things are getting better,
-   see my [5]todo list for information about what is still to be
-   implemented. The currently implemented features are:
-   
-     * Load and Save standard Qt formats (xpm, bmp etc.)
-     * Load and Save gif images (with transparency support)
-     * Load only jpeg
-     * Circles, Ellipses, Freehand Pen, Rectangles, Lines, Spray Can
-     * Zoom in and out
-     * Tool properties
-     * Palette Editor
-     * Key configuration (under construction)
-       
-   Longer term plans are in the file PLANS in the source distribution
-   
-  Planned features
-  
-   
-   
-   This is my todo list roughly in order of priority:
-   
-     * Picture in picture mode for icons
-     * Some more tools.
-     * Area selections and cut and paste.
-     * Image map generation.
-     * User interface improvements.
-     * Network file access.
-     * File write support to more formats.
-     * Better help.
-       
-   
-   
-   
-    [6]moorer@cs.man.ac.uk
-    
-   
-   Last Updated 20 April 1997
+This is KPaint version 0.3, just type './configure' then 'make' to build
+the executable. Typing 'make install' should put things in the right
+place.
 
-References
+For the documentation select Help in the application or look in the
+kpaint/doc/HTML directory of the distribution.
 
-   1. http://www.kde.org/
-   2. ftp://ftp.kde.org/
-   3. mailto:moorer@cs.man.ac.uk
-   4. file://localhost/home/rich/src/kde/kpaint/doc/HTML/index.html
-   5. file://localhost/home/rich/src/kde/kpaint/doc/HTML/kpaint.html#todo
-   6. file://localhost/home/rich/src/kde/kpaint/doc/HTML/kpaint.html
+Richard J. Moore
+rich@kde.org
+richard@cs.man.ac.uk

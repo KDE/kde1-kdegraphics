@@ -1,4 +1,7 @@
 [KDE Desktop Entry]
 Exec=kpaint %u
+Icon=kpaint.xpm
 DocPath=kpaint/kpaint.html
-Info=A simple paint program ala MS Paint
+Info=A Simple Paint Program
+Terminal=0
+Type=Application

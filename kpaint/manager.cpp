@@ -119,7 +119,7 @@ void Manager::initToolbar()
   Tool *tool;
   QPixmap *pix;
   int i;
-  char *tip;
+  const char *tip;
   for (i= 0, tool= list.first(); tool != NULL; i++, tool= list.next()) {
     tip= tool->tip();
     pix= tool->pixmap();
@@ -127,7 +127,7 @@ void Manager::initToolbar()
     fprintf(stderr, "Adding Pix: %p  // %s\n", pix, tip);
 	fprintf(stderr, "Pix Size: %d, %d", pix->width(), pix->height());
 #endif
-    mytoolbar->insertItem(*pix, i, TRUE, tip, i);
+    mytoolbar->insertButton(*pix, i, TRUE, tip, i);
   }
   connect(mytoolbar, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));
 }

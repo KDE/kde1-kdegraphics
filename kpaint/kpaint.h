@@ -1,3 +1,5 @@
+// -*- c++ -*-
+
 // $Id$
 
 #ifndef KPAINT_H
@@ -5,8 +7,10 @@
 
 #include <qwidget.h>
 #include "QwViewport.h"
-#include "ktopwidget.h"
-#include "ktoolbar.h"
+#include <ktopwidget.h>
+#include <ktoolbar.h>
+#include <kstatusbar.h>
+#include <kfm.h>
 #include "canvas.h"
 #include "manager.h"
 
@@ -15,14 +19,17 @@ class KPaint : public KTopLevelWidget
   Q_OBJECT
 
 public:
-  KPaint(char *name=0);
+  KPaint(char *url_= NULL);
 
 public slots:
+  // File
   void fileNew();
   void fileOpen();
   void fileSave();
   void fileSaveAs();
-  void fileInfo();
+  void fileFormat();
+  void fileOpenURL();
+  void fileSaveAsURL();
   void newWindow();
   void closeWindow();
   void fileQuit();
@@ -51,14 +58,41 @@ public slots:
   void helpContents();
   void helpIndex();
 
+protected:
+  // Load file
+  bool loadLocal(const char *filename_, const char *url_= NULL);
+  bool loadRemote(const char *url_= NULL);
+  bool saveRemote(const char *url_);
+  bool saveLocal(const char *filename_, const char *url_= NULL);
+  void KFMgetFinished();
+  void KFMputFinished();
+  KFM *kfm;
+  enum transferDirection { KfmNone, KfmGet, KfmPut };
+
+protected slots:
+  void KFMfinished();
+
 private:
+  // actual local filename
+  QString *filename;
+  // URL it came from or NULL if local
+  QString *url;
+  transferDirection kfmOp;
+  QString *tempURL;
+
+  QString *format;
   int zoom;
+  void closeEvent(QCloseEvent *e);
+  bool modified;
+
   QwViewport *v;
   Canvas *c;
   KToolBar *toolbar;
+  KStatusBar *statusbar;
   Manager *man;
   void initToolbar(void);
-  void initMenus();
+  void initMenus(void);
+  void initStatus(void);
 };
 
 #endif

@@ -1,13 +1,30 @@
+This file lists known bugs in KPaint 0.3.1
+==========================================
+
+Fixed Makefile.in problem
+Does not delete temporary files from network access
+Custom bitmap fills still broken.
+
+12 August 1997
+
+This file lists known bugs in KPaint 0.3
+========================================
+
+Custom bitmap fills still broken.
+Missing -lkfm in Makefile.in
+
+28 July 1997
+
 This file lists known bugs in KPaint 0.2
 ========================================
 
 Custom bitmap fills are broken, do not use.
 
 You still can't set the filetype (all of the info is there but it's not quite
-sorted out). 
+sorted out). Fixed in 0.3.
 
 The lastWindowClosed() signal doesn't seem to be working, don't know why yet.
-
+Fixed in 0.3 (Still don't know why so I've worked around it).
 
 
 This file lists known bugs in KPaint 0.1
@@ -28,5 +45,11 @@ so I've removed the fix in 0.2.
 
 moorer@cs.man.ac.uk
 19 May 1997
+
+
+
+
+
+
 
 

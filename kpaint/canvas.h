@@ -30,13 +30,8 @@ public:
   int zoom(void);
   void updateZoomed(void);
 
-  const char *filename(void);
-  void setFilename(char *name);
-  const char *format(void);
-  void setFormat(char *name);
-
-  bool load(const char *filename= 0, char *format= 0);
-  bool save(const char *filename= 0, char *format= 0);
+  bool load(const char *filename= 0, const char *format= 0);
+  bool save(const char *filename= 0, const char *format= 0);
 
   bool isActive(void);
 
@@ -61,8 +56,6 @@ protected:
   };
 
   QWMatrix *matrix;
-  QString currfilename;
-  QString currformat;
   Tool *currentTool;
   QPixmap *zoomed; // Zoomed copy
   QPixmap *pix; // Master copy

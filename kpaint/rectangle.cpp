@@ -28,8 +28,6 @@ void Rectangle::activating(void)
 
 void Rectangle::mousePressEvent(QMouseEvent *e)
 {
-  int x,y;
-
 #ifdef KPDEBUG
   fprintf(stderr, "Rectangle::mousePressEvent() handler called\n");
 #endif
