@@ -474,6 +474,7 @@ msgid "Small text button set to shrink factor "
 msgstr "Przycisk ma³ego tekstu ustawia wspó³czynnik powiêkszenia "
 
 #: kdvi.cpp:931
+#, c-format
 msgid "Shrink: %d"
 msgstr "Powiêkszenie: %d"
 
