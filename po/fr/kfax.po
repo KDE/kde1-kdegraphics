@@ -6,9 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
 "POT-Creation-Date: 1999-01-25 01:42+0100\n"
-"PO-Revision-Date: 1999-01-29 22:30+0200\n"
-"Last-Translator: Francois-Xavier DURANCEAU "
+"PO-Revision-Date: 1999-03-12 16:30+0200\n"
+"Last-Translator: Francois-Xavier DURANCEAU & Alain Gibaud"
 "<Francois-Xavier.Duranceau@loria.fr>\n"
+"<Alain.Gibaud@univ-valenciennes.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
@@ -65,7 +66,7 @@ msgstr "Ouvrir l'&URL"
 
 #: kfax.cpp:409
 msgid "Save to U&RL..."
-msgstr "Enregistrer dans l'U&RL"
+msgstr "Enregistrer à l'U&RL"
 
 #: kfax.cpp:410
 msgid "&Close Fax"
@@ -89,15 +90,15 @@ msgstr "&Dernière page"
 
 #: kfax.cpp:422
 msgid "&Rotate Page"
-msgstr ""
+msgstr "Tou&rner la page"
 
 #: kfax.cpp:423
 msgid "&Mirror Page"
-msgstr ""
+msgstr "&Miroir"
 
 #: kfax.cpp:424
 msgid "&Flip Page"
-msgstr ""
+msgstr "R&etourner la page"
 
 #: kfax.cpp:426
 msgid "Zoom &in"
@@ -105,7 +106,7 @@ msgstr "Zoom a&vant"
 
 #: kfax.cpp:427
 msgid "Zoom &out"
-msgstr "Zoom a&rrière"
+msgstr "Zo&om arrière"
 
 #: kfax.cpp:432
 msgid "&Fax Options..."
@@ -284,13 +285,14 @@ msgstr "L: %d H: %d"
 msgid "Res: %s"
 msgstr "Rés: %s"
 
+# ++Gib: C'est la résolution qui est fine ou normale
 #: kfax.cpp:2416 options.cpp:71
 msgid "Fine"
-msgstr ""
+msgstr "Fine"
 
 #: kfax.cpp:2416 options.cpp:74
 msgid "Normal"
-msgstr "Normal"
+msgstr "Normale"
 
 #: kfax.cpp:2424
 msgid "Type: Tiff "
@@ -298,7 +300,7 @@ msgstr "Type: Tiff "
 
 #: kfax.cpp:2427
 msgid "Type: Raw "
-msgstr "Type: Raw "
+msgstr "Type: Brut "
 
 #: kfax.cpp:2738
 msgid ""
@@ -381,7 +383,7 @@ msgstr "Options de KFax"
 
 #: options.cpp:64
 msgid "Raw Fax Resolution:"
-msgstr "Résolution Fax Raw :"
+msgstr "Résolution Brute :"
 
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
@@ -399,26 +401,28 @@ msgstr "Paysage"
 msgid "Upside Down"
 msgstr "Tête en bas"
 
+# ++Gib: Inverse plutot que inverser (qui deborde de la boite !!!)
 #: options.cpp:93
 msgid "Invert"
-msgstr "Inverser"
+msgstr "Inverse"
 
 #: options.cpp:102
 msgid "Raw Fax Data are:"
-msgstr ""
+msgstr "Données Brutes :"
 
+# ++Gib: LS == Less Significant pour moi (ie bit 0)
 #: options.cpp:106
 msgid "LS-Bit first"
-msgstr ""
+msgstr "Bit 0 d'abord"
 
 #: options.cpp:114
 msgid "Raw Facsimili are:"
-msgstr ""
+msgstr "Facsimilé Brut :"
 
 #: options.cpp:135
 msgid "Raw Fax width:"
-msgstr "Fax Raw largeur :"
+msgstr "Largeur Brute :"
 
 #: options.cpp:142
 msgid "height:"
-msgstr "hauteur :"
+msgstr "Hauteur :"

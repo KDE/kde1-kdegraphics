@@ -7,8 +7,9 @@ msgstr ""
 "Project-Id-Version: kiconedit\n"
 "POT-Creation-Date: 1999-01-10 01:46+0100\n"
 "PO-Revision-Date: 1998-12-09 12:00+0100\n"
-"Last-Translator: Francois-Xavier DURANCEAU "
+"Last-Translator: Francois-Xavier DURANCEAU & Alain Gibaud"
 "<Francois-Xavier.Duranceau@loria.fr>\n"
+"<Alain.Gibaud@univ-valenciennes.fr>\n"
 "Language-Team: Français <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
@@ -151,6 +152,7 @@ msgstr "Ellipse remplie"
 msgid "Spray"
 msgstr "Aérographe"
 
+# ++Gib: Flood filling == remplissage plutot
 #: kiconedit.cpp:489 kiconedit.cpp:689
 msgid "Flood fill"
 msgstr "Pot de peinture"
@@ -474,7 +476,7 @@ msgid ""
 msgstr ""
 "Coller\n"
 "\n"
-"Colle le contenu du presse-papiersdans l'icône courante.\n"
+"Colle le contenu du presse-papiers dans l'icône courante.\n"
 "\n"
 "Si le contenu est plus grand que l'icône courante, vous pouvez le coller "
 "dans une nouvelle fenêtre.\n"
@@ -515,9 +517,9 @@ msgid ""
 msgstr ""
 "Niveaux de gris\n"
 "\n"
-"Convertit l'icône courante en niveuax de gris.\n"
-"(Attention : Le résultat pourrait contenir des couleurs absentes de la "
-"palette de couleurs de l'icône"
+"Convertit l'icône courante en niveaux de gris.\n"
+"(Attention : Le résultat pourra contenir des couleurs absentes de la "
+"palette de couleurs de l'icône)"
 
 #: kiconedit.cpp:855
 msgid ""
@@ -606,7 +608,7 @@ msgid ""
 msgstr ""
 "Stylo\n"
 "\n"
-"Dessine des lignes brisées"
+"Dessine une ligne quelconque"
 
 #: kiconedit.cpp:883
 msgid ""
@@ -721,8 +723,8 @@ msgstr ""
 "\n"
 "Efface les pixels. Rend les pixels transparents\n"
 "\n"
-"(Note : Si vous voulez dessiner en transparence avec un outils différent, "
-"cliquez d'abord sur \"Erase\" et ensuite sur l'outil que vous voulez "
+"(Note : Si vous voulez dessiner en transparence avec un outil différent, "
+"cliquez d'abord sur la gomme et ensuite sur l'outil que vous voulez "
 "utiliser)"
 
 #: kicongrid.cpp:66
@@ -953,7 +955,7 @@ msgstr "Répertoire standard"
 
 #: knew.cpp:54
 msgid "Standard package"
-msgstr "Package standard"
+msgstr "Paquetage standard"
 
 #: knew.cpp:59
 msgid "Mini folder"
@@ -961,7 +963,7 @@ msgstr "Répertoire mini"
 
 #: knew.cpp:64
 msgid "Mini package"
-msgstr "Mini package"
+msgstr "Paquetage mini"
 
 #: knew.cpp:156 knew.cpp:258 knew.cpp:308
 msgid "Create from scratch"
@@ -1038,7 +1040,7 @@ msgstr "&Pixmap..."
 
 #: kiconconfig.cpp:287
 msgid "&Built-in"
-msgstr ""
+msgstr "&Intégrés d'origine"
 
 #: kiconconfig.cpp:291
 msgid "Example"
@@ -1078,7 +1080,7 @@ msgstr "Mode de collage"
 
 #: kiconconfig.cpp:507
 msgid "Paste transparent pixels"
-msgstr ""
+msgstr "Collage de pixels transparents"
 
 #: kiconconfig.cpp:511
 msgid "Show rulers"
