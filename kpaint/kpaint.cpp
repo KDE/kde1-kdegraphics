@@ -32,41 +32,6 @@
 #endif
 #include <time.h>
 
-
-// Define generic command codes
-#define ID_OPEN 100
-#define ID_NEW 101
-#define ID_SAVE 102
-#define ID_SAVEAS 103
-#define ID_CLOSE 104
-#define ID_NEWWINDOW 105
-#define ID_CLOSEWINDOW 106
-#define ID_COPY 107
-#define ID_CUT 108
-#define ID_PASTE 109
-#define ID_OPTIONS 110
-#define ID_EXIT 111
-#define ID_HELPCONTENTS 112
-#define ID_ABOUT 113
-#define ID_OPENURL 114
-#define ID_SAVEURL 115
-
-// Define app specific command codes
-#define ID_FORMAT 200
-#define ID_PASTEIMAGE 201
-#define ID_ZOOMIN 202
-#define ID_ZOOMOUT 203
-#define ID_MASK 204
-#define ID_INFO 205
-#define ID_PALETTE 206
-#define ID_DEPTH 207
-#define ID_RELEASENOTES 208
-
-// Tags for statusbar items
-#define ID_FILESIZE 300
-#define ID_ZOOMFACTOR 301
-#define ID_FILENAME 302
-
 extern MyApp *kpaintApp;
 extern FormatManager *formatMngr;
 extern int openwins;
@@ -133,6 +98,15 @@ KPaint::KPaint(const char *url_) : KTopLevelWidget()
 KPaint::~KPaint()
 {
   delete man;
+}
+
+void KPaint::setPixmap(QPixmap *p)
+{
+  format= "GIF";
+  filename= "Untitled.gif";
+  modified= false;
+  url= "";
+  c->setPixmap(p);
 }
 
 int KPaint::exit()
@@ -262,7 +236,6 @@ void KPaint::initMenus()
   edit->insertItem(klocale->translate("Zoom In"), ID_ZOOMIN);
   edit->insertItem(klocale->translate("Zoom Out"), ID_ZOOMOUT);
   edit->insertItem(klocale->translate("Mask..."), ID_MASK);
-  edit->insertItem(klocale->translate("Options..."), ID_OPTIONS);
 
   QPopupMenu *image= new QPopupMenu;
   image->insertItem(klocale->translate("Information..."), ID_INFO);
@@ -278,7 +251,14 @@ void KPaint::initMenus()
   tool->insertItem( klocale->translate("Ellipse"), 0 );
   tool->insertItem( klocale->translate("Circle"), 1 );
   tool->insertItem( klocale->translate("Spray Can"), 5);
+  tool->insertItem( klocale->translate("Area Select"), 6);
   connect(tool, SIGNAL(activated(int)), SLOT(setTool(int)));
+
+  QPopupMenu *options = new QPopupMenu;
+  options->setCheckable(true);
+  options->insertItem( klocale->translate("Show Toolbar"), ID_SHOWTOOLBAR);
+  options->insertItem( klocale->translate("Show Status Bar"), ID_SHOWSTATUSBAR);
+  options->insertItem( klocale->translate("Save Options"), ID_SAVEOPTIONS);
 
   QPopupMenu *help = new QPopupMenu;
   help->insertItem( klocale->translate("Contents"), ID_HELPCONTENTS);
@@ -290,12 +270,14 @@ void KPaint::initMenus()
   menu->insertItem( klocale->translate("&Edit"), edit );
   menu->insertItem( klocale->translate("&Image"), image );
   menu->insertItem( klocale->translate("&Tool"), tool );
+  menu->insertItem( klocale->translate("&Options"), options );
   menu->insertSeparator();
   menu->insertItem( klocale->translate("&Help"), help );
 
   connect (file, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (edit, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (image, SIGNAL (activated (int)), SLOT (handleCommand (int)));
+  connect (options, SIGNAL (activated (int)), SLOT (handleCommand (int)));
   connect (help, SIGNAL (activated (int)), SLOT (handleCommand (int)));
 
   menu->show();
@@ -373,6 +355,19 @@ void KPaint::handleCommand(int command)
     imageChangeDepth();
     break;
 
+    // Options
+  case ID_SHOWTOOLBAR:
+    enableToolBar(KToolBar::Toggle, ID_TOOLTOOLBAR);
+    enableToolBar(KToolBar::Toggle, ID_FILETOOLBAR);
+    break;
+  case ID_SHOWMENUBAR:
+    break;
+  case ID_SHOWSTATUSBAR:
+    enableStatusBar();
+    break;
+  case ID_SAVEOPTIONS:
+    break;
+
   // Help
   case ID_ABOUT:
     helpAbout();
@@ -386,7 +381,7 @@ void KPaint::handleCommand(int command)
   }
 }
 
-bool KPaint::loadLocal(const char *filename_, const char *url_)
+bool KPaint::loadLocal(const char *filename_, const char *url_= NULL)
 {
   QString size;
   const char *fmt;
@@ -439,7 +434,7 @@ bool KPaint::loadLocal(const char *filename_, const char *url_)
 }
 
 // Initiates fetch of remote file
-bool KPaint::loadRemote(const char *url_)
+bool KPaint::loadRemote(const char *url_= NULL)
 {
   KURL u(url_);
 
@@ -554,7 +549,7 @@ void KPaint::KFMputFinished()
   kfm= NULL;
 }
 
-bool KPaint::saveLocal(const char *filename_, const char *url_)
+bool KPaint::saveLocal(const char *filename_, const char *url_= NULL)
 {
   filename= filename_;
   url= url_;
@@ -874,6 +869,7 @@ void KPaint::editCopy()
 #ifdef KPDEBUG
     fprintf(stderr, "editCopy()\n");
 #endif	  
+    kpaintApp->clipboard_= c->selectionData();
 }
 
 void KPaint::editCut()
@@ -881,6 +877,7 @@ void KPaint::editCut()
 #ifdef KPDEBUG
     fprintf(stderr, "editCut()\n");
 #endif	  
+    kpaintApp->clipboard_= c->selectionData();
 }
 
 void KPaint::editPaste()
@@ -893,8 +890,13 @@ void KPaint::editPaste()
 void KPaint::editPasteImage()
 {
 #ifdef KPDEBUG
-    fprintf(stderr, "editPasteImage()\n");
+  fprintf(stderr, "editPasteImage()\n");
 #endif
+  KPaint *kp;
+
+  kp= new KPaint();
+  kp->setPixmap(kpaintApp->clipboard_);
+  kp->show();
 }
 
 void KPaint::editZoomIn()

@@ -9,7 +9,7 @@
 #include <klocale.h>
 #include "math.h"
 #include "circle.h"
-#include "../app.h"
+#include "app.h"
 
 extern MyApp *kpaintApp;
 

@@ -8,7 +8,7 @@
 #include <qwmatrix.h>
 #include <klocale.h>
 #include "spraycan.h"
-#include "../app.h"
+#include "app.h"
 
 extern MyApp *kpaintApp;
 

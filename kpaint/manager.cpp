@@ -9,12 +9,13 @@
 #include "manager.h"
 #include "app.h"
 
-#include "tools/pen.h"
-#include "tools/line.h"
-#include "tools/ellipse.h"
-#include "tools/circle.h"
-#include "tools/rectangle.h"
-#include "tools/spraycan.h"
+#include "pen.h"
+#include "line.h"
+#include "ellipse.h"
+#include "circle.h"
+#include "rectangle.h"
+#include "spraycan.h"
+#include "areaselect.h"
 
 Manager::Manager(Canvas *c, QWidget *top) : QObject()
 {
@@ -55,6 +56,7 @@ void Manager::createTools(void)
   list.append(new Rectangle);
   list.append(new Line);
   list.append(new SprayCan);
+  list.append(new AreaSelect);
 
   // Create the properties dialog
   props= new propertiesDialog(1, 0, klocale->translate("Tool Properties"));

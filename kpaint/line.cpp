@@ -10,7 +10,7 @@
 #include <qwmatrix.h>
 #include <klocale.h>
 #include "line.h"
-#include "../app.h"
+#include "app.h"
 
 extern MyApp *kpaintApp;
 

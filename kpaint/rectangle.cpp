@@ -7,7 +7,7 @@
 #include <qwmatrix.h>
 #include <klocale.h>
 #include "rectangle.h"
-#include "../app.h"
+#include "app.h"
 
 extern MyApp *kpaintApp;
 

@@ -17,7 +17,7 @@
 #include "ktoolbar.h"
 #include "canvas.h"
 #include "properties.h"
-#include "tools/tool.h"
+#include "tool.h"
 
 
 class Manager : public QObject
