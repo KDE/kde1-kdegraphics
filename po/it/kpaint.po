@@ -1,8 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -31,23 +26,20 @@ msgid " [url | filename]\n"
 msgstr " [url | nome file]\n"
 
 #: areaselect.cpp:17
-#, fuzzy
 msgid "Area Selection"
-msgstr "Area selezionata"
+msgstr "Selezione Area"
 
 #: canvassize.cpp:16
 msgid "Canvas Size"
 msgstr "Dimensioni del disegno"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Larghezza"
+msgstr "Larghezza:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Altezza"
+msgstr "Altezza:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -105,6 +97,7 @@ msgstr "Cambiamenti non salvati"
 msgid ""
 "You have unsaved changes, you will loose them if you close this window now."
 msgstr ""
+"Hai modificato il file, perderai le modifiche se chiudi ora la finestra."
 
 #: kpaint.cpp:160
 msgid "New Canvas"
@@ -135,7 +128,6 @@ msgid "New Image..."
 msgstr "Nuova Immagine..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
 msgstr "Salva Immagine"
 
@@ -198,7 +190,7 @@ msgstr "Informazione..."
 
 #: kpaint.cpp:338
 msgid "Resize..."
-msgstr ""
+msgstr "Ridimensiona..."
 
 #: kpaint.cpp:339
 msgid "Edit Palette..."
@@ -234,7 +226,7 @@ msgstr "Area selezionata"
 
 #: kpaint.cpp:352
 msgid "Round Angle"
-msgstr ""
+msgstr "Angolo "
 
 #: kpaint.cpp:357
 msgid "Show Tools Toolbar"
@@ -254,7 +246,7 @@ msgstr "Salva Opzioni"
 
 #: kpaint.cpp:369
 msgid "KPaint"
-msgstr ""
+msgstr "Kpaint"
 
 #: kpaint.cpp:371
 msgid ""
@@ -262,6 +254,9 @@ msgid ""
 "\n"
 "(c) "
 msgstr ""
+"\n"
+"\n"
+"(c)  "
 
 #: kpaint.cpp:380
 msgid "&Image"
@@ -406,53 +401,5 @@ msgid "Set Line Colour..."
 msgstr "Imposta Colore Linea..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Rettangolo"
-
-#~ msgid "Continue"
-#~ msgstr "Continua"
-
-#~ msgid "None"
-#~ msgstr "Nessuna"
-
-#~ msgid "Dismiss"
-#~ msgstr "Cancella"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Indirizzo (URL) Maldefinito"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Errore:Indirizzo (URL) Maldefinito\n"
-#~ "KPaint é incapace interpretare l'indirizzo dato, controlla se l'indirizzo é "
-#~ "corretto."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint sta giá accedendo un file remoto, dovete\n"
-#~ "terminare il lavoro in corso o aspettare che termini."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "Kpaint: Impossibile trovare KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr ""
-#~ "Errore: KPaint non ha potuto trovare un KFM funzionante o lanciarne uno."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Carica Rete Fallita"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Errore: Carica Rete Fallita\n"
-#~ "Qualcosa é andata male :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Impossibile lanciare KFM"
+msgstr "Angolo"
