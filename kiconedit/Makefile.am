@@ -29,7 +29,7 @@ kiconedit_METASOURCES = USE_AUTOMOC
 # the library search path. 
 kiconedit_LDFLAGS = $(all_libraries)
 kiconedit_LDADD = -lkfile -lkfm -lkdeui -lkdecore -lkimgio \
-	-lqt -lXext -lX11 $(KIMGIO_LIBS) $(LIBJPEG) $(LIBTIFF) $(LIBSOCKET)
+	-lqt -lXext -lX11 $(KIMGIO_LIBS) $(LIBSOCKET)
 
 CLEANFILES = $(kiconedit_METASOURCES)
 DISTCLEANFILES = Makefile *~ .deps/* .libs/*
