@@ -555,6 +555,9 @@ msgid ""
 "\n"
 "Toggles the grid in the icon edit grid on/off"
 msgstr ""
+"Afficher/Cacher la grille\n"
+"\n"
+"Active/Désactive l'affichage de la grille de l'éditeur d'icônes"
 
 #: kiconedit.cpp:866
 msgid ""
@@ -586,6 +589,13 @@ msgid ""
 "(Note: The drag source uses the QT XDND protocol which is not yet standard "
 "in KDE)"
 msgstr ""
+"Glisser-Déplacer l'icône\n"
+"\n"
+"Avec ce bouton, vou pouvez glisser une copie de l'icône courante et la "
+"déposer dans une fenêtre qui accèpte les dépacements, par ex. un autre Editeur d'Icône.\n"
+"\n"
+"(Note: Cette fonctionnalité utilise le protocole QT XDND qui n'est pas encore standard "
+"dans KDE)"
 
 #: kiconedit.cpp:880
 msgid ""
@@ -683,6 +693,9 @@ msgid ""
 "\n"
 "Draw scattered pixels in the current color"
 msgstr ""
+"Aérographe\n"
+"\n"
+"Dessine des pixels diffus avec la couleur courante"
 
 #: kiconedit.cpp:910
 msgid ""

@@ -46,6 +46,9 @@ msgid ""
 "\n"
 "Sirtaj S. Kang (taj@kde.org)\n"
 msgstr ""
+"KView -- Visualiseur d'Images. %s\n"
+"\n"
+"Sirtaj S. Kang (taj@kde.org)\n"
 
 #: viewer.cpp:285
 msgid "About KView"
@@ -109,7 +112,7 @@ msgstr "&Recharger"
 
 #: viewer.cpp:369
 msgid "&Preferences..."
-msgstr ""
+msgstr "&Préférences..."
 
 #: viewer.cpp:375
 msgid "&Zoom..."
@@ -159,25 +162,23 @@ msgstr "Miroir &horizontal"
 
 #: viewer.cpp:404
 msgid "Desktop &Tile"
-msgstr ""
+msgstr "&Mosaïque (bureau)"
 
 #: viewer.cpp:405
-#, fuzzy
 msgid "Desktop &Max"
-msgstr "Sur le &Bureau"
+msgstr "&Etirement (bureau)"
 
 #: viewer.cpp:407
-#, fuzzy
 msgid "Desktop Max&pect"
-msgstr "Taille/As&pect max"
+msgstr "Taille/As&pect max (bureau)"
 
 #: viewer.cpp:426
 msgid "&How do I..."
-msgstr ""
+msgstr "&Comment faire..."
 
 #: viewer.cpp:427
 msgid "&What is a..."
-msgstr ""
+msgstr "&Qu'est-ce que c'est..."
 
 #: viewer.cpp:429
 msgid "&About KView..."
@@ -258,7 +259,7 @@ msgstr "Intensité:Correction gamma..."
 
 #: colour.cpp:310
 msgid "External.."
-msgstr ""
+msgstr "Externe.."
 
 #: ilistdlg.cpp:56
 msgid "Prev"
@@ -290,33 +291,31 @@ msgstr "Lancer le &diaporama"
 
 #: prefdlg.cpp:32
 msgid "kView Preferences"
-msgstr ""
+msgstr "Préférences de kView"
 
 #: prefdlg.cpp:36
 msgid "&Apply"
-msgstr ""
+msgstr "&Appliquer"
 
 #: prefdlg.cpp:51
 msgid "On Load"
-msgstr ""
+msgstr "Au chargement"
 
 #: prefdlg.cpp:58
-#, fuzzy
 msgid "Resize Window"
-msgstr "Fe&rmer"
+msgstr "Redimensionner la fenêtre"
 
 #: prefdlg.cpp:61
 msgid "Resize Image"
-msgstr ""
+msgstr "Redimensionner l'image"
 
 #: prefdlg.cpp:64
 msgid "No Resize"
-msgstr ""
+msgstr "Ne pas redimensionner"
 
 #: prefdlg.cpp:69
-#, fuzzy
 msgid "Slideshow"
-msgstr "&Diaporama On/Off"
+msgstr "Diaporama"
 
 #: prefdlg.cpp:72
 msgid "Loop"
@@ -324,20 +323,10 @@ msgstr "En boucle"
 
 #: prefdlg.cpp:76
 msgid "Slide interval (sec)"
-msgstr ""
+msgstr "secondes entre chaque image"
 
 #: prefdlg.cpp:84
 msgid "&Keys"
-msgstr ""
+msgstr "&Clavier"
 
-#~ msgid "&Tile"
-#~ msgstr "M&osaïque"
 
-#~ msgid "&Max"
-#~ msgstr "Taille &Max"
-
-#~ msgid "Interval.."
-#~ msgstr "Intervalle.."
-
-#~ msgid "Time between slides (sec):"
-#~ msgstr "Durée entre images (sec) :"
