@@ -19,8 +19,8 @@
     Boston, MA 02111-1307, USA.
 */  
 
-#ifndef __KDRAWFILEDLG_H__
-#define __KDRAWFILEDLG_H__
+#ifndef __KICONFILEDLG_H__
+#define __KICONFILEDLG_H__
 
 
 #ifdef HAVE_CONFIG_H
@@ -34,29 +34,32 @@
 #include <kdir.h>
 #include <kcombiview.h>
 #include <kfiledetaillist.h>
-#include <kfilesimpleview.h>  
+#include "kiconfileview.h"
 
 
 class KIconFileDlg : public KFileBaseDialog
 {
   Q_OBJECT
 public:
-  KIconFileDlg(const char *dir, const char *filter = 0);
-  ~KIconFileDlg();
+  KIconFileDlg(const char *dirName, const char *filter= 0,
+		QWidget *parent= 0, const char *name= 0, 
+		bool modal = false, bool acceptURLs = true);
 
-  static QString getOpenFileName(const char *dir= 0, const char *filter= 0);
-  static QString getSaveFileName(const char *dir= 0, const char *filter= 0);
+  static QString getOpenFileName(const char *dir= 0, const char *filter= 0,
+				   QWidget *parent= 0, const char *name= 0);
+  static QString getSaveFileName(const char *dir= 0, const char *filter= 0,
+				   QWidget *parent= 0, const char *name= 0);
+  static QString getOpenFileURL(const char *url= 0, const char *filter= 0,
+				  QWidget *parent= 0, const char *name= 0);
+  static QString getSaveFileURL(const char *url= 0, const char *filter= 0,
+				  QWidget *parent= 0, const char *name= 0);
 
 protected:
-  bool getShowFilter() { return false; }
-  KFileInfoContents *initFileList( QWidget *parent);
-  QWidget *swallower();
-
-  QWidget *w, *p;
-  QLabel *preview;
+  virtual KFileInfoContents *initFileList( QWidget *parent);
+  virtual bool getShowFilter();
 };
 
-#endif //__KDRAWFILEDLG_H__
+#endif //__KICONFILEDLG_H__
 
 
 

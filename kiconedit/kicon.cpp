@@ -262,7 +262,7 @@ void KIcon::promptForFile(const QImage *img)
                         "*.xpm|XPM (*.xpm)\n"
                         "*.gif|GIF files (*.gif)\n"
                         "*jpg|JPEG files (*.jpg)\n");
-  QString tmpname = KFilePreviewDialog::getOpenFileURL(_lastdir.data(), filter.data());
+  QString tmpname = KIconFileDlg::getOpenFileURL(_lastdir.data(), filter.data());
   if(tmpname.length() == 0)
     return;
   open(img, tmpname.data());

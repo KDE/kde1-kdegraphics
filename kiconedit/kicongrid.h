@@ -165,11 +165,9 @@ protected slots:
 protected:
   virtual void paintEvent(QPaintEvent*);
   virtual void paintCell( QPainter*, int, int );
-  //virtual void resizeEvent(QResizeEvent*);
   virtual void mousePressEvent(QMouseEvent*);
   virtual void mouseReleaseEvent(QMouseEvent*);
   virtual void mouseMoveEvent(QMouseEvent*);
-  void setColor(int colNum, uint, bool update = true );
   void createCursors();
   void drawPointArray(QPointArray, DrawAction);
   void drawEllipse(bool);

@@ -116,7 +116,7 @@ void KColorGrid::paintEvent(QPaintEvent *e)
   lastrow = (lastrow >= rows) ? rows : lastrow;
   lastcol = (lastcol >= cols) ? cols : lastcol;
   //debug("%d x %d  -  row: %d x %d", urect.x(), urect.y(), urect.width(), urect.height());
-  debug("col: %d -> %d  -  row: %d -> %d", firstcol, lastcol, firstrow, lastrow);
+  //debug("col: %d -> %d  -  row: %d -> %d", firstcol, lastcol, firstrow, lastrow);
 
 /*
   if(this->isA("KDrawGrid"))

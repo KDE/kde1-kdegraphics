@@ -20,8 +20,8 @@ SUBDIRS = pics doc
 bin_PROGRAMS = kiconedit
 
 kiconedit_SOURCES = utils.cpp jpeg.cpp main.cpp kiconedit.cpp kicongrid.cpp \
-	kicontools.cpp kiconcolors.cpp kcolorgrid.cpp kiconfiledlg.cpp \
-	kicon.cpp kresize.cpp knew.cpp debug.cpp properties.cpp\
+	kicontools.cpp kiconcolors.cpp kcolorgrid.cpp kiconfiledlg.cpp kiconfileview.cpp \
+	kicon.cpp kresize.cpp knew.cpp debug.cpp properties.cpp xview.cpp \
 	kiconeditslots.cpp kiconconfig.cpp kdropsite.cpp kdragsource.cpp
 
 kiconedit_METASOURCES = USE_AUTOMOC

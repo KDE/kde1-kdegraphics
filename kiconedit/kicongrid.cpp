@@ -275,9 +275,7 @@ KIconEditGrid::KIconEditGrid(QImage *image, QWidget *parent, const char *name)
   //numcolors = 0;
   currentcolor = qRgb(0,0,0)|OPAQUE_MASK;
 
-  debug("Mouse tracking: %d", hasMouseTracking());
   setMouseTracking(true);
-  debug("Mouse tracking: %d", hasMouseTracking());
 
   setNumRows(32);
   setNumCols(32);
@@ -306,37 +304,27 @@ void KIconEditGrid::paintEvent(QPaintEvent *e)
   if(hasGrid())
   {
     int x = e->rect().x() - ((e->rect().x() % cellSize()) + cellSize());
-    //int x = ((e->rect().x()/cellSize())*cellSize())-cellSize();
     if(x < 0) x = 0;
     int y = e->rect().y() - ((e->rect().y() % cellSize()) + cellSize());
-    //int y = ((e->rect().y()/cellSize())*cellSize())-cellSize();
     if(y < 0) y = 0;
     int cx = e->rect().right() + cellSize();
     int cy = e->rect().bottom() + cellSize();
 
     QPainter p;
     p.begin( this );
-    //p.setRasterOp (NotROP);
 
     for(int i = x; i < cx; i += cellSize())
-    {
       p.drawLine(i, y, i, cy);
-    }
 
     for(int i = y; i < cy; i += cellSize())
-    {
       p.drawLine(x, i, cx, i);
-    }
+
     p.end();
   }
 }
 
 void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
 {
-  //KColorGrid::paintCell(painter, row, col);
-  //debug("KIconEditGrid::paintCell()");
-  //bool tp = colorAt( row * numCols() + col ) == TRANSPARENT;
-  //QBrush brush(colorAt( row * numCols() + col ));
   int sel = row * numCols() + col;
   int s = cellSize();
   uint c = colorAt(sel);
@@ -356,10 +344,7 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
   }
   else
   {
-    //if(hasGrid())
-    //  painter->fillRect(1, 1, s-1, s-1, (QBrush)c); //brush);
-    //else
-      painter->fillRect(0, 0, s, s, (QBrush)c); //brush);
+    painter->fillRect(0, 0, s, s, (QBrush)c); //brush);
     if((ispasting || isselecting) && isMarked(col, row))
     {
       painter->drawWinFocusRect( 1, 1, s-1, s-1);
@@ -395,7 +380,6 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
           painter->drawWinFocusRect( 1, 1, s-1, s-1);
         else
           painter->drawPoint(0, 0);
-          //painter->fillRect( 0, 0, s, s, gray);
       }
       break;
     default:
@@ -403,11 +387,6 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
   }
 
   //debug("KIconEditGrid::paintCell() - done");
-}
-
-void KIconEditGrid::setColor( int cell, uint color, bool update)
-{
-  KColorGrid::setColor(cell, color, update);
 }
 
 void KIconEditGrid::mousePressEvent( QMouseEvent *e )

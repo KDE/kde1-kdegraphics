@@ -22,34 +22,23 @@
 #include "debug.h"
 #include <qlayout.h>
 #include "kiconfiledlg.h"
+#include "kiconfileview.h"
 
-KIconFileDlg::KIconFileDlg(const char *dir, const char *filter)
- : KFileBaseDialog(dir, filter, 0, 0, true, true)
+KIconFileDlg::KIconFileDlg(const char *dirName, const char *filter,
+				 QWidget *parent, const char *name, 
+				 bool modal, bool acceptURLs)
+    : KFileBaseDialog(dirName, filter, parent, name, modal, acceptURLs)
 {
-  initMetaObject();
-  w = new QWidget;
-  preview = new QLabel(w);
-  preview->setFixedSize(100, 100);
-
-  init();
+    init();
 }
 
-KIconFileDlg::~KIconFileDlg()
-{
-  delete w;
-}
-
-QWidget *KIconFileDlg::swallower()
-{
-  return w;
-}
-
-QString KIconFileDlg::getOpenFileName(const char *dir, const char *filter)
+QString KIconFileDlg::getOpenFileName(const char *dir, const char *filter,
+				     QWidget *parent, const char *name)
 {
     QString filename;
-    KIconFileDlg *dlg = new KIconFileDlg(dir, filter);
+    KIconFileDlg *dlg= new KIconFileDlg(dir, filter, parent, name, true, false);
     
-    dlg->setCaption(i18n("Open image"));
+    dlg->setCaption(i18n("Open"));
     
     if (dlg->exec() == QDialog::Accepted)
 	filename = dlg->selectedFile();
@@ -59,11 +48,12 @@ QString KIconFileDlg::getOpenFileName(const char *dir, const char *filter)
     return filename;
 }
  
-QString KIconFileDlg::getSaveFileName(const char *dir, const char *filter)
+QString KIconFileDlg::getSaveFileName(const char *dir, const char *filter,
+				     QWidget *parent, const char *name)
 {
-    KIconFileDlg *dlg = new KIconFileDlg(dir, filter);
+    KIconFileDlg *dlg= new KIconFileDlg(dir, filter, parent, name, true, false);
     
-    dlg->setCaption(i18n("Save image As"));
+    dlg->setCaption(i18n("Save As"));
     
     QString filename;
     
@@ -73,6 +63,49 @@ QString KIconFileDlg::getSaveFileName(const char *dir, const char *filter)
     delete dlg;
     
     return filename;
+}
+
+QString KIconFileDlg::getOpenFileURL(const char *url, const char *filter,
+				    QWidget *parent, const char *name)
+{
+    QString retval;
+    
+    KIconFileDlg *dlg = new KIconFileDlg(url, filter, parent, name, true, true);
+    
+    dlg->setCaption(i18n("Open"));
+    
+    if (dlg->exec() == QDialog::Accepted)
+	retval = dlg->selectedFileURL();
+    else
+	retval = 0;
+    
+    delete dlg;
+    if (!retval.isNull())
+	debug("getOpenFileURL: returning %s", retval.data());
+    
+    return retval;
+}
+
+QString KIconFileDlg::getSaveFileURL(const char *url, const char *filter,
+				    QWidget *parent, const char *name)
+{
+    QString retval;
+    
+    KIconFileDlg *dlg= new KIconFileDlg(url, filter, parent, name, true, true);
+    
+    dlg->setCaption(i18n("Save"));
+    
+    if (dlg->exec() == QDialog::Accepted)
+	retval= dlg->selectedFileURL();
+    
+    delete dlg;
+    
+    return retval;
+}
+
+bool KIconFileDlg::getShowFilter() 
+{
+    return (kapp->getConfig()->readNumEntry("ShowFilter", 1) != 0);
 }
 
 KFileInfoContents *KIconFileDlg::initFileList( QWidget *parent )
@@ -98,18 +131,21 @@ KFileInfoContents *KIconFileDlg::initFileList( QWidget *parent )
 
     if (!mixDirsAndFiles)
 	
+        return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
+/*
 	return new KCombiView(KCombiView::DirList, 
 				  showDetails ? KCombiView::DetailView 
 				  : KCombiView::SimpleView,
 				  useSingleClick, dir->sorting(),
 				  parent, "_combi");
-    
+  */  
     else
 	
 	if (showDetails)
-	    return new KFileDetailList(useSingleClick, dir->sorting(), parent, "_details");
+	    return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
+	    //return new KFileDetailList(useSingleClick, dir->sorting(), parent, "_details");
 	else
-	    return new KFileSimpleView(useSingleClick, dir->sorting(), parent, "_simple");
+	    return new KIconFileView(useSingleClick, dir->sorting(), parent, "_simple");
     
 }
 
