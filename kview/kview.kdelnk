@@ -15,6 +15,8 @@ Comment[no]=KDE-billedfremviser
 Comment[pl]=Przegl±darka plików graficznych
 Comment[fi]=KDE Kuvanäyttäjä
 Comment[sk]=Prehliadaè obrázkových súborov
+Comment[pt]=Visualizador de Imagens
+Comment[pt_BR]=Visualizador de Imagens
 MimeType=image/gif;image/x-xpm;image/x-xbm;image/jpeg;
 Name=Image Viewer
 Name[fr]=Visualiseur d'images
@@ -23,3 +25,6 @@ Name[no]=Billedfremviser
 Name[pl]=Image Viewer
 Name[fi]=Kuvannäyttäjä
 Name[sk]=Prehliadaè obrázkov
+Name[pt]=Visualizador de Imagens
+Name[pt_BR]=Visualizador de Imagens
+
