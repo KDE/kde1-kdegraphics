@@ -1,0 +1,767 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1998-06-18 22:44+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: LinuxKorea Co. <kde@linuxkorea.co.kr>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8BIT\n"
+
+#: copyright.cpp:27
+msgid "Copyright"
+msgstr "저작권"
+
+#: copyright.cpp:41
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+"\n"
+"이 프로그램은 공개 소프트웨어입니다; 여러분은 FSF의 GNU General \n"
+"Public License에 의거하여 재배포 및 수정을 가할 수 있습니다;\n"
+"버전 2 또는 (여러분들의 선택의 여하에 따라서) 그 이후 버전에\n"
+"대해서도.....\n"
+"\n"
+"이 프로그램은 유용하게 쓰여지길 바라는 마음으로 배포되지만, 이\n"
+"프로그램으로 인한 어떠한 책임도 지지 않습니다; 또한 상업적인 목적이나\n"
+"특별한 목적으로 사용하는데 따르는 어떠한 책임까지도. 자세한\n"
+"사항은 GNU의 General Public License를 참조하기 바랍니다.\n"
+"\n"
+"여러분은 이 프로그램과 함께 GNU General Public License를 함께\n"
+"받으셨어야 합니다; 만일 그렇지 않다면, 아래로 연락을 주시기 바랍니다.\n"
+"Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA."
+
+#: goto.cpp:54
+msgid "&Section"
+msgstr "섹션(&S)"
+
+#: goto.cpp:70
+msgid "&Page"
+msgstr "페이지(&P)"
+
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2240
+#: kghostview.cpp:2252 kghostview.cpp:2257 kghostview.cpp:2540
+#, c-format
+msgid "of %d"
+msgstr "of %d"
+
+#: info.cpp:45
+msgid "File name :"
+msgstr "파일 이름 :"
+
+#: info.cpp:53
+msgid "Document title :"
+msgstr "문서 제목 :"
+
+#: info.cpp:61
+msgid "Publication date :"
+msgstr "발행 일자 :"
+
+#: interpreter.cpp:42
+msgid "General"
+msgstr "일반"
+
+#: interpreter.cpp:79
+msgid "&Interpreter name"
+msgstr "인터프리터 이름(&I)"
+
+#: interpreter.cpp:87
+msgid "&Antialiasing"
+msgstr "안티알리아싱(&A)"
+
+#: interpreter.cpp:97
+msgid "Platform &fonts"
+msgstr "플랫폼 글꼴(&f)"
+
+#: interpreter.cpp:107
+msgid "&Messages"
+msgstr "메시지(&M)"
+
+#: interpreter.cpp:130
+msgid "Palette"
+msgstr "팔레트"
+
+#: interpreter.cpp:152
+msgid "Colo&r"
+msgstr "색(&r)"
+
+#: interpreter.cpp:161
+msgid "&Grayscale"
+msgstr "그레이스케일(&G)"
+
+#: interpreter.cpp:169
+msgid "Monochrom&e"
+msgstr "흑백(&e)"
+
+#: interpreter.cpp:192
+msgid "Backing"
+msgstr "배경"
+
+#: interpreter.cpp:214
+msgid "&Pixmap"
+msgstr "픽스맵(&P)"
+
+#: interpreter.cpp:224
+msgid "&Backing store"
+msgstr "배경 저장(&B)"
+
+#: interpreter.cpp:244 kkeydialog.cpp:233
+msgid "&Defaults"
+msgstr "기본값(&D)"
+
+#: interpreter.cpp:314
+msgid "gs"
+msgstr "gs"
+
+#: kaccel.cpp:169
+msgid "CTRL+O"
+msgstr "CTRL+O"
+
+#: kaccel.cpp:173
+msgid "CTRL+N"
+msgstr "CTRL+N"
+
+#: kaccel.cpp:177
+msgid "CTRL+W"
+msgstr "CTRL+W"
+
+#: kaccel.cpp:181
+msgid "CTRL+S"
+msgstr "CTRL+S"
+
+#: kaccel.cpp:185
+msgid "CTRL+P"
+msgstr "CTRL+P"
+
+#: kaccel.cpp:189
+msgid "CTRL+Q"
+msgstr "CTRL+Q"
+
+#: kaccel.cpp:193
+msgid "CTRL+X"
+msgstr "CTRL+X"
+
+#: kaccel.cpp:197
+msgid "CTRL+C"
+msgstr "CTRL+C"
+
+#: kaccel.cpp:201
+msgid "CTRL+V"
+msgstr "CTRL+V"
+
+#: kaccel.cpp:205
+msgid "CTRL+Z"
+msgstr "CTRL+Z"
+
+#: kaccel.cpp:209
+msgid "CTRL+F"
+msgstr "CTRL+F"
+
+#: kaccel.cpp:213
+msgid "CTRL+R"
+msgstr "CTRL+R"
+
+#: kaccel.cpp:216 kaccel.cpp:443
+msgid "Insert"
+msgstr "Insert"
+
+#: kaccel.cpp:217
+msgid "CTRL+Insert"
+msgstr "CTRL+Insert"
+
+#: kaccel.cpp:221
+msgid "CTRL+Home"
+msgstr "CTRL+Home"
+
+#: kaccel.cpp:224 kaccel.cpp:449
+msgid "End"
+msgstr "End"
+
+#: kaccel.cpp:225
+msgid "CTRL+End"
+msgstr "CTRL+End"
+
+#: kaccel.cpp:228 kaccel.cpp:229 kaccel.cpp:452
+msgid "Prior"
+msgstr "이전"
+
+#: kaccel.cpp:232 kaccel.cpp:233 kaccel.cpp:455
+msgid "Next"
+msgstr "다음"
+
+#: kaccel.cpp:237
+msgid "F1"
+msgstr "F1"
+
+#: kghostview.cpp:199
+msgid "Document information"
+msgstr "문서 정보"
+
+#: kghostview.cpp:213
+msgid "Page Setup"
+msgstr "페이지 설정"
+
+#: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
+msgid "View Control"
+msgstr "조절사항 보기"
+
+#: kghostview.cpp:354 kghostview.cpp:375 kghostview.cpp:448
+msgid "Go To Page"
+msgstr "페이지 이동"
+
+#: kghostview.cpp:355 kghostview.cpp:376 kghostview.cpp:441
+msgid "Zoom In"
+msgstr "확대"
+
+#: kghostview.cpp:356 kghostview.cpp:377 kghostview.cpp:442
+msgid "Zoom Out"
+msgstr "축소"
+
+#: kghostview.cpp:357 kghostview.cpp:378 kghostview.cpp:446
+msgid "Next Page"
+msgstr "다음페이지"
+
+#: kghostview.cpp:358 kghostview.cpp:379 kghostview.cpp:447
+msgid "Prev Page"
+msgstr "이전페이지"
+
+#: kghostview.cpp:359 kghostview.cpp:380
+msgid "Scroll Up"
+msgstr "위로 스크롤"
+
+#: kghostview.cpp:360 kghostview.cpp:381
+msgid "Scroll Down"
+msgstr "아래로 스크롤"
+
+#: kghostview.cpp:361 kghostview.cpp:382
+msgid "Scroll Left"
+msgstr "왼쪽으로 스크롤"
+
+#: kghostview.cpp:362 kghostview.cpp:383
+msgid "Scroll Right"
+msgstr "오른쪽으로 스크롤"
+
+#: kghostview.cpp:363 kghostview.cpp:384 kghostview.cpp:444
+msgid "Redisplay"
+msgstr "다시보여주기"
+
+#: kghostview.cpp:406 kghostview.cpp:408
+msgid "Not known"
+msgstr "알 수 없음"
+
+#: kghostview.cpp:419
+msgid "Configure interpreter"
+msgstr "인터프리터 설정"
+
+#: kghostview.cpp:494
+msgid "&Open ..."
+msgstr "열기(&O) ..."
+
+#: kghostview.cpp:495
+msgid "Open &recent"
+msgstr "최근 문서 열기(&r)"
+
+#: kghostview.cpp:503
+msgid "Page Set&up ..."
+msgstr "페이지 셋업(&u) ..."
+
+#: kghostview.cpp:505
+msgid "&Print ..."
+msgstr "인쇄(&P) ..."
+
+#: kghostview.cpp:513
+msgid "Zoom &in"
+msgstr "확대(&i)"
+
+#: kghostview.cpp:515
+msgid "Zoom &out"
+msgstr "축소(&o)"
+
+#: kghostview.cpp:517
+msgid "&Zoom ..."
+msgstr "줌(&Z)..."
+
+#: kghostview.cpp:522
+msgid "&Info ..."
+msgstr "문서정보(&I)"
+
+#: kghostview.cpp:527
+msgid "&Previous Page"
+msgstr "이전 페이지(&P)"
+
+#: kghostview.cpp:529
+msgid "&Next page"
+msgstr "다음 페이지(&N)"
+
+#: kghostview.cpp:531
+msgid "&Go to page ..."
+msgstr "페이지로 이동(&G)"
+
+#: kghostview.cpp:534
+msgid "Go to &start"
+msgstr "처음으로(&s)"
+
+#: kghostview.cpp:536
+msgid "Go to &end"
+msgstr "마지막으로(&e)"
+
+#: kghostview.cpp:538
+msgid "&Read down"
+msgstr "아래로 읽기(&R)"
+
+#: kghostview.cpp:543
+msgid "Mark &current page"
+msgstr "현재 페이지 선택(&c)"
+
+#: kghostview.cpp:546
+msgid "Mark &all pages"
+msgstr "모든 페이지 선택(&a)"
+
+#: kghostview.cpp:548
+msgid "Mark &even pages"
+msgstr "짝수 페이지 선택(&e)"
+
+#: kghostview.cpp:550
+msgid "Mark &odd pages"
+msgstr "홀수 페이지 선택(&o)"
+
+#: kghostview.cpp:553
+msgid "&Toggle page marks"
+msgstr "페이지 선택 바꿈(&T)"
+
+#: kghostview.cpp:556
+msgid "&Remove page marks"
+msgstr "페이지 선택 취소(&R)"
+
+#: kghostview.cpp:567
+msgid "Show &tool bar"
+msgstr "도구 바 보기(&t)"
+
+#: kghostview.cpp:568
+msgid "Show st&atus bar"
+msgstr "상태 바 보기(&a)"
+
+#: kghostview.cpp:569
+msgid "Show &page list"
+msgstr "페이지 목록 보기(&p)"
+
+#: kghostview.cpp:571
+msgid "Configure &interpreter ..."
+msgstr "인터프리터 설정(&i) ..."
+
+#: kghostview.cpp:572
+msgid "Configure &key bindings ..."
+msgstr "키 조합 설정(&k) ..."
+
+#: kghostview.cpp:574
+msgid "&Save options"
+msgstr "옵션 저장(&S)"
+
+#: kghostview.cpp:581
+msgid "&About this application"
+msgstr "kghostview 정보(&A)"
+
+#: kghostview.cpp:583
+msgid "&Help for this application"
+msgstr "kghostview 도움말(&H)"
+
+#: kghostview.cpp:585
+msgid "&Copyright"
+msgstr "저작권(&C)"
+
+#: kghostview.cpp:592
+msgid "&Go"
+msgstr "가기(&G)"
+
+#: kghostview.cpp:593
+msgid "&Pagemarks"
+msgstr "페이지선택(&P)"
+
+#: kghostview.cpp:661
+msgid "New window ..."
+msgstr "새 윈도우 ..."
+
+#: kghostview.cpp:664
+msgid "Open file ..."
+msgstr "파일 열기 ..."
+
+#: kghostview.cpp:672
+msgid "Print document ..."
+msgstr "문서 인쇄 ..."
+
+#: kghostview.cpp:677
+msgid "Zoom in"
+msgstr "확대"
+
+#: kghostview.cpp:680
+msgid "Zoom out"
+msgstr "축소"
+
+#: kghostview.cpp:685
+msgid "Go back"
+msgstr "뒤로 가기"
+
+#: kghostview.cpp:688
+msgid "Go forward"
+msgstr "앞으로 가기"
+
+#: kghostview.cpp:691
+msgid "Go to page ..."
+msgstr "페이지 이동"
+
+#: kghostview.cpp:696
+msgid "Go to start"
+msgstr "처음으로 가기"
+
+#: kghostview.cpp:699
+msgid "Go to end"
+msgstr "마지막으로 가기"
+
+#: kghostview.cpp:702
+msgid "Read down the page"
+msgstr "페이지 아래로 읽기"
+
+#: kghostview.cpp:707
+msgid "Toggle this page mark"
+msgstr "현재 페이지 선택 반대로"
+
+#: kghostview.cpp:729
+msgid "Sc.100 of 100  P.100 of 100"
+msgstr "섹션 100 of 100 페이지 100 of 100"
+
+#: kghostview.cpp:730
+#, c-format
+msgid "100 %"
+msgstr "100 %"
+
+#: kghostview.cpp:731
+msgid "Upside Down"
+msgstr "거꾸로"
+
+#: kghostview.cpp:756
+msgid "Malformed URL."
+msgstr "형식에 맞지 않는 URL"
+
+#: kghostview.cpp:768
+msgid ""
+"Already waiting\n"
+"for an internet job to finish.\n"
+"Please wait until has finished.\n"
+"Alternatively stop the running one."
+msgstr ""
+"인터넷 작업이\n"
+"끝나기를 기다리고 있습니다.\n"
+"작업이 끝날 때까지 기다려주십시오.\n"
+"실행중인 작업을 종료해 주십시오."
+
+#: kghostview.cpp:777
+msgid "Could not start or find KFM."
+msgstr "KFM을 시작 또는 찾을 수 없음."
+
+#: kghostview.cpp:1217 kghostview.cpp:2331 viewcontrol.cpp:64
+msgid "Portrait"
+msgstr "길게"
+
+#: kghostview.cpp:1219 kghostview.cpp:2337 viewcontrol.cpp:65
+msgid "Landscape"
+msgstr "넓게"
+
+#: kghostview.cpp:1221 kghostview.cpp:2335 viewcontrol.cpp:66
+msgid "Seascape"
+msgstr "넓게2"
+
+#: kghostview.cpp:1223 kghostview.cpp:2333 viewcontrol.cpp:67
+msgid "Upside down"
+msgstr "거꾸로"
+
+#: kghostview.cpp:1262
+msgid "Go to ..."
+msgstr "페이지 이동..."
+
+#: kghostview.cpp:1337
+msgid "Zoom"
+msgstr "줌"
+
+#: kghostview.cpp:1523
+msgid "Version 0.6"
+msgstr "버전 0.6"
+
+#: kghostview.cpp:1524
+msgid "Sorry, not ready yet"
+msgstr "아직 준비가 되지 않았습니다"
+
+#: kghostview.cpp:1531
+msgid "About kghostview"
+msgstr "kghostview 정보"
+
+#: kghostview.cpp:1532
+msgid ""
+"Version :\t0.6 alpha\n"
+"Author : Mark Donohoe\n"
+"Mail : donohoe@kde.org"
+msgstr ""
+"버  전 :\t0.6 알파\n"
+"제작자 : Mark Donohoe\n"
+"메  일 : donohoe@kde.org"
+
+#: kghostview.cpp:1584 kghostview.cpp:1700
+msgid "Error printing"
+msgstr "인쇄 오류"
+
+#: kghostview.cpp:1594
+msgid ""
+"You chose to print all pages to a file.\n"
+"This would produce a document identical to\n"
+"that currently loaded into the viewer.\n"
+"There is no need to print all pages into a new file."
+msgstr ""
+"전체 페이지 파일로 인쇄를 선택하셨습니다.\n"
+"이 기능은 현재 뷰어에 불러진 문서와 동일한\n"
+"문서가 만들어집니다.\n"
+"전체 페이지를 새 파일에 인쇄할 필요가 없습니다."
+
+#: kghostview.cpp:1607
+msgid ""
+"No file name was given so\n"
+"nothing could be printed to a file.\n"
+msgstr ""
+"파일로 인쇄하려면 파일이름을\n"
+"지정해야 합니다.\n"
+
+#: kghostview.cpp:1665
+#, c-format
+msgid "Print failure : %s"
+msgstr "인쇄 실패 : %s"
+
+#: kghostview.cpp:1701
+msgid ""
+"Printing failed because the list of\n"
+"pages to be printed was empty.\n"
+msgstr ""
+"인쇄할 페이지 목록이 비어 있습니다\n"
+"인쇄 실패\n"
+
+#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2511
+#: kghostview.cpp:2534
+msgid "of 1    "
+msgstr "of 1    "
+
+#: kghostview.cpp:2236 kghostview.cpp:2248 kghostview.cpp:2536
+#, c-format
+msgid "of %d    "
+msgstr "of %d    "
+
+#: kghostview.cpp:2238 kghostview.cpp:2250 kghostview.cpp:2538
+#: kghostview.cpp:2545
+#, c-format
+msgid "of %d  "
+msgstr "of %d  "
+
+#: kghostview.cpp:2510
+msgid "Sc.1 "
+msgstr ""
+
+#: kghostview.cpp:2513
+msgid "P.1 "
+msgstr "페이지 1"
+
+#: kghostview.cpp:2515 kghostview.cpp:2528
+#, c-format
+msgid "P.%d "
+msgstr "페이지 %d"
+
+#: kghostview.cpp:2530
+#, c-format
+msgid "Sc.%d "
+msgstr "섹션 %d"
+
+#: kkeydialog.cpp:312
+msgid "Current key"
+msgstr "현재 key 설정"
+
+#: kkeydialog.cpp:323
+msgid "&Action"
+msgstr "실행(&A)"
+
+#: kkeydialog.cpp:382
+msgid "&No key"
+msgstr "key 없음(&N)"
+
+#: kkeydialog.cpp:390
+msgid "&Default key"
+msgstr "key 기본값(&D)"
+
+#: kkeydialog.cpp:398
+msgid "&Custom key"
+msgstr "key 정의(&C)"
+
+#: main.cpp:25
+msgid "Usage: "
+msgstr "사용법: "
+
+#: main.cpp:27
+msgid ""
+" [filename] [siwtches]\n"
+"\n"
+msgstr ""
+" [파일이름] [스위치]\n"
+"\n"
+
+#: main.cpp:28
+msgid ""
+"See KDE and Qt documentation for\n"
+"command line options.\n"
+msgstr ""
+"명령행 옵션을 알려면 KDE나 QT\n"
+"문서를 참고하십시오.\n"
+
+#: main.cpp:30
+msgid "Error on command line"
+msgstr "명령행 오류"
+
+#: marklist.cpp:38
+msgid "Mark current page"
+msgstr "현재 페이지 선택"
+
+#: marklist.cpp:39
+msgid "Mark all pages"
+msgstr "모든 페이지 선택"
+
+#: marklist.cpp:40
+msgid "Mark even pages"
+msgstr "짝수 페이지 선택"
+
+#: marklist.cpp:41
+msgid "Mark odd pages"
+msgstr "홀수 페이지 선택"
+
+#: marklist.cpp:42
+msgid "Toggle page marks"
+msgstr "페이지 선택 반대로"
+
+#: marklist.cpp:43
+msgid "Remove page marks"
+msgstr "페이지 선텍 취소"
+
+#: messages.cpp:29
+msgid "Ghostscript messages"
+msgstr "고스트스크립트 메시지"
+
+#: messages.cpp:56
+msgid "&Clear"
+msgstr "지움(&C)"
+
+#: messages.cpp:59
+msgid "&Dismiss"
+msgstr "버림(&D)"
+
+#: print.cpp:35
+msgid "Printer setup"
+msgstr "프린터 설정"
+
+#: print.cpp:65
+msgid "&Printer name"
+msgstr "프린터 이름(&P)"
+
+#: print.cpp:77
+msgid "&Spooler command"
+msgstr "스풀러 명령(&S)"
+
+#: print.cpp:89
+msgid "&Environment variable"
+msgstr "환경 변수(&E)"
+
+#: print.cpp:148
+msgid "Print to file"
+msgstr "파일로 인쇄"
+
+#: print.cpp:153
+msgid "Pages"
+msgstr "페이지"
+
+#: print.cpp:179
+msgid "&All"
+msgstr "모두(&A)"
+
+#: print.cpp:188
+msgid "&Current"
+msgstr "현재(&C)"
+
+#: print.cpp:196
+msgid "&Marked"
+msgstr "선택(&M)"
+
+#: print.cpp:205
+msgid "&Range"
+msgstr "범위(&R)"
+
+#: print.cpp:219
+msgid "to"
+msgstr "까지"
+
+#: print.cpp:232
+msgid "Print document in re&verse order"
+msgstr "역순 인쇄(&v)"
+
+#: print.cpp:249
+msgid "&Setup ..."
+msgstr "설정(&S) ..."
+
+#: print.cpp:289
+msgid "Range error"
+msgstr "범위 오류"
+
+#: print.cpp:290
+msgid ""
+"The range of pages entered for printing\n"
+"can't be understood.\n"
+"\n"
+"The range specified must lie within the page\n"
+"range for this part of the document.\n"
+"Check the status bar for this information.\n"
+msgstr ""
+"입력된 인쇄할 페이지의 범위를 알 수\n"
+"없습니다.\n"
+"\n"
+"인쇄할 페이지 지정 범위는 문서의\n"
+"페이지 범위안에 있어야 합니다.\n"
+"페이지 범위는 상태 바를 확인하십시오.\n"
+
+#: viewcontrol.cpp:75
+msgid "magnification"
+msgstr "확대"
+
+#: viewcontrol.cpp:85
+msgid "&Media"
+msgstr "용지(&M)"
+
+#: viewcontrol.cpp:93
+msgid "&Orientation"
+msgstr "방향(&O)"
+
+#: viewcontrol.cpp:117
+msgid "&Apply"
+msgstr "적용(&A)"
+
+#: zoom.cpp:46
+msgid "&Magnification"
+msgstr "확대(&M)"
