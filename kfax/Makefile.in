@@ -88,9 +88,9 @@ install: all
 	$(INSTALL_DIR) $(PICSDIR)
 	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
 	$(INSTALL_DATA)  kfaxlogo.xpm $(PICSDIR)
-	$(INSTALL_DIR) $(MIMEDIR)	
+#	$(INSTALL_DIR) $(MIMEDIR)	
 	$(INSTALL_DIR) $(APPSDIR)
-	$(INSTALL_DATA) fax-g3.kdelnk $(MIMEDIR)
+#	$(INSTALL_DATA) fax-g3.kdelnk $(MIMEDIR)
 	$(INSTALL_DATA) KFax.kdelnk $(APPSDIR)/KFax.kdelnk
 	$(INSTALL_DIR) $(ICONDIR)
 	$(INSTALL_DATA)  kfax.xpm $(ICONDIR)
