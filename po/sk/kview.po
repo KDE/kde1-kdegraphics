@@ -43,7 +43,6 @@ msgid "About KView"
 msgstr "Informácie o KView"
 
 #: viewer.cpp:365 viewer.cpp:465
-#, fuzzy
 msgid "&List..."
 msgstr "&Zoznam.."
 
@@ -80,13 +79,12 @@ msgid "&Images"
 msgstr "O&brázky"
 
 #: viewer.cpp:409
-#, fuzzy
 msgid "&Save As..."
 msgstr "&Ulo¾i» ako.."
 
 #: viewer.cpp:415
 msgid "&Close Window"
-msgstr ""
+msgstr "&Zavrie» okno"
 
 #: viewer.cpp:421
 msgid "&Full Screen"
@@ -94,7 +92,7 @@ msgstr "&Celá obrazovka"
 
 #: viewer.cpp:424
 msgid "&Crop"
-msgstr ""
+msgstr "&Oreza»"
 
 #: viewer.cpp:427
 msgid "&Reset"
@@ -123,14 +121,12 @@ msgid "&Half size"
 msgstr "&Polovièná veµkos»"
 
 #: viewer.cpp:442
-#, fuzzy
 msgid "&Max size"
-msgstr "&Polovièná veµkos»"
+msgstr "&Max veµkos»"
 
 #: viewer.cpp:444
-#, fuzzy
 msgid "Max/&aspect"
-msgstr "Max&pect"
+msgstr "Max/&aspect"
 
 #: viewer.cpp:449
 msgid "Rotate &clockwise"
@@ -161,7 +157,6 @@ msgid "Max&pect"
 msgstr "Max&pect"
 
 #: viewer.cpp:479
-#, fuzzy
 msgid "&About KView..."
 msgstr "&Informácie o KView"
 
@@ -178,36 +173,33 @@ msgid "Transfer error: "
 msgstr "Chyba prenosu: "
 
 #: viewer.cpp:662
-#, fuzzy
 msgid "Loading..."
 msgstr "Nahrávam.."
 
 #: viewer.cpp:671
 #, c-format
 msgid "Couldn't load %s"
-msgstr ""
+msgstr "Nemô¾em naèíta» %s"
 
 #: viewer.cpp:860
-#, fuzzy
 msgid "Printing..."
-msgstr "Zosvetµujem..."
+msgstr "Tlaèím..."
 
 #: colour.cpp:32
 msgid "Enter brightness factor (%):"
-msgstr ""
+msgstr "Zadajte faktor svetlosti (%):"
 
 #: colour.cpp:37
 msgid "Brightness factor must be positive"
-msgstr ""
+msgstr "Faktor svetlosti musí by» kladný"
 
 #: colour.cpp:44
 msgid "Changing brightness..."
-msgstr ""
+msgstr "Mením svetlos»..."
 
 #: colour.cpp:58
-#, fuzzy
 msgid "Intensity:Brightness"
-msgstr "Intenzita:Zosvetli»"
+msgstr "Intenzita:Svetlos»"
 
 #: colour.cpp:100
 msgid "Converting to Greyscale..."
@@ -226,27 +218,24 @@ msgid "Smooth"
 msgstr "Vyhladi»"
 
 #: colour.cpp:234
-#, fuzzy
 msgid "Enter gamma value ( >0 ):"
-msgstr "Zadajte gamma hodnotu (0...1):"
+msgstr "Zadajte gamma hodnotu (>0):"
 
 #: colour.cpp:237
 msgid "Bad Gamma value"
-msgstr ""
+msgstr "Zlá gamma hodnota"
 
 #: colour.cpp:243
 msgid "Gamma-correcting..."
 msgstr "Korigujem gamma faktor..."
 
 #: colour.cpp:296
-#, fuzzy
 msgid "Intensity:Gamma Correct..."
-msgstr "Gamma korekcia"
+msgstr "Intenzita:Gamma korekcia..."
 
 #: colour.cpp:310
-#, fuzzy
 msgid "External.."
-msgstr "Interval.."
+msgstr "Externý.."
 
 #: ilistdlg.cpp:57
 msgid "Prev"
@@ -287,15 +276,3 @@ msgstr "&Spusti» prem."
 #: ilistdlg.cpp:339
 msgid "Time between slides (sec):"
 msgstr "Èas medzi políèkami (sek):"
-
-#~ msgid "Fi&lter"
-#~ msgstr "Fi&lter"
-
-#~ msgid "&Open.."
-#~ msgstr "&Otvori».."
-
-#~ msgid "Darkening..."
-#~ msgstr "Stmavujem..."
-
-#~ msgid "Intensity:Darken"
-#~ msgstr "Intenzita:Stmavi»"

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ksnapshot\n"
+"POT-Creation-Date: 1998-11-30 01:40+0100\n"
+"PO-Revision-Date: 1998-12-26 14:20+0001\n"
+"Last-Translator: Juraj Bednar <bednar@isternet.sk>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ksnapshot.cpp:40
+msgid "snapshot"
+msgstr "snapshot"
+
+#: ksnapshot.cpp:94
+msgid ""
+"Press the `Grab' button, then click\n"
+"on a window to grab it.\n"
+"\n"
+"KSnapshot is copyright Richard Moore (rich@kde.org)\n"
+"and is released under LGPL\n"
+"\n"
+"Version: "
+msgstr ""
+"Stlaète tlaèítko `Zosníma»`, potom kliknite\n"
+"na okno, ktoré chcete zosníma».\n"
+"\n"
+"KSnapshot napísal Richard Moore (rich@kde.org)\n"
+"a je uvoµnené pod LGPL\n"
+"\n"
+"Verzia: "
+
+#: ksnapshot.cpp:129
+msgid "Filename:"
+msgstr "Súbor:"
+
+#: ksnapshot.cpp:161
+msgid "Delay:"
+msgstr "Pauza:"
+
+#: ksnapshot.cpp:170
+msgid "seconds."
+msgstr "sekúnd."
+
+#: ksnapshot.cpp:190
+msgid "Auto raise"
+msgstr "Auto. zdvihnú»"
+
+#: ksnapshot.cpp:191
+msgid "Hide KSnapshot window"
+msgstr "Skry» okno KSnapshot"
+
+#: ksnapshot.cpp:193
+msgid "Only grab the window containing the cursor"
+msgstr "Zosníma» iba okno, v ktorom je kurzor"
+
+#: ksnapshot.cpp:224
+msgid "Grab"
+msgstr "Zosníma»"
+
+#: ksnapshot.cpp:454
+msgid "Error: Unable to save image"
+msgstr "Chyba: Nemô¾em ulo¾i» obrázok"
+
+#: ksnapshot.cpp:455
+msgid "Dismiss"
+msgstr "V poriadku"
+
+#: ksnapshot.cpp:459
+#, c-format
+msgid ""
+"KSnapshot was unable to save the image to\n"
+"%s."
+msgstr ""
+"KSnapshot nebol schopný ulo¾i» obrázok do\n"
+"%s."
+
+#: ksnapshot.cpp:469
+msgid "KSnapshot preview"
+msgstr "KSnapshot náhµad"
