@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
 "POT-Creation-Date: 1999-04-23 02:23+0200\n"
-"PO-Revision-Date: 1998-11-03 14:57+01:00\n"
+"PO-Revision-Date: 1999-07-03 14:21+02:00\n"
 "Last-Translator: Miroslav Flídr <flidr@kky.zcu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -695,10 +695,4 @@ msgstr "Odd.%d "
 
 #: zoom.cpp:63
 msgid "&Zoom factor"
-msgstr ""
-
-#~ msgid "View Control"
-#~ msgstr "Nastavení zobrazení"
-
-#~ msgid "&Magnification"
-#~ msgstr "&Zvìt¹ení"
+msgstr "Faktor &zvìt¹ení"
