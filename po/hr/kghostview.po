@@ -221,9 +221,8 @@ msgid "Document information"
 msgstr "Informacije o dokumentu"
 
 #: kghostview.cpp:213
-#, fuzzy
 msgid "Page Setup"
-msgstr "Postava pisaèa"
+msgstr "Postava stranice"
 
 #: kghostview.cpp:353 kghostview.cpp:374 kghostview.cpp:443
 msgid "View Control"
@@ -290,9 +289,8 @@ msgid "&Reload"
 msgstr ""
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
-msgstr "&Podesi ..."
+msgstr "Pos&tava stranice ..."
 
 #: kghostview.cpp:505
 msgid "&Print ..."
@@ -307,9 +305,8 @@ msgid "Zoom &out"
 msgstr "U&manji"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
-msgstr "&Info ..."
+msgstr "&Uveæaj/Umanji ..."
 
 #: kghostview.cpp:522
 msgid "&Info ..."
@@ -508,9 +505,8 @@ msgid "Go to ..."
 msgstr "Idi na stranicu ..."
 
 #: kghostview.cpp:1337
-#, fuzzy
 msgid "Zoom"
-msgstr "Uveæaj"
+msgstr "Uveæaj/Umanji"
 
 #: kghostview.cpp:1523
 msgid "Version 0.6"
@@ -758,55 +754,21 @@ msgstr ""
 "Provjerite statusnu traku za informacije.\n"
 
 #: viewcontrol.cpp:75
-#, fuzzy
 msgid "magnification"
-msgstr "&uveæanje"
+msgstr "uveæanje"
 
 #: viewcontrol.cpp:85
-#, fuzzy
 msgid "&Media"
-msgstr "m&edij"
+msgstr "&Medij"
 
 #: viewcontrol.cpp:93
-#, fuzzy
 msgid "&Orientation"
-msgstr "&orijentacija"
+msgstr "&Orijentacija"
 
 #: viewcontrol.cpp:117
 msgid "&Apply"
 msgstr "&Primjeni"
 
 #: zoom.cpp:46
-#, fuzzy
 msgid "&Magnification"
-msgstr "&uveæanje"
-
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "&View control ..."
-#~ msgstr "&Kontrole pogleda ..."
-
-#~ msgid "&Fit to page width"
-#~ msgstr "Pod&esi prema ¹irini stranice"
-
-#~ msgid "&Redisplay"
-#~ msgstr "&Obnovi sadr¾aj"
-
-#~ msgid "Change view ..."
-#~ msgstr "Promijeni pogled ..."
-
-#~ msgid "Turn antialiasing on"
-#~ msgstr "Ukljuèi zaglaðivanje"
-
-#~ msgid "Turn antialiasing off"
-#~ msgstr "Iskljuèi zaglaðivanje"
-
-#~ msgid "Show Ghostscript messages"
-#~ msgstr "Poka¾i Ghostscript poruke"
-
-#~ msgid "Hide Ghostscript messages"
-#~ msgstr "Sakrij Ghostscript poruke"
-
-#~ msgid "Force changes to ..."
-#~ msgstr "Primjeni promjene na ..."
+msgstr "&Uveæanje"
