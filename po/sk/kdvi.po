@@ -1,0 +1,697 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdvi\n"
+"POT-Creation-Date: 1998-03-05 12:11+0100\n"
+"PO-Revision-Date: 1998-03-20 12:20 MET\n"
+"Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
+"Language-Team: Slovak <bednar@isternet.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:515
+msgid "Notice"
+msgstr "Poznámka"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmena vo vytváraní fontov sa prejaví\n"
+"po novom ¹tarte kdvi!"
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmena v ceste k fontom sa prejaví\n"
+"po novom ¹tarte kdvi!"
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmena v Metafont móde sa prejaví\n"
+"po novom ¹tarte kdvi!"
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmena v rozlí¹ení sa prejaví\n"
+"po novom ¹tarte kdvi!"
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"Zmena v gamma hodnote sa prejaví\n"
+"po novom ¹tarte kdvi!"
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "HEJ"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "Èo to je? Problém DVI!\n"
+
+#: kdvi.cpp:91
+msgid "No document"
+msgstr "®iadny dokument"
+
+#: kdvi.cpp:172
+msgid "&Open ..."
+msgstr "&Otvori» ..."
+
+#: kdvi.cpp:179
+msgid "Open &recent"
+msgstr "Ot&vori» nedávny"
+
+#: kdvi.cpp:181
+msgid "&Print ..."
+msgstr "&Tlaèi» ..."
+
+#: kdvi.cpp:189
+msgid "Zoom &in"
+msgstr "Z&väè¹i»"
+
+#: kdvi.cpp:190
+msgid "Zoom &out"
+msgstr "Z&men¹i»"
+
+#: kdvi.cpp:191
+msgid "&Fit to page"
+msgstr "Prispôsobi» &stránke"
+
+#: kdvi.cpp:192
+msgid "Fit to page &width"
+msgstr "&Prispôsobi» ¹írke stránky"
+
+#: kdvi.cpp:194
+msgid "&Redraw page"
+msgstr "Prek&resli» stránku"
+
+#: kdvi.cpp:201
+msgid "&Previous"
+msgstr "&Predchádzajúca"
+
+#: kdvi.cpp:202
+msgid "&Next"
+msgstr "&Nasledujúca"
+
+#: kdvi.cpp:203
+msgid "&First"
+msgstr "P&rvá"
+
+#: kdvi.cpp:204
+msgid "&Last"
+msgstr "Po&sledná"
+
+#: kdvi.cpp:205
+msgid "&Go to ..."
+msgstr "&Choï na stranu..."
+
+#: kdvi.cpp:208
+msgid "&Page"
+msgstr "&Strana"
+
+#: kdvi.cpp:213
+msgid "&Preferences ..."
+msgstr "&Preferencie ..."
+
+#: kdvi.cpp:214
+msgid "&Keys ..."
+msgstr "&Klávesy  ..."
+
+#: kdvi.cpp:216
+msgid "Make PK-&fonts"
+msgstr "Vytvori» PK &fonty"
+
+#: kdvi.cpp:218
+msgid "Show PS"
+msgstr "Zobrazova» PostScript"
+
+#: kdvi.cpp:220
+msgid "Show &Menubar"
+msgstr "Zobrazova» &menu"
+
+#: kdvi.cpp:222
+msgid "Show &Buttons"
+msgstr "Zobrazova» &nástrojovú li¹tu"
+
+#: kdvi.cpp:224
+msgid "Show Page Lis&t"
+msgstr "Zobrazova» zoznam s&tránok"
+
+#: kdvi.cpp:226
+msgid "Show &Statusbar"
+msgstr "Zobrazova» &informaènú li¹tu"
+
+#: kdvi.cpp:228
+msgid "Show Scro&llbars"
+msgstr "Zobrazova» posunovacie &li¹ty"
+
+#: kdvi.cpp:239
+msgid "&Contents"
+msgstr "&Obsah"
+
+#: kdvi.cpp:242
+msgid "About &Qt"
+msgstr "Informácie o &Qt"
+
+#: kdvi.cpp:261
+msgid "Open document ..."
+msgstr "Otvori» dokument ..."
+
+#: kdvi.cpp:262
+msgid "Reload document"
+msgstr "Naèíta» dokument znova"
+
+#: kdvi.cpp:263
+msgid "Print ..."
+msgstr "Tlaèi» ..."
+
+#: kdvi.cpp:265
+msgid "Go to first page"
+msgstr "Ís» na prvú stranu"
+
+#: kdvi.cpp:266
+msgid "Go to previous page"
+msgstr "Ís» na predchádzajúcu stranu"
+
+#: kdvi.cpp:267
+msgid "Go down then top of next page"
+msgstr "Ís» dole na vrchol nasledujúcej strany"
+
+#: kdvi.cpp:268
+msgid "Go to next page"
+msgstr "Ís» na nasledujúcu stranu"
+
+#: kdvi.cpp:269
+msgid "Go to last page"
+msgstr "Ís» na poslednú stranu"
+
+#: kdvi.cpp:271
+msgid "Decrease magnification"
+msgstr "Zmen¹i»"
+
+#: kdvi.cpp:272
+msgid "Small text"
+msgstr "Malý text"
+
+#: kdvi.cpp:273
+msgid "Large text"
+msgstr "Veµký text"
+
+#: kdvi.cpp:274
+msgid "Increase magnification"
+msgstr "Zväè¹i»"
+
+#: kdvi.cpp:299
+msgid "Scroll window and switch the page"
+msgstr "Posúvanie v  okne a prepínanie strán"
+
+#: kdvi.cpp:308
+msgid "Select page and mark pages for printing"
+msgstr "Výber strany a oznaèenie strán pre tlaè"
+
+#: kdvi.cpp:323
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:325
+msgid "Shrink: xx"
+msgstr "Zmen¹enie: xx"
+
+#: kdvi.cpp:327
+msgid "Page: xxxx / xxxx"
+msgstr "Strana: xxxx / xxxx"
+
+#: kdvi.cpp:344 kdvi.cpp:396
+msgid "New window"
+msgstr "Nové okno..."
+
+#: kdvi.cpp:345 kdvi.cpp:397
+msgid "Open file"
+msgstr "Otvori» súbor"
+
+#: kdvi.cpp:346 kdvi.cpp:398
+msgid "Print dialog"
+msgstr "Tlaèový dialóg"
+
+#: kdvi.cpp:348 kdvi.cpp:400
+msgid "Zoom in"
+msgstr "Zväè¹i»"
+
+#: kdvi.cpp:349 kdvi.cpp:401
+msgid "Zoom out"
+msgstr "Zmen¹i»"
+
+#: kdvi.cpp:350 kdvi.cpp:402
+msgid "Fit window"
+msgstr "Prispôsobi» okno"
+
+#: kdvi.cpp:351 kdvi.cpp:403
+msgid "Fit width"
+msgstr "Prispôsobi» ¹írku"
+
+#: kdvi.cpp:352 kdvi.cpp:404
+msgid "Redraw page"
+msgstr "Prekresli» stranu"
+
+#: kdvi.cpp:353 kdvi.cpp:406
+msgid "Next page"
+msgstr "Nasledujúca strana"
+
+#: kdvi.cpp:354 kdvi.cpp:405
+msgid "Previous page"
+msgstr "Predchádzajúca strana"
+
+#: kdvi.cpp:355 kdvi.cpp:408
+msgid "Last page"
+msgstr "Posledná strana"
+
+#: kdvi.cpp:356 kdvi.cpp:407
+msgid "First page"
+msgstr "Prvná strana"
+
+#: kdvi.cpp:357 kdvi.cpp:409
+msgid "Goto page"
+msgstr "Choï na stranu"
+
+#: kdvi.cpp:358
+msgid "Configure keys"
+msgstr "Konfigurácia kláves"
+
+#: kdvi.cpp:359 kdvi.cpp:410
+msgid "Toggle show PS"
+msgstr "Zapnú»/vypnú» zobrazenie Postscriptu"
+
+#: kdvi.cpp:360 kdvi.cpp:411
+msgid "Toggle menu bar"
+msgstr "Zapnú»/vypnú» zobrazenie menu"
+
+#: kdvi.cpp:361 kdvi.cpp:412
+msgid "Toggle button bar"
+msgstr "Zapnú»/vypnú» zobrazenie nástrojovej li¹ty"
+
+#: kdvi.cpp:362 kdvi.cpp:413
+msgid "Toggle page list"
+msgstr "Zapnú»/vypnú» zobrazenie zoznamu stránok"
+
+#: kdvi.cpp:363 kdvi.cpp:414
+msgid "Toggle status bar"
+msgstr "Zapnú»/vypnú» zobrazenie informaènej li¹ty"
+
+#: kdvi.cpp:364 kdvi.cpp:415
+msgid "Toggle scroll bars"
+msgstr "Zapnú»/vypnú» zobrazenie posunovacích lí¹t"
+
+#: kdvi.cpp:467
+msgid "File open dialog is open"
+msgstr "Otvorený dialóg pre otváranie súborov"
+
+#: kdvi.cpp:516
+msgid "Can't read file:\n"
+msgstr "Nie je mo¾né èíta» súbor:\n"
+
+#: kdvi.cpp:522
+msgid "Opening "
+msgstr "Otváram "
+
+#: kdvi.cpp:547
+msgid "Opened "
+msgstr "Otvorený "
+
+#: kdvi.cpp:557
+msgid "Print dialog is open"
+msgstr "Tlaèový dialóg je otvorený"
+
+#: kdvi.cpp:572
+msgid "View size fits page"
+msgstr "Veµkos» pohµadu je prispôsobená stránke"
+
+#: kdvi.cpp:581
+msgid "View width fits page"
+msgstr "©írka pohµadu je prispôsobená stránke"
+
+#: kdvi.cpp:673
+msgid "Preferences applied"
+msgstr "Preference aplikované"
+
+#: kdvi.cpp:677
+msgid " Page "
+msgstr " Strana "
+
+#: kdvi.cpp:679
+msgid "Go to page"
+msgstr "Choï na stranu"
+
+#: kdvi.cpp:693
+msgid "Go to"
+msgstr "Choï na"
+
+#: kdvi.cpp:714
+msgid "Missing PK-fonts will be generated"
+msgstr "Chýbajúce PK fonty budú vytvorené"
+
+#: kdvi.cpp:715
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "Chýbajúce PK fonty budú zaznamenané do 'missfont.log'"
+
+#: kdvi.cpp:731
+msgid "Postcsript specials are rendered"
+msgstr "Postscript specials sú zobrazené"
+
+#: kdvi.cpp:732
+msgid "Postscript specials are not rendered"
+msgstr "Postcript specials nie sú zobrazené"
+
+#: kdvi.cpp:748
+msgid "No menu bar"
+msgstr "®iadne menu"
+
+#: kdvi.cpp:748
+msgid "Menu bar is shown"
+msgstr "Menu je zobrazené"
+
+#: kdvi.cpp:766
+msgid "No button bar"
+msgstr "®iadna nástrojová li¹ta"
+
+#: kdvi.cpp:766
+msgid "Button bar is shown"
+msgstr "Nástrojová li¹ta je zobrazená"
+
+#: kdvi.cpp:780
+msgid "Tool bar is shown"
+msgstr "Nástrojová li¹ta je zobrazená"
+
+#: kdvi.cpp:780
+msgid "No tool bar"
+msgstr "®iadna nástrojová li¹ta"
+
+#: kdvi.cpp:804
+msgid "No status bar"
+msgstr "®iadna informaèná li¹ta"
+
+#: kdvi.cpp:804
+msgid "Status bar is shown"
+msgstr "Informaèná li¹ta je zobrazená"
+
+#: kdvi.cpp:818
+msgid "Scroll bars are shown"
+msgstr "Posunovacie li¹ty sú zobrazené"
+
+#: kdvi.cpp:818
+msgid "No scroll bars"
+msgstr "®iadne posunovacie li¹ty"
+
+#: kdvi.cpp:835
+msgid "About Kdvi"
+msgstr "Informácie o Kdvi"
+
+#: kdvi.cpp:836
+msgid ""
+"kdvi - TeX DVI viewer\n"
+"Version "
+msgstr ""
+"kdvi - TeX DVI prehliadaè\n"
+"Verzia "
+
+#: kdvi.cpp:838
+msgid ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
+msgstr ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
+
+#: kdvi.cpp:874
+msgid "Page: "
+msgstr "Strana: "
+
+#: kdvi.cpp:874
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:905
+msgid "Large text button set to shrink factor "
+msgstr "Zmen¹ovací faktor pre veµký text je nastavený na "
+
+#: kdvi.cpp:913
+msgid "Small text button set to shrink factor "
+msgstr "Zmen¹ovací faktor pre malý text je nastavený na "
+
+#: kdvi.cpp:937
+msgid "File reloaded"
+msgstr "Súbor znovu naèítaný"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Oznaèi» túto"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Prepnú» oznaèenie tejto"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Oznaèi» v¹etky"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Oznaèi» párne"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Oznaèi» nepárne"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Prehodi» znaèky"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Odstráni» znaèky"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "Preferencie"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Menu"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Nástrojová li¹ta"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Informaèná li¹ta"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Zoznam stránok"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Posúvacie li¹ty"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Poèet nedávnych súborov"
+
+#: prefs.cpp:252
+msgid "Appearance"
+msgstr "Vzhµad"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Vytvori» chýbajúce fonty"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Rozlí¹enie"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Metafont mód"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "Cesta PK fontu"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Zmen¹ovací faktor pre malý text"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Zmen¹ovací faktor pre veµký text"
+
+#: prefs.cpp:319
+msgid "Fonts"
+msgstr "Fonty"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Zobrazova» postscript specials"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Antialiasovaný postscript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Zobrazenie"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Papier"
+
+#: print.cpp:44
+msgid "Print"
+msgstr "Tlaèi»"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Tlaèi» "
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "Nie je mo¾né otvori» dvi súbor!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Nemô¾em otvori» výstupný dvi súbor!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "Nemô¾em spracova» túto verziu dvi!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Chybný rozsah strany!"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Predvolená tlaèiareò"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "&Meno súboru"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&V¹etky"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "&Aktuálna"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Oznaèená"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "&Rozsah"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "O&paèné"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 strana na liste"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 strany na liste"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 strany na liste"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Naplni» riadok"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Naplni» ståpec"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "Na&stavenie"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Poradie stránky"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Strany"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Tlaè na/do"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Nastavenie tlaèiarne"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Tlaèiarne"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "Vn&útorné"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "ps&nup"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "&mpage"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "Prid&a»"
+
+#: printSetupData.cpp:99
+msgid "&Remove"
+msgstr "Odst&ráni»"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "Príkaz &spooleru:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n-up"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Spôsob tlaèe"
