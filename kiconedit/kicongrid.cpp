@@ -28,7 +28,8 @@ KIconEditGrid::KIconEditGrid(QWidget *parent, const char *name)
 {
   initMetaObject();
 
-  kdeColor(1);
+  //setBackgroundMode(NoBackground);
+  //kdeColor(1);
 
   for(uint i = 0; i < 42; i++)
     iconcolors.append(iconpalette[i]);
@@ -42,7 +43,9 @@ KIconEditGrid::KIconEditGrid(QWidget *parent, const char *name)
   //numcolors = 0;
   currentcolor = qRgb(0,0,0)|OPAQUE_MASK;
 
+  debug("Mouse tracking: %d", hasMouseTracking());
   setMouseTracking(true);
+  debug("Mouse tracking: %d", hasMouseTracking());
 
   setNumRows(32);
   setNumCols(32);
@@ -68,7 +71,7 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
 {
   //KColorGrid::paintCell(painter, row, col);
   //debug("KIconEditGrid::paintCell()");
-  bool tp = colorAt( row * numCols() + col ) == TRANSPARENT;
+  //bool tp = colorAt( row * numCols() + col ) == TRANSPARENT;
   QBrush brush(colorAt( row * numCols() + col ));
   int s = cellSize();
 
@@ -92,13 +95,11 @@ void KIconEditGrid::paintCell( QPainter *painter, int row, int col )
       painter->setPen(black);
       painter->drawLine(1, s, s, s);
       painter->drawLine(s, s, s, 1);
-      if(!tp)
-      {
+      //if(!tp)
         painter->fillRect(1, 1, s-1, s-1, brush);
-      }
       //qDrawPlainRect( painter, 0, 0, s, s, black, 1, &brush);
     }
-    else if(!tp)
+    else //if(!tp)
       painter->fillRect(0, 0, s, s, brush);
     if((ispasting || isselecting) && isMarked(col, row))
     {
@@ -205,7 +206,10 @@ void KIconEditGrid::mouseMoveEvent( QMouseEvent *e )
     return;
 
   if(img->valid(col, row))
+  {
+    //debug("%d X %d", col, row);
     emit poschanged(col, row);
+  }
 
   if(ispasting && !btndown && img->valid(col, row))
   {

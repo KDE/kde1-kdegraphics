@@ -2,9 +2,12 @@ KDE Icon Editor
 _______________
 
 ------------------------------------------------------------------------------
-   News and fixes in version 0.3.1:
+   News and fixes in version 0.3.2:
 ------------------------------------------------------------------------------
- - German translations thanks to Gregor Zumstein <zumste98@cui.unige.ch>
+ - German translations. (thanks to Gregor Zumstein <zumste98@cui.unige.ch>)
+ - Solaris didn't like TRANSPARENT definition. (thanks to Alastair Burt <burt@dfki.de>)
+ - Crashed on empty string in strlen. (thanks to Alastair Burt <burt@dfki.de>)
+ - Russian translations (thanks to Andy Pershin <apa@penza.com.ru>)
 
 ------------------------------------------------------------------------------
    News and fixes in version 0.3.1:

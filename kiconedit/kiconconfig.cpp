@@ -118,7 +118,7 @@ KTemplateConfig::KTemplateConfig(QWidget *parent) : QWidget(parent)
   connect( templates, SIGNAL(highlighted(int)), SLOT(checkSelection(int)));
   ml = new QVBoxLayout(this, 10);
   ml->addWidget(grp);
-  l = new  QVBoxLayout(grp, 10, AlignLeft);
+  l = new  QVBoxLayout(grp, 15, AlignLeft);
   l->addWidget(templates);
 
   tlist = KIconTemplateContainer::getTemplates();
@@ -232,8 +232,8 @@ KBackgroundConfig::KBackgroundConfig(QWidget *parent)
 
   btcolor = new KColorButton(grp);
   btcolor->setFixedSize(btcolor->sizeHint());
-  connect(btcolor, SIGNAL(void changed( const QColor &newColor )),
-         SLOT(void colorChanged( const QColor &newColor )));
+  connect(btcolor, SIGNAL( changed( const QColor &)),
+         SLOT( colorChanged( const QColor &)));
 
   btbrowse = new QPushButton(i18n("Browse..."), grp);
   btbrowse->setFixedSize(btbrowse->sizeHint());
@@ -293,7 +293,7 @@ KIconConfig::KIconConfig(QWidget *parent) : KNoteBook(parent, 0, true)
 
   setCancelButton();
   setOkButton();
-  setDirectionsReflectsPage(true);
+  //setDirectionsReflectsPage(true);
   setEnablePopupMenu(true);
   setEnableArrowButtons(true);
 

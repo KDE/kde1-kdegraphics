@@ -39,6 +39,10 @@
 #endif
 
 #define OPAQUE_MASK 0xff000000
+
+#ifdef TRANSPARENT
+#undef TRANSPARENT
+#endif
 #define TRANSPARENT kapp->backgroundColor.rgb()
 
 const uint iconpalette[42] = {  // kde palette
