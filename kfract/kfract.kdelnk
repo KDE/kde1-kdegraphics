@@ -26,6 +26,7 @@ Comment[hr]=Generator fraktala
 Comment[ro]=Program pentru generare de fractali
 Comment[ru]=Программа для генерации фракталов
 Name=Fractals Generator
+Name[is_IS]=Fraktalateiknari
 Name[es]=Generador de fractales
 Name[fr]=GИnИrateur de fractales
 Name[de]=Fraktal-Generator
