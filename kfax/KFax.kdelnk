@@ -1,7 +1,12 @@
+# KDE Config File
 [KDE Desktop Entry]
-Exec=kfax %u
-Icon=edit.xpm
-DocPath=kfax/kfax.html
+BinaryPattern=kfax;
+Protocols=file;ftp;http;tar;cgi;
+MimeType=image/fax-g3;
 Comment=A Fax Viewer
-Terminal=0
+Exec=kfax %f
+TerminalOptions=
+Icon=file.xpm
+Path=
 Type=Application
+Terminal=0

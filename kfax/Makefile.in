@@ -4,6 +4,7 @@ prefix  = @prefix@
 BINDIR  = $(prefix)/bin
 LIBDIR  = $(prefix)/lib
 TOOLDIR  = $(prefix)/share/toolbar
+MIMEDIR = $(prefix)/share/mimelnk/image/
 DOCSDIR = $(prefix)/share/doc/default/HTML/kfax
 APPSDIR = $(prefix)/applnk/Graphics
 PICSDIR = $(prefix)/share/apps/kfax/pics/
@@ -82,7 +83,9 @@ install: all
 	$(INSTALL_DATA)  kfax.tif $(PICSDIR)
 	$(INSTALL_DATA)  kfaxlogo.xpm $(PICSDIR)
 	$(INSTALL_DATA) zoomout.xpm $(TOOLDIR)
+	$(INSTALL_DIR) $(MIMEDIR)	
 	$(INSTALL_DIR) $(APPSDIR)
+	$(INSTALL_DATA) fax-g3.kdelnk $(MIMEDIR)
 	$(INSTALL_DATA) KFax.kdelnk $(APPSDIR)/KFax.kdelnk
 
 uninstall:
