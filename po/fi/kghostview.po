@@ -373,7 +373,7 @@ msgid ""
 msgstr ""
 "Odottaa jo internet\n"
 "työn valmistumista. Odota kunnes se loppuu.\n"
-"tai keskeytä käynnissä oleva.\n"
+"tai keskeytä käynnissä oleva."
 
 #: kghostview.cpp:782
 msgid "Could not start or find KFM."
