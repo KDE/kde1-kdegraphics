@@ -1641,39 +1641,40 @@ void KGhostview::printStart( int mode, bool reverseOrder,
 	delete ml;
 }
 
-QString KGhostview::printToFile( bool allMode, QStrList *ml )
+QString
+KGhostview::printToFile( bool allMode, QStrList *ml )
 {
-	FILE *pswrite;
-
-	if ( allMode ) {
-		QString buf( i18n(	"You chose to print all pages to a file.\n"
-					"This would produce a document identical to\n"
-					"that currently loaded into the viewer.\n"
-					"There is no need to print all pages into a new file.") );
-		return buf;
-	}
-	
-	QString dir;
-	if ( filename )
-		dir = QFileInfo( filename ).dirPath();	
-	
-	QString s = QFileDialog::getSaveFileName( dir, "*.*ps*", this);
-	if ( s.isNull() ) {
-		QString buf( i18n(	"No file name was given so\n"\
-					"nothing could be printed to a file.\n") );
-		return buf;
-	}
-	
-    if ( ( pswrite = fopen( s.data(), "w" ) ) == 0L ) {
-		QString buf;
-		buf.sprintf( "Attempt to open file for writing failed.\n\n"\
-						"Error: %s\n", strerror( errno ) );
-		return buf;
-    } else {
-		psCopyDoc( pswrite, ml );
-		fclose( pswrite );
-		return 0;
-    }
+  FILE *pswrite;
+  
+  if ( allMode ) {
+    QString buf( i18n(	"You chose to print all pages to a file.\n"
+			"This would produce a document identical to\n"
+			"that currently loaded into the viewer.\n"
+			"There is no need to print all pages into a new file.") );
+    return buf;
+  }
+  
+  QString dir;
+  if ( filename )
+    dir = QFileInfo( filename ).dirPath();	
+  
+  QString s = QFileDialog::getSaveFileName( dir, "*.*ps*", this);
+  if ( s.isNull() ) {
+    QString buf( i18n(	"No file name was given so\n"\
+			"nothing could be printed to a file.\n") );
+    return buf;
+  }
+  
+  if ( ( pswrite = fopen( s.data(), "w" ) ) == 0L ) {
+    QString buf;
+    buf.sprintf( "Attempt to open file for writing failed.\n\n"\
+		 "Error: %s\n", strerror( errno ) );
+    return buf;
+  } else {
+    psCopyDoc( pswrite, ml );
+    fclose( pswrite );
+    return 0;
+  }
 }
 
 QString KGhostview::printToPrinter( QString printerName, QString spoolerCommand,
