@@ -1,0 +1,503 @@
+/*
+    KDE Icon Editor - a small graphics drawing program for the KDE
+    Copyright (C) 1998  Thomas Tanghus (tanghus@earthling.net)
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    General Public License for more details.
+
+    You should have received a copy of the GNU Library General Public License
+    along with this library; see the file COPYING.LIB.  If not, write to
+    the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+    Boston, MA 02111-1307, USA.
+*/  
+
+#include "debug.h"
+#include "kiconedit.h"
+
+void KIconEdit::slotNewWin()
+{
+  slotNewWin((const char*)0);
+}
+
+void KIconEdit::slotNewWin(const char *url)
+{
+  debug("KIconEdit::openNewWin() - %s", url);
+  KIconEdit *w = new KIconEdit("kiconedit", url);
+  CHECK_PTR(w);
+}
+
+void KIconEdit::slotNew()
+{
+  bool cancel = false;
+  if (grid->isModified()) 
+  {
+    int r = KMsgBox::yesNoCancel(this, i18n("Warning"), 
+      i18n("The current file has been modified.\nDo you want to save it?"));
+    switch(r)
+    {
+      case 1:
+        icon->save(&grid->image());
+        break;
+      case 2:
+        break;
+      case 3:
+        cancel = true;
+        break;
+      default:
+        break;
+    }
+  }
+  if(!cancel)
+  {
+#ifndef KWIZARD_VERSION
+    KResize n(this, 0, true, QSize(32, 32));
+    if(n.exec())
+    {
+      grid->editClear();
+      const QSize s = n.getSize();
+      debug("Size: %d x %d", s.width(), s.height());
+      grid->setSize(s);
+      grid->setModified(false);
+      icon->cleanup();
+    }
+#else
+    KNewIcon newicon(this);
+    if(newicon.exec())
+    {
+      int r = newicon.openStyle();
+      if(r == KNewIcon::Blank)
+      {
+        grid->editClear();
+        const QSize s = newicon.templateSize();
+        debug("Size: %d x %d", s.width(), s.height());
+        grid->setSize(s);
+        grid->setModified(false);
+        icon->cleanup();
+      }
+      else if(r == KNewIcon::Template)
+      {
+        QString str = newicon.templatePath();
+        icon->open(&grid->image(), str.data());
+        icon->cleanup();
+      }
+    }
+#endif
+  }
+}
+
+void KIconEdit::slotOpen()
+{
+  bool cancel = false;
+  if (grid->isModified()) 
+  {
+    int r = KMsgBox::yesNoCancel(this, i18n("Warning"), 
+	i18n("The current file has been modified.\nDo you want to save it?"));
+    switch(r)
+    {
+      case 1:
+        icon->save(&grid->image());
+        break;
+      case 2:
+        break;
+      case 3:
+        cancel = true;
+        break;
+      default:
+        break;
+    }
+  }
+  if(!cancel)
+    icon->promptForFile(&grid->image());
+}
+
+void KIconEdit::slotClose()
+{
+  close();
+}
+
+void KIconEdit::slotQuit()
+{
+  debug("KIconEdit: Closing %u windows", memberList->count());
+  KIconEdit *ki = 0L;
+  while((ki = (KIconEdit*)memberList->getFirst()) != 0)
+  {
+    CHECK_PTR(ki);
+    memberList->getFirst()->close();
+  }
+}
+
+void KIconEdit::slotSave()
+{
+  debug("KIconEdit: Saving %s", icon->url().data());
+  icon->save(&grid->image());
+}
+
+void KIconEdit::slotSaveAs()
+{
+  debug("KIconEdit: Saving %s", icon->url().data());
+  icon->saveAs(&grid->image());
+}
+
+void KIconEdit::slotPrint()
+{
+  file->setItemEnabled(ID_FILE_PRINT, false);
+  toolbar->setItemEnabled(ID_FILE_PRINT, false);
+  QPrinter prt;
+  if ( prt.setup(this) )
+  {
+    prt.setCreator("KDE Draw");
+    QPainter p;
+    p.begin( &prt );
+    p.drawPixmap( 0,0, grid->pixmap() );
+    p.end();
+  }
+  file->setItemEnabled(ID_FILE_PRINT, true);
+  toolbar->setItemEnabled(ID_FILE_PRINT, true);
+}
+
+void KIconEdit::slotView( int id )
+{
+  switch(id)
+  {
+    case ID_VIEW_ZOOM_1TO1:
+      slotUpdateStatusScaling(1, false);
+      grid->setCellSize(1);
+      slotUpdateStatusScaling(1, true);
+      toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
+      view->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
+      break;
+    case ID_VIEW_ZOOM_1TO5:
+      slotUpdateStatusScaling(5, false);
+      grid->setCellSize(5);
+      slotUpdateStatusScaling(5, true);
+      break;
+    case ID_VIEW_ZOOM_1TO10:
+      slotUpdateStatusScaling(10, false);
+      grid->setCellSize(10);
+      slotUpdateStatusScaling(10, true);
+      break;
+    case ID_VIEW_ZOOM_OUT:
+      if(!grid->zoom(Out))
+      {
+        toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
+        view->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
+      }
+      break;
+    case ID_VIEW_ZOOM_IN:
+      grid->zoom(In);
+      toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, true);
+      view->setItemEnabled(ID_VIEW_ZOOM_OUT, true);
+      break;
+    default:
+      break;
+  }
+}
+
+void KIconEdit::slotCopy()
+{
+  grid->editCopy();
+}
+
+void KIconEdit::slotCut()
+{
+  grid->editCopy(true);
+}
+
+void KIconEdit::slotPaste()
+{
+  toggleTool(ID_DRAW_FIND);
+  grid->setTool(KIconEditGrid::Find);
+  grid->editPaste();
+}
+
+void KIconEdit::slotClear()
+{
+  grid->editClear();
+}
+
+void KIconEdit::slotSelectAll()
+{
+  toggleTool(ID_DRAW_SELECT);
+  grid->setTool(KIconEditGrid::Select);
+  grid->editSelectAll();
+}
+
+void KIconEdit::slotOpenRecent(int id)
+{
+  debug("Opening recent file: %d", id);
+  debug("Recent: %s", recentlist->at((uint)id));
+  icon->open(&grid->image(), recentlist->at(id));
+}
+
+void KIconEdit::slotDropEvent( KDNDDropZone * _dropZone )
+{
+  debug("KIconEdit::slotDropEvent");
+  QStrList & list = _dropZone->getURLList();
+  char *s;
+  bool loadedinthis = false;
+  
+  for ( s = list.first(); s != 0L; s = list.next() )
+  {
+    // Load the first file in this window
+    debug("KIconEdit:slotDropEvent - %s", s);
+    //s == list.getFirst();
+    if (!grid->isModified() && !loadedinthis) 
+    {
+      icon->open( &grid->image(), s );
+      loadedinthis = true;
+    }
+    else 
+    {
+      slotNewWin(s);
+    }
+  }    
+}
+
+void KIconEdit::slotConfigure(int id)
+{
+  switch(id)
+  {
+    case ID_OPTIONS_CONFIGURE:
+    {
+      KIconConfig c(this);
+      c.exec();
+      //KKeyDialog::configureKeys( keys );
+      break;
+    }
+    case ID_OPTIONS_TOGGLE_GRID:
+      if(options->isItemChecked(ID_OPTIONS_TOGGLE_GRID))
+      {
+        options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, false);
+        ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(false);
+        //toolbar->setButton(ID_OPTIONS_TOGGLE_GRID, false);
+        grid->setGrid(false);
+      }
+      else
+      {
+        options->setItemChecked(ID_OPTIONS_TOGGLE_GRID, true);
+        ((KToolBarButton*)toolbar->getButton(ID_OPTIONS_TOGGLE_GRID))->on(true);
+        //toolbar->setButton(ID_OPTIONS_TOGGLE_GRID, true);
+        grid->setGrid(true);
+      }
+      break;
+    case ID_OPTIONS_TOGGLE_TOOL1:
+      if(options->isItemChecked(ID_OPTIONS_TOGGLE_TOOL1))
+        options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL1, false);
+      else
+        options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL1, true);
+      enableToolBar(KToolBar::Toggle, 0);
+      break;
+    case ID_OPTIONS_TOGGLE_TOOL2:
+      if(options->isItemChecked(ID_OPTIONS_TOGGLE_TOOL2))
+        options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL2, false);
+      else
+        options->setItemChecked(ID_OPTIONS_TOGGLE_TOOL2, true);
+      enableToolBar(KToolBar::Toggle, 1);
+      break;
+    case ID_OPTIONS_TOGGLE_STATS:
+      if(options->isItemChecked(ID_OPTIONS_TOGGLE_STATS))
+        options->setItemChecked(ID_OPTIONS_TOGGLE_STATS, false);
+      else
+        options->setItemChecked(ID_OPTIONS_TOGGLE_STATS, true);
+      enableStatusBar();
+      break;
+    case ID_OPTIONS_SAVE:
+      writeConfig();
+      break;
+    default:
+      break;
+  }
+}
+
+void KIconEdit::slotTools( int id )
+{
+  switch(id)
+  {
+    case ID_DRAW_SELECT:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Select);
+      break;
+    case ID_DRAW_FREEHAND:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Freehand);
+      break;
+    case ID_DRAW_ELLIPSE:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Ellipse);
+      break;
+    case ID_DRAW_ELLIPSE_FILL:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::FilledEllipse);
+      break;
+    case ID_DRAW_CIRCLE:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Circle);
+      break;
+    case ID_DRAW_CIRCLE_FILL:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::FilledCircle);
+      break;
+    case ID_DRAW_RECT:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Rect);
+      break;
+    case ID_DRAW_RECT_FILL:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::FilledRect);
+      break;
+    case ID_DRAW_ERASE:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Eraser);
+      break;
+    case ID_DRAW_LINE:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Line);
+      break;
+    case ID_DRAW_FIND:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Find);
+      break;
+    case ID_DRAW_FILL:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::FloodFill);
+      break;
+    //case ID_DRAW_SELECT:
+    case ID_DRAW_SPRAY:
+      toggleTool(id);
+      grid->setTool(KIconEditGrid::Spray);
+      break;
+    default:
+        if(id >= 500 && id <= 600)
+          KMsgBox::message(this, i18n("Warning"), i18n("Sorry - not implemented."));
+      break;
+  }
+}
+
+void KIconEdit::slotImage( int id )
+{
+  switch(id)
+  {
+#if QT_VERSION <= 140
+    case ID_IMAGE_RESIZE:
+      grid->editResize();
+      break;
+#endif
+    case ID_IMAGE_GRAYSCALE:
+      grid->grayScale();
+      break;
+    case ID_IMAGE_MAPTOKDE:
+      grid->mapToKDEPalette();
+      break;
+    default:
+      break;
+  }
+}
+
+void KIconEdit::slotSaved()
+{
+  grid->setModified(false);
+}
+
+void KIconEdit::slotUpdateStatusPos(int x, int y)
+{
+  QString str;
+  str.sprintf("%d, %d", x, y);
+  statusbar->changeItem( str.data(), 0);
+}
+
+void KIconEdit::slotUpdateStatusSize(int x, int y)
+{
+  QString str;
+  str.sprintf("%d x %d", x, y);
+  statusbar->changeItem( str.data(), 1);
+  viewport->updateScrollBars();
+}
+
+void KIconEdit::slotUpdateStatusScaling(int s, bool show)
+{
+  QString str;
+  if(show)
+  {
+    toolbar->setItemEnabled(ID_VIEW_ZOOM_IN, true);
+    toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, true);
+  }
+  else
+  {
+    toolbar->setItemEnabled(ID_VIEW_ZOOM_IN, false);
+    toolbar->setItemEnabled(ID_VIEW_ZOOM_OUT, false);
+  }
+
+  str.sprintf("1:%d", s);
+  statusbar->changeItem( str.data(), 2);
+  viewport->updateScrollBars();
+}
+
+void KIconEdit::slotUpdateStatusColors(uint)
+{
+  QString str;
+  str.sprintf(i18n("Colors: %u"), grid->numColors());
+  statusbar->changeItem( str.data(), 3);
+}
+
+void KIconEdit::slotUpdateStatusColors(uint n, uint *)
+{
+  QString str;
+  str.sprintf(i18n("Colors: %u"), n);
+  statusbar->changeItem( str.data(), 3);
+}
+
+void KIconEdit::slotUpdateStatusMessage(const char *msg)
+{
+  msgtimer->start(10000, true);
+  statusbar->changeItem( msg, 4);
+}
+
+void KIconEdit::slotClearStatusMessage()
+{
+  statusbar->changeItem( "", 4);
+}
+
+void KIconEdit::slotUpdateStatusName(const char *name)
+{
+  QString cap = "";
+  if(name && strlen(name) > 0)
+  {
+    cap += name;
+    cap += " - ";
+  }
+  cap += kapp->getCaption();
+  setCaption(cap.data());
+  addRecent(name);
+}
+
+void KIconEdit::slotUpdatePaste(bool state)
+{
+  edit->setItemEnabled(ID_EDIT_PASTE, state);
+  toolbar->setItemEnabled(ID_EDIT_PASTE, state);
+  edit->setItemEnabled(ID_EDIT_PASTE_AS_NEW, state);
+  toolbar->setItemEnabled(ID_EDIT_PASTE_AS_NEW, state);
+}
+
+void KIconEdit::slotUpdateCopy(bool state)
+{
+  edit->setItemEnabled(ID_EDIT_COPY, state);
+  toolbar->setItemEnabled(ID_EDIT_COPY, state);
+  edit->setItemEnabled(ID_EDIT_CUT, state);
+  toolbar->setItemEnabled(ID_EDIT_CUT, state);
+}
+
+void KIconEdit::slotOpenBlank(const QSize s)
+{
+  icon->cleanup();
+  grid->loadBlank( s.width(), s.height());
+}
+
+
+
