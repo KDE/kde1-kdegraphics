@@ -1,0 +1,698 @@
+# Hungarian messages for kdvi.
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Székely Krisztián <szekelyk@edasz.hu>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kdvi VERSION\n"
+"POT-Creation-Date: 1998-01-23 22:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Székely Krisztián <szekelyk@edasz.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: dviwin.cpp:216 dviwin.cpp:232 dviwin.cpp:246 dviwin.cpp:283 dviwin.cpp:300
+#: kdvi.cpp:515
+msgid "Notice"
+msgstr "Jegyzet"
+
+#: dviwin.cpp:217
+msgid ""
+"The change in font generation will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"A fontgenerálásban történt változtatás csak\n"
+"a kdvi újraindítása után érvényesül."
+
+#: dviwin.cpp:233
+msgid ""
+"The change in font path will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"A font elérési útban történt változtatás csak\n"
+"a kdvi újraindítása után érvényesül."
+
+#: dviwin.cpp:247
+msgid ""
+"The change in Metafont mode will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"A Metafont módban történt változtatás csak\n"
+"a kdvi újraindítása után érvényesül."
+
+#: dviwin.cpp:284
+msgid ""
+"The change in resolution will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"A felbontásban történt változtatás csak\n"
+"a kdvi újraindítása után érvényesül."
+
+#: dviwin.cpp:301
+msgid ""
+"The change in gamma will be effective\n"
+"only after you start kdvi again!"
+msgstr ""
+"A gamma értékben történt változás csak\n"
+"a kdvi újraindítása után érvényesül."
+
+#: dviwin.cpp:424 dviwin.cpp:458
+msgid "HEY"
+msgstr "HÉ"
+
+#: dviwin.cpp:425 dviwin.cpp:459
+msgid "What's this? DVI problem!\n"
+msgstr "Mi ez? DVI probléma!\n"
+
+#: kdvi.cpp:91
+msgid "No document"
+msgstr "Nincs dokumentum"
+
+#: kdvi.cpp:172
+msgid "&Open ..."
+msgstr "&Megnyit ..."
+
+#: kdvi.cpp:179
+msgid "Open &recent"
+msgstr "&Elõzõek megnyitása"
+
+#: kdvi.cpp:181
+msgid "&Print ..."
+msgstr "&Nyomtat ..."
+
+#: kdvi.cpp:189
+msgid "Zoom &in"
+msgstr "N&agyít"
+
+#: kdvi.cpp:190
+msgid "Zoom &out"
+msgstr "&Kicsinyít"
+
+#: kdvi.cpp:191
+msgid "&Fit to page"
+msgstr "&Teljes lap"
+
+#: kdvi.cpp:192
+msgid "Fit to page &width"
+msgstr "&Teljes szélesség"
+
+#: kdvi.cpp:194
+msgid "&Redraw page"
+msgstr "&Oldal újrarajzolás"
+
+#: kdvi.cpp:201
+msgid "&Previous"
+msgstr "&Elõzõ"
+
+#: kdvi.cpp:202
+msgid "&Next"
+msgstr "&Következõ"
+
+#: kdvi.cpp:203
+msgid "&First"
+msgstr "E&lsõ"
+
+#: kdvi.cpp:204
+msgid "&Last"
+msgstr "&Utolsó"
+
+#: kdvi.cpp:205
+msgid "&Go to ..."
+msgstr "&Menj a ..."
+
+#: kdvi.cpp:208
+msgid "&Page"
+msgstr "&Oldal"
+
+#: kdvi.cpp:213
+msgid "&Preferences ..."
+msgstr "&Beállítások ..."
+
+#: kdvi.cpp:214
+msgid "&Keys ..."
+msgstr "&Billentyûk ..."
+
+#: kdvi.cpp:216
+msgid "Make PK-&fonts"
+msgstr "PK fontok készítése"
+
+#: kdvi.cpp:218
+msgid "Show PS"
+msgstr "PS megjelenítése"
+
+#: kdvi.cpp:220
+msgid "Show &Menubar"
+msgstr "&Menüsáv"
+
+#: kdvi.cpp:222
+msgid "Show &Buttons"
+msgstr "&Gombsáv"
+
+#: kdvi.cpp:224
+msgid "Show Page Lis&t"
+msgstr "&Oldallista"
+
+#: kdvi.cpp:226
+msgid "Show &Statusbar"
+msgstr "&Állapotsor"
+
+#: kdvi.cpp:228
+msgid "Show Scro&llbars"
+msgstr "&Gördítõsávok"
+
+#: kdvi.cpp:239
+msgid "&Contents"
+msgstr "&Tartalom"
+
+#: kdvi.cpp:242
+msgid "About &Qt"
+msgstr "&Qt névjegy"
+
+#: kdvi.cpp:261
+msgid "Open document ..."
+msgstr "Megnyitás ..."
+
+#: kdvi.cpp:262
+msgid "Reload document"
+msgstr "Újra betölt"
+
+#: kdvi.cpp:263
+msgid "Print ..."
+msgstr "Nyomtatás ..."
+
+#: kdvi.cpp:265
+msgid "Go to first page"
+msgstr "Elsõ oldalra"
+
+#: kdvi.cpp:266
+msgid "Go to previous page"
+msgstr "Elõzõ oldalra"
+
+#: kdvi.cpp:267
+msgid "Go down then top of next page"
+msgstr "Következõ oldal tetejére"
+
+#: kdvi.cpp:268
+msgid "Go to next page"
+msgstr "Következõ oldalra"
+
+#: kdvi.cpp:269
+msgid "Go to last page"
+msgstr "Utolsó oldalra"
+
+#: kdvi.cpp:271
+msgid "Decrease magnification"
+msgstr "Kicsinyítés"
+
+#: kdvi.cpp:272
+msgid "Small text"
+msgstr "Kis szöveg"
+
+#: kdvi.cpp:273
+msgid "Large text"
+msgstr "Nagy szöveg"
+
+#: kdvi.cpp:274
+msgid "Increase magnification"
+msgstr "Nagyítás"
+
+#: kdvi.cpp:299
+msgid "Scroll window and switch the page"
+msgstr "Görgesd az ablakot és válts lapot"
+
+#: kdvi.cpp:308
+msgid "Select page and mark pages for printing"
+msgstr "Lap választás és nyomtatásra kijelölés"
+
+#: kdvi.cpp:323
+msgid "X:0000, Y:0000 "
+msgstr "X:0000, Y:0000 "
+
+#: kdvi.cpp:325
+msgid "Shrink: xx"
+msgstr "Zsugorítás : xx"
+
+#: kdvi.cpp:327
+msgid "Page: xxxx / xxxx"
+msgstr "Oldal: xxxx / xxxx"
+
+#: kdvi.cpp:344 kdvi.cpp:396
+msgid "New window"
+msgstr "Új ablak"
+
+#: kdvi.cpp:345 kdvi.cpp:397
+msgid "Open file"
+msgstr "Megnyit"
+
+#: kdvi.cpp:346 kdvi.cpp:398
+msgid "Print dialog"
+msgstr "Nyomtatás dialógus"
+
+#: kdvi.cpp:348 kdvi.cpp:400
+msgid "Zoom in"
+msgstr "Nagyítás"
+
+#: kdvi.cpp:349 kdvi.cpp:401
+msgid "Zoom out"
+msgstr "Kicsinyítés"
+
+#: kdvi.cpp:350 kdvi.cpp:402
+msgid "Fit window"
+msgstr "Teljes ablakba"
+
+#: kdvi.cpp:351 kdvi.cpp:403
+msgid "Fit width"
+msgstr "Teljes szélesség"
+
+#: kdvi.cpp:352 kdvi.cpp:404
+msgid "Redraw page"
+msgstr "Oldal újrarajzolása"
+
+#: kdvi.cpp:353 kdvi.cpp:406
+msgid "Next page"
+msgstr "Következõ oldal"
+
+#: kdvi.cpp:354 kdvi.cpp:405
+msgid "Previous page"
+msgstr "Elõzõ oldal"
+
+#: kdvi.cpp:355 kdvi.cpp:408
+msgid "Last page"
+msgstr "Utolsó oldal"
+
+#: kdvi.cpp:356 kdvi.cpp:407
+msgid "First page"
+msgstr "Elsõ oldal"
+
+#: kdvi.cpp:357 kdvi.cpp:409
+msgid "Goto page"
+msgstr "Menj az oldalra"
+
+#: kdvi.cpp:358
+msgid "Configure keys"
+msgstr "Billentyû beállítás"
+
+#: kdvi.cpp:359 kdvi.cpp:410
+msgid "Toggle show PS"
+msgstr "PS mejelenítés"
+
+#: kdvi.cpp:360 kdvi.cpp:411
+msgid "Toggle menu bar"
+msgstr "Menüsáv"
+
+#: kdvi.cpp:361 kdvi.cpp:412
+msgid "Toggle button bar"
+msgstr "Gombsáv"
+
+#: kdvi.cpp:362 kdvi.cpp:413
+msgid "Toggle page list"
+msgstr "Oldallista"
+
+#: kdvi.cpp:363 kdvi.cpp:414
+msgid "Toggle status bar"
+msgstr "Állapotsor"
+
+#: kdvi.cpp:364 kdvi.cpp:415
+msgid "Toggle scroll bars"
+msgstr "Gördítõsávok"
+
+#: kdvi.cpp:467
+msgid "File open dialog is open"
+msgstr "Fájl dialógus nyitva"
+
+#: kdvi.cpp:516
+msgid "Can't read file:\n"
+msgstr "Nem olvasható a file:\n"
+
+#: kdvi.cpp:522
+msgid "Opening "
+msgstr "Nyitás"
+
+#: kdvi.cpp:547
+msgid "Opened "
+msgstr "Nyitva "
+
+#: kdvi.cpp:557
+msgid "Print dialog is open"
+msgstr "Nyomtatás dialógus nyitva"
+
+#: kdvi.cpp:572
+msgid "View size fits page"
+msgstr "Teljes lap nézet"
+
+#: kdvi.cpp:581
+msgid "View width fits page"
+msgstr "Teljes szélesség nézet"
+
+#: kdvi.cpp:673
+msgid "Preferences applied"
+msgstr "Beállítások alkalmazva"
+
+#: kdvi.cpp:677
+msgid " Page "
+msgstr " Oldal "
+
+#: kdvi.cpp:679
+msgid "Go to page"
+msgstr "Ugorj az oldalra"
+
+#: kdvi.cpp:693
+msgid "Go to"
+msgstr "Ugorj"
+
+#: kdvi.cpp:714
+msgid "Missing PK-fonts will be generated"
+msgstr "A hiányzó PK-fontok generálódnak"
+
+#: kdvi.cpp:715
+msgid "Missing PK-fonts will be logged to 'missfont.log'"
+msgstr "A hiányzó PK-fontok a missfont.log-ba íródnak"
+
+#: kdvi.cpp:731
+msgid "Postcsript specials are rendered"
+msgstr "Postscript specialitások rajzolása"
+
+#: kdvi.cpp:732
+msgid "Postscript specials are not rendered"
+msgstr "Postscript specialitások nem rajzolódnak"
+
+#: kdvi.cpp:748
+msgid "No menu bar"
+msgstr "Nincs menüsáv"
+
+#: kdvi.cpp:748
+msgid "Menu bar is shown"
+msgstr "Menüsáv látható"
+
+#: kdvi.cpp:766
+msgid "No button bar"
+msgstr "Nincs gombsáv"
+
+#: kdvi.cpp:766
+msgid "Button bar is shown"
+msgstr "Gombsáv látható"
+
+#: kdvi.cpp:780
+msgid "Tool bar is shown"
+msgstr "Eszközsáv látható"
+
+#: kdvi.cpp:780
+msgid "No tool bar"
+msgstr "Nincs eszközsáv"
+
+#: kdvi.cpp:804
+msgid "No status bar"
+msgstr "Nincs állapotsor"
+
+#: kdvi.cpp:804
+msgid "Status bar is shown"
+msgstr "Állapotsor látható"
+
+#: kdvi.cpp:818
+msgid "Scroll bars are shown"
+msgstr "Gördítõsávok láthatók"
+
+#: kdvi.cpp:818
+msgid "No scroll bars"
+msgstr "Nincsenek gördítõsávok"
+
+#: kdvi.cpp:835
+msgid "About Kdvi"
+msgstr "Kdvi névjegy"
+
+#: kdvi.cpp:836
+msgid ""
+"kdvi - TeX DVI viewer\n"
+"Version "
+msgstr ""
+"kdvi - TeX DVI nézõ\n"
+"Verzió"
+
+#: kdvi.cpp:838
+msgid ""
+"\n"
+"\n"
+"Markku Hihnala <mah@ee.oulu.fi>"
+msgstr ""
+"\n"
+"\n"
+"Marku Hihnala <mah@ee.oulu.fi>" 
+
+#: kdvi.cpp:874
+msgid "Page: "
+msgstr "Oldal: "
+
+#: kdvi.cpp:874
+msgid " / "
+msgstr " / "
+
+#: kdvi.cpp:905
+msgid "Large text button set to shrink factor "
+msgstr ""
+
+#: kdvi.cpp:913
+msgid "Small text button set to shrink factor "
+msgstr ""
+
+#: kdvi.cpp:937
+msgid "File reloaded"
+msgstr "Fájl újratöltve"
+
+#: marklist.cpp:38
+msgid "Mark current"
+msgstr "Aktuális kijelölése"
+
+#: marklist.cpp:39
+msgid "Unmark current"
+msgstr "Kijelölés megszüntetése"
+
+#: marklist.cpp:40
+msgid "Mark all"
+msgstr "Mindent kijelöl"
+
+#: marklist.cpp:41
+msgid "Mark even"
+msgstr "Párosak kijelölése"
+
+#: marklist.cpp:42
+msgid "Mark odd"
+msgstr "Páratlanok kijelölése"
+
+#: marklist.cpp:43
+msgid "Toggle marks"
+msgstr "Jelölés állítása"
+
+#: marklist.cpp:44
+msgid "Remove marks"
+msgstr "Jelölés leszedése"
+
+#: prefs.cpp:46
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: prefs.cpp:214
+msgid "Menu Bar"
+msgstr "Menüsáv"
+
+#: prefs.cpp:215
+msgid "Button Bar"
+msgstr "Gombsáv"
+
+#: prefs.cpp:216
+msgid "Status Bar"
+msgstr "Állapotsor"
+
+#: prefs.cpp:217
+msgid "Page List"
+msgstr "Oldallista"
+
+#: prefs.cpp:218
+msgid "Scroll Bars"
+msgstr "Gördítõ sávok"
+
+#: prefs.cpp:240
+msgid "Number of recent files"
+msgstr "Elõzõ fájlok száma"
+
+#: prefs.cpp:252
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: prefs.cpp:261
+msgid "Generate missing fonts"
+msgstr "Hiányzó fontok létrehozása"
+
+#: prefs.cpp:278
+msgid "Resolution"
+msgstr "Felbontás"
+
+#: prefs.cpp:283
+msgid "Metafont mode"
+msgstr "Metafont mód"
+
+#: prefs.cpp:292
+msgid "PK Font Path"
+msgstr "PK Font útvonal"
+
+#: prefs.cpp:301
+msgid "Shrink factor for small text"
+msgstr "Kis szöveg kicsinyítési tényezõ"
+
+#: prefs.cpp:306
+msgid "Shrink factor for large text"
+msgstr "Nagy szöveg kicsinyítési tényezõ"
+
+#: prefs.cpp:319
+msgid "Fonts"
+msgstr "Fontok"
+
+#: prefs.cpp:326
+msgid "Show postscript specials"
+msgstr "Postscript specialitások megjelenítése"
+
+#: prefs.cpp:327
+msgid "Antialiased postcript"
+msgstr "Élsimított postcript"
+
+#: prefs.cpp:345
+msgid "Gamma"
+msgstr "Gamma"
+
+#: prefs.cpp:358
+msgid "Rendering"
+msgstr "Rajzolás"
+
+#: prefs.cpp:388
+msgid "Paper"
+msgstr "Papír"
+
+#: print.cpp:44
+msgid "Print"
+msgstr "Nyomtat"
+
+#: print.cpp:63
+msgid "Print "
+msgstr "Nyomtat"
+
+#: print.cpp:122
+msgid "Cannot open dvi file!"
+msgstr "Nem lehet megnyitni a dvi fájlt!"
+
+#: print.cpp:126
+msgid "Cannot open output dvi file!"
+msgstr "Nem lehet megnyitni az eredmény dvi fájlt!"
+
+#: print.cpp:138
+msgid "Cannot handle this dvi version!"
+msgstr "Nem kezelhetõ dvi verzió!"
+
+#: print.cpp:243
+msgid "Invalid page range!"
+msgstr "Érvénytelen lap határ!"
+
+#: print.cpp:320 printSetup.cpp:74
+msgid "Default Printer"
+msgstr "Alapnyomtató"
+
+#: printData.cpp:32
+msgid "&File Name:"
+msgstr "&Fájlnév:"
+
+#: printData.cpp:59
+msgid "&All"
+msgstr "&Mind"
+
+#: printData.cpp:66
+msgid "&Current"
+msgstr "&Aktuális"
+
+#: printData.cpp:72
+msgid "&Marked"
+msgstr "&Kijelölt"
+
+#: printData.cpp:79
+msgid "&Range"
+msgstr "&Tartomány"
+
+#: printData.cpp:99
+msgid "Re&verse"
+msgstr "&Fordított"
+
+#: printData.cpp:108
+msgid "1 page on sheet"
+msgstr "1 oldal egy lapon"
+
+#: printData.cpp:109
+msgid "2 pages on sheet"
+msgstr "2 oldal egy lapon"
+
+#: printData.cpp:110
+msgid "4 pages on sheet"
+msgstr "4 oldal egy lapon"
+
+#: printData.cpp:116
+msgid "Fill rows"
+msgstr "Sorok feltöltése"
+
+#: printData.cpp:117
+msgid "Fill columns"
+msgstr "Oszlopok feltöltése"
+
+#: printData.cpp:129
+msgid "&Setup"
+msgstr "&Beállítások"
+
+#: printData.cpp:144
+msgid "Page order"
+msgstr "Lap sorrend"
+
+#: printData.cpp:152
+msgid "Pages"
+msgstr "Lapok"
+
+#: printData.cpp:164
+msgid "Print to"
+msgstr "Nyomtatás"
+
+#: printSetup.cpp:24
+msgid "Print Setup"
+msgstr "Nyomtatási beállítások"
+
+#: printSetupData.cpp:43
+msgid "Printers"
+msgstr "Nyomtatók"
+
+#: printSetupData.cpp:48
+msgid "&Internal"
+msgstr "&Belsõ"
+
+#: printSetupData.cpp:66
+msgid "Use ps&nup"
+msgstr "Ps&nup használata"
+
+#: printSetupData.cpp:72
+msgid "Use &mpage"
+msgstr "&Mpage használata"
+
+#: printSetupData.cpp:92
+msgid "&Add"
+msgstr "&Hozzáad"
+
+#: printSetupData.cpp:99
+msgid "&Remove"
+msgstr "&Töröl"
+
+#: printSetupData.cpp:120
+msgid "&Spooler command:"
+msgstr "&Spooler parancs:"
+
+#: printSetupData.cpp:128
+msgid "n-up"
+msgstr "n fel"
+
+#: printSetupData.cpp:137
+msgid "Printing method"
+msgstr "Nyomtatási módszer"
