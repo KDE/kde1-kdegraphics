@@ -138,7 +138,6 @@ public:
 
     void setFaxTitle(char* name);
     void setStatusBarMemField(int mem);
-    static void kfaxerror(char*,char*);
     void handle_X_event(XEvent Event);
     void putImage();
 //    void setFaxDefaults();
@@ -243,5 +242,7 @@ public slots:
     void slotKFMFinished();
     void slotDropEvent( KDNDDropZone * _dropZone );
 };
+
+void kfaxerror(char*,char*);
 
 #endif

@@ -103,9 +103,8 @@ extern int qwindow_height;
 
 extern void setstatusbarmem(int);
 extern void setfaxtitle(char*);
-extern "C"
-{
-  static void kfaxerror(char*, char*);
+extern "C" void kfaxerror(char* title,char* error) {
+  kfaxerror(title,error);
 }
 
 struct pagenode *firstpage, *lastpage, *thispage, *helppage, *auxpage;

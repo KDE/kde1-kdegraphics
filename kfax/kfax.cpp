@@ -2447,10 +2447,8 @@ void TopLevel::uiUpdate(){
   
 }
 
-void TopLevel::kfaxerror(char* title, char* error){
-
+void kfaxerror(char* title, char* error){
   QMessageBox::warning(0,title,error,"OK",0);
-
 }
 
 void TopLevel::putImage(){
@@ -2650,13 +2648,6 @@ void setstatusbarmem(int mem){
   
 }
 
-
-extern "C"  void kfaxerror(char* title,char* error){
-
-  toplevel->kfaxerror(title,error);
-
-
-}
 
 void mysighandler(int ){
 
