@@ -1,5 +1,5 @@
 Source: kdegraphics
-Section: contrib/x11
+Section: contrib/graphics
 Priority: extra
 Maintainer: Stephan Kulow <coolo@kde.org>
 Standards-Version: 2.5.0
