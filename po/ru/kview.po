@@ -198,7 +198,7 @@ msgstr "Ошибка передачи: "
 #: viewer.cpp:618
 msgid "Loading..."
 msgstr "Загружаю..."
-	
+
 #: viewer.cpp:632
 #, c-format
 msgid "Couldn't load %s"
