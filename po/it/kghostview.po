@@ -34,7 +34,6 @@ msgid "Remove page marks"
 msgstr "Rimuovi i segni delle pagine"
 
 #: marklist.cpp:367
-#,
 msgid "Page"
 msgstr "Pagina"
 
@@ -645,8 +644,8 @@ msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
-"Imposta la variabile d'ambiente (per esempio PRINTER o LPDEST) per il nome della "
-"stampante di cui tener conto."
+"Imposta la variabile d'ambiente (per esempio PRINTER o LPDEST) per il nome "
+"della stampante di cui tener conto."
 
 #: kghostview.cpp:1661
 #, c-format

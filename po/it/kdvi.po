@@ -67,7 +67,6 @@ msgid "File status changed."
 msgstr "Stato file cambiato."
 
 #: dviwin.cpp:513 kdvi.cpp:937
-#, 
 msgid "File reloaded."
 msgstr "File ricaricato."
 
@@ -128,7 +127,6 @@ msgid "&Redraw page"
 msgstr "&Aggiorna pagina"
 
 #: kdvi.cpp:203
-#, 
 msgid "&Previous"
 msgstr "&Precedente"
 
@@ -467,7 +465,7 @@ msgid "Small text button set to shrink factor "
 msgstr "Pulsanti con testo piccolo settati a fattore esatto"
 
 #: kdvi.cpp:931
-#, , c-format
+#, c-format
 msgid "Shrink: %d"
 msgstr "Riduzione: %d"
 

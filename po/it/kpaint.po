@@ -34,27 +34,26 @@ msgid "Image Depth:"
 msgstr "Numero Colori Immagine:"
 
 #: depthdialog.cpp:24
-#,
 msgid "1 (2 Colours)"
 msgstr "1 (2 Colori)"
 
-#: depthdialog.cpp:25
 #
+#: depthdialog.cpp:25
 msgid "4 (16 Colours)"
 msgstr "4 (16 Colori)"
 
-#: depthdialog.cpp:26
 #
+#: depthdialog.cpp:26
 msgid "8 (256 Colours)"
 msgstr "8 (256 Colori)"
 
-#: depthdialog.cpp:27
 #
+#: depthdialog.cpp:27
 msgid "15 (32k Colours)"
 msgstr "15 (32k Colori)"
 
-#: depthdialog.cpp:28
 #
+#: depthdialog.cpp:28
 msgid "16 (64k Colours)"
 msgstr "16 (64k Colori)"
 
@@ -62,8 +61,8 @@ msgstr "16 (64k Colori)"
 msgid "24 (True Colour)"
 msgstr "24 (True Colour)"
 
-#: depthdialog.cpp:30
 #
+#: depthdialog.cpp:30
 msgid "32 (True Colour)"
 msgstr "32 (True Colour)"
 
@@ -235,7 +234,6 @@ msgid " version "
 msgstr " versione "
 
 #: kpaint.cpp:496
-#,
 msgid "(c) "
 msgstr "(c) "
 
