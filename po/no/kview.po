@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Hans Petter Bieker <zerium@webindex.no>, 1998.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kview 1.0\n"
+"POT-Creation-Date: 1998-08-09 13:28+0200\n"
+"PO-Revision-Date: 1998-08-09 14:50+0200\n"
+"Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
+"Language-Team: no <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: wview.cpp:81
+msgid "&Image"
+msgstr "&Bilde"
+
+#: wview.cpp:87
+msgid "&Open File.."
+msgstr "Å&pne fil..."
+
+#: wview.cpp:88
+msgid "Open &URL.."
+msgstr "Åpne &URL..."
+
+#: wview.cpp:95
+msgid "&Zoom"
+msgstr "&Forstørr"
+
+#: wview.cpp:96
+msgid "&Rotate"
+msgstr "&Roter"
+
+#: wview.cpp:97
+msgid "To &Desktop"
+msgstr "Til &skrivebord"
+
+#: wview.cpp:99
+msgid "&Toggle Menu"
+msgstr "&Av/på meny"
+
+#: wview.cpp:100
+msgid "&Size Window"
+msgstr ""
+
+#: wview.cpp:102
+msgid "I&mage Info"
+msgstr "&Bildeinformasjon"
+
+#: wview.cpp:106
+msgid "&in"
+msgstr "&inn"
+
+#: wview.cpp:107
+msgid "&out"
+msgstr "&ut"
+
+#: wview.cpp:111
+msgid "&Clockwise"
+msgstr "&Klokkevis"
+
+#: wview.cpp:113
+msgid "&Anti-clock"
+msgstr "&Mot klokken"
+
+#: wview.cpp:118
+msgid "Ti&le"
+msgstr "&Side ved side"
+
+#: wview.cpp:119
+msgid "&Max Size"
+msgstr "&Maks størrelse"
+
+#: wview.cpp:120
+msgid "M&axpect"
+msgstr ""
