@@ -73,13 +73,12 @@ msgstr "Vad är detta? DVI problem!\n"
 
 #: dviwin.cpp:508
 msgid "File status changed."
-msgstr ""
+msgstr "Filstatus ändrad."
 
 # kdvi.cpp:937
 #: dviwin.cpp:513 kdvi.cpp:937
-#, fuzzy
 msgid "File reloaded."
-msgstr "Uppdaterad fil"
+msgstr "Filen laddad på nytt."
 
 # kdvi.cpp:92
 #: kdvi.cpp:93
@@ -152,9 +151,8 @@ msgstr "U&ppdatera sida"
 
 # kdvi.cpp:353 kdvi.cpp:404
 #: kdvi.cpp:203
-#, fuzzy
 msgid "&Previous"
-msgstr "Föregående"
+msgstr "&Föregående"
 
 #: kdvi.cpp:204
 msgid "&Next"
@@ -573,9 +571,9 @@ msgstr "Knappen för liten text satt att förminska"
 
 # kdvi.cpp:324
 #: kdvi.cpp:931
-#, fuzzy, c-format
+#, c-format
 msgid "Shrink: %d"
-msgstr "Krymp: xx"
+msgstr "Krymp: %d"
 
 # marklist.cpp:38
 #: marklist.cpp:37

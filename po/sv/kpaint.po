@@ -2,7 +2,6 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -23,23 +22,20 @@ msgid "Canvas Size"
 msgstr "Dukstorlek"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "Bredd"
+msgstr "Bredd:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Höjd"
+msgstr "Höjd:"
 
 #: circle.cpp:18 circle.cpp:25 manager.cpp:67
 msgid "Circle"
 msgstr "Cirkel"
 
 #: depthdialog.cpp:18
-#, fuzzy
 msgid "Image Depth:"
-msgstr "Bildbredd:"
+msgstr "Färgdjup:"
 
 #: depthdialog.cpp:24
 msgid "1 (2 Colours)"
@@ -139,9 +135,8 @@ msgid "New Image..."
 msgstr "Ny bild..."
 
 #: kpaint.cpp:432
-#, fuzzy
 msgid "Save Image"
-msgstr "Spara bild..."
+msgstr "Spara bild"
 
 #: kpaint.cpp:433
 msgid "Save Image As..."
@@ -220,22 +215,20 @@ msgid "Show Status Bar"
 msgstr ""
 
 #: kpaint.cpp:485
-#, fuzzy
 msgid "Save Options"
-msgstr "Inställningar..."
+msgstr "Spara inställningarna"
 
 #: kpaint.cpp:494
-#, fuzzy
 msgid "KPaint"
-msgstr "Om KPaint"
+msgstr "KPaint"
 
 #: kpaint.cpp:495
 msgid " version "
-msgstr ""
+msgstr " version "
 
 #: kpaint.cpp:496
 msgid "(c) "
-msgstr ""
+msgstr "(c)"
 
 #: kpaint.cpp:505
 msgid "&Image"
@@ -262,15 +255,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Okänt filformat"
 
 #: kpaint.cpp:691
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Fel: Okänt format\n"
-"Antingen förstår KPaint inte formatet på den angivna filen, eller så är den "
-"förstörd."
+"Antingen förstår KPaint inte formatet på den angivna filen,\n"
+"eller så är den förstörd."
 
 #: line.cpp:19 manager.cpp:71
 msgid "Line"
@@ -405,99 +397,5 @@ msgid "Set Line Colour..."
 msgstr "Ställ in linjefärg..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
 msgstr "Rektangel"
-
-#~ msgid ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
-#~ msgstr ""
-#~ "\n"
-#~ "(c) Richard J. Moore 1997 Släppt under GPL se LICENSE för detaljer\n"
-
-#~ msgid "Usage: "
-#~ msgstr "Användning: "
-
-#~ msgid " [url | filename]\n"
-#~ msgstr " [url | filnamn]\n"
-
-#, fuzzy
-#~ msgid "Exit"
-#~ msgstr "&Redigera"
-
-#~ msgid "Open Location:"
-#~ msgstr "Öppna plats:"
-
-#~ msgid "Save to Location:"
-#~ msgstr "Spara till plats:"
-
-#~ msgid "Continue"
-#~ msgstr "Fortsätt"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Ogiltlig URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Fel: Ogiltlig URL\n"
-#~ "KPaint förstår inte den angivna URLen, kolla att den är rätt."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint håller redan på med att öppna en fil över nätverket.\n"
-#~ "Du måste antingen avbryta den nuvarande överföringen eller vänta på att den "
-#~ "blir klar"
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Kunde inte hitta KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Fel: KPaint kunde inte hitta en körande KFM eller starta en självt."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Nätverksladdningen misslyckades"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Fel: Nätverksladdningen misslyckades\n"
-#~ "Någonting gick fel :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Kunde inte starta KFM"
-
-#~ msgid "Save File As"
-#~ msgstr "Spara som"
-
-#~ msgid "This was a QString"
-#~ msgstr "Det här var en QString"
-
-#~ msgid "Cut"
-#~ msgstr "Klipp ur"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiera"
-
-#~ msgid "Paste"
-#~ msgstr "Klistra in"
-
-#~ msgid "Index"
-#~ msgstr "Index"
-
-#~ msgid "&File"
-#~ msgstr "&Arkiv"
-
-#~ msgid "&Help"
-#~ msgstr "&Hjälp"
-
-#~ msgid "Sorry"
-#~ msgstr "Tyvärr"
-
-#~ msgid "Browse..."
-#~ msgstr "Bläddra..."
