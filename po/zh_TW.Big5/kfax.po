@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-01-06 01:47+0100\n"
+"POT-Creation-Date: 1999-01-25 01:42+0100\n"
 "PO-Revision-Date: 1998-06-30 16:30+0000\n"
 "Last-Translator: Yu-Ting Kuo <beta2000@yahoo.com>\n"
 "Language-Team: BIG-5 Chinese <LL@li.org>\n"
@@ -15,183 +15,210 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING\n"
 
 # kfax.cpp:222 kfax.cpp:820
-#: kfax.cpp:233 kfax.cpp:828
+#: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
 msgstr "顯示工具列[&T]"
 
 # kfax.cpp:224 kfax.cpp:813
-#: kfax.cpp:235 kfax.cpp:821
+#: kfax.cpp:235 kfax.cpp:820
 msgid "Hide &Tool Bar"
 msgstr "隱藏工具列[&T]"
 
 # kfax.cpp:227 kfax.cpp:793
-#: kfax.cpp:238 kfax.cpp:801
+#: kfax.cpp:238 kfax.cpp:800
 msgid "Show &Status Bar"
 msgstr "顯示狀態列[&S]"
 
 # kfax.cpp:229 kfax.cpp:786
-#: kfax.cpp:240 kfax.cpp:794
+#: kfax.cpp:240 kfax.cpp:793
 msgid "Hide &Status Bar"
 msgstr "隱藏狀態列[&S]"
 
+#: kfax.cpp:395
+#, c-format
+msgid ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
+msgstr ""
+
 # kfax.cpp:381
-#: kfax.cpp:403
+#: kfax.cpp:402
 msgid "Help page"
 msgstr "說明頁"
 
 # kfax.cpp:384
-#: kfax.cpp:405
+#: kfax.cpp:404
 msgid "&Open Fax..."
 msgstr "打開傳真文件[&O]..."
 
 # kfax.cpp:385
-#: kfax.cpp:406
+#: kfax.cpp:405
 msgid "&Add Fax..."
 msgstr "新增傳真[&A]..."
 
 # kfax.cpp:388
-#: kfax.cpp:409
+#: kfax.cpp:408
 msgid "Open &URL..."
 msgstr "開啟 &URL..."
 
 # kfax.cpp:389
-#: kfax.cpp:410
+#: kfax.cpp:409
 msgid "Save to U&RL..."
 msgstr "存至 U&RL..."
 
 # kfax.cpp:390
-#: kfax.cpp:411
+#: kfax.cpp:410
 msgid "&Close Fax"
 msgstr "關閉傳真文件[&O]..."
 
 # kfax.cpp:397
-#: kfax.cpp:418
+#: kfax.cpp:417
 msgid "&Next Page"
 msgstr "下一頁[&N]"
 
 # kfax.cpp:398
-#: kfax.cpp:419
+#: kfax.cpp:418
 msgid "&Prev Page"
 msgstr "前一頁[&P]"
 
 # kfax.cpp:399
-#: kfax.cpp:420
+#: kfax.cpp:419
 msgid "&First Page"
 msgstr "第一頁[&F]"
 
 # kfax.cpp:400
-#: kfax.cpp:421
+#: kfax.cpp:420
 msgid "&Last Page"
 msgstr "最後一頁[&L]"
 
 # kfax.cpp:402
-#: kfax.cpp:423
+#: kfax.cpp:422
 msgid "&Rotate Page"
 msgstr "旋轉頁面[&R]"
 
 # kfax.cpp:403
-#: kfax.cpp:424
+#: kfax.cpp:423
 msgid "&Mirror Page"
 msgstr "左右鏡射[&M]"
 
 # kfax.cpp:404
-#: kfax.cpp:425
+#: kfax.cpp:424
 msgid "&Flip Page"
 msgstr "上下鏡射[&F]"
 
 # kfax.cpp:406
-#: kfax.cpp:427
+#: kfax.cpp:426
 msgid "Zoom &in"
 msgstr "拉近[I]"
 
 # kfax.cpp:407
-#: kfax.cpp:428
+#: kfax.cpp:427
 msgid "Zoom &out"
 msgstr "拉遠[O]"
 
 # kfax.cpp:412
-#: kfax.cpp:433
+#: kfax.cpp:432
 #, fuzzy
 msgid "&Fax Options..."
 msgstr "傳真選項[&F]"
 
 # kfax.cpp:414
-#: kfax.cpp:435
+#: kfax.cpp:434
 msgid "&Tool Bar"
 msgstr "工具列[&T]"
 
 # kfax.cpp:415
-#: kfax.cpp:436
+#: kfax.cpp:435
 msgid "&Status Bar"
 msgstr "狀態列[&S]"
 
 # kfax.cpp:442
-#: kfax.cpp:463
+#: kfax.cpp:462
 msgid "Go back"
 msgstr "往回"
 
 # kfax.cpp:445
-#: kfax.cpp:466
+#: kfax.cpp:465
 msgid "Go forward"
 msgstr "往前"
 
 # kfax.cpp:450
-#: kfax.cpp:471
+#: kfax.cpp:470
 msgid "Go to start"
 msgstr "到開頭"
 
 # kfax.cpp:453
-#: kfax.cpp:474
+#: kfax.cpp:473
 msgid "Go to end"
 msgstr "到結尾"
 
 # kfax.cpp:459
-#: kfax.cpp:480
+#: kfax.cpp:479
 msgid "Zoom in"
 msgstr "拉近"
 
 # kfax.cpp:462
-#: kfax.cpp:483
+#: kfax.cpp:482
 msgid "Zoom out"
 msgstr "拉遠"
 
 # kfax.cpp:467
-#: kfax.cpp:488
+#: kfax.cpp:487
 msgid "Print document"
 msgstr "列印文件"
 
 # kfax.cpp:476
-#: kfax.cpp:497
+#: kfax.cpp:496
 msgid "Go to page ..."
 msgstr "到某一頁..."
 
+#: kfax.cpp:554
+msgid "w: 00000 h: 00000"
+msgstr ""
+
+#: kfax.cpp:555
+msgid "Res: XXXXX"
+msgstr ""
+
+#: kfax.cpp:556
+msgid "Type: XXXXXXX"
+msgstr ""
+
+#: kfax.cpp:557
+msgid "P:XXXofXXX"
+msgstr ""
+
 # kfax.cpp:562
-#: kfax.cpp:583
+#: kfax.cpp:582
 msgid "Open Location:"
 msgstr "開啟位址:"
 
 # kfax.cpp:578
-#: kfax.cpp:599
+#: kfax.cpp:598
 msgid "You need to open a Fax first"
 msgstr "您得先開啟一份傳真文件"
 
 # kfax.cpp:584
-#: kfax.cpp:605
+#: kfax.cpp:604
 msgid "Save to Location:"
 msgstr "存至位址:"
 
 # kfax.cpp:804
-#: kfax.cpp:812
+#: kfax.cpp:811
 msgid "Not yet implemented"
 msgstr "尚未完成的功\能"
 
 # kfax.cpp:854
-#: kfax.cpp:862
+#: kfax.cpp:861
 msgid "     There is no document active      "
 msgstr "         沒有使用中的文件             "
 
 # kfax.cpp:988
-#: kfax.cpp:996
+#: kfax.cpp:995
 #, c-format
 msgid ""
 "Invalid page dimensions:\n"
@@ -201,29 +228,29 @@ msgstr ""
 "寬 %.2f 高 %.2f\n"
 
 # kfax.cpp:1004
-#: kfax.cpp:1012
+#: kfax.cpp:1011
 #, c-format
 msgid "Can't print to \"%s\"\n"
 msgstr "無法印到 \"%s\"\n"
 
 # kfax.cpp:1015
-#: kfax.cpp:1023
+#: kfax.cpp:1022
 #, c-format
 msgid "Couldn't create %s\n"
 msgstr "無法建立 %s\n"
 
 # kfax.cpp:1085
-#: kfax.cpp:1093
+#: kfax.cpp:1092
 msgid "Saving ..."
 msgstr "儲存中..."
 
 # kfax.cpp:1092
-#: kfax.cpp:1100
+#: kfax.cpp:1099
 msgid "Loading ..."
 msgstr "載入中..."
 
 # kfax.cpp:1119 kfax.cpp:1155
-#: kfax.cpp:1127 kfax.cpp:1163
+#: kfax.cpp:1126 kfax.cpp:1162
 msgid ""
 "Failure in 'copy file()'\n"
 "Couldn't save file!"
@@ -232,12 +259,12 @@ msgstr ""
 "無法儲存檔案!"
 
 # kfax.cpp:1125
-#: kfax.cpp:1133
+#: kfax.cpp:1132
 msgid "Saved"
 msgstr "存檔完成"
 
 # kfax.cpp:1132 kfax.cpp:1194
-#: kfax.cpp:1140 kfax.cpp:1202
+#: kfax.cpp:1139 kfax.cpp:1201
 msgid ""
 "KFax is already waiting\n"
 "for an internet job to finish\n"
@@ -247,47 +274,79 @@ msgstr ""
 "的作業完成，請稍待\n"
 
 # kfax.cpp:1143 kfax.cpp:1207
-#: kfax.cpp:1151 kfax.cpp:1215
+#: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
 msgstr "無法和 KFM 連絡"
 
 # kfax.cpp:1184
-#: kfax.cpp:1192
+#: kfax.cpp:1191
 #, c-format
 msgid "Loading '%s'"
 msgstr "載入 '%s' 中"
 
-#: kfax.cpp:1195
+#: kfax.cpp:1194
 msgid "Done"
 msgstr ""
 
 # kfax.cpp:1201
-#: kfax.cpp:1209
+#: kfax.cpp:1208
 msgid "Calling KFM"
 msgstr "呼叫 KFM"
 
 # kfax.cpp:1214
-#: kfax.cpp:1222
+#: kfax.cpp:1221
 msgid "Starting Job"
 msgstr "開始作業"
 
 # kfax.cpp:1217
-#: kfax.cpp:1225
+#: kfax.cpp:1224
 msgid "Connected"
 msgstr "已連線"
 
 # kfax.cpp:1219
-#: kfax.cpp:1227
+#: kfax.cpp:1226
 msgid "Waiting..."
 msgstr "等待中..."
 
 # kfax.cpp:2070
-#: kfax.cpp:2078
+#: kfax.cpp:2077
 msgid "You need to open a fax page first."
 msgstr "您得先開啟一份傳真文件。"
 
+#: kfax.cpp:2400
+#, c-format
+msgid "P.%d of %d"
+msgstr ""
+
+#: kfax.cpp:2411
+#, c-format
+msgid "W: %d H: %d"
+msgstr ""
+
+#: kfax.cpp:2416
+#, c-format
+msgid "Res: %s"
+msgstr ""
+
+# options.cpp:71
+#: kfax.cpp:2416 options.cpp:71
+msgid "Fine"
+msgstr "高"
+
+#: kfax.cpp:2416 options.cpp:74
+msgid "Normal"
+msgstr ""
+
+#: kfax.cpp:2424
+msgid "Type: Tiff "
+msgstr ""
+
+#: kfax.cpp:2427
+msgid "Type: Raw "
+msgstr ""
+
 # kfax.cpp:2740
-#: kfax.cpp:2739
+#: kfax.cpp:2738
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
@@ -387,15 +446,6 @@ msgstr "原始的傳真解析度"
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
 msgstr "自動"
-
-# options.cpp:71
-#: options.cpp:71
-msgid "Fine"
-msgstr "高"
-
-#: options.cpp:74
-msgid "Normal"
-msgstr ""
 
 # options.cpp:81
 #: options.cpp:81

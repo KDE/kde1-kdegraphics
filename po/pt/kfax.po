@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kfax\n"
-"POT-Creation-Date: 1998-11-16 01:58+0100\n"
+"POT-Creation-Date: 1999-01-25 01:42+0100\n"
 "PO-Revision-Date: 1998-05-06 12:00+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt\n"
@@ -9,147 +9,174 @@ msgstr ""
 "Content-Type:\n"
 "Content-Transfer-Encoding:\n"
 
-#: kfax.cpp:233 kfax.cpp:828
+#: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
 msgstr "Mostrar Barra de &Ferramentas"
 
-#: kfax.cpp:235 kfax.cpp:821
+#: kfax.cpp:235 kfax.cpp:820
 msgid "Hide &Tool Bar"
 msgstr "Esconder Barra de &Ferramentas"
 
-#: kfax.cpp:238 kfax.cpp:801
+#: kfax.cpp:238 kfax.cpp:800
 msgid "Show &Status Bar"
 msgstr "Mostrar Barra de &Status"
 
-#: kfax.cpp:240 kfax.cpp:794
+#: kfax.cpp:240 kfax.cpp:793
 msgid "Hide &Status Bar"
 msgstr "Esconder Barra de &Status"
 
-#: kfax.cpp:403
+#: kfax.cpp:395
+#, c-format
+msgid ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
+msgstr ""
+
+#: kfax.cpp:402
 msgid "Help page"
 msgstr "Página de ajuda"
 
-#: kfax.cpp:405
+#: kfax.cpp:404
 msgid "&Open Fax..."
 msgstr "Abrir &Fax..."
 
-#: kfax.cpp:406
+#: kfax.cpp:405
 msgid "&Add Fax..."
 msgstr "&Adicinar Fax..."
 
-#: kfax.cpp:409
+#: kfax.cpp:408
 msgid "Open &URL..."
 msgstr "Abrir &URL..."
 
-#: kfax.cpp:410
+#: kfax.cpp:409
 msgid "Save to U&RL..."
 msgstr "Gravar para U&RL"
 
-#: kfax.cpp:411
+#: kfax.cpp:410
 msgid "&Close Fax"
 msgstr "&Fechar Fax"
 
-#: kfax.cpp:418
+#: kfax.cpp:417
 msgid "&Next Page"
 msgstr "&Próxima Pagina"
 
-#: kfax.cpp:419
+#: kfax.cpp:418
 msgid "&Prev Page"
 msgstr "Página A&nterior"
 
-#: kfax.cpp:420
+#: kfax.cpp:419
 msgid "&First Page"
 msgstr "Pri&meira Página"
 
-#: kfax.cpp:421
+#: kfax.cpp:420
 msgid "&Last Page"
 msgstr "&Última Página"
 
-#: kfax.cpp:423
+#: kfax.cpp:422
 msgid "&Rotate Page"
 msgstr "&Rodar Página"
 
-#: kfax.cpp:424
+#: kfax.cpp:423
 msgid "&Mirror Page"
 msgstr "&Espelhar Página"
 
-#: kfax.cpp:425
+#: kfax.cpp:424
 msgid "&Flip Page"
 msgstr "&Virar Página"
 
-#: kfax.cpp:427
+#: kfax.cpp:426
 msgid "Zoom &in"
 msgstr "&Aumentar"
 
-#: kfax.cpp:428
+#: kfax.cpp:427
 msgid "Zoom &out"
 msgstr "&Diminuir"
 
-#: kfax.cpp:433
+#: kfax.cpp:432
 msgid "&Fax Options..."
 msgstr "Opções do &Fax..."
 
-#: kfax.cpp:435
+#: kfax.cpp:434
 msgid "&Tool Bar"
 msgstr "Barra de &Ferramentas"
 
-#: kfax.cpp:436
+#: kfax.cpp:435
 msgid "&Status Bar"
 msgstr "Barra de Status"
 
-#: kfax.cpp:463
+#: kfax.cpp:462
 msgid "Go back"
 msgstr "Voltar"
 
-#: kfax.cpp:466
+#: kfax.cpp:465
 msgid "Go forward"
 msgstr "Avançar"
 
-#: kfax.cpp:471
+#: kfax.cpp:470
 msgid "Go to start"
 msgstr "Início"
 
-#: kfax.cpp:474
+#: kfax.cpp:473
 msgid "Go to end"
 msgstr "Fim"
 
-#: kfax.cpp:480
+#: kfax.cpp:479
 msgid "Zoom in"
 msgstr "Aumentar"
 
-#: kfax.cpp:483
+#: kfax.cpp:482
 msgid "Zoom out"
 msgstr "Diminuir"
 
-#: kfax.cpp:488
+#: kfax.cpp:487
 msgid "Print document"
 msgstr "Imprimir documento"
 
-#: kfax.cpp:497
+#: kfax.cpp:496
 msgid "Go to page ..."
 msgstr "Ir para a página ..."
 
-#: kfax.cpp:583
+#: kfax.cpp:554
+msgid "w: 00000 h: 00000"
+msgstr ""
+
+#: kfax.cpp:555
+msgid "Res: XXXXX"
+msgstr ""
+
+#: kfax.cpp:556
+msgid "Type: XXXXXXX"
+msgstr ""
+
+#: kfax.cpp:557
+msgid "P:XXXofXXX"
+msgstr ""
+
+#: kfax.cpp:582
 msgid "Open Location:"
 msgstr "Abrir URL:"
 
-#: kfax.cpp:599
+#: kfax.cpp:598
 msgid "You need to open a Fax first"
 msgstr "Precisa de abrir um Fax primeiro"
 
-#: kfax.cpp:605
+#: kfax.cpp:604
 msgid "Save to Location:"
 msgstr "Gravar para:"
 
-#: kfax.cpp:812
+#: kfax.cpp:811
 msgid "Not yet implemented"
 msgstr "Ainda não implementado"
 
-#: kfax.cpp:862
+#: kfax.cpp:861
 msgid "     There is no document active      "
 msgstr "   Não há nenhum documento activo     "
 
-#: kfax.cpp:996
+#: kfax.cpp:995
 #, c-format
 msgid ""
 "Invalid page dimensions:\n"
@@ -158,25 +185,25 @@ msgstr ""
 "Dimensões inválidas:\n"
 "Largura %.2f Altura %.2f\n"
 
-#: kfax.cpp:1012
+#: kfax.cpp:1011
 #, c-format
 msgid "Can't print to \"%s\"\n"
 msgstr "Não consigo imprimir para \"%s\"\n"
 
-#: kfax.cpp:1023
+#: kfax.cpp:1022
 #, c-format
 msgid "Couldn't create %s\n"
 msgstr "Não consigo criar %s\n"
 
-#: kfax.cpp:1093
+#: kfax.cpp:1092
 msgid "Saving ..."
 msgstr "A gravar ..."
 
-#: kfax.cpp:1100
+#: kfax.cpp:1099
 msgid "Loading ..."
 msgstr "A carregar ..."
 
-#: kfax.cpp:1127 kfax.cpp:1163
+#: kfax.cpp:1126 kfax.cpp:1162
 msgid ""
 "Failure in 'copy file()'\n"
 "Couldn't save file!"
@@ -184,11 +211,11 @@ msgstr ""
 "Falha em 'copy file()'\n"
 "Não consigo gravar ficheiro!"
 
-#: kfax.cpp:1133
+#: kfax.cpp:1132
 msgid "Saved"
 msgstr "Gravado"
 
-#: kfax.cpp:1140 kfax.cpp:1202
+#: kfax.cpp:1139 kfax.cpp:1201
 msgid ""
 "KFax is already waiting\n"
 "for an internet job to finish\n"
@@ -198,40 +225,71 @@ msgstr ""
 "que um trabalho na internet acabe\n"
 "Por favor espera até acabar\n"
 
-#: kfax.cpp:1151 kfax.cpp:1215
+#: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
 msgstr "Não consegui comunicar com o KFM"
 
-#: kfax.cpp:1192
+#: kfax.cpp:1191
 #, c-format
 msgid "Loading '%s'"
 msgstr "A carregar '%s'"
 
-#: kfax.cpp:1195
+#: kfax.cpp:1194
 msgid "Done"
 msgstr "Pronto"
 
-#: kfax.cpp:1209
+#: kfax.cpp:1208
 msgid "Calling KFM"
 msgstr "A chamar o KFM"
 
-#: kfax.cpp:1222
+#: kfax.cpp:1221
 msgid "Starting Job"
 msgstr "A Iniciar Trabalho"
 
-#: kfax.cpp:1225
+#: kfax.cpp:1224
 msgid "Connected"
 msgstr "Ligado"
 
-#: kfax.cpp:1227
+#: kfax.cpp:1226
 msgid "Waiting..."
 msgstr "À Espera..."
 
-#: kfax.cpp:2078
+#: kfax.cpp:2077
 msgid "You need to open a fax page first."
 msgstr "Precisa de abrir uma página de fax primeiro."
 
-#: kfax.cpp:2748
+#: kfax.cpp:2400
+#, c-format
+msgid "P.%d of %d"
+msgstr ""
+
+#: kfax.cpp:2411
+#, c-format
+msgid "W: %d H: %d"
+msgstr ""
+
+#: kfax.cpp:2416
+#, c-format
+msgid "Res: %s"
+msgstr ""
+
+#: kfax.cpp:2416 options.cpp:71
+msgid "Fine"
+msgstr "Fina"
+
+#: kfax.cpp:2416 options.cpp:74
+msgid "Normal"
+msgstr "Normal"
+
+#: kfax.cpp:2424
+msgid "Type: Tiff "
+msgstr ""
+
+#: kfax.cpp:2427
+msgid "Type: Raw "
+msgstr ""
+
+#: kfax.cpp:2738
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
@@ -317,14 +375,6 @@ msgstr "Resolução do Fax:"
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
 msgstr "Auto"
-
-#: options.cpp:71
-msgid "Fine"
-msgstr "Fina"
-
-#: options.cpp:74
-msgid "Normal"
-msgstr "Normal"
 
 #: options.cpp:81
 msgid "Display Options:"

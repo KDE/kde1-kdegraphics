@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-01-06 01:47+0100\n"
+"POT-Creation-Date: 1999-01-25 01:42+0100\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian\n"
@@ -13,147 +13,174 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: iso-8859-2\n"
 
-#: kfax.cpp:233 kfax.cpp:828
+#: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
 msgstr "Poka¾i Alat&e"
 
-#: kfax.cpp:235 kfax.cpp:821
+#: kfax.cpp:235 kfax.cpp:820
 msgid "Hide &Tool Bar"
 msgstr "&Sakrij alate"
 
-#: kfax.cpp:238 kfax.cpp:801
+#: kfax.cpp:238 kfax.cpp:800
 msgid "Show &Status Bar"
 msgstr "Poka¾i s&tatus"
 
-#: kfax.cpp:240 kfax.cpp:794
+#: kfax.cpp:240 kfax.cpp:793
 msgid "Hide &Status Bar"
 msgstr "Sakrij st&atus"
 
-#: kfax.cpp:403
+#: kfax.cpp:395
+#, c-format
+msgid ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
+msgstr ""
+
+#: kfax.cpp:402
 msgid "Help page"
 msgstr "Pomoæ"
 
-#: kfax.cpp:405
+#: kfax.cpp:404
 msgid "&Open Fax..."
 msgstr "&Otvori Fax..."
 
-#: kfax.cpp:406
+#: kfax.cpp:405
 msgid "&Add Fax..."
 msgstr "&Dodaj Fax..."
 
-#: kfax.cpp:409
+#: kfax.cpp:408
 msgid "Open &URL..."
 msgstr "Otvori &URL..."
 
-#: kfax.cpp:410
+#: kfax.cpp:409
 msgid "Save to U&RL..."
 msgstr "Spremi u U&RL..."
 
-#: kfax.cpp:411
+#: kfax.cpp:410
 msgid "&Close Fax"
 msgstr "&Zatvori Fax"
 
-#: kfax.cpp:418
+#: kfax.cpp:417
 msgid "&Next Page"
 msgstr "&Slijedeæa stranica"
 
-#: kfax.cpp:419
+#: kfax.cpp:418
 msgid "&Prev Page"
 msgstr "&Prethodna stranica"
 
-#: kfax.cpp:420
+#: kfax.cpp:419
 msgid "&First Page"
 msgstr "P&rva stranica"
 
-#: kfax.cpp:421
+#: kfax.cpp:420
 msgid "&Last Page"
 msgstr "&Zadnja stranica"
 
-#: kfax.cpp:423
+#: kfax.cpp:422
 msgid "&Rotate Page"
 msgstr "&Rotiraj stranicu"
 
-#: kfax.cpp:424
+#: kfax.cpp:423
 msgid "&Mirror Page"
 msgstr "Zr&cali stranicu"
 
-#: kfax.cpp:425
+#: kfax.cpp:424
 msgid "&Flip Page"
 msgstr "&Okreni stranicu"
 
-#: kfax.cpp:427
+#: kfax.cpp:426
 msgid "Zoom &in"
 msgstr "U&veæaj"
 
-#: kfax.cpp:428
+#: kfax.cpp:427
 msgid "Zoom &out"
 msgstr "U&manji"
 
-#: kfax.cpp:433
+#: kfax.cpp:432
 msgid "&Fax Options..."
 msgstr "&Fax opcije..."
 
-#: kfax.cpp:435
+#: kfax.cpp:434
 msgid "&Tool Bar"
 msgstr "Alat&i"
 
-#: kfax.cpp:436
+#: kfax.cpp:435
 msgid "&Status Bar"
 msgstr "S&tatusna linija"
 
-#: kfax.cpp:463
+#: kfax.cpp:462
 msgid "Go back"
 msgstr "Idi nazad"
 
-#: kfax.cpp:466
+#: kfax.cpp:465
 msgid "Go forward"
 msgstr "Idi naprijed"
 
-#: kfax.cpp:471
+#: kfax.cpp:470
 msgid "Go to start"
 msgstr "Idi na poèetak"
 
-#: kfax.cpp:474
+#: kfax.cpp:473
 msgid "Go to end"
 msgstr "Idi na kraj"
 
-#: kfax.cpp:480
+#: kfax.cpp:479
 msgid "Zoom in"
 msgstr "Uveæaj"
 
-#: kfax.cpp:483
+#: kfax.cpp:482
 msgid "Zoom out"
 msgstr "Umanji"
 
-#: kfax.cpp:488
+#: kfax.cpp:487
 msgid "Print document"
 msgstr "Ispi¹i dokument"
 
-#: kfax.cpp:497
+#: kfax.cpp:496
 msgid "Go to page ..."
 msgstr "Idi na stranicu ..."
 
-#: kfax.cpp:583
+#: kfax.cpp:554
+msgid "w: 00000 h: 00000"
+msgstr ""
+
+#: kfax.cpp:555
+msgid "Res: XXXXX"
+msgstr ""
+
+#: kfax.cpp:556
+msgid "Type: XXXXXXX"
+msgstr ""
+
+#: kfax.cpp:557
+msgid "P:XXXofXXX"
+msgstr ""
+
+#: kfax.cpp:582
 msgid "Open Location:"
 msgstr "Otvori lokaciju:"
 
-#: kfax.cpp:599
+#: kfax.cpp:598
 msgid "You need to open a Fax first"
 msgstr "Prvo trebate otvoriti Fax"
 
-#: kfax.cpp:605
+#: kfax.cpp:604
 msgid "Save to Location:"
 msgstr "Spremi na lokaciju:"
 
-#: kfax.cpp:812
+#: kfax.cpp:811
 msgid "Not yet implemented"
 msgstr "Nije ugraðeno"
 
-#: kfax.cpp:862
+#: kfax.cpp:861
 msgid "     There is no document active      "
 msgstr "     Nema aktivnog dokumenta          "
 
-#: kfax.cpp:996
+#: kfax.cpp:995
 #, c-format
 msgid ""
 "Invalid page dimensions:\n"
@@ -162,25 +189,25 @@ msgstr ""
 "Nepravilne dimenzije stranice:\n"
 "©irina %.2f Visina %.2f\n"
 
-#: kfax.cpp:1012
+#: kfax.cpp:1011
 #, c-format
 msgid "Can't print to \"%s\"\n"
 msgstr "Ne mogu ispisivati na \"%s\"\n"
 
-#: kfax.cpp:1023
+#: kfax.cpp:1022
 #, c-format
 msgid "Couldn't create %s\n"
 msgstr "Ne mogu napraviti %s\n"
 
-#: kfax.cpp:1093
+#: kfax.cpp:1092
 msgid "Saving ..."
 msgstr "Spremam..."
 
-#: kfax.cpp:1100
+#: kfax.cpp:1099
 msgid "Loading ..."
 msgstr "Uèitavam..."
 
-#: kfax.cpp:1127 kfax.cpp:1163
+#: kfax.cpp:1126 kfax.cpp:1162
 msgid ""
 "Failure in 'copy file()'\n"
 "Couldn't save file!"
@@ -188,11 +215,11 @@ msgstr ""
 "Gre¹ka u 'copy file()'\n"
 "Ne mogu spremiti datoteku!"
 
-#: kfax.cpp:1133
+#: kfax.cpp:1132
 msgid "Saved"
 msgstr "Spremljeno"
 
-#: kfax.cpp:1140 kfax.cpp:1202
+#: kfax.cpp:1139 kfax.cpp:1201
 msgid ""
 "KFax is already waiting\n"
 "for an internet job to finish\n"
@@ -202,40 +229,71 @@ msgstr ""
 "Èekajte da posao zavr¹i ili ga\n"
 "zaustavite.\n"
 
-#: kfax.cpp:1151 kfax.cpp:1215
+#: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
 msgstr "Ne mogu stupiti u kontakt s KFMom"
 
-#: kfax.cpp:1192
+#: kfax.cpp:1191
 #, c-format
 msgid "Loading '%s'"
 msgstr "Uèitavam '%s'"
 
-#: kfax.cpp:1195
+#: kfax.cpp:1194
 msgid "Done"
 msgstr "Gotovo"
 
-#: kfax.cpp:1209
+#: kfax.cpp:1208
 msgid "Calling KFM"
 msgstr "Pozivam KFM"
 
-#: kfax.cpp:1222
+#: kfax.cpp:1221
 msgid "Starting Job"
 msgstr "Pokreæem zadatak"
 
-#: kfax.cpp:1225
+#: kfax.cpp:1224
 msgid "Connected"
 msgstr "Spojen"
 
-#: kfax.cpp:1227
+#: kfax.cpp:1226
 msgid "Waiting..."
 msgstr "Èekam..."
 
-#: kfax.cpp:2078
+#: kfax.cpp:2077
 msgid "You need to open a fax page first."
 msgstr "Morate prvo otvoriti fax stranicu."
 
-#: kfax.cpp:2739
+#: kfax.cpp:2400
+#, c-format
+msgid "P.%d of %d"
+msgstr ""
+
+#: kfax.cpp:2411
+#, c-format
+msgid "W: %d H: %d"
+msgstr ""
+
+#: kfax.cpp:2416
+#, c-format
+msgid "Res: %s"
+msgstr ""
+
+#: kfax.cpp:2416 options.cpp:71
+msgid "Fine"
+msgstr "Fino"
+
+#: kfax.cpp:2416 options.cpp:74
+msgid "Normal"
+msgstr "Normalno"
+
+#: kfax.cpp:2424
+msgid "Type: Tiff "
+msgstr ""
+
+#: kfax.cpp:2427
+msgid "Type: Raw "
+msgstr ""
+
+#: kfax.cpp:2738
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
@@ -321,14 +379,6 @@ msgstr "Sirova Fax Rezolucija"
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
 msgstr "Auto"
-
-#: options.cpp:71
-msgid "Fine"
-msgstr "Fino"
-
-#: options.cpp:74
-msgid "Normal"
-msgstr "Normalno"
 
 #: options.cpp:81
 msgid "Display Options:"

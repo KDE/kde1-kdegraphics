@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1999-01-06 01:47+0100\n"
+"POT-Creation-Date: 1999-01-25 01:42+0100\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-03-08 16:14:13-0500\n"
 "From: Bernd Johannes Wuebben,201 Lincoln Hall,,256-1036, "
@@ -9,147 +9,174 @@ msgstr ""
 "Files: about.cpp faxexpand.cpp faxinit.cpp faxinput.cpp g3hack.cpp kfax.cpp "
 "options.cpp print.cpp viewfax.cpp\n"
 
-#: kfax.cpp:233 kfax.cpp:828
+#: kfax.cpp:233 kfax.cpp:827
 msgid "Show &Tool Bar"
 msgstr "Näytä &painikepalkki"
 
-#: kfax.cpp:235 kfax.cpp:821
+#: kfax.cpp:235 kfax.cpp:820
 msgid "Hide &Tool Bar"
 msgstr "&Piilota painikepalkki"
 
-#: kfax.cpp:238 kfax.cpp:801
+#: kfax.cpp:238 kfax.cpp:800
 msgid "Show &Status Bar"
 msgstr "Näytä &tilarivi"
 
-#: kfax.cpp:240 kfax.cpp:794
+#: kfax.cpp:240 kfax.cpp:793
 msgid "Hide &Status Bar"
 msgstr "P&iilota tilarivi"
 
-#: kfax.cpp:403
+#: kfax.cpp:395
+#, c-format
+msgid ""
+"\n"
+"KFax %s\n"
+"\n"
+"Copyright 1997-98\n"
+"Bernd Johannes Wuebben\n"
+"wuebben@kde.org"
+msgstr ""
+
+#: kfax.cpp:402
 msgid "Help page"
 msgstr "Ohje"
 
-#: kfax.cpp:405
+#: kfax.cpp:404
 msgid "&Open Fax..."
 msgstr "&Avaa Faksi..."
 
-#: kfax.cpp:406
+#: kfax.cpp:405
 msgid "&Add Fax..."
 msgstr "&Lisää Faksi"
 
-#: kfax.cpp:409
+#: kfax.cpp:408
 msgid "Open &URL..."
 msgstr "Avaa &URL..."
 
-#: kfax.cpp:410
+#: kfax.cpp:409
 msgid "Save to U&RL..."
 msgstr "&Tallenna URL..."
 
-#: kfax.cpp:411
+#: kfax.cpp:410
 msgid "&Close Fax"
 msgstr "&Sulje faksi"
 
-#: kfax.cpp:418
+#: kfax.cpp:417
 msgid "&Next Page"
 msgstr "&Seuraava sivu"
 
-#: kfax.cpp:419
+#: kfax.cpp:418
 msgid "&Prev Page"
 msgstr "&Edellinen sivu"
 
-#: kfax.cpp:420
+#: kfax.cpp:419
 msgid "&First Page"
 msgstr "E&nsimmäinen sivu"
 
-#: kfax.cpp:421
+#: kfax.cpp:420
 msgid "&Last Page"
 msgstr "&Viimeinen sivu"
 
-#: kfax.cpp:423
+#: kfax.cpp:422
 msgid "&Rotate Page"
 msgstr "&Pyöritä sivua"
 
-#: kfax.cpp:424
+#: kfax.cpp:423
 msgid "&Mirror Page"
 msgstr "Pei&laa sivu"
 
-#: kfax.cpp:425
+#: kfax.cpp:424
 msgid "&Flip Page"
 msgstr "&Käännä sivu"
 
-#: kfax.cpp:427
+#: kfax.cpp:426
 msgid "Zoom &in"
 msgstr "&Suurenna"
 
-#: kfax.cpp:428
+#: kfax.cpp:427
 msgid "Zoom &out"
 msgstr "Pi&enennä"
 
-#: kfax.cpp:433
+#: kfax.cpp:432
 msgid "&Fax Options..."
 msgstr "&Faksin asetukset..."
 
-#: kfax.cpp:435
+#: kfax.cpp:434
 msgid "&Tool Bar"
 msgstr "&Painikepalkki"
 
-#: kfax.cpp:436
+#: kfax.cpp:435
 msgid "&Status Bar"
 msgstr "&Tilarivi"
 
-#: kfax.cpp:463
+#: kfax.cpp:462
 msgid "Go back"
 msgstr "Taakse"
 
-#: kfax.cpp:466
+#: kfax.cpp:465
 msgid "Go forward"
 msgstr "Eteen"
 
-#: kfax.cpp:471
+#: kfax.cpp:470
 msgid "Go to start"
 msgstr "Alkuun"
 
-#: kfax.cpp:474
+#: kfax.cpp:473
 msgid "Go to end"
 msgstr "Loppuun"
 
-#: kfax.cpp:480
+#: kfax.cpp:479
 msgid "Zoom in"
 msgstr "Suurenna"
 
-#: kfax.cpp:483
+#: kfax.cpp:482
 msgid "Zoom out"
 msgstr "Pienennä"
 
-#: kfax.cpp:488
+#: kfax.cpp:487
 msgid "Print document"
 msgstr "Tulosta"
 
-#: kfax.cpp:497
+#: kfax.cpp:496
 msgid "Go to page ..."
 msgstr "Siirry sivulle ..."
 
-#: kfax.cpp:583
+#: kfax.cpp:554
+msgid "w: 00000 h: 00000"
+msgstr ""
+
+#: kfax.cpp:555
+msgid "Res: XXXXX"
+msgstr ""
+
+#: kfax.cpp:556
+msgid "Type: XXXXXXX"
+msgstr ""
+
+#: kfax.cpp:557
+msgid "P:XXXofXXX"
+msgstr ""
+
+#: kfax.cpp:582
 msgid "Open Location:"
 msgstr "Avaa kohde:"
 
-#: kfax.cpp:599
+#: kfax.cpp:598
 msgid "You need to open a Fax first"
 msgstr "Sinun on avattava faksi ensin"
 
-#: kfax.cpp:605
+#: kfax.cpp:604
 msgid "Save to Location:"
 msgstr "Tallenna kohteeseen:"
 
-#: kfax.cpp:812
+#: kfax.cpp:811
 msgid "Not yet implemented"
 msgstr "Ei vielä toteutettu"
 
-#: kfax.cpp:862
+#: kfax.cpp:861
 msgid "     There is no document active      "
 msgstr "   Dokumenttia ei ole aktiivisena    "
 
-#: kfax.cpp:996
+#: kfax.cpp:995
 #, c-format
 msgid ""
 "Invalid page dimensions:\n"
@@ -158,25 +185,25 @@ msgstr ""
 "Virheellinen sivun koko:\n"
 "Leveys %.2f Korkeus %.2f\n"
 
-#: kfax.cpp:1012
+#: kfax.cpp:1011
 #, c-format
 msgid "Can't print to \"%s\"\n"
 msgstr "En saanut tulostettua \"%s\"\n"
 
-#: kfax.cpp:1023
+#: kfax.cpp:1022
 #, c-format
 msgid "Couldn't create %s\n"
 msgstr "En saanut luotua: %s\n"
 
-#: kfax.cpp:1093
+#: kfax.cpp:1092
 msgid "Saving ..."
 msgstr "Tallennan ..."
 
-#: kfax.cpp:1100
+#: kfax.cpp:1099
 msgid "Loading ..."
 msgstr "Lataan ..."
 
-#: kfax.cpp:1127 kfax.cpp:1163
+#: kfax.cpp:1126 kfax.cpp:1162
 msgid ""
 "Failure in 'copy file()'\n"
 "Couldn't save file!"
@@ -184,11 +211,11 @@ msgstr ""
 "Virhe 'copy file() toiminnossa'\n"
 "En voinut tallentaa tiedostoa!"
 
-#: kfax.cpp:1133
+#: kfax.cpp:1132
 msgid "Saved"
 msgstr "Tallennettu"
 
-#: kfax.cpp:1140 kfax.cpp:1202
+#: kfax.cpp:1139 kfax.cpp:1201
 msgid ""
 "KFax is already waiting\n"
 "for an internet job to finish\n"
@@ -197,40 +224,71 @@ msgstr ""
 "KFax odottaa Internet-työn\n"
 "valmistumista. Odota hetki.\n"
 
-#: kfax.cpp:1151 kfax.cpp:1215
+#: kfax.cpp:1150 kfax.cpp:1214
 msgid "Could not communicate with KFM"
 msgstr "En saanut kommunikoitua KFM:n kanssa"
 
-#: kfax.cpp:1192
+#: kfax.cpp:1191
 #, c-format
 msgid "Loading '%s'"
 msgstr "Lataan '%s'"
 
-#: kfax.cpp:1195
+#: kfax.cpp:1194
 msgid "Done"
 msgstr "Valmis"
 
-#: kfax.cpp:1209
+#: kfax.cpp:1208
 msgid "Calling KFM"
 msgstr "Kutsun KFM"
 
-#: kfax.cpp:1222
+#: kfax.cpp:1221
 msgid "Starting Job"
 msgstr "Aloitan työn"
 
-#: kfax.cpp:1225
+#: kfax.cpp:1224
 msgid "Connected"
 msgstr "Yhdistetty"
 
-#: kfax.cpp:1227
+#: kfax.cpp:1226
 msgid "Waiting..."
 msgstr "Odotan..."
 
-#: kfax.cpp:2078
+#: kfax.cpp:2077
 msgid "You need to open a fax page first."
 msgstr "Sinun tulee avata faksisivu ensin."
 
-#: kfax.cpp:2739
+#: kfax.cpp:2400
+#, c-format
+msgid "P.%d of %d"
+msgstr ""
+
+#: kfax.cpp:2411
+#, c-format
+msgid "W: %d H: %d"
+msgstr ""
+
+#: kfax.cpp:2416
+#, c-format
+msgid "Res: %s"
+msgstr ""
+
+#: kfax.cpp:2416 options.cpp:71
+msgid "Fine"
+msgstr "Tarkka"
+
+#: kfax.cpp:2416 options.cpp:74
+msgid "Normal"
+msgstr "Tavallinen"
+
+#: kfax.cpp:2424
+msgid "Type: Tiff "
+msgstr ""
+
+#: kfax.cpp:2427
+msgid "Type: Raw "
+msgstr ""
+
+#: kfax.cpp:2738
 msgid ""
 "A file with this name already exists\n"
 "Do you want to overwrite it?\n"
@@ -316,14 +374,6 @@ msgstr "Raakafaksin tarkkuus:"
 #: options.cpp:68 options.cpp:149
 msgid "Auto"
 msgstr "Automaattinen"
-
-#: options.cpp:71
-msgid "Fine"
-msgstr "Tarkka"
-
-#: options.cpp:74
-msgid "Normal"
-msgstr "Tavallinen"
 
 #: options.cpp:81
 msgid "Display Options:"
