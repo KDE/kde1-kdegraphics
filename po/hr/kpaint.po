@@ -38,14 +38,12 @@ msgid "Canvas Size"
 msgstr "Velièina canvasa"
 
 #: canvassize.cpp:25
-#, fuzzy
 msgid "Width:"
-msgstr "©irina"
+msgstr "©irina:"
 
 #: canvassize.cpp:26
-#, fuzzy
 msgid "Height:"
-msgstr "Visina"
+msgstr "Visina:"
 
 #: circle.cpp:18 kpaint.cpp:349
 msgid "Circle"
@@ -133,13 +131,12 @@ msgid "New Image..."
 msgstr "Nova slika..."
 
 #: kpaint.cpp:314
-#, fuzzy
 msgid "Save Image"
-msgstr "Spremi sliku..."
+msgstr "Spremi sliku"
 
 #: kpaint.cpp:315
 msgid "Save Image As..."
-msgstr "Spremi sliku kao..."
+msgstr "Spremi sliku pod imenom..."
 
 #: kpaint.cpp:316
 msgid "Image Format..."
@@ -407,45 +404,5 @@ msgid "Set Line Colour..."
 msgstr "Postavi boju crte..."
 
 #: roundangle.cpp:19
-#, fuzzy
 msgid "Roundangle"
-msgstr "Èetverokut"
-
-#~ msgid "Dismiss"
-#~ msgstr "Otka¾i"
-
-#~ msgid "KPaint: Malformed URL"
-#~ msgstr "KPaint: Neispravan URL"
-
-#~ msgid ""
-#~ "Error: Malformed URL\n"
-#~ "KPaint does not understand the specifed URL, check it's correct."
-#~ msgstr ""
-#~ "Gre¹ka: Neispravan URL\n"
-#~ "KPaint ne razumije navedeni URL, provjerite je li ispravan."
-
-#~ msgid ""
-#~ "KPaint is already accessing a remote file, you must\n"
-#~ "cancel the current remote job or wait for it to complete."
-#~ msgstr ""
-#~ "KPaint veæ pristupa udaljenoj datoteci, morate\n"
-#~ "otkazati trenutni posao ili èekati da zavr¹i."
-
-#~ msgid "KPaint: Could not find KFM"
-#~ msgstr "KPaint: Ne mogu naæi KFM"
-
-#~ msgid "Error: KPaint could not find a running KFM or start one itself."
-#~ msgstr "Gre¹ka: KPaint ne mo¾e naæi pokrenut KFM ili ga startati."
-
-#~ msgid "KPaint: Network Load Failed"
-#~ msgstr "KPaint: Uèitavanje preko mre¾e nije uspjelo"
-
-#~ msgid ""
-#~ "Error: Netword Load Failed\n"
-#~ "Something went wrong :-("
-#~ msgstr ""
-#~ "Gre¹ka: Uèitavanje preko mre¾e nije uspjelo\n"
-#~ "Ne¹to je po¹lo lo¹e :-("
-
-#~ msgid "KPaint: Could not start KFM"
-#~ msgstr "KPaint: Ne mogu pokrenuti KFM"
+msgstr "Zaobljeni èetverokut"
