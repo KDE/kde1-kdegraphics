@@ -522,7 +522,7 @@ msgid ""
 "could not be found."
 msgstr ""
 "Datoteka\n"
-"\n"%s\"\n"
+"\"%s\"\n"
 "nije naðena."
 
 #: main.cpp:96
