@@ -507,7 +507,7 @@ msgstr ""
 msgid "Upside down"
 msgstr "Sottosopra"
 
-#: kghostview.cpp:126
+#: kghostview.cpp:1264
 msgid "Go to ..."
 msgstr "Vai a ..."
 
@@ -540,7 +540,6 @@ msgid "About kghostview"
 msgstr "Info su kghostview"
 
 #: kghostview.cpp:1507
-
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -575,6 +574,7 @@ msgstr ""
 "quindi niente sarà stampato su un file.\n"
 
 #: kghostview.cpp:1640
+#, c-format
 msgid "Print failure : %s"
 msgstr "Fallimento stampa : %s"
 
@@ -772,7 +772,6 @@ msgstr ""
 "di questa parte di documento.\n"
 "Controlla la Barra di Stato per questa informazione.\n"
 
-
 #: viewcontrol.cpp:36
 msgid "Force changes to ..."
 msgstr "Forza i cambiamenti in ..."
@@ -792,4 +791,3 @@ msgstr "&orientamento"
 #: viewcontrol.cpp:111
 msgid "&Apply"
 msgstr "&Applica"
-

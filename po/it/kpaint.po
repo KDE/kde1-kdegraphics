@@ -47,7 +47,6 @@ msgid "Circle"
 msgstr "Cerchio"
 
 #: depthdialog.cpp:18
-
 msgid "Image Depth:"
 msgstr "Numero Colori Immagine:"
 
@@ -436,4 +435,3 @@ msgstr "Stile giuntura:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Imposta Colore Linea..."
-

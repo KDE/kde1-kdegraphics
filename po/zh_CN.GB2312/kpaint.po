@@ -6,87 +6,234 @@ msgstr ""
 "Last-Translator: Wang Jian <lark@ipc.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
 
+#: app.cpp:40
+msgid ""
+"\n"
+"(c) Richard J. Moore 1997 Released under GPL see LICENSE for details\n"
+msgstr ""
+
+#: app.cpp:41
+msgid "Usage: "
+msgstr "用法: "
+
+#: app.cpp:43
 msgid " [url | filename]\n"
 msgstr " [url | filename]\n"
 
-msgid "&Image"
-msgstr "图像[&I]"
-
-msgid "&Tool"
-msgstr "工具[&T]"
-
-msgid "Area Select"
-msgstr "区域选择"
-
+#: areaselect.cpp:20
 msgid "Area Selection"
 msgstr "区域选择"
 
-msgid "Canvas Size"
-msgstr "画布大小"
+#: canvassize.cpp:12
+msgid "Width"
+msgstr "宽度"
 
-msgid "Change Colour Depth..."
-msgstr "改变颜色深度..."
+#: canvassize.cpp:13
+msgid "Height"
+msgstr "高度"
 
+#: circle.cpp:20 kpaint.cpp:354
 msgid "Circle"
 msgstr "圆形"
 
-msgid "Close Window"
-msgstr "关闭窗口"
+#: depthdialog.cpp:18
+#, fuzzy
+msgid "Image Depth:"
+msgstr "图象宽度"
 
-msgid "Colour Depth:"
-msgstr "颜色深度"
+#: depthdialog.cpp:24
+msgid "1 (Bitmap)"
+msgstr ""
 
-msgid "Colours Used:"
-msgstr "使用颜色数:"
+#: depthdialog.cpp:25
+msgid "8 (256 Colour)"
+msgstr ""
 
-msgid "Continue"
-msgstr "继续"
+#: depthdialog.cpp:26
+msgid "24 (True Colour)"
+msgstr ""
 
-msgid "Copy Region"
-msgstr "区域拷贝"
-
-msgid "Custom"
-msgstr "自定义"
-
-msgid "Cut Region"
-msgstr "区域剪下"
-
-msgid "Dash Dot"
-msgstr "点划线"
-
-msgid "Dash Dot Dot"
-msgstr "双点划线"
-
-msgid "Dashed"
-msgstr "长划线"
-
-msgid "Diagonal Grid"
-msgstr "对角格线"
-
-msgid "Diagonal Lines //"
-msgstr "对角线 //"
-
-msgid "Diagonal Lines \\"
-msgstr "对角线 \\"
-
-msgid "Dismiss"
-msgstr "取消"
-
-msgid "Dotted"
-msgstr "点线"
-
-msgid "Edit Colour"
-msgstr "编辑颜色"
-
-msgid "Edit Palette..."
-msgstr "编辑调色盘..."
-
+#: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
 msgstr "椭圆"
 
-msgid "End style:"
-msgstr "末端类型:"
+#: formatdialog.cpp:21
+msgid "File Format:"
+msgstr "文件格式:"
 
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "颜色深度"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "使用颜色数:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "图象宽度"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "图象高度"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "取消"
+
+#: kpaint.cpp:44 kpaint.cpp:758
+msgid "untitled.gif"
+msgstr "untitled.gif"
+
+#: kpaint.cpp:117
+msgid "Unsaved Changes"
+msgstr "未保存修改"
+
+#: kpaint.cpp:164
+msgid "New Canvas"
+msgstr "新画布"
+
+#: kpaint.cpp:167
+msgid "Open File"
+msgstr "打开文件"
+
+#: kpaint.cpp:170
+msgid "Save File"
+msgstr "保存文件"
+
+#: kpaint.cpp:184 kpaint.cpp:338
+msgid "Zoom In"
+msgstr "放大"
+
+#: kpaint.cpp:187 kpaint.cpp:339
+msgid "Zoom Out"
+msgstr "缩小"
+
+#: kpaint.cpp:318
+msgid "Open Image..."
+msgstr "打开图象..."
+
+#: kpaint.cpp:319
+msgid "New Image..."
+msgstr "新图象..."
+
+#: kpaint.cpp:320
+msgid "Save Image..."
+msgstr "保存图象..."
+
+#: kpaint.cpp:321
+msgid "Save Image As..."
+msgstr "保存图象至..."
+
+#: kpaint.cpp:322
+msgid "Image Format..."
+msgstr "图象格式..."
+
+#: kpaint.cpp:324
+msgid "Open from URL..."
+msgstr "打开 URL..."
+
+#: kpaint.cpp:325
+msgid "Save to URL..."
+msgstr "保存到 URL..."
+
+#: kpaint.cpp:327
+msgid "New Window"
+msgstr "新窗口"
+
+#: kpaint.cpp:328
+msgid "Close Window"
+msgstr "关闭窗口"
+
+#: kpaint.cpp:330
+msgid "Exit"
+msgstr "结束"
+
+#: kpaint.cpp:333
+msgid "Copy Region"
+msgstr "区域拷贝"
+
+#: kpaint.cpp:334
+msgid "Cut Region"
+msgstr "区域剪下"
+
+#: kpaint.cpp:335
+msgid "Paste Region"
+msgstr "区域粘贴"
+
+#: kpaint.cpp:336
+msgid "Paste As Image"
+msgstr "贴成新图象"
+
+#: kpaint.cpp:340
+msgid "Mask..."
+msgstr "Mask..."
+
+#: kpaint.cpp:343
+msgid "Information..."
+msgstr "信息..."
+
+#: kpaint.cpp:344
+msgid "Edit Palette..."
+msgstr "编辑调色盘..."
+
+#: kpaint.cpp:345
+msgid "Change Colour Depth..."
+msgstr "改变颜色深度..."
+
+#: kpaint.cpp:348
+msgid "Tool Properties..."
+msgstr "工具特性..."
+
+#: kpaint.cpp:350 pen.cpp:19
+msgid "Pen"
+msgstr "画笔"
+
+#: kpaint.cpp:351 line.cpp:22
+msgid "Line"
+msgstr "线段"
+
+#: kpaint.cpp:352 rectangle.cpp:19
+msgid "Rectangle"
+msgstr "矩形"
+
+#: kpaint.cpp:355 spraycan.cpp:22
+msgid "Spray Can"
+msgstr "喷嘴"
+
+#: kpaint.cpp:356
+msgid "Area Select"
+msgstr "区域选择"
+
+#: kpaint.cpp:361
+msgid "Show Tools Toolbar"
+msgstr ""
+
+#: kpaint.cpp:362
+msgid "Show Commands Toolbar"
+msgstr ""
+
+#: kpaint.cpp:363
+msgid "Show Status Bar"
+msgstr "显示状态行"
+
+#: kpaint.cpp:364
+msgid "Save Options"
+msgstr "保存选项"
+
+#: kpaint.cpp:382
+msgid "&Image"
+msgstr "图像[&I]"
+
+#: kpaint.cpp:383
+msgid "&Tool"
+msgstr "工具[&T]"
+
+#: kpaint.cpp:533
+msgid "KPaint: Could not open file"
+msgstr "KPaint: 无法打开文件"
+
+#: kpaint.cpp:534
 msgid ""
 "Error: Could not open file\n"
 "KPaint could not open the specified file."
@@ -94,9 +241,30 @@ msgstr ""
 "错误: 无法打开文件\n"
 "KPaint  无法打开指定的文件."
 
-msgid "Error: KPaint could not find a running KFM or start one itself."
-msgstr "错误: KPaint 找不到运行中的 KFM 或无法运行 KFM."
+#: kpaint.cpp:537 kpaint.cpp:547 kpaint.cpp:570 kpaint.cpp:585 kpaint.cpp:596
+#: kpaint.cpp:651 kpaint.cpp:682 kpaint.cpp:697 kpaint.cpp:708
+msgid "Continue"
+msgstr "继续"
 
+#: kpaint.cpp:542
+msgid "KPaint: Unknown Format"
+msgstr "KPaint: 未知的格式"
+
+#: kpaint.cpp:543
+#, fuzzy
+msgid ""
+"Error: Unknown Format\n"
+"KPaint does not understand the format of the specified file\n"
+"or the file is corrupt."
+msgstr ""
+"错误: 不正确的 URL\n"
+"KPaint 无法解释指定的 URL, 请确认是否正确."
+
+#: kpaint.cpp:566 kpaint.cpp:678
+msgid "KPaint: Malformed URL"
+msgstr "KPaint: 不正确的 URL"
+
+#: kpaint.cpp:567 kpaint.cpp:679
 msgid ""
 "Error: Malformed URL\n"
 "KPaint does not understand the specifed URL, check it's correct."
@@ -104,42 +272,7 @@ msgstr ""
 "错误: 不正确的 URL\n"
 "KPaint 无法解释指定的 URL, 请确认是否正确."
 
-msgid "Exit"
-msgstr "结束"
-
-msgid "File Format:"
-msgstr "文件格式:"
-
-msgid "Fill Pattern:"
-msgstr "填充花样"
-
-msgid "Fill Properties"
-msgstr "填充特性"
-
-msgid "Grid"
-msgstr "格线"
-
-msgid "Height"
-msgstr "高度"
-
-msgid "Horizontal Lines"
-msgstr "水平线段"
-
-msgid "Image Format..."
-msgstr "图象格式..."
-
-msgid "Image Height:"
-msgstr "图象高度"
-
-msgid "Image Width:"
-msgstr "图象宽度"
-
-msgid "Information..."
-msgstr "信息..."
-
-msgid "Join style:"
-msgstr "线段交点类型:"
-
+#: kpaint.cpp:583 kpaint.cpp:695
 msgid ""
 "KPaint is already accessing a remote file, you must\n"
 "cancel the current remote job or wait for it to complete."
@@ -147,137 +280,140 @@ msgstr ""
 "KPaint 已在读取一个远程文件,你必须取消当前的\n"
 "远程任务或等待它完成"
 
+#: kpaint.cpp:594
 msgid "KPaint: Could not find KFM"
 msgstr "KPaint: 找不到 KFM"
 
-msgid "KPaint: Could not open file"
-msgstr "KPaint: 无法打开文件"
+#: kpaint.cpp:595 kpaint.cpp:707
+msgid "Error: KPaint could not find a running KFM or start one itself."
+msgstr "错误: KPaint 找不到运行中的 KFM 或无法运行 KFM."
 
-msgid "KPaint: Could not start KFM"
-msgstr "KPaint: 无法打开 KFM"
-
-msgid "KPaint: Malformed URL"
-msgstr "KPaint: 不正确的 URL"
-
+#: kpaint.cpp:647
 msgid "KPaint: Network Load Failed"
 msgstr "KPaint: 网络读取失败"
 
-msgid "KPaint: Unknown Format"
-msgstr "KPaint: 未知的格式"
+#: kpaint.cpp:648
+msgid ""
+"Error: Netword Load Failed\n"
+"Something went wrong :-("
+msgstr ""
 
-msgid "Line"
-msgstr "线段"
+#: kpaint.cpp:706
+msgid "KPaint: Could not start KFM"
+msgstr "KPaint: 无法打开 KFM"
 
-msgid "Line Properties"
-msgstr "线段属性"
+#: kpaint.cpp:734
+msgid "Canvas Size"
+msgstr "画布大小"
 
-msgid "Line Style:"
-msgstr "线段类型:"
-
-msgid "Line Width:"
-msgstr "线段宽度:"
-
-msgid "Mask..."
-msgstr "Mask..."
-
-msgid "New Canvas"
-msgstr "新画布"
-
-msgid "New Image..."
-msgstr "新图象..."
-
-msgid "New Window"
-msgstr "新窗口"
-
-msgid "None"
-msgstr "无"
-
-msgid "Not Yet"
-msgstr "尚未完成"
-
-msgid "Open File"
-msgstr "打开文件"
-
-msgid "Open Image..."
-msgstr "打开图象..."
-
+#: kpaint.cpp:901
 msgid "Open Location:"
 msgstr "打开位置:"
 
-msgid "Open from URL..."
-msgstr "打开 URL..."
-
-msgid "Paste As Image"
-msgstr "贴成新图象"
-
-msgid "Paste Region"
-msgstr "区域粘贴"
-
-msgid "Pattern Filename:"
-msgstr "花样文件名:"
-
-msgid "Pen"
-msgstr "画笔"
-
-msgid "Rectangle"
-msgstr "矩形"
-
-msgid "Save File"
-msgstr "保存文件"
-
-msgid "Save Image As..."
-msgstr "保存图象至..."
-
-msgid "Save Image..."
-msgstr "保存图象..."
-
-msgid "Save Options"
-msgstr "保存选项"
-
+#: kpaint.cpp:933
 msgid "Save to Location:"
 msgstr "保存到位置:"
 
-msgid "Save to URL..."
-msgstr "保存到 URL..."
-
-msgid "Set Fill Colour..."
-msgstr "设定填充颜色..."
-
-msgid "Set Line Colour..."
-msgstr "设定线段颜色..."
-
-msgid "Show Status Bar"
-msgstr "显示状态行"
-
-msgid "Solid"
-msgstr "实心"
-
-msgid "Spray Can"
-msgstr "喷嘴"
-
+#: manager.cpp:61
 msgid "Tool Properties"
 msgstr "工具特性"
 
-msgid "Tool Properties..."
-msgstr "工具特性..."
+#: palette.cpp:100
+msgid "Edit Colour"
+msgstr "编辑颜色"
 
-msgid "Unsaved Changes"
-msgstr "未保存修改"
+#: properties.cpp:20
+msgid "Line Properties"
+msgstr "线段属性"
 
-msgid "Usage: "
-msgstr "用法: "
+#: properties.cpp:22
+msgid "Fill Properties"
+msgstr "填充特性"
 
+#: properties.cpp:68
+msgid "Fill Pattern:"
+msgstr "填充花样"
+
+#: properties.cpp:74 properties.cpp:240
+msgid "None"
+msgstr "无"
+
+#: properties.cpp:75 properties.cpp:235
+msgid "Solid"
+msgstr "实心"
+
+#: properties.cpp:76
 msgid "Vertical Lines"
 msgstr "垂直线段"
 
-msgid "Width"
-msgstr "宽度"
+#: properties.cpp:77
+msgid "Horizontal Lines"
+msgstr "水平线段"
 
-msgid "Zoom In"
-msgstr "放大"
+#: properties.cpp:78
+msgid "Grid"
+msgstr "格线"
 
-msgid "Zoom Out"
-msgstr "缩小"
+#: properties.cpp:79
+msgid "Diagonal Lines //"
+msgstr "对角线 //"
 
-msgid "untitled.gif"
-msgstr "untitled.gif"
+#: properties.cpp:80
+msgid "Diagonal Lines \\"
+msgstr "对角线 \\"
+
+#: properties.cpp:81
+msgid "Diagonal Grid"
+msgstr "对角格线"
+
+#: properties.cpp:91
+msgid "Custom"
+msgstr "自定义"
+
+#: properties.cpp:94
+msgid "Pattern Filename:"
+msgstr "花样文件名:"
+
+#: properties.cpp:104
+msgid "Set Fill Colour..."
+msgstr "设定填充颜色..."
+
+#: properties.cpp:230
+msgid "Line Style:"
+msgstr "线段类型:"
+
+#: properties.cpp:236
+msgid "Dashed"
+msgstr "长划线"
+
+#: properties.cpp:237
+msgid "Dotted"
+msgstr "点线"
+
+#: properties.cpp:238
+msgid "Dash Dot"
+msgstr "点划线"
+
+#: properties.cpp:239
+msgid "Dash Dot Dot"
+msgstr "双点划线"
+
+#: properties.cpp:244
+msgid "Line Width:"
+msgstr "线段宽度:"
+
+#: properties.cpp:254
+msgid "End style:"
+msgstr "末端类型:"
+
+#: properties.cpp:259 properties.cpp:272
+msgid "Not Yet"
+msgstr "尚未完成"
+
+#: properties.cpp:266
+msgid "Join style:"
+msgstr "线段交点类型:"
+
+#: properties.cpp:278
+msgid "Set Line Colour..."
+msgstr "设定线段颜色..."

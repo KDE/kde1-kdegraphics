@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-04-21 14:50+0200\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-04-21 21:05 +0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -77,6 +77,10 @@ msgstr "Bildbreite:"
 #: infodialog.cpp:82
 msgid "Image Height:"
 msgstr "Bildhöhe:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Schließen"
 
 #: kpaint.cpp:44 kpaint.cpp:758
 msgid "untitled.gif"
@@ -418,9 +422,6 @@ msgstr "Verbindungsstil:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Linienfarbe setzen..."
-
-#~ msgid "Dismiss"
-#~ msgstr "Schließen"
 
 #~ msgid "Release Notes"
 #~ msgstr "Hinweise zu dieser Version"

@@ -696,4 +696,3 @@ msgstr "n-ylös"
 #: printSetupData.cpp:137
 msgid "Printing method"
 msgstr "Tulostusmetodi"
-

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview 0.6\n"
-"POT-Creation-Date: 1998-04-21 14:50+0200\n"
+"POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: 1998-04-21 21:45 +0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
@@ -183,6 +183,11 @@ msgstr "Einfügen"
 #: kaccel.cpp:214
 msgid "CTRL+Insert"
 msgstr "Strg+Einfügen"
+
+#: kaccel.cpp:217 kaccel.cpp:428
+#, fuzzy
+msgid "Home"
+msgstr "Strg+Pos1"
 
 #: kaccel.cpp:218
 msgid "CTRL+Home"

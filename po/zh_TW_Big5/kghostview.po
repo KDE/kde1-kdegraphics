@@ -211,7 +211,6 @@ msgid "Prior"
 msgstr ""
 
 #: kaccel.cpp:229 kaccel.cpp:230 kaccel.cpp:437
-#, fuzzy
 msgid "Next"
 msgstr ""
 
@@ -580,7 +579,7 @@ msgid ""
 "pages to be printed was empty.\n"
 msgstr ""
 "列印失敗: \n"
-"因為列印頁列表是空的"
+"因為列印頁列表是空的\n"
 
 #: kghostview.cpp:2209 kghostview.cpp:2221 kghostview.cpp:2486
 #: kghostview.cpp:2509
@@ -648,7 +647,9 @@ msgstr "用法: "
 msgid ""
 " [filename] [siwtches]\n"
 "\n"
-msgstr " [檔案名稱] [選項]\n\n"
+msgstr ""
+" [檔案名稱] [選項]\n"
+"\n"
 
 #: main.cpp:28
 msgid ""
@@ -794,4 +795,3 @@ msgstr "方位[&O]"
 #: viewcontrol.cpp:111
 msgid "&Apply"
 msgstr "套用[&A]"
-

@@ -645,7 +645,7 @@ msgstr ""
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr 
+msgstr ""
 "Veja a documentação do KDE e do QT para\n"
 "opções da linha de comando\n"
 

@@ -426,4 +426,3 @@ msgstr "線段交點類型:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "設定線段顏色..."
-

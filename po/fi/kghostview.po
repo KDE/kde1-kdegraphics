@@ -547,7 +547,7 @@ msgstr ""
 "Valitsit asiakirjan kaikkien sivujen tulostuksen tiedostoon.\n"
 "T‰m‰n tuloksena tuotetaan identtinen dokumentti\n"
 "ladatusta dokumentista.\n"
-"Ei ole tarvetta tulostaa kaikkia sivuja tiedostoon." 
+"Ei ole tarvetta tulostaa kaikkia sivuja tiedostoon."
 
 #: kghostview.cpp:1582
 msgid ""
@@ -555,7 +555,7 @@ msgid ""
 "nothing could be printed to a file.\n"
 msgstr ""
 "Tiedostonime‰ ei ole annettu joten\n"
-"mit‰‰n ei voida tulostaa tiedostoon.\n"  
+"mit‰‰n ei voida tulostaa tiedostoon.\n"
 
 #: kghostview.cpp:1640
 #, c-format
@@ -640,8 +640,9 @@ msgstr ""
 msgid ""
 "See KDE and Qt documentation for\n"
 "command line options.\n"
-msgstr "Lue Qt:n dokumentaatioa\n"
-"komentorivioptioista.\n"  
+msgstr ""
+"Lue Qt:n dokumentaatioa\n"
+"komentorivioptioista.\n"
 
 #: main.cpp:30
 msgid "Error on command line"
@@ -753,7 +754,7 @@ msgstr ""
 "\n"
 "Valittava alue on oltava asiakirjan sivualueella\n"
 "t‰ss‰ asiakirjan osassa.\n"
-"Tarkista tilarivilt‰ t‰m‰ tieto.\n"  
+"Tarkista tilarivilt‰ t‰m‰ tieto.\n"
 
 #: viewcontrol.cpp:36
 msgid "Force changes to ..."
