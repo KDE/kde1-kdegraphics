@@ -58,7 +58,10 @@ msgid ""
 "\n"
 "\n"
 "by Uwe Thiem"
-msgstr "\n\nnapsal Uwe Thiem"
+msgstr ""
+"\n"
+"\n"
+"napsal Uwe Thiem"
 
 #: kfract.C:99
 msgid "&Types"
