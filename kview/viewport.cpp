@@ -10,7 +10,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-#include<qapp.h>
+#include<kapp.h>
 #include<qmsgbox.h>
 #include<qcolor.h>
 
@@ -38,27 +38,27 @@ WViewPort::WViewPort(const char *file, QWidget *parent,
 			      SLOT(doScaleMinus()));
 
 	QPopupMenu *ImageRotate = new QPopupMenu;
-	ImageRotate->insertItem("Clockwise",this,
+	ImageRotate->insertItem(i18n("Clockwise"),this,
 				SLOT(rotateClockwise()));
-	ImageRotate->insertItem("Anti-clock", this, 
+	ImageRotate->insertItem(i18n("Anti-clock"), this, 
 				SLOT(rotateAntiClockwise()));
-	ImageRotate->insertItem("Mirror X", this, 
+	ImageRotate->insertItem(i18n("Mirror X"), this, 
 				SLOT(mirrorX()));
-	ImageRotate->insertItem("Mirror Y", this, 
+	ImageRotate->insertItem(i18n("Mirror Y"), this, 
 				SLOT(mirrorY()));
 	
 	QPopupMenu *ImageRoot = new QPopupMenu;
-	ImageRoot->insertItem("Ti&le", this, SLOT(tileToDesktop()));
-	ImageRoot->insertItem("Max Size", this, SLOT(maxToDesktop()));
-	ImageRoot->insertItem("Maxpect", this, SLOT(maxpectToDesktop()));
+	ImageRoot->insertItem(i18n("Ti&le"), this, SLOT(tileToDesktop()));
+	ImageRoot->insertItem(i18n("Max Size"), this, SLOT(maxToDesktop()));
+	ImageRoot->insertItem(i18n("Maxpect"), this, SLOT(maxpectToDesktop()));
 	
 	lb_popup = new QPopupMenu;
-	lb_popup->insertItem("Zoom", ImageZoom);
-	lb_popup->insertItem("Rotate",ImageRotate);
-	lb_popup->insertItem("To Desktop",ImageRoot);
-	lb_popup->insertItem("Fit window size to pixmap size", this,
+	lb_popup->insertItem(i18n("Zoom"), ImageZoom);
+	lb_popup->insertItem(i18n("Rotate"),ImageRotate);
+	lb_popup->insertItem(i18n("To Desktop"),ImageRoot);
+	lb_popup->insertItem(i18n("Fit window size to pixmap size"), this,
 			     SLOT(fitWindowToPixmap()));
-	lb_popup->insertItem("Fit pixmap size to window size", this,
+	lb_popup->insertItem(i18n("Fit pixmap size to window size"), this,
 			     SLOT(fitPixmapToWindow()));
 
 

@@ -50,7 +50,7 @@ Fileman::Fileman(const char *name, WView *)
 {
   setMinimumSize(250, 350);
   setMaximumSize(700, 1400);  
-  setCaption("KView Display Manager");
+  setCaption(i18n("KView Display Manager"));
 
   // count all display manager windows
   manList.setAutoDelete(FALSE);
@@ -96,23 +96,23 @@ Fileman::Fileman(const char *name, WView *)
 void Fileman::initMenuBar()
 {
   file = new QPopupMenu ();
-  file->insertItem("New Window",   this, SLOT(slotNew()));
-  file->insertItem("Open...",      this, SLOT(slotOpen()));
-  file->insertItem("Open URL...",  this, SLOT(slotOpenUrl()));
-  file->insertItem("Quit",         this, SLOT(closeWindow()));
+  file->insertItem(i18n("&New Window"),   this, SLOT(slotNew()));
+  file->insertItem(i18n("&Open..."),      this, SLOT(slotOpen()));
+  file->insertItem(i18n("Open &URL..."),  this, SLOT(slotOpenUrl()));
+  file->insertItem(i18n("&Quit"),         this, SLOT(closeWindow()));
 
   cacheSize = new QPopupMenu();
   CHECK_PTR( cacheSize );
-  cacheSize->insertItem("256 KB", ID_CZ_256);
+  cacheSize->insertItem("256 kB", ID_CZ_256);
   if (KVConfigHandler::cacheSize==256)
     cacheSize->setItemChecked(ID_CZ_256,  TRUE);
-  cacheSize->insertItem("1024 KB", ID_CZ_1024);
+  cacheSize->insertItem("1024 kB", ID_CZ_1024);
   if (KVConfigHandler::cacheSize==1024)
     cacheSize->setItemChecked(ID_CZ_1024,  TRUE);
-  cacheSize->insertItem("4096 KB", ID_CZ_4096);
+  cacheSize->insertItem("4096 kB", ID_CZ_4096);
   if (KVConfigHandler::cacheSize==4096)
     cacheSize->setItemChecked(ID_CZ_4096,  TRUE);
-  cacheSize->insertItem("8192 KB", ID_CZ_8192);
+  cacheSize->insertItem("8192 kB", ID_CZ_8192);
   if (KVConfigHandler::cacheSize==1892)
     cacheSize->setItemChecked(ID_CZ_8192,  TRUE);
   connect(cacheSize, SIGNAL( activated( int ) ), this,
@@ -121,7 +121,7 @@ void Fileman::initMenuBar()
   
   options = new QPopupMenu();
   CHECK_PTR( options );
-  options->insertItem("Image Caching" ,ID_CACHING);
+  options->insertItem(i18n("Image Caching") ,ID_CACHING);
   connect(options, SIGNAL( activated( int ) ), this,
 	  SLOT( imageCaching( int ) ) );
   if (KVConfigHandler::cachingOn == 0)
@@ -129,21 +129,21 @@ void Fileman::initMenuBar()
   else
     options->setItemChecked( ID_CACHING, TRUE );
  
-  options->insertItem("Cache Size", cacheSize);
+  options->insertItem(i18n("Cache Size"), cacheSize);
   options->insertSeparator();
-  options->insertItem("Save Options", this, SLOT(saveOptions()));
+  options->insertItem(i18n("Save Options"), this, SLOT(saveOptions()));
 		      
  
   help = new QPopupMenu ();
-  help->insertItem("About KView",  this, SLOT(aboutKview()));
-  help->insertItem("Help on KView",this, SLOT(invokeHelp()));
+  help->insertItem(i18n("&Contents"),this, SLOT(invokeHelp()));
+  help->insertItem(i18n("&About KView"),  this, SLOT(aboutKview()));
 
   
   menubar = new KMenuBar(this,"menubar");
-  menubar->insertItem(i18n("File"), file);
-  menubar->insertItem(i18n("Options"), options);
-  //menubar->insertItem(i18n("Cache"), cacheSize);
-  menubar->insertItem(i18n("Help"), help);
+  menubar->insertItem(i18n("&File"), file);
+  menubar->insertItem(i18n("&Options"), options);
+  //menubar->insertItem(i18n("&Cache"), cacheSize);
+  menubar->insertItem(i18n("&Help"), help);
   setMenu(menubar);
 }
 
@@ -159,19 +159,19 @@ void Fileman::initToolBar()
   ktoolbar1->insertButton(pixmap, ID_T_NEWWINDOW,
 			SIGNAL(clicked()), this,
 			SLOT(slotNew()), TRUE,
-			"New Window");
+			i18n("New Window"));
 
   pixmap = theApp->getIconLoader()->loadIcon("fileopen.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_OPENFILE,
 			SIGNAL(clicked()), this,
 			SLOT(slotOpen()), TRUE,
-			"open new file");
+			i18n("open new file"));
   /*
   pixmap = theApp->getIconLoader()->loadIcon("reload.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_RELOAD,
 			SIGNAL(clicked()), this,
 			SLOT(slotReload()), TRUE,
-			"reload file list");
+			i18n("reload file list"));
   */
   
   ktoolbar1->insertSeparator();
@@ -180,71 +180,71 @@ void Fileman::initToolBar()
   ktoolbar1->insertButton(pixmap, ID_T_MINIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMin()), TRUE,
-			"shrink -50%");
+			i18n("shrink -50%"));
 
   pixmap = theApp->getIconLoader()->loadIcon("viewmag+.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_MAGNIFY,
 			SIGNAL(clicked()), this,
 			SLOT(slotMax()), TRUE,
-			"magnify +50%");
+			i18n("magnify +50%"));
   
   pixmap.loadFromData(resize_xpm_data, resize_xpm_len);
   ktoolbar1->insertButton(pixmap, ID_T_RESIZE,
 			SIGNAL(clicked()), this,
 			SLOT(slotResize()), TRUE,
-			"size Window");
+			i18n("size Window"));
   ktoolbar1->insertSeparator();
 
   pixmap = theApp->getIconLoader()->loadIcon("help.xpm");
   ktoolbar1->insertButton(pixmap, ID_T_HELP,
 			SIGNAL(clicked()), this,
 			SLOT(invokeHelp()), TRUE,
-			"launch help");
+			i18n("launch help"));
 
   //--------------- initialize the second toolbar
   pixmap = theApp->getIconLoader()->loadIcon("start.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_FIRSTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(firstClicked()), TRUE,
-			"first pic");
+			i18n("first pic"));
 
   pixmap = theApp->getIconLoader()->loadIcon("finish.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_LASTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(lastClicked()), TRUE,
-			"last pic");
+			i18n("last pic"));
   ktoolbar2->insertSeparator();
 
   pixmap = theApp->getIconLoader()->loadIcon("back.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_PREVPIC,
 			SIGNAL(clicked()), this,
 			SLOT(prevClicked()), TRUE,
-			"prev pic");
+			i18n("prev pic"));
 
   pixmap = theApp->getIconLoader()->loadIcon("forward.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_NEXTPIC,
 			SIGNAL(clicked()), this,
 			SLOT(nextClicked()), TRUE,
-			"next pic");
+			i18n("next pic"));
   ktoolbar2->insertSeparator();
     
   pixmap.loadFromData(diashow_xpm_data, diashow_xpm_len );
   ktoolbar2->insertButton(pixmap, ID_T_STARTSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(startShow()), TRUE,
-			"start picture show");
+			i18n("start picture show"));
 
   pixmap.loadFromData(random_xpm_data, random_xpm_len );
   ktoolbar2->insertButton(pixmap, ID_T_RANDOMSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(randomShow()), TRUE,
-			"random picture show");
+			i18n("random picture show"));
   
   pixmap = theApp->getIconLoader()->loadIcon("stop.xpm");
   ktoolbar2->insertButton(pixmap, ID_T_STOPSHOW,
 			SIGNAL(clicked()), this,
 			SLOT(stopShow()), TRUE,
-			"stop picture show");
+			i18n("stop picture show"));
 
   //add the toolbars to the top level widget
   ktoolbar1->setBarPos( KVConfigHandler::toolbar1pos );
@@ -277,12 +277,12 @@ void Fileman::initMainWidget()
   
   textSlow = new QLabel( mainwidget, "slow" );
   textSlow->setFont( QFont("times",10));
-  textSlow->setText("slow");
+  textSlow->setText(i18n("slow"));
   
 
   textFast = new QLabel( mainwidget, "fast");
   textFast->setFont( QFont("times",10));
-  textFast->setText("fast");
+  textFast->setText(i18n("fast"));
 
   slider = new QSlider(10,50,
 		       5,(KVConfigHandler::delay)/100,
@@ -296,7 +296,7 @@ void Fileman::initMainWidget()
 
   textOutput = new QLabel( mainwidget, "OutputDevice");
   textOutput->setFont( QFont("times",10));
-  textOutput->setText("Output Device");
+  textOutput->setText(i18n("Output Device"));
 
   combobox = new QComboBox(FALSE, mainwidget, "read Combo");
   updateCombobox();
@@ -375,7 +375,7 @@ void Fileman::checkValidButtons()
 
   // update the statusbar
   QString ptext;
-  ptext.sprintf(" Files: %d", listbox->count());
+  ptext.sprintf(i18n(" Files: %d"), listbox->count());
   statusbar->changeItem(ptext.data(),ID_S_FILES);
 
   char * filename;
@@ -385,7 +385,7 @@ void Fileman::checkValidButtons()
     filename = (imageWindow->getCurrentFilename());
     if (strcmp(filename,"::no file loaded")!=0)
       {
-	ptext.sprintf(" Format: %s Size: %dx%d",
+	ptext.sprintf(i18n(" Format: %s Size: %dx%d"),
 		      imageWindow->getImageType().data(),
 		      imageWindow->getImageWidth(),
 		      imageWindow->getImageHeight());
@@ -528,7 +528,7 @@ void Fileman::updateCombobox()
        window=windowList.next())
     {
       i++;
-      inserttext.sprintf("Window %d",i);
+      inserttext.sprintf(i18n("Window %d"),i);
       combobox->insertItem(inserttext.data(),-1);
       if (window==imageWindow) 
 	active = i;
@@ -652,11 +652,11 @@ void Fileman::aboutKview()
 {
   QString text;
   text.sprintf("kview %d.%d.%d \n",VERSIONNR,SUBVERSIONNR,PATCHLEVEL);
-  text += "(c) 1996 - 1998 by \n";
+  text += i18n("(c) 1996 - 1998 by \n");
   text += "Sirtaj Singh Kang,  <taj@kde.org>\n";
   text += "Martin Hartig,  <martinhartig@yahoo.com>";
-  QMessageBox::message("About kview", text.data(),
-			"Ok"); 
+  QMessageBox::message(i18n("About KView"), text.data(),
+			i18n("Ok")); 
 }
 
 void Fileman::saveOptions()

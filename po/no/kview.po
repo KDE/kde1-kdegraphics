@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kview 1.0\n"
-"POT-Creation-Date: 1998-08-09 13:28+0200\n"
+"POT-Creation-Date: 1998-08-09 15:48+0200\n"
 "PO-Revision-Date: 1998-08-09 14:50+0200\n"
 "Last-Translator: Hans Petter Bieker <zerium@webindex.no>\n"
 "Language-Team: no <LL@li.org>\n"
@@ -43,7 +43,7 @@ msgstr "&Av/på meny"
 
 #: wview.cpp:100
 msgid "&Size Window"
-msgstr ""
+msgstr "&Sett bildestørrelse"
 
 #: wview.cpp:102
 msgid "I&mage Info"
@@ -65,7 +65,7 @@ msgstr "&Klokkevis"
 msgid "&Anti-clock"
 msgstr "&Mot klokken"
 
-#: wview.cpp:118
+#: viewport.cpp:51 wview.cpp:118
 msgid "Ti&le"
 msgstr "&Side ved side"
 
@@ -75,4 +75,161 @@ msgstr "&Maks størrelse"
 
 #: wview.cpp:120
 msgid "M&axpect"
-msgstr ""
+msgstr "&Sidemaks"
+
+#: viewport.cpp:41
+msgid "Clockwise"
+msgstr "Klokkevis"
+
+#: viewport.cpp:43
+msgid "Anti-clock"
+msgstr "Mot klokken"
+
+#: viewport.cpp:45
+msgid "Mirror X"
+msgstr "Speil om X"
+
+#: viewport.cpp:47
+msgid "Mirror Y"
+msgstr "Speil om Y"
+
+#: viewport.cpp:52
+msgid "Max Size"
+msgstr "Maks størrelse"
+
+#: viewport.cpp:53
+msgid "Maxpect"
+msgstr "Sidemaks"
+
+#: viewport.cpp:56
+msgid "Zoom"
+msgstr "Forstørr"
+
+#: viewport.cpp:57
+msgid "Rotate"
+msgstr "Roter"
+
+#: viewport.cpp:58
+msgid "To Desktop"
+msgstr "Til skrivebord"
+
+#: viewport.cpp:59
+msgid "Fit window size to pixmap size"
+msgstr "Tilpass vindustørrelse til pixmap-størrelse"
+
+#: viewport.cpp:61
+msgid "Fit pixmap size to window size"
+msgstr "Tilpass pixmap-størrelse til vindustørrelse"
+
+#: fileman.cpp:53
+msgid "KView Display Manager"
+msgstr "KView Skjermbehandler"
+
+#: fileman.cpp:101
+msgid "Open &URL..."
+msgstr "Åpne &URL..."
+
+#: fileman.cpp:124
+msgid "Image Caching"
+msgstr "Bildemellomlagring"
+
+#: fileman.cpp:132
+msgid "Cache Size"
+msgstr "Mellomlagerstørrelse"
+
+#: fileman.cpp:134
+msgid "Save Options"
+msgstr "Lagre valg"
+
+#: fileman.cpp:139
+msgid "&About KView"
+msgstr "&Om KView"
+
+#: fileman.cpp:162
+msgid "New Window"
+msgstr "Nytt vindu"
+
+#: fileman.cpp:168
+msgid "open new file"
+msgstr "åpne ny fil"
+
+#: fileman.cpp:183
+#, c-format
+msgid "shrink -50%"
+msgstr "forminsk -50%"
+
+#: fileman.cpp:189
+#, c-format
+msgid "magnify +50%"
+msgstr "forstørr +50%"
+
+#: fileman.cpp:195
+msgid "size Window"
+msgstr "sett vindusstørrelse"
+
+#: fileman.cpp:202
+msgid "launch help"
+msgstr "kjør hjelp"
+
+#: fileman.cpp:209
+msgid "first pic"
+msgstr "første bilde"
+
+#: fileman.cpp:215
+msgid "last pic"
+msgstr "siste bilde"
+
+#: fileman.cpp:222
+msgid "prev pic"
+msgstr "forrige bilde"
+
+#: fileman.cpp:228
+msgid "next pic"
+msgstr "neste bilde"
+
+#: fileman.cpp:235
+msgid "start picture show"
+msgstr "start bildefremvisning"
+
+#: fileman.cpp:241
+msgid "random picture show"
+msgstr "tilfeldig bildefremvisning"
+
+#: fileman.cpp:247
+msgid "stop picture show"
+msgstr "stopp bildefremvisning"
+
+#: fileman.cpp:280
+msgid "slow"
+msgstr "sakte"
+
+#: fileman.cpp:285
+msgid "fast"
+msgstr "hurtig"
+
+#: fileman.cpp:299
+msgid "Output Device"
+msgstr "Utenhet"
+
+#: fileman.cpp:378
+#, c-format
+msgid " Files: %d"
+msgstr " Filer: %d"
+
+#: fileman.cpp:388
+#, c-format
+msgid " Format: %s Size: %dx%d"
+msgstr " Format: %s Størrelse: %dx%d"
+
+#: fileman.cpp:531
+#, c-format
+msgid "Window %d"
+msgstr "Vindu %d"
+
+#: fileman.cpp:655
+msgid "(c) 1996 - 1998 by \n"
+msgstr "(c) 1996 - 1998 av \n"
+
+#: fileman.cpp:658
+msgid "About KView"
+msgstr "Om KView"
