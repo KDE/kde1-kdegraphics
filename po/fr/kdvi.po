@@ -83,12 +83,10 @@ msgid "Redraw"
 msgstr "Redessiner"
 
 #: kdvi.cpp:114
-#, fuzzy
 msgid "Preferences ..."
-msgstr "&Préférences..."
+msgstr "Préférences..."
 
 #: kdvi.cpp:173
-#, fuzzy
 msgid "&Open ..."
 msgstr "&Ouvrir..."
 
@@ -97,7 +95,6 @@ msgid "Open &recent"
 msgstr "Ouvrir &récent"
 
 #: kdvi.cpp:182
-#, fuzzy
 msgid "&Print ..."
 msgstr "Im&primer..."
 
@@ -130,7 +127,6 @@ msgid "&Last"
 msgstr "&Dernière"
 
 #: kdvi.cpp:206
-#, fuzzy
 msgid "&Go to ..."
 msgstr "&Aller à..."
 
@@ -139,14 +135,12 @@ msgid "&Page"
 msgstr "&Page"
 
 #: kdvi.cpp:214
-#, fuzzy
 msgid "&Preferences ..."
 msgstr "&Préférences..."
 
 #: kdvi.cpp:215
-#, fuzzy
 msgid "&Keys ..."
-msgstr "Configurer le &clavier"
+msgstr "&Clavier..."
 
 #: kdvi.cpp:217
 msgid "Make PK-&fonts"
@@ -191,7 +185,6 @@ msgstr ""
 "par Markku Hihnala"
 
 #: kdvi.cpp:260
-#, fuzzy
 msgid "Open document ..."
 msgstr "Ouvrir un document..."
 
@@ -200,7 +193,6 @@ msgid "Reload document"
 msgstr "Recharger le document"
 
 #: kdvi.cpp:262
-#, fuzzy
 msgid "Print ..."
 msgstr "Imprimer..."
 
@@ -393,7 +385,6 @@ msgid "Missing PK-fonts will be logged to 'missfont.log'"
 msgstr "Les polices PK manquantes seront inscrites dans 'missfont.log'"
 
 #: kdvi.cpp:730
-#, fuzzy
 msgid "Postcsript specials are rendered"
 msgstr "Le postscript est affiché"
 

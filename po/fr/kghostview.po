@@ -272,7 +272,6 @@ msgid "Configure interpreter"
 msgstr "Configurer l'interpréteur"
 
 #: kghostview.cpp:494
-#, fuzzy
 msgid "&Open ..."
 msgstr "&Ouvrir..."
 
@@ -281,12 +280,10 @@ msgid "Open &recent"
 msgstr "Ouvrir &récent"
 
 #: kghostview.cpp:503
-#, fuzzy
 msgid "Page Set&up ..."
 msgstr "Mise en &page..."
 
 #: kghostview.cpp:505
-#, fuzzy
 msgid "&Print ..."
 msgstr "&Imprimer..."
 
@@ -299,12 +296,10 @@ msgid "Zoom &out"
 msgstr "&Réduire"
 
 #: kghostview.cpp:517
-#, fuzzy
 msgid "&Zoom ..."
 msgstr "&Loupe..."
 
 #: kghostview.cpp:522
-#, fuzzy
 msgid "&Info ..."
 msgstr "&Informations..."
 
@@ -317,7 +312,6 @@ msgid "&Next page"
 msgstr "Page &suivante"
 
 #: kghostview.cpp:531
-#, fuzzy
 msgid "&Go to page ..."
 msgstr "&Aller à la page..."
 
@@ -370,12 +364,10 @@ msgid "Show &page list"
 msgstr "Montrer la liste des &pages"
 
 #: kghostview.cpp:571
-#, fuzzy
 msgid "Configure &interpreter ..."
 msgstr "Configurer l'&interpréteur..."
 
 #: kghostview.cpp:572
-#, fuzzy
 msgid "Configure &key bindings ..."
 msgstr "Configurer les raccourcis &clavier..."
 
@@ -404,17 +396,14 @@ msgid "&Pagemarks"
 msgstr "&Signets"
 
 #: kghostview.cpp:661
-#, fuzzy
 msgid "New window ..."
 msgstr "Nouvelle fenêtre..."
 
 #: kghostview.cpp:664
-#, fuzzy
 msgid "Open file ..."
 msgstr "Ouvrir un fichier..."
 
 #: kghostview.cpp:672
-#, fuzzy
 msgid "Print document ..."
 msgstr "Imprimer le document..."
 
@@ -435,7 +424,6 @@ msgid "Go forward"
 msgstr "Avancer"
 
 #: kghostview.cpp:691
-#, fuzzy
 msgid "Go to page ..."
 msgstr "Aller à la page..."
 
@@ -504,9 +492,8 @@ msgid "Upside down"
 msgstr "Tête en bas"
 
 #: kghostview.cpp:1262
-#, fuzzy
 msgid "Go to ..."
-msgstr "Aller à la page..."
+msgstr "Aller à..."
 
 #: kghostview.cpp:1337
 msgid "Zoom"
@@ -687,7 +674,7 @@ msgstr "&Fermer"
 
 #: print.cpp:35
 msgid "Printer setup"
-msgstr "Paramétrage de l'imprimante"
+msgstr "Configuration de l'imprimante"
 
 #: print.cpp:65
 msgid "&Printer name"
@@ -734,9 +721,8 @@ msgid "Print document in re&verse order"
 msgstr "Imprimer les pages à rebours"
 
 #: print.cpp:249
-#, fuzzy
 msgid "&Setup ..."
-msgstr "&Paramétrage..."
+msgstr "&Configuration..."
 
 #: print.cpp:289
 msgid "Range error"
