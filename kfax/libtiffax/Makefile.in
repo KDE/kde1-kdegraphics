@@ -178,7 +178,7 @@ tif_win3.o: tif_win3.c
 
 INCS	= tiff.h tiffio.h
 
-install:
+install: all
 
 clean:
 	rm -f ${TARGETS} ${OBJS} core a.out mkg3states tif_fax3sm.c version.c *.a
