@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpaint\n"
-"POT-Creation-Date: 1998-04-09 18:29+0200\n"
-"PO-Revision-Date: 1998-01-05 21:05 +0100\n"
+"POT-Creation-Date: 1998-04-21 14:50+0200\n"
+"PO-Revision-Date: 1998-04-21 21:05 +0100\n"
 "Last-Translator: Oliver Hensel <oliver.hensel@gmx.de>\n"
 
 #: app.cpp:40
@@ -77,10 +77,6 @@ msgstr "Bildbreite:"
 #: infodialog.cpp:82
 msgid "Image Height:"
 msgstr "Bildhöhe:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Schließen"
 
 #: kpaint.cpp:44 kpaint.cpp:758
 msgid "untitled.gif"
@@ -207,9 +203,8 @@ msgid "Area Select"
 msgstr "Bereichsauswahl"
 
 #: kpaint.cpp:361
-#, fuzzy
 msgid "Show Tools Toolbar"
-msgstr "Werkzeugleiste zeigen"
+msgstr "Werkzeugleiste an"
 
 #: kpaint.cpp:362
 msgid "Show Commands Toolbar"
@@ -253,15 +248,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Unbekanntes Format"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Fehler: Unbekanntes Format\n"
-"KPaint versteht das Format der angegebenen Datei nicht, oder die Datei ist "
-"beschädigt."
+"KPaint versteht das Format der angegebenen Datei nicht,\n"
+"oder die Datei ist beschädigt."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -424,6 +418,9 @@ msgstr "Verbindungsstil:"
 #: properties.cpp:278
 msgid "Set Line Colour..."
 msgstr "Linienfarbe setzen..."
+
+#~ msgid "Dismiss"
+#~ msgstr "Schließen"
 
 #~ msgid "Release Notes"
 #~ msgstr "Hinweise zu dieser Version"
