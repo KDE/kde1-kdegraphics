@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-11-14 01:52+0100\n"
+"POT-Creation-Date: 1998-11-16 01:58+0100\n"
 "PO-Revision-Date: 1998-09-08 09:00\n"
 "Last-Translator: Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -19,10 +19,12 @@ msgid "copyFile - There was an error opening destination file: %s"
 msgstr "copyFile - Houve um erro na abertura do arquivo de destino: %s"
 
 #: utils.cpp:72
+#, c-format
 msgid "copyFile - There was an error reading source file: %s"
 msgstr "copyFile - Houve um erro na abertura do arquivo-fonte: %s"
 
 #: utils.cpp:80
+#, c-format
 msgid "copyFile - There was an error writing to destination file: %s"
 msgstr "copyFile - Houve um erro na gravação do arquivo de destino: %s"
 
@@ -780,7 +782,8 @@ msgstr "Grupo"
 
 #: kicon.cpp:48
 msgid "There was an error removing temporary backup file:\n"
-msgstr "Houve um erro ao remover arquivo temporário de cópia:\n"
+msgstr ""
+"Houve um erro ao remover arquivo temporário de cópia:\n"
 "Houve um erro ao remover os arquivos temporários da cópia de segurança\n"
 
 #: kicon.cpp:74 kicon.cpp:258 kicon.cpp:342 kicon.cpp:445
@@ -799,7 +802,9 @@ msgstr "a URL:\n"
 msgid ""
 "\n"
 "seems to be malformed.\n"
-msgstr "\nparece estar mal formado.\n"
+msgstr ""
+"\n"
+"parece estar mal formado.\n"
 
 #: kicon.cpp:100 kicon.cpp:146 kicon.cpp:169 kicon.cpp:181 kicon.cpp:194
 #: kicon.cpp:207 kicon.cpp:218 kicon.cpp:399 kicon.cpp:432
@@ -826,7 +831,9 @@ msgstr "O arquivo:\n"
 msgid ""
 "\n"
 "doesn't exist or isn't readable.\n"
-msgstr "\nnão existe ou não é legível.\n"
+msgstr ""
+"\n"
+"não existe ou não é legível.\n"
 
 #: kicon.cpp:160
 msgid ""

@@ -1,9 +1,89 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 1998-11-14 01:52+0100\n"
+"POT-Creation-Date: 1998-11-18 13:52+0100\n"
 "PO-Revision-Date: 1998-03-23 00:00+0100\n"
 "Last-Translator: Sandro Henrique <sandro@conectiva.com.br>\n"
+
+#: areaselect.cpp:20
+msgid "Area Selection"
+msgstr "Seleção de Área"
+
+#: canvassize.cpp:16
+msgid "Canvas Size"
+msgstr "Tamanho da Tela"
+
+#: canvassize.cpp:25
+msgid "Width:"
+msgstr "Largura:"
+
+#: canvassize.cpp:26
+msgid "Height:"
+msgstr "Altura:"
+
+#: circle.cpp:18 circle.cpp:25 manager.cpp:67
+msgid "Circle"
+msgstr "Círculo"
+
+#: depthdialog.cpp:18
+msgid "Image Depth:"
+msgstr "Profundidade de imagem:"
+
+#: depthdialog.cpp:24
+msgid "1 (2 Colours)"
+msgstr "1 (2 Cores)"
+
+#: depthdialog.cpp:25
+msgid "4 (16 Colours)"
+msgstr "4 (16 Cores)"
+
+#: depthdialog.cpp:26
+msgid "8 (256 Colours)"
+msgstr "8 (256 Cores)"
+
+#: depthdialog.cpp:27
+msgid "15 (32k Colours)"
+msgstr "15 (32k Cores)"
+
+#: depthdialog.cpp:28
+msgid "16 (64k Colours)"
+msgstr "16 (64k Cores)"
+
+#: depthdialog.cpp:29
+msgid "24 (True Colour)"
+msgstr "24 (TrueColor)"
+
+#: depthdialog.cpp:30
+msgid "32 (True Colour)"
+msgstr "32 (TrueColor)"
+
+#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
+msgid "Ellipse"
+msgstr "Elipse"
+
+#: formatdialog.cpp:29
+msgid "File Format:"
+msgstr "Formato do Arquivo:"
+
+#: infodialog.cpp:24
+msgid "Colour Depth:"
+msgstr "Profundidade de Cor:"
+
+#: infodialog.cpp:39
+msgid "Colours Used:"
+msgstr "Cores Usadas:"
+
+#: infodialog.cpp:66
+msgid "Image Width:"
+msgstr "Largura da Imagem:"
+
+#: infodialog.cpp:82
+msgid "Image Height:"
+msgstr "Altura da Imagem:"
+
+#: infodialog.cpp:94 palettedialog.cpp:14
+msgid "Dismiss"
+msgstr "Ok"
 
 #: kpaint.cpp:76 kpaint.cpp:751
 msgid "untitled.gif"
@@ -176,21 +256,13 @@ msgstr ""
 "KPaint não reconhece o formato do arquivo especificado\n"
 "ou o arquivo está corrompido."
 
-#: ellipse.cpp:16 ellipse.cpp:23 manager.cpp:65
-msgid "Ellipse"
-msgstr "Elipse"
-
-#: circle.cpp:18 circle.cpp:25 manager.cpp:67
-msgid "Circle"
-msgstr "Círculo"
+#: line.cpp:19 manager.cpp:71
+msgid "Line"
+msgstr "Linha"
 
 #: manager.cpp:69 pen.cpp:17
 msgid "Pen"
 msgstr "Caneta"
-
-#: line.cpp:19 manager.cpp:71
-msgid "Line"
-msgstr "Linha"
 
 #: manager.cpp:73 rectangle.cpp:17
 msgid "Rectangle"
@@ -216,45 +288,9 @@ msgstr "Selecionar Área"
 msgid "Tool Properties"
 msgstr "Propriedades da Ferramenta"
 
-#: infodialog.cpp:24
-msgid "Colour Depth:"
-msgstr "Profundidade de Cor:"
-
-#: infodialog.cpp:39
-msgid "Colours Used:"
-msgstr "Cores Usadas:"
-
-#: infodialog.cpp:66
-msgid "Image Width:"
-msgstr "Largura da Imagem:"
-
-#: infodialog.cpp:82
-msgid "Image Height:"
-msgstr "Altura da Imagem:"
-
-#: infodialog.cpp:94 palettedialog.cpp:14
-msgid "Dismiss"
-msgstr "Ok"
-
 #: palette.cpp:100
 msgid "Edit Colour"
 msgstr "Editar Cor"
-
-#: formatdialog.cpp:29
-msgid "File Format:"
-msgstr "Formato do Arquivo:"
-
-#: canvassize.cpp:16
-msgid "Canvas Size"
-msgstr "Tamanho da Tela"
-
-#: canvassize.cpp:25
-msgid "Width:"
-msgstr "Largura:"
-
-#: canvassize.cpp:26
-msgid "Height:"
-msgstr "Altura:"
 
 #: properties.cpp:21
 msgid "Line Properties"
@@ -351,42 +387,6 @@ msgstr "Estilo de junção:"
 #: properties.cpp:331
 msgid "Set Line Colour..."
 msgstr "Cor da Linha..."
-
-#: areaselect.cpp:20
-msgid "Area Selection"
-msgstr "Seleção de Área"
-
-#: depthdialog.cpp:18
-msgid "Image Depth:"
-msgstr "Profundidade de imagem:"
-
-#: depthdialog.cpp:24
-msgid "1 (2 Colours)"
-msgstr "1 (2 Cores)"
-
-#: depthdialog.cpp:25
-msgid "4 (16 Colours)"
-msgstr "4 (16 Cores)"
-
-#: depthdialog.cpp:26
-msgid "8 (256 Colours)"
-msgstr "8 (256 Cores)"
-
-#: depthdialog.cpp:27
-msgid "15 (32k Colours)"
-msgstr "15 (32k Cores)"
-
-#: depthdialog.cpp:28
-msgid "16 (64k Colours)"
-msgstr "16 (64k Cores)"
-
-#: depthdialog.cpp:29
-msgid "24 (True Colour)"
-msgstr "24 (TrueColor)"
-
-#: depthdialog.cpp:30
-msgid "32 (True Colour)"
-msgstr "32 (TrueColor)"
 
 #: roundangle.cpp:19
 msgid "Roundangle"
