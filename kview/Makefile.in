@@ -10,7 +10,7 @@ MOC= @MOC@
 
 
 INCLUDE= @all_includes@ -I.. -I../kfm/libkfm
-LDFLAGS= @all_libraries@ -lqt -lkfm -lkdecore -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ -L../kfm/libkfm
+LDFLAGS= @all_libraries@ -lkfm -lkdecore -lqt -lX11 -lXext -lgif -ljpeg @LIBSOCKET@ -L../kfm/libkfm
 CXXFLAGS += -DHAVE_CONFIG_H
 
 # Define if you have libpng.
@@ -72,7 +72,7 @@ install: kview
 	@INSTALL@ -m 755 kview $(BINPATH)
 	@INSTALL@ -d -m 755 $(LNKPATH)
 	@INSTALL@ -m 644 kview.kdelnk $(LNKPATH)/kview
-	(cd doc && make install)
+	(cd doc && $(MAKE) install)
 
 srcdoc:	
 	cd doc; doc++ -j -H -d $(SRCDOCPATH) ../wview.h ../viewport.h \
