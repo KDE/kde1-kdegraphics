@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegraphics\n"
-"POT-Creation-Date: 1999-01-31 01:52+0100\n"
+"POT-Creation-Date: 1999-04-23 02:23+0200\n"
 "PO-Revision-Date: 1998-03-15 20:00-0500\n"
 "Last-Translator: Vladimir Vuksan <vuksan@veus.hr>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "Stranica"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: copyright.cpp:41 kghostview.cpp:618
+#: copyright.cpp:41 kghostview.cpp:629
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -234,27 +234,27 @@ msgstr "&Sekcija"
 msgid "&Page"
 msgstr "St&ranica"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
-#: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2315
+#: kghostview.cpp:2327 kghostview.cpp:2332 kghostview.cpp:2615
 #, c-format
 msgid "of %d"
 msgstr "od %d"
 
-#: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
+#: kghostview.cpp:1269 kghostview.cpp:2406 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Uspravno"
 
-#: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
+#: kghostview.cpp:1273 kghostview.cpp:2412 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Polo¾eno"
 
-#: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
-msgid "Seascape"
-msgstr "Vodoravno"
-
-#: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
+#: kghostview.cpp:1277 kghostview.cpp:2408 viewcontrol.cpp:66
 msgid "Upside down"
 msgstr "Naopaèke"
+
+#: kghostview.cpp:1281 kghostview.cpp:2410 viewcontrol.cpp:67
+msgid "Seascape"
+msgstr "Vodoravno"
 
 #: viewcontrol.cpp:75
 msgid "magnification"
@@ -300,195 +300,191 @@ msgstr "Gre¹ka na komandoj liniji"
 msgid "Document information"
 msgstr "Informacije o dokumentu"
 
-#: kghostview.cpp:220
+#: kghostview.cpp:220 kghostview.cpp:371 kghostview.cpp:460
 msgid "Page Setup"
 msgstr "Postava stranice"
 
-#: kghostview.cpp:360 kghostview.cpp:449
-msgid "View Control"
-msgstr "Kontrole pogleda"
-
-#: kghostview.cpp:361 kghostview.cpp:454
+#: kghostview.cpp:372 kghostview.cpp:465
 msgid "Go To Page"
 msgstr "Idi na stranicu"
 
-#: kghostview.cpp:362 kghostview.cpp:447
+#: kghostview.cpp:373 kghostview.cpp:458
 msgid "Zoom In"
 msgstr "Uveæaj"
 
-#: kghostview.cpp:363 kghostview.cpp:448
+#: kghostview.cpp:374 kghostview.cpp:459
 msgid "Zoom Out"
 msgstr "Umanji"
 
-#: kghostview.cpp:364 kghostview.cpp:452
+#: kghostview.cpp:375 kghostview.cpp:463
 msgid "Next Page"
 msgstr "Slijedeæa"
 
-#: kghostview.cpp:365 kghostview.cpp:453
+#: kghostview.cpp:376 kghostview.cpp:464
 msgid "Prev Page"
 msgstr "Prethodna"
 
-#: kghostview.cpp:366
+#: kghostview.cpp:377
 msgid "Scroll Up"
 msgstr "Idi gore"
 
-#: kghostview.cpp:367
+#: kghostview.cpp:378
 msgid "Scroll Down"
 msgstr "Idi dolje"
 
-#: kghostview.cpp:368
+#: kghostview.cpp:379
 msgid "Scroll Left"
 msgstr "Idi lijevo"
 
-#: kghostview.cpp:369
+#: kghostview.cpp:380
 msgid "Scroll Right"
 msgstr "Idi desno"
 
-#: kghostview.cpp:370 kghostview.cpp:450
+#: kghostview.cpp:381 kghostview.cpp:461
 msgid "Redisplay"
 msgstr "Obnovi sadr¾aj"
 
-#: kghostview.cpp:413 kghostview.cpp:415
+#: kghostview.cpp:424 kghostview.cpp:426
 msgid "Not known"
 msgstr "Nepoznat"
 
-#: kghostview.cpp:426
+#: kghostview.cpp:437
 msgid "Configure interpreter"
 msgstr "Podesi interpreter"
 
-#: kghostview.cpp:444
+#: kghostview.cpp:455
 msgid "New"
 msgstr "Nova"
 
-#: kghostview.cpp:498
+#: kghostview.cpp:509
 msgid "&New"
 msgstr "&Nova"
 
-#: kghostview.cpp:500
+#: kghostview.cpp:511
 msgid "&Open ..."
 msgstr "&Otvori ..."
 
-#: kghostview.cpp:501
+#: kghostview.cpp:512
 msgid "Open &recent"
 msgstr "Otvori &skora¹nji"
 
-#: kghostview.cpp:509
+#: kghostview.cpp:520
 msgid "Page Set&up ..."
 msgstr "Pos&tava stranice ..."
 
-#: kghostview.cpp:511
+#: kghostview.cpp:522
 msgid "&Print ..."
 msgstr "Is&pis ..."
 
-#: kghostview.cpp:519
+#: kghostview.cpp:530
 msgid "Zoom &in"
 msgstr "U&veæaj"
 
-#: kghostview.cpp:521
+#: kghostview.cpp:532
 msgid "Zoom &out"
 msgstr "U&manji"
 
-#: kghostview.cpp:523
+#: kghostview.cpp:534
 msgid "&Zoom ..."
 msgstr "&Uveæaj/Umanji ..."
 
-#: kghostview.cpp:528
+#: kghostview.cpp:539
 msgid "&Info ..."
 msgstr "&Info ..."
 
-#: kghostview.cpp:533
+#: kghostview.cpp:544
 msgid "&Previous Page"
 msgstr "&Prethodna"
 
-#: kghostview.cpp:535
+#: kghostview.cpp:546
 msgid "&Next page"
 msgstr "&Slijedeæa"
 
-#: kghostview.cpp:537
+#: kghostview.cpp:548
 msgid "&Go to page ..."
 msgstr "&Idi na ..."
 
-#: kghostview.cpp:540
+#: kghostview.cpp:551
 msgid "Go to &start"
 msgstr "Idi na p&oèetak"
 
-#: kghostview.cpp:542
+#: kghostview.cpp:553
 msgid "Go to &end"
 msgstr "Idi na kr&aj"
 
-#: kghostview.cpp:544
+#: kghostview.cpp:555
 msgid "&Read down"
 msgstr "&Èitaj dolje"
 
-#: kghostview.cpp:549
+#: kghostview.cpp:560
 msgid "Mark &current page"
 msgstr "Oznaèi &trenutnu stranicu"
 
-#: kghostview.cpp:552
+#: kghostview.cpp:563
 msgid "Mark &all pages"
 msgstr "Oznaèi &sve stranice"
 
-#: kghostview.cpp:554
+#: kghostview.cpp:565
 msgid "Mark &even pages"
 msgstr "Oznaèi &parne stranice"
 
-#: kghostview.cpp:556
+#: kghostview.cpp:567
 msgid "Mark &odd pages"
 msgstr "Oznaèi &neparne stranice"
 
-#: kghostview.cpp:559
+#: kghostview.cpp:570
 msgid "&Toggle page marks"
 msgstr "&Uklj./isklj. oznake stranica"
 
-#: kghostview.cpp:562
+#: kghostview.cpp:573
 msgid "&Remove page marks"
 msgstr "U&kloni oznake stranica"
 
-#: kghostview.cpp:573
+#: kghostview.cpp:584
 msgid "Show &tool bar"
 msgstr "Poka¾i &Alate"
 
-#: kghostview.cpp:574
+#: kghostview.cpp:585
 msgid "Show st&atus bar"
 msgstr "Poka¾i &status"
 
-#: kghostview.cpp:575
+#: kghostview.cpp:586
 msgid "Show &page list"
 msgstr "&Prika¾i listu stranica"
 
-#: kghostview.cpp:577
+#: kghostview.cpp:588
 msgid "Configure &interpreter ..."
 msgstr "Pode&si interpreter ..."
 
-#: kghostview.cpp:578
+#: kghostview.cpp:589
 msgid "Configure &key bindings ..."
 msgstr "Podesi &tipke ..."
 
-#: kghostview.cpp:580
+#: kghostview.cpp:591
 msgid "&Save options"
 msgstr " &Spremi opcije"
 
-#: kghostview.cpp:587
+#: kghostview.cpp:598
 msgid "&About this application"
 msgstr "&O programu"
 
-#: kghostview.cpp:589
+#: kghostview.cpp:600
 msgid "&Help for this application"
 msgstr " &Pomoæ"
 
-#: kghostview.cpp:591
+#: kghostview.cpp:602
 msgid "&Copyright"
 msgstr "&Copyright"
 
-#: kghostview.cpp:598
+#: kghostview.cpp:609
 msgid "&Go"
 msgstr "&Idi"
 
-#: kghostview.cpp:599
+#: kghostview.cpp:610
 msgid "&Pagemarks"
 msgstr "O&znake Stranica"
 
-#: kghostview.cpp:608
+#: kghostview.cpp:619
 msgid ""
 " - the PostScript document viewer for\n"
 "the K Desktop Environment.\n"
@@ -512,72 +508,72 @@ msgstr ""
 "\n"
 "Posjetite http://wwwthep.physik.uni-mainz.de/~plass/gv za detalje"
 
-#: kghostview.cpp:665
+#: kghostview.cpp:676
 msgid "New window ..."
 msgstr "Novi prozor ..."
 
-#: kghostview.cpp:668
+#: kghostview.cpp:679
 msgid "Open file ..."
 msgstr "Otvori datoteku ..."
 
-#: kghostview.cpp:676
+#: kghostview.cpp:687
 msgid "Print document ..."
 msgstr "Ispi¹i dokument ..."
 
-#: kghostview.cpp:681
+#: kghostview.cpp:692
 msgid "Zoom in"
 msgstr "Uveæaj"
 
-#: kghostview.cpp:684
+#: kghostview.cpp:695
 msgid "Zoom out"
 msgstr "Umanji"
 
-#: kghostview.cpp:689
+#: kghostview.cpp:700
 msgid "Go back"
 msgstr "Idi nazad"
 
-#: kghostview.cpp:692
+#: kghostview.cpp:703
 msgid "Go forward"
 msgstr "Idi naprijed"
 
-#: kghostview.cpp:695
+#: kghostview.cpp:706
 msgid "Go to page ..."
 msgstr "Idi na stranicu ..."
 
-#: kghostview.cpp:700
+#: kghostview.cpp:711
 msgid "Go to start"
 msgstr "Idi na poèetak"
 
-#: kghostview.cpp:703
+#: kghostview.cpp:714
 msgid "Go to end"
 msgstr "Idi na kraj"
 
-#: kghostview.cpp:706
+#: kghostview.cpp:717
 msgid "Read down the page"
 msgstr "Èitaj niz stranicu"
 
-#: kghostview.cpp:711
+#: kghostview.cpp:722
 msgid "Toggle this page mark"
 msgstr "Uklj./isklj. ovu oznaku stranice"
 
-#: kghostview.cpp:733
+#: kghostview.cpp:744
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "Sc.100 od 100 P.100 od 100"
 
-#: kghostview.cpp:734
+#: kghostview.cpp:745
 #, c-format
 msgid "100 %"
 msgstr "100 %"
 
-#: kghostview.cpp:735
+#: kghostview.cpp:746
 msgid "Upside Down"
 msgstr "Naopaèke"
 
-#: kghostview.cpp:760
+#: kghostview.cpp:771
 msgid "Malformed URL."
 msgstr "Neispravan URL"
 
-#: kghostview.cpp:772
+#: kghostview.cpp:783
 msgid ""
 "Already waiting\n"
 "for an internet job to finish.\n"
@@ -588,27 +584,27 @@ msgstr ""
 "zadatka. Molim  prièekajte njegov\n"
 "kraj ili prekinite trenutni zadatak."
 
-#: kghostview.cpp:781
+#: kghostview.cpp:792
 msgid "Could not start or find KFM."
 msgstr "Nisam mogao pokrenuti ili naæi KFM."
 
-#: kghostview.cpp:1269
+#: kghostview.cpp:1318
 msgid "Go to ..."
 msgstr "Idi na stranicu ..."
 
-#: kghostview.cpp:1515
+#: kghostview.cpp:1577
 msgid "Version 0.6"
 msgstr "Inaèica 0.6"
 
-#: kghostview.cpp:1516
+#: kghostview.cpp:1578
 msgid "Sorry, not ready yet"
 msgstr "Oprosti, jo¹ nije spremno za upotrebu"
 
-#: kghostview.cpp:1523
+#: kghostview.cpp:1585
 msgid "About kghostview"
 msgstr "O programu kghostview"
 
-#: kghostview.cpp:1524
+#: kghostview.cpp:1586
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -618,11 +614,11 @@ msgstr ""
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1576 kghostview.cpp:1696
+#: kghostview.cpp:1638 kghostview.cpp:1758
 msgid "Error printing"
 msgstr "Gre¹ka pri ispisu"
 
-#: kghostview.cpp:1586
+#: kghostview.cpp:1648
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
@@ -634,7 +630,7 @@ msgstr ""
 "ovom koji je trenutno u pregledniku.\n"
 "Nema potrebe za ispisivanjem svih strana u novu datoteku."
 
-#: kghostview.cpp:1599
+#: kghostview.cpp:1661
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
@@ -642,18 +638,18 @@ msgstr ""
 "Niste upisali ime datoteke\n"
 "prema tome nista nije ispisano u datoteku.\n"
 
-#: kghostview.cpp:1640
+#: kghostview.cpp:1702
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr "Namjestite okoli¹ne varijable (npr. PRINTER ili LPDEST) za ime pisaèa."
 
-#: kghostview.cpp:1661
+#: kghostview.cpp:1723
 #, c-format
 msgid "Print failure : %s"
 msgstr "Gre¹ka pri ispisu : %s"
 
-#: kghostview.cpp:1697
+#: kghostview.cpp:1759
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -661,40 +657,46 @@ msgstr ""
 "Ispis nije uspio buduæi da je nije dan\n"
 "popis stranica koje treba ispisati.\n"
 
-#: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
-#: kghostview.cpp:2530
+#: kghostview.cpp:2309 kghostview.cpp:2321 kghostview.cpp:2586
+#: kghostview.cpp:2609
 msgid "of 1    "
 msgstr "od 1    "
 
-#: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
+#: kghostview.cpp:2311 kghostview.cpp:2323 kghostview.cpp:2611
 #, c-format
 msgid "of %d    "
 msgstr "od %d    "
 
-#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
-#: kghostview.cpp:2541
+#: kghostview.cpp:2313 kghostview.cpp:2325 kghostview.cpp:2613
+#: kghostview.cpp:2620
 #, c-format
 msgid "of %d  "
 msgstr "od %d  "
 
-#: kghostview.cpp:2506
+#: kghostview.cpp:2585
 msgid "Sc.1 "
 msgstr "Sek.1 "
 
-#: kghostview.cpp:2509
+#: kghostview.cpp:2588
 msgid "P.1 "
 msgstr "P.1. "
 
-#: kghostview.cpp:2511 kghostview.cpp:2524
+#: kghostview.cpp:2590 kghostview.cpp:2603
 #, c-format
 msgid "P.%d "
 msgstr "Str.%d "
 
-#: kghostview.cpp:2526
+#: kghostview.cpp:2605
 #, c-format
 msgid "Sc.%d "
 msgstr "Sek.%d "
 
-#: zoom.cpp:46
-msgid "&Magnification"
-msgstr "&Uveæanje"
+#: zoom.cpp:63
+msgid "&Zoom factor"
+msgstr ""
+
+#~ msgid "View Control"
+#~ msgstr "Kontrole pogleda"
+
+#~ msgid "&Magnification"
+#~ msgstr "&Uveæanje"

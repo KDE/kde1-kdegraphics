@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kghostview\n"
-"POT-Creation-Date: 1999-01-31 01:52+0100\n"
+"POT-Creation-Date: 1999-04-23 02:23+0200\n"
 "PO-Revision-Date: 1998-03-20 12:20 MET\n"
 "Last-Translator: Juraj Bednár <bednar@isternet.sk>\n"
 "Language-Team: Slovak <bednar@isternet.sk>\n"
@@ -45,7 +45,7 @@ msgstr "Strana"
 msgid "Copyright"
 msgstr "Autorské práva"
 
-#: copyright.cpp:41 kghostview.cpp:618
+#: copyright.cpp:41 kghostview.cpp:629
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -230,27 +230,27 @@ msgstr "Oddiel"
 msgid "&Page"
 msgstr "Strana"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
-#: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2315
+#: kghostview.cpp:2327 kghostview.cpp:2332 kghostview.cpp:2615
 #, c-format
 msgid "of %d"
 msgstr "z %d"
 
-#: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
+#: kghostview.cpp:1269 kghostview.cpp:2406 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "Na vý¹ku"
 
-#: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
+#: kghostview.cpp:1273 kghostview.cpp:2412 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "Na ¹írku"
 
-#: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
-msgid "Seascape"
-msgstr "Na ¹írku(sprava)"
-
-#: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
+#: kghostview.cpp:1277 kghostview.cpp:2408 viewcontrol.cpp:66
 msgid "Upside down"
 msgstr "Hore nohami"
+
+#: kghostview.cpp:1281 kghostview.cpp:2410 viewcontrol.cpp:67
+msgid "Seascape"
+msgstr "Na ¹írku(sprava)"
 
 #: viewcontrol.cpp:75
 msgid "magnification"
@@ -296,196 +296,192 @@ msgstr "Chyba na príkazovom riadku"
 msgid "Document information"
 msgstr "Informácie o dokumente"
 
-#: kghostview.cpp:220
+#: kghostview.cpp:220 kghostview.cpp:371 kghostview.cpp:460
 msgid "Page Setup"
 msgstr "Nastavenie stránky"
 
-#: kghostview.cpp:360 kghostview.cpp:449
-msgid "View Control"
-msgstr "Nastavenie zobrazenia"
-
-#: kghostview.cpp:361 kghostview.cpp:454
+#: kghostview.cpp:372 kghostview.cpp:465
 msgid "Go To Page"
 msgstr "Choï na stranu"
 
-#: kghostview.cpp:362 kghostview.cpp:447
+#: kghostview.cpp:373 kghostview.cpp:458
 msgid "Zoom In"
 msgstr "Zväè¹i»"
 
-#: kghostview.cpp:363 kghostview.cpp:448
+#: kghostview.cpp:374 kghostview.cpp:459
 msgid "Zoom Out"
 msgstr "Zmen¹i»"
 
-#: kghostview.cpp:364 kghostview.cpp:452
+#: kghostview.cpp:375 kghostview.cpp:463
 msgid "Next Page"
 msgstr "Nasledujúca strana"
 
-#: kghostview.cpp:365 kghostview.cpp:453
+#: kghostview.cpp:376 kghostview.cpp:464
 msgid "Prev Page"
 msgstr "Predchádzajúca strana"
 
-#: kghostview.cpp:366
+#: kghostview.cpp:377
 msgid "Scroll Up"
 msgstr "Posunú» hore"
 
-#: kghostview.cpp:367
+#: kghostview.cpp:378
 msgid "Scroll Down"
 msgstr "Posunú» dole"
 
-#: kghostview.cpp:368
+#: kghostview.cpp:379
 msgid "Scroll Left"
 msgstr "Posunú» vµavo"
 
-#: kghostview.cpp:369
+#: kghostview.cpp:380
 msgid "Scroll Right"
 msgstr "Posunú» vpravo"
 
-#: kghostview.cpp:370 kghostview.cpp:450
+#: kghostview.cpp:381 kghostview.cpp:461
 msgid "Redisplay"
 msgstr "Aktualizova»"
 
-#: kghostview.cpp:413 kghostview.cpp:415
+#: kghostview.cpp:424 kghostview.cpp:426
 msgid "Not known"
 msgstr "Neznáme"
 
-#: kghostview.cpp:426
+#: kghostview.cpp:437
 msgid "Configure interpreter"
 msgstr "Nastav interpretér"
 
-#: kghostview.cpp:444
+#: kghostview.cpp:455
 msgid "New"
 msgstr "Nový"
 
-#: kghostview.cpp:498
+#: kghostview.cpp:509
 msgid "&New"
 msgstr "&Nový"
 
-#: kghostview.cpp:500
+#: kghostview.cpp:511
 msgid "&Open ..."
 msgstr "&Otvori» ..."
 
-#: kghostview.cpp:501
+#: kghostview.cpp:512
 msgid "Open &recent"
 msgstr "Otvo&ri» nedávne..."
 
-#: kghostview.cpp:509
+#: kghostview.cpp:520
 msgid "Page Set&up ..."
 msgstr "Nastavenie stránky ..."
 
-#: kghostview.cpp:511
+#: kghostview.cpp:522
 msgid "&Print ..."
 msgstr "&Tlaèi» ..."
 
-#: kghostview.cpp:519
+#: kghostview.cpp:530
 msgid "Zoom &in"
 msgstr "Z&väè¹i»"
 
-#: kghostview.cpp:521
+#: kghostview.cpp:532
 msgid "Zoom &out"
 msgstr "Z&men¹i»"
 
-#: kghostview.cpp:523
+#: kghostview.cpp:534
 msgid "&Zoom ..."
 msgstr "&Zväèenie ..."
 
-#: kghostview.cpp:528
+#: kghostview.cpp:539
 msgid "&Info ..."
 msgstr "&Info ..."
 
-#: kghostview.cpp:533
+#: kghostview.cpp:544
 msgid "&Previous Page"
 msgstr "&Predchádzajúcu stranu"
 
-#: kghostview.cpp:535
+#: kghostview.cpp:546
 msgid "&Next page"
 msgstr "&Nasledujúcu stranu"
 
-#: kghostview.cpp:537
+#: kghostview.cpp:548
 msgid "&Go to page ..."
 msgstr "&Choï na stranu ..."
 
-#: kghostview.cpp:540
+#: kghostview.cpp:551
 msgid "Go to &start"
 msgstr "Choï na &zaèiatok"
 
-#: kghostview.cpp:542
+#: kghostview.cpp:553
 msgid "Go to &end"
 msgstr "Choï na &koniec"
 
-#: kghostview.cpp:544
+#: kghostview.cpp:555
 msgid "&Read down"
 msgstr "Posuò ïa&lej"
 
-#: kghostview.cpp:549
+#: kghostview.cpp:560
 msgid "Mark &current page"
 msgstr "Oznaèi» &túto stranu"
 
-#: kghostview.cpp:552
+#: kghostview.cpp:563
 msgid "Mark &all pages"
 msgstr "Oznaèi» &v¹etky strany"
 
-#: kghostview.cpp:554
+#: kghostview.cpp:565
 msgid "Mark &even pages"
 msgstr "Oznaèi» &párne strany"
 
-#: kghostview.cpp:556
+#: kghostview.cpp:567
 msgid "Mark &odd pages"
 msgstr "Oznaèi» n&epárne strany"
 
-#: kghostview.cpp:559
+#: kghostview.cpp:570
 msgid "&Toggle page marks"
 msgstr "Prehodi» &znaèky"
 
-#: kghostview.cpp:562
+#: kghostview.cpp:573
 msgid "&Remove page marks"
 msgstr "&Odstráni» znaèky"
 
-#: kghostview.cpp:573
+#: kghostview.cpp:584
 msgid "Show &tool bar"
 msgstr "Zobrazova» nás&trojovú li¹tu"
 
-#: kghostview.cpp:574
+#: kghostview.cpp:585
 msgid "Show st&atus bar"
 msgstr "Zobrazova» &stav. li¹tu"
 
 # ???
-#: kghostview.cpp:575
+#: kghostview.cpp:586
 msgid "Show &page list"
 msgstr "Zobrazova» zoznam &stránok"
 
-#: kghostview.cpp:577
+#: kghostview.cpp:588
 msgid "Configure &interpreter ..."
 msgstr "&Nastavi» interpreter ..."
 
-#: kghostview.cpp:578
+#: kghostview.cpp:589
 msgid "Configure &key bindings ..."
 msgstr "Nastav &klávesové akcelerátory ..."
 
-#: kghostview.cpp:580
+#: kghostview.cpp:591
 msgid "&Save options"
 msgstr "&Ulo¾i» nastavenie"
 
-#: kghostview.cpp:587
+#: kghostview.cpp:598
 msgid "&About this application"
 msgstr "&Informácie o aplikácii"
 
-#: kghostview.cpp:589
+#: kghostview.cpp:600
 msgid "&Help for this application"
 msgstr "&Nápoveda k tejto aplikácii"
 
-#: kghostview.cpp:591
+#: kghostview.cpp:602
 msgid "&Copyright"
 msgstr "&Autorské práva"
 
-#: kghostview.cpp:598
+#: kghostview.cpp:609
 msgid "&Go"
 msgstr "&Choï na"
 
-#: kghostview.cpp:599
+#: kghostview.cpp:610
 msgid "&Pagemarks"
 msgstr "&Znaèky na stranách"
 
-#: kghostview.cpp:608
+#: kghostview.cpp:619
 msgid ""
 " - the PostScript document viewer for\n"
 "the K Desktop Environment.\n"
@@ -509,72 +505,72 @@ msgstr ""
 "\n"
 "Bli¾¹ie informácie na http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 
-#: kghostview.cpp:665
+#: kghostview.cpp:676
 msgid "New window ..."
 msgstr "Nové okno ..."
 
-#: kghostview.cpp:668
+#: kghostview.cpp:679
 msgid "Open file ..."
 msgstr "&Otvori» ..."
 
-#: kghostview.cpp:676
+#: kghostview.cpp:687
 msgid "Print document ..."
 msgstr "Tlaèi» dokument"
 
-#: kghostview.cpp:681
+#: kghostview.cpp:692
 msgid "Zoom in"
 msgstr "Z&väè¹i»"
 
-#: kghostview.cpp:684
+#: kghostview.cpp:695
 msgid "Zoom out"
 msgstr "Z&men¹i»"
 
-#: kghostview.cpp:689
+#: kghostview.cpp:700
 msgid "Go back"
 msgstr "Choï spä»"
 
-#: kghostview.cpp:692
+#: kghostview.cpp:703
 msgid "Go forward"
 msgstr "Choï dopredu"
 
-#: kghostview.cpp:695
+#: kghostview.cpp:706
 msgid "Go to page ..."
 msgstr "Choï na stranu ..."
 
-#: kghostview.cpp:700
+#: kghostview.cpp:711
 msgid "Go to start"
 msgstr "Choï na zaèiatok"
 
-#: kghostview.cpp:703
+#: kghostview.cpp:714
 msgid "Go to end"
 msgstr "Choï na koniec"
 
-#: kghostview.cpp:706
+#: kghostview.cpp:717
 msgid "Read down the page"
 msgstr "Posuò sa ïalej na strane"
 
-#: kghostview.cpp:711
+#: kghostview.cpp:722
 msgid "Toggle this page mark"
 msgstr "Prehodi» znaèku tejto strany"
 
-#: kghostview.cpp:733
+#: kghostview.cpp:744
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "Odd.100 z 100 S.100 z 100"
 
-#: kghostview.cpp:734
+#: kghostview.cpp:745
 #, c-format
 msgid "100 %"
 msgstr "100%"
 
-#: kghostview.cpp:735
+#: kghostview.cpp:746
 msgid "Upside Down"
 msgstr "Hore nohami"
 
-#: kghostview.cpp:760
+#: kghostview.cpp:771
 msgid "Malformed URL."
 msgstr "Chybný formát URL."
 
-#: kghostview.cpp:772
+#: kghostview.cpp:783
 msgid ""
 "Already waiting\n"
 "for an internet job to finish.\n"
@@ -586,27 +582,27 @@ msgstr ""
 "Prosím èakajte na jej dokonèenie\n"
 "alebo ju zastavte."
 
-#: kghostview.cpp:781
+#: kghostview.cpp:792
 msgid "Could not start or find KFM."
 msgstr "Nemô¾em spusti» alebo nájs» KFM!"
 
-#: kghostview.cpp:1269
+#: kghostview.cpp:1318
 msgid "Go to ..."
 msgstr "Choï na stranu ..."
 
-#: kghostview.cpp:1515
+#: kghostview.cpp:1577
 msgid "Version 0.6"
 msgstr "Verzia 0.6"
 
-#: kghostview.cpp:1516
+#: kghostview.cpp:1578
 msgid "Sorry, not ready yet"
 msgstr "Je mi µúto, toto e¹te nie je hotové."
 
-#: kghostview.cpp:1523
+#: kghostview.cpp:1585
 msgid "About kghostview"
 msgstr "Informácie o kghostview"
 
-#: kghostview.cpp:1524
+#: kghostview.cpp:1586
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -616,11 +612,11 @@ msgstr ""
 "Autor : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1576 kghostview.cpp:1696
+#: kghostview.cpp:1638 kghostview.cpp:1758
 msgid "Error printing"
 msgstr "Chyba pri tlaèi"
 
-#: kghostview.cpp:1586
+#: kghostview.cpp:1648
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
@@ -632,7 +628,7 @@ msgstr ""
 "tým, ktorý je teraz natiahnutý do prehliadaèa.\n"
 "Je zbytoèné tlaèi» v¹etky strany do nového súboru."
 
-#: kghostview.cpp:1599
+#: kghostview.cpp:1661
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
@@ -640,7 +636,7 @@ msgstr ""
 "Nebolo zadané meno súboru\n"
 "tak¾e nemô¾em tlaèi» do súboru.\n"
 
-#: kghostview.cpp:1640
+#: kghostview.cpp:1702
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
@@ -648,12 +644,12 @@ msgstr ""
 "Nastavte premennú prostredia (PRINTER alebo LPDEST, napr.)na meno tlaèiarne "
 "ktorú mám bra» do úvahy."
 
-#: kghostview.cpp:1661
+#: kghostview.cpp:1723
 #, c-format
 msgid "Print failure : %s"
 msgstr "Neuspe¹ná tlaè: %s"
 
-#: kghostview.cpp:1697
+#: kghostview.cpp:1759
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
@@ -661,43 +657,49 @@ msgstr ""
 "Tlaè zlyhala, preto¾e zoznam\n"
 "strán na tlaè bol prázdny.\n"
 
-#: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
-#: kghostview.cpp:2530
+#: kghostview.cpp:2309 kghostview.cpp:2321 kghostview.cpp:2586
+#: kghostview.cpp:2609
 msgid "of 1    "
 msgstr "z 1     "
 
-#: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
+#: kghostview.cpp:2311 kghostview.cpp:2323 kghostview.cpp:2611
 #, c-format
 msgid "of %d    "
 msgstr "z %d     "
 
-#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
-#: kghostview.cpp:2541
+#: kghostview.cpp:2313 kghostview.cpp:2325 kghostview.cpp:2613
+#: kghostview.cpp:2620
 #, c-format
 msgid "of %d  "
 msgstr "z %d   "
 
-#: kghostview.cpp:2506
+#: kghostview.cpp:2585
 msgid "Sc.1 "
 msgstr "Odd.1 "
 
-#: kghostview.cpp:2509
+#: kghostview.cpp:2588
 msgid "P.1 "
 msgstr "S.1 "
 
-#: kghostview.cpp:2511 kghostview.cpp:2524
+#: kghostview.cpp:2590 kghostview.cpp:2603
 #, c-format
 msgid "P.%d "
 msgstr "S.%d "
 
-#: kghostview.cpp:2526
+#: kghostview.cpp:2605
 #, c-format
 msgid "Sc.%d "
 msgstr "Odd.%d "
 
-#: zoom.cpp:46
-msgid "&Magnification"
-msgstr "&Zväè¹enie"
+#: zoom.cpp:63
+msgid "&Zoom factor"
+msgstr ""
+
+#~ msgid "View Control"
+#~ msgstr "Nastavenie zobrazenia"
+
+#~ msgid "&Magnification"
+#~ msgstr "&Zväè¹enie"
 
 #~ msgid "&Defaults"
 #~ msgstr "©tandardné"

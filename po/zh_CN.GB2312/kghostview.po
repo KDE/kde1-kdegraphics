@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkpanel\n"
-"POT-Creation-Date: 1999-01-31 01:52+0100\n"
+"POT-Creation-Date: 1999-04-23 02:23+0200\n"
 "PO-Revision-Date: 1998-02-21 05:04+0800\n"
 "Last-Translator: Wang Jian <lark@linux.ustc.edu.cn>\n"
 "Language-Team: zh_CN ( gb2312 )\n"
@@ -40,7 +40,7 @@ msgstr "页[&P]"
 msgid "Copyright"
 msgstr "版权宣告"
 
-#: copyright.cpp:41 kghostview.cpp:618
+#: copyright.cpp:41 kghostview.cpp:629
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -217,28 +217,28 @@ msgstr "章节[&S]"
 msgid "&Page"
 msgstr "页[&P]"
 
-#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2236
-#: kghostview.cpp:2248 kghostview.cpp:2253 kghostview.cpp:2536
+#: goto.cpp:123 goto.cpp:130 goto.cpp:147 kghostview.cpp:2315
+#: kghostview.cpp:2327 kghostview.cpp:2332 kghostview.cpp:2615
 #, c-format
 msgid "of %d"
 msgstr "/ %d"
 
 #
-#: kghostview.cpp:1224 kghostview.cpp:2327 viewcontrol.cpp:64
+#: kghostview.cpp:1269 kghostview.cpp:2406 viewcontrol.cpp:64
 msgid "Portrait"
 msgstr "竖排格式"
 
-#: kghostview.cpp:1226 kghostview.cpp:2333 viewcontrol.cpp:65
+#: kghostview.cpp:1273 kghostview.cpp:2412 viewcontrol.cpp:65
 msgid "Landscape"
 msgstr "从右到左"
 
-#: kghostview.cpp:1228 kghostview.cpp:2331 viewcontrol.cpp:66
-msgid "Seascape"
-msgstr "从左到右"
-
-#: kghostview.cpp:1230 kghostview.cpp:2329 viewcontrol.cpp:67
+#: kghostview.cpp:1277 kghostview.cpp:2408 viewcontrol.cpp:66
 msgid "Upside down"
 msgstr "上下颠倒"
+
+#: kghostview.cpp:1281 kghostview.cpp:2410 viewcontrol.cpp:67
+msgid "Seascape"
+msgstr "从左到右"
 
 #
 #: viewcontrol.cpp:75
@@ -291,198 +291,194 @@ msgid "Document information"
 msgstr "文章信息"
 
 #
-#: kghostview.cpp:220
+#: kghostview.cpp:220 kghostview.cpp:371 kghostview.cpp:460
 msgid "Page Setup"
 msgstr "页面设置"
 
-#: kghostview.cpp:360 kghostview.cpp:449
-msgid "View Control"
-msgstr "视图控制"
-
-#: kghostview.cpp:361 kghostview.cpp:454
+#: kghostview.cpp:372 kghostview.cpp:465
 msgid "Go To Page"
 msgstr "跳至页数"
 
-#: kghostview.cpp:362 kghostview.cpp:447
+#: kghostview.cpp:373 kghostview.cpp:458
 msgid "Zoom In"
 msgstr "缩小"
 
-#: kghostview.cpp:363 kghostview.cpp:448
+#: kghostview.cpp:374 kghostview.cpp:459
 msgid "Zoom Out"
 msgstr "放大"
 
-#: kghostview.cpp:364 kghostview.cpp:452
+#: kghostview.cpp:375 kghostview.cpp:463
 msgid "Next Page"
 msgstr "下一页"
 
-#: kghostview.cpp:365 kghostview.cpp:453
+#: kghostview.cpp:376 kghostview.cpp:464
 msgid "Prev Page"
 msgstr "前一页"
 
-#: kghostview.cpp:366
+#: kghostview.cpp:377
 msgid "Scroll Up"
 msgstr "往上卷动"
 
-#: kghostview.cpp:367
+#: kghostview.cpp:378
 msgid "Scroll Down"
 msgstr "往下卷动"
 
-#: kghostview.cpp:368
+#: kghostview.cpp:379
 msgid "Scroll Left"
 msgstr "往左卷动"
 
-#: kghostview.cpp:369
+#: kghostview.cpp:380
 msgid "Scroll Right"
 msgstr "往右卷动"
 
-#: kghostview.cpp:370 kghostview.cpp:450
+#: kghostview.cpp:381 kghostview.cpp:461
 msgid "Redisplay"
 msgstr "重绘"
 
-#: kghostview.cpp:413 kghostview.cpp:415
+#: kghostview.cpp:424 kghostview.cpp:426
 msgid "Not known"
 msgstr "未知"
 
-#: kghostview.cpp:426
+#: kghostview.cpp:437
 msgid "Configure interpreter"
 msgstr "配置解释器"
 
-#: kghostview.cpp:444
+#: kghostview.cpp:455
 msgid "New"
 msgstr ""
 
-#: kghostview.cpp:498
+#: kghostview.cpp:509
 msgid "&New"
 msgstr ""
 
-#: kghostview.cpp:500
+#: kghostview.cpp:511
 msgid "&Open ..."
 msgstr "打开[&O] ..."
 
-#: kghostview.cpp:501
+#: kghostview.cpp:512
 msgid "Open &recent"
 msgstr "最近打开的[&R]"
 
 #
 #
-#: kghostview.cpp:509
+#: kghostview.cpp:520
 msgid "Page Set&up ..."
 msgstr "页面设置[&U] ..."
 
-#: kghostview.cpp:511
+#: kghostview.cpp:522
 msgid "&Print ..."
 msgstr "打印[&P] ..."
 
-#: kghostview.cpp:519
+#: kghostview.cpp:530
 msgid "Zoom &in"
 msgstr "缩小[&I]"
 
-#: kghostview.cpp:521
+#: kghostview.cpp:532
 msgid "Zoom &out"
 msgstr "放大[&O]"
 
 #
-#: kghostview.cpp:523
+#: kghostview.cpp:534
 msgid "&Zoom ..."
 msgstr "缩放[&Z] ..."
 
-#: kghostview.cpp:528
+#: kghostview.cpp:539
 msgid "&Info ..."
 msgstr "信息[&I] ..."
 
-#: kghostview.cpp:533
+#: kghostview.cpp:544
 msgid "&Previous Page"
 msgstr "前一页[&P]"
 
-#: kghostview.cpp:535
+#: kghostview.cpp:546
 msgid "&Next page"
 msgstr "下一页[&N]"
 
-#: kghostview.cpp:537
+#: kghostview.cpp:548
 msgid "&Go to page ..."
 msgstr "跳至页...[&G]"
 
-#: kghostview.cpp:540
+#: kghostview.cpp:551
 msgid "Go to &start"
 msgstr "跳至开头[&S]"
 
-#: kghostview.cpp:542
+#: kghostview.cpp:553
 msgid "Go to &end"
 msgstr "跳至最后[&E]"
 
-#: kghostview.cpp:544
+#: kghostview.cpp:555
 msgid "&Read down"
 msgstr "往下读[&R]"
 
-#: kghostview.cpp:549
+#: kghostview.cpp:560
 msgid "Mark &current page"
 msgstr "标记当前页[&C]"
 
-#: kghostview.cpp:552
+#: kghostview.cpp:563
 msgid "Mark &all pages"
 msgstr "标记全部页[&A]"
 
-#: kghostview.cpp:554
+#: kghostview.cpp:565
 msgid "Mark &even pages"
 msgstr "标记偶数页[&E]"
 
-#: kghostview.cpp:556
+#: kghostview.cpp:567
 msgid "Mark &odd pages"
 msgstr "标记奇数页[&O]"
 
-#: kghostview.cpp:559
+#: kghostview.cpp:570
 msgid "&Toggle page marks"
 msgstr "切换页标记[&T]"
 
-#: kghostview.cpp:562
+#: kghostview.cpp:573
 msgid "&Remove page marks"
 msgstr "去除页标记[&R]"
 
-#: kghostview.cpp:573
+#: kghostview.cpp:584
 msgid "Show &tool bar"
 msgstr "显示工具条[&T]"
 
-#: kghostview.cpp:574
+#: kghostview.cpp:585
 msgid "Show st&atus bar"
 msgstr "显示状态行[&A]"
 
-#: kghostview.cpp:575
+#: kghostview.cpp:586
 msgid "Show &page list"
 msgstr "显示页列表[&P]"
 
-#: kghostview.cpp:577
+#: kghostview.cpp:588
 msgid "Configure &interpreter ..."
 msgstr "配置解释器[&I] ..."
 
-#: kghostview.cpp:578
+#: kghostview.cpp:589
 msgid "Configure &key bindings ..."
 msgstr "配置按键关联[&K] ..."
 
-#: kghostview.cpp:580
+#: kghostview.cpp:591
 msgid "&Save options"
 msgstr "保存选项[&S]"
 
-#: kghostview.cpp:587
+#: kghostview.cpp:598
 msgid "&About this application"
 msgstr "有关这个应用程序[&A]"
 
-#: kghostview.cpp:589
+#: kghostview.cpp:600
 msgid "&Help for this application"
 msgstr "这个应用程序的帮助[&H]"
 
-#: kghostview.cpp:591
+#: kghostview.cpp:602
 msgid "&Copyright"
 msgstr "版权[&C]"
 
-#: kghostview.cpp:598
+#: kghostview.cpp:609
 msgid "&Go"
 msgstr "跳至[&G]"
 
-#: kghostview.cpp:599
+#: kghostview.cpp:610
 msgid "&Pagemarks"
 msgstr "页标记[&P]"
 
-#: kghostview.cpp:608
+#: kghostview.cpp:619
 msgid ""
 " - the PostScript document viewer for\n"
 "the K Desktop Environment.\n"
@@ -496,77 +492,77 @@ msgid ""
 "See http://wwwthep.physik.uni-mainz.de/~plass/gv/n"
 msgstr ""
 
-#: kghostview.cpp:665
+#: kghostview.cpp:676
 msgid "New window ..."
 msgstr "打开新窗口 ..."
 
 #
-#: kghostview.cpp:668
+#: kghostview.cpp:679
 msgid "Open file ..."
 msgstr "打开文件 ..."
 
 #
-#: kghostview.cpp:676
+#: kghostview.cpp:687
 msgid "Print document ..."
 msgstr "打印文章 ..."
 
 #
-#: kghostview.cpp:681
+#: kghostview.cpp:692
 msgid "Zoom in"
 msgstr "缩小"
 
 #
-#: kghostview.cpp:684
+#: kghostview.cpp:695
 msgid "Zoom out"
 msgstr "放大"
 
-#: kghostview.cpp:689
+#: kghostview.cpp:700
 msgid "Go back"
 msgstr "向后"
 
-#: kghostview.cpp:692
+#: kghostview.cpp:703
 msgid "Go forward"
 msgstr "向前"
 
-#: kghostview.cpp:695
+#: kghostview.cpp:706
 msgid "Go to page ..."
 msgstr "跳至...页"
 
-#: kghostview.cpp:700
+#: kghostview.cpp:711
 msgid "Go to start"
 msgstr "跳至开头"
 
-#: kghostview.cpp:703
+#: kghostview.cpp:714
 msgid "Go to end"
 msgstr "跳至最后"
 
-#: kghostview.cpp:706
+#: kghostview.cpp:717
 msgid "Read down the page"
 msgstr "从此页往下读"
 
 #
-#: kghostview.cpp:711
+#: kghostview.cpp:722
 msgid "Toggle this page mark"
 msgstr "切换此页标记"
 
-#: kghostview.cpp:733
+#: kghostview.cpp:744
 msgid "Sc.100 of 100  P.100 of 100"
 msgstr "章节: 100 of 100  页数:100 of 100"
 
-#: kghostview.cpp:734
+#: kghostview.cpp:745
 #, c-format
 msgid "100 %"
 msgstr "100 %"
 
-#: kghostview.cpp:735
+#: kghostview.cpp:746
 msgid "Upside Down"
 msgstr "上下颠倒"
 
-#: kghostview.cpp:760
+#: kghostview.cpp:771
 msgid "Malformed URL."
 msgstr "不正确的 URL"
 
-#: kghostview.cpp:772
+#: kghostview.cpp:783
 msgid ""
 "Already waiting\n"
 "for an internet job to finish.\n"
@@ -577,27 +573,27 @@ msgstr ""
 "任务完成.请等待它完成.也可以停\n"
 "止正在运行的任务."
 
-#: kghostview.cpp:781
+#: kghostview.cpp:792
 msgid "Could not start or find KFM."
 msgstr "无法运行或找不到 KFM."
 
-#: kghostview.cpp:1269
+#: kghostview.cpp:1318
 msgid "Go to ..."
 msgstr "跳至 ..."
 
-#: kghostview.cpp:1515
+#: kghostview.cpp:1577
 msgid "Version 0.6"
 msgstr "版本: 0.6"
 
-#: kghostview.cpp:1516
+#: kghostview.cpp:1578
 msgid "Sorry, not ready yet"
 msgstr "抱歉, 尚未准备好"
 
-#: kghostview.cpp:1523
+#: kghostview.cpp:1585
 msgid "About kghostview"
 msgstr "关于 kghostview"
 
-#: kghostview.cpp:1524
+#: kghostview.cpp:1586
 msgid ""
 "Version :\t0.6 alpha\n"
 "Author : Mark Donohoe\n"
@@ -607,11 +603,11 @@ msgstr ""
 "作者 : Mark Donohoe\n"
 "Mail : donohoe@kde.org"
 
-#: kghostview.cpp:1576 kghostview.cpp:1696
+#: kghostview.cpp:1638 kghostview.cpp:1758
 msgid "Error printing"
 msgstr "打印错误"
 
-#: kghostview.cpp:1586
+#: kghostview.cpp:1648
 msgid ""
 "You chose to print all pages to a file.\n"
 "This would produce a document identical to\n"
@@ -622,67 +618,73 @@ msgstr ""
 "当前打开的文章完全一致的文章 . 不需要把\n"
 "所有的页打印到新文件里 ."
 
-#: kghostview.cpp:1599
+#: kghostview.cpp:1661
 msgid ""
 "No file name was given so\n"
 "nothing could be printed to a file.\n"
 msgstr "没有文件名 , 不能打印到文件.\n"
 
-#: kghostview.cpp:1640
+#: kghostview.cpp:1702
 msgid ""
 "Set Environment variable (to PRINTER or LPDEST for instance)for Printer name "
 "to be taken into account."
 msgstr ""
 
-#: kghostview.cpp:1661
+#: kghostview.cpp:1723
 #, c-format
 msgid "Print failure : %s"
 msgstr "打印失败 : %s"
 
-#: kghostview.cpp:1697
+#: kghostview.cpp:1759
 msgid ""
 "Printing failed because the list of\n"
 "pages to be printed was empty.\n"
 msgstr "打印失败 : 要打印的页列表是空的.\n"
 
-#: kghostview.cpp:2230 kghostview.cpp:2242 kghostview.cpp:2507
-#: kghostview.cpp:2530
+#: kghostview.cpp:2309 kghostview.cpp:2321 kghostview.cpp:2586
+#: kghostview.cpp:2609
 msgid "of 1    "
 msgstr " /1     "
 
-#: kghostview.cpp:2232 kghostview.cpp:2244 kghostview.cpp:2532
+#: kghostview.cpp:2311 kghostview.cpp:2323 kghostview.cpp:2611
 #, c-format
 msgid "of %d    "
 msgstr "/ %d     "
 
-#: kghostview.cpp:2234 kghostview.cpp:2246 kghostview.cpp:2534
-#: kghostview.cpp:2541
+#: kghostview.cpp:2313 kghostview.cpp:2325 kghostview.cpp:2613
+#: kghostview.cpp:2620
 #, c-format
 msgid "of %d  "
 msgstr "/ %d   "
 
-#: kghostview.cpp:2506
+#: kghostview.cpp:2585
 msgid "Sc.1 "
 msgstr "章节.1 "
 
-#: kghostview.cpp:2509
+#: kghostview.cpp:2588
 msgid "P.1 "
 msgstr "页数.1 "
 
-#: kghostview.cpp:2511 kghostview.cpp:2524
+#: kghostview.cpp:2590 kghostview.cpp:2603
 #, c-format
 msgid "P.%d "
 msgstr "页数.%d "
 
-#: kghostview.cpp:2526
+#: kghostview.cpp:2605
 #, c-format
 msgid "Sc.%d "
 msgstr "章节.%d "
 
+#: zoom.cpp:63
+msgid "&Zoom factor"
+msgstr ""
+
+#~ msgid "View Control"
+#~ msgstr "视图控制"
+
 #
-#: zoom.cpp:46
-msgid "&Magnification"
-msgstr "放大[&M]"
+#~ msgid "&Magnification"
+#~ msgstr "放大[&M]"
 
 #~ msgid "&Defaults"
 #~ msgstr "默认[&D]"
