@@ -265,7 +265,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Made Colourmap size 256, image colours= %d\n", image
     }
   }
 
-  GifFile= EGifOpenFileName(imageio->fileName(), 0);
+  GifFile= EGifOpenFileName((char *)imageio->fileName(), 0);
   if (!GifFile) {
     FreeMapObject(imageColourmap);
     FreeMapObject(screenColourmap);
