@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 1998-04-09 18:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Andrea Rizzi <Bilibao@Ouverture.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
@@ -47,21 +47,21 @@ msgid "Circle"
 msgstr "Cerchio"
 
 #: depthdialog.cpp:18
-#, fuzzy
+
 msgid "Image Depth:"
-msgstr "Larghezza Immagine:"
+msgstr "Numero Colori Immagine:"
 
 #: depthdialog.cpp:24
 msgid "1 (Bitmap)"
-msgstr ""
+msgstr "Bitmap (1 Bit)"
 
 #: depthdialog.cpp:25
 msgid "8 (256 Colour)"
-msgstr ""
+msgstr "256 Colori (8 bit)"
 
 #: depthdialog.cpp:26
 msgid "24 (True Colour)"
-msgstr ""
+msgstr "True Colour (24 bit)"
 
 #: ellipse.cpp:18 kpaint.cpp:353
 msgid "Ellipse"
@@ -97,7 +97,7 @@ msgstr "senza_titolo.gif"
 
 #: kpaint.cpp:117
 msgid "Unsaved Changes"
-msgstr ""
+msgstr "Cambiamenti non salvati"
 
 #: kpaint.cpp:164
 msgid "New Canvas"
@@ -161,9 +161,8 @@ msgid "Close Window"
 msgstr "Chiudi Finestra"
 
 #: kpaint.cpp:330
-#, fuzzy
 msgid "Exit"
-msgstr "&Modifica"
+msgstr "Esci"
 
 #: kpaint.cpp:333
 msgid "Copy Region"
@@ -219,24 +218,23 @@ msgstr "Bombola Spray"
 
 #: kpaint.cpp:356
 msgid "Area Select"
-msgstr ""
+msgstr "Area selezionata"
 
 #: kpaint.cpp:361
 msgid "Show Tools Toolbar"
-msgstr ""
+msgstr "Mostra oggetti della Barra Struemnti"
 
 #: kpaint.cpp:362
 msgid "Show Commands Toolbar"
-msgstr ""
+msgstr "Mostra comandi Barra strumenti"
 
 #: kpaint.cpp:363
 msgid "Show Status Bar"
-msgstr ""
+msgstr "Mostra Barra di Stato"
 
 #: kpaint.cpp:364
-#, fuzzy
 msgid "Save Options"
-msgstr "Opzioni..."
+msgstr "Salva Opzioni"
 
 #: kpaint.cpp:382
 msgid "&Image"
@@ -268,14 +266,14 @@ msgid "KPaint: Unknown Format"
 msgstr "KPaint: Formato Sconosciuto"
 
 #: kpaint.cpp:543
-#, fuzzy
 msgid ""
 "Error: Unknown Format\n"
 "KPaint does not understand the format of the specified file\n"
 "or the file is corrupt."
 msgstr ""
 "Errore: Formato Sconosciuto\n"
-"KPaint non é capace di interpretare il formato del file o il file érovinato."
+"KPaint non é capace di interpretare il formato del file o il\n"
+" file é rovinato."
 
 #: kpaint.cpp:566 kpaint.cpp:678
 msgid "KPaint: Malformed URL"
@@ -439,35 +437,3 @@ msgstr "Stile giuntura:"
 msgid "Set Line Colour..."
 msgstr "Imposta Colore Linea..."
 
-#~ msgid "Save File As"
-#~ msgstr "Salva File con nome"
-
-#~ msgid "This was a QString"
-#~ msgstr "Questa era una QString"
-
-#~ msgid "Cut"
-#~ msgstr "Taglia"
-
-#~ msgid "Copy"
-#~ msgstr "Copia"
-
-#~ msgid "Paste"
-#~ msgstr "Incolla"
-
-#~ msgid "Index"
-#~ msgstr "Indice"
-
-#~ msgid "About KPaint"
-#~ msgstr "Info su KPaint"
-
-#~ msgid "&File"
-#~ msgstr "&File"
-
-#~ msgid "&Help"
-#~ msgstr "&?"
-
-#~ msgid "Sorry"
-#~ msgstr "Mi dispiace"
-
-#~ msgid "Browse..."
-#~ msgstr "Sfoglia..."
