@@ -6,13 +6,14 @@
 #
 # Configuration
 #
+topdir	=	@topdir@
 prefix 	= 	@prefix@
 INCDIRS	=	@all_includes@ -I.. -I../kview
 LIBDIR	=	@all_libraries@ -Ltools
 MOC	=	@MOC@
 CXX	= 	@CXX@
 DEFS	=	-DHAVE_CONFIG_H
-LDLIBS	=	-lkfm -lkdecore -lkdeui -lkptools -lgif @LIBJPEG@ -lqt -lXext @LIBSOCKET@ -lm
+LDLIBS	=	-lkptools -lkdeui -lkdecore -lkfm -lgif -lqt -lXext -lm -lX11 @LIBSOCKET@ @LIBJPEG@
 METADIR	=	metas
 
 INSTALL_DIR = @INSTALL@ -d -m 755 
@@ -80,6 +81,9 @@ uninstall:
 	-rm -f $(prefix)/bin/kpaint
 	-rm -rf $(prefix)/doc/HTML/kpaint
 	-rm -f $(prefix)/apps/Applications/Paint.kdelnk
+
+Makefile:	Makefile.in
+	cd .. && CONFIG_FILES=kpaint/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 kplib:
 	(cd tools; $(MAKE) all)
