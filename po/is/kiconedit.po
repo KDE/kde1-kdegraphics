@@ -710,11 +710,11 @@ msgstr ""
 
 #: kicongrid.cpp:66
 msgid "width"
-msgstr ""
+msgstr "breidd"
 
 #: kicongrid.cpp:71
 msgid "height"
-msgstr ""
+msgstr "hæð"
 
 #: kicongrid.cpp:684
 msgid "There was an error loading a blank image.\n"

@@ -13,7 +13,6 @@ msgid "snapshot"
 msgstr "skjámynd"
 
 #: ksnapshot.cpp:94
-#, fuzzy, c-format
 msgid ""
 "Press the `Grab' button, then click\n"
 "on a window to grab it.\n"
@@ -29,7 +28,7 @@ msgstr ""
 "Höfundarrétt KSnapshot á Richard Moore (rich@kde.org),\n"
 "en KSnapshot er dreift skv. LGPL skilmálunum\n"
 "\n"
-"Útgáfa: "
+"Útgáfa: %s"
 
 #: ksnapshot.cpp:129
 msgid "Filename:"
