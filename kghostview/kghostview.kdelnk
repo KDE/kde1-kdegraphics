@@ -1,6 +1,7 @@
 # KDE Config File 
 [KDE Desktop Entry]
 Name=PS Viewer
+Name[es]=Visor Postscript
 Name[fr]=Visualiseur Postscript
 Name[de]=PS-Betrachter
 Name[no]=PS-fremviser
@@ -21,6 +22,7 @@ Icon=kghostview.xpm
 Type=Application
 DocPath=kghostview/index.html
 Comment=PostScript document viewer
+Comment[es]=Visor de documentos Postscript
 Comment[fr]=Visualiseur de fichiers Postscript
 Comment[de]=Betrachter für PostScript-Dokumente
 Comment[no]=Fremviser for PostScript-dokumenter

@@ -6,7 +6,7 @@ CORBA_SRC=
 
 BUILT_SOURCES = moc_canvas.cpp moc_filter.cpp moc_filtmenu.cpp moc_viewer.cpp moc_ilistdlg.cpp
 
-INCLUDES = $(all_includes) -I/usr/local/mico/include -Ilayout
+INCLUDES = -Ilayout $(all_includes) 
 kview_SOURCES = canvas.cpp kview.cpp main.cpp \
 	viewer.cpp canvas.h kview.h \
 	version.h viewer.h filter.h filter.cpp filtlist.h filtlist.cpp \
@@ -24,7 +24,7 @@ EXTRA_DIST = $(lnk_DATA)
 kview_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 kview_LDADD = layout/liblayout.a \
 	-lkfile -lkfm -lkdeui -lkdecore -lkimgio -lqt -lXext -lX11 \
-		$(KIMGIO_LIBS) -lm
+		$(KIMGIO_LIBS) $(LIBSOCKET) 
 
 messages:
 	$(XGETTEXT) -C -ki18n -x $(includedir)/kde.pot $(kview_SOURCES) && mv messages.po ../po/kview.pot
