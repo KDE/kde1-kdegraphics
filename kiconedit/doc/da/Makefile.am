@@ -1,6 +1,5 @@
 
 DISTCLEANFILES = Makefile *~
-KSGML2HTML = @KSGML2HTML@
 
 datadir = $(kde_htmldir)/da/kiconedit
 
