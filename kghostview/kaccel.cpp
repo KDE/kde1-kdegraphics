@@ -331,7 +331,7 @@ void KAccel::setItemEnabled( const char * action, bool activate )
 	if ( !pEntry ) {
 		QString str;
 		str.sprintf( 
-			"KGlobalAccel : cannont enable action %s"\
+			"KAccel : cannont enable action %s"\
 			"which is not in the object dictionary", action );
 		warning( str );
 		return;

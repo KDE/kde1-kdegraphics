@@ -507,6 +507,8 @@ void KKeyChooser::readGlobalKeys()
 	int *keyCode;
 	KConfig *pConfig = kapp->getConfig();
 	KEntryIterator *gIt = pConfig->entryIterator( "Global Keys" );
+	if (!gIt)
+	  return;
 	gIt->toFirst();
 	while ( gIt->current() ) {
 		keyCode = new int;
@@ -649,6 +651,8 @@ void KKeyChooser::keyMode( int m )
 
 void KKeyChooser::noKey()
 {
+  if (!pEntry)
+    return;
 	pEntry->aConfigKeyCode = 0;
 	
 	/* update the list and the change area */
@@ -668,6 +672,8 @@ void KKeyChooser::noKey()
 
 void KKeyChooser::defaultKey()
 {
+  if (!pEntry)
+    return;
 	/* change the configKeyCode */
 	pEntry->aConfigKeyCode = pEntry->aDefaultKeyCode;
 	
@@ -737,6 +743,8 @@ const QString KKeyChooser::item( uint keyCode, const QString& entryKey )
 
 void KKeyChooser::shiftClicked()
 {
+  if (!pEntry)
+    return;
 	uint kSCode = pEntry->aConfigKeyCode & ~(SHIFT | CTRL | ALT);
 	if ( kSCode != Key_Shift ) {
 		if ( cShift->isOn() )
@@ -761,6 +769,8 @@ void KKeyChooser::shiftClicked()
 
 void KKeyChooser::ctrlClicked()
 {
+  if (!pEntry)
+    return;
 	uint kSCode = pEntry->aConfigKeyCode & ~(SHIFT | CTRL | ALT);
 	if ( kSCode != Key_Control ) {
 		if ( cCtrl->isOn() )
@@ -785,6 +795,8 @@ void KKeyChooser::ctrlClicked()
 
 void KKeyChooser::altClicked()
 {
+  if (!pEntry)
+    return;
 	uint kSCode = pEntry->aConfigKeyCode & ~(SHIFT | CTRL | ALT);
 	if ( kSCode != Key_Alt ) {
 		if ( cAlt->isOn() )
@@ -847,6 +859,8 @@ void KKeyChooser::keyPressEvent( QKeyEvent *e )
 
 void KKeyChooser::setKey( uint kCode)
 {
+  if (!pEntry)
+    return;
 	// uint kOldCode = pEntry->aConfigKeyCode;
 	
 	/* add the current modifier to the key */
