@@ -765,21 +765,3 @@ msgstr "&Apliku"
 #: zoom.cpp:46
 msgid "&Magnification"
 msgstr "&Grandeco"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

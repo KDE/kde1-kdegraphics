@@ -1,6 +1,6 @@
 
 SUBDIRS = cs de nl ru sv it hu pl es pt fr hr fi zh_TW.Big5 sk el \
-	no zh_CN.GB2312 mk pt_BR
+	no zh_CN.GB2312 mk pt_BR eo
 
 APPS = kdvi kpaint kghostview
 
