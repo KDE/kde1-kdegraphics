@@ -262,8 +262,8 @@ msgid "You need to open a fax page first."
 msgstr "Najpierw musisz otworzyæ stronê faxu."
 
 #: kfax.cpp:2400
-#, c-format
-msgid "D.%d of %d"
+#, fuzzy, c-format
+msgid "P.%d of %d"
 msgstr "D.%d z %d"
 
 #: kfax.cpp:2411
