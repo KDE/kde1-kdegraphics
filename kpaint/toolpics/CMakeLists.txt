@@ -7,7 +7,7 @@ install(FILES
         ellipse.xpm
         rectangle.xpm
         roundangle.xpm
-    DESTINATION "${KDE1_TOOLBARDIR}")
+    DESTINATION "${KDE1_DATADIR}/kpaint/toolbar/")
 
 # Installed by kdelibs
 #install_icon(editpaste.xpm "${KDE1_TOOLBARDIR}")
