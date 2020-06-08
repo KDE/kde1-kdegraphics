@@ -493,4 +493,4 @@ void KVImageHolder::setImagePix( const QPixmap& pix )
 	resize( pix.size() );
 }
 
-
+#include "canvas.moc"

@@ -110,3 +110,5 @@ void KViewPrefDlg::applySettings()
 		_accel->writeSettings( _cfg );
 	}
 }
+
+#include "prefdlg.moc"

@@ -319,3 +319,5 @@ void ShellFilter::invoke( QImage )
 {
 	// TODO: stub
 }
+
+#include "colour.moc"

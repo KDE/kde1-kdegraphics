@@ -396,3 +396,5 @@ void ImgListDlg::restoreOptions( const KConfig *cfg )
 	_slideInterval = cfg->readNumEntry( "SlideInterval", 5 );
 	_loop =  cfg->readBoolEntry( "SlideLoop", false );
 }
+
+#include "ilistdlg.moc"

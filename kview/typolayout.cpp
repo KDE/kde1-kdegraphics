@@ -154,3 +154,5 @@ void KTypoLayout::endGroup()
 {
 	_group = 0;
 }
+
+#include "typolayout.moc"

@@ -152,3 +152,5 @@ void KView::updateAllAccels()
 		iter.current()->updateAccel();
 	}
 }
+
+#include "kview.moc"

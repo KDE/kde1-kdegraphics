@@ -163,3 +163,5 @@ QPopupMenu *KFiltMenuFactory::getItemMenu( QString& name, QPopupMenu *parent,
 
 	return menu;
 }
+
+#include "filtmenu.moc"

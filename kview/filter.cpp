@@ -21,3 +21,5 @@ void KImageFilter::setProgress( int val )
 
 	emit progress( (int)pct );
 }
+
+#include "filter.moc"

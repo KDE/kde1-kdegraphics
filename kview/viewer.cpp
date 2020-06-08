@@ -1014,3 +1014,5 @@ plan: to make the client area of the KTW == area of canvas contents.
 		QMIN( iw, xmax ) + xextra, 
 		QMIN( ih, ymax ) + yextra );
 }
+
+#include "viewer.moc"

@@ -310,3 +310,5 @@ void KBagLayout::updateMinSize()
 	delete [] rowwidth;
 	delete [] colheight;
 }
+
+#include "baglayout.moc"
