@@ -179,9 +179,9 @@ Text::pixmap()
 {
   QString pixdir;
 
-  pixdir= myapp->kde_toolbardir().copy();
-  //  pixdir.append("/kpaint/toolbar/");
-  pixdir.append("/largetext.xpm");
+  pixdir= myapp->kde_datadir().copy();
+  pixdir.append("/kpaint/toolbar/");
+  pixdir.append("largetext.xpm");
   return new QPixmap(pixdir);
 }
 
