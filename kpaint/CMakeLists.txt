@@ -89,7 +89,7 @@ target_link_libraries(kpaint
 )
 
 install(TARGETS kpaint RUNTIME DESTINATION ${KDE1_BINDIR})
-install(FILES kpaint.kdelnk DESTINATION ${KDE1_APPSDIR}/Games)
+install(FILES kpaint.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(kpaint.xpm)
 
 add_subdirectory(toolpics)
