@@ -27,7 +27,7 @@ public:
  */
 class KUndo {
 public:
-  KUndo(int maxsize_= 10);
+  KUndo(int maxsize_= 100);
   ~KUndo();
 
   // User actions

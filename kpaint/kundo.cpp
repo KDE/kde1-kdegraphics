@@ -2,9 +2,10 @@
 
 #include <kdebug.h>
 #include <stdio.h>
+#include <cassert>
 #include "kundo.h"
 
-KUndo::KUndo(int maxsize_= 100)
+KUndo::KUndo(int maxsize_)
 {
   maxsize= maxsize_;
   infront= 0;

@@ -37,6 +37,18 @@ extern "C" {
 #include <gif_lib.h>
 };
 
+static void PrintGifError(int error = 0)
+{
+  if (!error) {
+    fprintf(stderr, "gif error\n");
+  }
+  const char* giflib_error_str = (const char*) GifErrorString(error);
+  if (giflib_error_str == NULL) {
+    giflib_error_str = "Unknown error";
+  }
+  fprintf(stderr, "gif error: %s\n", giflib_error_str);
+}
+
 void read_gif_file(QImageIO * imageio)
 {
   int i, j, Size, Row, Col, Width, Height, ExtCode, Count;
@@ -44,6 +56,7 @@ void read_gif_file(QImageIO * imageio)
   GifByteType *Extension;
   GifRowType *ScreenBuffer;
   GifFileType *GifFile;
+  int Error;
 
   QImage image;
   ColorMapObject *Colourmap;
@@ -58,7 +71,7 @@ void read_gif_file(QImageIO * imageio)
 
     // Initialise GIF struct and read init block
 
-    if ((GifFile = DGifOpenFileName(imageio->fileName())) == NULL)
+    if ((GifFile = DGifOpenFileName(imageio->fileName(), &Error), NULL) == NULL)
       return;
 
     // Create the new image using read dimensions.
@@ -210,7 +223,7 @@ KDEBUG1(KDEBUG_INFO, 3000, "Set trans to %d\n", Extension[4]);
     imageio->setImage(image);
     imageio->setStatus(0);
 
-    if (DGifCloseFile(GifFile) == GIF_ERROR)
+    if (DGifCloseFile(GifFile, &Error) == GIF_ERROR)
       PrintGifError();
 
 }				/*read_gif_file */
@@ -222,16 +235,17 @@ void write_gif_file(QImageIO *imageio)
   GifFileType *GifFile;
   ColorMapObject *screenColourmap;
   ColorMapObject *imageColourmap;
+  int Error;
 
 KDEBUG(KDEBUG_INFO, 3000, "write_gif_file()\n");
 
-  imageColourmap= MakeMapObject(256, NULL);
+  imageColourmap= GifMakeMapObject(256, NULL);
   if (!imageColourmap) {
 KDEBUG(KDEBUG_INFO, 3000, "Could not create image colour map\n");
     return;
   }
 
-  screenColourmap= MakeMapObject(256, NULL);
+  screenColourmap= GifMakeMapObject(256, NULL);
   if (!screenColourmap) {
 KDEBUG(KDEBUG_INFO, 3000, "Could not create screen colour map\n");
     return;
@@ -265,10 +279,10 @@ KDEBUG1(KDEBUG_INFO, 3000, "Made Colourmap size 256, image colours= %d\n", image
     }
   }
 
-  GifFile= EGifOpenFileName((char *)imageio->fileName(), 0);
+  GifFile= EGifOpenFileName((char *)imageio->fileName(), 0, &Error);
   if (!GifFile) {
-    FreeMapObject(imageColourmap);
-    FreeMapObject(screenColourmap);
+    GifFreeMapObject(imageColourmap);
+    GifFreeMapObject(screenColourmap);
 KDEBUG(KDEBUG_INFO, 3000, "Could not open file\n");
     return;
   }
@@ -283,7 +297,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Creating screen desc\n");
 			    screenColourmap);
 
   if (status != GIF_OK) {
-    EGifCloseFile(GifFile);
+    EGifCloseFile(GifFile, &Error);
 KDEBUG(KDEBUG_INFO, 3000, "Could not create screen description\n");
     return;
   }
@@ -298,7 +312,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Creating image description\n");
 			   imageColourmap);
 
   if (status != GIF_OK) {
-    EGifCloseFile(GifFile);
+    EGifCloseFile(GifFile, &Error);
     return;
   }
 
@@ -312,11 +326,11 @@ KDEBUG(KDEBUG_INFO, 3000, "Writing image data\n");
 
   if (status != GIF_OK) {
     PrintGifError();
-    EGifCloseFile(GifFile);
+    EGifCloseFile(GifFile, &Error);
     return;
   }
 
-  if (EGifCloseFile(GifFile) != GIF_OK) {
+  if (EGifCloseFile(GifFile, &Error) != GIF_OK) {
     PrintGifError();
     return;
   }
