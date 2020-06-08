@@ -27,5 +27,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #add_subdirectory(bsd-port)
 add_subdirectory(kpaint)
 add_subdirectory(kview)
+add_subdirectory(kfract)
 
 #add_subdirectory(po)
