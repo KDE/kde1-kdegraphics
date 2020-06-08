@@ -7,6 +7,7 @@ install(FILES
         ellipse.xpm
         rectangle.xpm
         roundangle.xpm
+        largetext.xpm
     DESTINATION "${KDE1_DATADIR}/kpaint/toolbar/")
 
 # Installed by kdelibs
