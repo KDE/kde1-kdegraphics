@@ -51,4 +51,20 @@ install(FILES kiconedit.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 
 add_subdirectory(pics)
 
-#add_subdirectory(doc) TODO
+install(FILES
+    doc/en/logotp3.gif
+    doc/en/index.html
+    doc/en/index-1.html
+    doc/en/index-2.html
+    doc/en/index-3.html
+    doc/en/index-4.html
+DESTINATION ${KDE1_HTMLDIR}/en/kiconedit)
+
+install(FILES
+    doc/da/logotp3.gif
+    doc/da/index.html
+    doc/da/index-1.html
+    doc/da/index-2.html
+    doc/da/index-3.html
+    doc/da/index-4.html
+DESTINATION ${KDE1_HTMLDIR}/da/kiconedit)

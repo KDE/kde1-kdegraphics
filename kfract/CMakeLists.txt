@@ -30,4 +30,6 @@ install(TARGETS kfract RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES kfract.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(kfract.xpm)
 
+install(FILES index.html kfract.gif DESTINATION ${KDE1_HTMLDIR}/en/kfract)
+
 #add_subdirectory(doc) TODO
