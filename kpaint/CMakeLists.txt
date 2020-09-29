@@ -94,3 +94,9 @@ install_icon(kpaint.xpm)
 
 add_subdirectory(toolpics)
 #add_subdirectory(images) TODO
+
+install(FILES
+    doc/kpaint.html
+    doc/index.html
+    doc/Technic.gif
+    DESTINATION ${KDE1_HTMLDIR}/en/kpaint)

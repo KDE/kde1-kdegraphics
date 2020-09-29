@@ -57,4 +57,13 @@ install(TARGETS kview RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES kview.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(kview.xpm)
 
-#add_subdirectory(doc) TODO
+install(FILES
+    doc/en/kview.index
+    doc/en/kview.html
+    doc/en/kview-1.html
+    doc/en/kview-2.html
+    doc/en/kview-3.html
+    doc/en/kview-4.html
+    doc/en/kview-5.html
+    doc/en/logotp3.gif
+    DESTINATION ${KDE1_HTMLDIR}/en/kview)
