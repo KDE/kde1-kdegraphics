@@ -484,3 +484,5 @@ void KSnapShot::hidePreviewSlot()
     delete previewWindow;
   previewWindow= 0;
 }
+
+#include "ksnapshot.moc"

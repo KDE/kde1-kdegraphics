@@ -29,5 +29,6 @@ add_subdirectory(kpaint)
 add_subdirectory(kview)
 add_subdirectory(kfract)
 add_subdirectory(kiconedit)
+add_subdirectory(ksnapshot)
 
 #add_subdirectory(po)
