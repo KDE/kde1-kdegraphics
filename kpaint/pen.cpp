@@ -90,7 +90,6 @@ void Pen::mouseMoveEvent(QMouseEvent *e)
 
     if (drawing) {
       if ((x != lastx) || (y != lasty)) {
-	emit modified();
 	m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
 
 	painter1.begin(canvas->pixmap());
@@ -129,8 +128,10 @@ void Pen::mouseMoveEvent(QMouseEvent *e)
 void Pen::mouseReleaseEvent(QMouseEvent *e)
 {
   KDEBUG(KDEBUG_INFO, 3000, "Pen::mouseReleaseEvent() handler called\n");
-  if (isActive() && (e->button() == activeButton) && drawing)
+  if (isActive() && (e->button() == activeButton) && drawing) {
+    emit modified();
     drawing= FALSE;
+  }
   if (!isActive()) {
     KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");
   }

@@ -122,7 +122,6 @@ void Circle::mouseReleaseEvent(QMouseEvent *e)
 KDEBUG(KDEBUG_INFO, 3000, "Circle::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == activeButton) && drawing) {
-    emit modified();
 
     x= (e->pos()).x();
     y= (e->pos()).y();
@@ -183,6 +182,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Circle::mouseReleaseEvent() handler called\n");
     drawing= FALSE;
     canvas->updateZoomed();
     canvas->repaint(0);
+    emit modified();
   }
 }
 

@@ -106,7 +106,6 @@ void Ellipse::mouseReleaseEvent(QMouseEvent *e)
 KDEBUG(KDEBUG_INFO, 3000, "Ellipse::mouseReleaseEvent() handler called\n");
 
   if (isActive() && (e->button() == activeButton) && drawing) {
-    emit modified();
     x= (e->pos()).x();
     y= (e->pos()).y();
 
@@ -148,6 +147,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Ellipse::mouseReleaseEvent() handler called\n");
     drawing= FALSE;
     canvas->updateZoomed();
     canvas->repaint(0);
+    emit modified();
   }
   else {
 KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");

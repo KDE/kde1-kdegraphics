@@ -182,8 +182,7 @@ void Manager::populateToolbar(KToolBar *t)
     pix= tool->pixmap();
     t->insertButton(*pix, i, TRUE, tip, i);
     tool->id= i;
-    /* ????????
-       connect(tool, SIGNAL(modified()), this, SIGNAL(modified())); */
+    connect(tool, SIGNAL(modified()), this, SIGNAL(modified())); 
   }
   t->setButton(currentToolID, true);
   connect(t, SIGNAL(clicked(int)), SLOT(setCurrentTool(int)));

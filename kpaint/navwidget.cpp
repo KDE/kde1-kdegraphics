@@ -1,5 +1,5 @@
-#include <qwmatrix.h>
 #include <qpainter.h>
+#include <qimage.h>
 #include <kdebug.h>
 #include "navwidget.h"
 
@@ -18,15 +18,9 @@ void NavWidget::paintEvent(QPaintEvent *)
 {
   double xfactor, yfactor;
   QPainter p;
-  QWMatrix matrix;
-
-  xfactor= ((double) width() / view->width());
-  yfactor= ((double) height() / view->height());
-  matrix.scale(xfactor, yfactor);
 
   p.begin(this);
-  p.setWorldMatrix(matrix);
-  p.drawPixmap(0, 0, *view);
+  p.drawImage(0, 0, view->convertToImage().smoothScale(width(), height()));
   p.end();
 }
 

@@ -128,7 +128,6 @@ void Line::mouseReleaseEvent(QMouseEvent *e)
 KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
 
   if (isActive() && drawing && (e->button() == activeButton)) {
-    emit modified();
     x= (e->pos()).x();
     y= (e->pos()).y();
 
@@ -158,6 +157,7 @@ KDEBUG(KDEBUG_INFO, 3000, "Line::mouseReleaseEvent() handler called\n");
     drawing= FALSE;
     canvas->updateZoomed();
     canvas->repaint(0);
+    emit modified();
   }
   else {
 KDEBUG(KDEBUG_WARN, 3000, "Warning event received when inactive (ignoring)\n");

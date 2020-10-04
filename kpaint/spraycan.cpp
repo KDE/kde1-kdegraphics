@@ -75,6 +75,7 @@ KDEBUG(KDEBUG_INFO, 3000, "SprayCan::mouseReleaseEvent() handler called\n");
     }
     drawing= FALSE;
     canvas->updateZoomed();
+    emit modified();
   }
 }
 
@@ -86,7 +87,6 @@ void SprayCan::drawDot()
   QPainter painter2;
   QWMatrix m;
 
-  emit modified();
   m.scale((float) 100/(canvas->zoom()), (float) 100/(canvas->zoom()));
   painter1.begin(canvas->pixmap());
 
