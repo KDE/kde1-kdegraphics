@@ -60,7 +60,12 @@ imageInfoDialog::imageInfoDialog(Canvas *c, QWidget* parent, const char* name)
 
   coloursUsed = new QLabel( this, "Label_6" );
   coloursUsed->setGeometry( 140, 40, 190, 30 );
-  text.sprintf("%d", c->pixmap()->convertToImage().numColors());
+  const QImage img = c->pixmap()->convertToImage();
+  if (img.depth() == 32) {
+      text.sprintf("%d", img.convertDepth(8).numColors());
+  } else {
+      text.sprintf("%d", img.numColors());
+  }
   coloursUsed->setText( text );
   coloursUsed->setAlignment( 289 );
   coloursUsed->setMargin( -1 );
