@@ -76,8 +76,8 @@ set(Kpaint_MOC
 
 QT1_WRAP_MOC(MOC_FILES ${Kpaint_MOC})
 
-add_executable(kpaint ${Kpaint_SRCS} ${MOC_FILES} ${QwSpriteField_SOURCES})
-target_link_libraries(kpaint
+add_executable(kpaint1 ${Kpaint_SRCS} ${MOC_FILES} ${QwSpriteField_SOURCES})
+target_link_libraries(kpaint1
     Qt::Qt1
     ${X11_LIBRARIES}
     ${KDE1_KDECORE}
@@ -88,7 +88,7 @@ target_link_libraries(kpaint
     GIF::GIF
 )
 
-install(TARGETS kpaint RUNTIME DESTINATION ${KDE1_BINDIR})
+install(TARGETS kpaint1 RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES kpaint.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(kpaint.xpm)
 

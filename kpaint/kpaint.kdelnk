@@ -1,6 +1,6 @@
 # KDE Config File
 [KDE Desktop Entry]
-Exec=kpaint %u -caption "%c" %i %m
+Exec=kpaint1 %u -caption "%c" %i %m
 Icon=kpaint.xpm
 DocPath=kpaint/index.html
 Comment=A Simple Paint Program
