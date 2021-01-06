@@ -1,13 +1,13 @@
 # KDE Config File
 [KDE Desktop Entry]
 Type=Application
-Exec=kview %u
+Exec=kview1 %u
 Icon=kview.xpm
 MiniIcon=kview.xpm
 TerminalOptions=
 Path=
 Terminal=0
-BinaryPattern=kview;
+BinaryPattern=kview1;
 DocPath=kview/kview.html
 Comment=KDE Image Viewer
 Comment[ca]=Visualitzador d'imatges KDE

@@ -42,8 +42,8 @@ set(KVIEW_MOC
 
 QT1_WRAP_MOC(MOC_FILES ${KVIEW_MOC})
 
-add_executable(kview ${KVIEW_SRCS} ${MOC_FILES})
-target_link_libraries(kview
+add_executable(kview1 ${KVIEW_SRCS} ${MOC_FILES})
+target_link_libraries(kview1
     Qt::Qt1
     ${X11_LIBRARIES}
     ${KDE1_KDECORE}
@@ -53,7 +53,7 @@ target_link_libraries(kview
     ${KDE1_KIMGIO}
 )
 
-install(TARGETS kview RUNTIME DESTINATION ${KDE1_BINDIR})
+install(TARGETS kview1 RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES kview.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(kview.xpm)
 
