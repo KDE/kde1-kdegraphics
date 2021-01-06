@@ -18,10 +18,10 @@ set(ksnapshot_MOC
 
 QT1_WRAP_MOC(MOC_FILES ${ksnapshot_MOC})
 
-add_executable(ksnapshot ${ksnapshot_SRCS} ${MOC_FILES})
+add_executable(ksnapshot1 ${ksnapshot_SRCS} ${MOC_FILES})
 
-target_compile_definitions(ksnapshot PRIVATE KSNAPVERSION=\"0.2.7\")
-target_link_libraries(ksnapshot
+target_compile_definitions(ksnapshot1 PRIVATE KSNAPVERSION=\"0.2.7\")
+target_link_libraries(ksnapshot1
     Qt::Qt1
     ${X11_LIBRARIES}
     ${KDE1_KDECORE}
@@ -29,7 +29,7 @@ target_link_libraries(ksnapshot
     ${KDE1_KIMGIO}
 )
 
-install(TARGETS ksnapshot RUNTIME DESTINATION ${KDE1_BINDIR})
+install(TARGETS ksnapshot1 RUNTIME DESTINATION ${KDE1_BINDIR})
 install(FILES ksnapshot.kdelnk DESTINATION ${KDE1_APPSDIR}/Graphics)
 install_icon(ksnapshot.xpm)
 
